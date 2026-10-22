@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "Starter descriptive ledger; incomplete career coverage. English research data awaiting bilingual presentation.",
+  "sources": [
+    {
+      "id": "anniversary-2024",
+      "title": "One-year office account",
+      "publisher": "Office of the SSA",
+      "type": "office",
+      "date": "2024-11-09",
+      "url": "https://ossaposneo.org/one-year-in-office-ssap-abba-isa-showcases-remarkable-catalogue-of-extraordinary-achievements/"
+    },
+    {
+      "id": "beyond-target-2024",
+      "title": "Beyond Disability coordination and projected opportunities",
+      "publisher": "Office of the SSA",
+      "type": "office",
+      "date": "2024-09-28",
+      "url": "https://ossaposneo.org/36551-jobs-presidential-aide-presents-appointment-letters-to-state-coordinators-of-beyond-disability-project/"
+    }
+  ],
+  "records": [
+    {
+      "id": "inclusive-business-skills",
+      "title": "Facilitating inclusion in SMEDAN business training",
+      "branch": "economic",
+      "reportDate": "2024-01-29",
+      "eventDate": null,
+      "dateBasis": "Publication date; activity described as preceding Friday.",
+      "role": "Office facilitated inclusion, according to an office statement.",
+      "deliveryPartners": ["SMEDAN"],
+      "geography": ["FCT"],
+      "sources": ["smedan"],
+      "reviewed": true,
+      "limitations": "Training and kits concern one cohort, not two beneficiary totals. Subsequent income and employment were not measured.",
+      "measures": [{"id":"participants-supported","value":5,"bound":"exact","unit":"people","population":"PWD participants in this training and startup-support activity","stage":"reported-delivery","evidence":"Article reports five PWD participants and attributes their inclusion to the office."}]
+    },
+    {
+      "id": "borno-employment-2024",
+      "title": "Reported employment placements in Borno",
+      "branch": "economic",
+      "reportDate": "2024-11-09",
+      "eventDate": null,
+      "dateBasis": "Retrospective anniversary account; event date unverified.",
+      "role": "Office claims employment followed its engagement with the governor.",
+      "deliveryPartners": ["Borno State Government"],
+      "geography": ["Borno"],
+      "sources": ["anniversary-2024"],
+      "reviewed": true,
+      "limitations": "Office-reported attribution; employment records and retention not independently verified. Not a claim that Isa alone created these jobs.",
+      "measures": [{"id":"placements","value":15,"bound":"exact","unit":"people","population":"PWDs reportedly employed by Borno State after engagement","stage":"reported-delivery","evidence":"Anniversary account, section 4, reports 15 PWDs employed after engagement with the governor."}]
+    },
+    {
+      "id": "startup-support-march-2024",
+      "title": "Reported startup support and POS equipment",
+      "branch": "economic",
+      "reportDate": "2024-11-09",
+      "eventDate": null,
+      "dateBasis": "Anniversary account refers to March; exact day unverified.",
+      "role": "Office reports startup support with partner organisations.",
+      "deliveryPartners": ["Partners not named in this passage"],
+      "geography": [],
+      "sources": ["anniversary-2024"],
+      "reviewed": true,
+      "limitations": "Individual packages, monetary total and overlap with other programmes are not established.",
+      "measures": [{"id":"recipients","value":20,"bound":"greater-than","unit":"people","population":"PWD recipients in the March startup-support activity","stage":"reported-delivery","evidence":"Anniversary account, section 4, reports more than 20 recipients of equipment, cash or startup kits."}]
+    },
+    {
+      "id": "nigwed-skills-2024",
+      "title": "Reported skills training for women with disabilities",
+      "branch": "economic",
+      "reportDate": "2024-11-09",
+      "eventDate": null,
+      "dateBasis": "Retrospective anniversary account; event date unverified.",
+      "role": "Office reports partnering with NIGWED on reusable-pad production training.",
+      "deliveryPartners": ["NIGWED"],
+      "geography": [],
+      "sources": ["anniversary-2024"],
+      "reviewed": true,
+      "limitations": "Participant roster and completion criteria not verified. No employment or income outcome inferred. Nearby farming initiative is not assigned this count.",
+      "measures": [{"id":"trainees","value":45,"bound":"greater-than","unit":"people","population":"Women with disabilities in reusable sanitary-pad training","stage":"reported-delivery","evidence":"Anniversary account, section 5, reports more than 45 women trained and supported."}]
+    },
+    {
+      "id": "beyond-disability-coordination-2024",
+      "title": "Beyond Disability coordination and jobs ambition",
+      "branch": "economic",
+      "reportDate": "2024-09-28",
+      "eventDate": null,
+      "dateBasis": "Publication date; exact orientation date not encoded.",
+      "role": "Office initiative; coordinator documentation and orientation reported.",
+      "deliveryPartners": ["State coordinators", "Participating state governments"],
+      "geography": [],
+      "sources": ["beyond-target-2024"],
+      "reviewed": true,
+      "limitations": "Projected opportunities, not delivered employment. Coordinator appointments do not verify all projected posts or participant outcomes.",
+      "measures": [{"id":"projected-opportunities","value":36551,"bound":"exact","unit":"job opportunities","population":"Projected programme opportunities nationwide","stage":"target","evidence":"Article describes this as the programme objective and potential during implementation."}]
+    },
+    {
+      "id": "inclusive-education-hearing",
+      "title": "Advocacy at an inclusive education hearing",
+      "branch": "policy",
+      "reportDate": "2024-07-20",
+      "eventDate": null,
+      "dateBasis": "Report publication date.",
+      "role": "Advocate at a hearing; legislator Abdullahi el-Rasheed sponsored the bill.",
+      "deliveryPartners": ["Bill sponsor Abdullahi el-Rasheed"],
+      "geography": [],
+      "sources": ["education"],
+      "reviewed": true,
+      "limitations": "One documented advocacy activity; no college opening or beneficiary count established.",
+      "measures": []
+    }
+  ]
+}

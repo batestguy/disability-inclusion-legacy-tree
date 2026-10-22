@@ -7,6 +7,7 @@ dist/
 *.tsbuildinfo
 .npm-cache/
 .sanity/
+.playwright-cli/
 
 # Keep provenance and representative evidence; omit exploratory downloads.
 output/*

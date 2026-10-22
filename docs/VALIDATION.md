@@ -2,6 +2,8 @@
 
 ## Latest handoff status
 
+Descriptive metrics foundation, 22 October 2026: added a six-activity ledger, a source-validating KPI module, CSV/JSON export and five new tests (ten total). Export succeeds and preserves missing quantities, targets and greater-than bounds. Ten tests, preflight, workspace lint and typecheck passed. No UI routes changed and no new browser/performance claims are made. Build verification for this change is recorded in docs/CONTRIBUTION_METRICS.md. Earlier tree-interface results below retain their original scope.
+
 Both repository delivery workflows completed successfully: [implementation CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/39722399277) and [delivery documentation CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/39722444939), the latter at b614322584f911810be52f5cbc23766b1c3ad1fd. These ran preflight, lint, typecheck, five content tests and both builds. CI does not run browser/axe/Lighthouse or deploy the website.
 
 This handoff refresh changes documentation only. Preflight and Git whitespace checks passed again; application builds and browser/performance tests were not rerun for this refresh. Earlier dated results below retain their original scope. Current-artwork performance, human Hausa/portrait approval, guided accessibility review and live publishing verification remain open. Start the next session with [HANDOFF.md](../HANDOFF.md).

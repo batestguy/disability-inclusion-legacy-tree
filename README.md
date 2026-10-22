@@ -2,6 +2,8 @@
 
 An appreciation project for people and organisations who have supported, and continue to support, disability causes. The first tribute celebrates Hon. Mohammed Abba Isa through an interactive, sourced tree of advocacy and inclusion.
 
+The accepted next direction is descriptive contribution analytics: turning documented work into defined numbers, KPIs and interactive data stories. The starter ledger and exporter are implemented; the current public application still uses the tree. See [the metric definitions](docs/CONTRIBUTION_METRICS.md). Before/after comparisons and causal estimates are outside the new objective.
+
 This public source repository contains a working bilingual preview. The project is independently created and does not imply official endorsement. The original brief remains in [HonAbbas.txt](HonAbbas.txt); decisions and release gates are in [PROJECT_PLAN.md](PROJECT_PLAN.md). Start ongoing work with [HANDOFF.md](HANDOFF.md).
 
 ## Run locally
@@ -18,6 +20,7 @@ npm run preflight
 npm run lint
 npm run typecheck
 npm test
+npm run metrics      # source-linked contribution CSV and descriptive summary
 npm run build        # apps/web/out and studio/dist
 npm run preview      # static site at http://127.0.0.1:8767
 npm run test:browser # install Chromium first; see docs/VALIDATION.md

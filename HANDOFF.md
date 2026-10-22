@@ -36,6 +36,12 @@ Keep credentials and deploy hooks outside the workspace. Optional creator fields
 
 ## Resume here next time
 
+Accepted steering superseding the earlier recommendation: owner wants a descriptive, data-driven contribution system that turns documented work into numbers and KPIs; no before/after or causal proof is required. Start with docs/CONTRIBUTION_METRICS.md and content/contributions.json. Starter ledger, metric calculations, CSV/JSON exporter and tests are implemented. Full dashboard redesign, bilingual integration, CMS support and career-wide research remain next work; the existing tree UI is unchanged. Preserve units, report/event date distinction, source/role, target separation and greater-than bounds. Do not invent values from qualitative praise or sum overlapping people.
+
+Foundation validation: npm run metrics, all ten tests, preflight, workspace lint/typecheck and both builds passed. CSV and summary JSON are reproducible files in ignored output/. The owner requested committing and pushing the foundation and prior site-review notes as the next-session checkpoint; use Git history for its exact SHA and Actions for remote validation. No browser or performance rerun, dashboard release or live CMS change is claimed.
+
+Earlier research context: owner questioned whether https://ossaposneo.org/gallery/ already fulfils the project. docs/OSSAP_SITE_REVIEW.md records the substantial biography/news/gallery/achievement overlap and the recommendation at that point. The subsequently accepted descriptive KPI direction above supersedes its no-pivot-yet status. Multi-person features remain unimplemented and unapproved. No public images were imported or permissions resolved.
+
 Begin with Git status, preflight and latest Actions status. Performance profiling and local accessibility review can proceed without new user inputs. No multi-person archive has been implemented; the broader appreciation purpose does not establish additional tribute subjects or achievements.
 
 Reveal still needs genuine portrait permission, human Hausa approval, correction mailbox and external Sanity/Cloudflare setup. Creator name, biography and bio link remain optional. The requested Pages name is mohammed-abba-isa-legacy; availability is unverified.
@@ -47,6 +53,8 @@ GitHub CLI was authenticated as batestguy at delivery. Recheck without printing 
 ## Documentation map
 
 - PROJECT_PLAN.md: current phase status and historical decisions/progress.
+- docs/CONTRIBUTION_METRICS.md and content/contributions.json: current KPI definitions, starter ledger and next dashboard work. npm run metrics regenerates CSV/JSON exports.
+- docs/OSSAP_SITE_REVIEW.md: earlier site comparison informing the change of direction.
 - docs/VALIDATION.md: local/CI evidence, test conditions and review limits.
 - docs/OPERATIONS.md: Pages setup, backup, rollback and password-free transfer.
 - docs/CMS.md: public dataset setup, schema contract, seed review and hooks.

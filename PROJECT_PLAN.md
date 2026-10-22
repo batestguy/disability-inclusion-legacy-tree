@@ -3,6 +3,8 @@
 Original brief preserved in HonAbbas.txt. Source of intent: supplied seven-phase plan.
 
 ## Decisions
+22 October 2026 superseding direction: descriptive contribution KPIs and a data-led presentation; causal attribution and before/after comparisons are not required. The earlier tree remains the existing implementation, not a constraint on the redesign. New foundation: docs/CONTRIBUTION_METRICS.md. Original brief and historical phases below are preserved.
+
 Independent surprise tribute for journalists and researchers. Botanical tree with Policy Advocacy, Economic Empowerment, Digital Inclusion and Assistive Tech. Sourced chronological roots; English / and Hausa /ha/; permanent achievement pages; search/filters; accessible panels. Deep greens, gold, ivory. Next.js static export, Tailwind, Radix, GSAP ScrollTrigger, Sanity, optional GoatCounter; free tiers. Cloudflare Pages name target mohammed-abba-isa-legacy. Optional creator details deferred. No unsupported statistics or invented portrait.
 
 ## Phases and completion criteria
