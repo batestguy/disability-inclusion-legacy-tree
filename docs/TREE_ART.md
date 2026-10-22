@@ -1,5 +1,7 @@
 # Yobe-rooted tree artwork and full-screen flag
 
+Continuation note (22 October 2026): the future dashboard chatbot and shared page/chat language requirements are in [CHATBOT_SPEC.md](CHATBOT_SPEC.md). The always-visible language control reads **Change language / Canja harshe**, with **English** above **Hausa**. This documentation update changes no artwork provenance, licence, portrait permission or implemented UI below.
+
 ## Current selection
 The tree is an openly licensed, AI-adapted regional reference based on **Booboo tree.jpg** by **Adamu ab**, dated 11 October 2023. The source uploader describes a baobab (kuka) in **Danchuwa, Yobe State**. Source: https://commons.wikimedia.org/wiki/File:Booboo_tree.jpg . Photographer: https://commons.wikimedia.org/wiki/User:Adamu_ab . Original: https://upload.wikimedia.org/wikipedia/commons/0/07/Booboo_tree.jpg . Retrieved 22 October 2026.
 

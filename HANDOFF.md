@@ -1,6 +1,18 @@
 # Project handoff
 
-Updated 22 October 2026 after public repository delivery. Start the next session here. Read AGENTS.md and PROJECT_PLAN.md; preserve HonAbbas.txt.
+## Latest owner decisions: resume here first
+
+The owner explicitly wants a beautifully designed conversational English/Hausa chatbot, built and validated before integration as a dedicated section of the planned dashboard. This supersedes the earlier compact question-tool presentation recommendation. The earlier numerical review still governs evidence and calculation safeguards; it does not reject the chatbot interface. Read [docs/CHATBOT_SPEC.md](docs/CHATBOT_SPEC.md) for the complete requirements, design direction, implementation recommendations, test cases and continuation sequence.
+
+The page locale automatically controls the chatbot: English page means English chat; Hausa page means Hausa chat. One shared language control changes both together. Always display **Change language / Canja harshe**, then **English** above **Hausa**, vertically stacked and visible without opening a menu on desktop or mobile. Highlight the active language visually and accessibly. Visitors must not need to understand the current page language to find the switch. The discussion settled on Canja harshe after the owner typed Changa Harshe; human Hausa review is still required.
+
+Localise greetings, suggestions, composer controls, answers, follow-ups, clarifications, errors and status messages. Preserve equivalent route/record context on language changes. The spec distinguishes fixed owner requirements from proposed transcript, draft-input and in-flight response handling. No independent chat locale or silent detector override. No chatbot implementation, final visual design, approved Hausa templates, model/provider selection or dashboard integration is complete. Final section placement remains unspecified. New.txt and HonAbbas.txt are preserved.
+
+Next session: inspect Git status and preflight; read CHATBOT_SPEC.md, CONTRIBUTION_METRICS.md and NUMERICAL_QA_REVIEW.md; inspect LanguageChoice and locale routes; build the chat component and shared language behaviour before integration. Keep the descriptive KPI direction and existing public-reveal gates. This request authorises documentation, not deployment.
+
+Documentation checkpoint validation (22 October 2026): all 15 project Markdown files contain this contract or a specification reference; local Markdown links resolve and Git whitespace checks pass. Preflight, workspace lint, workspace typecheck, all ten tests, web production build and Studio production build passed again. No browser/performance rerun or application/dependency change. The owner subsequently requested committing and pushing the documentation, New.txt and the numerical-Q&A review as the continuation checkpoint. Use Git history for the checkpoint SHA and GitHub Actions for remote validation; no website deployment is implied. The terminal sandbox failed before process startup; approved execution completed reads and checks without permission/ownership changes.
+
+Updated 22 October 2026 after chatbot and shared-language requirements were documented across the Markdown files. Start the next session with the owner decisions above, AGENTS.md, PROJECT_PLAN.md and docs/CHATBOT_SPEC.md; preserve HonAbbas.txt and New.txt.
 
 ## Purpose and repository
 
@@ -51,6 +63,12 @@ Do not assume previous servers remain running. Fresh checkout: npm.cmd ci, npm.c
 GitHub CLI was authenticated as batestguy at delivery. Recheck without printing credentials. Earlier sandbox setup-refresh errors are historical; commands and writes succeeded after access was restored. Do not repeat login or sandbox repair without a current failure.
 
 ## Documentation map
+
+- docs/CHATBOT_SPEC.md: current accepted chatbot presentation and language-control contract; complete design brief, proposed state handling, numerical safeguards, implementation sequence and acceptance checklist. Read before applying the earlier numerical-Q&A review's presentation recommendations.
+
+- docs/NUMERICAL_QA_REVIEW.md: 22 October technical review of New.txt with primary-source checks and specification flaws. The subsequent owner decision accepts a conversational chatbot and supersedes the earlier compact-tool presentation recommendation. Numerical safeguards remain applicable; package/service choices and implementation remain pending. Preserve New.txt; optional model parsing requires separate evaluation.
+
+Review validation: preflight, lint/typecheck, all ten tests and both production builds passed on 22 October 2026. No browser rerun or runtime change. Initial terminal sandbox setup refresh failed; approved tool escalation completed the checks without changing permissions.
 
 - PROJECT_PLAN.md: current phase status and historical decisions/progress.
 - docs/CONTRIBUTION_METRICS.md and content/contributions.json: current KPI definitions, starter ledger and next dashboard work. npm run metrics regenerates CSV/JSON exports.

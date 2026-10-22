@@ -1,5 +1,9 @@
 # Descriptive contribution metrics
 
+## Accepted chatbot presentation
+
+The owner wants the contribution data available through a polished conversational English/Hausa chatbot, later integrated as a dashboard section. It shares the page locale automatically. Always expose **Change language / Canja harshe**, with **English** above **Hausa**, both visible without a menu. [CHATBOT_SPEC.md](CHATBOT_SPEC.md) records the full contract. The metric rules below remain authoritative for counts, bounds, units, targets, dates and evidence. Chatbot/UI integration is pending.
+
 Accepted direction, 22 October 2026: turn documented work into interesting descriptive numbers and KPIs. Before/after comparisons and causal estimation are not the product objective. A data-led redesign supersedes the tree-first direction; the existing application remains available while the new foundation is developed.
 
 ## Implemented foundation

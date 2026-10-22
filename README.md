@@ -48,3 +48,5 @@ RELEASE_MODE=public enforces portrait permission, human Hausa review and a corre
 ## Reuse
 
 The adapted tree artwork is CC BY-SA 4.0, with source attribution and changes documented in the artwork notice. No blanket open-source licence has been granted for application code or third-party photographs. A public repository alone does not grant additional reuse rights.
+
+Accepted next feature (22 October 2026): build a polished conversational English/Hausa chatbot, then integrate it as a dashboard section. Page and chatbot share one language. Always show **Change language / Canja harshe** with **English** above **Hausa**, both visible without a menu. See [the complete chatbot specification](docs/CHATBOT_SPEC.md). Requirements documented; implementation and human Hausa approval remain pending.

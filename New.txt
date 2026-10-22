@@ -1,0 +1,181 @@
+Build Specification: Bilingual Deterministic Numerical Q&A Engine (English / Hausa)
+0. Non-Negotiable Design Principles (Agent Must Follow)
+P1 — The LLM must not compute, must not select data, and must not generate final numbers. The only permissible roles for an LLM are: (a) parse a natural-language query into structured JSON ("parser"), or (b) generate a plain-text narrative wrapper after the numbers have been verified.
+
+P2 — Refusal and clarification are success modes, not failures. When parsing fails, confidence is low, or verification fails, the system must return "unsupported" or a clarification question—never guess or "correct" a number.
+
+P3 — Verification must be independent of generation. The component that produced the output (whether a rule engine or an LLM) must not also serve as the verifier. The verifier uses only deterministic arithmetic and source-data traceability.
+
+P4 — Every number must have provenance. The system must be able to answer: "Which source record, which query parameters, and which computation step produced this figure?"
+
+P5 — A higher clarification rate for Hausa than for English is acceptable. Parsing gaps in a low-resource language must be converted into safe failures, not correctness risks.
+
+1. System Components and Data Contracts
+1.1 Unified Output Schema (Both Language Parsers Must Converge Here)
+Every parser—English or Hausa—must output exactly the same Pydantic model:
+
+python
+from pydantic import BaseModel, Field
+from typing import Literal, Optional
+from enum import Enum
+
+class Intent(str, Enum):
+    COUNT = "COUNT"
+    TOP_N = "TOP_N"
+    AGGREGATE = "AGGREGATE"   # sum, mean, min, max
+    FILTER = "FILTER"
+    TREND = "TREND"
+
+class ParsedQuery(BaseModel):
+    intent: Intent
+    entity: str                    # entity name from controlled vocabulary
+    aggregation: Optional[str] = None
+    filters: dict[str, str] = {}  # controlled key-value pairs; values must be in allow-lists
+    limit: Optional[int] = None
+    confidence: float = Field(ge=0.0, le=1.0)
+    language_detected: Literal["en", "ha"]
+    needs_clarification: bool = False
+    clarification_question: Optional[str] = None
+Entities and filter values must come from a static controlled vocabulary. Free text is not accepted. If an LLM or rule parser emits an entity or filter value outside the vocabulary, the entire parse is treated as failed and routed to clarification.
+
+1.2 Language Detection and Routing
+Before parsing, run offline language detection. pynatlas.detect_language requires no model call and achieves >99% accuracy on held-out text; use it directly to route English vs. Hausa. If detection confidence is below threshold, return a bilingual clarification prompt and do not invoke any parser.
+
+1.3 Parser Layer (Defined Per Language, With Fallback Chains)
+English parser:
+
+Primary: spaCy Matcher / PhraseMatcher or a finite-state transducer, performing deterministic extraction against the controlled vocabulary and pattern rules.
+
+Fallback: If rules do not match, route to Option C (LLM-as-Parser)—a small model emits JSON conforming to ParsedQuery, which is schema-validated before use. The LLM only emits the structured object; it never touches data or the final answer.
+
+Hausa parser:
+
+Primary (offline rules): owo-parse offline heuristics cover common Hausa patterns, require no API key, and return structured results containing confidence, flags, and language_detected. Its OwoResult.flags (e.g., missing_amount, ambiguous_recipient) map directly to needs_clarification; its confidence feeds directly into the confidence gate.
+
+Fallback 1 (local small model): pynatlas accepts a JSON schema dict via response_format and enforces the schema during generation, so the reply is always valid. When using client.classify, the label set is constrained, so the answer can only be one of the predefined labels. Pass the ParsedQuery JSON schema so N-ATLaS emits an object conforming to the contract.
+
+Fallback 2 (LLM parser, last resort): Same schema-validation pipeline as English, but used only when offline rules and the local small model both fail. If this path also fails, return a clarification; do not guess.
+
+Hausa-specific NER supplement: If the parser needs a separate NER step, use the MasakhaNER Hausa fine-tune. xlm-roberta-base-finetuned-ner-hausa achieves up to 91.75 F1 on Hausa NER. NER output only helps populate entity and filters; it must still pass controlled-vocabulary validation.
+
+1.4 Structured-Output Validation Layer (Shared by All Parsing Paths)
+Regardless of whether the parse came from rules, owo-parse, pynatlas, or an LLM, the next stop must be independent deterministic schema validation:
+
+wassitai: Sends the schema, extracts, repairs, validates, and coerces the reply; if it still does not conform, re-asks the model. Supports Pydantic models as schema, validator, and return type; confidence scores decrease with each repair.
+
+promptguard-py: The SchemaValidator component specifically validates structured JSON output using JSON-schema-style rules or Pydantic models, as part of a YAML-configurable validation chain.
+
+agentic-gate: Deterministic schema validation gate and circuit breaker for LLM function calls, providing Pydantic-based gate guarantees.
+
+Rule for validation failure: Do not retry indefinitely. After the circuit breaker trips, return "Unable to understand this query" and list supported query patterns. Do not call the data layer.
+
+1.5 Deterministic Data Retrieval Layer
+Absolute rule: never construct queries by string concatenation. Map the validated ParsedQuery to parameterized, pre-approved query templates or API calls.
+
+Every intent + entity + filters combination must have one or more pre-registered query templates.
+
+Template execution returns a structured record set, where each record carries a source identifier (source_id) for later provenance.
+
+If no pre-registered template exists for a combination, return "This query type is not supported" and do not execute dynamically generated queries.
+
+2. Numerical Verification Layer (The System's Core Defense)
+Retrieved data must pass at least two independent verification layers before any text is generated. All verifiers are deterministic and do not use LLM judgment.
+
+2.1 Layer 1: Numerical Factuality Verification (factguard)
+factguard extracts every numeric claim from text or structured statements and verifies them against source_json—no LLM judge, no API key, no dependencies, runs in milliseconds.
+
+It distinguishes four states: the number exists in the data (ok), the number is computable from the data and the text has arithmetic signals (ok*), the number is attached to the wrong field (XX), and the data contains no support at all (??).
+
+Usage: Pass the execution result of the validated ParsedQuery as source_json, and pass the computed candidate answer (or the narrative text to be verified) into check(). Any XX or ?? rejects the entire answer; it does not proceed to the output layer.
+
+2.2 Layer 2: Unit, Context, and Arithmetic-Invariant Verification (QuantGuard)
+QuantGuard is a deterministic, unit-aware structured-claim verification library that makes zero LLM calls in common cases.
+
+It verifies:
+
+Numbers (exact + rounding tolerance)
+
+Percentages (as first-class units)
+
+Unit-aware values (5 km normalizes against 5000 m)
+
+Ranges and bounds
+
+Arithmetic sums (484 tasks vs. 262+197+22+3)
+
+Derived percentages (54.1% vs. 262/484)
+
+Entity/context binding: 12ms is a 2025 value and must not be attributed to 2024.
+
+Critical anti-pattern: QuantGuard does not return true merely because the same number appears somewhere in the source text. "User A paid $20" against sources ["User A paid $10", "User B paid $20"] returns CONTRADICTED because $20 belongs to User B.
+
+Usage: Pass the candidate answer text and the retrieved source-record chunks into guard.verify(generated_text=..., source_chunks=...). Any CONTRADICTED status triggers rejection.
+
+2.3 Optional Layer 3: Exact Arithmetic and Audit Package (NumProof)
+If the task involves money, financial ratios, spreadsheet cross-totals, or audit evidence that must be re-verifiable offline, call NumProof before output.
+
+NumProof recomputes the math using exact rational arithmetic + symbolic identity checks, returning VERIFY / REFUTE / ABSTAIN along with counterexamples, cell/formula provenance, and a signed, machine-checkable audit package. It provides an MCP server and can be invoked as a tool by an agent to gate numbers before they reach a user or report.
+
+When to enable: Only for the high-risk numerical types above. Pure count/list queries can skip it to reduce latency.
+
+3. End-to-End Workflow (Agent Executes in Order)
+Step 1 — Input sanitization: Trim whitespace, expand abbreviations, reject over-length queries and obvious injection patterns (SQL keywords, script tags, shell metacharacters).
+
+Step 2 — Language detection: pynatlas.detect_language. Low confidence → return a bilingual clarification and stop.
+
+Step 3 — Parsing: Select the language-specific parser according to the fallback chain in 1.3. Output a candidate ParsedQuery.
+
+Step 4 — Schema and vocabulary validation: Validate the ParsedQuery structure and controlled vocabulary using wassitai / promptguard / agentic-gate. Failure → clarification/unsupported, stop.
+
+Step 5 — Confidence gating: If confidence < threshold or needs_clarification=True, return a clarification question (in English for English, in Hausa for Hausa). Do not enter the data layer.
+
+Step 6 — Parameterized data retrieval: Map the validated ParsedQuery to a pre-registered query template. Return a record set with source_id. No template → unsupported, stop.
+
+Step 7 — Deterministic computation: Compute the answer from the record set. Use exact decimal/rational arithmetic; do not use floating-point approximations for money or unit-sensitive values.
+
+Step 8 — Layer 1 verification (factguard): Verify every numeric claim in the answer against the source record set. Any XX or ?? → reject, stop.
+
+Step 9 — Layer 2 verification (QuantGuard): Verify units, context binding, and arithmetic invariants. Any CONTRADICTED → reject, stop.
+
+Step 10 — Optional Layer 3 (NumProof): If enabled and the task is a high-risk numerical type, perform exact recomputation. REFUTE → reject; ABSTAIN → reject (unevaluable means do not output).
+
+Step 11 — Response assembly: Assemble the final answer using only verified numbers. If a narrative wrapper is needed, pass the verified numbers as immutable context to the LLM with the explicit instruction: do not introduce any new numeric tokens.
+
+Step 12 — Output guard (final scan): Re-extract numeric tokens from the final text and confirm each one maps to a verified value from Steps 8–10. Any unmatched numeric token → reject the entire response.
+
+Step 13 — Audit log: Record the raw query, language detection result, parser path (rules / owo-parse / pynatlas / LLM), ParsedQuery, query template ID, source record IDs, each verification layer's input/output/status, and the final answer or rejection reason. On rejection, record exactly which rule/layer failed.
+
+4. Language-Specific Notes
+Dimension	English	Hausa
+Primary parsing	spaCy rules / FST	owo-parse offline heuristics
+Fallback 1	LLM-as-Parser (schema-enforced)	pynatlas + enforced JSON schema
+Fallback 2	—	LLM-as-Parser (schema-validated)
+NER assistance	spaCy built-in	xlm-roberta-base-finetuned-ner-hausa (MasakhaNER)
+Expected clarification rate	Low	Medium–High (acceptable safe failure)
+Numerical verification	Identical	Identical
+Key constraint: The higher clarification rate on the Hausa path must not be "compensated for" by lowering verification standards. Both languages must use the same factguard / QuantGuard / NumProof rules and thresholds.
+
+5. Minimal Dependency List (All Free / Open-Source)
+Component	Purpose	Source
+owo-parse	Hausa/English intent parsing, offline-capable	PyPI
+pynatlas	Language detection + N-ATLaS schema-enforced parsing	PyPI
+spacy	English rule-based parsing	Open-source
+transformers + MasakhaNER model	Hausa NER assistance	HuggingFace
+wassitai / promptguard-py / agentic-gate	Schema validation and circuit breaking	PyPI
+factguard-check	Numerical factuality verification	PyPI
+rag-quantguard	Unit/context/arithmetic verification	PyPI
+numproof (optional)	Exact arithmetic + signed audit package	PyPI
+6. Acceptance Criteria (Agent Must Pass Before Delivery)
+Hallucinated-number test: Deliberately alter one number in the source data. The system must reject or return CONTRADICTED / XX and must not output that number.
+
+Entity-mismatch test: Attach an entity-A number to entity B. QuantGuard must return CONTRADICTED.
+
+Temporal-mismatch test: Attribute a 2025 value to 2024. QuantGuard must return CONTRADICTED.
+
+Hausa safe-clarification test: For Hausa queries beyond the capability of owo-parse and pynatlas, the system must return a Hausa clarification prompt or "unsupported" and must not guess or fall back to an English answer.
+
+Schema-violation test: A parser emits an entity or filter value outside the controlled vocabulary. The schema validation layer must reject it, and it must not reach the data layer.
+
+Audit-completeness test: Every rejected query must record the specific layer and rule that failed, and the log must be sufficient to reproduce the failure independently.
+
+This specification is model-agnostic. The agent should implement the English path plus all verification layers first, then integrate the Hausa parser, and finally run the acceptance criteria separately for each language. Only if logs show the Hausa clarification rate is unacceptably high and truly necessary should the LLM-as-Parser be enabled as an additional Hausa fallback—and even then, that path still never touches numerical computation.

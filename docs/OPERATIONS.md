@@ -1,5 +1,9 @@
 # Release, operation and handover
 
+## Planned chatbot operations boundary
+
+[CHATBOT_SPEC.md](CHATBOT_SPEC.md) records the accepted chatbot section and shared page/chat language control: **Change language / Canja harshe**, with visible vertically stacked **English** and **Hausa** options. Implementation is pending. Preserve static hosting unless a separately evaluated model/service is selected; no inference endpoint, raw-question logging or new service has been provisioned. Future promotion checks must include both page locales and synchronised chat behaviour. Existing reveal gates remain in force.
+
 ## Current gate state
 Public source repository: https://github.com/batestguy/disability-inclusion-legacy-tree (main). Public source publication is explicitly authorised separately from website reveal. See ../HANDOFF.md for ongoing work. No Cloudflare project or Sanity dataset has been provisioned by this workspace. No website deployment is claimed. Reveal requires approved genuine portrait, fluent Hausa review and correction contact. Personal creator fields are optional. Keep preview noindex until these gates pass.
 

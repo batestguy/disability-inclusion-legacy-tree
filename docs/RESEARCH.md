@@ -1,5 +1,9 @@
 # Research and editorial ledger ? 22 October 2026
 
+## Planned chatbot evidence use
+
+The owner accepted a polished conversational English/Hausa chatbot as a future dashboard section; see [CHATBOT_SPEC.md](CHATBOT_SPEC.md). It automatically follows the page locale through a visible **Change language / Canja harshe** control with **English** above **Hausa**. Responses must preserve source attribution, reported/target distinctions, bounds, date basis and incomplete coverage. This feature decision adds no new achievement evidence, image permission or human Hausa approval. The tool review is in [NUMERICAL_QA_REVIEW.md](NUMERICAL_QA_REVIEW.md).
+
 The source registry and bilingual drafts are in content/records.json. All story dates identify publication dates; no more precise event date is inferred. No verbatim quotations are reproduced. English is editorially checked against retrieved source text; Hausa is a draft for human review.
 
 ## Biography

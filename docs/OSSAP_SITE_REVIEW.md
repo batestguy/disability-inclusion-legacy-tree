@@ -1,5 +1,9 @@
 # Existing OSSAP-SNEO site review
 
+## Later chatbot decision
+
+The owner subsequently requested a polished conversational English/Hausa chatbot as a future dashboard section. Page and chatbot switch together using **Change language / Canja harshe**, with **English** above **Hausa**, both visible without a menu. See [CHATBOT_SPEC.md](CHATBOT_SPEC.md) and [the handoff](../HANDOFF.md). This accepted direction supplements the descriptive KPI pivot and takes precedence over earlier presentation recommendations. The site comparison below remains historical evidence; no chatbot has yet been implemented.
+
 Reviewed 22 October 2026 at the owner's request. Research and recommendation only: no product pivot approved or implemented.
 
 Subsequent decision: the owner accepted descriptive contribution KPIs and a data-led redesign. That later direction supersedes the decision status above; see CONTRIBUTION_METRICS.md and HANDOFF.md. The findings below remain the historical comparison, not the current implementation plan.

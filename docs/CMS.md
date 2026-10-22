@@ -1,5 +1,9 @@
 ﻿# Editing the legacy archive
 
+## Planned chatbot content boundary
+
+[CHATBOT_SPEC.md](CHATBOT_SPEC.md) defines the planned conversational dashboard section. Page and chat share the locale, with the always-visible bilingual instruction **Change language / Canja harshe** and vertically stacked **English** / **Hausa** options. Future chatbot greetings, suggestions, responses, clarifications and error states need reviewed bilingual content; Hausa approval cannot be inferred from existing drafts. No chatbot schema, CMS fields or publishing integration has been implemented by this documentation checkpoint.
+
 The website works from checked-in local content without a CMS account. `studio/` is a standalone native Sanity Studio for optional editing. No project, administrator, hosting account, webhook, or credential has been provisioned.
 
 ## Connect a real project

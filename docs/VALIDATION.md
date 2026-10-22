@@ -1,5 +1,11 @@
 # Validation evidence - 22 October 2026
 
+## Chatbot documentation checkpoint - 22 October 2026
+
+Completed checks for this documentation refresh: preflight, workspace lint/typecheck, all ten tests and both web/Studio production builds passed. All 15 project Markdown files have the contract or its reference; local Markdown links resolve and whitespace checks pass. No chatbot code, browser/performance rerun, commit/push or deployment is claimed. Historical refresh results below retain their original scope.
+
+[CHATBOT_SPEC.md](CHATBOT_SPEC.md) captures the accepted conversational dashboard section and shared page/chat language behaviour. Its checklist adds direct English/Hausa loads, vertical bilingual selector discoverability, synchronised switching, history, stale-response handling, bilingual semantic equivalence and human Hausa review. These are future acceptance tests, not passed checks. Earlier browser/performance evidence below predates the chatbot and cannot certify it. Validation commands for this documentation refresh are recorded in HANDOFF.md when completed.
+
 ## Latest handoff status
 
 Descriptive metrics foundation, 22 October 2026: added a six-activity ledger, a source-validating KPI module, CSV/JSON export and five new tests (ten total). Export succeeds and preserves missing quantities, targets and greater-than bounds. Ten tests, preflight, workspace lint and typecheck passed. No UI routes changed and no new browser/performance claims are made. Build verification for this change is recorded in docs/CONTRIBUTION_METRICS.md. Earlier tree-interface results below retain their original scope.

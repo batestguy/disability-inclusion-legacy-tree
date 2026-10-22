@@ -1,5 +1,11 @@
 # Hon. Mohammed Abba Isa Legacy Tree
 
+## Accepted chatbot and language decisions - 22 October 2026
+
+The next dashboard includes a beautifully designed conversational English/Hausa chatbot, built and validated as a component before dashboard integration. It automatically follows the page locale; changing the shared control changes both page and chat. The control always displays **Change language / Canja harshe**, with **English** above **Hausa**, vertically stacked, both visible without a menu, and a clear active state. This replaces the earlier compact query-tool presentation recommendation; numerical safeguards remain applicable.
+
+[docs/CHATBOT_SPEC.md](docs/CHATBOT_SPEC.md) is the detailed continuation contract. Chatbot implementation, final styling, bilingual templates, human Hausa review and integration remain pending. Final section placement and model/provider selection remain open. Documentation does not satisfy launch gates.
+
 Original brief preserved in HonAbbas.txt. Source of intent: supplied seven-phase plan.
 
 ## Decisions
@@ -22,6 +28,8 @@ Current status on 22 October 2026; later implementation sections preserve histor
 Genuine portrait with documented reuse permission; human Hausa review; connected Sanity/Cloudflare projects and publishing test; correction address before reveal; recorded performance and accessibility review. GitHub source provisioning is complete, but does not satisfy the live publishing test. Optional creator details may stay empty. Never mark gates passed without evidence.
 
 ## Progress
+
+22 October 2026 proposal review: New.txt describes a bilingual numerical Q&A engine. docs/NUMERICAL_QA_REVIEW.md records researched tool limitations, missing domain/semantic checks and a smaller proposed Ask the data section over the reviewed contribution ledger. This is a recommendation, not an accepted implementation decision or changed launch gate. No proposed packages installed, application changes made or deployment performed.
 Latest handoff: public repository delivery b614322 passed both GitHub Actions runs. See HANDOFF.md for the current resume sequence and docs/VALIDATION.md for CI links and check scope. Older snapshots below describe earlier stages; current phase status above takes precedence.
 
 2026-10-22: empty workspace inspected, brief preserved, research and app/Studio implementation started.

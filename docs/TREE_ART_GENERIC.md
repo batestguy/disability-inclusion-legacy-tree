@@ -1,5 +1,7 @@
 # Tree artwork and map provenance
 
+Historical-artwork note: the current regional artwork is documented in [TREE_ART.md](TREE_ART.md); this file retains the earlier generated-art account. The accepted future chatbot and shared page/chat locale contract are in [CHATBOT_SPEC.md](CHATBOT_SPEC.md): **Change language / Canja harshe**, with **English** above **Hausa**, both visible. No chatbot implementation or artwork-rights change is implied.
+
 The current natural tree is a generated decorative illustration. It is not a historical tree, documentary photograph, or portrait of Hon. Isa.
 
 Method: built-in imagegen tool, transparent background enabled, 22 October 2026. No reference image or likeness supplied/generated. Original selected output copied into this workspace as output/imagegen/tree-realistic.png. Browser assets: apps/web/public/tree-realistic.webp (1400px) and apps/web/public/tree-realistic-mobile.webp (800px), compressed with Sharp preserving alpha. The original output remains unchanged. The interactive controls and story twigs are HTML/CSS; no text or controls are baked into the image.
