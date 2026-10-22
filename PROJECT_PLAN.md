@@ -6,22 +6,26 @@ Original brief preserved in HonAbbas.txt. Source of intent: supplied seven-phase
 Independent surprise tribute for journalists and researchers. Botanical tree with Policy Advocacy, Economic Empowerment, Digital Inclusion and Assistive Tech. Sourced chronological roots; English / and Hausa /ha/; permanent achievement pages; search/filters; accessible panels. Deep greens, gold, ivory. Next.js static export, Tailwind, Radix, GSAP ScrollTrigger, Sanity, optional GoatCounter; free tiers. Cloudflare Pages name target mohammed-abba-isa-legacy. Optional creator details deferred. No unsupported statistics or invented portrait.
 
 ## Phases and completion criteria
-1. Foundation: workspace, Studio, root commands, actual setup instructions. In progress.
-2. Research: supported biography and three substantial stories with date, branch, role, status, citations, evidence limits, Hausa drafts and image rights ledger. In progress.
-3. Prototype: botanical desktop/mobile tree, branch selection, leaf panels, roots and filters. In progress.
-4. Accessibility: keyboard, focus/dismissal/restoration/Back, persistent preferences, reduced motion, bilingual permanent URLs. In progress.
-5. Publishing: reviewed CMS content build, hooks, images, configurable About and contact. Live account connection required.
-6. Validation: functional, axe, zoom, performance, source checks and guided human reviews. In progress.
-7. Reveal: GitHub-integrated Cloudflare site verified live, corrections, backup/rollback/recovery/transfer runbook. Launch gates pending.
+Current status on 22 October 2026; later implementation sections preserve historical snapshots.
+
+1. Foundation: completed; workspace, Studio, root commands and setup checked locally and in GitHub Actions.
+2. Research: five sourced stories, six sources and three roots milestones implemented. Wider career coverage, portrait permission and human Hausa review remain open.
+3. Prototype: implemented and browser-checked; regional baobab, connected branches/twigs, mobile layout, roots and filters. Human usability review remains open.
+4. Accessibility: core keyboard, focus/Back, preferences and bilingual routes checked automatically. Guided screen-reader, zoom and Hausa reviews remain open.
+5. Publishing: reviewed-content adapter and schemas implemented. Live Sanity dataset, hooks and preview publication still need setup and verification.
+6. Validation: local checks and CI pass; earlier 19 browser journeys and axe in nine states pass. Fresh artwork performance measurements and human reviews remain open.
+7. Reveal: public GitHub repository delivered; Cloudflare Git integration, public address, correction contact and reveal remain pending. Operations runbook prepared.
 
 ## Launch gates
-Genuine portrait with documented reuse permission; human Hausa review; connected Sanity/GitHub/Cloudflare projects and publishing test; correction address before reveal; recorded performance and accessibility review. Optional creator details may stay empty. Never mark gates passed without evidence.
+Genuine portrait with documented reuse permission; human Hausa review; connected Sanity/Cloudflare projects and publishing test; correction address before reveal; recorded performance and accessibility review. GitHub source provisioning is complete, but does not satisfy the live publishing test. Optional creator details may stay empty. Never mark gates passed without evidence.
 
 ## Progress
+Latest handoff: public repository delivery b614322 passed both GitHub Actions runs. See HANDOFF.md for the current resume sequence and docs/VALIDATION.md for CI links and check scope. Older snapshots below describe earlier stages; current phase status above takes precedence.
+
 2026-10-22: empty workspace inspected, brief preserved, research and app/Studio implementation started.
 
 
-## Implementation and final gate state ? 22 October 2026
+## Historical implementation snapshot - 22 October 2026
 - Phase 1 implemented and checked: npm workspace; Next and standalone Studio; scripts; setup; original brief intact. Local dev servers ready; both builds pass.
 - Phase 2 starter collection completed: five supported records, six sources, three roots milestones, English and visibly labelled Hausa drafts; source/rights ledger in docs/RESEARCH.md. Exhaustive career coverage and image clearance remain open.
 - Phase 3 prototype implemented: original botanical SVG, four branch controls, evidence-led leaves, panels and mobile vertical structure. Screenshots in output/playwright.

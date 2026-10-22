@@ -6,6 +6,8 @@ This public source repository contains a working bilingual preview. The project 
 
 ## Run locally
 
+Repository delivery and both GitHub Actions runs passed on 22 October 2026. [HANDOFF.md](HANDOFF.md) records the verified delivery commit, next tasks, input requirements and documentation map. Website hosting and reveal remain pending.
+
 Requires Node 22.12+ (validated with Node 24.15) and npm 11. On Windows, use npm.cmd in place of npm.
 
 ```sh

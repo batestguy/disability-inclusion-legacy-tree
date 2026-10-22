@@ -4,6 +4,8 @@ The website works from checked-in local content without a CMS account. `studio/`
 
 ## Connect a real project
 
+Handoff status, 22 October 2026: the public GitHub source repository and CI are working; Sanity remains a placeholder without a live dataset or webhook. Next steps below are setup instructions, not completed publishing evidence. Track integration results in [HANDOFF.md](../HANDOFF.md) and [VALIDATION.md](VALIDATION.md). Do not import over existing editorial data without first inspecting it and taking a backup.
+
 1. Create a Sanity project and a `production` dataset in an account controlled by the long-term owner. Confirm current free-plan limits and user allowances in the account before inviting editors. This repository creates no paid resources and cannot guarantee future free-plan terms.
 2. Copy `studio/.env.example` to `studio/.env.local`; set `SANITY_STUDIO_PROJECT_ID` and `SANITY_STUDIO_DATASET`. These identifiers are public. Never put tokens in `SANITY_STUDIO_*` variables, which are bundled into the browser.
 3. Run `npm install` in the repository root, then `npm run dev --workspace=@legacy/studio`. Sign in through Sanity and grant the least privileges needed. Test with a non-administrator editor.

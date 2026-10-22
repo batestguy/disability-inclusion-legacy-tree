@@ -1,4 +1,10 @@
-# Validation evidence ? 22 October 2026
+# Validation evidence - 22 October 2026
+
+## Latest handoff status
+
+Both repository delivery workflows completed successfully: [implementation CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/39722399277) and [delivery documentation CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/39722444939), the latter at b614322584f911810be52f5cbc23766b1c3ad1fd. These ran preflight, lint, typecheck, five content tests and both builds. CI does not run browser/axe/Lighthouse or deploy the website.
+
+This handoff refresh changes documentation only. Preflight and Git whitespace checks passed again; application builds and browser/performance tests were not rerun for this refresh. Earlier dated results below retain their original scope. Current-artwork performance, human Hausa/portrait approval, guided accessibility review and live publishing verification remain open. Start the next session with [HANDOFF.md](../HANDOFF.md).
 
 ## Result
 A runnable bilingual preview is implemented. It is not release-ready. No public deployment or live CMS publishing test is claimed.
