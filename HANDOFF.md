@@ -21,7 +21,7 @@ The regional approximation was explicitly authorised when an exact hometown tree
 
 ## Validation and next work
 
-Before repository delivery, run preflight, lint, typecheck, five content tests and both builds. Earlier browser validation passed 19 journeys and axe in nine states; see docs/VALIDATION.md and output/browser-results.json. Earlier Lighthouse results predate the current artwork and miss performance targets; they are not current certification.
+Repository delivery verification on 22 October 2026: preflight, workspace lint, typecheck, all five content tests and both production builds passed. Initial implementation commit 1a1049c was pushed to public main; the GitHub API returned the same SHA as local HEAD. A follow-up documentation commit records this result. GitHub Actions was queued at verification; inspect Actions for its current result. Earlier browser validation passed 19 journeys and axe in nine states; see docs/VALIDATION.md and output/browser-results.json. Earlier Lighthouse results predate the current artwork and miss performance targets; they are not current certification.
 
 1. Obtain a genuine portrait with permission, fluent human Hausa review and correction mailbox.
 2. Profile current artwork performance; complete screen-reader, zoom and journalist verification tasks.
