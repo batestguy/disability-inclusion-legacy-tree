@@ -1,0 +1,120 @@
+🚀 MASTER HAND-OFF: Hon. Mohammed Abba Isa Legacy Website
+AGENT DIRECTIVE:
+You are acting as a Senior Full-Stack Developer, UI/UX Designer, and Accessibility Engineer. Your objective is to build a high-performance, data-driven advocacy website for Hon. Mohammed Abba Isa (Senior Special Assistant to the President on Special Needs and Equal Opportunities, Nigeria).
+
+You must adhere strictly to the "Universal Design" philosophy. There will be no separate layouts for disabled users; instead, you will build one fundamentally accessible layout with a floating user-preference menu. Do not deviate from the specified tech stack.
+
+🏗️ 1. Core Concept & UX Strategy
+The Metaphor: The "Ecosystem Tree."
+
+The Execution (Hero Tree Abstraction): To avoid the UX nightmare of a sprawling, unreadable tree graphic, the tree will only exist in the Hero section (top 100vh).
+
+The Trunk: Hon. Isa's portrait.
+
+The Branches: His core pillars (Policy Advocacy, Economic Empowerment, Digital Inclusion, Assistive Tech).
+
+The Interaction: Clicking a branch smooth-scrolls the user down to a clean, traditional, accessible grid layout for that specific pillar.
+
+The Roots: A horizontal timeline at the footer detailing his personal and academic journey (Top 1% MSc, PhD track, etc.).
+
+🧰 2. The Exhaustive Tech Stack
+Framework: Next.js (App Router) using Static Site Generation (SSG).
+
+Styling: Tailwind CSS (configured for high contrast).
+
+UI Components: Radix UI (Headless) for the accessibility modal and tooltips.
+
+Animation: GSAP (GreenSock) + ScrollTrigger for SVG branch animations.
+
+Content Management: Sanity.io (Headless CMS).
+
+Hosting: Cloudflare Pages (unlimited bandwidth, fast CDN).
+
+Analytics: GoatCounter (privacy-focused, no cookies).
+
+📊 3. The Data-Driven Narrative (Content Injection)
+Weave these specific statistics into the UI copy to transition the site from "charity" to a "national economic imperative."
+
+Hero Headline: "Over 35 Million Nigerians live with disabilities. This is not a niche issue; it is a national imperative."
+
+Economic Empowerment Branch: Highlight the 63% unemployment rate for PWDs vs. the 22% national average. Feature the 5% employment quota advocacy.
+
+Digital Inclusion Branch: Highlight the 35 million digitally excluded citizens.
+
+Private Sector Call-Out: "Companies leading in disability inclusion report 1.6x more revenue and 2.6x more net income."
+
+♿ 4. Universal Design & Accessibility Mandate (The "No Separate Layout" Rule)
+CRITICAL: The site must score 100 on Lighthouse Accessibility. Build one layout that everyone uses, but include a floating "Accessibility Preferences" Menu.
+
+Floating Action Button (FAB): Fixed to the bottom right corner with a universal access icon (♿).
+
+The Modal: Clicking the FAB opens a Radix UI Dialog containing global toggles.
+
+The Toggles (Apply global classes to <html> or <body>):
+
+High Contrast Mode: Toggles a .high-contrast class (pure black text on pure white background).
+
+Text Size Adjustment: Buttons to scale the root font size (100%, 125%, 150%).
+
+Reduce Motion: Toggles a class that forces animation: none !important; transition: none !important; and pauses GSAP for users with vestibular disorders.
+
+Dyslexia-Friendly Font: Switches the font-family to 'Lexend' or 'OpenDyslexic'.
+
+Underline Links: Forces all links to be underlined for easy identification.
+
+Persistence: Save user preferences in localStorage so they persist across page reloads.
+
+Screen Reader Support: Ensure the entire site uses semantic HTML, proper heading hierarchies (h1, h2, h3), and ARIA labels on all interactive elements.
+
+🗺️ 5. Step-by-Step Execution Workflow
+Phase 1: Foundation & CMS Setup
+Initialize the Next.js project with Tailwind CSS.
+
+Set up Sanity.io. Create two schemas:
+
+Achievement: (Title, Description, Branch Tag, Date).
+
+NewsArticle: (Title, Thumbnail, Source, External URL, Date).
+
+Set up API keys and connect the frontend to the CMS.
+
+Phase 2: The Hero Tree (GSAP & SVG)
+Embed a custom SVG tree. Add role="navigation" and an invisible, keyboard-focusable <ul> list that mirrors the visual branches (so blind users can navigate it).
+
+Implement GSAP ScrollTrigger. As the user scrolls, the branches animate/grow.
+
+Constraint: Wrap the GSAP animations in a @media (prefers-reduced-motion: no-preference) check. If the user's OS requests reduced motion, the tree must be fully visible immediately with no animation.
+
+Phase 3: The Content Grids (The Branches)
+Below the hero, build distinct sections for each pillar.
+
+Fetch data from Sanity. Render news articles in a responsive CSS Grid (Masonry style).
+
+Every thumbnail must use Next.js <Image /> for lazy loading and WebP conversion. Every image MUST have a descriptive alt attribute.
+
+Phase 4: The Accessibility Preference Menu
+Build the FAB and the Radix UI Dialog as detailed in Section 4.
+
+Write the JavaScript logic to toggle the CSS classes on the <html> tag and save the state to localStorage.
+
+Phase 5: The Roots Timeline
+Build a horizontal timeline (CSS Grid/Flexbox) at the bottom of the page, keeping it fully responsive (turns into a vertical timeline on mobile).
+
+Phase 6: SEO, Performance & Launch
+Inject JSON-LD Schema into the <head>. Use Person schema for Hon. Isa, and NewsArticle schema for the news items.
+
+Run an automated axe-core accessibility audit. Fix all contrast errors and missing ARIA labels.
+
+Run Lighthouse in Chrome DevTools. Optimize images and fonts until the Performance and Accessibility scores are 95+.
+
+Deploy to Cloudflare Pages via GitHub integration.
+
+🏆 6. Acceptance Criteria (The 9.5/10 Rubric)
+Before you output the final code, verify the following:
+
+□ Accessibility: The site is 100% keyboard navigable (using the Tab key). Screen readers can parse every text element and image.
+□ Mobile UX: The Hero Tree collapses gracefully into a clean, vertical, scrollable list on mobile screens. No horizontal scrolling.
+□ Performance: The site loads in under 2 seconds on a simulated 3G connection. Images are lazy-loaded.
+□ Scalability: The client can log into Sanity, add a new article, and the Next.js build will automatically populate the correct grid on the live site without requiring code changes.
+□ Preferences: The Accessibility Menu successfully applies High Contrast, Font Size, Dyslexia Font, and Reduce Motion, and remembers these choices on reload.
+Begin Execution: Acknowledge this hand-off. Start by generating the directory structure, the Sanity CMS schemas, and the initial Next.js layout.tsx and page.tsx files.

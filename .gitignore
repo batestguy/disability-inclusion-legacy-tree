@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+dist/
+.env*
+!.env.example
+*.tsbuildinfo
+.npm-cache/
+.sanity/
+
+# Keep provenance and representative evidence; omit exploratory downloads.
+output/*
+!output/browser-results.json
+!output/lighthouse-3g.json
+!output/lighthouse-mobile.json
+!output/references/
+output/references/*
+!output/references/yobe-baobab-*
+!output/imagegen/
+output/imagegen/*
+!output/imagegen/tree-yobe-adapted.png
+!output/playwright/
+output/playwright/*
+!output/playwright/desktop.png
+!output/playwright/mobile.png
+!output/playwright/mobile-panel.png
+!output/playwright/tree-revision-*.png

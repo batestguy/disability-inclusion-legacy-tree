@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22T04:07:21.929Z",
+  "base": "http://127.0.0.1:8767",
+  "checks": [
+    "flag covers full viewport while scrolling and regional artwork has public source, licence and download",
+    "five sourced stories",
+    "branch selection",
+    "branches expand into connected stories, retain state and restore focus",
+    "clearly labelled language choices and enlarged portrait stump",
+    "clicking the actual illustrated limb opens its story branches",
+    "keyboard branch expansion and story focus order",
+    "empty search",
+    "year filter",
+    "Escape and focus restoration",
+    "browser Back closes detail",
+    "permanent bilingual link preserves record",
+    "panel language switch retains selected story",
+    "all preferences persist after reload",
+    "flag watermark is hidden in high contrast mode",
+    "mobile large text no horizontal overflow",
+    "mobile panel focus contained",
+    "320px reflow",
+    "unavailable localStorage handled"
+  ],
+  "axe": [
+    {
+      "label": "English desktop",
+      "violations": []
+    },
+    {
+      "label": "expanded story branches",
+      "violations": []
+    },
+    {
+      "label": "detail panel",
+      "violations": []
+    },
+    {
+      "label": "permanent record",
+      "violations": []
+    },
+    {
+      "label": "Hausa direct detail",
+      "violations": []
+    },
+    {
+      "label": "high contrast large text",
+      "violations": []
+    },
+    {
+      "label": "mobile expanded branches at 150 percent text",
+      "violations": []
+    },
+    {
+      "label": "mobile default",
+      "violations": []
+    },
+    {
+      "label": "mobile panel",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

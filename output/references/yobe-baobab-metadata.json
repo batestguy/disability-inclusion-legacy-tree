@@ -1,0 +1,99 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "138702004": {
+        "pageid": 138702004,
+        "ns": 6,
+        "title": "File:Booboo tree.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-10-11T06:48:06Z",
+            "size": 540795,
+            "width": 1224,
+            "height": 1471,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Booboo_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Booboo_tree.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138702004",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-10-11 06:48:06",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Booboo tree",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|Images from Wiki Loves Monuments 2023|Cultural heritage monuments in Nigeria with known IDs|Uploaded via Campaign:wlm-ng|Images from Wiki Loves Monuments 2023 in Nigeria|Images from Wiki Loves Monuments missing SDC depicts|Images from Wiki Loves Monuments missing SDC location of creation|Unidentified cultural heritage monuments in Nigeria|Images from Wiki Loves Monuments 2023 in the Hausa community",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "This media shows a cultural heritage object of Nigeria with the Wikidata-ID:",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-10-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Adamu_ab\" title=\"User:Adamu ab\">Adamu ab</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

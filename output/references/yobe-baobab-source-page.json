@@ -1,0 +1,24 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 138702004,
+        "ns": 6,
+        "title": "File:Booboo tree.jpg",
+        "revisions": [
+          {
+            "timestamp": "2024-08-17T19:02:29Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Booboo tree that found 300 yeas ago in world locate in danchuwa yobe state Noth Nigeria}}\n{{ha|1=Bishiyar kuka data dauki shekara Dari uku aduniya dake  kyauyen danchuwa a jihar yobe arewacin najireya}}{{Cultural Heritage Nigeria|Booboo tree locate in danchuwa yobe state Noth Nigeria opposite direction jajere raod}}{{Wiki Loves Monuments 2023 in Nigeria|Hausa}}\n|date=2023-10-11\n|source={{own}}\n|author=[[User:Adamu ab|Adamu ab]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n{{Wiki Loves Monuments 2023|ng}}\n\n[[Category:Unidentified cultural heritage monuments in Nigeria]]\n[[Category:Uploaded via Campaign:wlm-ng]]"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

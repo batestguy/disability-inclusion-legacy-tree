@@ -1,0 +1,256 @@
+{
+  "sources": [
+    {
+      "id": "appointment",
+      "title": "President Tinubu Appoints Presidential Aide on Disability Matters",
+      "publisher": "The State House",
+      "type": "official",
+      "date": "2023-11-09",
+      "url": "https://statehouse.gov.ng/president-tinubu-appoints-presidential-aide-on-disability-matters/",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "smedan",
+      "title": "Tinubu aide, Abba facilitates empowerment program for PWDs",
+      "publisher": "Peoples Daily · reports an office statement",
+      "type": "office",
+      "date": "2024-01-29",
+      "url": "https://peoplesdaily.ng/tinubu-aideabba-facilitates-empowerment-program-for-pwds/",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "education",
+      "title": "Tinubu committed to inclusive education for PWDs, says aide",
+      "publisher": "TheCable",
+      "type": "independent",
+      "date": "2024-07-20",
+      "url": "https://www.thecable.ng/tinubu-committed-to-inclusive-education-for-pwds-says-aide/",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "interview",
+      "title": "Interview: FG working to develop a centralised database of PWDs",
+      "publisher": "TheCable · interview, claims by the subject",
+      "type": "independent",
+      "date": "2025-05-31",
+      "url": "https://www.thecable.ng/interview-fg-working-to-develop-a-centralised-database-of-pwds-says-mohammed-isa/",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "summit",
+      "title": "SSAP Abba Isa Joins President Tinubu at Progressive Digital Media Summit",
+      "publisher": "Office of the SSA",
+      "type": "office",
+      "date": "2025-08-04",
+      "url": "https://ossaposneo.org/ssap-abba-isa-joins-president-tinubu-other-dignitaries-at-maiden-progressive-digital-media-summit/",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "devices",
+      "title": "NCPWD Receives ECOWAS Assistive Devices to Expand Access for Children with Disabilities",
+      "publisher": "PWD Spotlight",
+      "type": "independent",
+      "date": "2026-07-08",
+      "url": "https://pwdspotlight.com/2026/07/08/ncpwd-receives-ecowas-assistive-devices-to-expand-access-for-children-with-disabilities/",
+      "accessed": "2026-10-22"
+    }
+  ],
+  "achievements": [
+    {
+      "slug": "inclusive-business-skills",
+      "branch": "economic",
+      "date": "2024-01-29",
+      "status": "reported",
+      "title": {
+        "en": "Opening a door to enterprise",
+        "ha": "Bude kofar sana’a"
+      },
+      "description": {
+        "en": "Peoples Daily reported that five persons with disabilities received training and startup kits through SMEDAN’s National Business Skills Development Initiative in Abuja. The report attributes their inclusion to Isa’s office.",
+        "ha": "Peoples Daily ta ruwaito cewa mutane biyar masu nakasa sun samu horo da kayan fara sana’a daga shirin SMEDAN a Abuja. Rahoton ya danganta shigar da su ga ofishin Isa."
+      },
+      "role": {
+        "en": "Facilitated inclusion, according to a statement from his office. SMEDAN delivered the programme.",
+        "ha": "Ya taimaka wajen shigar da su, a cewar sanarwar ofishinsa. SMEDAN ta gudanar da shirin."
+      },
+      "evidenceLimits": {
+        "en": "Coverage relies on an office statement. Kits and training were reported; subsequent income or employment gains were not measured. Publication date is used; the article describes the activity as the preceding Friday.",
+        "ha": "Rahoton ya dogara da sanarwar ofishi. Ba a auna karuwar kudin shiga ko ayyukan yi ba. An yi amfani da ranar wallafa rahoton."
+      },
+      "sources": [
+        "smedan"
+      ],
+      "reviewed": true,
+      "haReviewed": false
+    },
+    {
+      "slug": "inclusive-education-hearing",
+      "branch": "policy",
+      "date": "2024-07-20",
+      "status": "advocacy",
+      "title": {
+        "en": "A voice for inclusive education",
+        "ha": "Kira ga ilimi mai daukar kowa"
+      },
+      "description": {
+        "en": "At a public hearing on a proposed Federal College of Education (Special) in Dukku, Gombe State, Isa supported specialised teacher education and learning environments that include students with disabilities.",
+        "ha": "A zaman sauraron ra’ayi kan kudirin kafa Kwalejin Ilimi ta Musamman a Dukku, Jihar Gombe, Isa ya goyi bayan horar da malamai da wuraren karatu masu daukar dalibai masu nakasa."
+      },
+      "role": {
+        "en": "Advocate speaking at a public hearing; the bill was sponsored by legislator Abdullahi el-Rasheed.",
+        "ha": "Mai bayar da shawara a zaman sauraron ra’ayi; dan majalisa Abdullahi el-Rasheed ne ya gabatar da kudirin."
+      },
+      "evidenceLimits": {
+        "en": "The source establishes advocacy for a proposed institution. It does not establish that the college opened or attribute the bill’s authorship to Isa. The date is the report publication date.",
+        "ha": "Majiyar ta tabbatar da bayar da shawara ne; ba ta tabbatar da bude kwalejin ba. Ranar ita ce ranar wallafa rahoton."
+      },
+      "sources": [
+        "education"
+      ],
+      "reviewed": true,
+      "haReviewed": false
+    },
+    {
+      "slug": "disability-data-register",
+      "branch": "policy",
+      "date": "2025-05-31",
+      "status": "announced",
+      "title": {
+        "en": "Making inclusion visible in the data",
+        "ha": "Bayyana bukatun masu nakasa a bayanai"
+      },
+      "description": {
+        "en": "In a TheCable interview, Isa described work with stakeholders towards a centralised, disaggregated disability database. He acknowledged that a single central database did not yet exist.",
+        "ha": "A hirarsa da TheCable, Isa ya bayyana aiki tare da masu ruwa da tsaki don samar da kundin bayanan masu nakasa na kasa. Ya ce har yanzu babu kundin bai daya."
+      },
+      "role": {
+        "en": "Described the initiative and its intended policy use in an interview.",
+        "ha": "Ya bayyana shirin da amfaninsa wajen tsara manufofi a hira."
+      },
+      "evidenceLimits": {
+        "en": "This is an announcement by the subject, not proof of a completed database. No registration totals, launch date or independently measured impact are established here.",
+        "ha": "Wannan sanarwar shiri ce, ba hujjar kammala kundin ba. Ba a tabbatar da jimillar rajista ko tasirinsa ba."
+      },
+      "sources": [
+        "interview"
+      ],
+      "reviewed": true,
+      "haReviewed": false
+    },
+    {
+      "slug": "accessible-digital-future",
+      "branch": "digital",
+      "date": "2025-08-04",
+      "status": "advocacy",
+      "title": {
+        "en": "An accessible digital future",
+        "ha": "Makomar dijital mai saukin amfani"
+      },
+      "description": {
+        "en": "An office report of the Progressive Digital Media Summit records Isa’s call for accessible digital content and opportunities for persons with disabilities in education, work and public participation.",
+        "ha": "Rahoton ofishi kan taron Progressive Digital Media Summit ya bayyana kiran Isa ga abun ciki na dijital mai saukin amfani da damar ilimi, aiki da shiga harkokin jama’a ga masu nakasa."
+      },
+      "role": {
+        "en": "Participant and advocate for digital accessibility.",
+        "ha": "Mahalarta kuma mai kira ga saukin amfani da fasahar dijital."
+      },
+      "evidenceLimits": {
+        "en": "Office reporting establishes a stated position, not delivery of a training programme, a technology platform or a measured reduction in digital exclusion. Date is the office report date.",
+        "ha": "Rahoton ya bayyana matsaya ne, ba aiwatar da horo ko kaddamar da manhaja ko auna raguwar wariyar dijital ba."
+      },
+      "sources": [
+        "summit"
+      ],
+      "reviewed": true,
+      "haReviewed": false
+    },
+    {
+      "slug": "assistive-technology-partnership",
+      "branch": "assistive",
+      "date": "2026-07-08",
+      "status": "reported",
+      "title": {
+        "en": "Supporting access to assistive devices",
+        "ha": "Tallafa wa samun kayan taimako"
+      },
+      "description": {
+        "en": "PWD Spotlight reported the presentation of ECOWAS assistive devices to the National Commission for Persons with Disabilities. Isa spoke in support of the partnership and disability rights at the ceremony.",
+        "ha": "PWD Spotlight ta ruwaito mika kayan taimako na ECOWAS ga Hukumar Masu Nakasa ta Kasa. Isa ya yi jawabi yana goyon bayan hadin gwiwar da hakkin masu nakasa."
+      },
+      "role": {
+        "en": "Supportive speaker. ECOWAS donated the devices; NCPWD received them.",
+        "ha": "Mai jawabin goyon baya. ECOWAS ta bayar da kayan; NCPWD ta karba."
+      },
+      "evidenceLimits": {
+        "en": "The report does not establish that Isa procured or distributed the devices, or that each intended child received one. No beneficiary outcome is attributed to him. Date is publication date.",
+        "ha": "Rahoton bai tabbatar cewa Isa ne ya sayo ko rarraba kayan ba, ko kowane yaro ya samu nasa. Ba a danganta sakamakon tallafin gare shi ba."
+      },
+      "sources": [
+        "devices"
+      ],
+      "reviewed": true,
+      "haReviewed": false
+    }
+  ],
+  "timeline": [
+    {
+      "date": {
+        "en": "Before 2023",
+        "ha": "Kafin 2023"
+      },
+      "title": {
+        "en": "Roots in advocacy",
+        "ha": "Tushen fafutuka"
+      },
+      "description": {
+        "en": "TheCable identifies Isa as the first chair of JONAPWD’s Yobe State chapter. The exact dates of this role remain unverified.",
+        "ha": "TheCable ta bayyana Isa a matsayin shugaban farko na JONAPWD reshen Jihar Yobe. Ba a tabbatar da takamaiman shekarun ba."
+      },
+      "sources": [
+        "interview"
+      ]
+    },
+    {
+      "date": {
+        "en": "2017",
+        "ha": "2017"
+      },
+      "title": {
+        "en": "Public administration",
+        "ha": "Gudanar da mulki"
+      },
+      "description": {
+        "en": "The presidential appointment notice records an honours degree and a master’s in Public Administration at the University of Maiduguri; the master’s was earned in 2017.",
+        "ha": "Sanarwar nada shi ta bayyana digiri da digiri na biyu a fannin gudanar da mulki daga Jami’ar Maiduguri. Ya samu digiri na biyu a 2017."
+      },
+      "sources": [
+        "appointment"
+      ]
+    },
+    {
+      "date": {
+        "en": "9 November 2023",
+        "ha": "9 Nuwamba 2023"
+      },
+      "title": {
+        "en": "A national mandate",
+        "ha": "Aikin kasa"
+      },
+      "description": {
+        "en": "Appointed Senior Special Assistant to the President on Disability Matters. Later reporting uses Special Needs and Equal Opportunities.",
+        "ha": "An nada shi Babban Mataimaki na Musamman ga Shugaban Kasa kan harkokin nakasa. Rahotanni na baya sun yi amfani da suna Special Needs and Equal Opportunities."
+      },
+      "sources": [
+        "appointment",
+        "interview"
+      ]
+    }
+  ],
+  "settings": {
+    "creator": {},
+    "correctionEmail": "",
+    "portrait": null,
+    "haReviewed": false,
+    "revealReady": false
+  }
+}

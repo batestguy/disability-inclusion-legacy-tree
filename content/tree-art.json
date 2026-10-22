@@ -1,0 +1,27 @@
+{
+  "id": "yobe-baobab-danchuwa",
+  "sourceTitle": "Booboo tree.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Booboo_tree.jpg",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Booboo_tree.jpg",
+  "author": "Adamu ab",
+  "authorUrl": "https://commons.wikimedia.org/wiki/User:Adamu_ab",
+  "sourceDate": "2023-10-11",
+  "accessed": "2026-10-22",
+  "locationBasis": "Danchuwa, Yobe State, as described by the source uploader; not independently geolocated.",
+  "hometownVerified": false,
+  "personalConnectionVerified": false,
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "adaptationLicense": "CC BY-SA 4.0",
+  "modifications": [
+    "AI colour restoration",
+    "Background and farm vegetation removal",
+    "Artistic extension of cropped crown and obscured base",
+    "Landscape recomposition",
+    "WebP resizing/compression with alpha preserved"
+  ],
+  "asset": "/tree-yobe.webp",
+  "mobileAsset": "/tree-yobe-mobile.webp",
+  "sourceSha256": "cadea5d4fc9dea9fcefb6f2516f3ba403928d9d2b3f3d887a9abb6cdd4ea682b",
+  "ageClaimPublished": false
+}
