@@ -61,10 +61,11 @@ Environment follow-ups:
 
 ## Phase 1 — finish source and numerical review
 
-**Status: active; batch 001 complete, overall phase incomplete.**
+**Status: active; batches 001–002 complete, overall phase incomplete.**
 
-Current baseline: 2,869 passages = 82 recorded source-context decisions + 1,260
-automatic exact repeats + 1,527 awaiting review. Eighteen recorded decisions are
+Current baseline: 2,869 passages = 142 recorded source-context decisions + 146
+exact repeats linked to reviewed originals + 1,114 unlinked automatic exact
+repeats + 1,467 awaiting review. Eighteen recorded decisions are
 explicit unresolved holds. Exact repetition is a machine check; it does not
 approve the canonical claim or identify unique beneficiaries.
 
@@ -92,11 +93,12 @@ observations resolve to short evidence excerpts and citations; invalid units,
 bounds, dates and target/delivery substitutions fail tests. No combined unique
 beneficiary total or arbitrary impact score.
 
-The current strict completeness check is intentionally conservative: automatic
-repeats are not counted as completed editorial review. Extend it with tested
-canonical-decision resolution before relying on it as the final archive gate.
+The completeness check distinguishes exact repeats linked to reviewed canonical
+decisions from those still awaiting canonical review. A linked copy preserves
+any original hold and creates no new observation or independent corroboration.
+Unlinked automatic repeats are not counted as completed editorial review.
 
-**Immediate next step:** review the next source-context batch after batch 001, save
+**Immediate next step:** review the next source-context batch after batch 002, save
 its decisions and publish the revised accounting in this document. No owner
 classification or new credentials are needed for that step.
 
@@ -159,7 +161,9 @@ Human Hausa approval remains required before public reveal.
   exports and chatbot context. Supply readable table alternatives for every chart.
 - [ ] Show labels, terms and representative articles from one frozen topic model;
   filters must not silently retrain it. Explain English-source NLP in both languages.
-- [ ] Preserve achievement links and move the tribute tree to a secondary view.
+- [ ] Preserve achievement links and make the dashboard the home experience.
+  Latest owner steering deprioritizes the old tree; do not spend further work
+  on its preview or appearance. Secondary tree work is deferred.
 - [ ] Provide purposeful reduced-motion-aware animation. Any desktop portrait cursor
   accent needs an off switch, precise pointer, preserved text cursor and disabling
   on touch devices and high-contrast mode.
@@ -221,6 +225,16 @@ owner review and all existing content/accessibility/performance/hosting gates.
   on the actual URL. Do not bypass `RELEASE_MODE=public` checks.
 
 ## Progress log
+
+- 24 October, owner steering: the dashboard is the focus; the owner no longer
+  wants the tree presented as current progress. Continue the agreed data-first
+  sequence without additional tree preview or design work.
+- 24 October, Phase 1 batch 002: reviewed 60 awaiting passages across 20 articles;
+  cumulative 142 explicit decisions, 146 reviewed duplicate links, 1,114 unlinked
+  repeats and 1,467 awaiting. Source relevance covers 25 records. Added eight
+  qualitative research activity records with stage-specific dates and zero
+  invented numerical measures. Eighteen numerical holds remain. Numerical
+  observations remain eight; qualitative activities are a separate grain.
 
 - 24 October, Phase 1 batch 001: reviewed 50 previously awaiting passages across
   11 articles; cumulative 82 explicit decisions, 1,260 automatic exact repeats and

@@ -1,5 +1,36 @@
 # Validation evidence - 22 October 2026
 
+## Phase 1 batch 002 and dashboard focus — 24 October 2026
+
+Owner steering deprioritizes the old tree; this checkpoint continues dashboard
+data preparation. Reviewed 60 more passages across 20 full source texts. Current
+accounting: 142 explicit decisions, 146 exact repeats linked to reviewed canonical
+decisions, 1,114 unlinked exact repeats and 1,467 awaiting (2,869 total). Eighteen
+holds remain. Source relevance covers 25 records (11 included, 14 excluded).
+
+Added eight qualitative research activity records, with no invented numeric
+measures. Source 1243/1245 are one courtesy meeting; source 1257/1263 are one award
+announcement/receipt sequence. Activity publication chronology follows evidence
+for the recorded stage, so an announcement cannot date later reported receipt.
+Participant/institution fields do not classify meetings as executed partnerships.
+The eight earlier numerical observations and exploratory NMF corpus are unchanged.
+
+Passed locally: preflight; workspace lint/typecheck; ten Node tests and 33 Python
+tests; both web and Studio production builds; full source-archive integrity audit;
+saved-analysis audit including activity evidence/stages and canonical repeat
+links; research JSON and changed-document links; whitespace checks. Tests verify
+that duplicate links preserve canonical holds, do not multiply observations and
+leave unreviewed originals open. Tests also reject invented qualitative measures,
+duplicate activity IDs, excluded evidence, absent excerpts and announcement/receipt
+date substitution. NMF component/weight hash remains identical to the baseline.
+
+The strict completeness gate correctly continues to refuse the unfinished review.
+Saved output/office-evidence/analysis-batch-002-2026-10-24.zip and companion SHA-256
+checksum; ZIP integrity passed. Backups remain local; no off-machine restore claim.
+No new UI/browser/accessibility/performance result or public-release approval is
+claimed for this research checkpoint. Remote verification is the Actions run for
+the delivered commit; it does not include the ignored full source corpus.
+
 ## Phase 1 batch 001 checkpoint — 24 October 2026
 
 Reviewed 50 additional passages across 11 source articles. Cumulative accounting:

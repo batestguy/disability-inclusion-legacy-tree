@@ -1,5 +1,36 @@
 # Project handoff
 
+## Resume here — dashboard focus, Phase 1 batch 002
+
+24 October: owner no longer wants the old tree presented or worked on as product
+progress; proceed with the dashboard through the agreed data-first phases.
+Do not reopen or restyle the old tree. Build/validate standalone bilingual chat
+before dashboard integration, following CHATBOT_SPEC.md and the shared language
+contract. Preserve achievement URLs when the dashboard replaces the home page.
+
+Batch 002 reviewed 60 awaiting passages across 20 articles. Current accounting:
+142 explicit decisions, 146 exact repeats linked to reviewed originals, 1,114
+unlinked exact repeats and 1,467 awaiting (total 2,869). Eighteen reviewed holds
+remain. Source relevance decisions cover 25 sources: 11 included, 14 excluded.
+Eight qualitative records in research/reviewed-activities.json add early policy,
+political engagement, office appointment, institutional meetings and an award.
+They have empty numerical measures and explicit research-only status. The eight
+numerical observations from batch 001 are unchanged; do not sum the two grains.
+
+House visit sources 1243/1245 describe one meeting; award sources 1257/1263 describe
+one announcement-to-receipt sequence. Stage-specific publication dates prevent an
+announcement from dating reported receipt. Meetings/cooperation intentions are
+not formal executed partnerships or delivered services. Canonical duplicate links
+inherit any original hold and add no observations or independent corroboration.
+The numerical completeness gate still fails because review remains unfinished.
+
+33 Python tests cover prior safeguards plus repeat linking and qualitative
+activity integrity; see docs/VALIDATION.md for checkpoint checks. The frozen
+exploratory NLP corpus is unchanged until the full source relevance pass is ready.
+Next: continue batch 003, reconcile activities/canonical repeats and update counts.
+Public data, portrait rights, human Hausa, correction contact and hosting gates
+remain pending. Earlier checkpoint counts below are historical.
+
 ## Latest checkpoint — Phase 1 batch 001, commit and push requested
 
 24 October: owner requested proceeding, committing and pushing the work. Completed

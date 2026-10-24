@@ -103,7 +103,26 @@ def build_queue(articles, candidates, decisions):
                       "decision_status": "reviewed" if decision else "automatic-exact-repeat" if duplicate else "awaiting-review",
                       "reason": decision["reason"] if decision else "Identical passage in the same exact-full-text group; no new observation. Canonical passage still needs review." if duplicate else "Context, unit, stage, relevance and overlap need editorial review.",
                       "decision": decision})
+    # Close only the duplicate-to-reviewed-passage link, never create observations
+    # or independent corroboration. A canonical hold stays a hold in this link.
+    by_queue_id = {q["candidate_id"]: q for q in queue}
+    for row in queue:
+        row["canonical_decision"] = None
+        if row["decision"] is None and row["exact_repeat_of"]:
+            canonical = by_queue_id[row["exact_repeat_of"]]
+            if canonical["decision"] is not None:
+                row["decision_status"] = "linked-exact-repeat"
+                row["canonical_decision"] = {
+                    "candidate_id": canonical["candidate_id"],
+                    "fingerprint": canonical["fingerprint"],
+                    "disposition": canonical["disposition"],
+                }
+                row["reason"] = "Exact repeated passage linked to its reviewed canonical decision; not another observation or independent source."
     return queue
+
+
+def review_complete(queue):
+    return bool(queue) and all(q["decision_status"] in {"reviewed", "linked-exact-repeat"} for q in queue)
 
 
 def clean_corpus(articles):
@@ -176,6 +195,44 @@ def validate_source_decisions(articles, decisions):
         if decision["relevance"] not in {"include-isa-reporting", "exclude-other-person-reporting", "unresolved"} or not decision.get("reason") or not decision.get("reviewer"):
             raise ValueError("Incomplete source relevance decision")
     return decisions
+
+
+def validate_activities(articles, source_decisions, activities):
+    """Qualitative activities carry evidence and stages, never invented measures."""
+    by_source = {a["source_id"]: a for a in articles}
+    relevance = {d["source_id"]: d for d in source_decisions}
+    categories = {"policy-accessibility", "livelihoods", "education-training", "healthcare-welfare",
+                  "digital-assistive-technology", "sport", "political-engagement", "honours-ceremonial"}
+    stages = {"reported-activity", "reported-appointment", "reported-award", "announced", "stated-agenda"}
+    ids = set()
+    for activity in activities:
+        if not activity.get("id") or activity["id"] in ids:
+            raise ValueError("Duplicate/missing qualitative activity ID")
+        ids.add(activity["id"])
+        if not activity.get("categories") or not set(activity["categories"]) <= categories or activity["stage"] not in stages:
+            raise ValueError("Invalid qualitative category/stage")
+        if activity.get("measures") != [] or activity.get("public_approved") is not False:
+            raise ValueError("Qualitative research activity cannot invent measures or public approval")
+        if activity.get("event_date") is not None or not activity.get("date_basis"):
+            raise ValueError("Qualitative event date must remain unverified")
+        if not activity.get("title") or not activity.get("isa_role") or not activity.get("limitations") or not activity.get("evidence"):
+            raise ValueError("Missing qualitative activity context")
+        if not isinstance(activity.get("participants_or_institutions"), list) or not isinstance(activity.get("geography"), list):
+            raise ValueError("Missing qualitative participant/geography context")
+        for evidence in activity["evidence"]:
+            article = by_source[evidence["source_id"]]
+            if relevance.get(article["source_id"], {}).get("relevance") != "include-isa-reporting":
+                raise ValueError("Activity evidence lacks reviewed Isa relevance")
+            if evidence["source_url"] != article["url"] or evidence["source_text_sha256"] != article["text_sha256"] or evidence["report_date"] != article["report_date"][:10]:
+                raise ValueError("Qualitative activity citation/date mismatch")
+            if not evidence["excerpt"] or evidence["excerpt"] not in article["text"]:
+                raise ValueError("Qualitative activity excerpt absent from source")
+            if evidence["report_stage"] not in stages | {"duplicate-report", "congratulatory-report"}:
+                raise ValueError("Invalid qualitative evidence stage")
+        stage_dates = [e["report_date"] for e in activity["evidence"] if e["report_stage"] == activity["stage"]]
+        if not stage_dates or activity["report_date"] != min(stage_dates):
+            raise ValueError("Activity publication chronology/stage mismatch")
+    return activities
 
 
 def analyse(articles, folder):
@@ -263,6 +320,9 @@ def main():
     source_decisions_path = ROOT / "research/source-decisions.json"
     source_decisions = read(source_decisions_path)["decisions"] if source_decisions_path.exists() else []
     validate_source_decisions(articles, source_decisions)
+    activities_path = ROOT / "research/reviewed-activities.json"
+    activities = read(activities_path)["activities"] if activities_path.exists() else []
+    validate_activities(articles, source_decisions, activities)
     write(folder / "review-queue.json", queue)
     # Never expose full passages or article downloads in the public app.
     with (folder / "review-queue.csv").open("w", encoding="utf-8-sig", newline="") as handle:
@@ -279,13 +339,16 @@ def main():
                 "candidate_count": len(queue), "reviewed_candidates": len(decisions),
                 "awaiting_review": sum(q["decision_status"] == "awaiting-review" for q in queue),
                 "automatic_exact_repeats": sum(q["decision_status"] == "automatic-exact-repeat" for q in queue),
+                "linked_exact_repeats": sum(q["decision_status"] == "linked-exact-repeat" for q in queue),
                 "dispositions": dict(sorted(Counter(q["disposition"] for q in queue).items())),
-                "numerical_review_complete": bool(queue) and all(q["decision_status"] == "reviewed" for q in queue),
+                "numerical_review_complete": review_complete(queue),
                 "reviewed_holds": sum(q["decision_status"] == "reviewed" and q["disposition"] == "unresolved-ambiguity" for q in queue),
                 "reviewed_observations": len(observations),
                 "reviewed_observations_sha256": digest(observations),
                 "source_relevance_decisions": len(source_decisions),
                 "source_relevance_decisions_sha256": digest(source_decisions),
+                "qualitative_activities": len(activities),
+                "qualitative_activities_sha256": digest(activities),
                 "review_queue_sha256": digest(queue), "analysis": analyse(articles, folder)}
     manifest["artifacts"] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(folder.iterdir()) if p.name != "manifest.json" and p.is_file()}
     write(folder / "manifest.json", manifest)

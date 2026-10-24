@@ -40,13 +40,19 @@ def audit(folder, snapshot, require_complete=False):
     prepare.validate_source_decisions(articles, source_decisions)
     if manifest["source_relevance_decisions"] != len(source_decisions) or manifest["source_relevance_decisions_sha256"] != prepare.digest(source_decisions):
         raise ValueError("Source relevance manifest mismatch")
+    activities_file = ROOT / "research/reviewed-activities.json"
+    activities = prepare.read(activities_file)["activities"] if activities_file.exists() else []
+    prepare.validate_activities(articles, source_decisions, activities)
+    if manifest["qualitative_activities"] != len(activities) or manifest["qualitative_activities_sha256"] != prepare.digest(activities):
+        raise ValueError("Qualitative activity manifest mismatch")
     if len(queue) != manifest["candidate_count"] or len(articles) != manifest["source_count"]:
         raise ValueError("Manifest counts differ from archive")
     for field, status in [("reviewed_candidates", "reviewed"), ("awaiting_review", "awaiting-review"),
-                          ("automatic_exact_repeats", "automatic-exact-repeat")]:
+                          ("automatic_exact_repeats", "automatic-exact-repeat"),
+                          ("linked_exact_repeats", "linked-exact-repeat")]:
         if manifest[field] != sum(q["decision_status"] == status for q in queue):
             raise ValueError(f"Review accounting mismatch: {field}")
-    if manifest["numerical_review_complete"] != (bool(queue) and all(q["decision_status"] == "reviewed" for q in queue)):
+    if manifest["numerical_review_complete"] != prepare.review_complete(queue):
         raise ValueError("False review completeness flag")
     unique, mapping = prepare.canonical_sources(articles)
     corpus = [a for a in unique if a["source_type"] == "posts"]

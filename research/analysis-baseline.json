@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "research-only-not-public-approved",
-  "pipeline_sha256": "604600a145f0dfa46acfe4ce6749331fbd3193cbcfd7e1d11cef0aacf6dd9e0a",
+  "pipeline_sha256": "cf71e8eb73a9ba04eb10a1e6acc6ef07dda187f83d40d63b0b1c87860961a41e",
   "snapshot": "20261024T081152242131Z",
   "source_count": 646,
   "source_types": {
@@ -16,24 +16,27 @@
     "2026": 83
   },
   "candidate_count": 2869,
-  "reviewed_candidates": 82,
-  "awaiting_review": 1527,
-  "automatic_exact_repeats": 1260,
+  "reviewed_candidates": 142,
+  "awaiting_review": 1467,
+  "automatic_exact_repeats": 1114,
+  "linked_exact_repeats": 146,
   "dispositions": {
     "accepted-observation": 8,
-    "background-context": 10,
-    "date-metadata": 3,
-    "irrelevant": 35,
+    "background-context": 19,
+    "date-metadata": 13,
+    "irrelevant": 76,
     "repeated-claim": 1268,
-    "unresolved-ambiguity": 1545
+    "unresolved-ambiguity": 1485
   },
   "numerical_review_complete": false,
   "reviewed_holds": 18,
   "reviewed_observations": 8,
   "reviewed_observations_sha256": "0ca750d894ea6c539d41b184f5e2fbd1b247df798fcc1a42d3676cee27a22d02",
-  "source_relevance_decisions": 5,
-  "source_relevance_decisions_sha256": "62a5477d95d7b774cff2144afa1ece73dbcf64b3cf30ca0d624d47dc74f16b73",
-  "review_queue_sha256": "1cd0e4c072ce8e8a4f36f3ea4b0559ee04a24f9da14d77758b4d8615075667d1",
+  "source_relevance_decisions": 25,
+  "source_relevance_decisions_sha256": "6e2e293be5424e032a832f59878f377e58b9f82f6fcf9d48941a990857a2cc7d",
+  "qualitative_activities": 8,
+  "qualitative_activities_sha256": "ec78926c7380e9ff2a56ef175bc2379dba8a2a254f2e4ec4523dea6e5c86c0d9",
+  "review_queue_sha256": "f315f9d14c6cee78a0893517f92305d495961bdff088e56cdf5f607d12436031",
   "analysis": {
     "environment": {
       "python": "3.14.4",
@@ -56,8 +59,8 @@
     "document-topics.json": "40b28e149ce6f67c401a0042113caf5d0f333d9b4f98904c995b31944b99aaf9",
     "frozen-model.npz": "ba2b23f28984f5e7eacaa5d28cc5f949a764d783c0a3f94899af7e1e9b457d2e",
     "preprocessing.json": "3af65404b672072bbae742728a77c322776247b89d9be45d0c30c9cd5b8531da",
-    "review-queue.csv": "15e953171318d709bbae2989e29d68fc9c914c63200fda4d1467463001a8b8f2",
-    "review-queue.json": "1dab08cf522c0cce9feaaade4282a87d058e2e9f8684f4ddade8812b3427e5ec",
+    "review-queue.csv": "02fd673ee929007c1019f1a38d42e375382a442c3edfe396452749476b697673",
+    "review-queue.json": "89048fa139d7b9e63595e86fe73569fab4a6f19066f6921c49cf96319c04c324",
     "source-aliases.json": "901ce32b466e1fda7e27dff09bd81049209fdb03ac615ccb17dbb4dcd2333f78",
     "topics.json": "a2eeb49643417856489ceb0e67f0af69c6c873711d66698b7bf3a97c03429fdc",
     "vocabulary.json": "d2ff877d93f72627dbb2a9b4bcccbcbb9acdc734ce1401ca668cb8688a01f98c"

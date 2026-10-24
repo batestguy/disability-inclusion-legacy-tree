@@ -56,6 +56,226 @@
       "reviewer": "Codex full-source relevance review",
       "reviewed_at": "2026-10-24",
       "batch_id": "phase-1-batch-001"
+    },
+    {
+      "source_id": 1196,
+      "text_sha256": "1a984cfe26d3dcb0120bd12e719914f1d157652439019a1e06cce12d5265e4ab",
+      "source_url": "https://ossaposneo.org/jpemi-pastor-tasks-world-leaders-on-peace-security/",
+      "report_date": "2023-10-25T15:48:41",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Church convention and comments by Dr Femi Lanre-Oke; no documented Isa activity.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1208,
+      "text_sha256": "b07f5acd7c86b804fa5a153771b8d3e5071d16cfb02f468d275e6fb82cff77ba",
+      "source_url": "https://ossaposneo.org/disability-act-ngo-warns-public-private-institutions-yet-to-comply-about-january-2024-deadline/",
+      "report_date": "2023-10-26T08:12:58",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1210,
+      "text_sha256": "ca523ff1ed8c03d528e5b9618730410c493217b399054eddb6683730cc8fa935",
+      "source_url": "https://ossaposneo.org/apex-court-victory-hon-bankole-congratulates-president-tinubu-nigerians-apc/",
+      "report_date": "2023-10-26T14:05:11",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Bankole congratulatory statement; other-person political engagement, not Isa activity.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1211,
+      "text_sha256": "d66cc3844bf7ac189ad1d26a647d68ff71c0480a06f8c8eccb64794fe33acc21",
+      "source_url": "https://ossaposneo.org/tinubus-victory-supreme-court-judgement-not-unexpected-fulani/",
+      "report_date": "2023-10-27T08:08:03",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Dele Fulani election-judgment commentary; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1216,
+      "text_sha256": "b0d7fd777fde653cb014502f3b848719e8f07d8cdab2fd392236a057c5307b25",
+      "source_url": "https://ossaposneo.org/supreme-court-verdict-you-can-appeal-to-god-if-not-satisfied-apc-chieftain-tells-atiku-obi/",
+      "report_date": "2023-10-27T08:21:35",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Lekan-Ojo election-judgment commentary; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1230,
+      "text_sha256": "69283bd2977cf1b4230ba1e1d1b867c9ac5ebe808ce742e82b823f0aeeddfadf",
+      "source_url": "https://ossaposneo.org/uneasy-calm-in-villa-as-tinubus-loyalists-push-for-gbajabiamilas-sack/",
+      "report_date": "2023-10-28T18:18:50",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1238,
+      "text_sha256": "17ea4a285d583037cd8d8329bef33b4f8e9877ec79a09c0a7268ae058c638061",
+      "source_url": "https://ossaposneo.org/wike-must-realize-hes-no-longer-political-leader-in-rivers-lekan-ojo/",
+      "report_date": "2023-11-09T08:18:37",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Lekan-Ojo Rivers political commentary; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1241,
+      "text_sha256": "65c5565fbbbd86824758ff61d638fcc124b17b454de52fa470e5a7ed51476125",
+      "source_url": "https://ossaposneo.org/terror-attack-us-uk-are-simply-unrepentant-alarmist-apc-chieftain-lekan-ojo/",
+      "report_date": "2023-11-10T07:50:16",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Lekan-Ojo security advisory commentary; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1269,
+      "text_sha256": "23e52abe496634d9eacf95aca71dddc62c763256a0112d2efeb602e5c7fd552b",
+      "source_url": "https://ossaposneo.org/inec-cant-be-truly-independent-if-presidency-continues-to-appoint-chairman-chief-lekan-ojo/",
+      "report_date": "2023-11-14T11:33:46",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Lekan-Ojo electoral administration commentary; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1217,
+      "text_sha256": "8d5c564c70bdfcb8b19d2506d8cf6663ba83e80f712d806013a5cf517a557138",
+      "source_url": "https://ossaposneo.org/hon-abba-isa-congratulates-president-tinubu-on-his-supreme-court-victory/",
+      "report_date": "2023-10-27T17:13:59",
+      "relevance": "include-isa-reporting",
+      "reason": "Isa political congratulatory statement in his party roles before the presidential appointment.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1222,
+      "text_sha256": "f6f1dd67a0b66496fb8e63005ddf3b1492d284f20683b690f42085df24e00718",
+      "source_url": "https://ossaposneo.org/hon-abba-isa-applauds-president-tinubu-for-protecting-rights-of-pwds/",
+      "report_date": "2023-10-27T14:55:33",
+      "relevance": "include-isa-reporting",
+      "reason": "Isa policy reaction to the disability protocol; ratification attributed to the President, not Isa.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1240,
+      "text_sha256": "7ebd5f78f55c589c703750e739eb234c18caf63c84cbb98ae3c7f5c071a79c8a",
+      "source_url": "https://ossaposneo.org/inclusion-tinubu-appoints-hon-abba-isa-as-ssa-on-disability-matters/",
+      "report_date": "2023-11-09T11:40:14",
+      "relevance": "include-isa-reporting",
+      "reason": "Isa appointment and biography; matches the existing appointment timeline milestone.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1243,
+      "text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+      "source_url": "https://ossaposneo.org/ssa-to-the-president-on-disability-matters-paid-a-courtesy-call-on-the-house-committee-chairman-on-disability-matters/",
+      "report_date": "2023-11-11T13:57:23",
+      "relevance": "include-isa-reporting",
+      "reason": "Reported courtesy visit to House disability committee chair; cooperation intentions do not establish delivered services.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1245,
+      "text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+      "source_url": "https://ossaposneo.org/ssa-to-the-president-on-disability-matters-paid-a-courtesy-call-on-the-house-committee-chairman-on-disability1/",
+      "report_date": "2023-11-11T14:03:28",
+      "relevance": "include-isa-reporting",
+      "reason": "Exact-full-text duplicate of source 1243; retain citation, one courtesy-call activity.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1257,
+      "text_sha256": "7a1375e267ba62e718035a8dd8e2439502aeb339402ca9d56daa815a2dd9aa8c",
+      "source_url": "https://ossaposneo.org/happening-now-leex-awards-set-to-honour-hon-abba-isa-with-inspirational-leader-of-the-year-award-2/",
+      "report_date": "2023-11-11T18:57:44",
+      "relevance": "include-isa-reporting",
+      "reason": "Advance award announcement; do not count separately from the subsequent award report.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1263,
+      "text_sha256": "0580fded38fb8c48371e1051733c80b5c5500124794448dc54ad4f5da1c7b2d4",
+      "source_url": "https://ossaposneo.org/celebrations-as-hon-abba-isa-wins-igbere-tv-inspirational-leader-of-the-year-award/",
+      "report_date": "2023-11-12T13:59:48",
+      "relevance": "include-isa-reporting",
+      "reason": "Report of the same LEEX Inspirational Leader award announced in source 1257; event edition is not five awards.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1278,
+      "text_sha256": "f135d2a58de75d19b8b9eed5325f32074d7b3bb429eb21f637708983a2472201",
+      "source_url": "https://ossaposneo.org/sen-lawan-congratulates-hon-abba-isa-on-his-appointment-as-ssa-to-the-president/",
+      "report_date": "2023-11-15T09:13:40",
+      "relevance": "include-isa-reporting",
+      "reason": "Lawan congratulations on Isa appointment; supporting appointment reporting, not another appointment or delivered programme.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1291,
+      "text_sha256": "191827f8678b0e5c0636244a30eaa8b0afcc963e76f2ba12ec4059b5a5034261",
+      "source_url": "https://ossaposneo.org/hon-abba-isa-james-lalu-embrace-collaboration-for-advancement-of-pwds-agenda/",
+      "report_date": "2023-11-15T21:20:49",
+      "relevance": "include-isa-reporting",
+      "reason": "Reported courtesy visit to NCPWD and intent to cooperate; no delivery figures or formal agreement text established.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1295,
+      "text_sha256": "42d524a51830aee76a7583a653155056d949052a2d7ba15d398a68afa0513123",
+      "source_url": "https://ossaposneo.org/ssa-appointment-hon-abba-isa-thanks-president-tinubu-deji-vows-to-deliver-on-renewed-hope-agenda/",
+      "report_date": "2023-11-15T22:12:00",
+      "relevance": "include-isa-reporting",
+      "reason": "Office agenda briefing; future commitments do not establish completed policy implementation.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 1307,
+      "text_sha256": "1e677d3a64b2c0f59fa246ea63d6429fa43e39cb918d723c7a51207cdd059842",
+      "source_url": "https://ossaposneo.org/ssa-to-president-minister-of-health-collaborate-to-create-inclusive-accessible-healthcare-system/",
+      "report_date": "2023-11-16T12:47:07",
+      "relevance": "include-isa-reporting",
+      "reason": "Health-ministry courtesy meeting and agreement to work on inclusion; no delivered healthcare count.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
     }
   ]
 }

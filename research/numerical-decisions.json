@@ -723,6 +723,546 @@
       "reviewer": "Codex source-context review",
       "reviewed_at": "2026-10-24",
       "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1196-s4",
+      "fingerprint": "8bcc2175262abb223e9916c9c7470a1ab6d570b16c35a1ec5892e219f696ae33",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Church convention and comments by Dr Femi Lanre-Oke; no documented Isa activity. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1196-s14",
+      "fingerprint": "3859ee3514b1f61b6a225dbe615c925d8b89c0c0f498e9d5f85ecb7c7512ef67",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Church convention and comments by Dr Femi Lanre-Oke; no documented Isa activity. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s0",
+      "fingerprint": "93e25b204cfc46c113a46205277341f179d485ee66883605b4869a0868dd9659",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s2",
+      "fingerprint": "2f3080e18138cda6d6c5c59e6ba08ead128f32e28789f7b48394d92c5ee7b7df",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s3",
+      "fingerprint": "1f76c44b4da87028853b89831a68f9b621e2df199886cf4435d6723a3d2276a7",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s4",
+      "fingerprint": "5ad04a68b118bc3359c0abbce5801f32009bde27a21adb1725a83be67ddf7c19",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s5",
+      "fingerprint": "1b1bd72f8f57da48702b71b243d8e03d4d45b2ebe1a9d056fb9444aaf6b9e7cd",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s6",
+      "fingerprint": "b2d6a84110d2a7fe79a959eebef500bc741a9b3c2a48c8957abbe126a0897fa7",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s9",
+      "fingerprint": "12ea8f4e9461389fbc6e19ac4c28ba55786a26a92621792c52fcec488028801f",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s17",
+      "fingerprint": "2b789aa4b61c17cab551f4c40a5ddd5105e083403c77a276a98babfb6a8e8fab",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s18",
+      "fingerprint": "916693fe09b07dcbb3c71c3842cb61df2864a8d87615ceefe90380beb1e43246",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s19",
+      "fingerprint": "1ec6b7707d51fffdbc245bc2d3b7519811782c1eb104e2293979798ac35b067e",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s20",
+      "fingerprint": "159c203f7c179c86c1739ed79aaa6ba95fcb75a3aeaed1bd06d41895f112a2b7",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s21",
+      "fingerprint": "28dd66f94bf99a033042d3fbe5ccdbc548e497e4b60f76263b3e7a9a1c90a14a",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1208-s22",
+      "fingerprint": "0928fc8315712be5a284d0fdf37442d5cd3e9c85427b27304983a413c106a282",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: GSAI media training and legal-policy commentary; useful disability context but no documented Isa role or delivery. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1210-s3",
+      "fingerprint": "39270633233535c5240631ba3c59b2a270b433a433cbfad740b507c2e4d966d6",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Bankole congratulatory statement; other-person political engagement, not Isa activity. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1210-s9",
+      "fingerprint": "7050a9b539fac809ce9d388552dcfe00d390ae54269265e66694a289250231f8",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Bankole congratulatory statement; other-person political engagement, not Isa activity. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1211-s2",
+      "fingerprint": "5235147209477e3e22f66b7217cebc42b89ceb00ada4506e3a0ca62caa6f626e",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Dele Fulani election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1211-s4",
+      "fingerprint": "d53be8252e986944c424e4552e2b1f21770eb14386fe827aaaf3499343843428",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Dele Fulani election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1211-s5",
+      "fingerprint": "94dbc1efac32e748510c088bec4009ae568d70b3749a9d6b39e84011b7f7f63a",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Dele Fulani election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1211-s7",
+      "fingerprint": "8fbd7cd4b49c924dbcb714a83f3795a3e2e639adc1ac48f37243217612ef4c4b",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Dele Fulani election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1211-s12",
+      "fingerprint": "8279c1cc5ad239b074bcfa4ea269e8f8792f25b304f520fdc34be370a3489bb2",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Dele Fulani election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1216-s3",
+      "fingerprint": "b51b09a4900c7e567cec7bab3cecb5b3c89ca7fc9f63cfaad458f461c0b3b3f8",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1216-s4",
+      "fingerprint": "92b261ace09eb371f3dd268d124747c27d0e86b3a6ed601797152fd1b4710c65",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1216-s6",
+      "fingerprint": "e1ca1a959089dac82d4858be1262201a034e398d410d0b1ef5896697880348de",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1216-s10",
+      "fingerprint": "c1a074dc0309cec105bb5fe94cf130f9d9978483f9d031f46aa1613fdbee3084",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo election-judgment commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s4",
+      "fingerprint": "1bfa8fb2de571b0229e6ad7a655f459d851da59b6a5c31c6ce665f39c29d1f47",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s9",
+      "fingerprint": "7c3a7b5bc9a47b92c35710ba3c4fb0788d2b0d22bf3f99b3dec8b624520b331d",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s10",
+      "fingerprint": "8adac0c14d522331d6e07fb10ee4cea3e95aee36de2b808d8ae2d4ddc9e4ea1b",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s11",
+      "fingerprint": "d50f5088d15c32b49ca007083a9f5ac67cc4857a0314a33ca02ebae95c010b77",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s13",
+      "fingerprint": "6fa5a4f5673dee200bb5073972edab25fe870a08a4bf5e89844e9950acf326aa",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s15",
+      "fingerprint": "b71d61e26015fed4de3ee3eda99cb90f1456983d5ddfec265d8d704a67423984",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1230-s18",
+      "fingerprint": "2e4f5ae0b524dbaf66201da19c403c28cd78f32957df87d622f8f76925d6e001",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Other-person cabinet and appointment reporting; no documented Isa role. Allegations are not adopted as verified facts. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1238-s14",
+      "fingerprint": "494ac682815e0f44058d47ec5ac134806be6c8b8ae61f269884d0000c135e164",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo Rivers political commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1238-s15",
+      "fingerprint": "db9e5a136576e084af52ba9763619851780c334ed74746b9bfc35735ff6b6005",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo Rivers political commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1238-s16",
+      "fingerprint": "a6feaf4b7f92cddf54f1bfb8caddc92114209900b1a17bac8eb2391c5b37ea30",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo Rivers political commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1241-s4",
+      "fingerprint": "34d226a9781426cfbe3fc4f27af49c3494663671e85b8db0d45225c62c4fd19f",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo security advisory commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1241-s8",
+      "fingerprint": "fbfc624b78224a7c65df272793208ebba8e1da27237db86503786b822c602176",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo security advisory commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1269-s9",
+      "fingerprint": "4463cecdc090ca30d6154cf12a3054b3bac41bdbc8562a9a847eca59a5f2741c",
+      "disposition": "irrelevant",
+      "reason": "Full-source relevance check: Lekan-Ojo electoral administration commentary; no documented Isa role. Retain in research archive; exclude from Isa contribution metrics.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1217-s3",
+      "fingerprint": "e878f03aa41a35523c82de248ffe3d709754240e147fdcd890317cbe092f7652",
+      "disposition": "irrelevant",
+      "reason": "Well deserving one is qualitative praise, not a count of awards, people or activities.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1217-s4",
+      "fingerprint": "7eeeadadfa0d88869e4b5b9b356a6ec0dc09ed040a4a6b7a4d890c5f7c0a2ef6",
+      "disposition": "date-metadata",
+      "reason": "February 25 is election calendar context. Unquantified multitudes of voters cannot become a beneficiary count.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1217-s6",
+      "fingerprint": "6d82980720ee8e72c27a79f49b5cbfd4c43785edfdf5eb02ad5e7501a38c7ba1",
+      "disposition": "date-metadata",
+      "reason": "2023 labels the election, not a verified date for a contribution event.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1217-s7",
+      "fingerprint": "799aa3228380c69a4f3f64d9c6f34af9f0c1acfb02b7a80b83a3556fd949a599",
+      "disposition": "background-context",
+      "reason": "Seven court justices are contextual actors in a legal outcome, not people supported by Isa.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1217-s8",
+      "fingerprint": "763e4dfe4cb126b6cb229cdfee8df40cd5441907df70d8a12a5acdc074f5f036",
+      "disposition": "date-metadata",
+      "reason": "2023 is election-year context in a political statement, not delivered programme scope.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1222-s13",
+      "fingerprint": "54f5fd1354c38760c4308014dfab360a0b974c170a53e2200b38c126750d82af",
+      "disposition": "date-metadata",
+      "reason": "19 October 2023 dates the quoted presidential ratification instrument, not Isa personal delivery. Retain attribution to the President.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1222-s14",
+      "fingerprint": "c3290f5c3fdbf35462ce12cf9243a63de370d44074376643c6872cd030db1280",
+      "disposition": "date-metadata",
+      "reason": "2018 is the reported African Union protocol adoption year; not an Isa activity date or delivery count.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1240-s5",
+      "fingerprint": "13be89ce51e625616f277c915ed9945585ae9de4b15056076125f48a274b7261",
+      "disposition": "date-metadata",
+      "reason": "2017 dates the reported masters qualification; biographical milestone, not a count of education beneficiaries. Matches existing timeline context.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1243-s5",
+      "fingerprint": "36601a9f76a7c97812aceaf0785c0659a99b180bde0e78a4ce9428b5d3b62be5",
+      "disposition": "background-context",
+      "reason": "First visit is an ordinal in the office resumption narrative; not a career-wide visit count or beneficiary measurement.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1243-s11",
+      "fingerprint": "bffa19e31ba9570ea1342574a36fc513af1b3918a114b5f9d1caab5114bc7369",
+      "disposition": "background-context",
+      "reason": "Two leaders are meeting participants; do not count them as two beneficiaries or two activities.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1245-s0",
+      "fingerprint": "69c4a3d9de7659bf7f8bfa50bd00de6741861ee9b735225bbf5c2e39c86e05f4",
+      "disposition": "date-metadata",
+      "reason": "Trailing 1 in a duplicate article title is a title/CMS identifier, not an additional meeting, beneficiary or policy output.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1257-s2",
+      "fingerprint": "59404b3152659959b8c24a8f56a64a282baa96f36b5145a20a99649e8694eabb",
+      "disposition": "date-metadata",
+      "reason": "Fifth edition and 2023 identify the award ceremony edition/year; not five awards won. This article announces a future presentation.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1263-s2",
+      "fingerprint": "16c7846416780f138c56741c76d2a82efe34695cada2e1c732103aa1a6de0ba5",
+      "disposition": "date-metadata",
+      "reason": "Fifth edition and 2023 identify the ceremony, not five awards. This is the follow-up report for the same announced award in source 1257.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1278-s2",
+      "fingerprint": "7c9b5528f94e96e9056aff68f223775ca5eeafc6953a5abdcc80848f65fb7a65",
+      "disposition": "background-context",
+      "reason": "Ninth National Assembly describes Lawan office history; it does not quantify Isa contribution or appointment count.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1278-s6",
+      "fingerprint": "053774c95c7762941374dbad57ee1263bf0154ad3cb58ed6fcf1db9379e7d64b",
+      "disposition": "background-context",
+      "reason": "Tenth Assembly identifies the congratulating senator legislative term, not Isa activity delivery.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1278-s7",
+      "fingerprint": "e703680cf1595d20017d8080185626344310cc583040bd0d58e1fa7f90bd1681",
+      "disposition": "background-context",
+      "reason": "Ninth Assembly is institutional context; predicted positive change is unmeasured, not delivered impact.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1291-s6",
+      "fingerprint": "70bdab9fd711ecf9f9c681268039e3890383c00ce6623be039499a7c7aa31a61",
+      "disposition": "irrelevant",
+      "reason": "No man can work alone is rhetorical justification for cooperation, not a numerical observation.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1291-s8",
+      "fingerprint": "5976047804465717c187262a0ac0cb54db4e3a5339155b7bb783ce6831a10be3",
+      "disposition": "background-context",
+      "reason": "Two institutions describes the parties discussing cooperation, not beneficiary reach or executed partnership delivery.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1291-s9",
+      "fingerprint": "e0aa05369f99e5fab67b3caa10bd25995d094c39c09f425cc82ec976e95aedba",
+      "disposition": "background-context",
+      "reason": "Two institutions and count on support are relationship context, not delivered service quantities.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1295-s10",
+      "fingerprint": "9ecd3d3ab5c7df7a7d5d707ed140dc0a4a5dc9d6e48fd48108fefa083969e2c7",
+      "disposition": "date-metadata",
+      "reason": "2018 identifies the legislation Isa proposes amending. Future amendment intent does not establish amendment enactment.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
+    },
+    {
+      "candidate_id": "posts-1307-s8",
+      "fingerprint": "7f8bf1cb440bc05b03a07cbb745dc4b9cb91514630b6c562412dde83bf7fccd4",
+      "disposition": "background-context",
+      "reason": "Two parties are meeting participants agreeing to work together; no healthcare recipients or formal executed agreement is established.",
+      "reviewer": "Codex full-source context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-002"
     }
   ]
 }

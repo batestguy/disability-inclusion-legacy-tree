@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "scope": "Qualitative research activities. No new public approvals, beneficiary totals or completed-service totals. Publication dates are not inferred event dates.",
+  "activities": [
+    {
+      "id": "supreme-court-congratulation-2023",
+      "title": "Political statement congratulating President Tinubu",
+      "categories": [
+        "political-engagement"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2023-10-27",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Statement in Northeast APC PWD and stakeholder-forum roles before the presidential appointment.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1217,
+          "source_url": "https://ossaposneo.org/hon-abba-isa-congratulates-president-tinubu-on-his-supreme-court-victory/",
+          "report_date": "2023-10-27",
+          "source_text_sha256": "8d5c564c70bdfcb8b19d2506d8cf6663ba83e80f712d806013a5cf517a557138",
+          "excerpt": "has congratulated President Bola Ahmed Tinubu on his victory at the Supreme Court on Thursday.",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Political engagement, not disability service delivery or proof of public/beneficiary opinion; voter and court figures are context.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": []
+    },
+    {
+      "id": "african-disability-protocol-reaction-2023",
+      "title": "Advocacy statement welcoming disability protocol ratification",
+      "categories": [
+        "policy-accessibility",
+        "political-engagement"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2023-10-27",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Publicly commended ratification and called for disability representation.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1222,
+          "source_url": "https://ossaposneo.org/hon-abba-isa-applauds-president-tinubu-for-protecting-rights-of-pwds/",
+          "report_date": "2023-10-27",
+          "source_text_sha256": "f6f1dd67a0b66496fb8e63005ddf3b1492d284f20683b690f42085df24e00718",
+          "excerpt": "has commended President Bola Ahmed Tinubu for his commitment to protecting the rights of persons with disability in the country.",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "The President ratified the instrument; this report does not establish Isa caused ratification or delivered a policy outcome. Reported law dates remain context.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": []
+    },
+    {
+      "id": "ssa-appointment-2023",
+      "title": "Appointment as Senior Special Assistant on Disability Matters",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "stage": "reported-appointment",
+      "report_date": "2023-11-09",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Appointee; appointment power attributed to the President.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1240,
+          "source_url": "https://ossaposneo.org/inclusion-tinubu-appoints-hon-abba-isa-as-ssa-on-disability-matters/",
+          "report_date": "2023-11-09",
+          "source_text_sha256": "7ebd5f78f55c589c703750e739eb234c18caf63c84cbb98ae3c7f5c071a79c8a",
+          "excerpt": "President Bola Tinubu has approved the appointment of Mr. Mohammed Abba Isa",
+          "report_stage": "reported-appointment"
+        },
+        {
+          "source_id": 1278,
+          "source_url": "https://ossaposneo.org/sen-lawan-congratulates-hon-abba-isa-on-his-appointment-as-ssa-to-the-president/",
+          "report_date": "2023-11-15",
+          "source_text_sha256": "f135d2a58de75d19b8b9eed5325f32074d7b3bb429eb21f637708983a2472201",
+          "excerpt": "on his recent appointment as the Senior Special Assistant to the President on Disability Matters",
+          "report_stage": "congratulatory-report"
+        }
+      ],
+      "measures": [],
+      "limitations": "Matches the existing appointment timeline milestone; congratulations are supporting coverage, not another appointment. Biography dates do not count education delivery.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": []
+    },
+    {
+      "id": "house-disability-committee-visit-2023",
+      "title": "Courtesy visit to House disability committee chair",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2023-11-11",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Visited and discussed legislative cooperation and inclusive budgeting.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1243,
+          "source_url": "https://ossaposneo.org/ssa-to-the-president-on-disability-matters-paid-a-courtesy-call-on-the-house-committee-chairman-on-disability-matters/",
+          "report_date": "2023-11-11",
+          "source_text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+          "excerpt": "paid a courtesy call on the House Committee Chairman on Disability",
+          "report_stage": "reported-activity"
+        },
+        {
+          "source_id": 1245,
+          "source_url": "https://ossaposneo.org/ssa-to-the-president-on-disability-matters-paid-a-courtesy-call-on-the-house-committee-chairman-on-disability1/",
+          "report_date": "2023-11-11",
+          "source_text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+          "excerpt": "paid a courtesy call on the House Committee Chairman on Disability",
+          "report_stage": "duplicate-report"
+        }
+      ],
+      "measures": [],
+      "limitations": "Sources 1243 and 1245 have identical full text and describe one visit. Future cooperation and a proposed reception do not establish an executed agreement or delivered support.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": [
+        "House Committee on Disability"
+      ]
+    },
+    {
+      "id": "leex-inspirational-award-2023",
+      "title": "Reported LEEX Inspirational Leader recognition",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "stage": "reported-award",
+      "report_date": "2023-11-12",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Reported recipient of Inspirational Leader of the Year recognition.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1257,
+          "source_url": "https://ossaposneo.org/happening-now-leex-awards-set-to-honour-hon-abba-isa-with-inspirational-leader-of-the-year-award-2/",
+          "report_date": "2023-11-11",
+          "source_text_sha256": "7a1375e267ba62e718035a8dd8e2439502aeb339402ca9d56daa815a2dd9aa8c",
+          "excerpt": "All is now set for the 5th edition of the Leadership Excellent Awards 2023.",
+          "report_stage": "announced"
+        },
+        {
+          "source_id": 1263,
+          "source_url": "https://ossaposneo.org/celebrations-as-hon-abba-isa-wins-igbere-tv-inspirational-leader-of-the-year-award/",
+          "report_date": "2023-11-12",
+          "source_text_sha256": "0580fded38fb8c48371e1051733c80b5c5500124794448dc54ad4f5da1c7b2d4",
+          "excerpt": "emerged winner of the 5th edition of the Leadership Excellent Awards 2023.",
+          "report_stage": "reported-award"
+        }
+      ],
+      "measures": [],
+      "limitations": "One reported award across announcement and follow-up. Fifth edition is an event ordinal, not five awards. Organiser corroboration and exact presentation date remain unverified.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": [
+        "Igbere TV / Leadership Excellent Awards"
+      ]
+    },
+    {
+      "id": "ncpwd-introductory-visit-2023",
+      "title": "Introductory visit to NCPWD leadership",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2023-11-15",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Courtesy visit and discussion of possible institutional cooperation.",
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 1291,
+          "source_url": "https://ossaposneo.org/hon-abba-isa-james-lalu-embrace-collaboration-for-advancement-of-pwds-agenda/",
+          "report_date": "2023-11-15",
+          "source_text_sha256": "191827f8678b0e5c0636244a30eaa8b0afcc963e76f2ba12ec4059b5a5034261",
+          "excerpt": "paid a courtesy visit to the office of the Executive Secretary, NCPWD in Abuja.",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Meeting and stated support are documented in office reporting; no signed partnership instrument or beneficiary quantity is established.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": [
+        "National Commission for Persons with Disabilities (NCPWD)"
+      ]
+    },
+    {
+      "id": "office-agenda-briefing-2023",
+      "title": "Public briefing on the new office agenda",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "stage": "stated-agenda",
+      "report_date": "2023-11-15",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Outlined intended assessment, policy, employment and inclusion work.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1295,
+          "source_url": "https://ossaposneo.org/ssa-appointment-hon-abba-isa-thanks-president-tinubu-deji-vows-to-deliver-on-renewed-hope-agenda/",
+          "report_date": "2023-11-15",
+          "source_text_sha256": "42d524a51830aee76a7583a653155056d949052a2d7ba15d398a68afa0513123",
+          "excerpt": "at a press conference organized to specifically thanked all stakeholders",
+          "report_stage": "stated-agenda"
+        }
+      ],
+      "measures": [],
+      "limitations": "Future commitments are an agenda, not completed assessments, amended legislation, quotas implemented or jobs delivered.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": []
+    },
+    {
+      "id": "health-ministry-inclusion-meeting-2023",
+      "title": "Meeting on disability inclusion in healthcare",
+      "categories": [
+        "healthcare-welfare",
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2023-11-16",
+      "event_date": null,
+      "date_basis": "Publication date of evidence for the recorded stage; earlier announcements do not date later receipt. Exact event date not inferred from weekdays.",
+      "isa_role": "Courtesy meeting to promote inclusive healthcare and workforce awareness.",
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 1307,
+          "source_url": "https://ossaposneo.org/ssa-to-president-minister-of-health-collaborate-to-create-inclusive-accessible-healthcare-system/",
+          "report_date": "2023-11-16",
+          "source_text_sha256": "1e677d3a64b2c0f59fa246ea63d6429fa43e39cb918d723c7a51207cdd059842",
+          "excerpt": "agreed to work together to create a more inclusive and accessible healthcare system",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Records a meeting and intention to work together, not healthcare delivered, clinicians trained, patients reached or a signed formal agreement.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-1-batch-002",
+      "participants_or_institutions": [
+        "Federal Ministry of Health"
+      ]
+    }
+  ]
+}

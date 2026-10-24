@@ -1,6 +1,6 @@
 # The Work in Numbers — research implementation
 
-24 October 2026, updated through Phase 1 batch 001. This is a **partial first-milestone packet**, not approval of the
+24 October 2026, updated through Phase 1 batch 002. This is a **partial first-milestone packet**, not approval of the
 complete numerical review or a release candidate. The accepted product is a
 timeline-led English/Hausa dashboard with a deterministic chatbot and whole-app
 offline support. No new research observation or model result has been imported
@@ -27,12 +27,13 @@ excluded from topic training and publication-period charts.
 
 | State | Passages | Meaning |
 | --- | ---: | --- |
-| Source-context decisions recorded | 82 | Eight research observations, 56 exclusions/repeats/context decisions and 18 explicit unresolved holds |
-| Automatic exact repeats | 1,260 | Same passage within an identical-full-text group; canonical passage still needs review |
-| Awaiting editorial review | 1,527 | Not accepted or represented as completed review |
+| Source-context decisions recorded | 142 | Eight research observations, 116 exclusions/repeats/context decisions and 18 explicit unresolved holds |
+| Exact repeats linked to reviewed originals | 146 | Inherit the canonical decision, including any hold; no new observation or corroboration |
+| Automatic exact repeats still unlinked | 1,114 | Same passage within an identical-full-text group; canonical passage still needs review |
+| Awaiting editorial review | 1,467 | Not accepted or represented as completed review |
 | Total | 2,869 | Complete accounting, **incomplete substantive review** |
 
-The 82 decisions are in [numerical-decisions.json](../research/numerical-decisions.json).
+The 142 decisions are in [numerical-decisions.json](../research/numerical-decisions.json).
 They are tied to passage fingerprints including source text hash, location and
 wording, publication timestamp and citation URL. Changes invalidate the decision instead of inheriting approval. These
 are source-context checks by Codex, not fluent-human Hausa review or independent
@@ -62,6 +63,35 @@ Five full-source relevance exclusions are recorded in
 The exploratory model below remains unchanged until the relevance pass is complete.
 Observation fingerprints protect value, bound, unit, stage and context against
 accidental edits; the audit also checks exact excerpt/source matches and dates.
+
+Batch 002 reviewed 60 previously awaiting passages across 20 articles: 39 were
+unrelated reporting, ten were dates/metadata, nine background/context and two
+qualitative phrases. Source relevance decisions now cover 25 archive records:
+11 included and 14 excluded. These partial exclusions have not changed the frozen
+exploratory model. Disability-related reporting without a documented Isa role is
+retained as context rather than credited as his activity.
+
+Eight qualitative activity records are in
+[reviewed-activities.json](../research/reviewed-activities.json): political
+congratulations, a protocol advocacy statement, the existing appointment milestone,
+a House disability committee visit, one LEEX award, an NCPWD visit, an office-agenda
+briefing and a health-ministry meeting. They carry reviewed categories, short
+source excerpts, participant/institution names, stages and explicit limitations.
+They have no invented numerical measures. A meeting or intention to cooperate
+does not establish an executed partnership or service delivery.
+
+The House courtesy-call reports 1243/1245 form one activity with two citations.
+The award announcement (1257) and receipt report (1263) also form one activity;
+its reported-award date uses the receipt report, not the earlier announcement.
+The appointment record links existing chronology; congratulations do not create a
+second appointment. These eight qualitative records and the eight numerical
+observations are different grains and must not be summed into an activity total.
+
+The repeat-resolution check now links 146 exact copies to reviewed canonical
+passages. It retains the canonical disposition, so an unresolved claim stays
+unresolved. Linked duplicates add neither observations nor independently verified
+sources. The numerical completeness gate accepts these reviewed links but still
+refuses remaining awaiting and unlinked passages.
 
 ## Claims held and proposed emphasis
 
@@ -171,7 +201,7 @@ completeness check deliberately fails.
 
 ## Remaining work and monthly refresh
 
-1. Finish the 1,527 awaiting passages; reconcile canonical passages underlying
+1. Finish the 1,467 awaiting passages; reconcile canonical passages underlying
    the automatic repeats and split mixed passages into typed observations.
 2. Reconcile activity identities across different articles; preserve existing IDs,
    partner credit, units, populations, dates and disagreements. Seek original

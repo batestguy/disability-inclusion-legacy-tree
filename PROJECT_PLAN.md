@@ -1,4 +1,19 @@
-# Hon. Mohammed Abba Isa Legacy Tree
+# Mohammed Abba Isa — The Work in Numbers
+
+## Current focus and Phase 1 batch 002 — 24 October 2026
+
+Owner steering: proceed with the dashboard; the old tree is no longer a product
+priority. Stop spending work on its appearance or presenting it as new progress.
+The data-first, standalone-chat-before-integration sequence remains in force.
+
+Batch 002 completed 60 source-context decisions across 20 articles. Current queue:
+142 explicit decisions + 146 exact repeats linked to reviewed originals + 1,114
+unlinked exact repeats + 1,467 awaiting = 2,869. Source relevance covers 25 records
+(11 included, 14 excluded). Eight qualitative research activities now retain
+categories, stages, excerpts and participants without invented beneficiary
+counts. Eight earlier numerical observations and 18 holds remain. Stage-date
+and duplicate-resolution guards were added; the exploratory model is unchanged.
+Phase 1 and milestone 1 remain incomplete. See docs/IMPLEMENTATION_PHASES.md.
 
 ## Phase 1 batch 001 — 24 October 2026
 
