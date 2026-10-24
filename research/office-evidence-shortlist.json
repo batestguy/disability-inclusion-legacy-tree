@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "prepared_at": "2026-10-24",
+  "scope": "Small source-text-checked shortlist from the full office archive, not an approved public dataset. No independent outcome verification or beneficiary totals.",
+  "snapshot_directory": "output/office-evidence/20261024T081152242131Z",
+  "records": [
+    {
+      "activity_id": "ramadan-food-2024",
+      "source_id": 2352,
+      "source_title": "Ramadan: SSAP,  Abba Isa distributes food palliatives to over 500 PWDs",
+      "source_url": "https://ossaposneo.org/ramadan-ssap-abba-isa-distributes-food-palliatives-to-over-500-pwds/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-03-14",
+      "event_date": null,
+      "value": 500,
+      "bound": "greater-than",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [],
+      "partners": [
+        "Queen Adenike Tejuosho Foundation"
+      ],
+      "isa_role": "Office reports organising distribution in collaboration with foundation.",
+      "limitations": "Recipient overlap with other food programmes is unknown; no monetary value stated.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-002.json",
+      "source_text_sha256": "ea3f9c0f2771e76d3d72c4c74053192f84363ecd199ffa2fb3f1620f87ea763e",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-03-14). Ramadan: SSAP,  Abba Isa distributes food palliatives to over 500 PWDs. https://ossaposneo.org/ramadan-ssap-abba-isa-distributes-food-palliatives-to-over-500-pwds/",
+      "evidence_excerpt": "has distributed food palliatives to over 500",
+      "source_text_segment": 2
+    },
+    {
+      "activity_id": "karu-food-cash-2024",
+      "source_id": 2790,
+      "source_title": "SSAP Abba Isa Flags Off Distribution of Food Palliatives, Cash Support to Over 500 PWDs",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-flags-off-distribution-of-food-palliatives-cash-support-to-over-500-pwds-5/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-05-24",
+      "event_date": null,
+      "value": 500,
+      "bound": "greater-than",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [
+        "Karu, Nasarawa"
+      ],
+      "partners": [],
+      "isa_role": "Office reports leading the distribution launch.",
+      "limitations": "Article separately states a household target. Do not mix household and person counts; national expansion is planned.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-003.json",
+      "source_text_sha256": "6c69e7a0e14d9d4f7f75fda3bcf43cdca0c2ddfe2ac1b5e2be9ac1c6fe0486ea",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-05-24). SSAP Abba Isa Flags Off Distribution of Food Palliatives, Cash Support to Over 500 PWDs. https://ossaposneo.org/ssap-abba-isa-flags-off-distribution-of-food-palliatives-cash-support-to-over-500-pwds-5/",
+      "evidence_excerpt": "saw over 500 Persons With Disabilities went home with bags of rice and cash support.",
+      "source_text_segment": 3
+    },
+    {
+      "activity_id": "queen-irene-capacity-building-2024",
+      "source_id": 3270,
+      "source_title": "SSAP Abba Isa and Queen Irene Peace Foundation strike partnership to train and empower over 1000 PWDs",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-and-queen-irene-peace-foundation-strike-partnership-to-train-and-empower-over-1000-pwds-2/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-07-06",
+      "event_date": null,
+      "value": 1000,
+      "bound": "greater-than",
+      "unit": "people",
+      "stage": "target",
+      "geography": [],
+      "partners": [
+        "Queen Irene Onwuka Peace Foundation"
+      ],
+      "isa_role": "Office reports a partnership agreement for proposed training.",
+      "limitations": "Headline says over 1000; body says about 1000. Bound is inconsistent; hold from public numeric KPI pending clarification.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-004.json",
+      "source_text_sha256": "79445dc21c2ab089d83a6eae3854bd2aaf1509e57b8931a44b522795c644d5df",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-07-06). SSAP Abba Isa and Queen Irene Peace Foundation strike partnership to train and empower over 1000 PWDs. https://ossaposneo.org/ssap-abba-isa-and-queen-irene-peace-foundation-strike-partnership-to-train-and-empower-over-1000-pwds-2/",
+      "evidence_excerpt": "to train and empower over 1000 PWDs through the Disability Capacity Building Project.",
+      "source_text_segment": 2
+    },
+    {
+      "activity_id": "ayubson-event-2025",
+      "source_id": 4860,
+      "source_title": "SSAP Abba Isa Partners Ayubson Life Foundation to Celebrate, Inspire and Empower Over 50 PWDs",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-partners-ayubson-life-foundation-to-celebrate-inspire-and-empower-over-50-pwds/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2025-02-10",
+      "event_date": null,
+      "value": 50,
+      "bound": "greater-than",
+      "unit": "participants",
+      "stage": "reported-delivery",
+      "geography": [
+        "Abuja"
+      ],
+      "partners": [
+        "Ayubson Life Foundation"
+      ],
+      "isa_role": "Foundation organised the event in collaboration with the office.",
+      "limitations": "Attendance or participation is reported; do not infer cash grants, jobs, completion or income gains.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-005.json",
+      "source_text_sha256": "c2331fd98ad022c0006917f16526ac5befea5da69a5b5d5c336333b7549cd1a4",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2025-02-10). SSAP Abba Isa Partners Ayubson Life Foundation to Celebrate, Inspire and Empower Over 50 PWDs. https://ossaposneo.org/ssap-abba-isa-partners-ayubson-life-foundation-to-celebrate-inspire-and-empower-over-50-pwds/",
+      "evidence_excerpt": "over 50 Persons With Disabilities (PWDs) benefitted",
+      "source_text_segment": 2
+    },
+    {
+      "activity_id": "near-ramadan-2025",
+      "source_id": 4975,
+      "source_title": "Ramadan: SSAP Abba Isa Partners Near Foundation to Support Over 500 PWDs",
+      "source_url": "https://ossaposneo.org/ramadan-ssap-abba-isa-partners-near-foundation-to-support-over-500-pwds/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2025-03-20",
+      "event_date": null,
+      "value": 500,
+      "bound": "greater-than",
+      "unit": "unresolved: people or households",
+      "stage": "reported-delivery",
+      "geography": [
+        "Abuja"
+      ],
+      "partners": [
+        "Near Foundation"
+      ],
+      "isa_role": "Office reports partnering with foundation on distribution.",
+      "limitations": "Lead says people; closing passage says households. Hold from public person/household totals until resolved.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-005.json",
+      "source_text_sha256": "2fef22ef3a3c7ff14bea2509054723c4d1694c9cdc006a0cb0786a44e72eea90",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2025-03-20). Ramadan: SSAP Abba Isa Partners Near Foundation to Support Over 500 PWDs. https://ossaposneo.org/ramadan-ssap-abba-isa-partners-near-foundation-to-support-over-500-pwds/",
+      "evidence_excerpt": "official distribution of food palliatives to over 500 households of PWDs",
+      "source_text_segment": 13
+    },
+    {
+      "activity_id": "fha-stalls-2025",
+      "source_id": 5105,
+      "source_title": "SSAP Abba Isa Tasks MDAs on Inclusive Policy as FHA Mortgage Bank Allots Stalls to Three PWDs",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-tasks-mdas-on-inclusive-policy-as-fha-mortgage-bank-allots-stalls-to-three-pwds/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2025-05-16",
+      "event_date": null,
+      "value": 3,
+      "bound": "exact",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [
+        "Lugbe, Abuja"
+      ],
+      "partners": [
+        "FHA Mortgage Bank"
+      ],
+      "isa_role": "Bank reportedly handed over allotment documentation; office describes collaboration.",
+      "limitations": "Three beneficiaries, not three newly built houses. Income gains are expected, not measured.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-006.json",
+      "source_text_sha256": "d02be143813b912dfee6f13b6a9f2aee72a2da6378f0c9e30fcd60bad0dace2c",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2025-05-16). SSAP Abba Isa Tasks MDAs on Inclusive Policy as FHA Mortgage Bank Allots Stalls to Three PWDs. https://ossaposneo.org/ssap-abba-isa-tasks-mdas-on-inclusive-policy-as-fha-mortgage-bank-allots-stalls-to-three-pwds/",
+      "evidence_excerpt": "to three beneficiaries from the disability community.",
+      "source_text_segment": 3
+    },
+    {
+      "activity_id": "potiskum-cash-2026",
+      "source_id": 5862,
+      "source_title": "50 Persons With Disabilities Receive Cash Grants as CBM Launches Renewed Hope Empowerment in Yobe",
+      "source_url": "https://ossaposneo.org/50-persons-with-disabilities-receive-cash-grants-as-cbm-launches-renewed-hope-empowerment-in-yobe/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2026-08-05",
+      "event_date": null,
+      "value": 50,
+      "bound": "exact",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [
+        "Potiskum, Yobe"
+      ],
+      "partners": [
+        "City Boy Movement"
+      ],
+      "isa_role": "Officeholder reports beneficiaries under CBM programme.",
+      "limitations": "Opening wording is no fewer than 50; later passage explicitly states 50. Grant amounts absent. Political organisation attribution must remain visible.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-007.json",
+      "source_text_sha256": "8544a63694188354995d7edf2fc74a29c65ee6a0958f173a988ee8cb37c0e70b",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2026-08-05). 50 Persons With Disabilities Receive Cash Grants as CBM Launches Renewed Hope Empowerment in Yobe. https://ossaposneo.org/50-persons-with-disabilities-receive-cash-grants-as-cbm-launches-renewed-hope-empowerment-in-yobe/",
+      "evidence_excerpt": "the 50 beneficiaries drawn from Potiskum Local Government Area received cash grants",
+      "source_text_segment": 9
+    },
+    {
+      "activity_id": "yobe-farmermoni-2026",
+      "source_id": 5862,
+      "source_title": "50 Persons With Disabilities Receive Cash Grants as CBM Launches Renewed Hope Empowerment in Yobe",
+      "source_url": "https://ossaposneo.org/50-persons-with-disabilities-receive-cash-grants-as-cbm-launches-renewed-hope-empowerment-in-yobe/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2026-08-05",
+      "event_date": null,
+      "value": 20,
+      "bound": "exact",
+      "unit": "grants",
+      "stage": "reported-delivery",
+      "geography": [
+        "Yobe"
+      ],
+      "partners": [
+        "FarmerMoni"
+      ],
+      "isa_role": "Officeholder reports facilitating disbursements.",
+      "limitations": "No monetary amounts. Same article reports a separate 50-person programme; beneficiary overlap is unknown. Do not add to a unique-person total.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-007.json",
+      "source_text_sha256": "8544a63694188354995d7edf2fc74a29c65ee6a0958f173a988ee8cb37c0e70b",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2026-08-05). 50 Persons With Disabilities Receive Cash Grants as CBM Launches Renewed Hope Empowerment in Yobe. https://ossaposneo.org/50-persons-with-disabilities-receive-cash-grants-as-cbm-launches-renewed-hope-empowerment-in-yobe/",
+      "evidence_excerpt": "facilitated the disbursement of 20 FarmerMoni grants",
+      "source_text_segment": 10
+    },
+    {
+      "activity_id": "startup-support-march-2024",
+      "source_id": 2279,
+      "source_title": "IWD 2024: SSAP, Hon Abba Isa Empowers over 20 PWD Women with POS, start-up kits",
+      "source_url": "https://ossaposneo.org/iwd-2024-ssap-hon-abba-isa-empowers-over-20-pwd-women-with-pos-start-up-kits/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-03-09",
+      "event_date": null,
+      "value": 20,
+      "bound": "greater-than",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [],
+      "partners": [
+        "Partner organisations"
+      ],
+      "isa_role": "Office reports organising support with partners.",
+      "limitations": "Matches existing starter-ledger activity startup-support-march-2024; supporting source, not an additional activity.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-002.json",
+      "source_text_sha256": "4bdc1592db2ce2533787c7aee4194e18ada20d9537187a87de9e8c43dbde5262",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-03-09). IWD 2024: SSAP, Hon Abba Isa Empowers over 20 PWD Women with POS, start-up kits. https://ossaposneo.org/iwd-2024-ssap-hon-abba-isa-empowers-over-20-pwd-women-with-pos-start-up-kits/",
+      "evidence_excerpt": "saw over 20 beneficiaries went home with Point of Sales machines and other startup kits",
+      "source_text_segment": 5
+    },
+    {
+      "activity_id": "nigwed-skills-2024",
+      "source_id": 3531,
+      "source_title": "SSAP Abba Isa empowers over 45 women with disabilities, flags off training, free distribution of re-usable sanitary pads",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-07-19",
+      "event_date": null,
+      "value": 45,
+      "bound": "greater-than",
+      "unit": "people",
+      "stage": "reported-delivery",
+      "geography": [
+        "Karon-majigi, Abuja"
+      ],
+      "partners": [
+        "NigWED Project"
+      ],
+      "isa_role": "Office reports training in collaboration with NigWED.",
+      "limitations": "Matches existing starter-ledger activity nigwed-skills-2024. Article contains a malformed production quantity; do not silently correct or use that quantity.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-004.json",
+      "source_text_sha256": "34af164ce97df7efc42794afedffc989f41eff3813b3f1b3d866b9d5f8c5fec7",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-07-19). SSAP Abba Isa empowers over 45 women with disabilities, flags off training, free distribution of re-usable sanitary pads. https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+      "evidence_excerpt": "has trained and empowered over 45 women with disabilities",
+      "source_text_segment": 4
+    },
+    {
+      "activity_id": "nigwed-reach-target",
+      "source_id": 3531,
+      "source_title": "SSAP Abba Isa empowers over 45 women with disabilities, flags off training, free distribution of re-usable sanitary pads",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+      "publisher": "Office of the SSA (OSSAP-SNEO)",
+      "report_date": "2024-07-19",
+      "event_date": null,
+      "value": 1000000,
+      "bound": "greater-than",
+      "unit": "women and girls",
+      "stage": "target",
+      "geography": [],
+      "partners": [
+        "NigWED Project"
+      ],
+      "isa_role": "Article reports a multi-year programme target.",
+      "limitations": "Planned reach, not participants already trained. Nationwide target is not verified delivered geographic coverage.",
+      "review_status": "source-text-checked-not-public-approved",
+      "snapshot_file": "raw-posts-004.json",
+      "source_text_sha256": "34af164ce97df7efc42794afedffc989f41eff3813b3f1b3d866b9d5f8c5fec7",
+      "citation": "Office of the SSA (OSSAP-SNEO). (2024-07-19). SSAP Abba Isa empowers over 45 women with disabilities, flags off training, free distribution of re-usable sanitary pads. https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+      "evidence_excerpt": "targeted over 1 million women and girls with disabilities",
+      "source_text_segment": 6
+    }
+  ]
+}

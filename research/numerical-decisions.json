@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "scope": "Passage-level source-context decisions, not independent confirmation. Unresolved decisions are reviewed holds; awaiting-review items remain separately counted. No new public approvals.",
+  "decisions": [
+    {
+      "candidate_id": "posts-3270-s0",
+      "fingerprint": "c5c1a857f62ece535b6e9654f02200b59af879743f5f35d7339fb68a9820f6b9",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Headline says over 1000 but body says about 1000; proposed training, not delivery. Hold bound pending clarification.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s2",
+      "fingerprint": "09b95309e9c017e5df2cd3fae8a4d5185887fdde3950748d2ec1149c7fa7fc8d",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Proposed training for over 1000 conflicts with about 1000 in segment 4; hold numeric KPI.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s4",
+      "fingerprint": "103c8fb92f455a155e40cec5bfe6ec995e42ed0122ee738084fd5ae3a164e732",
+      "disposition": "unresolved-ambiguity",
+      "reason": "About 1000 proposed trainees conflicts with over 1000 in headline and segment 2.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s5",
+      "fingerprint": "2b90b426d4c93e48d9203b28fe59db3bf7655f1c569e5698496a9bee77ddad28",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Mixed passage: past beauty-pageant dates and future pilot-phase job target. Requires separate observations; no jobs delivered established.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s11",
+      "fingerprint": "2ff9ef976a7e684ef6e13838904c224f245e974c80b82570dbcddded34147d47",
+      "disposition": "background-context",
+      "reason": "National disability population estimate in acknowledgement; not people supported by this activity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s13",
+      "fingerprint": "fe83986d4d57b588c8294f3dcc02c3b94244207ecf708f8aac218134d42729dd",
+      "disposition": "irrelevant",
+      "reason": "Multiple challenges is qualitative language, not a numerical observation.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s16",
+      "fingerprint": "5bf06cb8509d6b474c7fd3d6ed72e566511e92d85b056fce6e5e41f63840afcf",
+      "disposition": "date-metadata",
+      "reason": "July 22 is a proposed launch date, not an event date verified as having occurred.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3270-s17",
+      "fingerprint": "792f72130f0c3fae1a755683d0bb042eac1919aa582bf879a7288be0e1a64d44",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Mixed future Beyond Disability target and legislation year; needs observation split and cross-article programme reconciliation.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3531-s0",
+      "fingerprint": "91d5bcad5a03e7a6bc309e8b7bcf636a85480d6fbd1ddb775cdef73778f25cdc",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats cohort >45 described in segment 4. Training and kits must not be summed.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3531-s1",
+      "fingerprint": "26640067aa7b17f6ed5544b36636380eae9f0d5d3d75566a3cbe1e985e4ffac4",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Target subtitle mixes people and planned geographic scope. Not delivered coverage.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3531-s5",
+      "fingerprint": "18a1995355c2218c335a59442dae4a34c6d4cbdf3522ccc5bc849c1037024790",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Repeated >45 cohort plus two-week duration and malformed 10, 0000 production quantity. Do not silently repair or aggregate.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3531-s6",
+      "fingerprint": "e8c5abbdbdcc64e299056589394aba9c55b665c6015786b43d1e440ed681c127",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Mixed programme target, state scope, multi-year dates and contextual framework figures. Split before acceptance; not training delivered.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-3531-s12",
+      "fingerprint": "1027f13ea62abddf83f455e8d6093c5c53a6230dbc876fd79a5c35b012f5120d",
+      "disposition": "irrelevant",
+      "reason": "Equal opportunities for all is qualitative mandate text, not a measured number.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s0",
+      "fingerprint": "abe6a48f7db0d2827aceb987d2bcb006facf28976f2e26afebdfe2c875d16a5a",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Headline names >500 people; distribution passage names >500 households. Unit unresolved.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s1",
+      "fingerprint": "763f4b18e39a4de762137fe592962b7907faa563e7257e1d914bfb66fc390514",
+      "disposition": "unresolved-ambiguity",
+      "reason": "People count conflicts with households in segment 13; hold from numeric KPI.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s2",
+      "fingerprint": "36b5dc4ac63ef4d0c42e09ffebf7b9a34240cc845f427c315c0f1b241300e051",
+      "disposition": "date-metadata",
+      "reason": "Area 10 is a place identifier, not a count of places reached or beneficiaries.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s5",
+      "fingerprint": "e89a9311f60dc527dfa87d5c7a955ec682de5fd92a01528586eb7823ea665ca1",
+      "disposition": "irrelevant",
+      "reason": "One of many steps is rhetorical language, not a measured quantity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s11",
+      "fingerprint": "2bdb1bad939578133b3dead9d085edb3322537e6427abe584a507d48ff0cbe1d",
+      "disposition": "irrelevant",
+      "reason": "No one left behind is inclusion language, not a measured quantity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s13",
+      "fingerprint": "cc61f808798549d6baf94c8acd90a9cb85ae08cc94b65ca704e6886230b1a2b5",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Household count conflicts with people count in opening; do not convert units.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-4975-s14",
+      "fingerprint": "48ba456070e9cb7f5f57f77aa48b0d3ef9fdb91d050a0efb854a89baeb2c7491",
+      "disposition": "irrelevant",
+      "reason": "No one left behind is inclusion language, not a measured quantity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5105-s0",
+      "fingerprint": "e479f1a2984aa3c00e050cde86a15e61dd27f5edf7d496865cdc7c56eb3edea4",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats three beneficiaries in body segment 3; one stall-allotment cohort.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5105-s5",
+      "fingerprint": "7d443cb5965c0fc540c6c5db91695165ac13fce9cdff2cde9ab5fe5c339ebbaf",
+      "disposition": "irrelevant",
+      "reason": "Yet another milestone is qualitative language, not a numerical observation.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5105-s9",
+      "fingerprint": "4f8df275e7086bb3e7290ff9353756e969e7015337edac840791f86ed6323a32",
+      "disposition": "repeated-claim",
+      "reason": "Same three beneficiaries and stalls as segment 3; income improvement is expected, not measured.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5105-s11",
+      "fingerprint": "4040b586f38bcd5bdeb614094d19a87ad9f4c0521e7fb6a5be9c7f5bbec2c301",
+      "disposition": "irrelevant",
+      "reason": "No one left behind is qualitative mandate text, not a beneficiary count.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5862-s0",
+      "fingerprint": "c0eef901ad622b4fe1142975a4e1067abb8b0b8fc06996c78238b8d12bf643c8",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Headline states 50; opening qualifies no fewer than 50. Preserve bounds and source wording before final observation approval.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5862-s2",
+      "fingerprint": "ee0f93d83b255b1b9d9408012eedb1faf385094075ca7209d518168fe0914144",
+      "disposition": "unresolved-ambiguity",
+      "reason": "No fewer than 50 is an inclusive lower bound, whereas later paragraph states 50; existing shortlist exact bound requires review.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5862-s9",
+      "fingerprint": "1f43668439bead54e9e4da18c2449b9d20b885a93a691d39f6b6df1da0c4e59e",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Same Potiskum cohort as segment 2, whose no fewer than qualification must be reconciled; planned extension is not delivery.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5862-s10",
+      "fingerprint": "abce2c0765f0b64e3a22542c62404955843563d2b711f5e6e8677002781d0bd6",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Separate 20-grant programme with 17-area distribution and three additional Potiskum recipients. Do not sum with CBM cohort; overlap unknown.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-5862-s14",
+      "fingerprint": "1a46b86cee43800c55825d14b9c2cc714d4f9fa15cc76d16daffa3441449fd29",
+      "disposition": "background-context",
+      "reason": "2018 legislation date and five per cent public-institution quota are context, not employment delivered.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-1153-s0",
+      "fingerprint": "de29e456b04f96c426f0c5dc6389995f71419377a030f9be1a0e502917551a97",
+      "disposition": "background-context",
+      "reason": "National independence anniversary in an interview with Dr Lanre-Oke; not an Abba Isa activity or beneficiary count.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-1153-s1",
+      "fingerprint": "3227f7bf15c087e4c1c35a86f631bafea33ab5493c5bec981efcde907b88ab6a",
+      "disposition": "repeated-claim",
+      "reason": "Body title repeats the same independence anniversary as title location; no new activity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-1153-s4",
+      "fingerprint": "eee92d8c71cd7271ca043a2e0f1602280e51be3517c2f2b53534677199a750a0",
+      "disposition": "background-context",
+      "reason": "National independence anniversary and calendar date; not an Abba Isa contribution measure.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24"
+    },
+    {
+      "candidate_id": "posts-2352-s2",
+      "fingerprint": "097584be08a3b35ea507ad255d8d043b959968caecd09cf46b178a0ef95f4902",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-2352-s2-observation-1",
+      "observation_fingerprint": "be418ac7f64be249498f5a3d1d64f24506a944c81030428d3d1361ec405364bf"
+    },
+    {
+      "candidate_id": "posts-2790-s3",
+      "fingerprint": "90b89d9bbf6d6f8654600e2e2327e12877574c747a9bd31430d46fb64fd46346",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-2790-s3-observation-1",
+      "observation_fingerprint": "3e057aeb0150eb5bd5032609302998b84a6ff93cca20624a235735bae4642153"
+    },
+    {
+      "candidate_id": "posts-2790-s4",
+      "fingerprint": "f9520c268f8584f63f21ba3c69686b547cfbc99682653556ae10d23d8f358b8e",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-2790-s4-observation-1",
+      "observation_fingerprint": "512f831be211ded9f7929121e99fbe9fce057f0f71c45a5f5612d07e259dfe8a"
+    },
+    {
+      "candidate_id": "posts-2790-s9",
+      "fingerprint": "a68d80df62144b988c40dceb5fee5882dd4d93ac9d50fc46111dfa5c22406e83",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-2790-s9-observation-1",
+      "observation_fingerprint": "d63612fde4af572f1ac0e1b337f22745f3308bd4e206f0c7c682fd144d626150"
+    },
+    {
+      "candidate_id": "posts-4860-s2",
+      "fingerprint": "24caeedb8b5e3046a5f4c73ac1c1c12efd4d2f472ca07d3287a7403e1c93a8d7",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-4860-s2-observation-1",
+      "observation_fingerprint": "dd20defd85e8185d5f18d83516492c7122656485a50b2f1a4efb058295eef0c7"
+    },
+    {
+      "candidate_id": "posts-5105-s3",
+      "fingerprint": "bf554049bc5f875286017813289c26bff554e008b05a103d8d47f7e2678d99df",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-5105-s3-observation-1",
+      "observation_fingerprint": "7c161ae7a92661d8d6e1f0010ed825b6e63ac5e8d022838546633354f8b1573c"
+    },
+    {
+      "candidate_id": "posts-2279-s5",
+      "fingerprint": "f1a1b8e2210df94e46e00ab0e543e9943d6bda5aaebb1308c36805f6fe7f3339",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-2279-s5-observation-1",
+      "observation_fingerprint": "37a2cae0ee9e87940a1d7799e3dbe5cb3ab0001e11c0946ecb849ab840924abb"
+    },
+    {
+      "candidate_id": "posts-3531-s4",
+      "fingerprint": "ca04b34a41462c0c889c9267f088e55d829aa260f22bd7c1940f906e01565f45",
+      "disposition": "accepted-observation",
+      "reason": "Accepted as an attributed research observation with preserved bound, unit, stage and source; public approval and partner corroboration remain pending.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001",
+      "observation_id": "posts-3531-s4-observation-1",
+      "observation_fingerprint": "3f8cde2492a0cba5c8c42d1f2de861ddc7846e01ebfd6b074aa9be8832ed385a"
+    },
+    {
+      "candidate_id": "posts-2352-s0",
+      "fingerprint": "bc5f4322fcd376d77cdcc477dfc2509b7982173164e8dfef04020407adb5b7ae",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats the >500 food-support recipient observation in segment 2; no additional cohort.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2352-s15",
+      "fingerprint": "a58b917424d7f15a36477c8caa91770366e320e783a895d06e9ce6bee2fe6ac1",
+      "disposition": "background-context",
+      "reason": "National disability population estimate in a prayer/political appeal; not people reached by the food programme.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2352-s19",
+      "fingerprint": "356b1612365050ba071fc7aaeb8b2decad5a3d3e2a3ffe3602ce4107099bc81c",
+      "disposition": "irrelevant",
+      "reason": "Conditional moral example about three meals and one meal; no actual meals distributed or recipients measured.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2790-s0",
+      "fingerprint": "04d650a3b9aa56aad25f9d4381a7f109affc5c298d96d606e93c564e37f3d409",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats >500 recipients at the Karu launch in segment 3.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2790-s2",
+      "fingerprint": "984e7473236fe840214364c612fff10af143db933f687ca82907315102b677ac",
+      "disposition": "unresolved-ambiguity",
+      "reason": "National six-zone wording accompanies a single launch; planned regional expansion must be separated from delivered geographic coverage.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2790-s6",
+      "fingerprint": "32e003bb5965790785dbbab7efa110ddef131d34a9a035a64da1e34f2801a4a7",
+      "disposition": "background-context",
+      "reason": "Two special-assistant appointments are attributed to the Nasarawa governor, not programme beneficiaries or Isa appointments.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2790-s7",
+      "fingerprint": "b5adae285b78cd9c66fdb3116fd58ad29fd8a6f3617829244c29dbffe46bbd87",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Six-zone future distribution scope is planned geographic coverage; do not count six delivered zones from this launch article.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-4860-s0",
+      "fingerprint": "27b95273ef46d4e878479dfc7aa4a69eca157318c1ffa2b332c421c684bd0f9d",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats the same >50 programme participants described in segment 2.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-4860-s3",
+      "fingerprint": "ff1e728731f4d9d6e97b07bee15333025d74c5a7230a6d2132534c6e61df1f8b",
+      "disposition": "background-context",
+      "reason": "Repeats the >50 cohort and adds participant eligibility age 14 and above; age threshold is not another beneficiary or activity count.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-4860-s26",
+      "fingerprint": "43c391c5a6d89de29335c3ab91c7616b397568705bf3ec5298a2095e8c4211e9",
+      "disposition": "irrelevant",
+      "reason": "One night/one collaboration is rhetorical summary, not an additional measured outcome.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s0",
+      "fingerprint": "439f37fc1d52622f10c0c6c1d2da5139d78925262d71d1b2b924031c88acb804",
+      "disposition": "repeated-claim",
+      "reason": "Headline repeats the >20 women in segment 5, matching the existing startup-support activity.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s1",
+      "fingerprint": "df740aa76f9680581c83cccecc27013b610a2b1fcfd6edd64578cd048ccf1a71",
+      "disposition": "background-context",
+      "reason": "Ten per cent quota proposal is legislative advocacy described later, not an enacted quota or jobs delivered.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s4",
+      "fingerprint": "550e0ff58b3e935f60f6fb8fbce9acd044f1c9af2381a891c498fc69c844ae63",
+      "disposition": "date-metadata",
+      "reason": "March 8 observance and 2024 celebration year are calendar context; do not manufacture an exact activity date from the observance alone.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s7",
+      "fingerprint": "d72701d39b1e0caba2d65fac0679eab3ed0b2e031a32aad8337b28403659f0d6",
+      "disposition": "irrelevant",
+      "reason": "As many as possible and leave no one behind are aspirations without a numerical delivery observation.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s11",
+      "fingerprint": "6ecd5e66b890f2817527f39ee33a5c57bbe45caf509569e17a6dbce6a20f0ee5",
+      "disposition": "background-context",
+      "reason": "Four months describes office tenure; one notable initiative is a retrospective example, not another beneficiary count.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s12",
+      "fingerprint": "58ae2572a35a808197599d43f8873e543d059c844dade02814410b9ef6413bde",
+      "disposition": "unresolved-ambiguity",
+      "reason": "Mixed planned outreach to 36 governors and qualitative retrospective SMEDAN training. Split programme scope and cross-link existing SMEDAN activity; no delivered 36-state coverage established.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-2279-s18",
+      "fingerprint": "a781871f885b3dea6e51504345d71750a9ad9454c1f7731a480ca98fd76879bc",
+      "disposition": "background-context",
+      "reason": "Ten per cent workforce motion is attributed to Rep. Ogbara; it is a proposal, not implemented employment or an Isa-delivered figure.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s5",
+      "fingerprint": "44b0e41bcd903bbd8ef166493ce14d4ee2c8f7d529da221caec9901cbeebca09",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s7",
+      "fingerprint": "4cd5eb871b6c3b8fcc8745b147a9dd35b16212b5a40e9b3dbcfc5c0a98efd099",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s9",
+      "fingerprint": "6fd832d70e7a798e264251793ceb470799eef8ee35394f2a18638ff044ab2214",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s10",
+      "fingerprint": "80a4a4358b7089b9162956648686463cf3eb2fbeb0ffb4450128eeae3d9beab4",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s11",
+      "fingerprint": "f62a241d6db62f92d593a7798e7f70a076ccf5243477aa3734e7426371cba815",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1153-s13",
+      "fingerprint": "9d8638ab9fbc8b262b9df554a0fe3d80dd69e484ad0e9d217f097609de9b4016",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Dr Femi Lanre-Oke on national independence and leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s1",
+      "fingerprint": "e8eca76eb660695069f8267b5ef347eb69e79d24ff3bc056d5d4f714b9a9a0db",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s4",
+      "fingerprint": "c20f3d2f83faf727c5ca0689799a8f6d9bfbfdb4548bb25cf65d077053b30161",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s5",
+      "fingerprint": "c56372e9aa714065042658946243bad1e14326d9d8864aa14c95989c7ff3e8bf",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s7",
+      "fingerprint": "17cb5e0a07fd979350d1408092726ea4dafbd03179f0688b6c400c0efcee3a90",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s9",
+      "fingerprint": "cf622cfaed4f64f4ec212d914d9062742a7511a8a7c1116b85b258104db73a62",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s10",
+      "fingerprint": "2d09b5161fb620c3afdb6fa1954039a9e0d3af3513940185c72bff23ecfb96d0",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s12",
+      "fingerprint": "d1b9a8cf9d14bd045543f41c862e960393c5be9bab53356d95c8ed445ea6cd99",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1156-s13",
+      "fingerprint": "d5f870068769543a880a4f736d841ece2b35d649a6e52de8aaaff6ae8a6ba3d7",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Interview with Chief Lekan Jackson-Ojo on national independence and political leadership. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1168-s5",
+      "fingerprint": "8709d6b3e9a4356a67cfab6391ef8bb239bb3e5a3a988f932a7669275cf33898",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Tunde Imolehin comment and park-development court dispute; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1168-s9",
+      "fingerprint": "d391642748ddbd6b9f70afe341642ea79a695d4ff100dbeb8a9cf24aacf49942",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Tunde Imolehin comment and park-development court dispute; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1168-s10",
+      "fingerprint": "4ff7b7e3e2337c33a1ae0d3e7278444e71f1303c9b37f3856cdf55c98e6af790",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Tunde Imolehin comment and park-development court dispute; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1168-s11",
+      "fingerprint": "36421fc13441aa1e3de151d23b41e3e63332bd26c88fc1320824c521b386c5f1",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Tunde Imolehin comment and park-development court dispute; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1187-s6",
+      "fingerprint": "8ce8bb9ec568864ed3965b4ab20d8c9d3ca41ac99f9ac8742ab55f9eb3cca732",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1187-s10",
+      "fingerprint": "369a497f8ecbe627003c69b74e4465b11deb28cff84e69d4d91653c835291fa5",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1187-s15",
+      "fingerprint": "0a4c3f14fb0ba9d0946c7d831512880907eba882f434572e5d71df3637c17b33",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1187-s16",
+      "fingerprint": "c7c2658e820be0e9e8401c256b449cbee058dc6b2783f4768184a7743cfbab14",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1187-s22",
+      "fingerprint": "d469fa2165fdcd5762e637e8763e82b19949b9b24f75cc2d291223f1efd08fc1",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1194-s8",
+      "fingerprint": "f84b1775771a47549684b5f4891f1bceb82c8f0e63d284242331a58b3f224ccd",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Governor Radda security-policy interview; SMEDAN is a biographical reference, not Isa programme evidence. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "candidate_id": "posts-1194-s12",
+      "fingerprint": "fe9de19c0409d8117ae13ccd10bca187e1413998d45940b594012d3ba7adff42",
+      "disposition": "irrelevant",
+      "reason": "Full-source review: Governor Radda security-policy interview; SMEDAN is a biographical reference, not Isa programme evidence. Passage retained in archive; exclude from Isa contribution numbers.",
+      "reviewer": "Codex source-context review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    }
+  ]
+}

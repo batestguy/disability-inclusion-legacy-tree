@@ -1,5 +1,39 @@
 # Hon. Mohammed Abba Isa Legacy Tree
 
+## Phase 1 batch 001 — 24 October 2026
+
+Completed the next 50 source-context passage reviews across 11 articles. Current
+accounting: 82 explicit decisions, 1,260 automatic exact repeats and 1,527 awaiting
+review, with 18 cumulative reviewed holds. Eight typed research observations retain
+exact evidence, bounds, units, targets/delivery, partner roles and activity IDs;
+none is approved for the public application. Five unrelated full-source reports
+have recorded relevance exclusions. The exploratory NMF baseline remains unchanged.
+Observation/source review integrity checks and synthetic research CI were added.
+The owner's commit-and-push request includes the preceding research/environment
+checkpoint and phased execution documentation. Phase 1 and milestone 1 remain open.
+
+## Step-by-step execution and environment readiness
+
+The owner's request to verify tools and proceed in phases is tracked in
+[docs/IMPLEMENTATION_PHASES.md](docs/IMPLEMENTATION_PHASES.md). It records the
+local environment inventory, remaining external prerequisites, actionable tasks,
+exit evidence and four owner review milestones. Phase 0 is environment
+verification; Phase 1 is the next substantive task: source and numerical review.
+Use this checklist for progress rather than treating the earlier partial research
+implementation as completion of the dashboard plan.
+
+## Accepted dashboard implementation — 24 October 2026
+
+The owner's supplied plan, **Mohammed Abba Isa — The Work in Numbers**, is the current product direction: bright ivory/green/gold, timeline-led bilingual home; coordinated filters, accessible chart tables, evidence explorer, secondary tribute tree and a deterministic conversational chatbot built before integration. Whole-app offline operation follows a completed first visit, with explicit cache readiness and update handling. No runtime inference service, sentiment feature, invented beneficiary total or unapproved photograph. Use a monogram until portrait reuse/crop rights are documented. Preserve permanent achievement links and the shared **Change language / Canja harshe** control with English above Hausa.
+
+Four owner supervision milestones: (1) complete numerical review and analysis findings; (2) validated standalone bilingual chatbot; (3) visual dashboard; (4) release candidate with offline, exports, accessibility, performance and monthly refresh evidence. Final public reveal remains gated. This implementation request does not establish human Hausa approval or portrait rights.
+
+Current implementation: reproducible local review-accounting and eight-topic NMF pipeline; exact-repeat mapping; 32 source-context decisions; independent artifact audit and 15 synthetic safety tests. [DASHBOARD_ANALYSIS.md](docs/DASHBOARD_ANALYSIS.md) records findings and remaining work. **Milestone 1 is incomplete:** 1,577 passages await editorial review, 1,260 automatic repeats require their canonical decisions, and 15 reviewed holds remain. The exploratory model exposes unrelated archive reporting. No new public dataset, chatbot, dashboard, service worker or deployment is claimed.
+
+## Source collection checkpoint — 24 October 2026
+
+Owner authorised broad numerical scraping and correct source storage. Collected 639 public posts and seven pages from ossaposneo.org; saved exact API snapshots, citations, article text and 2,869 numerical passages under local ignored output/office-evidence/. [docs/SOURCE_COLLECTION.md](docs/SOURCE_COLLECTION.md) records coverage, reproducible commands and QA. Eleven source-text-checked observations from nine articles are stored in research/office-evidence-shortlist.json, outside the approved public ledger. Deduplication, unit/stage review and selected partner corroboration remain next data work. Sentiment analysis is deferred; article tone must not be presented as public opinion. Chatbot/shared-language requirements and reveal gates remain unchanged. Preflight, lint, typecheck, ten tests, both builds and source integrity audit passed on 24 October; no UI or deployment changes.
+
 ## Accepted chatbot and language decisions - 22 October 2026
 
 The next dashboard includes a beautifully designed conversational English/Hausa chatbot, built and validated as a component before dashboard integration. It automatically follows the page locale; changing the shared control changes both page and chat. The control always displays **Change language / Canja harshe**, with **English** above **Hausa**, vertically stacked, both visible without a menu, and a clear active state. This replaces the earlier compact query-tool presentation recommendation; numerical safeguards remain applicable.

@@ -1,5 +1,73 @@
 # Project handoff
 
+## Latest checkpoint — Phase 1 batch 001, commit and push requested
+
+24 October: owner requested proceeding, committing and pushing the work. Completed
+50 new source-context passage reviews across 11 articles. Cumulative accounting is
+82 explicit decisions + 1,260 automatic exact repeats + 1,527 awaiting = 2,869.
+Eighteen explicit decisions are reviewed holds. research/reviewed-observations.json
+contains eight typed research observations, each linked by fingerprint to its
+accepted decision, source and exact excerpt. Six are reported delivery, two are
+targets; public_approved is false throughout. Preserve the same startup and NigWED
+activity IDs; no extra activity or beneficiary total is inferred. Five unrelated
+articles have full-source exclusions in research/source-decisions.json. These
+partial exclusions do not yet change the exploratory topic corpus.
+
+Added observation integrity and source-relevance freshness validation; 23 Python
+synthetic tests now cover these and prior safeguards. GitHub Actions includes a
+separate standard-library research-safety job without needing the ignored corpus.
+See docs/VALIDATION.md for the actual checkpoint checks and Git history/Actions for
+delivery evidence. Prior source collection, research pipeline, environment and
+phase-plan work are included in this requested checkpoint. Full downloaded texts,
+review queues and frozen model arrays remain ignored/local; preserve their backup.
+Derived-analysis backup: output/office-evidence/analysis-checkpoint-2026-10-24.zip
+and .zip.sha256, with ZIP integrity checked. This is a local backup, not evidence
+of off-machine storage or a completed restore exercise.
+
+Next: continue the next source-context batch under Phase 1, update accounting and
+resolve canonical repeats. Do not advance to public headline selection or call
+milestone 1 complete. No chatbot/dashboard/PWA implementation or website deployment
+is claimed. Cloudflare/reveal, portrait, human Hausa and correction-contact gates
+remain open. Older checkpoint counts below are historical.
+
+## Current owner steering — proceed step by step
+
+The owner asked whether the environments/tools are available and requested a
+phased Markdown plan. Read docs/IMPLEMENTATION_PHASES.md for the execution
+checklist, verified versions, phase exits and four owner review milestones. The
+local JS/Python/NLP dependencies, archive and saved model artifacts are present;
+preflight and saved-analysis integrity passed again. Python currently uses the
+machine-wide installation; a dedicated research virtual environment is a recorded
+reproducibility improvement, not a blocker for current review. The matching
+Playwright Chromium was missing during the smoke check; see docs/VALIDATION.md
+for installation/retest results. Cloudflare account access, genuine portrait
+rights, human Hausa review and correction contact remain unverified release
+prerequisites. Next substantive step is a small source-context review batch under
+Phase 1, followed by updated counts and audits; the owner is not being asked to
+clean or classify the data.
+
+## Dashboard implementation checkpoint — 24 October 2026
+
+The owner's four-milestone Work in Numbers plan is now the source of intent; see PROJECT_PLAN.md and docs/DASHBOARD_ANALYSIS.md. This session implemented the local research foundation, not the full product. Start the next continuation with the analysis report and exact validation evidence in docs/VALIDATION.md. Do not call the first milestone complete or ask the owner to label the remaining queue.
+
+New scripts: prepare-analysis.py (offline queue + frozen eight-topic TF-IDF/NMF); audit-analysis.py (independent artifact/source/period checks and --require-complete gate); analysis_test.py (15 synthetic tests). Python 3.14.4; research-only pins in research/analysis-requirements.txt. No production dependency or app UI changed. Full source/candidate downloads remain ignored; output/analysis/20261024T081152242131Z contains derived local artifacts and must travel with the archive backup. Research/numerical-decisions.json records 32 fingerprint-bound source-context decisions, including 15 explicit holds. Preserve the original shortlist unchanged as historical research.
+
+Accounting: 2,869 passages = 32 source-context decisions + 1,260 automatic exact repeats + 1,577 awaiting review. Exact full-text grouping yields 396 texts; NLP uses 389 posts, excludes seven pages, and retains source aliases. Two 2013 page dates are not career events. NMF reproduced identical component/weight hashes in two runs. This exploratory model exposes other-person Lekan-Ojo reporting and near-duplicate congratulatory stories; relevance, category, entity and representative-source review are still needed before public model selection. Potiskum source 5862 says no fewer than 50 in the opening but 50 later; reconcile the original shortlist's exact bound. Queen Irene bound and Near Foundation unit conflicts remain held.
+
+Next: finish canonical numerical review and activity reconciliation; corroborate proposed prominent figures; review source relevance/categories/entities and freeze the public bundle; prepare full milestone 1 for owner story/emphasis review. Then validate standalone bilingual chat before dashboard integration, then implement offline operation and the release-candidate checks. Do not present pipeline integrity as editorial approval. Existing six-activity ledger and public application remain unchanged. No portrait rights, Hausa approval, corrected contact or hosting gate was resolved.
+
+## Latest checkpoint: numerical source collection — 24 October 2026
+
+The owner requested broad numerical scraping with correct source references and stored text. Sentiment analysis was discussed and deferred; prioritise sourced numbers and useful descriptive themes. Collected the shared site's public WordPress archive: 639 posts and seven pages, with 2,869 numerical passages across 562 sources. Final snapshot: `output/office-evidence/20261024T081152242131Z/`; `output/office-evidence/latest.json` points to it. Full source downloads are local/ignored and must be separately preserved when moving machines.
+
+Local backup: `output/office-evidence/office-evidence-2026-10-24.zip` and companion SHA-256 file; ZIP integrity checked. Contains source snapshots, source/candidate exports, QA evidence, shortlist and reproducible scripts.
+
+Read [docs/SOURCE_COLLECTION.md](docs/SOURCE_COLLECTION.md). Collection and offline-audit scripts are in scripts/. The raw response snapshots retain request URLs, UTC retrieval times and SHA-256 hashes; CSV/JSON retain source titles, permanent links, publication dates and contextual passages. Integrity and visible-digit coverage checks passed for all 646 records and 2,869 candidates. Duplicate checks found 104 matching-title groups and 102 matching-text groups; these are review leads, not extra activities. No photos downloaded or reuse permissions established.
+
+[research/office-evidence-shortlist.json](research/office-evidence-shortlist.json) stores 11 source-text-checked observations from nine articles, including exact excerpts/segment references and explicit ambiguities. These are research candidates outside the approved public ledger; targets, units, partner credit and overlap limits remain visible. Next data work: classify/deduplicate the queue and corroborate selected figures before admitting them to dashboard metrics. No sentiment scores, public-ledger changes, dashboard implementation or deployment. The chatbot requirements and release gates below remain applicable.
+
+Validation on 24 October: preflight, workspace lint/typecheck, all ten tests and both production builds passed. Source integrity audit passed, and all 11 shortlist excerpts matched saved source text. No browser/performance rerun for this research-only change.
+
 ## Latest owner decisions: resume here first
 
 The owner explicitly wants a beautifully designed conversational English/Hausa chatbot, built and validated before integration as a dedicated section of the planned dashboard. This supersedes the earlier compact question-tool presentation recommendation. The earlier numerical review still governs evidence and calculation safeguards; it does not reject the chatbot interface. Read [docs/CHATBOT_SPEC.md](docs/CHATBOT_SPEC.md) for the complete requirements, design direction, implementation recommendations, test cases and continuation sequence.

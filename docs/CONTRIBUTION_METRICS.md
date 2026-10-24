@@ -1,5 +1,9 @@
 # Descriptive contribution metrics
 
+## Expanded source collection — 24 October 2026
+
+The owner requested broad numerical extraction with reliable source references. [SOURCE_COLLECTION.md](SOURCE_COLLECTION.md) documents a local research corpus of 639 posts and seven pages, 2,869 candidate numerical passages, preserved API snapshots and citations, duplicate leads and an independently checked source-to-extraction audit. [The shortlist](../research/office-evidence-shortlist.json) contains 11 source-text-checked observations, still outside the public ledger. The public ledger below remains manually curated; the new automated collection is an unreviewed research queue. No automated passage count is a beneficiary or activity KPI. Sentiment is deferred. Deduplicate, resolve units/bounds/stages, preserve partner roles and corroborate selected claims before importing into dashboard data.
+
 ## Accepted chatbot presentation
 
 The owner wants the contribution data available through a polished conversational English/Hausa chatbot, later integrated as a dashboard section. It shares the page locale automatically. Always expose **Change language / Canja harshe**, with **English** above **Hausa**, both visible without a menu. [CHATBOT_SPEC.md](CHATBOT_SPEC.md) records the full contract. The metric rules below remain authoritative for counts, bounds, units, targets, dates and evidence. Chatbot/UI integration is pending.

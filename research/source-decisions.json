@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scope": "Partial source relevance review; does not yet change the exploratory frozen corpus.",
+  "decisions": [
+    {
+      "source_id": 1153,
+      "text_sha256": "04e614ede7e94a8ea639ff1ed4562f538f88d00b42f115c8a8573356f0c6083e",
+      "source_url": "https://ossaposneo.org/63rd-independence-theres-hope-of-brighter-future-for-nigeria-dr-lanre-oke/",
+      "report_date": "2023-10-01T18:30:46",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Interview with Dr Femi Lanre-Oke on national independence and leadership.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "source_id": 1156,
+      "text_sha256": "2e1d0bd9c80de3a2cc4a1fc0216e0a15380855d7eb0ff0a1d09e82a5364a07e6",
+      "source_url": "https://ossaposneo.org/independence-nigeria-still-bedwetting-at-63-apc-chieftain-2/",
+      "report_date": "2023-10-02T09:55:03",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Interview with Chief Lekan Jackson-Ojo on national independence and political leadership.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "source_id": 1168,
+      "text_sha256": "d3e97f6ec6de4a10407d76ab08ae7d0028b2531ecc4811bec90faf4f9af04de6",
+      "source_url": "https://ossaposneo.org/apc-chieftain-imolehin-tasks-wike-to-stop-nigeria-police-from-abuja-masterplan-distortion/",
+      "report_date": "2023-10-02T18:07:59",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Tunde Imolehin comment and park-development court dispute; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "source_id": 1187,
+      "text_sha256": "69a21e759ffc8f929ec42a333e2613cb0e2c472c14b73f12146ac1e8437d6ad5",
+      "source_url": "https://ossaposneo.org/suspended-strike-gbajabiamila-deserves-commendation-for-his-timely-negotiation-with-labour-mustapha/",
+      "report_date": "2023-10-11T05:58:57",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Kachala Mustapha statement praising Femi Gbajabiamila labour negotiations; no documented Isa role.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    },
+    {
+      "source_id": 1194,
+      "text_sha256": "e22aa33bb81abd544c66029164548e2091c3d9633dcb7988b0431462db26970f",
+      "source_url": "https://ossaposneo.org/negotiating-with-bandits-without-considering-victims-welfare-will-only-aggravate-insecurity-gov-radda/",
+      "report_date": "2023-10-20T17:05:36",
+      "relevance": "exclude-other-person-reporting",
+      "reason": "Governor Radda security-policy interview; SMEDAN is a biographical reference, not Isa programme evidence.",
+      "reviewer": "Codex full-source relevance review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-1-batch-001"
+    }
+  ]
+}

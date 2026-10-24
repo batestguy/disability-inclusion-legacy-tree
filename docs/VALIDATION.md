@@ -1,5 +1,83 @@
 # Validation evidence - 22 October 2026
 
+## Phase 1 batch 001 checkpoint — 24 October 2026
+
+Reviewed 50 additional passages across 11 source articles. Cumulative accounting:
+82 explicit source-context decisions (including eight research observations and
+18 reviewed holds), 1,260 automatic exact repeats and 1,527 awaiting review.
+Five full-source relevance exclusions are recorded without silently changing the
+exploratory NMF corpus. All eight observations are explicitly not public-approved.
+
+Passed locally: preflight; workspace lint/typecheck; all ten Node tests and
+23 Python synthetic tests; web and Studio production builds; full source-archive
+audit (646 sources/2,869 passages); saved-analysis integrity audit including exact
+observation excerpts, typed-observation fingerprints and source-relevance
+freshness. The regenerated NMF arrays retain the prior SHA-256. Research JSON,
+new documentation links, staged whitespace and credential-pattern checks passed.
+The separate strict completeness gate was tested and correctly refused the
+unfinished review. No fresh UI/browser/performance result is claimed for this
+research-only change.
+
+Added a GitHub Actions research-safety job running the synthetic standard-library
+tests without the ignored source corpus or scientific packages. Local source
+audits and model reproduction are distinct checks; a green CI run alone cannot
+certify the full archive or editorial approval. Git history and the Actions run
+for the delivered commit provide remote verification evidence.
+
+Saved a separate derived-analysis ZIP and checksum at
+output/office-evidence/analysis-checkpoint-2026-10-24.zip; ZIP integrity passed.
+The full source archive and generated review queues/model arrays stay ignored.
+This local ZIP does not establish off-machine backup or a completed restore test.
+No public application figures, dashboard/chat/PWA features, website deployment,
+portrait permissions or human Hausa approval changed.
+
+## Environment and phased-plan checkpoint — 24 October 2026
+
+Created docs/IMPLEMENTATION_PHASES.md and linked it from PROJECT_PLAN.md and
+HANDOFF.md. Verified installed JS/Python/research/test versions, workspace
+dependency resolution, archive/model/backup presence, project preflight and
+saved-analysis integrity. Python is currently machine-wide; dedicated research
+isolation is a recorded improvement. Cloudflare/account access, human reviewers,
+portrait rights and correction contact remain unverified external prerequisites.
+
+The first browser check found no matching Chromium executable. Ran
+`npx.cmd playwright install chromium`; after transient DNS retries it installed
+Chromium and headless shell 156.0.8078.4 (Playwright build 1248) and FFmpeg.
+Retested `chromium.launch({headless:true})`: launch succeeded and reported
+156.0.8078.4. Playwright, axe and Lighthouse imports succeeded. This is a browser
+toolchain smoke check, not a fresh application/browser/accessibility audit.
+
+Reran and passed: preflight, workspace lint/typecheck, all ten Node tests, all
+15 Python research tests, web production build and Studio production build.
+Phased-plan relative links resolve and Git whitespace checks pass. No new app
+features, numerical review decisions, deployment or public-release approvals are
+claimed by this environment/planning step. Next work is the Phase 1 review batch.
+
+## Dashboard research implementation — 24 October 2026
+
+Passed: preflight; workspace lint and typecheck; all ten existing Node tests;
+web static production build and Studio production build; source-archive integrity
+audit for all 646 sources and 2,869 candidate passages; all 15 new synthetic Python
+research tests; independent saved-analysis artifact audit. `git diff --check`
+passed. No app UI, production dependency, public content or hosting changed; no
+new browser, accessibility or performance result is claimed.
+
+The NMF component/weight SHA-256 matched across repeated fits in the recorded
+Python 3.14.4 environment. Corpus hashes, all preprocessing settings, environment
+versions, model arrays and topic/source assignments are saved in local ignored
+output/analysis/20261024T081152242131Z/. The tracked research/analysis-baseline.json
+records the artifact manifest without full articles or numerical passages.
+
+The strict `python scripts/audit-analysis.py --require-complete` check was
+exercised and **failed as expected**: substantive numerical review is incomplete.
+Ordinary integrity passes are separate from editorial readiness. Queue accounting
+is 32 explicit source-context decisions, 1,260 automatic exact repeats and 1,577
+awaiting review. Fifteen of the explicit decisions are unresolved holds. The
+exploratory model also needs source relevance and representative-article review.
+No first-milestone approval, new public bundle, chatbot, dashboard, offline
+operation, monthly refresh completion or release readiness is claimed. See
+[DASHBOARD_ANALYSIS.md](DASHBOARD_ANALYSIS.md).
+
 ## Chatbot documentation checkpoint - 22 October 2026
 
 Completed checks for this documentation refresh: preflight, workspace lint/typecheck, all ten tests and both web/Studio production builds passed. All 15 project Markdown files have the contract or its reference; local Markdown links resolve and whitespace checks pass. No chatbot code, browser/performance rerun, commit/push or deployment is claimed. Historical refresh results below retain their original scope.

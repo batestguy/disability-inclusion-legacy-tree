@@ -5,6 +5,15 @@ on:
 permissions:
   contents: read
 jobs:
+  research-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      # Synthetic standard-library tests; no private source archive or NLP install.
+      - run: python -m unittest discover -s scripts -p '*_test.py'
   verify:
     runs-on: ubuntu-latest
     steps:
