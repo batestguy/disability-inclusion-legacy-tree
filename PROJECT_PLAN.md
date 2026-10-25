@@ -1,5 +1,18 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Current review improvements — 25 October 2026
+
+Committed the preceding data/chatbot checkpoint as `c95e8d5`, then reviewed and
+improved it. The owner chose activities/results as the first-screen priority,
+green/white alternating options, and an OSSAP logo cursor over buttons/links only.
+“Quiz” was clarified as design questions. Fixed programme identity, reader paging
+context, source-list history, summary evidence and meaningful English/Hausa
+announcements. Cursor is optional with normal pointer fallbacks; its publisher
+asset provenance records unverified public reuse permission and false approval.
+See [review](docs/CHATBOT_REVIEW_2026-10-25.md) and [validation](docs/VALIDATION.md).
+No public deployment, dependency, source-bundle change or new language-accuracy
+claim. Main dashboard follows owner review of this guided component.
+
 ## Current owner correction — minimal choices, 25 October 2026
 
 Simplified the guided chatbot after the owner rejected clutter and internal

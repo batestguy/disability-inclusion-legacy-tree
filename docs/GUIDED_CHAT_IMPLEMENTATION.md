@@ -15,6 +15,21 @@ with Back, Start again and evidence endpoints in both locales. The latest owner
 correction below removes the earlier visible map/path from the interface.
 No API, credentials, subscriptions, trial credits or new production dependencies.
 
+## Latest design decisions after review
+
+Owner requested a commit before improvements; checkpoint `c95e8d5` records the
+prior version. Prioritise Activities and reported results. Options alternate
+green/white/green with readable figures and meaningful programme names. Keep
+option/source list positions when reading details; restore source-list hashes
+consistently. Display stored findings on summary source routes and announce new
+detail text in its actual language. See CHATBOT_REVIEW_2026-10-25.md.
+
+The owner's “quiz” request means asking design questions, not adding a visitor
+quiz. OSSAP logo cursor applies only to buttons/links, is optional, and uses the
+official site's existing icon without modification. Fine-pointer/hover devices
+only; preserve normal text, touch and forced-colour behaviour. Public reuse
+permission is unverified and public approval remains false; record provenance.
+
 ## Latest owner direction — minimal replacing choices, no internal scrolling
 
 Owner rejected the verbose scrollable version as inconvenient. Show one concise

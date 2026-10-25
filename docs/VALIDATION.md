@@ -1,5 +1,60 @@
 # Validation evidence - 22 October 2026
 
+## Committed review improvements, alternating options and cursor — 25 October
+
+Owner requested committing before criticism/improvements. Saved the validated
+data/chatbot checkpoint as local commit `c95e8d5` (79 files, including required
+data/research dependencies); preserved separate owner AGENTS.md edits. Checked
+staged content for common credential patterns without printing file contents;
+no matches. No push was requested or performed.
+
+A fresh read-only reviewer found five required usability/accessibility fixes:
+unnamed same-value programme choices, option/source paging resets, inconsistent
+source screen restoration through browser history, empty summary-source readers,
+and detail announcements without meaningful content. See
+[review and corrections](CHATBOT_REVIEW_2026-10-25.md) for baseline file/line
+references, impact and corrections. Main implemented all five. Independent
+recheck confirmed the fixes, then identified two remaining details: use a short
+Karu label rather than a long headline lacking its name, and tag English evidence
+in the Hausa live region. Both were corrected and checked in browser regressions.
+
+Owner's design answers: prioritise Activities and reported results; “quiz” means
+design questions rather than a visitor quiz; OSSAP cursor only over buttons and
+links. Visible options/source choices alternate green/white/green. Programme
+labels are concise and retain figure bounds, stages and units; original source
+titles/text are unchanged. Three replacing choices and no internal scrolling
+remain. The optional native cursor uses the unmodified publisher 32×32 icon,
+served locally, on fine hovering pointers; its switch disables it. Ordinary
+text/background, touch and forced-colour cursors remain standard. Provenance,
+asset hash and unverified reuse permission are in
+[ossap-cursor.json](../content/ossap-cursor.json), with public approval false.
+
+Passed: preflight, workspace lint/typecheck, **49 Node tests**, full web/Studio
+production build, and subsequent final web build after label/language/cursor
+refinements. Source-resolution tests check exact evidence/role/qualifications,
+direct-evidence priority, cloning and honest absence. All 162 nodes, 33 activities
+and 11 observations remain covered; legacy parser/frozen audit and bundle are
+unchanged. No new production dependency or hosted service.
+
+Final `npm.cmd run test:chat-browser` completed at 2026-10-25T17:18:28.076Z:
+seven journey groups, zero axe violations in five states, zero page errors,
+HTTP failures or external requests. New checks verify computed alternating
+background/text colours, optional local cursor scope/off switch, distinguishable
+Karu/Ramadan 500-person choices, retained option/source list pages after reading,
+stored women-source extracts, source-list history/reload, and actual language-
+tagged announcement text on reader paging. Existing source/receipt dimensions,
+exact text paging, bilingual state, normal-phone fit, 320px/200% reflow, forced
+colours and loaded offline navigation still pass. Results are in
+[guided-browser-results.json](../output/guided-browser-results.json), marked
+`completed: true`; desktop and Hausa mobile screenshots were visually reviewed.
+
+An intermediate browser run exposed a long Karu headline that omitted its short
+programme name; concise source-bound navigation titles resolved it. No evidence
+was changed to satisfy a test. These checks do not certify human Hausa or actual
+screen-reader speech, logo reuse rights, fresh performance or full offline reload
+readiness. No public deployment or approval is claimed. Final review improvements
+are saved in a separate local commit following the baseline; see Git history.
+
 ## Minimal replacing choices — owner correction, 25 October 2026
 
 Owner rejected the previous scrollable, verbose interface. Replaced it with one

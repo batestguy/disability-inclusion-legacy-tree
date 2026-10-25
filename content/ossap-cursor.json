@@ -1,0 +1,14 @@
+{
+  "organization": "Office of the Senior Special Assistant to the President on Special Needs and Equal Opportunities",
+  "source_page": "https://ossaposneo.org/",
+  "source_asset": "https://ossaposneo.org/wp-content/uploads/2024/11/cropped-SSA-Special-needs-32x32.jpg",
+  "local_asset": "apps/web/public/branding/ossap-cursor.jpg",
+  "sha256": "a5a8596378bb3f03d3a406d69dc9ac43bc36621e6d944b23eca5e0427b63ef18",
+  "dimensions": [32, 32],
+  "modifications": "None. The publisher's existing small icon is used unmodified; CSS sets a centre hotspot.",
+  "source_checked": "2026-10-25",
+  "owner_direction": "Owner selected OSSAP and requested its logo as the cursor for the local chatbot preview.",
+  "reuse_permission": "Not established. Public availability does not establish a reuse licence.",
+  "public_approved": false,
+  "scope": "Optional local preview cursor; existing public chatbot/reveal gates remain in force."
+}

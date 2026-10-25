@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import LanguageChoice from "./LanguageChoice";
 import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
 import { getFlowNode } from "../lib/guided-flow.mjs";
-import { getConciseAnswer, paginate, splitText } from "../lib/guided-presentation.mjs";
+import { getConciseAnswer, getSourceEvidence, paginate, splitText } from "../lib/guided-presentation.mjs";
 import { t, type Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
 import "../app/(chat)/guided.css";
@@ -24,7 +24,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
   }, [bundle, path]);
   const concise = node ? getConciseAnswer(node) : null;
   const choices = paginate(node?.options.filter((option) => option.target !== "start") ?? [], session.optionPage);
-  const sourceChoices = paginate(node?.sourceIds ?? [], session.optionPage);
+  const sourceChoices = paginate(node?.sourceIds ?? [], session.sourcePage);
   const source = bundle.sources.find((entry) => entry.id === session.sourceId);
   const summaryParts = splitText(concise?.paragraphs.map((p) => p[lang]).join("\n\n") ?? "", 360);
   const summaryIndex = Math.min(session.summaryPage, Math.max(0, summaryParts.length - 1));
@@ -33,7 +33,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
     if (text) splitText(text, 340).forEach((part) => details.push({ label, text: part, quote, lang: textLang }));
   };
   if (session.view === "source" && node && source) {
-    for (const evidence of node.evidence?.filter((entry) => entry.sourceId === source.id) ?? []) {
+    for (const evidence of getSourceEvidence(bundle, node, source.id)) {
       detail(evidence.kind === "exact-source-excerpt" ? say("Source excerpt · English", "Rubutun tushe · Turanci") : say("Record summary · English", "Taƙaitaccen bayani · Turanci"), evidence.text, evidence.kind === "exact-source-excerpt");
       detail(say("Reported role · English", "Rawar da aka ruwaito · Turanci"), evidence.role);
       detail(say("Qualification · English", "Iyaka · Turanci"), evidence.limitations);
@@ -77,7 +77,8 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
       setSession((previous) => {
         if (previous.path.slice(0, previous.cursor + 1).join("|") === nextPath.join("|")) return previous;
         const isPrefix = nextPath.every((id, index) => previous.path[index] === id);
-        return { path: isPrefix ? previous.path : nextPath, cursor: nextPath.length - 1, ...initialGuidedScreen };
+        return { ...previous, path: isPrefix ? previous.path : nextPath, cursor: nextPath.length - 1, ...initialGuidedScreen,
+          view: nextPath.at(-1)?.startsWith("evidence:") ? "sources" : "answer" };
       });
     }
     readPath();
@@ -91,7 +92,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
 
   function focusAnswer() { requestAnimationFrame(() => answerPanel.current?.focus({ preventScroll: true })); }
   function navigate(nextPath: string[], retrace = false) {
-    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, ...initialGuidedScreen,
+    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, logoCursor: session.logoCursor, ...initialGuidedScreen,
       view: nextPath.at(-1)?.startsWith("evidence:") ? "sources" : "answer" });
     setDownloadError(null);
     window.history.pushState(null, "", location.pathname + flowHash(nextPath));
@@ -102,7 +103,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
     navigate(target === "start" ? ["start"] : previous >= 0 ? path.slice(0, previous + 1) : [...path, target]);
   }
   function show(view: "answer" | "sources" | "source" | "details", sourceId: string | null = null) {
-    setSession((previous) => ({ ...previous, view, sourceId, optionPage: 0, detailPage: 0 }));
+    setSession((previous) => ({ ...previous, view, sourceId, detailPage: 0 }));
     focusAnswer();
   }
   function back() {
@@ -111,7 +112,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
     else if (session.view !== "answer") show("answer");
     else navigate(path.slice(0, -1), true);
   }
-  function turnPage(key: "optionPage" | "detailPage" | "summaryPage", value: number) {
+  function turnPage(key: "optionPage" | "sourcePage" | "detailPage" | "summaryPage", value: number) {
     setSession((previous) => ({ ...previous, [key]: value }));
     focusAnswer();
   }
@@ -124,9 +125,9 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch { setDownloadError(node.id); }
   }
-  function pager(page: number, count: number, key: "optionPage" | "detailPage" | "summaryPage", more: string) {
+  function pager(page: number, count: number, key: "optionPage" | "sourcePage" | "detailPage" | "summaryPage", more: string) {
     if (count < 2) return null;
-    return <nav className="guided-pager" aria-label={key === "optionPage" ? say("Option pages", "Shafukan zaɓi") : say("Answer pages", "Shafukan amsa")}>
+    return <nav className="guided-pager" aria-label={key === "optionPage" || key === "sourcePage" ? say("Option pages", "Shafukan zaɓi") : say("Answer pages", "Shafukan amsa")}>
       <button type="button" disabled={page === 0} onClick={() => turnPage(key, page - 1)}>{say("Previous", "Na baya")}</button>
       <span>{page + 1} / {count}</span>
       <button type="button" disabled={page >= count - 1} onClick={() => turnPage(key, page + 1)}>{more}</button>
@@ -134,7 +135,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
   }
 
   const heading = session.view === "sources" ? say("Sources", "Tushe") : session.view === "source" ? say("Source finding", "Bayanin tushe") : session.view === "details" ? say("Details", "Ƙarin bayani") : concise?.title[lang];
-  return <div className="chat-preview guided-workspace" lang={lang}>
+  return <div className="chat-preview guided-workspace" lang={lang} data-logo-cursor={session.logoCursor}>
     <a className="skip" href="#guided-answer">{say("Skip to questions", "Tsallaka zuwa tambayoyi")}</a>
     <header className="chat-header">
       <span className="chat-kicker">MOHAMMED ABBA ISA</span>
@@ -155,7 +156,9 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
             {node.id !== "women" && concise.items.length > 0 && <ul className="guided-facts">{concise.items.filter((item) => !node.id.startsWith("relationship:") || item.id.startsWith("limitations:")).map((item) => <li key={item.id}><span lang={item.originalLanguage}>{item.label[lang]}</span>{item.meta && <strong>{item.meta[lang]}</strong>}</li>)}</ul>}
             <div className="guided-options">{choices.items.map((option) => {
               const cohort = node.id === "women" ? concise.items[node.activityIds.indexOf(option.target.slice("activity:".length))] : null;
-              return <button type="button" key={option.id} data-target={option.target} onClick={() => choose(option.target)}><span>{cohort?.label[lang] ?? option.label[lang]}{cohort?.meta && <small>{cohort.meta[lang]}</small>}</span><span aria-hidden="true">→</span></button>;
+              const label = cohort?.label[lang] ?? (node.id === "programmes" ? option.description?.[lang] : null) ?? option.label[lang];
+              const figure = cohort?.meta?.[lang] ?? (node.id === "programmes" ? option.label[lang] : null);
+              return <button type="button" key={option.id} data-target={option.target} onClick={() => choose(option.target)}><span>{label}{figure && <small>{figure}</small>}</span><span aria-hidden="true">→</span></button>;
             })}</div>
             {pager(choices.page, choices.pageCount, "optionPage", say("More options", "Ƙarin zaɓi"))}
             {node.id !== "start" && <div className="guided-actions">
@@ -167,10 +170,11 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
               const entry = bundle.sources.find((value) => value.id === id);
               return entry ? <button type="button" key={id} data-source={id} onClick={() => show("source", id)}><span lang="en">{entry.title}</span><span aria-hidden="true">→</span></button> : null;
             })}</div>
-            {pager(sourceChoices.page, sourceChoices.pageCount, "optionPage", say("More sources", "Ƙarin tushe"))}
+            {pager(sourceChoices.page, sourceChoices.pageCount, "sourcePage", say("More sources", "Ƙarin tushe"))}
           </> : <>
             {session.view === "source" && source && <a className="guided-source-link" href={source.url} target="_blank" rel="noopener noreferrer"><span lang="en">{source.title}</span><span className="sr-only">{say(" (opens a new tab)", " (yana buɗe sabon shafi)")}</span> ↗</a>}
             {session.view === "source" && source && <p className="guided-meta">{source.publisher} · {source.date}</p>}
+            {session.view === "source" && source && !currentDetail && <p>{say("Open the original report above. No extract is stored for this report.", "Buɗe asalin rahoton da ke sama. Ba a adana wani rubutun wannan rahoto ba.")}</p>}
             {currentDetail && <div className="guided-detail" data-detail-page={detailIndex}>
               <h2>{session.view === "details" ? <span lang="en">{currentDetail.label}</span> : currentDetail.label}</h2>
               {currentDetail.quote ? <blockquote lang="en">{currentDetail.text}</blockquote> : <p lang={currentDetail.lang}>{currentDetail.text}</p>}
@@ -181,8 +185,18 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
           </>}
         </section>
       </section>
-      <p className="guided-draft">{say("Selected reports · Hausa draft", "Zaɓaɓɓun rahotanni · Hausa na gwaji")}</p>
+      <div className="guided-preferences">
+        <p className="guided-draft">{say("Selected reports · Hausa draft", "Zaɓaɓɓun rahotanni · Hausa na gwaji")}</p>
+        <label className="guided-cursor-control"><input type="checkbox" checked={session.logoCursor} onChange={(event) => {
+          const logoCursor = event.currentTarget.checked;
+          setSession((previous) => ({ ...previous, logoCursor }));
+        }} />{say("Logo cursor", "Alamar ofishi a siginan kwamfuta")}</label>
+      </div>
     </main>
-    <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{heading}. {session.view === "answer" ? `${summaryParts[summaryIndex] ?? ""} ${choices.page + 1}/${choices.pageCount}` : `${session.optionPage + session.detailPage + 1}`}</div>
+    <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{heading}. {session.view === "answer"
+      ? `${summaryParts[summaryIndex] ?? ""} ${choices.page + 1}/${choices.pageCount}`
+      : session.view === "sources" ? `${sourceChoices.page + 1}/${sourceChoices.pageCount}`
+      : currentDetail ? <><span>{detailIndex + 1}/{details.length}. {currentDetail.label}. </span><span lang={currentDetail.lang}>{currentDetail.text}</span></>
+      : <span lang="en">{source?.title}</span>}</div>
   </div>;
 }

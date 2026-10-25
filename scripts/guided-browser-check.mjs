@@ -73,6 +73,7 @@ async function openFirstSource() {
 try {
   await page.goto(`${base}/chat/`);
   await page.locator('#guided-answer[data-node="start"]').waitFor();
+  assert.equal(await page.locator('.guided-options > button').first().getAttribute('data-target'), 'programmes');
   assert.equal(await current().locator("p").count(), 0, "start should contain just the question and options");
   assert.equal(await page.locator(".guided-options button").count(), 3);
   const oldFirst = await page.locator(".guided-options button").first().getAttribute("data-target");
@@ -80,14 +81,28 @@ try {
   assert.equal(await page.locator(`.guided-options button[data-target="${oldFirst}"]`).count(), 0, "old options remained after replacement");
   await compact();
   await page.getByRole("button", { name: "Previous", exact: true }).click();
+  const colors = await page.locator('.guided-options > button').evaluateAll((buttons) => buttons.map((button) => ({ background: getComputedStyle(button).backgroundColor, color: getComputedStyle(button).color })));
+  assert.deepEqual(colors.map((entry) => entry.background), ['rgb(23, 83, 59)', 'rgb(255, 255, 255)', 'rgb(23, 83, 59)']);
+  assert.equal(colors[0].color, 'rgb(255, 255, 255)');
+  assert.ok((await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
+  assert.ok(!(await page.locator('.guided-workspace').evaluate((el) => getComputedStyle(el).cursor)).includes('/branding/ossap-cursor.jpg'));
+  const cursorSwitch = page.getByRole('checkbox', { name: 'Logo cursor', exact: true });
+  await cursorSwitch.uncheck();
+  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
+  await cursorSwitch.check();
   await audit("Minimal English start");
   await page.screenshot({ path: "output/playwright/chat-guided-desktop.png", fullPage: true });
   results.checks.push("Question-only start, three replacing choices per page, no sidebar, duplicate path, transcript or internal scroller");
+  results.checks.push('Activities/results lead the start; green/white/green choices have readable text; official local logo cursor is limited to links/buttons and can be disabled');
 
   await choose("women");
   assert.match(await current().innerText(), /45/); assert.match(await current().innerText(), /20/);
   assert.doesNotMatch(await current().innerText(), /\b65\b/);
   assert.match(await current().innerText(), /Do not add/);
+  await sources();
+  await page.locator('.guided-options button[data-source="3531"]').click();
+  assert.match(await current().innerText(), /45 women with disabilities/);
+  await back(); await back();
   await choose("activity:nigwed-skills-2024");
   await choose("measure:nigwed-skills-2024:trainees");
   assert.equal(await current().evaluate((el) => el === document.activeElement), true);
@@ -99,6 +114,7 @@ try {
   await page.locator('#guided-answer[data-node="measure:nigwed-skills-2024:trainees"]').waitFor();
   await sources(); const sourceId = await openFirstSource();
   const excerpt = await current().locator(".guided-detail p, .guided-detail blockquote").innerText();
+  assert.equal(await page.getByRole('status').locator('span[lang="en"]').textContent(), await current().locator('.guided-detail p, .guided-detail blockquote').textContent());
   const selectedEvidence = bundle.observations.find((o) => o.id === "nigwed-skills-2024:trainees").evidence.find((e) => (e.source_ids ?? [e.source_id]).includes(sourceId));
   assert.ok(selectedEvidence.text.includes(excerpt.trim()));
   assert.equal(await current().locator("blockquote").count(), selectedEvidence.kind === "exact-source-excerpt" ? 1 : 0);
@@ -111,6 +127,7 @@ try {
   const sourceParts = [];
   for (let part = 0; part < 64; part++) {
     sourceParts.push(await current().locator(".guided-detail p, .guided-detail blockquote").textContent());
+    assert.ok((await page.getByRole('status').textContent()).includes(sourceParts.at(-1)), 'source reader did not announce its new content');
     const more = page.getByRole("button", { name: "Continue", exact: true });
     if (!await more.isEnabled()) break;
     await more.click();
@@ -126,9 +143,18 @@ try {
   await page.locator('#guided-answer[data-node="activity:nigwed-skills-2024"]').waitFor();
   await page.goForward();
   await page.locator('#guided-answer[data-node="evidence:nigwed-skills-2024"]').waitFor();
+  assert.equal(await current().getAttribute('data-view'), 'sources');
+  await page.reload();
+  await page.locator('#guided-answer[data-node="evidence:nigwed-skills-2024"][data-view="sources"]').waitFor();
   results.checks.push("Separate women cohorts, keyboard Back/Next, branch replacement, browser history and selected source preserved across languages");
 
   await start(); await choose("programmes");
+  await page.getByRole('button', { name: 'More options', exact: true }).click();
+  const priorChoices = await page.locator('.guided-options button').evaluateAll((buttons) => buttons.map((button) => button.dataset.target));
+  await current().getByRole('button', { name: 'Details', exact: true }).click();
+  await back();
+  assert.deepEqual(await page.locator('.guided-options button').evaluateAll((buttons) => buttons.map((button) => button.dataset.target)), priorChoices, 'Details reset the option page');
+  const figureNames = new Map();
   for (const observation of bundle.observations) {
     await choose(`measure:${observation.id}`);
     assert.match(await current().innerText(), new RegExp(observation.value.toLocaleString("en-GB")));
@@ -147,6 +173,27 @@ try {
     await page.locator('#guided-answer[data-node="programmes"]').waitFor();
   }
   results.checks.push("All 11 numerical choices reachable through pagination; bounds, stages and units stay visible; full source links and receipt claims preserved");
+
+  const figurePages = page.getByRole('navigation', { name: 'Option pages', exact: true });
+  while (await figurePages.getByRole('button', { name: 'Previous', exact: true }).isEnabled()) await figurePages.getByRole('button', { name: 'Previous', exact: true }).click();
+  for (let index = 0; index < 10; index++) {
+    for (const button of await page.locator('.guided-options button').all()) figureNames.set(await button.getAttribute('data-target'), await button.innerText());
+    const more = figurePages.getByRole('button', { name: 'More options', exact: true });
+    if (!await more.isEnabled()) break;
+    await more.click();
+  }
+  const karuObservation = bundle.observations.find((observation) => observation.activity_id === 'karu-food-cash-2024' && observation.stage === 'reported-delivery');
+  const karuFigure = figureNames.get(`measure:${karuObservation.id}`);
+  const ramadanObservation = bundle.observations.find((observation) => observation.activity_id === 'ramadan-food-2024');
+  const ramadanFigure = figureNames.get(`measure:${ramadanObservation.id}`);
+  assert.ok(karuFigure && ramadanFigure && karuFigure !== ramadanFigure, 'same-value programme choices are indistinguishable');
+  assert.match(karuFigure, /Karu/i); assert.match(ramadanFigure, /Ramadan/i);
+  await start(); await choose('scope'); await sources();
+  await page.getByRole('button', { name: 'More sources', exact: true }).click();
+  const sourcePage = await page.locator('.guided-options button').evaluateAll((buttons) => buttons.map((button) => button.dataset.source));
+  await openFirstSource(); await back();
+  assert.deepEqual(await page.locator('.guided-options button').evaluateAll((buttons) => buttons.map((button) => button.dataset.source)), sourcePage, 'source reader reset the source list page');
+  results.checks.push('Option and source page positions survive detail viewing; equally sized figures identify their programme; summary sources contain stored findings; history restores source lists; reader changes announce meaningful content');
 
   await start(); await choose("timeline"); await choose("year:2024");
   assert.match(await current().innerText(), /10 activity records/);
@@ -182,6 +229,7 @@ try {
   await page.addStyleTag({ content: "html{font-size:200%!important}" });
   await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
   await compact();
+  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
   assert.equal(await page.getByRole("link", { name: "Hausa", exact: true }).getAttribute("aria-current"), "page");
   results.checks.push("Loaded choices work offline; ordinary English/Hausa phone steps fit without scrolling; 320px, 200% text and forced colours reflow without clipped content");
 

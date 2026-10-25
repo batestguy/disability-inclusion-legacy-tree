@@ -13,18 +13,21 @@ type GuidedSession = {
   cursor: number;
   view: "answer" | "sources" | "source" | "details";
   optionPage: number;
+  sourcePage: number;
   detailPage: number;
   summaryPage: number;
   sourceId: string | null;
+  logoCursor: boolean;
 };
 export const initialGuidedScreen = {
   view: "answer" as const,
   optionPage: 0,
+  sourcePage: 0,
   detailPage: 0,
   summaryPage: 0,
   sourceId: null,
 };
-const initial: GuidedSession = { path: ["start"], cursor: 0, ...initialGuidedScreen };
+const initial: GuidedSession = { path: ["start"], cursor: 0, logoCursor: true, ...initialGuidedScreen };
 const Context = createContext<{
   session: GuidedSession;
   setSession: Dispatch<SetStateAction<GuidedSession>>;

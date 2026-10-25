@@ -1,5 +1,27 @@
 # Project handoff
 
+## Resume here — review fixes, alternating options and OSSAP cursor
+
+Owner requested committing first, then criticism/improvements. Saved the complete
+validated data/chatbot checkpoint locally as `c95e8d5`; preserved the owner's two
+separate AGENTS.md edits. No push was requested. Read
+docs/CHATBOT_REVIEW_2026-10-25.md and the latest docs/VALIDATION.md entry.
+
+Root choices now prioritise Activities and reported results. Programme choices
+show concise activity identity plus figure/bound/stage/unit, rather than identical
+unnamed figures or long headlines. Visible choices alternate green/white/green.
+Separate option/source page state survives reader/detail visits; evidence hashes
+restore their source-list screen consistently. Summary routes resolve stored
+source extracts; reader announcements include text and correct language metadata.
+
+User clarified “quiz” means design questions, not a visitor quiz. The OSSAP logo
+cursor is optional, restricted to links/buttons on fine hovering pointers, with
+an off switch and standard touch/forced-colour/text fallbacks. The official site's
+32×32 icon is unchanged and served locally. Provenance/rights limits are recorded
+in content/ossap-cursor.json; public_approved remains false. No public reveal,
+model service, dependency or source-bundle change. Hausa remains draft. Continue
+with owner review, then the main dashboard; earlier presentation notes are history.
+
 ## Resume here — minimal replacing choices, 25 October 2026
 
 Owner rejected the verbose scrollable version. The current `/chat/` and

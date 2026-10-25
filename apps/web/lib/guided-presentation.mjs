@@ -66,3 +66,27 @@ export function splitText(text, max = 400) {
   if (current) segments.push(current);
   return segments;
 }
+
+/** Resolve stored evidence for a selected report without treating shared reporting as a new claim. */
+export function getSourceEvidence(bundle, node, sourceId) {
+  if (!node.sourceIds.includes(sourceId)) return [];
+  const direct = (node.evidence ?? []).filter((evidence) => evidence.sourceId === sourceId);
+  if (direct.length) return structuredClone(direct);
+  const activityIds = new Set([...node.activityIds, ...node.claims.flatMap((claim) => claim.activityIds)]);
+  const observationIds = new Set(node.claims.flatMap((claim) => claim.observationIds));
+  const scoped = [
+    ...bundle.observations.filter((observation) => observationIds.has(observation.id) || activityIds.has(observation.activity_id)),
+    ...bundle.activities.filter((activity) => activityIds.has(activity.id)),
+  ];
+  const fromRecords = (records) => records.flatMap((record) => record.evidence ?? [])
+    .filter((evidence) => (evidence.source_ids ?? [evidence.source_id]).includes(sourceId));
+  let candidates = fromRecords(scoped);
+  if (!candidates.length) candidates = fromRecords([...bundle.observations, ...bundle.activities]);
+  const unique = new Map();
+  for (const evidence of candidates) {
+    const entry = { sourceId, text: evidence.text, kind: evidence.kind, reportDate: evidence.report_date,
+      role: evidence.isa_role, limitations: evidence.limitations, dateBasis: evidence.date_basis };
+    unique.set(JSON.stringify(entry), entry);
+  }
+  return structuredClone([...unique.values()]);
+}

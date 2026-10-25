@@ -2,10 +2,30 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { getFlowNode } from "../apps/web/lib/guided-flow.mjs";
-import { getConciseAnswer, paginate, splitText } from "../apps/web/lib/guided-presentation.mjs";
+import { getConciseAnswer, getSourceEvidence, paginate, splitText } from "../apps/web/lib/guided-presentation.mjs";
 
 const bundle = JSON.parse(readFileSync(new URL("../content/dashboard/v1/bundle.json", import.meta.url)));
 const node = (id) => getFlowNode(bundle, id);
+
+test("women summary sources resolve stored cohort evidence with its exact role and qualifications", () => {
+  const women = node("women");
+  assert.equal(women.evidence, undefined);
+  const evidence = getSourceEvidence(bundle, women, "3531");
+  const original = bundle.observations.find((o) => o.id === "nigwed-skills-2024:trainees").evidence.find((e) => e.source_id === "3531");
+  assert.ok(evidence.some((e) => e.text === original.text && e.role === original.isa_role && e.limitations === original.limitations));
+  assert.ok(evidence.every((e) => e.sourceId === "3531"));
+  assert.deepEqual(getSourceEvidence(bundle, women, "not-a-selected-source"), []);
+});
+
+test("direct source evidence retains priority and returned evidence cannot mutate the frozen record", () => {
+  const measure = node("measure:nigwed-skills-2024:trainees");
+  const original = measure.evidence.filter((e) => e.sourceId === "3531");
+  const evidence = getSourceEvidence(bundle, measure, "3531");
+  assert.deepEqual(evidence, original);
+  evidence[0].text = "changed";
+  assert.deepEqual(measure.evidence.filter((e) => e.sourceId === "3531"), original);
+  assert.deepEqual(getSourceEvidence(bundle, { ...measure, sourceIds: ["no-stored-extract"], evidence: [] }, "no-stored-extract"), []);
+});
 
 test("all 162 reachable nodes have a valid bilingual concise reading surface", () => {
   const visited = new Set();

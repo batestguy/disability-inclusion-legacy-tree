@@ -44,9 +44,20 @@ const draftActivityTitles = {
   "supreme-court-congratulation-2023": "Saƙon siyasa na taya Shugaba Tinubu murna",
   "veterans-mou-2024": "Yarjejeniyar tallafin tsofaffin sojoji da aka ruwaito",
 };
-const activityTitle = (a) => bi(
-  // This target shares the Karu article headline; label its own activity scope.
-  a.id === "northeast-food-support-target-2024" ? "Planned Northeast food-support expansion" : a.title.en,
+const programmeTitles = {
+  "beyond-disability-coordination-2024": bi("Beyond Disability opportunity target", "Manufar damar Beyond Disability"),
+  "borno-employment-2024": bi("Borno employment placements", "Samun aikin yi a Borno"),
+  "inclusive-business-skills": bi("Business skills and startup support", "Ƙwarewar kasuwanci da tallafin fara sana’a"),
+  "nigwed-skills-2024": bi("NigWED training for women", "Horon NigWED ga mata"),
+  "ramadan-food-2024": bi("Ramadan food support", "Tallafin abincin Ramadan"),
+  "karu-food-cash-2024": bi("Karu food and cash support", "Tallafin abinci da kuɗi a Karu"),
+  "northeast-food-support-target-2024": bi("Planned Northeast food-support expansion", "Manufar tallafin abinci a Arewa maso Gabas"),
+  "ayubson-event-2025": bi("Ayubson celebration and support", "Bikin Ayubson da tallafi"),
+  "fha-stalls-2025": bi("FHA stall allotments", "Rabon rumfunan FHA"),
+  "startup-support-march-2024": bi("Startup support for women", "Tallafin fara sana’a ga mata"),
+};
+const activityTitle = (a) => programmeTitles[a.id] ?? bi(
+  a.title.en,
   a.title.ha ?? draftActivityTitles[a.id] ?? `Bayanin aiki: ${a.title.en} (Turanci na asali)`,
 );
 const activityStages = {
@@ -246,9 +257,9 @@ export function getFlowNode(bundle, nodeId = "start") {
   add("start", bi("Explore the record", "Bincika bayanan ayyuka"), bi("What would you like to explore?", "Me kake son bincikawa?"), {
     paragraphs: [bi("Choose a question to follow the checked records, figures and sources. Hausa wording is a draft for owner review.", "Zaɓi tambaya domin duba bayanai, lambobi da majiyoyi. Kalmomin Hausa na gwaji ne domin bitar mai aikin."), explain("scope")],
     options: [
-      option("women", bi("Support for women with disabilities", "Tallafi ga mata masu nakasa")),
-      option("programmes", bi("Programmes and reported figures", "Shirye-shirye da lambobin rahoto")),
+      option("programmes", bi("Activities and reported results", "Ayyuka da sakamakon da aka ruwaito")),
       option("timeline", bi("Explore by report year", "Bincika ta shekarar rahoto")),
+      option("women", bi("Support for women with disabilities", "Tallafi ga mata masu nakasa")),
       option("themes", bi("Themes and categories", "Jigogi da rukunoni")),
       option("connections", bi("People, organisations and connections", "Mutane, ƙungiyoyi da alaƙa")),
       option("scope", bi("Evidence and coverage limits", "Hujjoji da iyakokin bayanai")),

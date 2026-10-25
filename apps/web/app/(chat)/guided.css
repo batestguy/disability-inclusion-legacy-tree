@@ -12,10 +12,14 @@
 .guided-answer h1 { font: 2rem/1.15 Georgia, 'Times New Roman', serif; letter-spacing: -0.035em; margin: 0 0 1.3rem; }
 .guided-summary { font-size: 0.94rem; line-height: 1.65; white-space: pre-line; margin: 0 0 1rem; }
 .guided-options { display: grid; gap: 0.65rem; }
-.guided-options > button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 54px; padding: 0.8rem 1rem; text-align: left; background: #f3f7ed; border: 1px solid #c8d5bc; border-radius: 4px; font-size: 0.9rem; line-height: 1.45; }
-.guided-options > button:hover { background: #e8f0df; border-color: #859c70; }
+.guided-options > button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 54px; padding: 0.8rem 1rem; text-align: left; background: #ffffff; color: #173e2d; border: 1px solid #466f54; border-radius: 4px; font-size: 0.9rem; line-height: 1.45; }
+.guided-options > button:nth-child(odd) { background: #17533b; color: #ffffff; border-color: #17533b; }
+.guided-options > button:hover { background: #edf5e9; border-color: #234f35; }
+.guided-options > button:nth-child(odd):hover { background: #103e2c; border-color: #103e2c; }
+.guided-options > button:focus-visible { outline: 3px solid #987221; outline-offset: 3px; }
 .guided-options > button > span:last-child { flex-shrink: 0; }
 .guided-options small { display: block; font-size: 0.76rem; color: #485f40; margin-top: 0.25rem; }
+.guided-options > button:nth-child(odd) small { color: #ffffff; }
 .guided-pager { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 0.7rem; }
 .guided-pager > span { font-size: 0.72rem; color: #596b50; }
 .guided-actions { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 0.6rem; }
@@ -24,6 +28,9 @@
 .guided-facts li { margin: 0.6rem 0; }
 .guided-facts strong { display: block; font-weight: 600; }
 .guided-draft { margin: 0.7rem 0; color: #58674f; font-size: 0.72rem; text-align: center; }
+.guided-preferences { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 1rem; }
+.guided-cursor-control { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; color: #3e5a42; font-size: 0.72rem; }
+.guided-cursor-control input { width: 18px; height: 18px; accent-color: #17533b; }
 .guided-source-link { display: block; font-size: 0.9rem; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
 .guided-meta { color: #5d6c54; font-size: 0.75rem; margin: 0.6rem 0 1rem; }
 .guided-detail h2 { font-size: 0.8rem; font-weight: 600; margin: 1rem 0 0.6rem; }
@@ -39,8 +46,20 @@
   .guided-answer h1 { font-size: 1.65rem; margin-bottom: 1rem; }
   .guided-summary, .guided-detail p, .guided-detail blockquote { font-size: 0.88rem; line-height: 1.55; }
   .guided-options > button { font-size: 0.85rem; padding: 0.7rem 0.85rem; }
+  .guided-cursor-control { display: none; }
+}
+@media (hover: hover) and (pointer: fine) and (forced-colors: none) {
+  .guided-workspace[data-logo-cursor="true"] button:not(:disabled),
+  .guided-workspace[data-logo-cursor="true"] a {
+    cursor: url('/branding/ossap-cursor.jpg') 16 16, pointer;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .guided-cursor-control { display: none; }
 }
 @media (forced-colors: active) {
   .guided-conversation, .guided-options > button { border: 1px solid CanvasText; }
+  .guided-options > button:nth-child(n), .guided-options > button:nth-child(n):hover { background: Canvas; color: CanvasText; border-color: CanvasText; }
+  .guided-options > button:nth-child(n) small { color: CanvasText; }
   .guided-toolbar button:disabled, .guided-pager button:disabled { color: GrayText; opacity: 1; }
 }
