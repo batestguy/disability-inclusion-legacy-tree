@@ -276,6 +276,226 @@
       "reviewer": "Codex full-source relevance review",
       "reviewed_at": "2026-10-24",
       "batch_id": "phase-1-batch-002"
+    },
+    {
+      "source_id": 2352,
+      "text_sha256": "ea3f9c0f2771e76d3d72c4c74053192f84363ecd199ffa2fb3f1620f87ea763e",
+      "source_url": "https://ossaposneo.org/ramadan-ssap-abba-isa-distributes-food-palliatives-to-over-500-pwds/",
+      "report_date": "2024-03-14T07:52:39",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 2790,
+      "text_sha256": "6c69e7a0e14d9d4f7f75fda3bcf43cdca0c2ddfe2ac1b5e2be9ac1c6fe0486ea",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-flags-off-distribution-of-food-palliatives-cash-support-to-over-500-pwds-5/",
+      "report_date": "2024-05-24T07:20:11",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 4860,
+      "text_sha256": "c2331fd98ad022c0006917f16526ac5befea5da69a5b5d5c336333b7549cd1a4",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-partners-ayubson-life-foundation-to-celebrate-inspire-and-empower-over-50-pwds/",
+      "report_date": "2025-02-10T09:50:14",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5105,
+      "text_sha256": "d02be143813b912dfee6f13b6a9f2aee72a2da6378f0c9e30fcd60bad0dace2c",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-tasks-mdas-on-inclusive-policy-as-fha-mortgage-bank-allots-stalls-to-three-pwds/",
+      "report_date": "2025-05-16T12:39:51",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 2279,
+      "text_sha256": "4bdc1592db2ce2533787c7aee4194e18ada20d9537187a87de9e8c43dbde5262",
+      "source_url": "https://ossaposneo.org/iwd-2024-ssap-hon-abba-isa-empowers-over-20-pwd-women-with-pos-start-up-kits/",
+      "report_date": "2024-03-09T09:32:10",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 3531,
+      "text_sha256": "34af164ce97df7efc42794afedffc989f41eff3813b3f1b3d866b9d5f8c5fec7",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+      "report_date": "2024-07-19T18:45:42",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 1801,
+      "text_sha256": "a40074055d446f0b3e0012f5d0759146e0fbb517391badfc3dd734ba57a48944",
+      "source_url": "https://ossaposneo.org/ssap-hon-abba-isa-commends-dg-smedan-for-implementing-5-pwd-inclusion-in-empowerment-program/",
+      "report_date": "2024-01-28T16:11:10",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 4243,
+      "text_sha256": "de32f1b730877485718ceff99152ba536e90119cdd45fe85a57f34f4a5c90172",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-african-unconquered-foundation-sign-historic-mou-to-empower-wounded-veterans/",
+      "report_date": "2024-11-06T14:21:05",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 4252,
+      "text_sha256": "f0677bd109dc946fbfc1a15a1a4f7f39811680c82823bb25d2aefcb52742fffe",
+      "source_url": "https://ossaposneo.org/one-year-in-office-ssap-abba-isa-showcases-remarkable-catalogue-of-extraordinary-achievements/",
+      "report_date": "2024-11-09T14:19:55",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 4881,
+      "text_sha256": "0f2b943f492235b544b60ab9fb1c2afd359416d84392240d6b77a405901c5aa4",
+      "source_url": "https://ossaposneo.org/ramadan-ssap-abba-isa-partners-with-smedan-to-support-fct-school-of-the-blind-with-food-and-cash/",
+      "report_date": "2025-03-01T19:57:51",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5151,
+      "text_sha256": "f998821367f23d476f9644f5033480314d04ae14954ef486a15ce84ad5690a32",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-launches-disability-readiness-toolkit-developed-by-deaf-in-tech-and-datalead-africa/",
+      "report_date": "2025-05-22T09:34:26",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5197,
+      "text_sha256": "a39232213c79f383e072efd531495db2aea0b426d225f8f34a42a90814c9b12d",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-flags-off-inaugural-tinubu-shettima-para-soccer-unity-cup/",
+      "report_date": "2025-05-23T09:11:48",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5255,
+      "text_sha256": "b95cf407de25a4b9b9c55d9c81ae98940490d73b4b1f426ae38d0196eb15eaa5",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-tasks-stakeholders-to-bridge-digital-divide-for-persons-with-disabilities/",
+      "report_date": "2025-06-24T18:11:53",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5274,
+      "text_sha256": "3c90cfedbf3f7250d0c315faa022c8e0f8a1446e68f3a6c8ac1492430efb2a95",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-unveils-2024-state-of-disability-inclusion-report/",
+      "report_date": "2025-07-26T19:35:10",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5278,
+      "text_sha256": "b31afd6f2621a87975e9e69c3720a311ece7ed34ac5740e9bc8d661423543ab6",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-joins-president-tinubu-other-dignitaries-at-maiden-progressive-digital-media-summit/",
+      "report_date": "2025-08-04T20:38:13",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5288,
+      "text_sha256": "ce3a00257aab8122cc006819ca90aedda6fb6e76bbf941b9757cab31cbc2b1ff",
+      "source_url": "https://ossaposneo.org/ssap-abba-isa-nigerian-red-cross-strike-partnership-on-emergency-response-for-persons-with-disabilities/",
+      "report_date": "2025-08-09T21:20:32",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5311,
+      "text_sha256": "65d31aafe9580e4437a09b50e0f5acf39e59d3b480566045bff6c1c6b2550ebc",
+      "source_url": "https://ossaposneo.org/fg-to-establish-medical-rehabilitation-centres-nationwide-for-spinal-cord-injuries/",
+      "report_date": "2025-09-06T14:46:42",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5420,
+      "text_sha256": "97dfefa0de93aef6282ccdc6ced60a3e28ef9471599488b9fd79209eb6029b79",
+      "source_url": "https://ossaposneo.org/hope-renewed-as-tinubus-aide-abba-isa-unveils-nigerias-first-accessibility-adapted-vehicle/",
+      "report_date": "2026-02-22T08:03:03",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5709,
+      "text_sha256": "5b15f2ea82edba0c3b9f38cedadf947d511dee7d9411821a2959b6dbfaaadb0f",
+      "source_url": "https://ossaposneo.org/presidential-aide-abba-isa-elected-president-of-para-volley-federation-of-nigeria/",
+      "report_date": "2026-07-01T18:34:38",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "source_id": 5803,
+      "text_sha256": "5b83b7636fe94a1d08cf695a81b3833e4220acf5d20b5260f2aa999ceb479a7e",
+      "source_url": "https://ossaposneo.org/npvf-moves-to-reposition-south-west-zone-resolves-disputes-ahead-of-la-2028-paralympics/",
+      "report_date": "2026-07-21T11:13:18",
+      "relevance": "include-isa-reporting",
+      "reason": "Full-source subject relevance and category review for the selected Phase 2 corpus; quantitative claims outside accepted observations remain unapproved.",
+      "reviewer": "Codex Phase 2 source review",
+      "reviewed_at": "2026-10-24",
+      "batch_id": "phase-2-reviewed-subset"
     }
   ]
 }

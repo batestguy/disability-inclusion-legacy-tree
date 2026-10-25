@@ -1,0 +1,23 @@
+{
+  "artifacts_sha256": {
+    "activities.csv": "399a10dd941806d0a39cb004974b661e92787fb47cc29d25ece8de3bdea80045",
+    "bundle.json": "166d42785cf3a12256c0207399d3d6cd5c4facaa0d7a75116a0feb181ea62db2",
+    "observations.csv": "46d435f6189a41d5325329df415db4022083c5386cd7708f4af114fcbe10b97a"
+  },
+  "bundle_sha256": "166d42785cf3a12256c0207399d3d6cd5c4facaa0d7a75116a0feb181ea62db2",
+  "dataset_date": "2026-10-24",
+  "dataset_version": "v1",
+  "input_hash_basis": "Canonical JSON values; builder source decoded as UTF-8 with LF newlines",
+  "inputs_sha256": {
+    "activities": "cbc6ab1e82dfe3bd25f69fe2ef3a8e7b527cde891135be5ed9fa54291b421632",
+    "analysis": "5565077cf19363802d7d8d512ef52e3e4cebe9a03cf5bfd68b3a60b41ace4626",
+    "articles": "2951f07415d74674dfb5952b3731c5035dca32d205732ae531685d9b9e751577",
+    "builder": "38ff97a8863d73dc094bc4b818ed628103554779ad14a37251ab7fc52a4ef107",
+    "contributions": "2fb9724c328851a5e3a28bb409255e8aaf232d060e7a6b81d1c5205a69601314",
+    "observations": "f86d63335112040e58c1dd437d58c50b169db913b10ad1483410bc99edda761e",
+    "records": "ed5f4c78ff6013aeee2603f2928dafc116fdeb4ca3ed1497cbee75f2dc7ba9ac",
+    "review": "4a8356022a55b8012ffc54fff0f8521956fc5148cf805e65f8168df74a736cde"
+  },
+  "schema_version": 1,
+  "status": "reviewed-subset-preview-not-public-approved"
+}

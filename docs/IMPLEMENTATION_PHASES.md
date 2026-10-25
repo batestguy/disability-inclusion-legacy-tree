@@ -1,9 +1,18 @@
 # The Work in Numbers — phased implementation
 
-Updated 24 October 2026. This is the execution checklist for the owner's accepted
+Updated 25 October 2026. This is the execution checklist for the owner's accepted
 dashboard plan. [PROJECT_PLAN.md](../PROJECT_PLAN.md) retains the decisions and
 historical record; [DASHBOARD_ANALYSIS.md](DASHBOARD_ANALYSIS.md) records current
 research findings. Start continuations with [HANDOFF.md](../HANDOFF.md).
+
+Latest checkpoint, 25 October: standalone guided conversation is implemented at
+`/chat/` and `/ha/chat/` before Phase 4. The owner rejected the cluttered scrollable
+panel. Use one concise answer with three replacing choices, paged source/details
+screens and Back/Next/Start again. See [GUIDED_CHAT_IMPLEMENTATION.md](GUIDED_CHAT_IMPLEMENTATION.md)
+and the newest [VALIDATION.md](VALIDATION.md) entry. Review this experience before
+integrating the main dashboard. This supersedes the earlier free-text-first and
+hosted-planner proposals; the legacy failed audit remains preserved. Hausa remains
+draft, and no outside hiring/sign-off is required to continue local development.
 
 ## Working agreement
 
@@ -13,8 +22,10 @@ to classify passages, clean data or run commands. Record progress and validation
 before moving on. Routine in-scope work needs no repeated permission. A milestone
 review concerns actual results, not approval of an abstract plan.
 
-No first-milestone approval or release readiness is currently established. The
-public app still shows the earlier tribute. Preserve the original briefs, existing
+The owner accepted the Phase 1 checkpoint and authorized progression to Phase 2
+on 24 October. The numerical backlog remains explicitly unfinished; that accepted
+transition must not be reversed into a new prerequisite for beginning the chatbot.
+Public reveal readiness is not established. Preserve the original briefs, existing
 source/activity IDs, achievement URLs, user changes and release gates.
 
 ## Phase 0 — verify the working environment
@@ -61,7 +72,7 @@ Environment follow-ups:
 
 ## Phase 1 — finish source and numerical review
 
-**Status: active; batches 001–002 complete, overall phase incomplete.**
+**Status: owner-accepted checkpoint for progression; remaining review deferred.**
 
 Current baseline: 2,869 passages = 142 recorded source-context decisions + 146
 exact repeats linked to reviewed originals + 1,114 unlinked automatic exact
@@ -98,56 +109,77 @@ decisions from those still awaiting canonical review. A linked copy preserves
 any original hold and creates no new observation or independent corroboration.
 Unlinked automatic repeats are not counted as completed editorial review.
 
-**Immediate next step:** review the next source-context batch after batch 002, save
-its decisions and publish the revised accounting in this document. No owner
-classification or new credentials are needed for that step.
+The owner instructed moving on after batch 002. Keep the remaining review queue
+as an honest coverage limitation; do not require another owner approval to start
+the next engineering phase. Future source expansion can continue from batch 003.
 
 ## Phase 2 — finish analysis and freeze reviewed data
 
-**Status: exploratory NMF exists; reviewed analysis remains pending.**
+**Status: reviewed-subset v1 complete; findings in [PHASE2_FINDINGS.md](PHASE2_FINDINGS.md).**
 
-- [ ] Review multilabel categories: policy/accessibility; livelihoods;
+- [x] Review multilabel categories for the selected corpus: policy/accessibility; livelihoods;
   education/training; healthcare/welfare; digital/assistive technology; sport;
   political engagement; honours/ceremonial activity.
-- [ ] Select the relevant corpus after the source pass, reconcile near duplicates,
+- [x] Select a reviewed subset (31 source records/30 distinct texts), reconcile exact duplicates and screen near duplicates,
   document exclusions, and rerun the eight-topic TF-IDF/NMF model with seed 42.
-- [ ] Save preprocessing, environment, corpus hashes, model arrays, representative
+- [x] Save preprocessing, environment, corpus hashes, model arrays, representative
   articles and meaningful topic labels. Source-check representative findings.
-- [ ] Review people, organisations, places, aliases and spelling variants.
-- [ ] Build article-supported co-occurrence separately from documented partnerships.
-- [ ] Calculate publication-period category/topic views with visible denominators.
-- [ ] Produce a versioned compact public bundle and exports containing only
+- [x] Review a 46-entity catalogue of people, organisations, places and aliases.
+- [x] Build article-supported co-occurrence separately from evidenced cooperation/agreements.
+- [x] Calculate publication-period category/topic views with visible denominators.
+- [x] Produce a versioned compact preview bundle and exports containing only
   reviewed activities, observations, citations, short excerpts and analysis results.
   Keep full articles and editorial working files outside the static export.
-- [ ] Propose headline figures after review, with targets separate from delivery.
+- [x] Propose programme-specific headline figures from checked records, with targets separate from delivery.
 
-**Milestone 1 — owner reviews:** complete review accounting, accepted figures,
-exclusions/holds, coverage, representative NLP findings and proposed story/emphasis.
-The current research packet is partial and does not satisfy this milestone.
+**Milestone 1 — findings packet:** PHASE2_FINDINGS.md shows figures, coverage,
+exclusions/holds, representative NLP and proposed emphasis. The owner accepted
+progressing from the Phase 1 checkpoint with the incomplete archive review retained.
+This preview uses a checked subset; do not imply a full-career or representative
+archive distribution, independent verification or final public approval.
 
 ## Phase 3 — build and validate the standalone chatbot
 
-**Status: not implemented.** Read [CHATBOT_SPEC.md](CHATBOT_SPEC.md) first.
+**Status: prototype implemented; broad conversational audit failed.** Existing
+automated fixtures pass, but the owner-requested independent fifty-question audit
+fully answered 0/34 answerable questions. See
+[CHATBOT_ACCURACY_AUDIT.md](CHATBOT_ACCURACY_AUDIT.md). Do not treat milestone 2
+as validated for ordinary conversation.
+Standalone previews: `/chat/` and `/ha/chat/`. Read
+[PHASE3_IMPLEMENTATION.md](PHASE3_IMPLEMENTATION.md) for scope and limits.
+Read [CHATBOT_SPEC.md](CHATBOT_SPEC.md) first.
+Use content/dashboard/v1/bundle.json and its manifest as the data contract.
 
-- [ ] Define typed query plans and a shared calculation/filter layer, then test
+- [x] Define typed query plans and a shared calculation/filter layer, then test
   figures, activities, dates, programmes, targets/delivery, themes, keywords,
   organisations, places, connections and method explanations.
-- [ ] Implement natural English/Hausa templates, composer, suggestions, follow-ups,
+- [x] Implement draft English/Hausa templates, composer, suggestions, follow-ups,
   targeted clarifications, unsupported responses, evidence and “Show these records”.
-- [ ] Use the page locale as the only language source. Always display
+- [x] Use the page locale as the only language source. Always display
   **Change language / Canja harshe**, with **English above Hausa**, vertically
   stacked and visible without a menu, on desktop and mobile.
-- [ ] Preserve compatible filters, conversation context and draft input on language
+- [x] Preserve compatible filters, conversation context and draft input on language
   changes and browser navigation. Keep conversation state in the current browser
   session; add no server question logging or inference API.
-- [ ] Test bilingual structured-answer/source equivalence, ambiguous and misleading
+- [x] Test bilingual structured-answer/source equivalence, ambiguous and misleading
   questions, bounds, dates, attribution, targets and overlap safeguards.
-- [ ] Check keyboard use, mobile reflow, status announcements, long transcripts,
+- [x] Check keyboard use, mobile reflow, status announcements, long transcripts,
   error/empty states and language switching. Mark Hausa wording as draft.
 
 **Milestone 2 — owner reviews:** a working standalone bilingual chatbot with
 numerical answers, follow-ups, clarification, NLP explanations and evidence actions.
 Human Hausa approval remains required before public reveal.
+
+- [ ] Improve evidence-driven intent/scope selection, natural paraphrases and
+  relevant clarification while preserving claim/numerical checks; validate on a
+  new unseen bilingual sample. The exposed fifty are regression material now.
+
+Controlled support covers activity/report-year counts and lists; five named
+programme figures; keyword records; category/topic/organisation/place/relationship
+catalogues; and methodology/coverage explanations. Arbitrary theme/network
+arithmetic, all observation-specific questions and unrestricted language remain
+outside the implemented catalogue. Automated validation is not fluent-human Hausa
+or screen-reader approval. Refresh deliberately starts a new in-memory session.
 
 ## Phase 4 — build the coordinated visual dashboard
 
@@ -195,6 +227,11 @@ filters, evidence, connections and portrait/monogram treatment on desktop/mobile
 
 **Status: pending.**
 
+The accepted Phase 1 transition permits engineering to continue. It does not
+silently waive the original numerical/evidence release criteria. Complete the
+backlog before claiming archive-wide review or explicitly record any later
+owner-approved change to the final published scope.
+
 - [ ] Run preflight, lint, typecheck, tests, both builds and source/analysis audits.
 - [ ] Run browser flows, automated accessibility checks and fresh performance
   measurements against the actual candidate, including offline flows.
@@ -225,6 +262,14 @@ owner review and all existing content/accessibility/performance/hosting gates.
   on the actual URL. Do not bypass `RELEASE_MODE=public` checks.
 
 ## Progress log
+
+- 24 October, owner-approved Phase 1 transition: proceeded to Phase 2 with the
+  archive backlog visible. Created content/dashboard/v1 with 33 activity records,
+  11 observations (eight delivery reports/three targets), 37 citations, 30 model
+  documents, eight reviewed categories/topics, 46 entities and nine evidenced
+  relationships separate from 257 co-occurrence edges. Scientific environment
+  remains pinned; model/exports reproduce. Hausa draft packet prepared. Next is
+  the standalone chatbot, not another mandatory Phase 1 review batch.
 
 - 24 October, owner steering: the dashboard is the focus; the owner no longer
   wants the tree presented as current progress. Continue the agreed data-first

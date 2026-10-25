@@ -1,0 +1,101 @@
+﻿"id","lang","question","expected","actual","verdict","issues","reply"
+"ha-20","ha","Me aka sani game da yarjejeniyar African Unconquered kan tsoffin sojoji?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-02","en","How many records have a 2025 report date?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: report-not-event","Please specify a supported report-year filter, or use “find:” for a keyword lookup.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-11","en","How many PWD beneficiaries received the FHA stall-allotment documents?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-08","en","What household target was given for the Karu support scheme?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-22","en","What did he do that year?","clarify","clarification","correct-handling","","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-29","en","How many deaf women aged 18 to 25 got the March POS kits?","unsupported","unsupported","correct-handling","","That demographic subgroup is not established by this programme’s measurement. I cannot substitute a narrower population for the reported cohort.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-13","ha","Wace shekara aka wallafa rahoton?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: report-not-event","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-14","en","And the year of that report?","answer","answered","incorrect-answer-or-interpretation","intent: expected report-year, got measurement","SMEDAN: 5 people reportedly supported.
+Office facilitated inclusion, according to an office statement. Training and kits concern one cohort, not two beneficiary totals. Subsequent income and employment were not measured. Publication/report dates do not establish exact event dates. Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-24","ha","Su waye suka yi shi?","clarify","clarification","correct-handling","","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-01","ha","Akwai ayyuka nawa a wannan jerin da aka duba?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-23","en","How much was the support?","clarify","clarification","correct-handling","","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-30","en","List the confirmed jobs he will deliver in 2027, with employers and salaries.","unsupported","clarification","wrong-disposition-or-explanation","disposition: expected unsupported, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-04","ha","Mutane nawa ne aka ce sun samu aikin gwamnati a Borno?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-29","ha","Mata masu nakasar ji daga Kano nawa suka samu tallafin Maris?","unsupported","clarification","wrong-disposition-or-explanation","disposition: expected unsupported, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-06","en","Those 36,551 Beyond Disability jobs are already filled, right?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Please specify a supported report-year filter, or use “find:” for a keyword lookup.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-21","ha","Mutane nawa aka taimaka a shirin nan?","clarify","clarification","correct-handling","","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-17","ha","Wane bayani ne game da taron para-volleyball a Lagos?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-15","en","Who actually developed the disability-readiness toolkit he unveiled?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-26","en","How many took part in SMEDAN or NigWED? I only want one number.","clarify","clarification","correct-handling","","Which programme do you mean? Please ask about one programme at a time.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-05","en","Nigwed trainning, was it only 45 women?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Please specify a supported report-year filter, or use “find:” for a keyword lookup.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-28","en","What was the average monthly income increase for NigWED graduates?","unsupported","unsupported","correct-handling","","These reports do not establish causal impact, income changes or sole attribution. They describe reported activities and claims.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-10","ha","Wane taimako ya yi wa mata masu nakasa?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: overlap-no-total","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-22","ha","A waccan shekarar fa?","clarify","clarification","correct-handling","","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-23","ha","Nawa ne tallafin?","clarify","clarification","correct-handling","","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-21","en","How many people did that programme support?","clarify","clarification","correct-handling","","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-10","en","Can you explain the support he has offered women living with disabilities?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: overlap-no-total","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-09","ha","Game da Arewa maso Gabas, kusan mutane nawa aka sa a gaba don tallafin abinci?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-16","ha","Shin Isa ne ya bayar da kayan taimako na ECOWAS ga NCPWD?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-19","en","Do the House committee articles numbered 1243 and 1245 mean two visits?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-30","ha","Da kashi nawa shirinsa ya rage talauci a Najeriya?","unsupported","unsupported","correct-handling","","Wadannan rahotanni ba su tabbatar da tasirin sanadi, canjin kudin shiga ko gudummawar mutum daya tak ba. Suna bayyana ayyuka da ikirarin da aka ruwaito.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-18","ha","Jigon mata da lafiya yana nufin duk rahotannin cikinsa na mata ne?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: text-not-impact","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-20","en","If two organisations appear together in the network, does that prove a partnership?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: cooccurrence-not-partnership","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-14","ha","Me aka ruwaito ya yi wa makarantar makafi ta FCT tare da SMEDAN?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-17","en","What areas of work do the reviewed categories cover?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-13","en","How many PWDs did the Ramadan food report say received palliatives?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-16","en","Is there a reviewed record connected to Lagos?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-06","ha","An gama samar da ayyukan yi 36,551 na Beyond Disability kenan?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-26","ha","Ina so a bani adadin SMEDAN ko na NigWED, guda daya kawai.","clarify","clarification","correct-handling","","Wane shiri kake nufi? Tambayi shiri guda daya a lokaci daya.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-07","ha","A Karu, mutane nawa suka karbi shinkafa da tallafin kudi a rahoton?","answer","unsupported","excessive-refusal","disposition: expected answered, got unsupported","Wannan samfuri bai tabbatar da jimillar kudi ba. Yawan masu karba ba ya nuna kudin da aka kashe.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-03","ha","SMEDAN fa, participants nawa aka tallafa?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-05","ha","Matan NigWED guda 45 ne kacal aka horas?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-28","ha","Nawa kudin shigar matan NigWED ya karu bayan horon?","unsupported","clarification","wrong-disposition-or-explanation","disposition: expected unsupported, got clarification","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-12","en","About that Ayubson celebration in Abuja, what participation figure is sourced?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-18","en","How did you get the eight topics, and do they measure his impact?","answer","unsupported","excessive-refusal","disposition: expected answered, got unsupported; required meaning not recognised: text-not-impact","These reports do not establish causal impact, income changes or sole attribution. They describe reported activities and claims.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-02","ha","Rahotannin shekarar 2024 sun kunshi ayyuka nawa a jerin?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification; required meaning not recognised: report-not-event","Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-24","en","Which one was bigger?","clarify","clarification","correct-handling","","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"ha-15","ha","Kyautar LEEX guda biyar ya samu ne a 2023?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"ha-08","ha","Shirin Karu ya yi nufin tallafa wa gidaje nawa?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”.
+Zababben samfuri ne, ba cikakken tarihin aiki ba. Fassarar Hausa daftari ce mai jiran bitar mutum."
+"en-09","en","Was the Northeast expansion aiming for exactly a thousand recipients?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Try a documented activity count, a named programme, or “find: SMEDAN”.
+Selected preview, not a complete career account. Office reporting is not independent verification."
+"en-01","en","How big is the reviewed activity list now?","answer","clarification","unnecessary-clarification","disposition: expected answered, got clarification","Please specify a supported report-year filter, or use “find:” for a keyword lookup.
+Selected preview, not a complete career account. Office reporting is not independent verification."

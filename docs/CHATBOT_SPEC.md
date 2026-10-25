@@ -1,5 +1,59 @@
 # Bilingual dashboard chatbot specification
 
+## Latest presentation correction — 25 October 2026
+
+The owner rejected internal scrolling and unnecessary explanatory material.
+Use one concise question/answer with up to three replacing choices. Page option
+sets with Previous / More options. Remove the introduction/sidebar, duplicate
+navigation, statistics and routine evidence dumps. Sources and Details replace
+the screen only when chosen; long source text/metadata are paged, not expanded.
+Keep material bounds, stages and attribution qualifications, English/Hausa
+synchronisation and truthful draft status. This supersedes the scrollable-panel
+presentation below. See GUIDED_CHAT_IMPLEMENTATION.md for the current contract.
+
+## Latest owner direction — compact guided chatbot, 25 October 2026
+
+The main flow is now clickable questions, answers and useful follow-up choices,
+leading to source findings. See [GUIDED_CHAT_IMPLEMENTATION.md](GUIDED_CHAT_IMPLEMENTATION.md).
+Build this standalone component before the main dashboard. Each click replaces
+the current step inside a stable-height, scrollable panel. Back/Next retrace
+visited steps, a new choice clears forward steps, and Start again resets the
+path. English/Hausa share one visible control and preserve the current step.
+This supersedes free-text-first/transcript requirements below. Hausa stays draft;
+no hiring or outside sign-off is required for continuing development. Existing
+approval flags and release gates must remain truthful. The legacy parser and
+its failed audit remain preserved; graph coverage is not language accuracy.
+
+## Current quality audit — supersedes readiness wording below
+
+25 October: the independently authored fifty-question audit fully answered none
+of 34 evidence-answerable questions. Five total replies gave useful complete
+handling, plus one partial. All fifty browser replies matched the engine. The
+interface and narrow fixtures work, but ordinary conversational quality is not
+validated. See [CHATBOT_ACCURACY_AUDIT.md](CHATBOT_ACCURACY_AUDIT.md). Improve
+question understanding and retest on fresh unseen questions; preserve the baseline.
+
+## Implementation checkpoint — 25 October 2026
+
+The standalone component is now implemented at `/chat/` and `/ha/chat/` using
+the reviewed-subset v1 bundle. [PHASE3_IMPLEMENTATION.md](PHASE3_IMPLEMENTATION.md)
+records its supported catalogue, privacy, locale behaviour and limits;
+[VALIDATION.md](VALIDATION.md) records actual checks. Earlier status text below
+is historical specification context, not the current implementation status.
+
+Owner-feedback update: the natural question “what has he done for disabled women?”
+and Hausa equivalents now yield a source-bound two-programme summary, with no
+combined unique-person total. This replaces its earlier generic clarification;
+other unsupported questions still clarify. Hausa summary wording remains draft.
+
+The active inventory is 33 distinct reviewed-subset activities; six-activity
+examples below refer to the old starter ledger. Direct numerical query support
+currently covers five named programmes. Other activity evidence is available via
+lists and literal keyword lookups. No unrestricted model parser is provided.
+Hausa chrome/templates remain drafts, with human sign-off pending in
+[phase3-hausa-review.md](../research/phase3-hausa-review.md). Dashboard integration,
+human reviews, full offline use and public reveal remain pending.
+
 Updated 22 October 2026. This is the continuation source of truth for the owner's chatbot and language-control requirements. Read with [HANDOFF.md](../HANDOFF.md), [PROJECT_PLAN.md](../PROJECT_PLAN.md), [CONTRIBUTION_METRICS.md](CONTRIBUTION_METRICS.md) and [NUMERICAL_QA_REVIEW.md](NUMERICAL_QA_REVIEW.md).
 
 ## Status and decision precedence

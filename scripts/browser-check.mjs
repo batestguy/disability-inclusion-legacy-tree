@@ -131,7 +131,7 @@ try {
     "branches expand into connected stories, retain state and restore focus",
   );
   const languages = page.getByRole("group", {
-    name: "Choose your language / Zabi yare",
+    name: "Change language / Canja harshe",
   });
   await languages.getByRole("link", { name: /English/ }).waitFor();
   await languages.getByRole("link", { name: "Hausa", exact: true }).waitFor();

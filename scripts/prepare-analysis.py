@@ -125,18 +125,31 @@ def review_complete(queue):
     return bool(queue) and all(q["decision_status"] in {"reviewed", "linked-exact-repeat"} for q in queue)
 
 
-def clean_corpus(articles):
+def is_author_line(line):
+    parts = line.strip().split()
+    if not parts or parts[0].casefold() != "by":
+        return False
+    author = parts[1:]
+    if " ".join(author).casefold() in {"our correspondent", "reporter"}:
+        return True
+    return 2 <= len(author) <= 6 and all(
+        token[0].isupper() and all(ch.isalpha() or ch in "'.’-" for ch in token)
+        for token in author)
+
+
+def clean_corpus(articles, reviewed_removed_lines=()):
     # Drop bylines and exact repeated short lines, preserving original archive.
     # Long shared narratives remain: repetition alone does not prove boilerplate.
     counts = Counter(line.strip().lower() for a in articles
                      for line in set(a["text"].splitlines()) if line.strip())
-    boilerplate = sorted(line for line, count in counts.items()
-                         if count >= 8 and len(line) < 180)
+    boilerplate = sorted({line for line, count in counts.items()
+                          if count >= 8 and len(line) < 180} |
+                         {line.strip().lower() for line in reviewed_removed_lines})
     cleaned = []
     for article in articles:
         lines = [line for line in article["text"].splitlines()
                  if line.strip().lower() not in boilerplate
-                 and not re.match(r"^\s*by\s+", line, re.I)]
+                 and not is_author_line(line)]
         cleaned.append("\n".join(lines).lower())
     return cleaned, boilerplate
 
@@ -235,7 +248,7 @@ def validate_activities(articles, source_decisions, activities):
     return activities
 
 
-def analyse(articles, folder):
+def analyse(articles, folder, extra_stop_words=(), reviewed_removed_lines=()):
     import numpy as np
     import scipy
     import sklearn
@@ -245,9 +258,9 @@ def analyse(articles, folder):
     unique, mapping = canonical_sources(articles)
     # Pages are retained in inventory but excluded from publication-period NLP.
     corpus = [a for a in unique if a["source_type"] == "posts"]
-    texts, boilerplate = clean_corpus(corpus)
+    texts, boilerplate = clean_corpus(corpus, reviewed_removed_lines)
     subject_tokens = {"mohammed", "muhammed", "mohammad", "muhammad", "abba", "isa", "hon", "honourable", "honorable", "ssap", "ossap", "sneo", "ossapsneo"}
-    vectorizer = TfidfVectorizer(stop_words=sorted(set(ENGLISH_STOP_WORDS) | subject_tokens),
+    vectorizer = TfidfVectorizer(stop_words=sorted(set(ENGLISH_STOP_WORDS) | subject_tokens | set(extra_stop_words)),
                                  ngram_range=(1, 2), min_df=3, max_df=.85,
                                  sublinear_tf=True, max_features=12000,
                                  token_pattern=r"(?u)\b[a-z][a-z]+\b")

@@ -1,0 +1,1086 @@
+{
+  "schema_version": 1,
+  "dataset_date": "2026-10-24",
+  "scope": "Reviewed selected-source preview: 31 source records / 30 distinct texts, not the full archive or a representative career sample. Owner accepted Phase 1 checkpoint to advance; full numerical review remains incomplete. English-source NLP; Hausa explanations are drafts.",
+  "owner_accepted_phase_1_checkpoint": true,
+  "owner_approved_public_release": false,
+  "category_labels": {
+    "policy-accessibility": {
+      "en": "Policy & accessibility",
+      "ha": "Manufofi da saukin amfani"
+    },
+    "livelihoods": {
+      "en": "Livelihoods",
+      "ha": "Sana’oi da tattalin arziki"
+    },
+    "education-training": {
+      "en": "Education & training",
+      "ha": "Ilimi da horo"
+    },
+    "healthcare-welfare": {
+      "en": "Healthcare & welfare",
+      "ha": "Lafiya da walwala"
+    },
+    "digital-assistive-technology": {
+      "en": "Digital & assistive technology",
+      "ha": "Fasahar dijital da taimako"
+    },
+    "sport": {
+      "en": "Sport",
+      "ha": "Wasanni"
+    },
+    "political-engagement": {
+      "en": "Political engagement",
+      "ha": "Harkokin siyasa"
+    },
+    "honours-ceremonial": {
+      "en": "Honours & ceremonial activity",
+      "ha": "Karramawa da bukukuwa"
+    }
+  },
+  "corpus": [
+    {
+      "source_id": 1217,
+      "text_sha256": "8d5c564c70bdfcb8b19d2506d8cf6663ba83e80f712d806013a5cf517a557138",
+      "categories": [
+        "political-engagement"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1222,
+      "text_sha256": "f6f1dd67a0b66496fb8e63005ddf3b1492d284f20683b690f42085df24e00718",
+      "categories": [
+        "policy-accessibility",
+        "political-engagement"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1240,
+      "text_sha256": "7ebd5f78f55c589c703750e739eb234c18caf63c84cbb98ae3c7f5c071a79c8a",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1243,
+      "text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1245,
+      "text_sha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1257,
+      "text_sha256": "7a1375e267ba62e718035a8dd8e2439502aeb339402ca9d56daa815a2dd9aa8c",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1263,
+      "text_sha256": "0580fded38fb8c48371e1051733c80b5c5500124794448dc54ad4f5da1c7b2d4",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1278,
+      "text_sha256": "f135d2a58de75d19b8b9eed5325f32074d7b3bb429eb21f637708983a2472201",
+      "categories": [
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1291,
+      "text_sha256": "191827f8678b0e5c0636244a30eaa8b0afcc963e76f2ba12ec4059b5a5034261",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1295,
+      "text_sha256": "42d524a51830aee76a7583a653155056d949052a2d7ba15d398a68afa0513123",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1307,
+      "text_sha256": "1e677d3a64b2c0f59fa246ea63d6429fa43e39cb918d723c7a51207cdd059842",
+      "categories": [
+        "policy-accessibility",
+        "healthcare-welfare"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 1801,
+      "text_sha256": "a40074055d446f0b3e0012f5d0759146e0fbb517391badfc3dd734ba57a48944",
+      "categories": [
+        "education-training",
+        "livelihoods",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 2279,
+      "text_sha256": "4bdc1592db2ce2533787c7aee4194e18ada20d9537187a87de9e8c43dbde5262",
+      "categories": [
+        "livelihoods",
+        "education-training",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 2352,
+      "text_sha256": "ea3f9c0f2771e76d3d72c4c74053192f84363ecd199ffa2fb3f1620f87ea763e",
+      "categories": [
+        "healthcare-welfare"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 2790,
+      "text_sha256": "6c69e7a0e14d9d4f7f75fda3bcf43cdca0c2ddfe2ac1b5e2be9ac1c6fe0486ea",
+      "categories": [
+        "healthcare-welfare"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 3531,
+      "text_sha256": "34af164ce97df7efc42794afedffc989f41eff3813b3f1b3d866b9d5f8c5fec7",
+      "categories": [
+        "education-training",
+        "livelihoods",
+        "healthcare-welfare"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 4243,
+      "text_sha256": "de32f1b730877485718ceff99152ba536e90119cdd45fe85a57f34f4a5c90172",
+      "categories": [
+        "healthcare-welfare",
+        "livelihoods"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 4252,
+      "text_sha256": "f0677bd109dc946fbfc1a15a1a4f7f39811680c82823bb25d2aefcb52742fffe",
+      "categories": [
+        "policy-accessibility",
+        "livelihoods",
+        "education-training",
+        "healthcare-welfare",
+        "digital-assistive-technology",
+        "sport",
+        "political-engagement",
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 4860,
+      "text_sha256": "c2331fd98ad022c0006917f16526ac5befea5da69a5b5d5c336333b7549cd1a4",
+      "categories": [
+        "healthcare-welfare",
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 4881,
+      "text_sha256": "0f2b943f492235b544b60ab9fb1c2afd359416d84392240d6b77a405901c5aa4",
+      "categories": [
+        "healthcare-welfare",
+        "education-training"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5105,
+      "text_sha256": "d02be143813b912dfee6f13b6a9f2aee72a2da6378f0c9e30fcd60bad0dace2c",
+      "categories": [
+        "livelihoods",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5151,
+      "text_sha256": "f998821367f23d476f9644f5033480314d04ae14954ef486a15ce84ad5690a32",
+      "categories": [
+        "policy-accessibility",
+        "digital-assistive-technology",
+        "livelihoods"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5197,
+      "text_sha256": "a39232213c79f383e072efd531495db2aea0b426d225f8f34a42a90814c9b12d",
+      "categories": [
+        "sport",
+        "political-engagement"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5255,
+      "text_sha256": "b95cf407de25a4b9b9c55d9c81ae98940490d73b4b1f426ae38d0196eb15eaa5",
+      "categories": [
+        "digital-assistive-technology",
+        "livelihoods",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5274,
+      "text_sha256": "3c90cfedbf3f7250d0c315faa022c8e0f8a1446e68f3a6c8ac1492430efb2a95",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5278,
+      "text_sha256": "b31afd6f2621a87975e9e69c3720a311ece7ed34ac5740e9bc8d661423543ab6",
+      "categories": [
+        "digital-assistive-technology",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5288,
+      "text_sha256": "ce3a00257aab8122cc006819ca90aedda6fb6e76bbf941b9757cab31cbc2b1ff",
+      "categories": [
+        "healthcare-welfare",
+        "digital-assistive-technology"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5311,
+      "text_sha256": "65d31aafe9580e4437a09b50e0f5acf39e59d3b480566045bff6c1c6b2550ebc",
+      "categories": [
+        "healthcare-welfare",
+        "policy-accessibility"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5420,
+      "text_sha256": "97dfefa0de93aef6282ccdc6ced60a3e28ef9471599488b9fd79209eb6029b79",
+      "categories": [
+        "digital-assistive-technology",
+        "livelihoods"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5709,
+      "text_sha256": "5b15f2ea82edba0c3b9f38cedadf947d511dee7d9411821a2959b6dbfaaadb0f",
+      "categories": [
+        "sport",
+        "honours-ceremonial"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    },
+    {
+      "source_id": 5803,
+      "text_sha256": "5b83b7636fe94a1d08cf695a81b3833e4220acf5d20b5260f2aa999ceb479a7e",
+      "categories": [
+        "sport"
+      ],
+      "reason": "Source-linked manual multilabel subject/category review; labels describe article coverage, not measured impact."
+    }
+  ],
+  "activity_categories": {
+    "supreme-court-congratulation-2023": [
+      "political-engagement"
+    ],
+    "african-disability-protocol-reaction-2023": [
+      "policy-accessibility",
+      "political-engagement"
+    ],
+    "ssa-appointment-2023": [
+      "honours-ceremonial"
+    ],
+    "house-disability-committee-visit-2023": [
+      "policy-accessibility"
+    ],
+    "leex-inspirational-award-2023": [
+      "honours-ceremonial"
+    ],
+    "ncpwd-introductory-visit-2023": [
+      "policy-accessibility"
+    ],
+    "office-agenda-briefing-2023": [
+      "policy-accessibility"
+    ],
+    "health-ministry-inclusion-meeting-2023": [
+      "healthcare-welfare",
+      "policy-accessibility"
+    ],
+    "inclusive-business-skills": [
+      "livelihoods",
+      "education-training"
+    ],
+    "veterans-mou-2024": [
+      "healthcare-welfare",
+      "livelihoods"
+    ],
+    "school-blind-support-2025": [
+      "healthcare-welfare",
+      "education-training"
+    ],
+    "disability-readiness-toolkit-2025": [
+      "policy-accessibility",
+      "digital-assistive-technology",
+      "livelihoods"
+    ],
+    "para-soccer-unity-cup-2025": [
+      "sport",
+      "political-engagement"
+    ],
+    "digital-employment-roundtable-2025": [
+      "digital-assistive-technology",
+      "livelihoods",
+      "policy-accessibility"
+    ],
+    "state-inclusion-report-unveiling-2025": [
+      "policy-accessibility"
+    ],
+    "accessible-digital-future": [
+      "digital-assistive-technology",
+      "policy-accessibility"
+    ],
+    "red-cross-collaboration-2025": [
+      "healthcare-welfare",
+      "digital-assistive-technology"
+    ],
+    "rehabilitation-centres-plan-2025": [
+      "healthcare-welfare",
+      "policy-accessibility"
+    ],
+    "adapted-vehicle-presentation-2026": [
+      "digital-assistive-technology",
+      "livelihoods"
+    ],
+    "paravolley-election-2026": [
+      "sport",
+      "honours-ceremonial"
+    ],
+    "paravolley-southwest-meeting-2026": [
+      "sport"
+    ],
+    "borno-employment-2024": [
+      "livelihoods"
+    ],
+    "startup-support-march-2024": [
+      "livelihoods"
+    ],
+    "nigwed-skills-2024": [
+      "livelihoods",
+      "education-training",
+      "healthcare-welfare"
+    ],
+    "beyond-disability-coordination-2024": [
+      "livelihoods",
+      "policy-accessibility"
+    ],
+    "inclusive-education-hearing": [
+      "education-training",
+      "policy-accessibility"
+    ],
+    "disability-data-register": [
+      "policy-accessibility",
+      "digital-assistive-technology"
+    ],
+    "assistive-technology-partnership": [
+      "digital-assistive-technology",
+      "healthcare-welfare"
+    ],
+    "ramadan-food-2024": [
+      "healthcare-welfare"
+    ],
+    "karu-food-cash-2024": [
+      "healthcare-welfare"
+    ],
+    "northeast-food-support-target-2024": [
+      "healthcare-welfare"
+    ],
+    "ayubson-event-2025": [
+      "healthcare-welfare",
+      "honours-ceremonial"
+    ],
+    "fha-stalls-2025": [
+      "livelihoods",
+      "policy-accessibility"
+    ]
+  },
+  "entities": [
+    {
+      "id": "mohammed-abba-isa",
+      "label": "Mohammed Abba Isa",
+      "kind": "person",
+      "aliases": [
+        "Mohammed Abba Isa",
+        "Abba Isa",
+        "Mohammed Isa Abba"
+      ]
+    },
+    {
+      "id": "bola-tinubu",
+      "label": "Bola Ahmed Tinubu",
+      "kind": "person",
+      "aliases": [
+        "Bola Ahmed Tinubu",
+        "Bola Tinubu"
+      ]
+    },
+    {
+      "id": "ali-pate",
+      "label": "Muhammad Ali Pate",
+      "kind": "person",
+      "aliases": [
+        "Muhammad Ali Pate",
+        "Ali Pate",
+        "Prof Pate",
+        "Prof. Pate"
+      ]
+    },
+    {
+      "id": "james-lalu",
+      "label": "James David Lalu",
+      "kind": "person",
+      "aliases": [
+        "James David Lalu",
+        "James Lalu"
+      ]
+    },
+    {
+      "id": "charles-odii",
+      "label": "Charles Odii",
+      "kind": "person",
+      "aliases": [
+        "Charles Odii",
+        "Mr Charles Odii"
+      ]
+    },
+    {
+      "id": "lanre-oloyede",
+      "label": "Lanre Oloyede",
+      "kind": "person",
+      "aliases": [
+        "Lanre Oloyede"
+      ]
+    },
+    {
+      "id": "derrick-cobbinah",
+      "label": "Derrick Cobbinah",
+      "kind": "person",
+      "aliases": [
+        "Derrick Cobbinah"
+      ]
+    },
+    {
+      "id": "christian-agoawuike",
+      "label": "Christian Agoawuike",
+      "kind": "person",
+      "aliases": [
+        "Christian Agoawuike"
+      ]
+    },
+    {
+      "id": "smedan",
+      "label": "SMEDAN",
+      "kind": "organisation",
+      "aliases": [
+        "SMEDAN",
+        "Small and Medium Enterprises Development Agency of Nigeria",
+        "Small and Medium Enterprise Development Agency of Nigeria"
+      ]
+    },
+    {
+      "id": "ncpwd",
+      "label": "NCPWD",
+      "kind": "organisation",
+      "aliases": [
+        "NCPWD",
+        "National Commission for Persons with Disabilities",
+        "National Commision for Persons with Disabilities"
+      ]
+    },
+    {
+      "id": "nigwed",
+      "label": "NigWED",
+      "kind": "organisation",
+      "aliases": [
+        "NigWED",
+        "NIGWED",
+        "Nigeria Women Economic Development Project"
+      ]
+    },
+    {
+      "id": "queen-tejuosho-foundation",
+      "label": "Queen Adenike Tejuosho Foundation",
+      "kind": "organisation",
+      "aliases": [
+        "Queen Adenike Tejuosho Foundation"
+      ]
+    },
+    {
+      "id": "ayubson",
+      "label": "Ayubson Life Foundation",
+      "kind": "organisation",
+      "aliases": [
+        "Ayubson Life Foundation"
+      ]
+    },
+    {
+      "id": "fha-bank",
+      "label": "FHA Mortgage Bank",
+      "kind": "organisation",
+      "aliases": [
+        "FHA Mortgage Bank"
+      ]
+    },
+    {
+      "id": "house-disability-committee",
+      "label": "House Committee on Disability",
+      "kind": "organisation",
+      "aliases": [
+        "House Committee on Disability"
+      ]
+    },
+    {
+      "id": "african-unconquered",
+      "label": "African Unconquered Foundation",
+      "kind": "organisation",
+      "aliases": [
+        "African Unconquered Foundation",
+        "Africa Unconquered Foundation"
+      ]
+    },
+    {
+      "id": "red-cross",
+      "label": "Nigerian Red Cross Society",
+      "kind": "organisation",
+      "aliases": [
+        "Nigerian Red Cross Society",
+        "NRCS"
+      ]
+    },
+    {
+      "id": "deaf-in-tech",
+      "label": "Deaf-in-Tech",
+      "kind": "organisation",
+      "aliases": [
+        "Deaf-in-Tech"
+      ]
+    },
+    {
+      "id": "datalead",
+      "label": "DataLead Africa",
+      "kind": "organisation",
+      "aliases": [
+        "DataLead Africa"
+      ]
+    },
+    {
+      "id": "macarthur",
+      "label": "MacArthur Foundation",
+      "kind": "organisation",
+      "aliases": [
+        "MacArthur Foundation"
+      ]
+    },
+    {
+      "id": "jonapwd",
+      "label": "JONAPWD",
+      "kind": "organisation",
+      "aliases": [
+        "JONAPWD",
+        "Joint National Association of Persons with Disabilities",
+        "Joint National Association for Persons with Disability"
+      ]
+    },
+    {
+      "id": "project-enable",
+      "label": "Project Enable Africa",
+      "kind": "organisation",
+      "aliases": [
+        "Project Enable Africa"
+      ]
+    },
+    {
+      "id": "nsc",
+      "label": "National Sports Commission",
+      "kind": "organisation",
+      "aliases": [
+        "National Sports Commission",
+        "NSC"
+      ]
+    },
+    {
+      "id": "paravolley",
+      "label": "Para Volley Federation of Nigeria",
+      "kind": "organisation",
+      "aliases": [
+        "Para Volley Federation of Nigeria",
+        "Nigeria ParaVolley Federation",
+        "NPVF",
+        "Nigeria Para Volleyball Federation"
+      ]
+    },
+    {
+      "id": "elizade",
+      "label": "Elizade Autoland",
+      "kind": "organisation",
+      "aliases": [
+        "Elizade Autoland"
+      ]
+    },
+    {
+      "id": "jac",
+      "label": "JAC Motors",
+      "kind": "organisation",
+      "aliases": [
+        "JAC Motors"
+      ]
+    },
+    {
+      "id": "jobberman",
+      "label": "Jobberman Nigeria",
+      "kind": "organisation",
+      "aliases": [
+        "Jobberman Nigeria"
+      ]
+    },
+    {
+      "id": "mastercard",
+      "label": "Mastercard Foundation",
+      "kind": "organisation",
+      "aliases": [
+        "Mastercard Foundation"
+      ]
+    },
+    {
+      "id": "mrtb",
+      "label": "MRTB",
+      "kind": "organisation",
+      "aliases": [
+        "MRTB",
+        "Medical Rehabilitation Therapists (Registration) Board of Nigeria"
+      ]
+    },
+    {
+      "id": "scian",
+      "label": "SCIAN",
+      "kind": "organisation",
+      "aliases": [
+        "SCIAN",
+        "Spinal Cord Injury Association"
+      ]
+    },
+    {
+      "id": "brain-spine",
+      "label": "Brain and Spine Foundation Africa",
+      "kind": "organisation",
+      "aliases": [
+        "Brain and Spine Foundation Africa"
+      ]
+    },
+    {
+      "id": "pdich",
+      "label": "PDICH",
+      "kind": "organisation",
+      "aliases": [
+        "PDICH",
+        "Prime Diamond Initiative on Community Health"
+      ]
+    },
+    {
+      "id": "abis",
+      "label": "ABIS Farmers Market",
+      "kind": "organisation",
+      "aliases": [
+        "ABIS Farmers Market"
+      ]
+    },
+    {
+      "id": "ecc",
+      "label": "European Cultural Center",
+      "kind": "organisation",
+      "aliases": [
+        "European Cultural Center",
+        "ECC"
+      ]
+    },
+    {
+      "id": "igbere",
+      "label": "Igbere TV",
+      "kind": "organisation",
+      "aliases": [
+        "Igbere TV"
+      ]
+    },
+    {
+      "id": "fct-school-blind",
+      "label": "FCT School of the Blind",
+      "kind": "organisation",
+      "aliases": [
+        "FCT School of the Blind"
+      ]
+    },
+    {
+      "id": "abuja",
+      "label": "Abuja",
+      "kind": "place",
+      "aliases": [
+        "Abuja"
+      ]
+    },
+    {
+      "id": "fct",
+      "label": "Federal Capital Territory",
+      "kind": "place",
+      "aliases": [
+        "Federal Capital Territory",
+        "FCT"
+      ]
+    },
+    {
+      "id": "karu",
+      "label": "Karu",
+      "kind": "place",
+      "aliases": [
+        "Karu"
+      ]
+    },
+    {
+      "id": "nasarawa",
+      "label": "Nasarawa",
+      "kind": "place",
+      "aliases": [
+        "Nasarawa"
+      ]
+    },
+    {
+      "id": "lagos",
+      "label": "Lagos",
+      "kind": "place",
+      "aliases": [
+        "Lagos"
+      ]
+    },
+    {
+      "id": "yobe",
+      "label": "Yobe",
+      "kind": "place",
+      "aliases": [
+        "Yobe"
+      ]
+    },
+    {
+      "id": "borno",
+      "label": "Borno",
+      "kind": "place",
+      "aliases": [
+        "Borno"
+      ]
+    },
+    {
+      "id": "maiduguri",
+      "label": "Maiduguri",
+      "kind": "place",
+      "aliases": [
+        "Maiduguri"
+      ]
+    },
+    {
+      "id": "northeast",
+      "label": "North-East",
+      "kind": "place",
+      "aliases": [
+        "North-East",
+        "Northeast"
+      ]
+    },
+    {
+      "id": "karon-majigi",
+      "label": "Karon-majigi",
+      "kind": "place",
+      "aliases": [
+        "Karon-majigi"
+      ]
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "veterans-mou-2024",
+      "source_id": 4243,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "african-unconquered"
+      ],
+      "kind": "signed-mou-reported",
+      "excerpt": "have signed a historic Memorandum of Understanding (MOU).",
+      "limitations": "Office report of a signing; signed instrument and delivery results not independently checked."
+    },
+    {
+      "id": "nigwed-training",
+      "source_id": 3531,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "nigwed"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "in collaboration with Nigeria Women Economic Development Project (NigWED Project)",
+      "limitations": "Office-reported training collaboration; no independent participant roster or income outcomes."
+    },
+    {
+      "id": "ramadan-tejuosho",
+      "source_id": 2352,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "queen-tejuosho-foundation"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "was done in collaboration with the Queen Adenike Tejuosho foundation.",
+      "limitations": "Office-reported distribution collaboration; cohort overlap unknown."
+    },
+    {
+      "id": "school-blind-smedan",
+      "source_id": 4881,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "smedan",
+        "fct-school-blind"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "has extended humanitarian support to the FCT School of the Blind.",
+      "limitations": "Office reports the school support with SMEDAN; no monetary total or recipient count established."
+    },
+    {
+      "id": "ncpwd-intention",
+      "source_id": 1291,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "ncpwd"
+      ],
+      "kind": "stated-cooperation",
+      "excerpt": "have chosen to collaborate in order to advance the agenda and welfare",
+      "limitations": "Courtesy meeting and stated cooperation; not proof of an executed instrument or service delivery."
+    },
+    {
+      "id": "health-ministry-intention",
+      "source_id": 1307,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "ali-pate"
+      ],
+      "kind": "stated-cooperation",
+      "excerpt": "agreed to work together to create a more inclusive and accessible healthcare system",
+      "limitations": "Reported agreement to work together, not clinics established or patients treated."
+    },
+    {
+      "id": "red-cross-collaboration",
+      "source_id": 5288,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "red-cross"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "has sealed a strategic partnership with the Nigerian Red Cross Society (NRCS)",
+      "limitations": "Office describes collaboration formalised at a visit; no signed instrument or delivery quantities checked."
+    },
+    {
+      "id": "adapted-vehicle-collaboration",
+      "source_id": 5420,
+      "entity_ids": [
+        "mohammed-abba-isa",
+        "elizade",
+        "jac"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "strategic collaboration between the Office of the SSA and Elizade Autoland in partnership with JAC Motors.",
+      "limitations": "Vehicle presentation reported; nationwide procurement, distribution and e-hailing plans are not delivered coverage."
+    },
+    {
+      "id": "toolkit-developers",
+      "source_id": 5151,
+      "entity_ids": [
+        "deaf-in-tech",
+        "datalead"
+      ],
+      "kind": "reported-programme-collaboration",
+      "excerpt": "produced by Deaf-in-Tech in partnership with DataLead Africa",
+      "limitations": "Identifies the toolkit developers, not Isa as its developer or funder."
+    }
+  ],
+  "topic_labels": [
+    {
+      "id": "topic-1",
+      "en": "SMEDAN & enterprise support",
+      "ha": "SMEDAN da tallafin sana’oi",
+      "representative_source_ids": [
+        1801,
+        4881,
+        5105
+      ]
+    },
+    {
+      "id": "topic-2",
+      "en": "Honours & ceremonial gatherings",
+      "ha": "Karramawa da bukukuwa",
+      "representative_source_ids": [
+        1257,
+        1263
+      ]
+    },
+    {
+      "id": "topic-3",
+      "en": "Para-sport leadership & participation",
+      "ha": "Shugabanci da shiga wasannin masu nakasa",
+      "representative_source_ids": [
+        5709,
+        5803,
+        5197
+      ]
+    },
+    {
+      "id": "topic-4",
+      "en": "Appointments & disability-rights statements",
+      "ha": "Naɗe-naɗe da kalaman hakkin masu nakasa",
+      "representative_source_ids": [
+        1240,
+        1278,
+        1222,
+        1295
+      ]
+    },
+    {
+      "id": "topic-5",
+      "en": "Digital access & workforce inclusion",
+      "ha": "Damar dijital da shigar masu nakasa cikin aiki",
+      "representative_source_ids": [
+        5151,
+        5255,
+        5278
+      ]
+    },
+    {
+      "id": "topic-6",
+      "en": "Courtesy visits & institutional cooperation",
+      "ha": "Ziyarce-ziyarcen girmamawa da haɗin gwiwar hukumomi",
+      "representative_source_ids": [
+        1307,
+        1291,
+        1243,
+        5288
+      ]
+    },
+    {
+      "id": "topic-7",
+      "en": "Food relief & welfare support",
+      "ha": "Agajin abinci da tallafin walwala",
+      "representative_source_ids": [
+        2352,
+        2790
+      ]
+    },
+    {
+      "id": "topic-8",
+      "en": "Women, health & support partnerships",
+      "ha": "Mata, lafiya da haɗin gwiwar tallafi",
+      "representative_source_ids": [
+        3531,
+        4243,
+        2279,
+        4860
+      ]
+    }
+  ],
+  "coverage_accounting": {
+    "candidate_count": 2869,
+    "reviewed_candidates": 142,
+    "linked_exact_repeats": 146,
+    "automatic_exact_repeats": 1114,
+    "awaiting_review": 1467,
+    "reviewed_holds": 18
+  },
+  "claim_notes": [
+    {
+      "id": "annual-target-bound-variation",
+      "activity_id": "beyond-disability-coordination-2024",
+      "source_id": 4252,
+      "excerpt": "create more than 36,551 job opportunities nationwide.",
+      "note": "The anniversary account uses a lower-bound phrase while the existing ledger follows the direct coordination report target of 36,551. Both describe planned opportunities; retain this source-bound variation without treating either as delivered jobs."
+    }
+  ],
+  "explanations": {
+    "scope": {
+      "en": "This dataset covers selected, checked reports. It is not a complete record of lifetime work.",
+      "ha": "Wannan kundin ya ƙunshi zaɓaɓɓun rahotannin da aka bincika. Ba cikakken tarihin dukkan ayyukan rayuwa ba ne.",
+      "ha_reviewed": false
+    },
+    "language": {
+      "en": "The topic model analysed English articles. Hausa labels and explanations are draft translations awaiting human review.",
+      "ha": "An nazarci labaran Turanci wajen gano jigogi. Sunayen jigogi da bayanan Hausa fassarar gwaji ne da ke jiran bitar mutum.",
+      "ha_reviewed": false
+    },
+    "topics": {
+      "en": "Themes describe patterns in published words. Filters select from one saved model; they do not retrain it.",
+      "ha": "Jigogi suna bayyana tsarin kalmomin da aka wallafa. Matatun bincike suna zaɓa daga samfurin da aka adana; ba sa sake koyar da shi.",
+      "ha_reviewed": false
+    },
+    "connections": {
+      "en": "An article connection means two names appear in the same report. Recorded cooperation and agreements have separate evidence and qualifications.",
+      "ha": "Alaƙar labari tana nufin sunaye biyu sun bayyana a rahoto ɗaya. Haɗin gwiwa da yarjejeniyoyin da aka ruwaito suna da nasu hujjoji da sharudda.",
+      "ha_reviewed": false
+    },
+    "categories": {
+      "en": "A report can have several categories. Period counts use the displayed number of selected reports as their denominator.",
+      "ha": "Rahoto na iya shiga rukuni fiye da ɗaya. Lissafin kowane lokaci ya dogara da adadin rahotannin da aka zaɓa da aka nuna.",
+      "ha_reviewed": false
+    },
+    "figures": {
+      "en": "Delivery figures are attributed reports. Targets remain plans. Overlapping groups cannot be added into a reliable total of unique people.",
+      "ha": "Lambobin tallafin da aka bayar suna dogara da rahotannin da aka ambata. Manufofin cimmawa tsare-tsare ne. Ba za a haɗa ƙungiyoyin da ka iya maimaita mutane domin samun tabbatacciyar jimillar mutane ba.",
+      "ha_reviewed": false
+    },
+    "dates": {
+      "en": "The timeline uses publication dates unless a verified event date is recorded.",
+      "ha": "Jadawalin lokaci yana amfani da ranar wallafa rahoto sai idan an rubuta ranar taron da aka tabbatar.",
+      "ha_reviewed": false
+    }
+  },
+  "boilerplate_line_sha256": [
+    "4254a2e569ac26d03824ce0f6f707ca715d51a09f57aeef58c1a1ad5b5f15bfe",
+    "d37ed6fef28943d579dfdd4ef8a74cf7d7545f579284b0bfdfec8f03964b9247"
+  ]
+}

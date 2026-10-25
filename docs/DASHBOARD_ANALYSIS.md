@@ -1,5 +1,11 @@
 # The Work in Numbers — research implementation
 
+Phase 2 continuation: the owner accepted the Phase 1 checkpoint and authorized
+moving on while preserving its unfinished review counts. The selected v1 model,
+data bundle and current findings are in [PHASE2_FINDINGS.md](PHASE2_FINDINGS.md).
+The full-archive exploratory model/table/hash below describe the earlier research
+checkpoint, not the selected model shipped with the new preview data.
+
 24 October 2026, updated through Phase 1 batch 002. This is a **partial first-milestone packet**, not approval of the
 complete numerical review or a release candidate. The accepted product is a
 timeline-led English/Hausa dashboard with a deterministic chatbot and whole-app

@@ -1,0 +1,459 @@
+{
+  "date": "2026-10-25T11:53:15.697Z",
+  "base": "http://127.0.0.1:8767",
+  "engineSha256": "83cfe8ddba32bf33eff87e6dc88b125de84f958a3df0242feceefc4cc72c67fb",
+  "rows": [
+    {
+      "id": "ha-20",
+      "lang": "ha",
+      "question": "Me aka sani game da yarjejeniyar African Unconquered kan tsoffin sojoji?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-02",
+      "lang": "en",
+      "question": "How many records have a 2025 report date?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Please specify a supported report-year filter, or use “find:” for a keyword lookup."
+    },
+    {
+      "id": "en-11",
+      "lang": "en",
+      "question": "How many PWD beneficiaries received the FHA stall-allotment documents?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-08",
+      "lang": "en",
+      "question": "What household target was given for the Karu support scheme?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-22",
+      "lang": "en",
+      "question": "What did he do that year?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-29",
+      "lang": "en",
+      "question": "How many deaf women aged 18 to 25 got the March POS kits?",
+      "expectedEngineStatus": "unsupported",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "That demographic subgroup is not established by this programme’s measurement. I cannot substitute a narrower population for the reported cohort."
+    },
+    {
+      "id": "ha-13",
+      "lang": "ha",
+      "question": "Wace shekara aka wallafa rahoton?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-14",
+      "lang": "en",
+      "question": "And the year of that report?",
+      "expectedEngineStatus": "answered",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "SMEDAN: 5 people reportedly supported."
+    },
+    {
+      "id": "ha-24",
+      "lang": "ha",
+      "question": "Su waye suka yi shi?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-01",
+      "lang": "ha",
+      "question": "Akwai ayyuka nawa a wannan jerin da aka duba?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "en-23",
+      "lang": "en",
+      "question": "How much was the support?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-30",
+      "lang": "en",
+      "question": "List the confirmed jobs he will deliver in 2027, with employers and salaries.",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-04",
+      "lang": "ha",
+      "question": "Mutane nawa ne aka ce sun samu aikin gwamnati a Borno?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "ha-29",
+      "lang": "ha",
+      "question": "Mata masu nakasar ji daga Kano nawa suka samu tallafin Maris?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-06",
+      "lang": "en",
+      "question": "Those 36,551 Beyond Disability jobs are already filled, right?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Please specify a supported report-year filter, or use “find:” for a keyword lookup."
+    },
+    {
+      "id": "ha-21",
+      "lang": "ha",
+      "question": "Mutane nawa aka taimaka a shirin nan?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-17",
+      "lang": "ha",
+      "question": "Wane bayani ne game da taron para-volleyball a Lagos?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-15",
+      "lang": "en",
+      "question": "Who actually developed the disability-readiness toolkit he unveiled?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-26",
+      "lang": "en",
+      "question": "How many took part in SMEDAN or NigWED? I only want one number.",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Which programme do you mean? Please ask about one programme at a time."
+    },
+    {
+      "id": "en-05",
+      "lang": "en",
+      "question": "Nigwed trainning, was it only 45 women?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Please specify a supported report-year filter, or use “find:” for a keyword lookup."
+    },
+    {
+      "id": "en-28",
+      "lang": "en",
+      "question": "What was the average monthly income increase for NigWED graduates?",
+      "expectedEngineStatus": "unsupported",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "These reports do not establish causal impact, income changes or sole attribution. They describe reported activities and claims."
+    },
+    {
+      "id": "ha-10",
+      "lang": "ha",
+      "question": "Wane taimako ya yi wa mata masu nakasa?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-22",
+      "lang": "ha",
+      "question": "A waccan shekarar fa?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-23",
+      "lang": "ha",
+      "question": "Nawa ne tallafin?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-21",
+      "lang": "en",
+      "question": "How many people did that programme support?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-10",
+      "lang": "en",
+      "question": "Can you explain the support he has offered women living with disabilities?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-09",
+      "lang": "ha",
+      "question": "Game da Arewa maso Gabas, kusan mutane nawa aka sa a gaba don tallafin abinci?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-16",
+      "lang": "ha",
+      "question": "Shin Isa ne ya bayar da kayan taimako na ECOWAS ga NCPWD?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-19",
+      "lang": "en",
+      "question": "Do the House committee articles numbered 1243 and 1245 mean two visits?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-30",
+      "lang": "ha",
+      "question": "Da kashi nawa shirinsa ya rage talauci a Najeriya?",
+      "expectedEngineStatus": "unsupported",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Wadannan rahotanni ba su tabbatar da tasirin sanadi, canjin kudin shiga ko gudummawar mutum daya tak ba. Suna bayyana ayyuka da ikirarin da aka ruwaito."
+    },
+    {
+      "id": "ha-18",
+      "lang": "ha",
+      "question": "Jigon mata da lafiya yana nufin duk rahotannin cikinsa na mata ne?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-20",
+      "lang": "en",
+      "question": "If two organisations appear together in the network, does that prove a partnership?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-14",
+      "lang": "ha",
+      "question": "Me aka ruwaito ya yi wa makarantar makafi ta FCT tare da SMEDAN?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "en-17",
+      "lang": "en",
+      "question": "What areas of work do the reviewed categories cover?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-13",
+      "lang": "en",
+      "question": "How many PWDs did the Ramadan food report say received palliatives?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-16",
+      "lang": "en",
+      "question": "Is there a reviewed record connected to Lagos?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-06",
+      "lang": "ha",
+      "question": "An gama samar da ayyukan yi 36,551 na Beyond Disability kenan?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "ha-26",
+      "lang": "ha",
+      "question": "Ina so a bani adadin SMEDAN ko na NigWED, guda daya kawai.",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Wane shiri kake nufi? Tambayi shiri guda daya a lokaci daya."
+    },
+    {
+      "id": "ha-07",
+      "lang": "ha",
+      "question": "A Karu, mutane nawa suka karbi shinkafa da tallafin kudi a rahoton?",
+      "expectedEngineStatus": "unsupported",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Wannan samfuri bai tabbatar da jimillar kudi ba. Yawan masu karba ba ya nuna kudin da aka kashe."
+    },
+    {
+      "id": "ha-03",
+      "lang": "ha",
+      "question": "SMEDAN fa, participants nawa aka tallafa?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "ha-05",
+      "lang": "ha",
+      "question": "Matan NigWED guda 45 ne kacal aka horas?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "ha-28",
+      "lang": "ha",
+      "question": "Nawa kudin shigar matan NigWED ya karu bayan horon?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "en-12",
+      "lang": "en",
+      "question": "About that Ayubson celebration in Abuja, what participation figure is sourced?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-18",
+      "lang": "en",
+      "question": "How did you get the eight topics, and do they measure his impact?",
+      "expectedEngineStatus": "unsupported",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "These reports do not establish causal impact, income changes or sole attribution. They describe reported activities and claims."
+    },
+    {
+      "id": "ha-02",
+      "lang": "ha",
+      "question": "Rahotannin shekarar 2024 sun kunshi ayyuka nawa a jerin?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Fadi shekarar rahoto, ko yi amfani da “nemo:” wajen neman kalma."
+    },
+    {
+      "id": "en-24",
+      "lang": "en",
+      "question": "Which one was bigger?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "ha-15",
+      "lang": "ha",
+      "question": "Kyautar LEEX guda biyar ya samu ne a 2023?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "ha-08",
+      "lang": "ha",
+      "question": "Shirin Karu ya yi nufin tallafa wa gidaje nawa?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Tambayi yawan ayyukan da aka rubuta, sunan shiri, ko “nemo: SMEDAN”."
+    },
+    {
+      "id": "en-09",
+      "lang": "en",
+      "question": "Was the Northeast expansion aiming for exactly a thousand recipients?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Try a documented activity count, a named programme, or “find: SMEDAN”."
+    },
+    {
+      "id": "en-01",
+      "lang": "en",
+      "question": "How big is the reviewed activity list now?",
+      "expectedEngineStatus": "clarification",
+      "statusMatches": true,
+      "textMatches": true,
+      "browserReply": "Please specify a supported report-year filter, or use “find:” for a keyword lookup."
+    }
+  ],
+  "pageErrors": [],
+  "failedResponses": []
+}

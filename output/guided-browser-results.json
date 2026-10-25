@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-25T16:53:23.442Z",
+  "base": "http://127.0.0.1:8767",
+  "completed": true,
+  "checks": [
+    "Question-only start, three replacing choices per page, no sidebar, duplicate path, transcript or internal scroller",
+    "Separate women cohorts, keyboard Back/Next, branch replacement, browser history and selected source preserved across languages",
+    "All 11 numerical choices reachable through pagination; bounds, stages and units stay visible; full source links and receipt claims preserved",
+    "Paginated year activities remain complete; relationship attribution qualification stays visible and exact source text is available on demand",
+    "Loaded choices work offline; ordinary English/Hausa phone steps fit without scrolling; 320px, 200% text and forced colours reflow without clipped content"
+  ],
+  "axe": [
+    {
+      "label": "Minimal English start",
+      "violations": []
+    },
+    {
+      "label": "Paged year choices",
+      "violations": []
+    },
+    {
+      "label": "Source finding with original English excerpt",
+      "violations": []
+    },
+    {
+      "label": "English mobile question choices",
+      "violations": []
+    },
+    {
+      "label": "Hausa mobile concise women answer",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "externalRequests": []
+}

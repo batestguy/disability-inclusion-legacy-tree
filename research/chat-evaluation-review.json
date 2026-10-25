@@ -1,0 +1,421 @@
+{
+  "protocol": {
+    "purpose": "Independent read-only semantic adjudication of the frozen 50; no pool, fixture, gold, scoring boundaries or engine changes.",
+    "evidence": "All 50 expected entries, actual structured claims, English semantic-review templates, rendered locale text/detail/items inspected; source-bundle facts and canonical year counts checked.",
+    "baselineSha256": "37510cf75548dcead8c02a0746201d50a099d1390e2be4f32cc4962e7faaf809",
+    "candidateSha256": "5b80e6185b856213d4744f15df37cb0b1454ff18be42ac0aaafeff8093304259",
+    "seed": 20261025,
+    "targetedResponseDefinition": "Addresses the actual requested information or missing ambiguity, even if only partially; topical overlap or a truthful statement about a different quantity does not suffice.",
+    "fullSuccessBoundary": "A full answer must supply requested supported facts or substantive corrective explanation. Relevant partial explanation is recorded separately without upgrading to full success. Clarification is useful when it identifies the actual missing referent/filter.",
+    "languageLimit": "Hausa meanings were compared to the supplied English templates and draft questions. This is not fluent-human Hausa sign-off.",
+    "independenceLimit": "Reviewer authored the gold pool independently of implementation, then saw frozen outputs. This is independent of implementation, not a second independent gold author."
+  },
+  "summary": {
+    "reviewed": 50,
+    "goldDefensible": 50,
+    "goldDefensibleCaveats": [
+      "en-02 uses records within the fixed activity-count protocol; outside that protocol records could mean sources/documents. Gold activity count remains defensible here.",
+      "Gold notes include supporting context that need not all be repeated verbatim; no result was failed solely for internal kind/status or exact wording.",
+      "Hausa phrasing is draft. No selected question has a meaning ambiguity that would turn an actual fallback into a fully correct answer."
+    ],
+    "semanticVerdictCounts": {
+      "unanswered-answerable": 31,
+      "generic-clarification": 8,
+      "correct-limitation": 3,
+      "wrong-question": 1,
+      "missing-limitation": 3,
+      "targeted-clarification": 2,
+      "wrong-refusal": 1,
+      "partial-answer": 1
+    },
+    "answerable": 34,
+    "fullySuccessfulAnswerables": 0,
+    "partiallyAnsweredAnswerables": 1,
+    "targetedResponses": 6,
+    "fullyUsefulHandling": 5,
+    "fullyUsefulHandlingBreakdown": {
+      "targetedClarifications": 2,
+      "appropriateSubstantiveUnsupportedLimitations": 3
+    },
+    "coarseDispositionMatches": 13,
+    "coarseMatchesOnly": 8,
+    "automatedFullAnswerSuccessOverturned": 0,
+    "automatedLabelRefinement": "en-18 is a relevant partial answer rather than a wholly irrelevant refusal; complete-answer failure is unchanged.",
+    "wrongAnswerInterpretation": "en-14 answers the wrong question with a correct cohort count; do not describe it as fabricated five or a wrong sourced participant number.",
+    "ambiguousQuestions": {
+      "total": 10,
+      "safeDeferrals": 10,
+      "targetedClarifications": 2,
+      "genericFallbacks": 8
+    },
+    "unsupportedRequests": {
+      "total": 6,
+      "substantiveLimitations": 3,
+      "genericFallbackWithoutLimitation": 3
+    },
+    "byLanguage": {
+      "en": {
+        "total": 25,
+        "fullyUsefulHandling": 3,
+        "partiallyAnsweredAnswerables": 1
+      },
+      "ha": {
+        "total": 25,
+        "fullyUsefulHandling": 2,
+        "partiallyAnsweredAnswerables": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "ha-20",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "No account of the reported African Unconquered MOU signing or its limits. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-02",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Question already supplies 2025; reply asks for a filter instead of the 11 canonical activity records. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-11",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not provide the three bank stall-allotment beneficiaries or bank attribution. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-08",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not state at least 500 targeted households or distinguish target from delivery. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-22",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which report year. Coarse disposition match only."
+    },
+    {
+      "id": "en-29",
+      "goldDefensible": true,
+      "semanticVerdict": "correct-limitation",
+      "targetedResponse": true,
+      "note": "Explicitly says the narrower demographic subgroup is not established; correctly avoids substituting the overall cohort."
+    },
+    {
+      "id": "ha-13",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Established NigWED context supports report year 2024; neither template supplies it. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-14",
+      "goldDefensible": true,
+      "semanticVerdict": "wrong-question",
+      "targetedResponse": false,
+      "note": "Five SMEDAN participants is a real sourced fact, not a fabricated number. Visitor asked the report year in established SMEDAN context. Rendered answer omits 2024; an unrendered structured reportDate does not answer the conversational question. Gold report-year expectation is defensible."
+    },
+    {
+      "id": "ha-24",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which activity or referent. Coarse disposition match only."
+    },
+    {
+      "id": "ha-01",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Requests an irrelevant year rather than providing 33 reviewed activities. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-23",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which programme and amount/count. Coarse disposition match only."
+    },
+    {
+      "id": "en-30",
+      "goldDefensible": true,
+      "semanticVerdict": "missing-limitation",
+      "targetedResponse": false,
+      "note": "Does not explain absence of confirmed 2027 jobs/employers/salaries; generic starters are safe but do not answer the evidence limitation."
+    },
+    {
+      "id": "ha-04",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Borno and the count question are explicit; reply supplies no 15-person reported placement figure. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-29",
+      "goldDefensible": true,
+      "semanticVerdict": "missing-limitation",
+      "targetedResponse": false,
+      "note": "Does not explain missing Kano/deafness subgroup evidence; generic starters are safe but do not address the request."
+    },
+    {
+      "id": "en-06",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct filled-jobs premise to the 36,551-opportunity target. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-21",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which programme. Coarse disposition match only."
+    },
+    {
+      "id": "ha-17",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not identify the Lagos stakeholders meeting, representation or report context. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-15",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not name Deaf-in-Tech and DataLead Africa as toolkit developers. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-26",
+      "goldDefensible": true,
+      "semanticVerdict": "targeted-clarification",
+      "targetedResponse": true,
+      "note": "Two named programmes and a demand for one number create real ambiguity. Reply explicitly asks which programme and avoids choosing or adding cohorts."
+    },
+    {
+      "id": "en-05",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct exact 45 to more than 45 NigWED trainees. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-28",
+      "goldDefensible": true,
+      "semanticVerdict": "correct-limitation",
+      "targetedResponse": true,
+      "note": "Explicitly says income changes are not established. This substantively handles the unsupported average income increase despite using a general causality template."
+    },
+    {
+      "id": "ha-10",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Fails natural broad women question despite evidence for NigWED and March startup support. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-22",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which year/topic. Coarse disposition match only."
+    },
+    {
+      "id": "ha-23",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which programme and amount/count. Coarse disposition match only."
+    },
+    {
+      "id": "en-21",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which programme. Coarse disposition match only."
+    },
+    {
+      "id": "en-10",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Fails natural broad women question despite the two separate evidenced programmes/cohorts. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-09",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not provide approximate 1,000 Northeast target or target qualification. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-16",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not distinguish ECOWAS donor, NCPWD recipient and Isa supportive speaker. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-19",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not explain that 1243/1245 are duplicate coverage of one committee visit. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-30",
+      "goldDefensible": true,
+      "semanticVerdict": "correct-limitation",
+      "targetedResponse": true,
+      "note": "Both English and Hausa say causal impact is not established; substantively handles the unsupported national poverty-reduction percentage."
+    },
+    {
+      "id": "ha-18",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not explain that mixed topic 8 also includes veterans-support text. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-20",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not explain why co-occurrence is insufficient proof of partnership. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-14",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not describe FCT School of the Blind support with SMEDAN; named organisation alone is insufficient routing. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-17",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not provide the eight reviewed categories or their scope. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-13",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not state more than 500 Ramadan recipients and source attribution. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-16",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not retrieve the documented Lagos para-volleyball meeting. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-06",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct the completed-jobs premise to a target. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-26",
+      "goldDefensible": true,
+      "semanticVerdict": "targeted-clarification",
+      "targetedResponse": true,
+      "note": "Two named programmes and a demand for one number create real ambiguity. Reply explicitly asks which programme and avoids choosing or adding cohorts."
+    },
+    {
+      "id": "ha-07",
+      "goldDefensible": true,
+      "semanticVerdict": "wrong-refusal",
+      "targetedResponse": false,
+      "note": "Hausa asks how many people received rice and cash, not the monetary total. Refusal about money totals is true in isolation but addresses the wrong quantity; more than 500 people is supported."
+    },
+    {
+      "id": "ha-03",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not answer the explicit SMEDAN participant question with five. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-05",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct exact 45 to more than 45; asking a year cannot resolve the requested bound. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-28",
+      "goldDefensible": true,
+      "semanticVerdict": "missing-limitation",
+      "targetedResponse": false,
+      "note": "Does not state that income changes are unmeasured; asks for an irrelevant report-year filter."
+    },
+    {
+      "id": "en-12",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not supply the Ayubson report figure of more than 50 PWD participants. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-18",
+      "goldDefensible": true,
+      "semanticVerdict": "partial-answer",
+      "targetedResponse": true,
+      "note": "Correctly explains that reported claims do not establish causal impact. This answers part of the question and merits partial semantic credit, regardless of unsupported status. It omits TF-IDF/eight-topic NMF and selected-text scope, so is not a successful complete answer. Automated excessive-refusal label is too coarse."
+    },
+    {
+      "id": "ha-02",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Question supplies 2024; reply requests a year instead of 10 canonical activities. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-24",
+      "goldDefensible": true,
+      "semanticVerdict": "generic-clarification",
+      "targetedResponse": false,
+      "note": "Gold clarification is defensible because context is absent. Reply safely avoids guessing but does not ask which programmes or metric to compare. Coarse disposition match only."
+    },
+    {
+      "id": "ha-15",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct five awards to one recognition at the fifth edition. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "ha-08",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not give the at-least 500-household Karu target. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-09",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not correct exactly 1000 to approximately 1000 targeted beneficiaries. Generic guidance is not an answer to this evidence-supported question."
+    },
+    {
+      "id": "en-01",
+      "goldDefensible": true,
+      "semanticVerdict": "unanswered-answerable",
+      "targetedResponse": false,
+      "note": "Does not provide 33 reviewed activities; year filter is not needed. Generic guidance is not an answer to this evidence-supported question."
+    }
+  ]
+}

@@ -1,5 +1,298 @@
 # Validation evidence - 22 October 2026
 
+## Minimal replacing choices — owner correction, 25 October 2026
+
+Owner rejected the previous scrollable, verbose interface. Replaced it with one
+concise question/answer and up to three choices per option page. Previous / More
+options replace the set. Removed the intro/sidebar, inventory, visible path,
+repeated prompts, automatic full evidence blocks, endpoint messages and internal
+scroll containers. Unavailable history buttons are omitted. Women-focused
+figures are merged into their clickable programme cards, with separate bounds
+and a short no-sum qualification. Relevant target/delivery, unit and attribution
+limits remain visible. Sources and Details deliberately replace the screen;
+long original evidence and metadata are paged without truncation. Downloads
+remain under Details. The shared language control retains selected node,
+option/source/detail page and source in memory. Reload restores the node path.
+
+One scoped executor implemented/reviewed the concise presentation helper and
+its focused tests; main reviewed it and implemented session/UI/CSS, browser
+journeys and documentation. The underlying graph, reviewed bundle, legacy parser,
+frozen audit and approval flags were preserved. No dependency was added.
+
+Passed: `npm.cmd run preflight`, `npm.cmd run lint`, `npm.cmd run typecheck`,
+`npm.cmd test` (**47 tests**, including six new concise-presentation groups),
+and `npm.cmd run build` (web and Studio). The graph still covers all 162 nodes,
+33 activities and 11 observations. Tests protect separate women-focused bounds,
+typed figure labels, activity summaries, relationship attribution, exhaustive
+three-item pagination and exact whitespace-preserving text segmentation.
+
+Final `npm.cmd run test:chat-browser` completed at 2026-10-25T16:53:23.442Z:
+five journey groups, five axe states with zero violations, no page errors,
+HTTP failures or external requests. It verifies old choices disappear, at most
+three remain visible, no internal scroller or duplicate interface sections,
+Back/Next keyboard navigation, browser history, locale/source preservation,
+all 11 figure/source/receipt routes, all ten 2024 activity choices across pages,
+relationship attribution and exact source text versus labelled paraphrases.
+The source reader's paged text/role/limitations/date basis were concatenated
+and compared with the original evidence fields: no characters lost/duplicated.
+English root and English/Hausa women-focused steps fit at 390×844 without page
+scrolling. At 320px/200% text and forced colours, normal document reflow remains
+available without internal scrolling, clipping or horizontal overflow. Loaded
+navigation works offline; full offline refresh/cache readiness is still later.
+
+Saved [browser results](../output/guided-browser-results.json) have
+`completed: true`; screenshots in output/playwright/ were visually reviewed.
+An initial browser assertion incorrectly expected an exact quote for a source
+that is a labelled record paraphrase; corrected the assertion to check both
+kinds explicitly. No source was relabelled to make the test pass. Test review
+checked graph reachability, claim integrity, replaced option sets and lossless
+source paging against the final interface. Automated checks are not human Hausa
+or screen-reader certification. Hausa remains draft; no new performance score,
+commit, push, deployment or public approval is claimed. This supersedes the
+scrollable-panel presentation in the previous entry.
+
+## Compact guided question chatbot — 25 October 2026
+
+Owner authorized implementation before the main dashboard. `/chat/` and
+`/ha/chat/` now show one answer/options step in a stable-height panel, with
+internal scrolling for long answers, sources and choices. Back/Next retrace
+visited steps; choosing an option starts a new forward branch; Start again clears
+it. Shared language navigation preserves the active step, forward trail and
+selected evidence in memory. Refresh restores the active URL path only.
+The breadcrumb is bounded/scrollable; earlier-answer transcripts are removed.
+The mobile introduction is compact, with the first option fully visible at
+390×844 without page scrolling.
+
+One scoped executor improved the engine/declaration/graph tests; main reviewed
+the changes, implemented interface/session/CSS, and extended browser checks.
+Figures lead to their record, separately qualified same-activity measurements
+and sources. Evidence endpoints link back to available figures. Topics, names
+and relationship endpoints offer up to three activities sharing cited reports,
+explicitly qualified as shared reporting rather than partnership evidence.
+No source/data/parser/audit baseline changes or production dependencies were made.
+
+Passed: `npm.cmd run preflight`, `npm.cmd run lint`, `npm.cmd run typecheck`,
+`npm.cmd test` (**41 tests**, including nine guided graph groups), and
+`npm.cmd run build` (web and Studio). Subsequent mobile CSS refinements passed
+fresh `npm.cmd run build -w apps/web` runs. Final handoff preflight and
+`git -c safe.directory=D:/HonAbbas diff --check` passed; line-ending notices
+remain informational. All 162 reachable graph nodes have resolvable choices and
+sources, covering 33 activities and 11 observations. An additional all-node probe
+checked the types of newly displayed original English evidence qualifications.
+
+`npm.cmd run test:chat-browser` completed successfully against the final static
+build: seven journey groups; zero axe violations across five English/Hausa,
+desktop/mobile states; zero page errors, failed HTTP responses or external
+requests. Checks cover fixed panel height after navigation/source expansion,
+single visible answer, keyboard Next, Back/Next across locale switches, discarded
+forward branches, reset, browser history, valid/invalid hash paths, reload,
+all 11 numerical endpoints and receipt dimensions, source links, year units,
+topic/relationship distinctions, loaded offline navigation, 320px/200% text,
+forced colours and reduced motion. Results:
+[guided-browser-results.json](../output/guided-browser-results.json), marked
+`completed: true` at 2026-10-25T16:32:33.062Z. Failed/incomplete runs now retain
+`completed: false`, so partial evidence cannot be mistaken for full completion.
+Desktop, English mobile and Hausa mobile screenshots are in output/playwright/.
+
+The first browser run exposed a missing visible toolkit attribution limitation;
+the UI now displays original English evidence role/date-basis/limitations,
+including “not Isa as its developer or funder.” A mobile geometry check also
+identified a partly clipped first option; spacing was refined and rechecked.
+Main's test review found the navigation transitions and source integrity covered
+by behavioral assertions; graph coverage is not a natural-language accuracy score.
+Legacy 0/34 audit remains unchanged. No human Hausa certification, screen-reader
+certification, new performance score, complete offline reload/cache readiness,
+commit, push, deployment or public approval is claimed. Owner review of the
+guided experience precedes Phase 4 dashboard integration; Hausa remains draft.
+
+## Free-tier modernisation research — 25 October 2026
+
+Owner requested modern-method research, then specified free tier. Completed
+[architecture/multilingual research](CHATBOT_MODERNISATION_RESEARCH.md) and
+[provider verification](FREE_TIER_PROVIDER_FINDINGS.md) from opened official
+documentation and primary research. One delegate independently checked provider
+limits/terms; main reviewed the evidence and wrote the architecture proposal.
+
+Recommendation is a provider-neutral semantic planner with complete reviewed
+fact/measure coverage, strict plan validation, deterministic execution and
+bilingual rendering; first benchmark candidate is Groq Free behind Workers Free,
+with Workers AI as an alternative. No measured model-quality improvement, Hausa
+approval, actual account quota, privacy configuration or deployment is claimed.
+Gemini's current unpaid/audience conditions, finite shared quotas, local-model
+licences and online/offline trade-offs are recorded explicitly. No credentials,
+accounts, model calls, dependencies, billing or production app changes were made.
+The failed fifty-question engine hash remains unchanged.
+
+Preflight, workspace lint/typecheck, 32 Node tests and both production web/Studio
+builds passed again; the root build command exited successfully. Local
+links in the new research documents were checked. The proposed higher-quality
+planner must still be implemented and tested on fresh unseen English/Hausa
+questions. Existing development tests do not override the failed audit.
+
+## Fifty-question natural-language audit — 25 October 2026
+
+Owner requested 50 random questions to check accuracy. A separate author used the
+bundle/specification without seeing parser/tests to supply 60 candidates. Frozen
+seed 20261025 sampled 25 English and 25 draft Hausa: 17 answerable, five ambiguous
+and three unsupported per language. Gold, selection and engine/bundle/candidate
+hashes were saved before execution. See
+[protocol](CHATBOT_EVALUATION_PROTOCOL.md) and
+[full audit](CHATBOT_ACCURACY_AUDIT.md). This is random sampling from a designed
+pool, not a representative visitor-traffic accuracy estimate.
+
+Findings: **0/34 answerable questions fully answered**, 31 unnecessary
+clarifications, one irrelevant refusal, one partially useful methodology
+limitation and one wrong-question answer (five participants instead of year 2024).
+Semantic review of all 50 found **5/50 useful complete handling** (English3,
+Hausa2) plus one partial. The 13/50 coarse action matches include eight generic
+clarifications and are not factual-accuracy or useful-resolution scores. All ten
+ambiguous questions deferred safely; only two clarifications targeted the missing
+programme. Three of six unsupported requests received a substantive limitation.
+No correct full answer was hidden by rigid internal labels. The observed five is
+a true source value selected for the wrong intent, not a fabricated participant
+count. Native-speaker Hausa sign-off remains absent.
+
+All 50 were also asked through the production-static web component, including
+setup of preceding programme context. Every visible main reply/status matched
+the engine audit; zero page errors and HTTP failures. Same-engine repeat execution
+in a separate output directory reproduced all aggregate scores. Baseline outputs
+are protected from overwrite; report generation checks the review/results hash.
+No engine, bundle, gold or selected-question changes occurred after freezing.
+
+Repository checks passed: preflight, lint, typecheck, 32 Node tests and both
+production builds. The evaluation runner/browser/report scripts passed syntax
+checks. Those development checks do not override the failed conversational audit.
+No production dependency, deployment or public approval was introduced. Future
+fixes must retain this baseline and use new unseen questions for fresh accuracy
+claims. All existing staged changes and release gates were preserved.
+
+## Owner-feedback correction — women-focused question, 25 October 2026
+
+Reproduced the screenshot's unnecessary generic clarification for “what has he
+done for disabled women?”. Added a controlled `summary` plan backed by the exact
+women-specific contexts in sources 3531 (NigWED, >45) and 2279 (startup support,
+>20). Claims retain separate cohorts, reported-delivery stages, source-specific
+populations and partner attribution; no combined total or inferred later outcomes.
+Unsupported subgroups/geography/negation remain blocked or clarified. Canonical
+report-year filters apply; exact event dates are not inferred. Both English and
+Hausa templates exist; the Hausa remains an unsigned draft.
+
+Passed: preflight, workspace lint/typecheck, 32 Node tests (21 engine groups), and
+both web/Studio production builds; the root build command exited successfully.
+Three new test groups cover natural bilingual paraphrases, complete claim
+equivalence, report-year/context/follow-up handling, extra qualifiers, and missing
+or altered source-specific population/bound/outcome evidence. A fresh read-only
+numerical review plus targeted probes found no material finding in the new intent.
+
+The production-static browser check passed eight journey groups, including the
+owner's exact lowercase question, the typed Hausa question, source evidence,
+separate lower bounds, no 65-person total, and same-transcript language switching.
+Five axe states had zero violations, including the new Hausa summary. No page
+errors, HTTP failures or external requests occurred. The previous navigation,
+mobile/reflow, reset, receipts and numerical safeguards still pass. Results are
+in [chat-browser-results.json](../output/chat-browser-results.json). This does not
+establish unrestricted parser coverage or human Hausa approval. No deployment,
+new dependency, data-bundle change, commit or push was made.
+
+## Standalone bilingual chatbot — 25 October 2026
+
+Phase 3 is implemented as dedicated `/chat/` and `/ha/chat/` previews. The active
+data contract remains the 33-activity reviewed-subset v1 bundle, with 11 typed
+observations and 37 citations. Direct figure queries currently cover five named
+programmes; the controlled catalogue and remaining limitations are recorded in
+[PHASE3_IMPLEMENTATION.md](PHASE3_IMPLEMENTATION.md). No dashboard integration,
+deployment or public reveal is claimed.
+
+Passed: `npm.cmd run preflight`, workspace lint and typecheck, `npm.cmd test`
+(29 Node tests, including 18 engine groups and the new preview gate), compact
+bundle audit, all 69 Python research tests, and both web/Studio production builds.
+The final `npm.cmd run build` exited successfully. No production package
+was installed. The matching Playwright headless shell was reinstalled after its
+cache was unavailable; this adds no application dependency.
+
+`npm.cmd run test:chat-browser` passed seven grouped journeys on the production
+static export: English/Hausa direct routes and refresh; visible vertical language
+options and active state; keyboard switching; draft/transcript/programme/report-year
+and evidence preservation; Back/Forward; count and year filters; source evidence;
+report-year follow-ups; private receipt download; target/overlap/wrong-grain and
+geography safeguards; empty-year disclosure and context correction; reset; eight
+frozen topics/method/keyword results; and a long transcript. Mobile checks cover
+390px and 320px widths, 200% text reflow, reduced motion and forced-colour active
+language marking. There were no page errors, external requests or HTTP failures.
+Four WCAG 2 A/AA, 2.1 AA and 2.2 AA axe states had zero violations: English desktop
+empty conversation, Hausa with selected evidence, English mobile long transcript
+and Hausa direct mobile. These checks do not certify human screen-reader use,
+translation quality, all browser combinations or performance targets.
+
+Evidence: [browser results](../output/chat-browser-results.json),
+[desktop](../output/playwright/chat-desktop.png),
+[mobile conversation](../output/playwright/chat-mobile-conversation.png), and
+[Hausa mobile](../output/playwright/chat-mobile-hausa.png).
+
+Fresh independent numerical review reproduced two high-priority semantic errors:
+year follow-ups discarded extra filters, and generic programme vocabulary allowed
+unsupported outcomes. The executor corrected both, expanded tests to 18 groups,
+and the reviewer independently rechecked the fixes with valid and misleading
+English/Hausa probes. No material numerical finding remains in that reviewed
+scope. This is fixture-based validation, not a measured held-out correct-plan rate.
+
+Browser testing also caught a local static-server `.txt` content-type error that
+forced document reloads and lost drafts; serving route payloads as text/plain
+fixed actual client navigation. Language links disable the installed export's
+unavailable segment prefetch paths. Conditional `aria-controls` fixed the initial
+axe finding against an unmounted evidence panel. The final browser run passed.
+
+The old source-data approval cannot approve this chat preview: the new explicit
+public-build guard refuses it, with a separate regression test. No public build
+or deployment was attempted. Hausa remains a labelled draft and
+[its review packet](../research/phase3-hausa-review.md) is unsigned. Portrait,
+correction-contact, hosting, human accessibility, fresh performance and offline
+release evidence remain outstanding. Existing staged Phase 2 changes were
+preserved; no commit/push is included in this checkpoint.
+
+## Phase 2 reviewed-subset v1 — 24 October 2026
+
+The owner accepted the Phase 1 checkpoint and instructed progression. Its archive
+backlog remains false/incomplete in data; it does not block this agreed transition.
+Built content/dashboard/v1 with 33 activity records, 11 observations (eight
+reported-delivery/three targets), 37 citations, 30 canonical model documents,
+46 entities and nine evidenced relationships, separately from 257 co-occurrence
+edges. All eight categories/topics and seven explanations have draft Hausa;
+research/phase2-hausa-review.md prepares human review without establishing approval.
+
+Passed locally: preflight; workspace lint/typecheck; ten Node tests; 69 Python
+tests; both web/Studio production builds; source integrity for 646 sources and
+2,869 candidate passages; saved research-artifact audit; independent compact
+bundle audit; JSON parsing and changed-document link checks; whitespace checks.
+The compact artifact audit also runs in CI without scientific dependencies or
+raw article downloads. New tests cover canonical corpus selection, conflicting
+alias categories, byline/prose preservation, exact excerpts, source-bound review
+notes, cohort reconciliation, multi-stage activity links, typed networks,
+denominators, spreadsheet safety, preview gates and tampered/rehashed artifacts.
+
+Selected corpus: 31 source records, 30 unique full texts; five-word-shingle near
+duplicate screen at 0.8 flagged no additional pair. Existing same-event reports
+are still reconciled by activity identity rather than fuzzy text merging. Frozen
+NMF uses seed 42, eight topics, 839 features and 117 iterations. Repeated fits
+reproduced component/weight SHA-256:
+e823e7b0d7096bc6045dc718ef30ad7fbb92b09fd9aae587b4d0033765791b78.
+Repeated bundle/CSV/manifest exports were byte-identical. Full environment,
+preprocessing/corpus hashes and frozen arrays are in ignored output/phase2-analysis/.
+
+Main review caught and corrected two issues: byline matching must preserve
+substantive “By enabling...” paragraphs, and mixed delivery/target activity rows
+must expose all linked observation stages. It also preserved the annual/direct
+36,551-target source-bound variation as a note rather than an extra observation.
+The old full-archive exploratory model was refreshed after the byline correction;
+its current hash is 602533ecd992c3de191600ac8425e6daa19efea394a876ea27b7a58c7502a47a.
+Earlier hashes in historical checkpoints remain evidence for their earlier code.
+
+Saved output/office-evidence/phase2-v1-2026-10-24.zip and SHA-256 companion;
+ZIP integrity checked. This is local backup evidence, not off-machine restore.
+The strict numerical-completeness check still correctly refuses the unfinished
+review. No app UI, browser/performance result, deployment or final reveal approval
+is claimed. Next engineering work is the standalone bilingual deterministic chatbot.
+
 ## Phase 1 batch 002 and dashboard focus — 24 October 2026
 
 Owner steering deprioritizes the old tree; this checkpoint continues dashboard

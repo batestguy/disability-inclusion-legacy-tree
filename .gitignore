@@ -14,6 +14,12 @@ __pycache__/
 # Keep provenance and representative evidence; omit exploratory downloads.
 output/*
 !output/browser-results.json
+!output/chat-browser-results.json
+!output/guided-browser-results.json
+!output/chat-evaluation-50.json
+!output/chat-evaluation-50.csv
+!output/chat-evaluation-50-reviewed.csv
+!output/chat-evaluation-50-browser.json
 !output/lighthouse-3g.json
 !output/lighthouse-mobile.json
 !output/references/
@@ -28,3 +34,4 @@ output/playwright/*
 !output/playwright/mobile.png
 !output/playwright/mobile-panel.png
 !output/playwright/tree-revision-*.png
+!output/playwright/chat-*.png

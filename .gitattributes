@@ -1,0 +1,4 @@
+# These immutable artifacts have byte hashes and must survive Windows checkout.
+content/dashboard/** text eol=lf
+# Research pipeline source hashes must use the same line endings across machines.
+scripts/*.py text eol=lf

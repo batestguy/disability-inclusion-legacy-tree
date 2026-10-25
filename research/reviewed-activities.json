@@ -269,6 +269,446 @@
       "participants_or_institutions": [
         "Federal Ministry of Health"
       ]
+    },
+    {
+      "id": "inclusive-business-skills",
+      "title": "SMEDAN inclusion and business-skills support",
+      "categories": [
+        "livelihoods",
+        "education-training"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2024-01-28",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Office commended SMEDAN and reports facilitating inclusion; SMEDAN delivered training.",
+      "participants_or_institutions": [
+        "SMEDAN"
+      ],
+      "geography": [
+        "FCT"
+      ],
+      "evidence": [
+        {
+          "source_id": 1801,
+          "source_url": "https://ossaposneo.org/ssap-hon-abba-isa-commends-dg-smedan-for-implementing-5-pwd-inclusion-in-empowerment-program/",
+          "report_date": "2024-01-28",
+          "source_text_sha256": "a40074055d446f0b3e0012f5d0759146e0fbb517391badfc3dd734ba57a48944",
+          "excerpt": "5 Persons With Disabilities drawn from different disability clusters",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Same cohort as existing inclusive-business-skills activity; five percent quota and other participants are separate context, not additional PWD beneficiaries.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "veterans-mou-2024",
+      "title": "Reported agreement supporting wounded veterans",
+      "categories": [
+        "healthcare-welfare",
+        "livelihoods"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2024-11-06",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Office reports signing a cooperation framework.",
+      "participants_or_institutions": [
+        "African Unconquered Foundation"
+      ],
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 4243,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-african-unconquered-foundation-sign-historic-mou-to-empower-wounded-veterans/",
+          "report_date": "2024-11-06",
+          "source_text_sha256": "de32f1b730877485718ceff99152ba536e90119cdd45fe85a57f34f4a5c90172",
+          "excerpt": "have signed a historic Memorandum of Understanding (MOU).",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Signed MOU is office-reported; proposed jobs, rehabilitation and welfare services are not measured delivery.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "school-blind-support-2025",
+      "title": "Food and support for the FCT School of the Blind",
+      "categories": [
+        "healthcare-welfare",
+        "education-training"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-03-01",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Office reports school support with SMEDAN.",
+      "participants_or_institutions": [
+        "SMEDAN",
+        "FCT School of the Blind"
+      ],
+      "geography": [
+        "FCT"
+      ],
+      "evidence": [
+        {
+          "source_id": 4881,
+          "source_url": "https://ossaposneo.org/ramadan-ssap-abba-isa-partners-with-smedan-to-support-fct-school-of-the-blind-with-food-and-cash/",
+          "report_date": "2025-03-01",
+          "source_text_sha256": "0f2b943f492235b544b60ab9fb1c2afd359416d84392240d6b77a405901c5aa4",
+          "excerpt": "has extended humanitarian support to the FCT School of the Blind.",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Food and financial assistance reported without cash total or recipient count; requested assistive aids are unmet needs, not delivered devices.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "disability-readiness-toolkit-2025",
+      "title": "Unveiling a disability-readiness toolkit",
+      "categories": [
+        "policy-accessibility",
+        "digital-assistive-technology",
+        "livelihoods"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-05-22",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Office participated through Lanre Oloyede; toolkit produced by Deaf-in-Tech and DataLead Africa.",
+      "participants_or_institutions": [
+        "Deaf-in-Tech",
+        "DataLead Africa"
+      ],
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 5151,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-launches-disability-readiness-toolkit-developed-by-deaf-in-tech-and-datalead-africa/",
+          "report_date": "2025-05-22",
+          "source_text_sha256": "f998821367f23d476f9644f5033480314d04ae14954ef486a15ce84ad5690a32",
+          "excerpt": "performed the official unveiling of the Disability Readiness Assessment and Workforce Toolkit",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Unveiling is not toolkit authorship, workforce uptake or independently verified jobs. Other training/placement figures in the article remain outside this bundle.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "para-soccer-unity-cup-2025",
+      "title": "Para-soccer tournament launch and advocacy",
+      "categories": [
+        "sport",
+        "political-engagement"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-05-23",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Launched and advocated inclusion; tournament organised by Misbau Lawal.",
+      "participants_or_institutions": [
+        "Para-Soccer Federation of Nigeria"
+      ],
+      "geography": [
+        "FCT"
+      ],
+      "evidence": [
+        {
+          "source_id": 5197,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-flags-off-inaugural-tinubu-shettima-para-soccer-unity-cup/",
+          "report_date": "2025-05-23",
+          "source_text_sha256": "a39232213c79f383e072efd531495db2aea0b426d225f8f34a42a90814c9b12d",
+          "excerpt": "officially launched the maiden edition of the Tinubu-Shettima Para-Soccer Unity Cup",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Source also records partisan endorsements; no athlete total, income gain or national mainstreaming delivery is inferred.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "digital-employment-roundtable-2025",
+      "title": "Advocacy on technology and employment inclusion",
+      "categories": [
+        "digital-assistive-technology",
+        "livelihoods",
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-06-24",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Office represented by Lanre Oloyede; advocated practical inclusion.",
+      "participants_or_institutions": [
+        "Jobberman Nigeria",
+        "Mastercard Foundation"
+      ],
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 5255,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-tasks-stakeholders-to-bridge-digital-divide-for-persons-with-disabilities/",
+          "report_date": "2025-06-24",
+          "source_text_sha256": "b95cf407de25a4b9b9c55d9c81ae98940490d73b4b1f426ae38d0196eb15eaa5",
+          "excerpt": "at a roundtable on Technology and Employment Inclusion in Marginalised Contexts",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Roundtable advocacy is not a delivered training programme or jobs total; organisers and study findings are not attributed to Isa.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "state-inclusion-report-unveiling-2025",
+      "title": "Unveiling a disability-inclusion report",
+      "categories": [
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-07-26",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Unveiled and commented on a report produced by Project Enable Africa.",
+      "participants_or_institutions": [
+        "Project Enable Africa",
+        "Nigeria Youth Futures Fund"
+      ],
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 5274,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-unveils-2024-state-of-disability-inclusion-report/",
+          "report_date": "2025-07-26",
+          "source_text_sha256": "3c90cfedbf3f7250d0c315faa022c8e0f8a1446e68f3a6c8ac1492430efb2a95",
+          "excerpt": "officially unveiled the 2024 State of Disability Inclusion Report",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Report title year is 2024, publication report date is 2025. State compliance statistics are contextual, not Isa-delivered coverage.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "accessible-digital-future",
+      "title": "Advocacy at the Progressive Digital Media Summit",
+      "categories": [
+        "digital-assistive-technology",
+        "policy-accessibility"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-08-04",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Participant and advocate for accessible digital content.",
+      "participants_or_institutions": [],
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 5278,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-joins-president-tinubu-other-dignitaries-at-maiden-progressive-digital-media-summit/",
+          "report_date": "2025-08-04",
+          "source_text_sha256": "b31afd6f2621a87975e9e69c3720a311ece7ed34ac5740e9bc8d661423543ab6",
+          "excerpt": "emphasizing the critical importance of digital inclusion for Persons with Disabilities (PWDs).",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Same activity as existing permanent achievement accessible-digital-future. No platform or training delivery measured.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "red-cross-collaboration-2025",
+      "title": "Disaster-response cooperation with the Red Cross",
+      "categories": [
+        "healthcare-welfare",
+        "digital-assistive-technology"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2025-08-09",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Courtesy visit and reported cooperation on disability-inclusive emergency response.",
+      "participants_or_institutions": [
+        "Nigerian Red Cross Society"
+      ],
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 5288,
+          "source_url": "https://ossaposneo.org/ssap-abba-isa-nigerian-red-cross-strike-partnership-on-emergency-response-for-persons-with-disabilities/",
+          "report_date": "2025-08-09",
+          "source_text_sha256": "ce3a00257aab8122cc006819ca90aedda6fb6e76bbf941b9757cab31cbc2b1ff",
+          "excerpt": "has sealed a strategic partnership with the Nigerian Red Cross Society (NRCS)",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Volunteer numbers and nationwide offices describe Red Cross capacity, not beneficiaries served by Isa. Planned programmes do not establish delivery.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "rehabilitation-centres-plan-2025",
+      "title": "Announcement of rehabilitation-centre planning",
+      "categories": [
+        "healthcare-welfare",
+        "policy-accessibility"
+      ],
+      "stage": "stated-agenda",
+      "report_date": "2025-09-06",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Announced cooperation and an assessment-stage rehabilitation initiative.",
+      "participants_or_institutions": [
+        "MRTB",
+        "SCIAN",
+        "Brain and Spine Foundation Africa"
+      ],
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 5311,
+          "source_url": "https://ossaposneo.org/fg-to-establish-medical-rehabilitation-centres-nationwide-for-spinal-cord-injuries/",
+          "report_date": "2025-09-06",
+          "source_text_sha256": "65d31aafe9580e4437a09b50e0f5acf39e59d3b480566045bff6c1c6b2550ebc",
+          "excerpt": "the project is at the “situation assessment stage”",
+          "report_stage": "stated-agenda"
+        }
+      ],
+      "measures": [],
+      "limitations": "Assessment/planning stage; not centres opened or patients treated. Global injury statistics in the article are contextual.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "adapted-vehicle-presentation-2026",
+      "title": "Presentation of an accessibility-adapted vehicle",
+      "categories": [
+        "digital-assistive-technology",
+        "livelihoods"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2026-02-22",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Participated in a vehicle demonstration and handover with automotive firms.",
+      "participants_or_institutions": [
+        "Elizade Autoland",
+        "JAC Motors"
+      ],
+      "geography": [],
+      "evidence": [
+        {
+          "source_id": 5420,
+          "source_url": "https://ossaposneo.org/hope-renewed-as-tinubus-aide-abba-isa-unveils-nigerias-first-accessibility-adapted-vehicle/",
+          "report_date": "2026-02-22",
+          "source_text_sha256": "97dfefa0de93aef6282ccdc6ced60a3e28ef9471599488b9fd79209eb6029b79",
+          "excerpt": "the symbolic handover of the adapted vehicle to the SSA",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "National-first claim is not independently verified. Nationwide distribution and e-hailing participation remain proposed, not delivered geographic coverage.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "paravolley-election-2026",
+      "title": "Reported election to para-volleyball leadership",
+      "categories": [
+        "sport",
+        "honours-ceremonial"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2026-07-01",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Reportedly elected federation president.",
+      "participants_or_institutions": [
+        "Para Volley Federation of Nigeria",
+        "National Sports Commission"
+      ],
+      "geography": [
+        "Abuja"
+      ],
+      "evidence": [
+        {
+          "source_id": 5709,
+          "source_url": "https://ossaposneo.org/presidential-aide-abba-isa-elected-president-of-para-volley-federation-of-nigeria/",
+          "report_date": "2026-07-01",
+          "source_text_sha256": "5b15f2ea82edba0c3b9f38cedadf947d511dee7d9411821a2959b6dbfaaadb0f",
+          "excerpt": "has been elected President of the Para Volley Federation of Nigeria.",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Election and leadership role do not establish athlete outcomes; vote and term figures are not beneficiary measures.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
+    },
+    {
+      "id": "paravolley-southwest-meeting-2026",
+      "title": "South-West para-volleyball stakeholders meeting",
+      "categories": [
+        "sport"
+      ],
+      "stage": "reported-activity",
+      "report_date": "2026-07-21",
+      "event_date": null,
+      "date_basis": "Source publication date; exact event date not inferred from weekday wording.",
+      "isa_role": "Represented by Technical Director Christian Agoawuike.",
+      "participants_or_institutions": [
+        "Nigeria ParaVolley Federation"
+      ],
+      "geography": [
+        "Lagos"
+      ],
+      "evidence": [
+        {
+          "source_id": 5803,
+          "source_url": "https://ossaposneo.org/npvf-moves-to-reposition-south-west-zone-resolves-disputes-ahead-of-la-2028-paralympics/",
+          "report_date": "2026-07-21",
+          "source_text_sha256": "5b83b7636fe94a1d08cf695a81b3833e4220acf5d20b5260f2aa999ceb479a7e",
+          "excerpt": "was represented at the meeting by the Federation",
+          "report_stage": "reported-activity"
+        }
+      ],
+      "measures": [],
+      "limitations": "Representation, dispute resolution and future sporting plans are reported; match scores and future Paralympic dates are not beneficiary counts.",
+      "review_status": "source-context-checked-research-only",
+      "public_approved": false,
+      "batch_id": "phase-2-reviewed-subset"
     }
   ]
 }

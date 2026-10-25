@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "corpus_source_ids": [
+    1217,
+    1222,
+    1240,
+    1243,
+    1257,
+    1263,
+    1278,
+    1291,
+    1295,
+    1307,
+    1801,
+    2279,
+    2352,
+    2790,
+    3531,
+    4243,
+    4252,
+    4860,
+    4881,
+    5105,
+    5151,
+    5197,
+    5255,
+    5274,
+    5278,
+    5288,
+    5311,
+    5420,
+    5709,
+    5803
+  ],
+  "topics": [
+    {
+      "id": "topic-1",
+      "label": {
+        "en": "SMEDAN & enterprise support",
+        "ha": "SMEDAN da tallafin sana’oi"
+      },
+      "terms": [
+        "smedan",
+        "agency",
+        "business",
+        "director general",
+        "general",
+        "pwds",
+        "small",
+        "businesses",
+        "nigeria smedan",
+        "development agency",
+        "agency nigeria",
+        "medium"
+      ],
+      "representative_source_ids": [
+        1801,
+        4881,
+        5105
+      ]
+    },
+    {
+      "id": "topic-2",
+      "label": {
+        "en": "Honours & ceremonial gatherings",
+        "ha": "Karramawa da bukukuwa"
+      },
+      "terms": [
+        "award",
+        "set",
+        "senate",
+        "sen",
+        "senate committee",
+        "chairman senate",
+        "house representatives",
+        "rt",
+        "executive governor",
+        "various spheres",
+        "development nigeria",
+        "university"
+      ],
+      "representative_source_ids": [
+        1257,
+        1263
+      ]
+    },
+    {
+      "id": "topic-3",
+      "label": {
+        "en": "Para-sport leadership & participation",
+        "ha": "Shugabanci da shiga wasannin masu nakasa"
+      },
+      "terms": [
+        "para",
+        "sports",
+        "federation",
+        "athletes",
+        "sports commission",
+        "commission",
+        "soccer",
+        "para soccer",
+        "sport",
+        "national",
+        "board",
+        "unity"
+      ],
+      "representative_source_ids": [
+        5709,
+        5803,
+        5197
+      ]
+    },
+    {
+      "id": "topic-4",
+      "label": {
+        "en": "Appointments & disability-rights statements",
+        "ha": "Naɗe-naɗe da kalaman hakkin masu nakasa"
+      },
+      "terms": [
+        "appointment",
+        "people disabilities",
+        "matters",
+        "statement",
+        "people",
+        "disability matters",
+        "rights",
+        "new",
+        "tinubu",
+        "disability",
+        "president bola",
+        "end xxxxxxxxxxxxxxxxxxxxxxxxx"
+      ],
+      "representative_source_ids": [
+        1240,
+        1278,
+        1222,
+        1295
+      ]
+    },
+    {
+      "id": "topic-5",
+      "label": {
+        "en": "Digital access & workforce inclusion",
+        "ha": "Damar dijital da shigar masu nakasa cikin aiki"
+      },
+      "terms": [
+        "employment",
+        "digital",
+        "tech",
+        "pwds",
+        "workforce",
+        "systemic",
+        "technology",
+        "act",
+        "inclusion",
+        "inclusive",
+        "africa",
+        "public"
+      ],
+      "representative_source_ids": [
+        5151,
+        5255,
+        5278
+      ]
+    },
+    {
+      "id": "topic-6",
+      "label": {
+        "en": "Courtesy visits & institutional cooperation",
+        "ha": "Ziyarce-ziyarcen girmamawa da haɗin gwiwar hukumomi"
+      },
+      "terms": [
+        "visit",
+        "courtesy",
+        "secretary",
+        "paid courtesy",
+        "work",
+        "office",
+        "cooperation",
+        "courtesy visit",
+        "paid",
+        "healthcare",
+        "promising",
+        "team"
+      ],
+      "representative_source_ids": [
+        1307,
+        1291,
+        1243,
+        5288
+      ]
+    },
+    {
+      "id": "topic-7",
+      "label": {
+        "en": "Food relief & welfare support",
+        "ha": "Agajin abinci da tallafin walwala"
+      },
+      "terms": [
+        "tejuosho",
+        "adenike",
+        "adenike tejuosho",
+        "food",
+        "pwds",
+        "president tinubu",
+        "palliatives",
+        "poverty",
+        "vulnerable",
+        "tejuosho foundation",
+        "queen adenike",
+        "distribution"
+      ],
+      "representative_source_ids": [
+        2352,
+        2790
+      ]
+    },
+    {
+      "id": "topic-8",
+      "label": {
+        "en": "Women, health & support partnerships",
+        "ha": "Mata, lafiya da haɗin gwiwar tallafi"
+      },
+      "terms": [
+        "women",
+        "women disabilities",
+        "girls",
+        "women girls",
+        "african",
+        "health",
+        "empowerment",
+        "life",
+        "partnership",
+        "support",
+        "girls disabilities",
+        "challenges"
+      ],
+      "representative_source_ids": [
+        3531,
+        4243,
+        2279,
+        4860
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "source_id": 1217,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.4970065963771407,
+        0.3350297670548189,
+        0.0,
+        0.0,
+        0.16796363656804048,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1222,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0365983779604233,
+        0.8547743775032463,
+        0.0,
+        0.0,
+        0.0,
+        0.10862724453633053
+      ]
+    },
+    {
+      "source_id": 1240,
+      "topic_shares": [
+        0.0,
+        0.02713251283463438,
+        0.0,
+        0.9728674871653655,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1243,
+      "topic_shares": [
+        0.0,
+        0.1695835967871391,
+        0.0,
+        0.09134081544151734,
+        0.0,
+        0.7390755877713435,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1257,
+      "topic_shares": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1263,
+      "topic_shares": [
+        0.0,
+        0.9963718611410648,
+        0.0,
+        0.003628138858935133,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1278,
+      "topic_shares": [
+        0.0,
+        0.0987927805534783,
+        0.0,
+        0.8891130820520882,
+        0.0,
+        0.0,
+        0.0,
+        0.012094137394433432
+      ]
+    },
+    {
+      "source_id": 1291,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.04370303860316601,
+        0.0,
+        0.9562969613968341,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1295,
+      "topic_shares": [
+        0.06611503765084896,
+        0.0,
+        0.0,
+        0.760402185678068,
+        0.06528093195578673,
+        0.07622292932494507,
+        0.03197891539035117,
+        0.0
+      ]
+    },
+    {
+      "source_id": 1307,
+      "topic_shares": [
+        0.0,
+        0.012043811711693171,
+        0.0,
+        0.0,
+        0.0,
+        0.9857861437282117,
+        0.0,
+        0.0021700445600951576
+      ]
+    },
+    {
+      "source_id": 1801,
+      "topic_shares": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 2279,
+      "topic_shares": [
+        0.23428824696314046,
+        0.07954550688318034,
+        0.0,
+        0.0,
+        0.0,
+        0.00015681132818402165,
+        0.0,
+        0.6860094348254951
+      ]
+    },
+    {
+      "source_id": 2352,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 2790,
+      "topic_shares": [
+        0.013738353667218043,
+        0.01571141712324093,
+        0.025730131745342767,
+        0.0,
+        0.0,
+        0.018992647952832876,
+        0.8889368275164515,
+        0.036890621994913816
+      ]
+    },
+    {
+      "source_id": 3531,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "source_id": 4243,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "source_id": 4252,
+      "topic_shares": [
+        0.13764514504486938,
+        0.015240003923242701,
+        0.09477878931948548,
+        0.1420480384963578,
+        0.1297384481963881,
+        0.025760429630969615,
+        0.14823313052870293,
+        0.30655601485998407
+      ]
+    },
+    {
+      "source_id": 4860,
+      "topic_shares": [
+        0.22826282950876292,
+        0.0,
+        0.037915295580921896,
+        0.08892304192552651,
+        0.24874180548802707,
+        0.0,
+        0.06647999575147598,
+        0.32967703174528556
+      ]
+    },
+    {
+      "source_id": 4881,
+      "topic_shares": [
+        0.9320828424297293,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06791715757027078,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5105,
+      "topic_shares": [
+        0.258242703439453,
+        0.0,
+        0.0,
+        0.18076501900218878,
+        0.3836702933466164,
+        0.04554009780515437,
+        0.06933576741847712,
+        0.062446118988110234
+      ]
+    },
+    {
+      "source_id": 5151,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5197,
+      "topic_shares": [
+        0.06067147524621992,
+        0.0,
+        0.8149887609102924,
+        0.011953501810725296,
+        0.11238626203276239,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5255,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5274,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.12904109207102143,
+        0.17251008818713517,
+        0.6359512199117984,
+        0.06249759983004509,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5278,
+      "topic_shares": [
+        0.0,
+        0.02064912031276862,
+        0.1355377214007694,
+        0.0,
+        0.7467226471719344,
+        0.0,
+        0.0970905111145276,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5288,
+      "topic_shares": [
+        0.10274953001734703,
+        0.0,
+        0.023819520963758122,
+        0.0,
+        0.05841126763551276,
+        0.5899130408491327,
+        0.19440817012901232,
+        0.030698470405237197
+      ]
+    },
+    {
+      "source_id": 5311,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.06542460591959398,
+        0.13915244156623158,
+        0.33242183539475045,
+        0.1731454923244091,
+        0.0,
+        0.2898556247950148
+      ]
+    },
+    {
+      "source_id": 5420,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.0,
+        0.042948150754411885,
+        0.5334367893920324,
+        0.0,
+        0.2648374094292176,
+        0.15877765042433822
+      ]
+    },
+    {
+      "source_id": 5709,
+      "topic_shares": [
+        0.0,
+        0.060504188228636256,
+        0.9394958117713637,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_id": 5803,
+      "topic_shares": [
+        0.0,
+        0.0,
+        0.9242913458102193,
+        0.0,
+        0.0,
+        0.07570865418978072,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "publication_year": "2023",
+      "denominator_unique_posts": 10,
+      "modelled_posts": 10,
+      "zero_vector_posts": 0,
+      "mean_topic_share": [
+        0.0066115,
+        0.23039246,
+        0.0533605,
+        0.39508589,
+        0.00652809,
+        0.27573816,
+        0.01999426,
+        0.01228914
+      ]
+    },
+    {
+      "publication_year": "2024",
+      "denominator_unique_posts": 7,
+      "modelled_posts": 7,
+      "zero_vector_posts": 0,
+      "mean_topic_share": [
+        0.19795311,
+        0.01578528,
+        0.01721556,
+        0.02029258,
+        0.01853406,
+        0.0064157,
+        0.29102428,
+        0.43277944
+      ]
+    },
+    {
+      "publication_year": "2025",
+      "denominator_unique_posts": 10,
+      "modelled_posts": 10,
+      "zero_vector_posts": 0,
+      "mean_topic_share": [
+        0.15820094,
+        0.00206491,
+        0.1206727,
+        0.05933041,
+        0.45183053,
+        0.09390134,
+        0.04273144,
+        0.07126772
+      ]
+    },
+    {
+      "publication_year": "2026",
+      "denominator_unique_posts": 3,
+      "modelled_posts": 3,
+      "zero_vector_posts": 0,
+      "mean_topic_share": [
+        0.0,
+        0.02016806,
+        0.62126239,
+        0.01431605,
+        0.17781226,
+        0.02523622,
+        0.08827914,
+        0.05292588
+      ]
+    }
+  ],
+  "method": {
+    "environment": {
+      "python": "3.14.4",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.0"
+    },
+    "settings_sha256": "d2078a93f2f514f22e2f665a761ff50dd3b71d5eca932930e9bedd7615130cf4",
+    "input_corpus_sha256": "54d63f6c389d0267dea005636eaf311e9b955f73dcfaf281e3f4fd4aa6ed841a",
+    "cleaned_corpus_sha256": "21984a4c7933403519be53059cd1a4ef7df1044b149b8c90f53740c409ef1247",
+    "unique_full_texts": 30,
+    "model_posts": 30,
+    "features": 839,
+    "iterations": 117,
+    "reconstruction_error": 3.8544698895699097,
+    "model_arrays_sha256": "e823e7b0d7096bc6045dc718ef30ad7fbb92b09fd9aae587b4d0033765791b78",
+    "method": "Eight-topic NMF over TF-IDF word/phrase features",
+    "random_state": 42,
+    "n_components": 8,
+    "tfidf": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 3,
+      "max_df": 0.85,
+      "sublinear_tf": true,
+      "additional_stop_words": [
+        "ssa",
+        "mr",
+        "mrs",
+        "comrade",
+        "senior",
+        "special",
+        "assistant",
+        "presidential"
+      ],
+      "max_features": 12000
+    },
+    "reviewed_boilerplate_lines_removed": 2,
+    "representative_min_topic_share": 0.25,
+    "representative_selection": "Source-checked subset of strongest model articles; ambiguous cross-loadings omitted without altering weights",
+    "language": "English-source text; Hausa labels/explanations are drafts, not Hausa-corpus analysis",
+    "scope": "Reviewed selected-source preview: 31 source records / 30 distinct texts, not the full archive or a representative career sample. Owner accepted Phase 1 checkpoint to advance; full numerical review remains incomplete. English-source NLP; Hausa explanations are drafts.",
+    "full_archive_model": false,
+    "source_aliases": {
+      "1217": 1217,
+      "1222": 1222,
+      "1240": 1240,
+      "1243": 1243,
+      "1245": 1243,
+      "1257": 1257,
+      "1263": 1263,
+      "1278": 1278,
+      "1291": 1291,
+      "1295": 1295,
+      "1307": 1307,
+      "1801": 1801,
+      "2279": 2279,
+      "2352": 2352,
+      "2790": 2790,
+      "3531": 3531,
+      "4243": 4243,
+      "4252": 4252,
+      "4860": 4860,
+      "4881": 4881,
+      "5105": 5105,
+      "5151": 5151,
+      "5197": 5197,
+      "5255": 5255,
+      "5274": 5274,
+      "5278": 5278,
+      "5288": 5288,
+      "5311": 5311,
+      "5420": 5420,
+      "5709": 5709,
+      "5803": 5803
+    },
+    "near_duplicate_screen": {
+      "method": "five-word shingle Jaccard",
+      "threshold": 0.8,
+      "flagged_pairs": []
+    },
+    "representative_review": "Selected texts source-context checked; see label_review_complete for term/representative interpretation status",
+    "label_review_complete": true,
+    "ha_reviewed": false,
+    "zero_vector_policy": "Period topic means exclude zero-vector documents; denominators and modelled counts are explicit",
+    "category_policy": "Reviewed multi-label source coverage; category shares need not sum to 100%"
+  }
+}

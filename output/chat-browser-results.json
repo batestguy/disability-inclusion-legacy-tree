@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-25T11:39:52.752Z",
+  "base": "http://127.0.0.1:8767",
+  "checks": [
+    "English direct route, visible vertical language control, active state and empty conversation",
+    "Empty composer validation, bundle-derived inventory and active report-year filter",
+    "Exact owner women-focused question and typed Hausa equivalent produce two separate sourced lower-bound claims; locale switch re-renders the summary without translating visitor text",
+    "Keyboard language switch preserves draft, raw question, programme, report-year filter and evidence selection; assistant re-renders in Hausa",
+    "Back/Forward locale synchronisation, contextual report-year follow-up and privacy-preserving receipt",
+    "Targets, overlap refusal, wrong counting grain, unsupported geography and empty-year interpretation",
+    "Reset, eight frozen topics, method explanation, keyword evidence and usable long mobile transcript",
+    "Direct Hausa route and refresh stay Hausa; in-memory session clears; 320px/200% text reflow, reduced motion and forced-colour active-language marker"
+  ],
+  "axe": [
+    {
+      "label": "English desktop empty conversation",
+      "violations": []
+    },
+    {
+      "label": "Women-focused Hausa summary",
+      "violations": []
+    },
+    {
+      "label": "Hausa conversation with selected evidence",
+      "violations": []
+    },
+    {
+      "label": "English mobile long transcript",
+      "violations": []
+    },
+    {
+      "label": "Hausa direct mobile route",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "failedResponses": []
+}

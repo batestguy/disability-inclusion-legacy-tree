@@ -1,5 +1,207 @@
 # Project handoff
 
+## Resume here — minimal replacing choices, 25 October 2026
+
+Owner rejected the verbose scrollable version. The current `/chat/` and
+`/ha/chat/` previews show one short question/answer with up to three choices.
+More options / Previous replace that set. No sidebar, statistics, visible path,
+repeated prompts, transcript, automatic evidence dump or internal scroll area.
+Unavailable history actions are omitted. Back/Next retrace chosen questions;
+Start again resets. Source lists, source findings and record details replace the
+screen only when selected. Long original source text/metadata use separate pages,
+with exact text preserved and source excerpts distinguished from paraphrases.
+
+Women-focused figures are on their corresponding clickable programme cards,
+with separate bounds and a short no-sum qualification. Main answers retain
+necessary target/delivery, unit and attribution limits. Full record metadata
+and downloads remain under Details. Shared language navigation preserves the
+current node, option/source/detail page and selected source in memory; reload
+restores the active node path rather than the auxiliary reader state.
+
+See docs/GUIDED_CHAT_IMPLEMENTATION.md and the newest docs/VALIDATION.md entry.
+All 162 nodes / 33 activities / 11 observations remain reachable. No graph,
+bundle, legacy parser, frozen audit, approval flags or dependencies changed.
+Hausa remains draft. No commit, push or deployment. Owner review of this simpler
+flow precedes dashboard integration. Earlier scrollable-panel notes below are
+historical and superseded by this correction.
+
+## Earlier checkpoint — compact guided chatbot, 25 October 2026
+
+Latest owner direction is implemented locally at `/chat/` and `/ha/chat/`:
+clickable questions replace the visible step with an answer and useful follow-ups,
+through to source evidence. Build this standalone flow before the main dashboard.
+The conversation panel has a stable height; long answers, source disclosures and
+options scroll inside it. Earlier-answer transcripts no longer expand the page.
+Back/Next retrace visited steps; choosing an option starts a new forward branch;
+Start again resets it. Language switching preserves active/forward steps and
+selected evidence in memory. Refresh restores the active hash path only.
+
+All 162 graph nodes, 33 activities and 11 observations are reachable. Figure
+endpoints offer the activity summary, separate same-activity figures and sources;
+source endpoints return to available figures. Topic/name/relationship follow-ups
+lead to up to three activities sharing cited reports, explicitly qualified rather
+than implying partnerships. Original English evidence qualifications are visible,
+including developer attribution on the toolkit relationship. Mobile introduction
+is compact so questions take priority. Hausa wording remains draft.
+
+See docs/GUIDED_CHAT_IMPLEMENTATION.md and the newest docs/VALIDATION.md entry
+for checks and limits. No API, dependency, data change, public approval, commit,
+push or deployment was added. Legacy parser/frozen failed-audit artifacts remain
+unchanged; graph coverage is not natural-language accuracy. Preserve all existing
+staged/untracked work. Owner review of this guided flow is next, followed by the
+Phase 4 dashboard. Full offline reload/cache readiness remains later work.
+Earlier hosted-planner recommendations below are historical research, superseded
+for this wave by the owner's guided interaction choice.
+
+## Latest research — free-tier modernisation recommendation
+
+Owner requested research into modern methods for a large improvement, then added
+**Free tier**. Read docs/CHATBOT_MODERNISATION_RESEARCH.md and
+docs/FREE_TIER_PROVIDER_FINDINGS.md (official sources checked 25 October 2026).
+Recommendation for an experiment: semantic plan extraction with a free hosted
+model, initially Groq GPT-OSS 120B versus 20B behind Workers Free, complete reviewed
+fact cards/all 11 observations, deterministic execution and bilingual rendering.
+Workers AI is an alternative to benchmark; no model's Hausa quality was tested.
+Schema compliance is not semantic accuracy. Gemini unpaid-data/audience terms
+are material to public use; provider/account eligibility remains unverified.
+
+Free quotas are finite and shared; no auto-upgrade, paid fallback or trial-credit
+assumption. Keep keys outside the repository/browser. Hosted planning introduces
+external processing, asynchronous replies and an online dependency; preserve a
+useful local/offline path and resolve the accepted offline/privacy contract rather
+than silently changing it. Proposed improvement/accuracy targets are unachieved,
+not approved release gates. The failed fifty-question baseline and engine remain
+unchanged. No account/key inspection, inference call, new package or deployment
+was performed. Research is complete; this is not an implementation checkpoint.
+
+## Latest checkpoint — fifty-question audit fails conversational quality
+
+25 October: owner requested 50 random questions and an accuracy check. Completed
+a seeded, stratified draw from an independently evidence-authored 60-question pool:
+25 English/25 draft Hausa, with 34 answerable, ten ambiguous and six unsupported.
+Engine, gold and selected set were frozen before execution; no chatbot fixes were
+made during evaluation. Read docs/CHATBOT_ACCURACY_AUDIT.md and its protocol.
+
+**Natural-language quality is not ready:** zero of 34 answerable questions received
+a complete correct answer. Thirty-one got unnecessary clarification; one got an
+irrelevant refusal; one got a partial methodology limitation; one SMEDAN year
+follow-up got five participants instead of year 2024. The five is a true sourced
+value answering the wrong question, not a fabricated number. Across all 50,
+independent semantic review found five useful complete handling responses (two
+targeted clarifications/three substantive limitations) plus one partial. The
+13/50 coarse action-match score includes eight generic ambiguity fallbacks and
+must not be advertised as factual accuracy or useful resolution.
+
+All 50 were also asked in the production-static browser; replies/statuses matched
+the baseline exactly, with no page errors/HTTP failures. Existing 32 Node tests,
+lint/typecheck and both builds still pass; this contrasts their narrow fixture
+scope with the broader audit and does not erase its failures. Saved candidate
+pool, frozen selected gold, raw/reviewed results, CSV and independent review.
+The evaluator refuses code/data drift or baseline overwrite. No production
+dependency, commit/push, deployment or source-bundle change was introduced.
+
+Next substantive work is broader evidence-driven plan selection, contextual
+understanding and relevant clarification, followed by a **new unseen** bilingual
+sample. The exposed 50 are now regression material. Do not patch their literal
+phrases and call the retest held-out accuracy. Standalone chat remains a prototype;
+milestone 2 cannot be called validated for ordinary conversation. Hausa human
+approval, source coverage and existing public-reveal gates remain open. Preserve
+all existing staged work. Earlier implementation checkpoints below are historical.
+
+## Latest owner feedback — women-focused question
+
+25 October: the owner showed the generic clarification returned for “what has he
+done for disabled women?”. Fixed with a source-bound bilingual summary and natural
+English/Hausa paraphrases, plus a starter suggestion. It reports NigWED >45 and
+March startup support >20 separately, with exact source contexts for women,
+partner attribution, no double counting or inferred income/employment. It honours
+canonical report-year filters and refuses extra unsupported subgroups/geography.
+The summary is a controlled intent, not unrestricted language understanding.
+Twenty-one engine groups and a fresh numerical review pass; final build/browser
+evidence is recorded in the newest VALIDATION entry. Human Hausa approval remains
+pending. Existing staged work and release gates are unchanged. Refresh the local
+preview and ask again to see the new reply; previous in-memory replies are not
+silently reinterpreted. Phase 4 dashboard integration is still pending.
+
+## Resume here — standalone chatbot ready for owner review, 25 October
+
+Phase 3 engineering is implemented at `/chat/` and `/ha/chat/`; run the static
+preview with `npm.cmd run preview` (port 8767). The existing home and permanent
+achievement URLs remain. Dashboard integration has not started. Read
+docs/PHASE3_IMPLEMENTATION.md and the newest docs/VALIDATION.md entry first.
+
+The standalone interface uses the Phase 2 v1 bundle, typed deterministic plans,
+evidence-bound claims, bilingual draft templates, programme/report-year context,
+clarifications, keyword/source lookups, descriptive catalogues, method explanations,
+record evidence and private calculation downloads. Direct figure lookup supports
+the five named starter programmes; other reviewed activities are discoverable
+through lists/keyword evidence. Do not imply unrestricted natural-language support
+or numerical coverage of every observation. No runtime inference or query storage.
+
+One route-derived locale controls page and chat; the visible shared instruction is
+exactly **Change language / Canja harshe**, English vertically above Hausa. Drafts,
+structured transcript, programme/year and selected evidence survive client language
+navigation and Back/Forward. Visitor text stays unchanged, assistant templates
+re-render; refreshing starts a new in-memory conversation. Computation is synchronous,
+so there is no delayed old-language response. The preview server now serves `.txt`
+route payloads as text/plain to preserve client navigation. Language links disable
+prefetch; the installed Next static export's segment-prefetch paths were unavailable.
+
+Latest checks: preflight, workspace lint/typecheck, 29 Node tests, 69 Python tests,
+compact artifact audit and both production builds passed. Seven focused browser
+journey groups passed, with no
+axe violations in four states, page errors, failed responses or external requests.
+Two independently reproduced semantic-routing issues were fixed and rechecked:
+year follow-ups cannot discard extra filters, and programme queries cannot replace
+unsupported outcomes with an existing cohort count. Existing staged Phase 2 work
+was preserved; no commit, push, deployment or new production dependency was made.
+
+Next owner milestone is reviewing the standalone chat. Then proceed to Phase 4's
+coordinated visual dashboard and integration. Human Hausa review remains pending:
+research/phase3-hausa-review.md covers the new wording. The preview has a separate
+public-build refusal; CMS approval of older content cannot approve this bundle.
+Portrait rights, correction contact, hosting, human accessibility, fresh performance
+and final public-reveal gates remain open. Offline installation/cache readiness is
+still Phase 5 work. Git ownership is unchanged; read-only Git commands used the
+command-scoped `-c safe.directory=D:/HonAbbas` exception, no global configuration.
+
+## Resume here — Phase 1 accepted, Phase 2 v1 ready
+
+24 October: owner said “Phase 1 is okay, proceed”. This authorizes progression
+despite the recorded backlog; do not block chatbot work on another Phase 1 approval
+or silently mark unreviewed passages complete. Phase 2 produced a reviewed-subset
+data bundle at content/dashboard/v1/bundle.json plus CSVs and hash manifest. Read
+docs/PHASE2_FINDINGS.md and docs/IMPLEMENTATION_PHASES.md for the current contract.
+
+Bundle: 33 activities, 11 numerical observations (eight reported-delivery, three
+targets), 37 citations, eight reviewed categories and frozen topics, 46 entities,
+149 body-text mentions, 257 co-occurrence edges and nine separately evidenced
+relationships (six reported collaborations, two intentions, one reported signing).
+The model uses 31 selected source records/30 exact-distinct texts, not the full
+archive or a representative career sample. Seed 42; 839 features; 117 iterations;
+model hash e823e7b0d7096bc6045dc718ef30ad7fbb92b09fd9aae587b4d0033765791b78.
+Publication denominators 2023: 10; 2024: 7; 2025: 10; 2026: 3. All full-source downloads
+and model arrays remain ignored/local. Category/topic labels and seven explanations
+have draft Hausa; the review packet is research/phase2-hausa-review.md.
+
+New commands: analyse-dashboard-corpus.py freezes the reviewed subset;
+build-dashboard-bundle.py merges checked records without multiplying cohorts;
+audit-dashboard-bundle.py independently checks the compact committed artifact.
+Scientific pins unchanged; bundle/export/audit/tests use no new app dependencies.
+CI now audits the committed bundle alongside synthetic research tests. The first
+pipeline still records the unfinished archive and a full-archive exploratory model,
+which is separate from the v1 selected model. Corrected name-shaped author removal
+preserves substantive “By enabling...” prose; old exploratory hashes are historical.
+
+Next: implement and validate the standalone English/Hausa conversational chatbot
+using bundle.json and the shared deterministic calculation layer, then integrate
+the dashboard. Read CHATBOT_SPEC.md. One page/chat locale; exact **Change language
+/ Canja harshe**, English above Hausa, visible without menu. Preserve draft input,
+filters and compatible context on switching. No runtime inference or server query
+logging. No more old-tree preview or appearance work. No public reveal is implied:
+portrait, fluent-human Hausa, correction contact and hosting gates remain open.
+See docs/VALIDATION.md for actual checks and Git history/Actions for delivery.
+
 ## Resume here — dashboard focus, Phase 1 batch 002
 
 24 October: owner no longer wants the old tree presented or worked on as product

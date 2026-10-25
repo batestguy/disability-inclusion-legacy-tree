@@ -1,5 +1,101 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Current owner correction — minimal choices, 25 October 2026
+
+Simplified the guided chatbot after the owner rejected clutter and internal
+scrolling. One concise question/answer, at most three replacing options, and
+Previous / More options for longer lists. Sources and Details are separate
+on-demand screens with paged content. Removed introductions, inventory, visible
+path, duplicate prompts and automatic evidence blocks. Essential numerical and
+attribution qualifiers remain; women-focused figures are merged into selectable
+programme cards. English/Hausa preserve the selected node/source/page. See the
+latest [validation](docs/VALIDATION.md). No data, parser, dependency, approval
+or deployment change. This supersedes the scrollable-panel presentation below;
+dashboard integration follows review of the simpler standalone flow.
+
+## Current checkpoint — compact guided chatbot, 25 October 2026
+
+The owner's clickable question/answer/follow-up flow is implemented locally before
+dashboard integration. Each click replaces one visible step in a stable-height
+panel; long content scrolls internally. Back/Next retrace visited choices and
+Start again resets the path. Shared English/Hausa switching retains the current
+step and forward trail in memory. All 33 activities and 11 observations are
+reachable with sources, with useful source/record/figure follow-ups and explicit
+qualifications on shared-report connections. See
+[GUIDED_CHAT_IMPLEMENTATION.md](docs/GUIDED_CHAT_IMPLEMENTATION.md) and
+[VALIDATION.md](docs/VALIDATION.md). Owner review of the guided experience precedes
+Phase 4 dashboard work. No hosted planner or public deployment was introduced.
+Hausa stays draft; original source, rights and approval status remain truthful.
+The legacy parser's failed audit remains historical evidence, not a score for
+this guided mode. Earlier free-text-first readiness/research notes are superseded.
+
+25 October research: owner requires **free tier** for the improvement proposal.
+[Modernisation research](docs/CHATBOT_MODERNISATION_RESEARCH.md) recommends testing
+a model-assisted, strictly validated query planner with complete evidence coverage
+and deterministic calculation. Groq Free/Workers Free is the first candidate;
+Workers AI is a comparison option. Provider fit, actual Hausa quality, account
+limits and online/offline/privacy behaviour still require validation. No external
+inference architecture, model, dependency, deployment or improved score is claimed
+as implemented or approved. Preserve the failed audit as baseline.
+
+## Current quality finding — 25 October 2026
+
+The owner-requested fifty-question audit shows that the standalone chat's ordinary
+language understanding is inadequate: 0/34 answerable challenge questions were
+fully answered; 5/50 total responses gave useful complete handling, plus one
+partial. Fifty browser replies reproduced the engine results. Existing narrow
+tests/builds pass but do not establish conversational accuracy. No engine fixes
+were made during this baseline. See
+[CHATBOT_ACCURACY_AUDIT.md](docs/CHATBOT_ACCURACY_AUDIT.md) and preserve its frozen
+questions/results. Improve scope/intent selection and clarification before calling
+the conversational milestone validated, then use a fresh unseen test set. Human
+Hausa and release gates remain open; prior readiness notes below are superseded.
+
+25 October owner-feedback correction: the broad women-with-disabilities question
+now has a sourced English/Hausa summary instead of generic clarification. NigWED
+and startup support retain separate lower-bound cohorts, source-specific population
+evidence and limitations. See PHASE3_IMPLEMENTATION and the newest VALIDATION
+entry. This expands the controlled catalogue; human Hausa/reveal gates remain open.
+
+## Standalone chatbot — 25 October 2026
+
+Phase 3 engineering is ready for owner review at `/chat/` and `/ha/chat/`.
+Typed browser-side calculations use the reviewed-subset v1 bundle; a conversational
+interface provides five named programme measurements, activity/report-year queries,
+follow-ups, clarifications, keyword evidence, descriptive catalogues and analysis
+explanations. Shared locale navigation preserves draft, context, transcript and
+selected evidence. Source qualifications, targets and strict lower bounds remain
+visible. Calculation downloads omit visitor questions; no external inference,
+question storage, production dependency or deployment was added.
+
+Independent numerical review found two router issues; both were corrected and
+rechecked. Automated browser and semantic checks do not establish human Hausa
+approval, general language accuracy, exhaustive evidence or public readiness.
+See [PHASE3_IMPLEMENTATION.md](docs/PHASE3_IMPLEMENTATION.md),
+[VALIDATION.md](docs/VALIDATION.md) and the
+[Hausa review packet](research/phase3-hausa-review.md). Dashboard integration is
+Phase 4; the standalone owner review is the current milestone. Original briefs,
+staged Phase 2 work and release gates are preserved.
+
+## Phase 1 accepted; Phase 2 reviewed-subset v1 — 24 October 2026
+
+The owner explicitly accepted Phase 1 and instructed proceeding. Keep its
+unfinished numerical queue as a coverage limitation; do not require completing
+that backlog before the next engineering phase. Final reveal gates remain intact.
+
+Phase 2 now provides content/dashboard/v1: 33 activity records, 11 observations
+(eight delivery reports/three targets), 37 citations, eight reviewed categories
+and model topics, 46 entities and nine evidenced relationships, separate from
+257 article-co-occurrence edges. The frozen selected English corpus has 31 source
+records/30 distinct texts; it is not representative of the full career/archive.
+Source relevance covers 45 records. Data exports, dictionary-based entities,
+period denominators, source-bound variation notes and methods are reproducible.
+Hausa labels/explanations are drafts; research/phase2-hausa-review.md is the review
+packet. See docs/PHASE2_FINDINGS.md for concrete findings and limits.
+
+Next: Phase 3 standalone deterministic bilingual chatbot over the bundle, with
+the accepted visible shared language control; validate before dashboard integration.
+
 ## Current focus and Phase 1 batch 002 — 24 October 2026
 
 Owner steering: proceed with the dashboard; the old tree is no longer a product

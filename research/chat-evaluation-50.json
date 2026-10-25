@@ -1,0 +1,959 @@
+{
+  "protocol": "docs/CHATBOT_EVALUATION_PROTOCOL.md",
+  "seed": 20261025,
+  "method": "xorshift32/Fisher-Yates; 17 answerable, 5 clarification, 3 unsupported per language; shuffled without replacement",
+  "frozenAt": "2026-10-25T11:51:31.583Z",
+  "engineSha256": "83cfe8ddba32bf33eff87e6dc88b125de84f958a3df0242feceefc4cc72c67fb",
+  "bundleSha256": "166d42785cf3a12256c0207399d3d6cd5c4facaa0d7a75116a0feb181ea62db2",
+  "candidateSha256": "5b80e6185b856213d4744f15df37cb0b1454ff18be42ac0aaafeff8093304259",
+  "questions": [
+    {
+      "id": "ha-20",
+      "lang": "ha",
+      "category": "relationship-evidence",
+      "question": "Me aka sani game da yarjejeniyar African Unconquered kan tsoffin sojoji?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Office reports signed MOU/cooperation framework on 2024-11-06; signed instrument and delivery results not independently checked. Do not reduce signing to mere co-occurrence or claim delivered services.",
+        "kind": "lookup",
+        "activityIds": [
+          "veterans-mou-2024"
+        ],
+        "sourceIdsInclude": [
+          "4243"
+        ],
+        "requiredConcepts": [
+          "reported-not-independent"
+        ]
+      }
+    },
+    {
+      "id": "en-02",
+      "lang": "en",
+      "category": "report-year-count",
+      "question": "How many records have a 2025 report date?",
+      "expected": {
+        "disposition": "answer",
+        "note": "11 activities by canonical activity report_date; the model-document denominator of ten is a different grain.",
+        "kind": "count",
+        "requiredConcepts": [
+          "report-not-event"
+        ],
+        "claims": [
+          {
+            "value": 11,
+            "bound": "exact",
+            "unit": "activities"
+          }
+        ],
+        "plan": {
+          "reportYear": 2025
+        }
+      }
+    },
+    {
+      "id": "en-11",
+      "lang": "en",
+      "category": "additional-numeric",
+      "question": "How many PWD beneficiaries received the FHA stall-allotment documents?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Three; FHA Mortgage Bank handed over documents, office promoted inclusion; income gains unmeasured.",
+        "kind": "measurement",
+        "activityIds": [
+          "fha-stalls-2025"
+        ],
+        "sourceIdsInclude": [
+          "5105"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-5105-s3-observation-1",
+            "value": 3,
+            "bound": "exact",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWD beneficiaries of bank stall-allotment documentation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-08",
+      "lang": "en",
+      "category": "mixed-stage-target",
+      "question": "What household target was given for the Karu support scheme?",
+      "expected": {
+        "disposition": "answer",
+        "note": "At least 500 households targeted, not exact 500 people delivered.",
+        "kind": "measurement",
+        "activityIds": [
+          "karu-food-cash-2024"
+        ],
+        "sourceIdsInclude": [
+          "2790"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2790-s4-observation-1",
+            "value": 500,
+            "bound": "at-least",
+            "unit": "households",
+            "stage": "target",
+            "populationContains": "PWD households targeted by the support initiative"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-22",
+      "lang": "en",
+      "category": "ambiguous-year",
+      "question": "What did he do that year?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No year or context supplied; ask which report year and optionally scope."
+      }
+    },
+    {
+      "id": "en-29",
+      "lang": "en",
+      "category": "unsupported-subgroup",
+      "question": "How many deaf women aged 18 to 25 got the March POS kits?",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "No age/deafness subgroup breakdown; cannot assign >20 overall cohort to this subgroup."
+      }
+    },
+    {
+      "id": "ha-13",
+      "lang": "ha",
+      "category": "context-report-year",
+      "question": "Wace shekara aka wallafa rahoton?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Retain NigWED context, canonical report year 2024; source 3531 and anniversary both 2024. Not verified event year.",
+        "kind": "report-year",
+        "activityIds": [
+          "nigwed-skills-2024"
+        ],
+        "sourceIdsInclude": [
+          "anniversary-2024"
+        ],
+        "requiredConcepts": [
+          "report-not-event"
+        ]
+      },
+      "context": {
+        "programme": "nigwed"
+      }
+    },
+    {
+      "id": "en-14",
+      "lang": "en",
+      "category": "context-followup",
+      "question": "And the year of that report?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Retain SMEDAN context and answer 2024, based on canonical report date 2024-01-29, not a verified event year.",
+        "kind": "report-year",
+        "activityIds": [
+          "inclusive-business-skills"
+        ],
+        "sourceIdsInclude": [
+          "smedan"
+        ],
+        "requiredConcepts": [
+          "report-not-event"
+        ]
+      },
+      "context": {
+        "programme": "smedan"
+      }
+    },
+    {
+      "id": "ha-24",
+      "lang": "ha",
+      "category": "ambiguous-pronoun",
+      "question": "Su waye suka yi shi?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No activity or referent; ask which activity."
+      }
+    },
+    {
+      "id": "ha-01",
+      "lang": "ha",
+      "category": "inventory",
+      "question": "Akwai ayyuka nawa a wannan jerin da aka duba?",
+      "expected": {
+        "disposition": "answer",
+        "note": "33 distinct activities in reviewed subset; not complete lifetime work.",
+        "kind": "count",
+        "claims": [
+          {
+            "value": 33,
+            "bound": "exact",
+            "unit": "activities"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-23",
+      "lang": "en",
+      "category": "ambiguous-money",
+      "question": "How much was the support?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "Clarify programme and whether amount or participant count; do not replace money with a count."
+      }
+    },
+    {
+      "id": "en-30",
+      "lang": "en",
+      "category": "future-fact",
+      "question": "List the confirmed jobs he will deliver in 2027, with employers and salaries.",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "No confirmed 2027 jobs, employers or salaries in reviewed bundle; do not convert existing targets to future guarantees."
+      }
+    },
+    {
+      "id": "ha-04",
+      "lang": "ha",
+      "category": "employment",
+      "question": "Mutane nawa ne aka ce sun samu aikin gwamnati a Borno?",
+      "expected": {
+        "disposition": "answer",
+        "note": "15 PWDs office-reported employed by Borno State after engagement; no independent employment/retention verification.",
+        "kind": "measurement",
+        "activityIds": [
+          "borno-employment-2024"
+        ],
+        "sourceIdsInclude": [
+          "anniversary-2024"
+        ],
+        "claims": [
+          {
+            "observationId": "borno-employment-2024:placements",
+            "value": 15,
+            "bound": "exact",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWDs reportedly employed by Borno State after engagement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-29",
+      "lang": "ha",
+      "category": "unsupported-subgroup",
+      "question": "Mata masu nakasar ji daga Kano nawa suka samu tallafin Maris?",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "No Kano/deafness subgroup breakdown or state list; cannot assign overall >20 to subgroup."
+      }
+    },
+    {
+      "id": "en-06",
+      "lang": "en",
+      "category": "wrong-stage",
+      "question": "Those 36,551 Beyond Disability jobs are already filled, right?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Correct premise: 36,551 projected opportunities is a target, not filled jobs or measured delivery.",
+        "kind": "measurement",
+        "activityIds": [
+          "beyond-disability-coordination-2024"
+        ],
+        "sourceIdsInclude": [
+          "beyond-target-2024"
+        ],
+        "claims": [
+          {
+            "observationId": "beyond-disability-coordination-2024:projected-opportunities",
+            "value": 36551,
+            "bound": "exact",
+            "unit": "job opportunities",
+            "stage": "target",
+            "populationContains": "Projected programme opportunities nationwide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-21",
+      "lang": "ha",
+      "category": "ambiguous-programme",
+      "question": "Mutane nawa aka taimaka a shirin nan?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No programme context; ask which programme."
+      }
+    },
+    {
+      "id": "ha-17",
+      "lang": "ha",
+      "category": "place-role",
+      "question": "Wane bayani ne game da taron para-volleyball a Lagos?",
+      "expected": {
+        "disposition": "answer",
+        "note": "South-West stakeholders meeting reported 2026-07-21, Isa represented by Technical Director Christian Agoawuike; no sporting outcome/beneficiary count inferred.",
+        "kind": "lookup",
+        "activityIds": [
+          "paravolley-southwest-meeting-2026"
+        ],
+        "sourceIdsInclude": [
+          "5803"
+        ]
+      }
+    },
+    {
+      "id": "en-15",
+      "lang": "en",
+      "category": "organisation-attribution",
+      "question": "Who actually developed the disability-readiness toolkit he unveiled?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Deaf-in-Tech and DataLead Africa produced the toolkit; office participated through Lanre Oloyede, not Isa as developer/funder.",
+        "kind": "lookup",
+        "activityIds": [
+          "disability-readiness-toolkit-2025"
+        ],
+        "sourceIdsInclude": [
+          "5151"
+        ]
+      }
+    },
+    {
+      "id": "en-26",
+      "lang": "en",
+      "category": "conflicting-programmes",
+      "question": "How many took part in SMEDAN or NigWED? I only want one number.",
+      "expected": {
+        "disposition": "clarify",
+        "note": "Ask which programme/count is intended. Cannot pick one or add potentially overlapping cohorts."
+      }
+    },
+    {
+      "id": "en-05",
+      "lang": "en",
+      "category": "misspelling",
+      "question": "Nigwed trainning, was it only 45 women?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Correct the exact-45 premise: more than 45 women in reusable sanitary-pad training, not jobs or measured income.",
+        "kind": "measurement",
+        "activityIds": [
+          "nigwed-skills-2024"
+        ],
+        "sourceIdsInclude": [
+          "anniversary-2024",
+          "3531"
+        ],
+        "claims": [
+          {
+            "observationId": "nigwed-skills-2024:trainees",
+            "value": 45,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "Women with disabilities in reusable sanitary-pad training"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-28",
+      "lang": "en",
+      "category": "unmeasured-outcome",
+      "question": "What was the average monthly income increase for NigWED graduates?",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "Income outcomes and before/after measurements absent; explain unsupported rather than substitute trainee count."
+      }
+    },
+    {
+      "id": "ha-10",
+      "lang": "ha",
+      "category": "women-broad",
+      "question": "Wane taimako ya yi wa mata masu nakasa?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Summarise NigWED reusable-pad training >45 and March POS/startup kits >20 separately with office/partner attribution. Do not combine cohorts or claim jobs/income.",
+        "kind": "summary",
+        "activityIds": [
+          "nigwed-skills-2024",
+          "startup-support-march-2024"
+        ],
+        "sourceIdsInclude": [
+          "3531",
+          "2279"
+        ],
+        "requiredConcepts": [
+          "overlap-no-total",
+          "reported-not-independent"
+        ],
+        "claims": [
+          {
+            "observationId": "nigwed-skills-2024:trainees",
+            "value": 45,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery"
+          },
+          {
+            "observationId": "startup-support-march-2024:recipients",
+            "value": 20,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-22",
+      "lang": "ha",
+      "category": "ambiguous-time",
+      "question": "A waccan shekarar fa?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No prior year or topic; ask which report year and what information is wanted."
+      }
+    },
+    {
+      "id": "ha-23",
+      "lang": "ha",
+      "category": "ambiguous-unit",
+      "question": "Nawa ne tallafin?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "Clarify programme and whether money amount or recipient count."
+      }
+    },
+    {
+      "id": "en-21",
+      "lang": "en",
+      "category": "ambiguous-programme",
+      "question": "How many people did that programme support?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No prior programme supplied; ask which programme, do not select an arbitrary cohort."
+      }
+    },
+    {
+      "id": "en-10",
+      "lang": "en",
+      "category": "women-broad",
+      "question": "Can you explain the support he has offered women living with disabilities?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Summarise NigWED reusable-pad training >45 and March POS/startup support >20 separately; sources identify women with disabilities. Attribute office/partners, no combined unique total or inferred employment.",
+        "kind": "summary",
+        "activityIds": [
+          "nigwed-skills-2024",
+          "startup-support-march-2024"
+        ],
+        "sourceIdsInclude": [
+          "3531",
+          "2279"
+        ],
+        "requiredConcepts": [
+          "overlap-no-total",
+          "reported-not-independent"
+        ],
+        "claims": [
+          {
+            "observationId": "nigwed-skills-2024:trainees",
+            "value": 45,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery"
+          },
+          {
+            "observationId": "startup-support-march-2024:recipients",
+            "value": 20,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-09",
+      "lang": "ha",
+      "category": "northeast-bound",
+      "question": "Game da Arewa maso Gabas, kusan mutane nawa aka sa a gaba don tallafin abinci?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Approximately 1,000 targeted beneficiaries, not completed delivery.",
+        "kind": "measurement",
+        "activityIds": [
+          "northeast-food-support-target-2024"
+        ],
+        "sourceIdsInclude": [
+          "2790"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2790-s9-observation-1",
+            "value": 1000,
+            "bound": "approximate",
+            "unit": "people",
+            "stage": "target",
+            "populationContains": "Beneficiaries targeted in the Northeast"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-16",
+      "lang": "ha",
+      "category": "organisation-attribution",
+      "question": "Shin Isa ne ya bayar da kayan taimako na ECOWAS ga NCPWD?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Correct attribution: ECOWAS donated devices, NCPWD received them, Isa was a supportive speaker. No procurement/distribution or recipient outcomes attributed to him.",
+        "kind": "lookup",
+        "activityIds": [
+          "assistive-technology-partnership"
+        ],
+        "sourceIdsInclude": [
+          "devices"
+        ]
+      }
+    },
+    {
+      "id": "en-19",
+      "lang": "en",
+      "category": "source-dedup",
+      "question": "Do the House committee articles numbered 1243 and 1245 mean two visits?",
+      "expected": {
+        "disposition": "answer",
+        "note": "No: same courtesy visit, exact duplicate texts, one activity and no independent corroboration.",
+        "kind": "lookup",
+        "activityIds": [
+          "house-disability-committee-visit-2023"
+        ],
+        "sourceIdsInclude": [
+          "1243",
+          "1245"
+        ],
+        "requiredConcepts": [
+          "reported-not-independent"
+        ]
+      }
+    },
+    {
+      "id": "ha-30",
+      "lang": "ha",
+      "category": "unsupported-causal",
+      "question": "Da kashi nawa shirinsa ya rage talauci a Najeriya?",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "No causal poverty impact estimate or national comparison; descriptive programme reports cannot establish this."
+      }
+    },
+    {
+      "id": "ha-18",
+      "lang": "ha",
+      "category": "theme-method",
+      "question": "Jigon mata da lafiya yana nufin duk rahotannin cikinsa na mata ne?",
+      "expected": {
+        "disposition": "answer",
+        "note": "No: topic 8 Women, health & support partnerships includes veterans-support collaboration (4243); a mixed textual theme, not women-only classifier or impact measure.",
+        "kind": "explanation",
+        "sourceIdsInclude": [
+          "4243"
+        ],
+        "requiredConcepts": [
+          "text-not-impact"
+        ]
+      }
+    },
+    {
+      "id": "en-20",
+      "lang": "en",
+      "category": "network-evidence",
+      "question": "If two organisations appear together in the network, does that prove a partnership?",
+      "expected": {
+        "disposition": "answer",
+        "note": "No. Co-occurrence means entities mentioned in canonical articles; partnerships require separate reviewed evidence, with intention/signing/delivery distinctions.",
+        "kind": "explanation",
+        "requiredConcepts": [
+          "cooccurrence-not-partnership"
+        ]
+      }
+    },
+    {
+      "id": "ha-14",
+      "lang": "ha",
+      "category": "school-evidence",
+      "question": "Me aka ruwaito ya yi wa makarantar makafi ta FCT tare da SMEDAN?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Reported food and financial support with SMEDAN; no cash total or recipient count. Requested assistive aids were unmet needs, not delivered devices.",
+        "kind": "lookup",
+        "activityIds": [
+          "school-blind-support-2025"
+        ],
+        "sourceIdsInclude": [
+          "4881"
+        ]
+      }
+    },
+    {
+      "id": "en-17",
+      "lang": "en",
+      "category": "theme-catalogue",
+      "question": "What areas of work do the reviewed categories cover?",
+      "expected": {
+        "disposition": "answer",
+        "note": "List all eight categories: policy/accessibility, livelihoods, education/training, healthcare/welfare, digital/assistive technology, sport, political engagement, honours/ceremonial. Multilabel categories overlap; no lifetime distribution.",
+        "kind": "catalogue"
+      }
+    },
+    {
+      "id": "en-13",
+      "lang": "en",
+      "category": "food-relief",
+      "question": "How many PWDs did the Ramadan food report say received palliatives?",
+      "expected": {
+        "disposition": "answer",
+        "note": "More than 500 people; Queen Adenike Tejuosho Foundation collaboration, precise location unknown.",
+        "kind": "measurement",
+        "activityIds": [
+          "ramadan-food-2024"
+        ],
+        "sourceIdsInclude": [
+          "2352"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2352-s2-observation-1",
+            "value": 500,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWD food-palliative recipients"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-16",
+      "lang": "en",
+      "category": "place-lookup",
+      "question": "Is there a reviewed record connected to Lagos?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Return South-West para-volleyball stakeholders meeting; report 2026-07-21, Lagos, represented by Christian Agoawuike. Do not invent Lagos beneficiary delivery.",
+        "kind": "lookup",
+        "activityIds": [
+          "paravolley-southwest-meeting-2026"
+        ],
+        "sourceIdsInclude": [
+          "5803"
+        ]
+      }
+    },
+    {
+      "id": "ha-06",
+      "lang": "ha",
+      "category": "wrong-stage",
+      "question": "An gama samar da ayyukan yi 36,551 na Beyond Disability kenan?",
+      "expected": {
+        "disposition": "answer",
+        "note": "No: 36,551 opportunities are a target; completed jobs not established.",
+        "kind": "measurement",
+        "activityIds": [
+          "beyond-disability-coordination-2024"
+        ],
+        "sourceIdsInclude": [
+          "beyond-target-2024"
+        ],
+        "claims": [
+          {
+            "observationId": "beyond-disability-coordination-2024:projected-opportunities",
+            "value": 36551,
+            "bound": "exact",
+            "unit": "job opportunities",
+            "stage": "target",
+            "populationContains": "Projected programme opportunities nationwide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-26",
+      "lang": "ha",
+      "category": "conflicting-programmes",
+      "question": "Ina so a bani adadin SMEDAN ko na NigWED, guda daya kawai.",
+      "expected": {
+        "disposition": "clarify",
+        "note": "Ask which programme; do not arbitrarily choose or add both cohorts."
+      }
+    },
+    {
+      "id": "ha-07",
+      "lang": "ha",
+      "category": "karu-delivery",
+      "question": "A Karu, mutane nawa suka karbi shinkafa da tallafin kudi a rahoton?",
+      "expected": {
+        "disposition": "answer",
+        "note": "More than 500 people reportedly received rice/cash; cash amount not established.",
+        "kind": "measurement",
+        "activityIds": [
+          "karu-food-cash-2024"
+        ],
+        "sourceIdsInclude": [
+          "2790"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2790-s3-observation-1",
+            "value": 500,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWD recipients at the Karu launch"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-03",
+      "lang": "ha",
+      "category": "code-switch",
+      "question": "SMEDAN fa, participants nawa aka tallafa?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Five PWD participants; one training-and-kits cohort, not ten.",
+        "kind": "measurement",
+        "activityIds": [
+          "inclusive-business-skills"
+        ],
+        "sourceIdsInclude": [
+          "smedan"
+        ],
+        "claims": [
+          {
+            "observationId": "inclusive-business-skills:participants-supported",
+            "value": 5,
+            "bound": "exact",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWD participants in this training and startup-support activity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-05",
+      "lang": "ha",
+      "category": "bound-correction",
+      "question": "Matan NigWED guda 45 ne kacal aka horas?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Correct to more than 45 women with disabilities in reusable sanitary-pad production, not exact 45.",
+        "kind": "measurement",
+        "activityIds": [
+          "nigwed-skills-2024"
+        ],
+        "sourceIdsInclude": [
+          "anniversary-2024",
+          "3531"
+        ],
+        "claims": [
+          {
+            "observationId": "nigwed-skills-2024:trainees",
+            "value": 45,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "Women with disabilities in reusable sanitary-pad training"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ha-28",
+      "lang": "ha",
+      "category": "unmeasured-outcome",
+      "question": "Nawa kudin shigar matan NigWED ya karu bayan horon?",
+      "expected": {
+        "disposition": "unsupported",
+        "note": "No measured income changes; do not use trainee count as income evidence."
+      }
+    },
+    {
+      "id": "en-12",
+      "lang": "en",
+      "category": "additional-numeric",
+      "question": "About that Ayubson celebration in Abuja, what participation figure is sourced?",
+      "expected": {
+        "disposition": "answer",
+        "note": "More than 50 PWD participants; participation/gifts, not jobs; Isa represented by his communications director.",
+        "kind": "measurement",
+        "activityIds": [
+          "ayubson-event-2025"
+        ],
+        "sourceIdsInclude": [
+          "4860"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-4860-s2-observation-1",
+            "value": 50,
+            "bound": "greater-than",
+            "unit": "people",
+            "stage": "reported-delivery",
+            "populationContains": "PWD participants at the Ayubson celebration programme"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-18",
+      "lang": "en",
+      "category": "methodology",
+      "question": "How did you get the eight topics, and do they measure his impact?",
+      "expected": {
+        "disposition": "answer",
+        "note": "English-source TF-IDF word/phrase features plus eight-topic NMF, selected 31 source records /30 distinct texts; descriptive patterns, not impact. Hausa labels draft, no Hausa-corpus analysis.",
+        "kind": "explanation",
+        "requiredConcepts": [
+          "text-not-impact"
+        ]
+      }
+    },
+    {
+      "id": "ha-02",
+      "lang": "ha",
+      "category": "report-year-count",
+      "question": "Rahotannin shekarar 2024 sun kunshi ayyuka nawa a jerin?",
+      "expected": {
+        "disposition": "answer",
+        "note": "10 activities by canonical report_date, not seven model documents and not verified event chronology.",
+        "kind": "count",
+        "requiredConcepts": [
+          "report-not-event"
+        ],
+        "claims": [
+          {
+            "value": 10,
+            "bound": "exact",
+            "unit": "activities"
+          }
+        ],
+        "plan": {
+          "reportYear": 2024
+        }
+      }
+    },
+    {
+      "id": "en-24",
+      "lang": "en",
+      "category": "ambiguous-comparison",
+      "question": "Which one was bigger?",
+      "expected": {
+        "disposition": "clarify",
+        "note": "No programmes or comparison metric supplied; ask what to compare."
+      }
+    },
+    {
+      "id": "ha-15",
+      "lang": "ha",
+      "category": "award-premise",
+      "question": "Kyautar LEEX guda biyar ya samu ne a 2023?",
+      "expected": {
+        "disposition": "answer",
+        "note": "Correct premise: one reported Inspirational Leader of the Year recognition across announcement and receipt reports; fifth edition is event ordinal, not five awards.",
+        "kind": "lookup",
+        "activityIds": [
+          "leex-inspirational-award-2023"
+        ],
+        "sourceIdsInclude": [
+          "1257",
+          "1263"
+        ]
+      }
+    },
+    {
+      "id": "ha-08",
+      "lang": "ha",
+      "category": "karu-household",
+      "question": "Shirin Karu ya yi nufin tallafa wa gidaje nawa?",
+      "expected": {
+        "disposition": "answer",
+        "note": "At least 500 households targeted; do not call these delivered people.",
+        "kind": "measurement",
+        "activityIds": [
+          "karu-food-cash-2024"
+        ],
+        "sourceIdsInclude": [
+          "2790"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2790-s4-observation-1",
+            "value": 500,
+            "bound": "at-least",
+            "unit": "households",
+            "stage": "target",
+            "populationContains": "PWD households targeted by the support initiative"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-09",
+      "lang": "en",
+      "category": "regional-target",
+      "question": "Was the Northeast expansion aiming for exactly a thousand recipients?",
+      "expected": {
+        "disposition": "answer",
+        "note": "About 1,000 people is approximate and targeted, not confirmed regional delivery.",
+        "kind": "measurement",
+        "activityIds": [
+          "northeast-food-support-target-2024"
+        ],
+        "sourceIdsInclude": [
+          "2790"
+        ],
+        "claims": [
+          {
+            "observationId": "posts-2790-s9-observation-1",
+            "value": 1000,
+            "bound": "approximate",
+            "unit": "people",
+            "stage": "target",
+            "populationContains": "Beneficiaries targeted in the Northeast"
+          }
+        ]
+      }
+    },
+    {
+      "id": "en-01",
+      "lang": "en",
+      "category": "inventory",
+      "question": "How big is the reviewed activity list now?",
+      "expected": {
+        "disposition": "answer",
+        "note": "33 distinct activity records in this selected bundle, not lifetime career coverage.",
+        "kind": "count",
+        "claims": [
+          {
+            "value": 33,
+            "bound": "exact",
+            "unit": "activities"
+          }
+        ]
+      }
+    }
+  ]
+}
