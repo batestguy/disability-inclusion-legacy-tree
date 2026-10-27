@@ -1,0 +1,39 @@
+{
+  "subject": "Hon. Mohammed Abba Isa",
+  "source_page": "https://societynow.ng/details-mohammed-abba-isa-is-ssa-to-president-tinubu-on-disability-matters/",
+  "source_section": "Appointment article, 9 November 2023, featured photograph",
+  "source_asset": "https://societynow.ng/wp-content/uploads/2023/11/398976363_799703158832892_2346522787742736672_n-e1699553860670-718x600.jpg",
+  "identity_basis": "The featured photograph accompanies SocietyNow's appointment article naming Mohammed Abba Isa. Its face was visually compared with the previously identified office portrait; the selected image shows a different pose, clothing and a small smile.",
+  "source_dimensions": [718, 600],
+  "source_sha256": "e23504cce5a98bdd23dc54169205f822ff81a428768694aba106f832beb477dc",
+  "source_checked": "2026-10-27",
+  "local_source": "output/portrait-cursor/smiling-portrait.jpg",
+  "crop": { "left": 252, "top": 129, "width": 161, "height": 155 },
+  "photographer": "Not supplied by the inspected page.",
+  "local_asset": "apps/web/public/branding/abba-isa-cursor.png",
+  "cursor_dimensions": [48, 64],
+  "cursor_bytes": 4367,
+  "hotspot": [4, 3],
+  "cursor_sha256": "5683ec343de2d6d5b5a58e43b673c89ec39d6cefb905d1a02c97b59bab07dc08",
+  "arrow_template": "content/portrait-cursor-arrow.svg",
+  "arrow_template_sha256": "444d5b1532b06644ccbeb198ba560b7b12e90ac9400b3376b02299be3c8fb4fe",
+  "modifications": [
+    "Crop the different smiling photograph at x252/y129, width161/height155, preserving the original photographed face.",
+    "Embed that crop inside the editable native SVG arrow icon, with a white outer edge and dark inner outline; rasterize at 48 by 64 pixels.",
+    "The arrow's click hotspot is its upper-left tip at 4/3. Neutral vector background and outlines are added, with no face generation or facial retouching."
+  ],
+  "pixel_integrity_check": "The builder checks this source SHA-256 and dimensions, then checks every pixel of the decoded crop against its original source region before arrow clipping/scaling. Vector outline pixels are intentionally new neutral colours, not generated portrait detail.",
+  "build_command": "node scripts/build-portrait-cursor.mjs",
+  "previous_photo": { "source_asset": "https://ossaposneo.org/wp-content/uploads/2024/11/Mohammed-Aba-ss-720x800.png", "source_sha256": "efded79bba77b441c973b8f5c8de5025f0e42c85c38e2b15c2e83a80a5afebef", "historical_mask": "content/portrait-cursor-mask.svg", "reason_replaced": "Owner requested a different, more fitting photograph on 27 October 2026." },
+  "build_tool": "Existing Sharp installation supplied with the local Next.js toolchain; no dependency was added.",
+  "rejected_candidate": {
+    "tool": "Built-in imagegen",
+    "intent": "Background extraction with preserved identity",
+    "status": "Rejected after visual review because fine facial details changed. It is not referenced or shipped by the app.",
+    "prompt": "Edit this genuine photographic portrait solely to extract the man from the background for a small native mouse cursor. Preserve the exact photographed man's identity, face, expression, spectacles, cap pattern, skin, clothing, colors, anatomy, pose and photographic texture. Remove only the entire gray background and the green-white flag/emblem behind him, producing actual alpha transparency all around his cap, ears, head, shoulders and torso. Keep the visible person at the same proportions and framing; cleanly retain the full top of the cap and shoulders, with the torso ending at the existing photograph's bottom edge. Do not generate a new likeness, redraw, beautify, retouch, add an outline/frame/shadow, add a pointer arrow, add text, or invent clothing/body outside the original frame. Genuine photo background-extraction only. One isolated photographic cutout on a transparent canvas, closely following his outline."
+  },
+  "owner_direction": "27 October: use a different, more fitting photograph within the real arrow-shaped cursor. Selected a smiling face crop; retain whole-page scope, tip hotspot and the off switch.",
+  "reuse_permission": "No rights-holder licence or public-reuse permission was established. Owner requested local prototype use; this is not recorded as a rights-holder licence.",
+  "public_approved": false,
+  "scope": "Local dashboard and standalone chatbot previews, whole document on fine hovering pointers, with an off switch and standard coarse-pointer/forced-colour fallbacks."
+}

@@ -21,7 +21,21 @@ Searches covered biography/appointment, education, early advocacy, SMEDAN empowe
 Critical coverage exists: Equality Reporters, 15 March 2024, 'Disconnect in Disability Governors Connect Policy', and 25 March 2025, 'How Abba-Isa?s Policy Stunt Ended in a Flop' question policy implementation. TheInvestigator, 7 December 2024, reports allegations concerning rice distribution. These are not adjudicated findings. The disputed programmes are excluded from achievement claims. Before expanding this selective tribute into a full journalistic biography, independently verify criticism, responses and outcomes; do not present the current collection as an exhaustive assessment.
 
 ## Images
-No photograph downloaded or republished. Candidate portraits appear on the State House, TheCable and office pages but no reusable licence or permission was established. The MAI seal is original typography, clearly a placeholder. Obtain a genuine portrait from its rights holder, record original source, photographer, licence/written permission and any required credit in Sanity before reveal. Never replace it with a generated likeness.
+25 October owner correction: a genuine office-homepage portrait is now used for
+the local prototype's photo-shaped cursor across the whole page. Its About Us
+context identifies Mohammed Abba Isa. The original file, alpha-mask workflow,
+pixel-integrity evidence and rights limits are recorded in
+content/portrait-cursor.json. An imagegen extraction candidate was rejected for
+fine facial changes; the final cursor uses original photographed pixels with
+masking/downsampling. No rights-holder licence was established and public
+approval is false. This direct owner request authorizes local cursor prototyping;
+the main portrait and public reveal gates remain open.
+
+Historical 22 October checkpoint: no photograph had been downloaded or
+republished. Candidate portraits appeared on the State House, TheCable and office
+pages without established reusable licences. The MAI seal remains the main-page
+placeholder. Before public reveal, record rights-holder permission, photographer,
+licence and any required credit; never substitute a generated likeness.
 
 ## Translation review
 Review all Hausa fields, navigation, labels, preference controls and source-type/status explanations with a fluent editor. Record reviewer/date in release evidence and only then set haReviewed flags. Drafts remain visibly labelled and preview robots are noindex.

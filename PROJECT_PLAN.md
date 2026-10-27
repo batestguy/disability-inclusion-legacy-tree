@@ -1,5 +1,104 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Next iteration queued — 27 October 2026
+
+Owner requested committing/pushing the current checkpoint and recording further
+suggestions for next time. See docs/DASHBOARD_NEXT_ITERATION.md: time-series
+timeline, complete populated category filters, better fitted elongated photo
+cursor, portrait/quote left with KPIs right then full width below, consistent
+green–white–green theme, and reference research from his main page/gallery.
+Pending implementation; quotes/assets require their actual source/provenance.
+
+## Installed skills applied to dashboard — 27 October 2026
+
+Used globally installed interface-design and kpi-dashboard-design to replace the
+oversized opening with a compact public-service scorecard. White canvas, gold
+targets, green achievements, aligned tabular figures, shorter labels and one
+Source action per item. Supporting figures become compact phone rows. Filters
+now sit above results with selected-year/context visibility and Clear. Self-hosted
+Adobe Source Sans 3 includes its original OFL licence/provenance; no production
+package added. .interface-design/system.md preserves the reusable direction.
+Numbers, source ledger, shared locale/chat/cursor and public gates are unchanged.
+Independent visual recheck addressed the four reported layout concerns; main
+checks both locales, responsive/zoom, accessibility and existing browser journeys.
+See newest docs/VALIDATION.md entry for completed checks. No deployment.
+
+## Number-first simplification and design research — 27 October 2026
+
+Owner requested removing repeated achievement badges, a different cursor portrait,
+and KPI cards with only a number, short story label and source click. Implemented:
+Source-only KPI actions, no per-card dates or checking prose, no duplicate lower
+figure board/repeated hero/inventory cards; compact counts beside filters. Full
+source context remains on demand. A different smiling photo now fills the native
+arrow; source/crop hashes are recorded without public approval.
+
+Owner also asked to research real achievement dashboards or a downloadable skill.
+See docs/DASHBOARD_DESIGN_RESEARCH.md for inspected Geckoboard/Tableau/Microsoft
+examples and evaluated interface-design/kpi-dashboard-design skills. Reference
+instructions were downloaded, not installed. Recommended next visual direction
+is a compact white scoreboard; this cleanup is not a complete redesign claim.
+Checks, 59 tests, both builds and both browser suites pass. No new data/service,
+dependency, public approval or deployment.
+
+## Simplified cards and conventional photo pointer — 27 October 2026
+
+Owner rejected repetitive planned/not-delivered bullets and requested sources.
+The first KPI section now keeps stage distinctions once in group headings,
+removes repeated per-card badges/paragraphs, and adds direct observation-source
+links. Details preserves full evidence, attribution and qualifications on demand.
+The photo pointer now has a conventional arrow silhouette with the original
+portrait inside, contrasting white/dark edges and a 4/3 tip hotspot. Native SVG
+composition replaces the earlier person-shaped outline; off switch and normal
+touch/forced-colour fallbacks remain. No generated face or new reuse permission.
+Checks, 59 tests, both builds and both browser suites pass; see VALIDATION.md.
+
+## First-screen KPI showcase — 27 October 2026
+
+Owner confirmed a Tableau-style website section and requested colour/clarity/
+glitter. The opening white dashboard now presents all 11 sourced numerical
+measures: three planned targets first in gold, followed by eight reported
+milestone measures in green. Category buttons switch between all/targets/
+achievements without changing analytical filters. Large bound-preserving figures,
+short source qualifications, report dates and evidence links remain together.
+Restrained star accents glint for four seconds, with reduced-motion and forced-
+colour fallbacks. Shared locale preserves the category in memory; cards follow
+current filters and retain honest empty states. No invented totals or progress.
+
+Independent review and required checks pass: 59 tests, lint/typecheck, both builds,
+dashboard and standalone browser suites. Numerals fit sampled desktop/mobile/
+200% layouts; five dashboard axe states have zero violations. See latest
+VALIDATION.md and HANDOFF.md. No data, dependency, approval or deployment change.
+
+## Phase 4 dashboard continuation — 27 October 2026
+
+The local English/Hausa home now presents the timeline-led dashboard above the
+compact guided chatbot. It uses the existing reviewed-subset v1 bundle: 33
+activities, eight reported-delivery measures and three separate targets. Filters,
+source evidence, typed CSV downloads, saved English text themes, relationship
+qualifications and explicit record-to-chat handoff are implemented. Shared locale
+navigation retains filters, selected record, chat state and cursor preference.
+
+Continuation review corrected decorative accessible control labels, evidence
+close focus after locale changes, narrow/short-screen header obstruction, and
+section navigation overwriting the saved chat path. Final preflight, lint/typecheck,
+59 tests, both builds and dashboard/standalone static-browser checks pass; see
+HANDOFF.md and the latest VALIDATION.md entry. Owner review is next. No data
+expansion, inference service, dependency,
+public approval, commit, push or deployment is part of this continuation. Hausa,
+portrait reuse, archive coverage and full offline reload remain unresolved limits.
+
+## Latest cursor correction — 25 October 2026
+
+Owner requested a genuine online portrait as the cursor across the whole page,
+superseding the OSSAP logo and links/buttons-only scope. The local chat document
+now uses an original-photo silhouette pointer, with a Photo cursor off switch,
+locale persistence and normal touch/forced-colour fallbacks. Its office-homepage
+source, transformation, pixel integrity and unverified public reuse status are
+recorded in content/portrait-cursor.json. A background-extraction candidate that
+altered fine facial detail was rejected; the shipped pointer retains the source
+photo pixels, with alpha masking and downsampling only. Public portrait approval
+and final reveal gates remain open. No source-bundle or chatbot-answer changes.
+
 ## Current review improvements — 25 October 2026
 
 Committed the preceding data/chatbot checkpoint as `c95e8d5`, then reviewed and

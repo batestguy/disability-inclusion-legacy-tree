@@ -1,5 +1,288 @@
 # Validation evidence - 22 October 2026
 
+## Installed dashboard skills applied — 27 October 2026
+
+Used global interface-design and kpi-dashboard-design for the owner-requested
+review and implementation. Fixed oversized opening space, tall mobile cards,
+uneven target unit baselines and filters detached from their figures. White
+scorecard now uses aligned tabular Source Sans 3 numbers, gold plans/green
+achievements, short programme labels, one Source link per KPI, a single finite
+lead glint, compact phone rows and a top native Filters disclosure. Active filter
+context/Clear and selected report year remain visible. Original Adobe fonts are
+self-hosted with OFL licence/provenance; no production package dependency added.
+Saved direction in .interface-design/system.md. Main inspected English desktop,
+English/Hausa phone views and fixed the Hausa heading/date overlap. Browser
+geometry now checks title/date separation as well as numeral/document overflow.
+
+Read-only reviewer rechecked before/after English screenshots and source: all
+four original issues addressed; no material regression in that sampled scope.
+Before: output/playwright/dashboard-skills-before-desktop.png and
+dashboard-skills-before-mobile.png. After: dashboard-overview.png,
+dashboard-mobile.png and dashboard-mobile-hausa.png. Final browser measurements:
+first desktop number y=343.77px (1440×1050), first English phone number y=408px;
+supporting phone card height=109.59px. These are sampled geometry, not benchmarks.
+
+Passed preflight, workspace lint/typecheck, all **59 tests**, full web/Studio build,
+then web rebuild after the final heading CSS correction. Final dashboard browser
+started **2026-10-27T02:33:10.278Z**: completed:true, seven journey groups and five
+axe states with zero violations. Standalone chat browser started
+**2026-10-27T02:28:28.255Z**: completed:true, eight journey groups and five
+zero-violation axe states. Both report zero page errors, HTTP failures or external
+requests. Coverage includes exact source links, category/AND filtering, empty
+results, exports and download-error recovery, keyboard evidence focus/return,
+shared locale/cursor/chat state, history, 1060px/phone/320px/200% geometry,
+forced colours and loaded offline interactions. The final test-only correction
+waits for a collapsed filter's attachment rather than visibility before opening
+it; the native disclosure deliberately hides those selects initially.
+
+Frozen numerical bundle SHA-256 remains
+`166d42785cf3a12256c0207399d3d6cd5c4facaa0d7a75116a0feb181ea62db2`.
+No new totals, trends, approvals, commit, push or deployment. Hausa remains draft,
+portrait public reuse remains unapproved, and public reveal gates remain intact.
+
+## Number-first simplification and replacement portrait — 27 October 2026
+
+Owner steering: remove remaining repeated achievement bullets; use a more fitting
+different photo; then simplify KPI cards to number, short main-story label and
+source link, without long verification/process prose. Cards now follow that
+format. Removed per-card date/Details, visible stage badges in activity rows,
+repeated hero/inventory cards and the duplicate lower numerical board. Compact
+counts accompany filters. Category headings and semantic labels still distinguish
+targets/achievements; source data and full on-demand evidence are unchanged.
+Chart captions are shorter; actual theme denominators remain visible. Hausa draft
+is still labelled, with public gates unchanged.
+
+Compared another cached office action photo and searched different named portraits.
+Selected SocietyNow's smiling photograph accompanying its 9 November 2023
+appointment article. The original office portrait is no longer the cursor source.
+Raw source is retained locally under ignored output/portrait-cursor/; URL, identity
+basis and previous photo are recorded in content/portrait-cursor.json. No public
+reuse licence was established or approved.
+
+Builder now verifies the selected source hash/dimensions from provenance and all
+**24,955 pixels** in the **161×155** decoded crop against the original image region
+before clipping/scaling into the existing vector arrow. Final cursor: 48×64 PNG,
+4,367 bytes, tip hotspot 4/3, SHA-256
+`5683ec343de2d6d5b5a58e43b673c89ec39d6cefb905d1a02c97b59bab07dc08`.
+No generated facial detail. Native/enlarged previews visually inspected.
+
+Passed preflight, lint/typecheck, **59 tests**, web/Studio builds; web rebuilt after
+the final simplification. Final dashboard browser started
+**2026-10-27T02:05:58.883Z**, completed:true, seven groups/five zero-violation axe
+states. Standalone browser started **2026-10-27T02:06:07.082Z**, completed:true,
+eight groups/five zero-violation axe states. Both have no page errors, HTTP failures
+or external requests. Source URLs remain tied to all eleven observations; KPI
+buttons/stage prose and duplicated figure DOM are absent. Record evidence/focus,
+exports, locales, history, responsive/200% layout and loaded offline interaction
+still pass. Served cursor bytes now match the recorded asset SHA-256 in addition
+to dimension/hotspot and touch/forced-colour/off-switch checks.
+
+Design research requested during this work is separately documented in
+[DASHBOARD_DESIGN_RESEARCH.md](DASHBOARD_DESIGN_RESEARCH.md). External screenshots
+and skill reference files remain ignored research assets; none are shipped.
+No new skill installation, numerical dataset, production dependency, public
+approval, commit, push or deployment. This is UI cleanup plus research, not a
+claim that a complete reference-led visual redesign or human certification passed.
+
+## Source-first cards and photo arrow cursor — 27 October 2026
+
+Owner requested removing repetitive Planned/not-delivered bullets, adding sources
+and shaping the photo pointer like a real cursor. Removed stage badges and repeated
+qualifications from the opening KPI cards. Planned/Reported group headings retain
+the stage distinction once; semantic number labels still identify each stage.
+Every card has a direct Source link selected from that observation's evidence IDs,
+plus Details for full record qualifications. Values, bounds, units and evidence
+data are unchanged. Source links keep original titles and safe external-tab flags.
+
+Replaced the person-shaped cursor with an editable native SVG arrow embedding a
+crop of the unchanged office photograph. Crop x225/y180, width285/height310; white
+outer edge, dark inner outline, neutral green arrow fill, 48×64 PNG and hotspot
+4/3 at the upper-left tip. No AI-generated likeness or facial retouching. The
+builder verifies original source SHA-256 and dimensions; the prior alpha-mask
+pixel audit remains a historical lineage check rather than a claim about newly
+added vector border pixels. Final PNG: 4,377 bytes; SHA-256
+`b8d3e8765ec9ace98616d1a98215f17837077b2b56111345796a6fae6379c638`.
+Contains 1,471 fully transparent and 1,425 fully opaque pixels. Provenance updated
+in content/portrait-cursor.json; public approval remains false. Normal touch and
+forced-colour pointers, whole-page scope and persistent off switch remain.
+
+Passed original-photo/native-arrow build verification, preflight, lint/typecheck,
+**59 tests**, and web/Studio builds. Dashboard browser started
+**2026-10-27T01:38:57.138Z**: completed:true, seven groups, five zero-violation axe
+states. Checks now assert all eleven direct source URLs belong to their specific
+observation evidence and repeated stage badges are absent. Standalone browser
+started **2026-10-27T01:39:08.069Z**: completed:true, eight groups, five zero-violation
+axe states; checks include served PNG dimensions and computed 4/3 hotspot, plus
+existing off-switch, locale, touch and forced-colour regressions. Neither run
+reported page errors, failed HTTP responses or external requests.
+
+Refreshed dashboard screenshot and native/enlarged arrow PNG were visually
+inspected. Playwright does not capture the OS-rendered pointer; its shape is
+checked in the actual asset and its deployment in computed styles, not a fake
+overlay. No data, production dependency, public approval, commit, push or deploy.
+Hausa review, portrait reuse rights and other public-release limits remain.
+
+## White category-first KPI dashboard — 27 October 2026
+
+Owner confirmed Tableau-style within this website and requested a separate first
+section with large meaningful numbers, white background, colour/clarity/glitter.
+DashboardHighlights now leads the English/Hausa home: three planned targets in
+gold, then eight reported milestone measures in green. Category buttons show
+all eleven, targets only or achievements only. Numbers retain exact stored values,
+bound symbols and spoken bounds, units, report dates, source qualifications and
+matching record evidence actions. No people sum or fabricated completion rate.
+
+The former introductory hero follows the KPI showcase as an h2; the page retains
+one h1 and one shared visible language selector. Category state belongs to the
+shared session and survives locale/filter updates in memory; URL reload restores
+filters/chat path and resets the category to All figures. Cards follow existing
+filters, including honest empty states. Source data/graph/audit and public gates
+are unchanged. Hausa draft status is visible in the new first section.
+
+White background remains clear above the existing flag watermark. Decorative gold
+stars have no pointer/semantic role; glint ends after four seconds and is disabled
+for reduced motion. Forced colours retain labels and pressed-state distinction.
+Numbers size to their individual card containers rather than viewport width.
+Source review found no material data/stage/state issue and requested checking
+actual numeral bounds in desktop columns; that browser check now passes.
+
+Passed `npm.cmd run preflight`, `npm.cmd run lint`, `npm.cmd run typecheck`, all
+**59 Node tests**, and web/Studio builds. Web was rebuilt after final typography
+and status refinements; no subsequent implementation edits. Browser runs:
+
+- Dashboard: started **2026-10-27T01:25:18.872Z**, completed:true, seven journey
+  groups and zero axe violations in five states. Covers all eleven figures,
+  category keyboard controls, gold target before achievement ordering, actual
+  white background, matching evidence/focus return, filtered and empty cards,
+  locale/category persistence, CSVs, history/reload, permanent routes, loaded
+  offline interactions, reduced motion and forced colours. Numeral span bounds
+  pass at 1440px, 1060px, mobile and 320px/200% text, beyond document-overflow checks.
+- Standalone chat: started **2026-10-27T01:25:29.195Z**, completed:true, eight
+  journey groups and zero axe violations in five states.
+- Both runs: no page errors, failed HTTP responses or external requests.
+
+[Dashboard results](../output/dashboard-browser-results.json) and
+[standalone results](../output/guided-browser-results.json) were refreshed.
+Desktop/mobile screenshots were visually inspected. No production dependency,
+Tableau service, new numerical claim, approval flag, commit, push or deployment.
+These checks do not establish Hausa approval, public portrait reuse permission,
+human screen-reader certification, new performance results or offline refresh.
+
+## Phase 4 dashboard and shared chatbot — 27 October 2026
+
+The local English/Hausa home now renders the dashboard above the compact guided
+chatbot. Existing standalone chat and all ten bilingual permanent achievement
+URLs remain available. No dependency, dataset, model, approval flag, external
+inference service, commit, push or deployment was introduced in this continuation.
+The existing reviewed-subset v1 bundle remains unchanged.
+
+Checked activity/report-year AND category AND activity filtering; timeline/category
+counts; eight reported-delivery measures and three separately labelled targets;
+actual frozen English-model denominators; explicitly qualified relationships vs
+shared mentions; source evidence; filtered activity/figure CSV downloads; selected
+record-to-chat handoff; shared locale, cursor preference and URL context. No sum
+of unique people or causal impact is inferred. A fresh read-only reviewer found
+no material data defect and independently checked 170 year/activity selections.
+
+The integration reviewer identified a real persistence bug: section anchor
+navigation replaced the conversation hash and lost its active step on immediate
+reload. Section navigation now scrolls/focuses without overwriting that path.
+An immediate-reload regression covers both Evidence and Chatbot section links;
+the reviewer cleared the fix. Evidence closing returns focus to its originating
+control, or the evidence section after a locale remount. Narrow/short-screen
+headers now scroll normally rather than obscuring enlarged content.
+
+Initial dashboard browser runs exposed test issues as well: decorative arrows
+were part of exact accessible export button names; locale assertions ran after
+URL commit but before React effects; and the first zoom assertion required an
+entire long Hausa title to fit a 720px viewport at 200% text. Decorative export/
+reader symbols are now hidden from assistive technology, locale assertions wait
+for rendered HTML language, and zoom checks verify the visible unobscured heading
+start while allowing normal document scrolling. Download listener/click promises
+are handled together so failures write completed:false evidence. Export failures
+are deliberately simulated, the browser API restored, and successful recovery
+verified through actual downloaded CSV cells. The final test changes received
+source review; no remaining material findings were reported.
+
+Final validation:
+
+- `npm.cmd run preflight`: passed (legacy ledger: five records/six sources;
+  this count is distinct from the reviewed dashboard bundle).
+- `npm.cmd run lint`, `npm.cmd run typecheck`, `npm.cmd test`: passed;
+  **59 tests**, including ten dashboard data tests.
+- `npm.cmd run build`: web and Studio passed; web rebuilt again after the
+  section-navigation correction. No later implementation edits.
+- `npm.cmd run test:dashboard-browser`: completed, started
+  **2026-10-27T00:55:04.914Z**; six journey groups, zero axe violations in five
+  states; no page errors, failed HTTP responses or external requests.
+- `npm.cmd run test:chat-browser`: completed, started
+  **2026-10-27T00:52:53.618Z**; eight journey groups, zero axe violations in five
+  states; no page errors, failed HTTP responses or external requests.
+
+Browser evidence: [dashboard results](../output/dashboard-browser-results.json),
+[standalone results](../output/guided-browser-results.json), and desktop/mobile/
+Hausa/zoom screenshots under output/playwright/dashboard-*.png. Checks include
+keyboard focus, mobile layouts, 320px/200% reflow, forced colours, reduced motion,
+source language metadata, CSV dimensions, loaded offline interactions and history.
+
+Limits: sampled automated checks and source review do not establish fluent Hausa
+approval, human screen-reader certification, performance targets, public portrait
+reuse permission, archive completeness or offline-refresh readiness. The research
+preview still rejects public builds; owner review is next.
+
+## Genuine photo cursor across the complete page — 25 October 2026
+
+Owner superseded the office-logo/links-only preference: find his genuine photo
+online and use a photo-shaped cursor throughout the page. Selected the 720×800
+portrait published alongside the About Us text naming Mohammed Abba Isa on
+https://ossaposneo.org/. A second office photograph and the State House release
+were inspected; the latter's page metadata was generic State House imagery,
+so it was not mistaken for his portrait. Reuse permission was not established.
+The latest owner request authorizes local cursor prototyping; public approval
+remains false, and neither the main portrait nor reveal gate was cleared.
+
+Used built-in imagegen for a background-extraction candidate, with identity/
+face/clothing preservation constraints. Visual review found changed fine facial
+details, so the candidate was rejected and is not shipped. Final asset uses the
+original office photograph and a hand-traced vector alpha mask; no generated face
+or clothing is used. The packaging script checks the exact source SHA-256 and
+dimensions, validates all **315,489 fully opaque pre-resize pixels** against the
+original RGB values, and only then downsamples to the native-cursor size.
+Shipped [cursor](../apps/web/public/branding/abba-isa-cursor.png): 48×56 PNG,
+4,986 bytes, 1,136 fully transparent and 1,220 fully opaque pixels. Hotspot 24/4.
+Source/mask/asset hashes, exact rejected prompt, processing and rights limits are
+in [portrait-cursor.json](../content/portrait-cursor.json). Build command:
+`node scripts/build-portrait-cursor.mjs`; raw source and full cutout remain in
+ignored output/portrait-cursor/ for local provenance.
+
+The chat session provider applies its preference to the HTML element and cleans
+up that attribute when the layout unmounts. Fine-pointer/hover CSS applies the
+native cursor across the complete document and descendants, including margins,
+header, text, buttons, inputs, source reader and preferences. No cursor overlay,
+animation loop or intercepted events. Off switch renamed Photo cursor / draft
+Siginan hoto; its state survives language navigation. The switch remains available
+in narrow mouse-driven windows; real coarse/touch pointers and forced colours
+retain standard cursors. Earlier logo-only/section-limited cursor checks are
+superseded by this update.
+
+Passed: original-photo/hash/alpha verification, `npm.cmd run preflight`, workspace
+lint and typecheck, **49 Node tests**, and `npm.cmd run build` (web and Studio).
+Final `npm.cmd run test:chat-browser` completed at 2026-10-25T17:39:38.081Z:
+eight journey groups; zero axe violations in five states; no page errors, HTTP
+failures or external requests on the main test page. New assertions cover the
+portrait cursor on HTML/body/workspace/header/heading/buttons/preferences, actual
+margin hit testing, answer text, off-switch persistence across English/Hausa,
+and an additional true touch-device context with normal cursor and hidden switch.
+Forced-colour and existing 320px/200%/offline/claim/source/receipt checks pass.
+Screenshots were refreshed; native operating-system cursor rendering is not
+captured by Playwright screenshots, so scope is verified by computed styles and
+the independently inspected PNG rather than a fabricated pointer overlay.
+
+[Browser results](../output/guided-browser-results.json) are marked
+`completed: true`. No dependency, dataset, answer graph, legacy audit, approval
+flag, commit, push or deployment change. This is not human Hausa/screen-reader
+certification, a new performance result, or public portrait reuse clearance.
+
 ## Committed review improvements, alternating options and cursor — 25 October
 
 Owner requested committing before criticism/improvements. Saved the validated

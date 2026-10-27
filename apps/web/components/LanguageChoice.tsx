@@ -30,6 +30,7 @@ export default function LanguageChoice({
       </span>
       <div className="language-options">
         <Link
+          scroll={false}
           prefetch={false}
           href={href("en")}
           hrefLang="en"
@@ -39,6 +40,7 @@ export default function LanguageChoice({
           English <span aria-hidden="true">{lang === "en" ? "✓" : ""}</span>
         </Link>
         <Link
+          scroll={false}
           prefetch={false}
           href={href("ha")}
           hrefLang="ha"

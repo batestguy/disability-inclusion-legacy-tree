@@ -1,4 +1,3 @@
-import { GuidedSessionProvider } from "../../components/GuidedSession";
 import "./chat.css";
 
 export default function ChatLayout({
@@ -6,5 +5,5 @@ export default function ChatLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <GuidedSessionProvider>{children}</GuidedSessionProvider>;
+  return children;
 }

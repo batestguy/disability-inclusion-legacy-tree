@@ -1,5 +1,34 @@
 # The Work in Numbers — research implementation
 
+## Opening numerical categories — 27 October 2026
+
+DashboardHighlights now renders the first white section with large gold planned
+targets and green reported milestone measures. All eleven typed observations are
+available without pagination; category controls show all, targets or achievements.
+Existing analytical filters apply to the cards, and category state survives
+locale changes in the shared DashboardSession. Every card keeps its source-bound
+qualification, report date, unit/bound and evidence link. No new totals, targets,
+completion estimates, source data or model outputs are introduced. Decorative
+stars are noninteractive, finite and disabled for reduced motion. Current
+validation is recorded in VALIDATION.md; this remains a local preview.
+
+## Phase 4 local dashboard — 27 October 2026
+
+The English/Hausa home dashboard now uses the selected reviewed-subset v1 bundle
+in content/dashboard/v1, rather than the full-archive exploratory model described
+below. DashboardWorkspace and DashboardPanels render activity/report-year filters,
+timeline and category counts, eight reported-delivery measures, three separate
+targets, saved English-model theme shares and separately qualified relationships.
+DashboardEvidence preserves source excerpts, roles, date basis and limitations;
+CSV exports retain typed quantities and protect spreadsheet text cells.
+
+One shared workspace session connects locale, dashboard selection and the compact
+guided chatbot below. Section navigation scrolls/focuses without overwriting the
+conversation URL path. Already-loaded interactions require no inference service;
+offline refresh/caching is not implemented. No new source/model result or public
+approval is introduced. Final continuation validation is recorded in VALIDATION.md.
+Earlier counts and unfinished queues below retain their historical dates.
+
 Phase 2 continuation: the owner accepted the Phase 1 checkpoint and authorized
 moving on while preserving its unfinished review counts. The selected v1 model,
 data bundle and current findings are in [PHASE2_FINDINGS.md](PHASE2_FINDINGS.md).

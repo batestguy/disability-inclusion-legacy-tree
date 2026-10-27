@@ -1,15 +1,16 @@
 {
-  "date": "2026-10-25T17:18:28.076Z",
+  "date": "2026-10-27T02:28:28.255Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
     "Question-only start, three replacing choices per page, no sidebar, duplicate path, transcript or internal scroller",
-    "Activities/results lead the start; green/white/green choices have readable text; official local logo cursor is limited to links/buttons and can be disabled",
+    "Activities/results lead the start; green/white/green choices have readable text; genuine portrait cursor covers the whole document, including margins/header/text, and its off switch survives language navigation",
     "Separate women cohorts, keyboard Back/Next, branch replacement, browser history and selected source preserved across languages",
     "All 11 numerical choices reachable through pagination; bounds, stages and units stay visible; full source links and receipt claims preserved",
     "Option and source page positions survive detail viewing; equally sized figures identify their programme; summary sources contain stored findings; history restores source lists; reader changes announce meaningful content",
     "Paginated year activities remain complete; relationship attribution qualification stays visible and exact source text is available on demand",
-    "Loaded choices work offline; ordinary English/Hausa phone steps fit without scrolling; 320px, 200% text and forced colours reflow without clipped content"
+    "Loaded choices work offline; ordinary English/Hausa phone steps fit without scrolling; 320px, 200% text and forced colours reflow without clipped content",
+    "Touch devices and forced colours retain standard cursors; no image follower, layout shift or intercepted pointer events"
   ],
   "axe": [
     {

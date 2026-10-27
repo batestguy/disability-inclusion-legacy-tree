@@ -1,5 +1,5 @@
-import { getContent } from "../lib/content";
-import Explorer from "../components/Explorer";
-export default async function Page() {
-  return <Explorer lang="en" data={await getContent()} />;
+import { getChatData } from "../lib/chat-data";
+import DashboardWorkspace from "../components/DashboardWorkspace";
+export default function Page() {
+  return <DashboardWorkspace lang="en" {...getChatData()} />;
 }

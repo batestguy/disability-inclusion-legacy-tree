@@ -1,5 +1,37 @@
 # Bilingual dashboard chatbot specification
 
+Latest portrait update (27 October): the arrow now contains a different smiling
+photo from SocietyNow's named appointment article. Shape, hotspot and fallbacks
+remain; source/crop provenance is in content/portrait-cursor.json. Earlier office-
+photo descriptions below are historical. Public reuse approval remains false.
+
+## Cursor correction — 27 October 2026
+
+Owner now requires a conventional arrow-shaped cursor containing his genuine
+photo. The native 48×64 PNG uses an original-photo crop inside an editable vector
+arrow, with white/dark edges and tip hotspot 4/3. This supersedes the person-shaped
+outline below. Whole-document scope, off switch, locale persistence and standard
+touch/forced-colour fallbacks remain; public reuse approval is still false.
+
+## Dashboard integration checkpoint — 27 October 2026
+
+The compact guided chatbot is now embedded below the local English/Hausa home
+dashboard, while /chat/ and /ha/chat/ remain available. One visible language
+control changes the dashboard and chat together. Explicit record-to-chat actions
+preserve dashboard filters and selected evidence; section navigation retains the
+chat URL path for reload. Final dashboard and standalone-chat verification passes;
+consult HANDOFF.md and the newest VALIDATION.md entry for evidence and limits.
+Hausa remains draft and the
+research preview remains blocked from public builds. This supersedes earlier
+statements below that dashboard integration is unimplemented.
+
+Latest cursor direction (25 October): use his genuine office-site photo as a
+silhouette cursor across the complete chat document, superseding the office-logo
+and links/buttons-only preference. Retain the off switch, shared locale state
+and standard touch/forced-colour fallbacks. This local prototype use does not
+establish public reuse permission. See content/portrait-cursor.json and the
+latest GUIDED_CHAT_IMPLEMENTATION.md / VALIDATION.md entries.
+
 ## Latest presentation correction — 25 October 2026
 
 The owner rejected internal scrolling and unnecessary explanatory material.

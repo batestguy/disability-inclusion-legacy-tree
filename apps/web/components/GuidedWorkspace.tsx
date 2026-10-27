@@ -7,13 +7,14 @@ import { getFlowNode } from "../lib/guided-flow.mjs";
 import { getConciseAnswer, getSourceEvidence, paginate, splitText } from "../lib/guided-presentation.mjs";
 import { t, type Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
+import "../app/(chat)/chat.css";
 import "../app/(chat)/guided.css";
 
-type Props = ReturnType<typeof getChatData> & { lang: Lang };
+type Props = ReturnType<typeof getChatData> & { lang: Lang; embedded?: boolean };
 type Detail = { label: string; text: string; quote?: boolean; lang: Lang };
 const flowHash = (path: string[]) => path.length > 1 ? `#flow=${encodeURIComponent(path.join("|"))}` : "";
 
-export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
+export default function GuidedWorkspace({ lang, bundle, manifest, embedded = false }: Props) {
   const { session, setSession } = useGuidedSession();
   const [downloadError, setDownloadError] = useState<string | null>(null);
   const answerPanel = useRef<HTMLElement>(null);
@@ -62,6 +63,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
     function readPath() {
+      if (location.hash && !location.hash.startsWith("#flow=")) return;
       let nextPath = ["start"];
       try {
         if (location.hash.startsWith("#flow=")) {
@@ -92,10 +94,10 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
 
   function focusAnswer() { requestAnimationFrame(() => answerPanel.current?.focus({ preventScroll: true })); }
   function navigate(nextPath: string[], retrace = false) {
-    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, logoCursor: session.logoCursor, ...initialGuidedScreen,
+    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, photoCursor: session.photoCursor, ...initialGuidedScreen,
       view: nextPath.at(-1)?.startsWith("evidence:") ? "sources" : "answer" });
     setDownloadError(null);
-    window.history.pushState(null, "", location.pathname + flowHash(nextPath));
+    window.history.pushState(null, "", location.pathname + location.search + flowHash(nextPath));
     focusAnswer();
   }
   function choose(target: string) {
@@ -135,13 +137,16 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
   }
 
   const heading = session.view === "sources" ? say("Sources", "Tushe") : session.view === "source" ? say("Source finding", "Bayanin tushe") : session.view === "details" ? say("Details", "Ƙarin bayani") : concise?.title[lang];
-  return <div className="chat-preview guided-workspace" lang={lang} data-logo-cursor={session.logoCursor}>
-    <a className="skip" href="#guided-answer">{say("Skip to questions", "Tsallaka zuwa tambayoyi")}</a>
-    <header className="chat-header">
+  const Main = embedded ? "div" : "main";
+  const Heading = embedded ? "h3" : "h1";
+  const DetailHeading = embedded ? "h4" : "h2";
+  return <div className={`chat-preview guided-workspace${embedded ? " guided-embedded" : ""}`} lang={lang}>
+    {!embedded && <a className="skip" href="#guided-answer">{say("Skip to questions", "Tsallaka zuwa tambayoyi")}</a>}
+    {!embedded && <header className="chat-header">
       <span className="chat-kicker">MOHAMMED ABBA ISA</span>
       <LanguageChoice lang={lang} destinations={{ en: "/chat/" + flowHash(path), ha: "/ha/chat/" + flowHash(path) }} />
-    </header>
-    <main className="guided-main">
+    </header>}
+    <Main className="guided-main">
       <section className="guided-conversation" aria-label={say("Guided conversation", "Tattaunawa mai jagora")}>
         {(path.length > 1 || session.view !== "answer" || session.cursor < session.path.length - 1) && <nav className="guided-toolbar" aria-label={say("Conversation navigation", "Kewayawa a tattaunawa")}>
           {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={back}>← {say("Back", "Koma baya")}</button>}
@@ -149,7 +154,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
           {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={() => navigate(["start"])}>{say("Start again", "Fara sabo")}</button>}
         </nav>}
         <section id="guided-answer" ref={answerPanel} tabIndex={-1} className="guided-answer" data-node={node?.id} data-view={session.view} aria-labelledby="guided-question">
-          <h1 id="guided-question">{heading ?? say("Records unavailable", "Bayanai ba su samuwa")}</h1>
+          <Heading id="guided-question">{heading ?? say("Records unavailable", "Bayanai ba su samuwa")}</Heading>
           {!node || !concise ? <button type="button" onClick={() => window.location.reload()}>{say("Reload", "Sake buɗewa")}</button> : session.view === "answer" ? <>
             {summaryParts.length > 0 && <p className="guided-summary">{summaryParts[summaryIndex]}</p>}
             {pager(summaryIndex, summaryParts.length, "summaryPage", say("Continue answer", "Ci gaba da amsa"))}
@@ -176,7 +181,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
             {session.view === "source" && source && <p className="guided-meta">{source.publisher} · {source.date}</p>}
             {session.view === "source" && source && !currentDetail && <p>{say("Open the original report above. No extract is stored for this report.", "Buɗe asalin rahoton da ke sama. Ba a adana wani rubutun wannan rahoto ba.")}</p>}
             {currentDetail && <div className="guided-detail" data-detail-page={detailIndex}>
-              <h2>{session.view === "details" ? <span lang="en">{currentDetail.label}</span> : currentDetail.label}</h2>
+              <DetailHeading>{session.view === "details" ? <span lang="en">{currentDetail.label}</span> : currentDetail.label}</DetailHeading>
               {currentDetail.quote ? <blockquote lang="en">{currentDetail.text}</blockquote> : <p lang={currentDetail.lang}>{currentDetail.text}</p>}
             </div>}
             {pager(detailIndex, details.length, "detailPage", say("Continue", "Ci gaba"))}
@@ -187,12 +192,12 @@ export default function GuidedWorkspace({ lang, bundle, manifest }: Props) {
       </section>
       <div className="guided-preferences">
         <p className="guided-draft">{say("Selected reports · Hausa draft", "Zaɓaɓɓun rahotanni · Hausa na gwaji")}</p>
-        <label className="guided-cursor-control"><input type="checkbox" checked={session.logoCursor} onChange={(event) => {
-          const logoCursor = event.currentTarget.checked;
-          setSession((previous) => ({ ...previous, logoCursor }));
-        }} />{say("Logo cursor", "Alamar ofishi a siginan kwamfuta")}</label>
+        <label className="guided-cursor-control"><input type="checkbox" checked={session.photoCursor} onChange={(event) => {
+          const photoCursor = event.currentTarget.checked;
+          setSession((previous) => ({ ...previous, photoCursor }));
+        }} />{say("Photo cursor", "Siginan hoto")}</label>
       </div>
-    </main>
+    </Main>
     <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{heading}. {session.view === "answer"
       ? `${summaryParts[summaryIndex] ?? ""} ${choices.page + 1}/${choices.pageCount}`
       : session.view === "sources" ? `${sourceChoices.page + 1}/${sourceChoices.pageCount}`

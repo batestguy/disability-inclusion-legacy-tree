@@ -1,5 +1,205 @@
 # Project handoff
 
+## Next owner suggestions recorded — 27 October 2026
+
+Current instruction: commit and push this completed dashboard checkpoint, and
+document further suggestions for next time. Read docs/DASHBOARD_NEXT_ITERATION.md
+first on continuation. Pending: time-series timeline; all populated categories
+with empty filter options dropped; elongated, better-fitted portrait cursor;
+large portrait/authentic sourced quote on the left with opening KPIs to its right
+and subsequent figures filling the width underneath; green–white–green throughout.
+Research his genuine main page/gallery for visual references and assets before
+implementing. This direction supersedes the current gold target styling for the
+next iteration. These suggestions are documented, not yet implemented.
+
+## Installed skills dashboard improvements — 27 October 2026
+
+Owner requested using globally installed interface-design and kpi-dashboard-design
+to check and improve the dashboard. Both are now installed; earlier research-only
+installation notes below are historical. Review found oversized opening chrome,
+long mobile cards, uneven metric baselines, and filter controls detached from
+their results. Main owns implementation/browser checks; read-only reviewer owns
+the visual before/after check. Preserve all pending source/cursor/chat changes.
+
+Direction: compact public-service scorecard with a white canvas, large legible
+tabular figures, green achievements/gold plans, and a number/short label/one Source
+action per item. Domain: inclusion, employment, enterprise, skills, women, welfare.
+Colour world: flag green, white, emblem gold, dark ink and misty neutral. Signature:
+one wide planned-opportunities figure with an aligned support pair, followed by
+the eight real programme figures. Replace brochure-scale serif chrome with UI
+typography, card-heavy mobile stacking with compact rows, and distant filters
+with a native filter disclosure and active context beside category controls.
+Keep small sparkle, shared visible vertical locale control and bottom chat.
+No new numerical claims, data/model change, production dependency or public release.
+
+Implemented compact scorecard in DashboardHighlights.tsx/highlights.css, with
+shorter programme labels, aligned target units, compact phone rows and a top
+native Filters disclosure. Selected year/context and Clear remain visible.
+Self-hosted unchanged Adobe Source Sans 3 fonts include original OFL licence and
+provenance; no font CDN. Reusable direction saved in .interface-design/system.md.
+Before images: output/playwright/dashboard-skills-before-{desktop,mobile}.png;
+after: dashboard-overview.png and dashboard-mobile.png. Independent read-only
+review found all four original issues addressed, with no material regression
+in sampled English views/source. Main also inspected Hausa and fixed heading/date
+overlap; browser geometry now asserts their separation. Final evidence is recorded
+in the newest docs/VALIDATION.md entry. Local preview: http://127.0.0.1:8767/.
+
+## Simpler KPIs, new portrait and design research — 27 October 2026
+
+Owner requested removing remaining achievement bullets, a different cursor photo,
+then asked for number + short story label + one source link, without long checking/
+verification prose. KPI cards now contain only number/unit, short title and Source.
+Removed per-card dates/Details, stage badges in activity rows, the duplicate lower
+figure dashboard, repeated hero/inventory cards, and process-heavy visible copy.
+Counts remain compact beside filters. Group headings distinguish targets from
+achievements; underlying evidence/metadata and on-demand activity details remain.
+
+Cursor now embeds a genuinely different smiling photo from SocietyNow's named
+appointment article. Provenance records the exact asset/hash and 161×155 crop;
+all 24,955 decoded crop pixels match the source region. Native arrow remains
+48×64 with 4/3 tip hotspot, off switch and touch/forced-colour fallbacks. Source
+public-reuse approval remains false; no generated face.
+
+Owner then requested research into actual achievement dashboards/downloadable
+skills because the layout feels generic. Read docs/DASHBOARD_DESIGN_RESEARCH.md:
+visually inspected actual Geckoboard charity, Tableau big-number and Microsoft
+nonprofit reference screenshots. Recommended direction: compact number-first
+white scoreboard, short labels and source-on-click. Best focused skill found:
+dammyjay93/interface-design (30.9K installs); kpi-dashboard-design is a metric-layout
+supplement. Reference skill files downloaded for inspection only; no installation
+or global overwrite. A full reference-led visual redesign is not claimed.
+
+Passed preflight, lint/typecheck, 59 tests, web/Studio builds (web rebuilt after
+copy/layout simplification), and both browser suites: dashboard seven groups/five
+axe states; standalone eight/five; zero violations, errors, HTTP failures or
+external requests. Served cursor SHA-256 matches new provenance. No data,
+dependency, approval, commit, push or deployment change. Owner review/research
+direction is next; preserve all existing pending work.
+
+## Simplified source cards and photo arrow ready — 27 October 2026
+
+Owner rejected repeated Planned/not-delivered bullets and requested sources,
+plus a conventional arrow cursor using his photo. Removed per-card stage badges
+and repetitive explanatory paragraphs; stage headings/number bounds remain.
+Each card now links directly to an observation-evidence source; Details opens
+the existing full record with qualifications. The native editable SVG arrow
+embeds an original-photo crop, with a white/dark outline and tip hotspot 4/3.
+Final pointer is 48×64; whole-page scope/off switch/touch/forced-colour fallbacks
+remain. Provenance updated; no generated face or rights approval. The arrow is
+an editable SVG icon containing an original-photo crop, rendered with the existing
+Sharp toolchain; its click point is the upper-left arrow tip rather than the head.
+
+Passed preflight, lint/typecheck, 59 tests, both builds, dashboard browser (seven
+groups/five axe states) and standalone chat browser (eight groups/five axe states).
+Both completed:true with zero axe violations, page errors, HTTP failures or
+external requests. Browser checks verify all eleven direct Source URLs against
+their observation evidence, removed badges, actual PNG dimensions and hotspot.
+Native/enlarged arrow PNG and refreshed dashboard screenshots visually inspected;
+OS pointer appearance is not captured in browser screenshots. See latest
+VALIDATION.md. No source data, dependency, approval, commit, push or deployment.
+
+## White KPI showcase ready for owner review — 27 October 2026
+
+Owner confirmed Tableau-style within this website. The first section is now a
+distinct white KPI dashboard: three planned targets first, eight reported
+milestone measures second, with All figures / Planned targets / Reported
+achievements category controls. Existing context, charts, evidence and bottom
+chatbot remain below. All values retain bounds, units, source qualifications and
+matching evidence actions; no combined cohort total or completion percentage.
+Category selection survives locale/filter navigation in memory; numerical cards
+follow existing report-year/category/activity filters. Reload retains URL filters
+and the active chat path; highlight category resets to All figures.
+
+Owner also requested colour/clarity/glitter. Added gold planned figures, green
+reported figures, restrained decorative stars with a four-second finite glint,
+and reduced-motion/forced-colour fallbacks. Numerical text sizes to each card's
+container to keep bound marks and six-character figures inside desktop columns.
+Independent source review cleared stage/data/state changes; final browser checks
+verify numeral bounds within cards at desktop, 1060px, mobile and 320px/200% text.
+
+Passed preflight, lint/typecheck, 59 tests, web/Studio builds, dashboard browser
+(seven groups/five zero-violation axe states) and standalone chat browser (eight
+groups/five zero-violation axe states). Both result files completed:true; no page
+errors, HTTP failures or external requests. Desktop/mobile screenshots inspected.
+See latest docs/VALIDATION.md. No source data, dependency, approval, commit, push
+or deployment change. Hausa remains visibly draft; public gates remain intact.
+Owner review: http://127.0.0.1:8767/ or /ha/ (restart preview if needed).
+
+## Phase 4 dashboard ready for owner review — 27 October 2026
+
+Owner authorized completing Phase 4 dashboard work. The local English/Hausa home
+dashboard and bottom compact chatbot are implemented and verified. Preserve all
+pending dashboard/portrait-cursor changes; no commit, push or deployment was made.
+
+Final checks pass: preflight, lint/typecheck, 59 tests, web and Studio builds,
+dashboard browser (six groups/five axe states) and standalone chat browser (eight
+groups/five axe states). Both browser results have completed:true, zero sampled
+axe violations, no page errors, HTTP failures or external requests. See newest
+docs/VALIDATION.md entry and output/dashboard-browser-results.json.
+
+Fresh read-only data review found no material defect, including 170 year/activity
+selection invariants. Integration review found and cleared a persistence bug:
+section anchors overwrote the chat hash, so immediate reload lost the node.
+Section links now scroll/focus without replacing it; the browser regression
+reloads immediately after section clicks. Also corrected decorative accessible
+control labels, evidence-close focus after locale remount, and narrow/short-screen
+header obstruction. Browser tests cover export failure/recovery and 200% heading
+start visibility with ordinary document reflow. URL changes precede locale effects,
+so tests wait for actual rendered locale. No implementation changes followed the
+final build; final test-only refinements were source-reviewed and executed.
+
+Next: owner review at http://127.0.0.1:8767/ and /ha/; do not assume this preview
+server survives a future session. Hausa approval, portrait reuse rights, broader
+archive coverage and full offline reload/caching remain unresolved. No public
+deployment is authorized, and the research preview still blocks public builds.
+
+## Implemented scope — Phase 4 dashboard above the chatbot
+
+Latest owner request authorizes building the main dashboard now, with the compact
+chatbot at the bottom. Main owns dashboard UI/routes/shared session/language,
+browser validation and final review; one executor owns the pure dashboard data
+engine, declarations and focused tests. Preserve all pending photo-cursor edits.
+
+Acceptance: English/Hausa home dashboard; one shared visible language control;
+year/category/activity filters; activity-grain timeline/category counts; separate
+delivery/target figures without a people total; frozen English-model text themes
+with actual denominators; relationships distinguished from shared mentions;
+filterable source/evidence rows and CSV exports; explicit selected-record handoff
+to the embedded chatbot. Permanent achievement URLs and standalone chat remain.
+The bottom chatbot keeps three replacing options and no internal scroller.
+Global portrait cursor/off switch and filters/selected record survive locale
+navigation. Preview-only gate stays in place; no public release is requested.
+
+Design: ivory/green/gold, editorial title and monogram, timeline-led layout,
+responsive charts with readable table alternatives, empty states, keyboard/focus,
+200% text, reduced motion and forced colours. Use the existing reviewed v1 bundle
+and dependencies. Validate data calculations/exports, then lint/typecheck/tests,
+both builds and focused dashboard/browser regression journeys before delivery.
+
+## Latest direction — genuine portrait cursor across the whole page
+
+Owner superseded the organization-logo/buttons-only cursor preference. The local
+English/Hausa chatbot now uses a photo-shaped portrait cursor throughout its
+document: margins, header, text, buttons, sources and preferences. The provider
+sets an HTML-level cursor attribute and cleans it up on leaving the chat layout.
+The off switch is now Photo cursor / draft Siginan hoto; it survives locale
+navigation. Fine hovering pointers only; coarse/touch and forced colours retain
+standard cursors. No animated follower or pointer-event overlay was introduced.
+
+The genuine portrait is from the office homepage's About Us section. Source,
+photographer/reuse limits, hashes, processing and rejected candidate are in
+content/portrait-cursor.json. An imagegen background-removal candidate changed
+fine facial details and was rejected. The shipped asset uses the original photo
+with a vector alpha mask, then native-cursor resizing. All 315,489 opaque pixels
+of the pre-resize cutout match the original RGB values. The PNG is 48×56, 4,986
+bytes, hotspot 24/4. Rebuild: node scripts/build-portrait-cursor.mjs (requires the
+recorded source under ignored output/portrait-cursor/; source hash is checked).
+
+This is owner-requested local prototype use, not a rights-holder reuse licence.
+Public approval remains false and existing release gates remain. Do not replace
+the main-page monogram or claim portrait rights cleared. See latest VALIDATION
+entry for final checks. Earlier logo-cursor notes below are historical.
+
 ## Resume here — review fixes, alternating options and OSSAP cursor
 
 Owner requested committing first, then criticism/improvements. Saved the complete

@@ -2,6 +2,7 @@ import { chromium } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import assert from "node:assert/strict";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
 
 const bundle = JSON.parse(await readFile("content/dashboard/v1/bundle.json", "utf8"));
 const base = process.env.TEST_URL || "http://127.0.0.1:8767";
@@ -73,6 +74,7 @@ async function openFirstSource() {
 try {
   await page.goto(`${base}/chat/`);
   await page.locator('#guided-answer[data-node="start"]').waitFor();
+  await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
   assert.equal(await page.locator('.guided-options > button').first().getAttribute('data-target'), 'programmes');
   assert.equal(await current().locator("p").count(), 0, "start should contain just the question and options");
   assert.equal(await page.locator(".guided-options button").count(), 3);
@@ -84,21 +86,40 @@ try {
   const colors = await page.locator('.guided-options > button').evaluateAll((buttons) => buttons.map((button) => ({ background: getComputedStyle(button).backgroundColor, color: getComputedStyle(button).color })));
   assert.deepEqual(colors.map((entry) => entry.background), ['rgb(23, 83, 59)', 'rgb(255, 255, 255)', 'rgb(23, 83, 59)']);
   assert.equal(colors[0].color, 'rgb(255, 255, 255)');
-  assert.ok((await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
-  assert.ok(!(await page.locator('.guided-workspace').evaluate((el) => getComputedStyle(el).cursor)).includes('/branding/ossap-cursor.jpg'));
-  const cursorSwitch = page.getByRole('checkbox', { name: 'Logo cursor', exact: true });
+  const portraitCursor = '/branding/abba-isa-cursor.png';
+  const cursorResponse = await context.request.get(base + portraitCursor);
+  assert.equal(cursorResponse.status(), 200);
+  const cursorBytes = await cursorResponse.body();
+  const cursorProvenance = JSON.parse(await readFile('content/portrait-cursor.json', 'utf8'));
+  assert.equal(createHash('sha256').update(cursorBytes).digest('hex'), cursorProvenance.cursor_sha256, 'served cursor does not match the selected portrait asset');
+  assert.equal(cursorBytes.readUInt32BE(16), 48);
+  assert.equal(cursorBytes.readUInt32BE(20), 64);
+  assert.match(await page.locator('html').evaluate((element) => getComputedStyle(element).cursor), /4 3, auto/);
+  for (const selector of ['html', 'body', '.guided-workspace', '.chat-header', '#guided-question', '.guided-options > button', '.guided-cursor-control']) {
+    assert.ok((await page.locator(selector).first().evaluate((element) => getComputedStyle(element).cursor)).includes(portraitCursor), `photo cursor missing on ${selector}`);
+  }
+  await page.mouse.move(2, 2);
+  assert.ok((await page.evaluate(() => getComputedStyle(document.elementFromPoint(2, 2)).cursor)).includes(portraitCursor), 'photo cursor missing in the page margin');
+  const cursorSwitch = page.getByRole('checkbox', { name: 'Photo cursor', exact: true });
   await cursorSwitch.uncheck();
-  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
+  assert.ok(!(await page.locator('html').evaluate((element) => getComputedStyle(element).cursor)).includes(portraitCursor));
+  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes(portraitCursor));
+  await page.getByRole('link', { name: 'Hausa', exact: true }).click();
+  await page.waitForURL(/\/ha\/chat\//);
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), 'false');
+  await page.getByRole('link', { name: 'English', exact: true }).click();
+  await page.waitForURL(/(?<!ha)\/chat\//);
   await cursorSwitch.check();
   await audit("Minimal English start");
   await page.screenshot({ path: "output/playwright/chat-guided-desktop.png", fullPage: true });
   results.checks.push("Question-only start, three replacing choices per page, no sidebar, duplicate path, transcript or internal scroller");
-  results.checks.push('Activities/results lead the start; green/white/green choices have readable text; official local logo cursor is limited to links/buttons and can be disabled');
+  results.checks.push('Activities/results lead the start; green/white/green choices have readable text; genuine portrait cursor covers the whole document, including margins/header/text, and its off switch survives language navigation');
 
   await choose("women");
   assert.match(await current().innerText(), /45/); assert.match(await current().innerText(), /20/);
   assert.doesNotMatch(await current().innerText(), /\b65\b/);
   assert.match(await current().innerText(), /Do not add/);
+  assert.ok((await page.locator('.guided-summary').evaluate((element) => getComputedStyle(element).cursor)).includes(portraitCursor), 'photo cursor missing over answer text');
   await sources();
   await page.locator('.guided-options button[data-source="3531"]').click();
   assert.match(await current().innerText(), /45 women with disabilities/);
@@ -229,9 +250,18 @@ try {
   await page.addStyleTag({ content: "html{font-size:200%!important}" });
   await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
   await compact();
-  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('/branding/ossap-cursor.jpg'));
+  assert.ok(!(await page.locator('.guided-options > button').first().evaluate((button) => getComputedStyle(button).cursor)).includes(portraitCursor));
   assert.equal(await page.getByRole("link", { name: "Hausa", exact: true }).getAttribute("aria-current"), "page");
   results.checks.push("Loaded choices work offline; ordinary English/Hausa phone steps fit without scrolling; 320px, 200% text and forced colours reflow without clipped content");
+
+  const touch = await browser.newContext({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
+  const touchPage = await touch.newPage();
+  await touchPage.goto(`${base}/chat/`);
+  await touchPage.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
+  assert.ok(!(await touchPage.locator('.guided-options > button').first().evaluate((element) => getComputedStyle(element).cursor)).includes(portraitCursor));
+  assert.equal(await touchPage.locator('.guided-cursor-control').isVisible(), false);
+  await touch.close();
+  results.checks.push('Touch devices and forced colours retain standard cursors; no image follower, layout shift or intercepted pointer events');
 
   await page.goto(`${base}/chat/#flow=${encodeURIComponent("start|activity:missing")}`);
   await page.locator('#guided-answer[data-node="start"]').waitFor();

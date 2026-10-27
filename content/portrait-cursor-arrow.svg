@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64">
+  <defs><clipPath id="pointer"><path d="M4 3L44 37H29L39 57L29 62L19 42L4 54Z"/></clipPath></defs>
+  <path d="M4 3L44 37H29L39 57L29 62L19 42L4 54Z" fill="#163e2d" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+  <image href="{{PORTRAIT_DATA_URL}}" x="4" y="14" width="35" height="40" preserveAspectRatio="xMidYMid slice" clip-path="url(#pointer)"/>
+  <path d="M4 3L44 37H29L39 57L29 62L19 42L4 54Z" fill="none" stroke="#14251c" stroke-width="1.4" stroke-linejoin="round"/>
+</svg>

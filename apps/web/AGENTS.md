@@ -1,5 +1,11 @@
 ## Accepted chatbot and locale contract
 
+Latest owner direction (25 October 2026): implement a guided clickable question
+tree with answer/follow-up choices as the main conversation. No hired or outside
+reviewer is required; use owner feedback and documented checks while labelling
+Hausa draft honestly. See ../../docs/GUIDED_CHAT_IMPLEMENTATION.md. This supersedes
+the earlier free-text-first and mandatory outside-signoff assumptions below.
+
 Before implementing the dashboard chatbot, read [the specification](../../docs/CHATBOT_SPEC.md) and [the handoff](../../HANDOFF.md). Build a polished conversational English/Hausa component before dashboard integration. Page locale controls chat automatically. Always expose **Change language / Canja harshe**, with **English** above **Hausa**, vertically stacked and visible without a menu. One control changes page and chat together. Implementation and human Hausa review are pending. Preserve the managed Next.js guidance below.
 
 <!-- BEGIN:nextjs-agent-rules -->

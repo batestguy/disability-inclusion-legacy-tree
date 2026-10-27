@@ -1,5 +1,24 @@
 # Guided conversation — current implementation task
 
+## Cursor shape correction — 27 October 2026
+
+Replace the earlier person-shaped silhouette with a familiar arrow containing an
+original-photo crop. Native 48×64 PNG, upper-left tip hotspot 4/3, white/dark outline;
+no generated face. Scope/off switch/locale and normal touch/forced-colour fallbacks
+remain. Editable template: content/portrait-cursor-arrow.svg. Provenance and
+unverified public reuse status remain in content/portrait-cursor.json.
+
+## Phase 4 integration — 27 October 2026
+
+The English/Hausa home dashboard embeds the compact guided component at the
+bottom. Standalone chat routes remain. WorkspaceSession shares dashboard/chat
+state and the portrait-cursor preference across locale navigation. Record actions
+explicitly select a matching activity node; section scrolling retains its flow
+hash. Selected source/evidence and draft status remain intact. Dashboard controls
+use report-year AND category AND activity filters; the chatbot's follow-ups retain
+those URL filters. Final checks pass, including both standalone and embedded
+browser journeys; evidence and limits are recorded in HANDOFF.md and VALIDATION.md.
+
 25 October 2026. Owner steering: this is a free-tier project built by the owner
 and Codex, without hiring anyone or requiring outside sign-off. Hausa remains
 honestly labelled draft; owner feedback and evidence/semantic/browser checks
@@ -14,6 +33,18 @@ Implement a conversational sequence of questions, answers and follow-up choices,
 with Back, Start again and evidence endpoints in both locales. The latest owner
 correction below removes the earlier visible map/path from the interface.
 No API, credentials, subscriptions, trial credits or new production dependencies.
+
+## Current cursor direction — portrait across the whole page
+
+Owner now wants his genuine photograph rather than the office logo, throughout
+the page rather than only over links/buttons. Apply the native cursor at document
+level across header, text, margins, controls and source screens while this chat
+layout is active. Preserve an off switch and locale state, and standard coarse-
+pointer/forced-colour fallbacks. Do not overlay an animated follower or intercept
+clicks/text selection. The original office photo is silhouette-masked and resized;
+no generated face is shipped. Provenance and unverified public reuse permission
+are recorded in content/portrait-cursor.json, with public approval false. This
+owner-requested local prototype use does not clear public portrait/reveal gates.
 
 ## Latest design decisions after review
 

@@ -2,6 +2,7 @@
 
 import {
   createContext,
+  useEffect,
   useContext,
   useState,
   type Dispatch,
@@ -17,7 +18,7 @@ type GuidedSession = {
   detailPage: number;
   summaryPage: number;
   sourceId: string | null;
-  logoCursor: boolean;
+  photoCursor: boolean;
 };
 export const initialGuidedScreen = {
   view: "answer" as const,
@@ -27,7 +28,7 @@ export const initialGuidedScreen = {
   summaryPage: 0,
   sourceId: null,
 };
-const initial: GuidedSession = { path: ["start"], cursor: 0, logoCursor: true, ...initialGuidedScreen };
+const initial: GuidedSession = { path: ["start"], cursor: 0, photoCursor: true, ...initialGuidedScreen };
 const Context = createContext<{
   session: GuidedSession;
   setSession: Dispatch<SetStateAction<GuidedSession>>;
@@ -35,10 +36,21 @@ const Context = createContext<{
 
 export function GuidedSessionProvider({
   children,
+  cursorActive = true,
 }: {
   children: React.ReactNode;
+  cursorActive?: boolean;
 }) {
   const [session, setSession] = useState<GuidedSession>(initial);
+  useEffect(() => {
+    const root = document.documentElement;
+    const previous = root.dataset.photoCursor;
+    root.dataset.photoCursor = String(cursorActive && session.photoCursor);
+    return () => {
+      if (previous === undefined) delete root.dataset.photoCursor;
+      else root.dataset.photoCursor = previous;
+    };
+  }, [session.photoCursor, cursorActive]);
   return (
     <Context.Provider value={{ session, setSession }}>
       {children}

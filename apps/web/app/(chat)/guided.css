@@ -9,7 +9,7 @@
 .guided-toolbar button:disabled, .guided-pager button:disabled { opacity: 0.45; cursor: default; }
 .guided-toolbar button:not(:disabled):hover, .guided-actions button:hover, .guided-pager button:not(:disabled):hover { text-decoration: underline; text-underline-offset: 4px; }
 .guided-answer { padding: 1.5rem; min-height: 24rem; outline-offset: 4px; }
-.guided-answer h1 { font: 2rem/1.15 Georgia, 'Times New Roman', serif; letter-spacing: -0.035em; margin: 0 0 1.3rem; }
+.guided-answer #guided-question { font: 2rem/1.15 Georgia, 'Times New Roman', serif; letter-spacing: -0.035em; margin: 0 0 1.3rem; }
 .guided-summary { font-size: 0.94rem; line-height: 1.65; white-space: pre-line; margin: 0 0 1rem; }
 .guided-options { display: grid; gap: 0.65rem; }
 .guided-options > button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 54px; padding: 0.8rem 1rem; text-align: left; background: #ffffff; color: #173e2d; border: 1px solid #466f54; border-radius: 4px; font-size: 0.9rem; line-height: 1.45; }
@@ -33,7 +33,7 @@
 .guided-cursor-control input { width: 18px; height: 18px; accent-color: #17533b; }
 .guided-source-link { display: block; font-size: 0.9rem; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
 .guided-meta { color: #5d6c54; font-size: 0.75rem; margin: 0.6rem 0 1rem; }
-.guided-detail h2 { font-size: 0.8rem; font-weight: 600; margin: 1rem 0 0.6rem; }
+.guided-detail :is(h2, h4) { font-size: 0.8rem; font-weight: 600; margin: 1rem 0 0.6rem; }
 .guided-detail p, .guided-detail blockquote { font-size: 0.94rem; line-height: 1.65; white-space: pre-wrap; }
 .guided-detail blockquote { margin: 0; padding-left: 1rem; border-left: 2px solid #9c8244; }
 .guided-download { text-decoration: underline; text-underline-offset: 4px; margin-top: 0.7rem; }
@@ -43,15 +43,15 @@
   .guided-main { margin-top: 0.8rem; }
   .guided-toolbar { padding: 0.4rem 1rem; gap: 0.4rem 1rem; }
   .guided-answer { padding: 1.1rem; min-height: 22rem; }
-  .guided-answer h1 { font-size: 1.65rem; margin-bottom: 1rem; }
+  .guided-answer #guided-question { font-size: 1.65rem; margin-bottom: 1rem; }
   .guided-summary, .guided-detail p, .guided-detail blockquote { font-size: 0.88rem; line-height: 1.55; }
   .guided-options > button { font-size: 0.85rem; padding: 0.7rem 0.85rem; }
-  .guided-cursor-control { display: none; }
 }
+.guided-embedded.chat-preview { min-height: 0; background: transparent; }
+.guided-embedded .guided-main { width: 100%; margin: 0; }
 @media (hover: hover) and (pointer: fine) and (forced-colors: none) {
-  .guided-workspace[data-logo-cursor="true"] button:not(:disabled),
-  .guided-workspace[data-logo-cursor="true"] a {
-    cursor: url('/branding/ossap-cursor.jpg') 16 16, pointer;
+  html[data-photo-cursor="true"], html[data-photo-cursor="true"] * {
+    cursor: url('/branding/abba-isa-cursor.png') 4 3, auto !important;
   }
 }
 @media (hover: none), (pointer: coarse) {
