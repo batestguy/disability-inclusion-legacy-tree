@@ -1,5 +1,49 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Current presentation decision — 28 October 2026
+
+See [the dashboard presentation brief](docs/DASHBOARD_PRESENTATION_BRIEF.md) for
+the latest owner decisions and [HANDOFF.md](HANDOFF.md) for continuation state.
+The dashboard’s agreed display title is **Advancing Disability Inclusion**;
+subtitle: **Mohammed Abba Isa’s contributions in figures**.
+
+Next layout: category names left/KPIs right; speaking-photo concept cloud;
+collaborations pending; guided chatbot pending. Source links stay with each
+contribution. Remove the standalone evidence-explorer block and report-year
+activity chart in the later redesign. Preserve the full-record overview, sourced
+figures in hundreds, exact units/bounds and conditional planned-support groups.
+The cloud speech panel supersedes the silhouette. No new UI is implemented in
+this checkpoint; existing collaboration/chat code does not establish design
+approval. All release, Hausa and portrait rights gates remain unchanged.
+
+## Next dashboard iteration implemented — 27 October 2026
+
+Continued from committed/pushed checkpoint `2273642` (initial tree was clean).
+Implemented the six requests in docs/DASHBOARD_NEXT_ITERATION.md locally:
+report-year activity-record line chart with table/year buttons; all eight populated
+catalogue categories selectable with zero-count chart rows omitted; elongated,
+proportion-preserving cursor crop; official-homepage portrait and short attributed
+English quote left of opening target KPIs; achievements across the full width
+below; green–white–green styling including the embedded chatbot surface.
+
+Read content/dashboard-portrait.json for exact photograph/quote provenance and
+context; English quote remains English on Hausa pages. Main page and gallery were
+inspected, including two original gallery samples; the About Us portrait was
+chosen for a clearer individual image. No reuse licence was established. Cursor
+retains its genuine smiling source, 48×64 native size, tip hotspot 4/3, off switch
+and touch/forced-colour fallbacks; 37,835 decoded crop pixels match the source.
+
+Passed preflight, lint, typecheck, **60 tests**, web/Studio builds and final web
+rebuild after CSS refinements. Both browser suites completed:true, eight journey
+groups each and five axe states each with zero violations; no page errors, failed
+responses or external requests. Desktop, phone English/Hausa, time series and
+native/enlarged cursor inspected. See latest docs/VALIDATION.md.
+Preview: http://127.0.0.1:8767/ and /ha/.
+
+This iteration is uncommitted; no push or deployment. Frozen data is unchanged.
+Hausa remains draft; public portrait rights/reveal flags remain false. No public
+release or approval status change is implied by working local previews.
+
 ## Next iteration queued — 27 October 2026
 
 Owner requested committing/pushing the current checkpoint and recording further

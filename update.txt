@@ -1,0 +1,16 @@
+Layout skeleton: a 12-column, 8pt-grid single screen
+Zone	Grid span	Content	Why this works
+Z1 — Headline verdict (top-left, 8 columns × 2 rows)	cols 1–8, rows 1–2	A single large sentence stating the net delivery verdict, plus one dominant KPI (e.g., “68% of major commitments delivered; 3 at risk”).
+Z2 — Term band trend (top-right, 4 columns × 2 rows)	cols 9–12, rows 1–2	One line chart showing the primary outcome metric over time, with a shaded band for the term in office and a baseline line (pre-term average or peer median).	Line charts are preattentively strong for trend; a shaded term band makes time-in-office the visual frame. “Most decision-oriented KPIs need a clearly named, decision-relevant comparison”.
+Z3 — Promise delivery bar (middle-left, 6 columns × 3 rows)	cols 1–6, rows 3–5	Horizontal stacked bar (delivered / in progress / at risk / not started) for the top 5–7 priority areas. Direct labels, no legend.	Bar charts dominate real dashboards because length is the most accurately decoded preattentive attribute. Horizontal layout leaves room for sentence-case category labels. “Match the chart to the story: bar/column for comparisons”.
+Z4 — Sector heat strip (middle-right, 6 columns × 3 rows)	cols 7–12, rows 3–5	A single-row heat strip (not a 2D heatmap) with one cell per sector, colored by RAG status, sized equally. Clicking a cell reveals the underlying achievements in a drill-down panel.	A 1D heat strip uses color as a preattentive cue without demanding 2D matrix decoding. “Use preattentive attributes strategically” and avoid overloading.
+Z5 — Achievement evidence stream (bottom, 12 columns × 2 rows)	cols 1–12, rows 6–7	Text-first cards (not icons, not badges) in reverse chronological order. Each card: claim + date + one italicized comparator (“vs. 2021 baseline: +18%”). Confidence is encoded by border opacity (solid = high, dashed = medium, dotted = low), not by a visible badge.	Text is not supplementary—it is 21% of dashboard content, second only to charts. “Treat text as a first-class design element”. Border treatment encodes confidence without adding a competing focal point.
+Spacing and grid rules:
+
+32px outer margin on all sides; 16px card padding; 32px between cards.
+
+All columns and modules align to an 8pt baseline grid.
+
+Minimum font size 11px/11pt, sentence case throughout, consistent weights for hierarchy.
+
+Background: a single neutral surface (e.g., #F0F4F5), not a rainbow of section colors. “Dashboard background colour #F0F4F5”; banners and borders should be “light and neutral” and not distract.

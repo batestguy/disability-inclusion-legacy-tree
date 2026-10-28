@@ -1,8 +1,9 @@
 {
-  "date": "2026-10-27T02:33:10.278Z",
+  "date": "2026-10-27T07:07:17.594Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
+    "Sourced genuine portrait and English quote; opening KPIs beside portrait and achievements use full width below; all populated categories offered; line chart describes activity-record counts by report year",
     "Dashboard is the bilingual home; 33 activities, eight delivery measures, three targets and 36 linked citations; one language control and chatbot below all dashboard sections",
     "White KPI showcase is first: all 11 sourced figures, three targets before eight reported achievements; keyboard category controls and record evidence work without combined totals",
     "Year/category/activity controls use AND filtering; timeline controls work; empty results are honest; Karu delivery and household target remain separate in cards and both filtered CSV exports",
@@ -37,8 +38,8 @@
   "failedResponses": [],
   "externalRequests": [],
   "layout": {
-    "firstDesktopNumberY": 343.765625,
-    "firstMobileNumberY": 408,
-    "supportingMobileCardHeight": 109.59375
+    "firstDesktopNumberY": 344.765625,
+    "firstMobileNumberY": 899.359375,
+    "supportingMobileCardHeight": 111.59375
   }
 }

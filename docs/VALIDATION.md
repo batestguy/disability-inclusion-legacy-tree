@@ -1,5 +1,89 @@
 # Validation evidence - 22 October 2026
 
+## Presentation brief and checkpoint validation — 28 October 2026
+
+Owner requested documenting the agreed dashboard design and committing/pushing
+for next time. Added docs/DASHBOARD_PRESENTATION_BRIEF.md; updated HANDOFF.md,
+PROJECT_PLAN.md, DASHBOARD_NEXT_ITERATION.md, CHATBOT_SPEC.md and the interface
+design system. Preserved original update.txt. Category-based KPI layout and the
+speaking-photo/cloud direction are agreed; collaborations and guided chatbot
+remain pending. The separate evidence block and report-year activity chart are
+excluded from the future layout, not removed from current application code.
+
+No new app, data/model, dependency, portrait approval, Hausa approval or public
+release change was made in this session. The checkpoint also preserves the prior
+uncommitted implementation, portrait provenance and browser artifacts described
+in the 27 October validation below. Frozen bundle still has 33 activities, 11
+observations and 30 canonical model documents; public_reveal_approved is false.
+
+Executed and passed on 28 October:
+
+- npm.cmd run preflight
+- npm.cmd run lint
+- npm.cmd run typecheck
+- npm.cmd test: 60 passed, zero failures
+- npm.cmd run build: web static export and Sanity Studio passed
+- python -m unittest discover -s scripts -p '*_test.py': 69 passed
+- python scripts/audit-dashboard-bundle.py: integrity_passed true
+- Local Markdown links: 32 resolved; both pending design decisions retained
+- git diff --cached --check: passed before final commit
+
+Browser suites were not rerun: new edits in this session are Markdown only.
+Existing 27 October screenshots/results are retained as evidence of the previous
+implementation, not evidence that the next design has been built. Remote main
+matched local HEAD before this checkpoint. The checked-in GitHub workflow runs
+verification and uploads a static-preview artifact; it has no deployment step.
+
+
+## Portrait, report-year graph and green scorecard — 27 October 2026
+
+Completed the queued next iteration locally from checkpoint 2273642. Major
+portrait/quote occupy the left opening rows, target KPIs sit right, and eight
+achievement figures fill the board below. Mobile reading order is portrait/quote
+then all figures in document flow; first mobile KPI is intentionally lower now.
+Green–white–green replaces gold plans, including embedded chat surface/focus.
+All eleven sourced figures retain values, units, bounds and stages.
+
+Official office homepage and gallery were read; two original gallery photographs
+were visually inspected. The About Us portrait was selected and its exact source
+hash verified before 540×600 WebP encoding (27,182 bytes). Quote uses only the
+first attributed homepage sentence, in original English with lang=en on both
+locales. Exact excerpt, attribution context, asset hashes, photographer/reuse
+limits and false public approval are in content/dashboard-portrait.json.
+
+Report graph counts selected activity records by report year (8/10/11/4 at full
+selection), with zero-based ticks, explicit partial 2026 coverage, accessible
+text/table and year filter buttons. It does not calculate event dates, people
+sums or cumulative impact. All eight populated catalogue categories remain
+selectable; current category chart omits zero rows. Regression test verifies
+unused categories and empty AND selections without losing clearable controls.
+
+Cursor keeps its existing genuine smiling source and native 48×64 arrow/hotspot
+4/3. Portrait crop is now 161×235 and fits proportionally into 24×35; builder
+checks all 37,835 decoded crop pixels against the source. Final cursor is 3,710
+bytes; SHA-256 8e14b5b7f54fcf2aaa6f3a495b4ab370894ab86bd2cb8f7d64d206f18c7cf79f.
+Native/enlarged PNG inspected; screenshots do not capture the OS pointer.
+
+Passed npm.cmd run preflight, lint, typecheck, **60 tests**, full web/Studio
+build and final web rebuild after portrait/embedded-chat CSS adjustments.
+Final dashboard browser started **2026-10-27T07:07:17.594Z**; standalone chat started
+**2026-10-27T07:04:02.835Z**. Both completed:true, eight journey groups each,
+five zero-violation axe states each, no page errors, failed HTTP responses or
+external requests. Final dashboard test waits for fonts after locale changes
+before geometry/screenshots. Responsive/200%/forced-colour, both locales, exact
+source URLs, empty filtering, export recovery, evidence focus, shared locale/chat/
+cursor history and loaded offline interactions pass. Screenshots inspected:
+dashboard-overview.png, dashboard-mobile.png, dashboard-mobile-hausa.png and
+dashboard-time-series.png under output/playwright/. The mobile full-page capture
+also records figure placement below the portrait. Desktop first figure y=344.77;
+phone first figure y=899.36; supporting phone row height=111.59 (sampled pixels).
+
+Frozen bundle SHA-256 remains
+166d42785cf3a12256c0207399d3d6cd5c4facaa0d7a75116a0feb181ea62db2.
+No dependency, numerical data, approval, commit, push or deployment change.
+Hausa remains draft; no public photograph licence, human review certification,
+causal-impact result or full offline reload readiness is claimed.
+
 ## Installed dashboard skills applied — 27 October 2026
 
 Used global interface-design and kpi-dashboard-design for the owner-requested

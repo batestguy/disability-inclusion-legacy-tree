@@ -26,6 +26,7 @@ async function audit(label) {
   results.axe.push({ label, violations: result.violations.map((v) => ({ id: v.id, impact: v.impact, nodes: v.nodes.map((n) => n.target) })) });
 }
 async function geometry() {
+  await page.evaluate(() => document.fonts.ready.then(() => true));
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'horizontal document overflow');
   const heading = await page.locator('.highlight-heading h1').boundingBox();
   const edition = await page.locator('.highlight-edition').boundingBox();
@@ -103,10 +104,28 @@ try {
   await page.evaluate(() => window.scrollTo(0, 0));
   assert.ok(await page.evaluate(() => Boolean(document.querySelector('#evidence').compareDocumentPosition(document.querySelector('#ask-records')) & Node.DOCUMENT_POSITION_FOLLOWING)), 'chatbot is not below dashboard evidence');
   await geometry(); await audit('English dashboard overview');
-  const targetBaselines = await highlights.locator('.is-targets .highlight-unit').evaluateAll((elements) => elements.map((element) => element.getBoundingClientRect().bottom));
+  const targetBaselines = await highlights.locator('.is-targets .highlight-card:not(.is-lead) .highlight-unit').evaluateAll((elements) => elements.map((element) => element.getBoundingClientRect().bottom));
   assert.ok(Math.max(...targetBaselines) - Math.min(...targetBaselines) < 2, 'target unit baselines are uneven');
   const firstDesktopNumber = await highlights.locator('.highlight-number').first().boundingBox();
   assert.ok(firstDesktopNumber.y < 380, 'desktop chrome delays the first KPI');
+  const portrait = highlights.locator('.highlight-portrait');
+  const portraitBox = await portrait.boundingBox();
+  const leadBox = await highlights.locator('.highlight-card').first().boundingBox();
+  const achievementBox = await highlights.locator('.is-achievements .highlight-grid').boundingBox();
+  assert.ok(portraitBox.x + portraitBox.width <= leadBox.x, 'opening KPIs must sit to the right of the portrait');
+  assert.ok(achievementBox.y >= portraitBox.y + portraitBox.height, 'later KPIs must clear the portrait');
+  assert.ok(Math.abs(achievementBox.x - portraitBox.x) < 2 && achievementBox.width > portraitBox.width * 1.9, 'later KPIs must use the full width');
+  const portraitProvenance = JSON.parse(await readFile('content/dashboard-portrait.json', 'utf8'));
+  assert.equal(await portrait.locator('blockquote').getAttribute('lang'), 'en');
+  assert.equal(await portrait.locator('blockquote p').innerText(), `“${portraitProvenance.quote_excerpt}”`);
+  assert.equal(await portrait.locator('a').getAttribute('href'), portraitProvenance.source_page);
+  assert.ok(await portrait.locator('img').evaluate((img) => img.complete && img.naturalWidth === 540));
+  const expectedCategories = bundle.categories.filter((c) => bundle.activities.some((a) => a.categories.includes(c.id))).map((c) => c.id);
+  assert.deepEqual(await filter('category').locator('option:not([value="all"])').evaluateAll((es) => es.map((e) => e.value)), expectedCategories);
+  assert.equal(await page.locator('.dashboard-time-series .series-point').count(), 4);
+  const expectedTimeline = ['2023', '2024', '2025', '2026'].map((year) => `${year}: ${bundle.activities.filter((a) => a.report_date.startsWith(year)).length}`).join('; ');
+  assert.match(await page.locator('#report-series-description').textContent(), new RegExp(expectedTimeline));
+  results.checks.push('Sourced genuine portrait and English quote; opening KPIs beside portrait and achievements use full width below; all populated categories offered; line chart describes activity-record counts by report year');
   await page.screenshot({ path: 'output/playwright/dashboard-overview.png', fullPage: false });
   await page.setViewportSize({ width: 1060, height: 1000 });
   await geometry();
@@ -248,10 +267,12 @@ try {
   await page.evaluate(() => window.scrollTo(0, 0));
   const firstMobileNumber = await highlights.locator('.highlight-number').first().boundingBox();
   const supportingMobileCard = await highlights.locator('.highlight-card:not(.is-lead)').first().boundingBox();
-  assert.ok(firstMobileNumber.y < 460, 'mobile chrome delays the first KPI');
+  const mobilePortraitBox = await portrait.boundingBox();
+  assert.ok(mobilePortraitBox.y + mobilePortraitBox.height <= firstMobileNumber.y, 'mobile portrait and quote must precede KPIs');
   assert.ok(supportingMobileCard.height < 180, 'supporting mobile KPI is still a tall card');
   results.layout = { firstDesktopNumberY: firstDesktopNumber.y, firstMobileNumberY: firstMobileNumber.y, supportingMobileCardHeight: supportingMobileCard.height };
   await page.screenshot({ path: 'output/playwright/dashboard-mobile.png', fullPage: false });
+  await page.screenshot({ path: 'output/playwright/dashboard-mobile-full.png', fullPage: true });
   await page.getByRole('link', { name: 'Hausa', exact: true }).click(); await page.waitForURL(/\/ha\//);
   await page.locator('html[lang="ha"]').waitFor({ state: 'attached' });
   await geometry(); await audit('Hausa mobile dashboard');

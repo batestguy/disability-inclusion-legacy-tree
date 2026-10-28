@@ -1,5 +1,98 @@
 # Project handoff
 
+## Latest checkpoint — agreed dashboard presentation, 28 October 2026
+
+Start with [docs/DASHBOARD_PRESENTATION_BRIEF.md](docs/DASHBOARD_PRESENTATION_BRIEF.md).
+The owner requested recording the conversation and committing/pushing the existing
+checkpoint for next time, not implementing the new layout or deploying publicly.
+This brief supersedes conflicting older presentation notes below.
+
+Agreed title: **Advancing Disability Inclusion**, with **Mohammed Abba Isa’s
+contributions in figures**. Agreed order: category-based KPIs; Ideas & Advocacy
+speaking-photo/cloud; collaborations (pending); guided chatbot (pending).
+Category names only on the left; sourced numerical cards on the right. Preserve
+figures in hundreds and separate commitments only where present. Important
+milestones such as one adapted vehicle deserve figures too, after source review.
+No report-year activity chart, dashboard-wide year filter, decorative sparkline,
+separate Explore the Evidence block, emoji, or repeated sidebar figures.
+
+Cloud direction is now a genuine speaking-event photo with a permanent speech-
+shaped panel, replacing the silhouette proposal. Source-derived concepts are not
+quotes from the pictured speech. Speaking asset selection/rights and reproducible
+concept frequencies remain outstanding. Do not turn term ranks into frequencies.
+
+Collaborations and guided chatbot remain pending owner design discussion despite
+existing working components. The proposed collaboration breadth bar chart is not
+approved. Preserve those components and all source/evidence records until later
+scoped implementation. Hausa, photograph rights and public-release gates remain.
+
+Current application still implements the previous iteration described below,
+including the older report-year graph and evidence explorer. This documentation
+checkpoint does not claim their removal or the new layout is implemented.
+Checkpoint includes the previously uncommitted 27 October implementation and
+its existing browser evidence, plus this conversation’s documentation and original
+update.txt. Destination: main on origin, batestguy/disability-inclusion-legacy-tree.
+No new application changes were made during this documentation session.
+
+28 October validation: preflight, lint, typecheck, all 60 JavaScript tests, web
+and Studio builds, all 69 Python tests, bundle integrity audit, 32 local Markdown
+links and staged whitespace checks passed. Browser suites were not rerun for
+these Markdown-only edits; 27 October browser evidence remains historical.
+No public deployment or approval flag change. See docs/VALIDATION.md.
+
+## Latest owner direction — documented for later, not implemented
+
+27 October 2026. Read the new **Latest direction — contribution-first
+presentation** section in docs/DASHBOARD_NEXT_ITERATION.md before continuing.
+The owner requested documentation only and explicitly deferred implementation.
+
+Lead with documented disability-inclusion contributions across the full available
+selected record. Prioritize concise contribution stories, a clickable activity
+cloud and separately evidenced collaborations; topic/keyword exploration is
+secondary and the year heatmap is deferred. Research references, data readiness,
+limits and later checks are recorded in that document.
+
+Confirmed owner choice: **chronology only**. Later remove dashboard-wide year
+filtering/year buttons and prevent legacy year URLs from silently restricting the
+overview; retain dates and chronological browsing. This supersedes the older
+global year-filter direction, including the implemented iteration below.
+
+This checkpoint changes documentation only. No application, data/model, approval
+gate or deployment change is claimed. Preserve existing pending implementation
+work. Public portrait rights and Hausa/public-release gates remain unresolved.
+
+Documentation checkpoint validation: diff whitespace check, preflight, lint,
+typecheck, all 60 tests and web/Studio builds passed. No browser rerun was needed
+for these documentation-only edits. No commit, push or deployment was made.
+
+## Next dashboard iteration implemented — 27 October 2026
+
+Continued from committed/pushed checkpoint `2273642` (initial tree was clean).
+Implemented the six requests in docs/DASHBOARD_NEXT_ITERATION.md locally:
+report-year activity-record line chart with table/year buttons; all eight populated
+catalogue categories selectable with zero-count chart rows omitted; elongated,
+proportion-preserving cursor crop; official-homepage portrait and short attributed
+English quote left of opening target KPIs; achievements across the full width
+below; green–white–green styling including the embedded chatbot surface.
+
+Read content/dashboard-portrait.json for exact photograph/quote provenance and
+context; English quote remains English on Hausa pages. Main page and gallery were
+inspected, including two original gallery samples; the About Us portrait was
+chosen for a clearer individual image. No reuse licence was established. Cursor
+retains its genuine smiling source, 48×64 native size, tip hotspot 4/3, off switch
+and touch/forced-colour fallbacks; 37,835 decoded crop pixels match the source.
+
+Passed preflight, lint, typecheck, **60 tests**, web/Studio builds and final web
+rebuild after CSS refinements. Both browser suites completed:true, eight journey
+groups each and five axe states each with zero violations; no page errors, failed
+responses or external requests. Desktop, phone English/Hausa, time series and
+native/enlarged cursor inspected. See latest docs/VALIDATION.md.
+Preview: http://127.0.0.1:8767/ and /ha/.
+
+This iteration is uncommitted; no push or deployment. Frozen data is unchanged.
+Hausa remains draft; public portrait rights/reveal flags remain false. No public
+release or approval status change is implied by working local previews.
+
 ## Next owner suggestions recorded — 27 October 2026
 
 Current instruction: commit and push this completed dashboard checkpoint, and

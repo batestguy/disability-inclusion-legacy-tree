@@ -84,7 +84,7 @@ export function buildDashboardView(bundle, input) {
   return {
     filters, activities, observations, sourceIds, sources: sourceIds.map((id) => index.sources.get(id)),
     timeline: years.map((year) => ({ year, count: activities.filter((a) => yearOf(a.report_date) === year).length })),
-    categories: bundle.categories.map((c) => ({ id: c.id, label: c.label, count: activities.filter((a) => a.categories.includes(c.id)).length })),
+    categories: bundle.categories.map((c) => ({ id: c.id, label: c.label, count: activities.filter((a) => a.categories.includes(c.id)).length })).filter((c) => c.count > 0),
     topics: bundle.topics.map((t, i) => ({ id: t.id, label: t.label, terms: t.terms, meanShare: modelled.length ? modelled.reduce((total, d) => total + d.topic_shares[i], 0) / modelled.length : null, modelledDocumentCount: modelled.length, representativeSourceIds: t.representative_source_ids.filter((id) => modelSources.has(id)) })),
     modelDocumentCount: documents.length, modelledDocumentCount: modelled.length,
     canonicalReportYears: years.map((year) => ({ year, count: documents.filter((d) => yearOf(d.publication_date) === year).length })),
@@ -95,7 +95,10 @@ export function buildDashboardView(bundle, input) {
       return ids.length ? [{ ...edge, source_ids: ids, supporting_unique_documents: new Set(ids.map((id) => index.docBySource.get(id).source_id)).size }] : [];
     }),
     inventory: { activities: activities.length, reportedFigures: observations.filter((o) => o.stage === "reported-delivery").length, targets: observations.filter((o) => o.stage === "target").length, citations: sourceIds.length },
-    years, activityOptions: [...bundle.activities].sort((a, b) => b.report_date.localeCompare(a.report_date) || a.id.localeCompare(b.id)), categoryOptions: bundle.categories,
+    // Keep all populated catalogue choices available, including when an AND
+    // combination has no matches. A selected filter can always be cleared.
+    years, activityOptions: [...bundle.activities].sort((a, b) => b.report_date.localeCompare(a.report_date) || a.id.localeCompare(b.id)),
+    categoryOptions: bundle.categories.filter((c) => bundle.activities.some((a) => a.categories.includes(c.id))),
   };
 }
 

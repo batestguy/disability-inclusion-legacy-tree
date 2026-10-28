@@ -7,8 +7,8 @@
   --scorecard-white: #fff;
   --achievement-green: #156146;
   --achievement-surface: #f4f8f5;
-  --plan-gold: #83601d;
-  --plan-surface: #fcf8ed;
+  --plan-green: #156146;
+  --plan-surface: #fff;
   --scorecard-line: #dce5de;
   --scorecard-font: 'Source Sans 3', 'Segoe UI', sans-serif;
   position: relative;
@@ -24,7 +24,7 @@
 .highlight-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
 .highlight-heading h1 { flex: 1; min-width: 0; color: var(--scorecard-ink); font: 600 clamp(1.5rem, 2.4vw, 2rem)/1.15 var(--scorecard-font); letter-spacing: -0.025em; margin: 0; text-wrap: balance; }
 .highlight-edition { flex: 0 0 auto; margin: 0; color: var(--scorecard-muted); font-size: 0.875rem; line-height: 1.4; text-align: right; }
-.highlight-edition > span { color: var(--plan-gold); font-size: 0.75rem; }
+.highlight-edition > span { color: var(--plan-green); font-size: 0.75rem; }
 .highlight-category-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 8px 0 12px; border-bottom: 1px solid var(--scorecard-line); }
 .highlight-category-bar > div { display: flex; flex-wrap: wrap; gap: 4px; }
 .highlight-category-bar button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; color: var(--scorecard-muted); background: transparent; border-radius: 4px; font-size: 0.875rem; line-height: 1.3; text-align: left; }
@@ -37,7 +37,7 @@
 .highlight-filter-disclosure summary::-webkit-details-marker { display: none; }
 .highlight-filter-disclosure summary::before { content: ''; width: 12px; height: 10px; background: linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center top/12px 1px no-repeat, linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center/8px 1px no-repeat, linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center bottom/4px 1px no-repeat; }
 .highlight-filter-disclosure summary > span { min-width: 20px; border-radius: 3px; background: #e8efe9; text-align: center; font-size: 0.75rem; }
-.highlight-filter-disclosure summary:focus-visible { outline: 3px solid #b97723; outline-offset: 4px; }
+.highlight-filter-disclosure summary:focus-visible { outline: 3px solid #156146; outline-offset: 4px; }
 .highlight-filter-disclosure[open] { flex-basis: 100%; order: 2; }
 .highlight-filter-disclosure[open] summary { width: fit-content; margin-left: auto; }
 .highlight-filter-disclosure .dashboard-filters { margin-top: 8px; padding: 12px; background: var(--achievement-surface); border-color: var(--scorecard-line); }
@@ -48,23 +48,23 @@
 .highlight-group { margin-top: 16px; }
 .highlight-group-heading { margin-bottom: 8px; }
 .highlight-group-heading h2 { margin: 0; color: var(--achievement-green); font: 600 1.125rem/1.4 var(--scorecard-font); letter-spacing: -0.01em; }
-.is-targets .highlight-group-heading h2 { color: var(--plan-gold); }
+.is-targets .highlight-group-heading h2 { color: var(--plan-green); }
 .highlight-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
 .highlight-card { display: flex; flex-direction: column; min-width: 0; padding: 16px; background: var(--achievement-surface); border-radius: 4px; }
-.highlight-card.is-plan { background: var(--plan-surface); }
+.highlight-card.is-plan { background: var(--plan-surface); border: 1px solid var(--scorecard-line); }
 .highlight-card.is-lead { grid-column: span 2; }
 .highlight-number-wrap { container-type: inline-size; display: flex; flex-direction: column; justify-content: flex-end; position: relative; min-width: 0; }
 .is-plan .highlight-number-wrap { block-size: 6.5rem; }
 .highlight-number { color: var(--achievement-green); margin: 0; font: 600 clamp(1.75rem,28cqi,4rem)/1 var(--scorecard-font); font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.045em; white-space: nowrap; }
-.is-plan .highlight-number { color: var(--plan-gold); }
+.is-plan .highlight-number { color: var(--plan-green); }
 .is-lead .highlight-number { font-size: clamp(1.75rem,20cqi,5rem); }
 .highlight-unit { margin: 4px 0 0; color: var(--scorecard-muted); font-size: 0.875rem; line-height: 1.3; }
 .highlight-card h3 { color: var(--scorecard-ink); font: 600 1rem/1.3 var(--scorecard-font); text-wrap: pretty; margin: 12px 0 0; min-height: 2.6em; }
 .highlight-card-footer { margin-top: auto; padding-top: 4px; }
 .highlight-card-footer a { display: inline-flex; align-items: center; gap: 4px; min-width: 44px; min-height: 44px; color: var(--achievement-green); font-size: 0.875rem; text-decoration: underline; text-underline-offset: 3px; }
-.is-plan .highlight-card-footer a { color: var(--plan-gold); }
+.is-plan .highlight-card-footer a { color: var(--plan-green); }
 .highlight-card-footer a:hover { text-decoration-thickness: 2px; }
-.highlight-spark { position: absolute; top: 0; right: 0; color: #987326; font-size: 1rem; pointer-events: none; animation: highlight-glint 2s ease-in-out 2; }
+.highlight-spark { position: absolute; top: 0; right: 0; color: #156146; font-size: 1rem; pointer-events: none; animation: highlight-glint 2s ease-in-out 2; }
 .highlight-spark::after { content: '·'; position: absolute; right: 14px; top: -6px; font-size: 1.25rem; }
 .highlight-empty { margin: 0; padding: 16px; background: var(--achievement-surface); color: var(--scorecard-muted); border-radius: 4px; font-size: 0.875rem; }
 @keyframes highlight-glint { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
@@ -104,4 +104,29 @@
   .highlight-spark { display: none; }
   .highlight-category-bar button[aria-pressed='true'] { color: HighlightText; background: Highlight; border: 1px solid Highlight; }
   .highlight-filter-disclosure summary { border-color: CanvasText; }
+}
+
+/* A portrait occupies only the opening rows; the next group uses the full board. */
+.highlight-portrait { grid-column: span 2; grid-row: span 2; min-width: 0; margin: 0; background: #156146; color: white; border-radius: 4px; overflow: hidden; }
+.highlight-portrait img { display: block; width: 100%; height: 380px; object-fit: cover; object-position: center 10%; }
+.highlight-portrait figcaption { padding: 16px 24px; }
+.highlight-portrait-name { font-weight: 600; margin: 0 0 8px; }
+.highlight-portrait blockquote { margin: 0; font-size: 1.125rem; line-height: 1.4; text-wrap: pretty; }
+.highlight-portrait blockquote p { margin: 0; }
+.highlight-portrait a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.875rem; gap: 6px; }
+.has-portrait .highlight-card.is-lead { grid-column: span 2; }
+.has-portrait .highlight-empty { grid-column: span 2; }
+@media(min-width:761px) and (max-width:1050px) {
+  .has-portrait { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .has-portrait .highlight-card:not(.is-lead) { grid-column: span 2; }
+  .highlight-portrait { grid-row: span 3; }
+}
+@media(max-width:760px) {
+  .highlight-portrait { grid-column: 1; grid-row: auto; }
+  .highlight-portrait img { height: 300px; }
+  .highlight-portrait figcaption { padding: 16px; }
+  .has-portrait .highlight-card.is-lead, .has-portrait .highlight-empty { grid-column: 1; }
+}
+@media(forced-colors:active) {
+  .highlight-portrait { background: Canvas; color: CanvasText; border: 1px solid CanvasText; }
 }

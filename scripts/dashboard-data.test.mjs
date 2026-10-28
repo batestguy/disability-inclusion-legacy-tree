@@ -6,6 +6,21 @@ const bundle = JSON.parse(readFileSync(new URL("../content/dashboard/v1/bundle.j
 const view = (filters, b = bundle) => buildDashboardView(b, filters);
 const clone = () => structuredClone(bundle);
 
+test("category choices cover every populated label, omit unused labels and remain clearable in an empty AND result", () => {
+  const b = clone();
+  b.categories.push({ id: "unused", label: { en: "Unused" } });
+  const all = view({}, b);
+  const populated = new Set(b.activities.flatMap((a) => a.categories));
+  assert.deepEqual(new Set(all.categoryOptions.map((c) => c.id)), populated);
+  assert.ok(all.categories.every((c) => c.count > 0));
+  const empty = view({ year: "2023", activity: "karu-food-cash-2024", category: "healthcare-welfare" }, b);
+  assert.equal(empty.activities.length, 0);
+  assert.deepEqual(empty.categories, []);
+  assert.ok(empty.categoryOptions.some((c) => c.id === empty.filters.category));
+  assert.deepEqual(empty.categoryOptions, all.categoryOptions);
+  assert.equal(view({ year: "all", activity: "all", category: "all" }, b).activities.length, 33);
+});
+
 test("baseline distinguishes activity, typed measure, citation catalogue and canonical text grains", () => {
   const v = view();
   assert.deepEqual(v.inventory, { activities: 33, reportedFigures: 8, targets: 3, citations: 36 });

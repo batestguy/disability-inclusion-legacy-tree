@@ -29,14 +29,30 @@ function Heading({ title }: { number: string; title: string }) {
 export function DashboardTimeline({ lang, view, onFilter }: DashboardPanelProps) {
   const say = (en: string, ha: string) => local(lang, en, ha);
   const maximum = Math.max(1, ...view.timeline.map((entry) => entry.count));
+  const ceiling = Math.max(4, Math.ceil(maximum / 4) * 4);
+  const firstYear = Number(view.timeline[0]?.year ?? 0);
+  const lastYear = Number(view.timeline.at(-1)?.year ?? firstYear);
+  const points = view.timeline.map((entry) => ({ ...entry,
+    x: 56 + (Number(entry.year) - firstYear) / Math.max(1, lastYear - firstYear) * 688,
+    y: 196 - entry.count / ceiling * 164,
+  }));
   return <section className="dashboard-section" id="timeline" tabIndex={-1} aria-label={say("Report timeline", "Jadawalin rahotanni")}>
     <Heading number="01" title={say("Activities by report year", "Ayyuka bisa shekarar rahoto")} />
-    <div className="dashboard-timeline">
+    <p className="dashboard-muted">{say("Activity records by report year · not event dates or cumulative impact. 2026 coverage is partial.", "Bayanan ayyuka bisa shekarar rahoto · ba ranakun aukuwar aiki ko jimillar tasiri ba. Bayanan 2026 ba cikakku ba ne.")}</p>
+    <div className="dashboard-time-series">
+      <svg viewBox="0 0 800 244" role="img" aria-labelledby="report-series-title report-series-description">
+        <title id="report-series-title">{say("Activity records by report year", "Bayanan ayyuka bisa shekarar rahoto")}</title>
+        <desc id="report-series-description">{points.map((point) => `${point.year}: ${point.count}`).join("; ")}. {say("Use the year buttons below to filter, or open the table.", "Zaɓi shekarar da ke ƙasa don tacewa, ko buɗe jadawalin.")}</desc>
+        {[0, 1, 2, 3, 4].map((tick) => <g key={tick}><line x1="56" x2="744" y1={196 - tick * 41} y2={196 - tick * 41} className="series-grid" /><text x="40" y={201 - tick * 41} textAnchor="end">{ceiling * tick / 4}</text></g>)}
+        <polyline points={points.map((p) => `${p.x},${p.y}`).join(" ")} className="series-line" />
+        {points.map((point) => <g key={point.year}><circle cx={point.x} cy={point.y} r="6" className="series-point" /><text x={point.x} y={point.y - 13} textAnchor="middle" className="series-value">{point.count}</text><text x={point.x} y="226" textAnchor="middle">{point.year}{point.year === "2026" ? "*" : ""}</text></g>)}
+      </svg>
+      <div className="dashboard-timeline">
       {view.timeline.map(({ year, count }) => <button key={year} type="button" aria-pressed={view.filters.year === year} onClick={() => onFilter({ year: view.filters.year === year ? "all" : year })} aria-label={`${year}: ${count} ${say("activity records. Filter this year", "bayanan ayyuka. Zaɓi wannan shekara")}`}>
         <span className="dashboard-year-count">{count}</span>
-        <span className="dashboard-year-track" aria-hidden="true"><span style={{ height: `${count / maximum * 100}%` }} /></span>
         <span>{year}{year === "2026" ? say(" · partial", " · ba cikakke ba") : ""}</span>
       </button>)}
+      </div>
     </div>
     <details><summary>{say("View timeline table", "Duba jadawalin lambobi")}</summary>
       <table className="dashboard-table-alternative"><caption>{say("Different units: activity records and distinct canonical model reports", "Ma'aunai dabam: bayanan ayyuka da rahotannin samfurin da ba su maimaitu ba")}</caption>

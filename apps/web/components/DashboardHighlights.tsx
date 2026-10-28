@@ -4,6 +4,7 @@ import type { DashboardPanelProps } from "./DashboardPanels";
 import type { HighlightCategory } from "./DashboardSession";
 import type { DashboardObservation } from "../lib/dashboard-data.mjs";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import "../app/highlights.css";
 
 const marks = { exact: "", "greater-than": ">", "at-least": "≥", approximate: "≈" };
@@ -69,9 +70,18 @@ export default function DashboardHighlights({ lang, bundle, view, titleFor, onFi
     <div className="highlight-category-bar"><div role="group" aria-label={say("KPI categories", "Rukunonin lambobi")}>{categories.map((entry) => <button key={entry.id} type="button" aria-pressed={category === entry.id} data-highlight-category={entry.id} onClick={() => onCategory(entry.id)}>{entry.label} <span>{entry.count}</span></button>)}</div><details className="highlight-filter-disclosure"><summary>{say("Filters", "Tacewa")}{activeFilters.length > 0 && <span>{activeFilters.length}</span>}</summary>{filterControls}</details></div>
     {activeFilters.length > 0 && <div className="highlight-active-filters" aria-label={say("Current filters", "Tacewar yanzu")}><p>{activeFilters.join(" / ")}</p><button type="button" onClick={() => onFilter({ year: "all", category: "all", activity: "all" })}>{say("Clear", "Share")}</button></div>}
     <p className="sr-only" role="status">{say(`${groups.reduce((count, group) => count + group.items.length, 0)} figures shown`, `An nuna lambobi ${groups.reduce((count, group) => count + group.items.length, 0)}`)}</p>
-    {groups.map((group) => <section className={`highlight-group is-${group.id}`} key={group.id} aria-labelledby={`highlight-${group.id}-title`}>
+    {groups.map((group, groupIndex) => <section className={`highlight-group is-${group.id}`} key={group.id} aria-labelledby={`highlight-${group.id}-title`}>
       <div className="highlight-group-heading"><h2 id={`highlight-${group.id}-title`}>{group.title}</h2></div>
-      {group.items.length ? <div className="highlight-grid">{group.items.map(card)}</div> : <p className="highlight-empty">{say("No figures for this selection. Try another filter.", "Babu lambobi ga wannan zaɓi. Gwada wata tacewa.")}</p>}
+      <div className={`highlight-grid${groupIndex === 0 ? " has-portrait" : ""}`}>
+        {groupIndex === 0 && <figure className="highlight-portrait">
+          <Image src="/branding/mohammed-abba-isa.webp" width={540} height={600} alt={say("Mohammed Abba Isa, wearing a blue kaftan and cap, beside the Nigerian flag", "Mohammed Abba Isa sanye da babbar riga shuɗiya da hula, kusa da tutar Najeriya")} preload />
+          <figcaption><p className="highlight-portrait-name">Mohammed Abba Isa</p>
+            <blockquote lang="en"><p>“Our strength lies not in the absence of challenges, but in our resilience to overcome them.”</p></blockquote>
+            <a href="https://ossaposneo.org/" target="_blank" rel="noopener noreferrer">{say("Portrait & quote source", "Tushen hoto da zance")} <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>}
+        {group.items.length ? group.items.map(card) : <p className="highlight-empty">{say("No figures for this selection. Try another filter.", "Babu lambobi ga wannan zaɓi. Gwada wata tacewa.")}</p>}
+      </div>
     </section>)}
   </section>;
 }

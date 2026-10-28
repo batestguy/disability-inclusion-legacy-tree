@@ -1,5 +1,14 @@
 # Bilingual dashboard chatbot specification
 
+## Current owner design status — 28 October 2026
+
+The owner explicitly marks the guided chatbot block **pending** for the next
+dashboard presentation. Existing implementation and historical checks below
+remain valid evidence of prior work, not approval of its future design. Preserve
+the component and shared visible locale contract; do not redesign or remove it
+under this documentation checkpoint. See [DASHBOARD_PRESENTATION_BRIEF.md](DASHBOARD_PRESENTATION_BRIEF.md)
+and HANDOFF.md for the agreed page order and remaining decisions.
+
 Latest portrait update (27 October): the arrow now contains a different smiling
 photo from SocietyNow's named appointment article. Shape, hotspot and fallbacks
 remain; source/crop provenance is in content/portrait-cursor.json. Earlier office-
