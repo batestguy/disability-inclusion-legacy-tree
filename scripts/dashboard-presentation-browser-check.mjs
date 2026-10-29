@@ -43,6 +43,15 @@ async function geometry() {
   const clipped = await page.locator('.network-node').evaluateAll((elements) => elements.filter((el) => el.offsetParent && el.scrollHeight > el.clientHeight + 1).map((el) => el.textContent));
   assert.deepEqual(clipped, []);
 }
+async function cloudAppearance(minimumRatio) {
+  const words = await page.locator('.concept-cloud button').evaluateAll((buttons) => buttons.map((button) => ({ count: Number(button.dataset.cloudCount), size: parseFloat(getComputedStyle(button).fontSize), color: getComputedStyle(button).color })));
+  assert.ok(Math.max(...words.map((word) => word.size)) / Math.min(...words.map((word) => word.size)) >= minimumRatio, 'word frequency hierarchy is too subtle');
+  assert.ok(new Set(words.map((word) => word.color)).size >= 3, 'word cloud lost its coordinated colours');
+  for (const a of words) for (const b of words) {
+    if (a.count === b.count) assert.equal(a.size, b.size, 'equal frequencies must have equal font sizes');
+    if (a.count > b.count) assert.ok(a.size > b.size, 'larger frequencies must produce larger words');
+  }
+}
 try {
   await page.goto(base + '/?year=2024&category=healthcare-welfare');
   await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
@@ -87,6 +96,7 @@ try {
   results.checks.push('Category selection preserves >500 welfare measures, excludes empty planned sections and gives vehicle/toolkit milestones their attributed roles');
 
   await page.locator('[data-cloud-mode="concepts"]').click();
+  await cloudAppearance(3);
   for (const concept of presentation.concepts) assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).getAttribute('data-cloud-count'), String(concept.count));
   const concept = presentation.concepts.find((entry) => entry.count === 13);
   await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).click();
@@ -104,6 +114,7 @@ try {
   await page.locator('#advocacy').screenshot({ path: 'output/playwright/dashboard-redesign-advocacy.png' });
   await audit('concept sources');
   await page.locator('[data-cloud-mode="areas"]').click();
+  await cloudAppearance(3);
   const category = bundle.categories[0];
   await page.locator(`.concept-cloud [data-cloud-id="${category.id}"]`).click();
   assert.match(await page.locator('[data-cloud-selection-count]').innerText(), /classified activity records/);
@@ -147,6 +158,7 @@ try {
   assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).getAttribute('aria-pressed'), 'true');
   assert.equal(await chat().getAttribute('data-node'), activeNode);
   await page.setViewportSize({ width: 390, height: 844 });
+  await cloudAppearance(2);
   await geometry(); await audit('Hausa phone');
   assert.equal(await page.locator('.network-map').isVisible(), false);
   assert.equal(await page.locator('.network-list').isVisible(), true);

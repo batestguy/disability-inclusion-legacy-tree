@@ -1,5 +1,43 @@
 # Inclusion scorecard
 
+## Word-cloud hierarchy — 29 October 2026
+
+Owner requested stronger colour and size differences. Cycle green/blue/gold for
+visual variety; hue encodes no quantity or review status. Font size is linearly
+scaled between observed minimum/maximum counts in the selected mode, with equal
+counts always equal-sized. Desktop range 0.95–3.25rem; narrow-phone range 0.875–2.2rem.
+Do not cap all large words at one identical phone size. Keep 44px targets, balanced
+phrase wrapping, exact counts in accessible names/list and source results on click.
+
+## Comfortable compact density — 29 October 2026
+
+Owner requested more figures on screen. Current KPI layout uses a 184px category
+column/24px gap (168px/20px below 1100px), 16px card padding, 8px grid gaps and
+52px maximum desktop figure text. Main title can occupy one line on wide screens;
+opening padding is 24px. Grid: four columns from 1280px, three from 1001–1279px,
+two below 1001px and one at 360px. Wide All-view milestones span two columns;
+focused Accessibility uses three columns. Mobile keeps wrapping category controls,
+readable figures, normal text reflow and 44px Source/category targets. Illustrations
+are 52×46px desktop and 36×34px on narrow phones. This supersedes the older density
+measurements below; palette and source/claim semantics remain unchanged.
+
+## Owner-selected green, blue and gold — 29 October 2026
+
+Current palette: green #156146 for identity/reported figures, blue #285a8e for
+advocacy and institutional/relationship accents, gold #8a5e12 for labelled planned
+support and cooperation intentions. Use white and pale tints (#edf4fb, #fff8e8,
+#f1f7f3); body ink #243b45 and muted #52636d. Status labels and graph line patterns
+remain independently meaningful. Colour does not establish evidence confidence.
+
+Original programme-specific SVGs use the same three colours and pale fills;
+64×56px on desktop, 36×34px on narrow phones. Each is decorative/aria-hidden and
+paired with the actual programme label and figure. Food/cash/household support,
+training, POS, employment, market stalls, vehicle and toolkit have distinct imagery.
+Photographs remain genuine and unchanged. Keep source interactions/layout intact.
+This owner choice supersedes the earlier single-accent preference below.
+The proposed gold #9a6b16 measured 4.42:1 against pale gold, so the applied shade
+was darkened to #8a5e12 to keep even small labels above 4.5:1.
+
 ## Implemented local dashboard — 29 October 2026
 
 Current home is category-led, with a 208px category-name column and a three-column

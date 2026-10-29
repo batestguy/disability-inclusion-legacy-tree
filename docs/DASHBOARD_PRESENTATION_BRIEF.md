@@ -1,5 +1,13 @@
 # Dashboard presentation brief — 28 October 2026
 
+## Owner colour revision — 29 October 2026
+
+Owner selected the recommended green, blue and gold palette and more colourful,
+topic-specific illustrations beside the figures. This supersedes the earlier
+monochrome line-art/green-only styling below. Preserve the agreed layout, genuine
+photographs, sources and data. Use restrained flat SVG illustrations appropriate
+to each actual programme; no invented quantities, generated likeness or emoji.
+
 ## Implementation checkpoint — 29 October 2026
 
 Owner authorised the build. The agreed category-based layout, conditional planned

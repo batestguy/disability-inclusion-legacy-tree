@@ -1,5 +1,98 @@
 # Validation evidence - 22 October 2026
 
+## Coloured, frequency-sized cloud and source checkpoint — 29 October 2026
+
+Owner requested a more colourful cloud with clearer size differences, then commit
+and push all pending dashboard refinements. The cloud now cycles approved green,
+blue and gold and uses a wider linear relative-frequency scale: 0.95–3.25rem on
+desktop; 0.875–2.2rem on narrow phones. Equal counts keep equal font sizes. Hue is
+decorative, not a quantity or approval indicator. Accessible button names include
+exact counts; mode captions distinguish report concepts from activity categories.
+
+Passed preflight, lint, typecheck, all 68 unit tests and web/Studio builds.
+Dashboard browser completed true with six journey groups, five zero-violation axe
+states, and zero page errors, failed responses or external requests. Added rendered
+assertions in both cloud modes: at least three distinct colours, largest/smallest
+font ratio at least 3 on desktop and 2 on phone, equal sizes for equal counts, and
+strictly larger sizes for larger counts. Existing source/count/pagination/locale/
+keyboard/320px/200% text and forced-colour checks passed. Refreshed advocacy
+screenshot visually inspected. No source-data or frequency change.
+
+This source checkpoint also includes preceding palette, programme illustrations
+and compact layout work, with its validation below. Owner authorises main on
+origin at batestguy/disability-inclusion-legacy-tree. No public website deployment,
+new dependency, external inference or approval-flag change. Previous baseline is
+b22a3fc. GitHub account/repository write access and remote branch were verified;
+pre-commit whitespace/preflight checks are recorded by the save workflow.
+
+## Comfortable compact dashboard — 29 October 2026
+
+Owner requested more items on screen with reasonable compression. Reduced opening
+height, category-column width, card padding/gaps and figure/illustration sizing.
+Wide screens use four columns; intermediate screens three, smaller screens two,
+and 360px one. Wide All-view milestones keep extra width for their qualifications;
+the focused Accessibility view retains three cards in one row. No clipping,
+internal scroll area, hidden Source action or reduced control target was added.
+
+Measured at the same 1440×1050 viewport, loaded fonts and All selection:
+
+| Measure | Before | After |
+| --- | ---: | ---: |
+| Complete figure cards within viewport | 6 | 8 |
+| Contribution section height | 1492.95px | 1027.09px |
+| First figure top | 599.75px | 469.34px |
+
+The contribution section is about 31% shorter. The remaining milestone row is
+also visible near the viewport bottom; the complete-card count is conservative.
+Additional geometry checks at 1280/1200/1060/1000/760/390px confirmed expected
+4/3/3/2/2/2 columns and no document/number overflow. Raw local measurements are
+output/dashboard-density-before.json and output/dashboard-density-after.json;
+comparison screenshots are output/playwright/dashboard-density-before.png and
+dashboard-density-after.png. Desktop, Accessibility and phone screenshots inspected.
+
+Passed preflight, lint, typecheck, all 68 unit tests, web/Studio builds and the final
+web rebuild after the category-specific layout adjustment. Dashboard browser
+completed true: six journey groups, five zero-violation axe states, zero page
+errors, failed responses or external requests. Covers English/Hausa, keyboard,
+source context, cloud/network/chat persistence, phone, 320px/200% text, reduced
+motion and forced colours. Existing browser checks were reused; no tests mirror
+the reversible CSS change. The standalone-chat route was not changed or rerun.
+
+All pending palette/illustration work is preserved. No source data, figure,
+qualification, photograph, dependency or approval flag changed. No commit, push
+or public deployment. Owner can review http://127.0.0.1:8767/.
+
+## Green, blue and gold; programme illustrations — 29 October 2026
+
+Owner selected the recommended palette and requested colourful, relevant images
+beside the figures. Added original decorative SVG illustrations mapped to each
+programme/unit: food parcels, food/cash, household support, sewing, enterprise
+skills, POS equipment, participation, employment, market stalls, adapted vehicle
+and toolkit. The illustrations are aria-hidden and do not encode counts/status.
+They use the shared palette and resize from 64×56px to 36×34px on narrow phones.
+
+Green retains identity/reported figures; blue accents advocacy and institutional
+connections; gold highlights labelled planned support/cooperation intentions.
+Existing line styles and text remain. The proposed gold #9a6b16 measured 4.42:1
+on pale gold, so #8a5e12 was applied instead: 5.38:1. Measured primary pairings:
+green on pale green 6.83:1; blue on white 7.13:1; blue on pale blue 6.43:1;
+body on white 11.75:1; muted text on pale gold 5.90:1.
+
+Passed preflight, root lint/typecheck, all 68 unit tests, web/Studio builds and
+final web rebuild after the contrast adjustment. Dashboard browser completed
+true with six journey groups and five zero-violation axe states; zero page errors,
+failed responses or external requests. Desktop overview, accessibility milestones,
+English/Hausa phone, network/cloud and 320px/200% text remain checked. Number
+bounds fit beside the enlarged illustrations. Refreshed screenshots under
+output/playwright/dashboard-redesign-* were visually inspected.
+
+No new unit tests mirror this reversible styling change; existing data/interaction
+tests and browser geometry/source/locale checks passed. Standalone-chat browser
+was not rerun because its files and styles were unchanged; embedded flow is in
+the dashboard regression. Genuine photographs, data/evidence, dependencies and
+all approval flags are unchanged. No public deployment, commit or push. Saved
+baseline remains b22a3fc; palette refinement is local for owner review.
+
 ## Category dashboard, advocacy cloud and collaboration network — 29 October 2026
 
 Owner authorised implementing the documented dashboard and showing a local

@@ -1,5 +1,49 @@
 # Project handoff
 
+## Colourful word cloud and save request — 29 October 2026
+
+Owner requested a coloured cloud with more obvious size differences, then commit
+and push. The cloud uses the approved green/blue/gold palette and a linear relative
+frequency scale spanning 0.95–3.25rem on desktop and 0.875–2.2rem on narrow phones.
+Equal counts retain equal sizes; font size follows canonical-report frequency in
+Concepts mode and classified-activity frequency in Areas mode. Colour is decorative,
+not another metric. Exact counts are included in accessible names and the list.
+
+The save includes the preceding palette, original programme illustrations and
+compact dashboard refinements. Preserve the eight-complete-cards desktop result
+and all original source/claim/release boundaries. No public website deployment.
+See docs/VALIDATION.md for completed checks. Source destination remains main on
+origin, batestguy/disability-inclusion-legacy-tree; previous saved baseline b22a3fc.
+
+## Compact dashboard refinement — 29 October 2026
+
+Owner requests more figures on screen with reasonable compression. Tightened
+opening/header content spacing, narrowed the category column, reduced card
+padding/gaps and number/illustration sizes, and introduced four columns from
+1280px, three from 1001–1279px, two on smaller/tablet/phone views and one at 360px.
+All-view vehicle/toolkit cards span two columns on wide screens to preserve their
+qualifications; the focused Accessibility view keeps three cards in one row.
+Source and category controls retain their target sizes and text reflows normally.
+
+Preserve the preceding uncommitted colour/illustration changes. No data, source,
+claim, photo, dependency or approval flag change. See docs/VALIDATION.md for the
+before/after viewport measurements and actual checks. Preview remains on port 8767.
+
+## Green, blue and gold refinement — 29 October 2026
+
+Owner chose the recommended palette and requested more colourful, topic-relevant
+illustrations beside the figures. Styling now retains green identity/reported
+figures, adds blue advocacy/relationship accents and gold planned support. This
+supersedes the green-only colour direction; source/data/stage distinctions remain.
+
+ContributionIllustration.tsx contains original decorative SVGs for food parcels,
+food/cash, household support, POS equipment, sewing/training, enterprise skills,
+participation, employment, market stalls, adapted vehicle and toolkit. They are
+mapped to actual activity/unit, not inferred impact. Genuine photographs and all
+rights/release flags are unchanged. No dependency, external inference or new data.
+See the newest docs/VALIDATION.md entry for actual checks. Prior saved baseline
+is b22a3fc; this colour refinement is local pending review, not committed/pushed.
+
 ## Owner review and save request — 29 October 2026
 
 Owner feedback: the dashboard looks good overall; a few changes will follow.

@@ -1,5 +1,28 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Word-cloud emphasis and checkpoint — 29 October 2026
+
+Owner requested coordinated cloud colours and a clearer frequency-size hierarchy,
+then commit/push the pending dashboard refinements. Keep frequency-derived sizes,
+equal-count consistency, exact accessible counts and responsive readability.
+Save the palette, programme illustrations and compact spacing in the same source
+checkpoint. This does not change evidence, approval flags or authorise deployment.
+
+## Comfortable dashboard density — 29 October 2026
+
+Owner requested more items on screen. Tighten opening/card spacing and use a
+four-column wide-screen figure grid while retaining readable labels, illustrations,
+source controls and responsive reflow. Preserve all pending palette changes and
+the existing data/source/release boundaries. See docs/VALIDATION.md for measurements.
+
+## Palette refinement — 29 October 2026
+
+Owner selected green/blue/gold and requested more colourful, topic-specific
+illustrations. Apply green to identity/reported figures, blue to advocacy/network
+accents and gold to labelled planned support. Original decorative programme SVGs
+replace generic monochrome outlines. Keep photographs, source claims, existing
+interaction and approval gates intact. This supersedes green-only styling.
+
 ## Owner feedback and checkpoint — 29 October 2026
 
 Owner says the new dashboard looks good overall and requests commit/push before

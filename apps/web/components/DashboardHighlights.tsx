@@ -3,14 +3,12 @@
 import type { Presentation } from "./DashboardWorkspace";
 import type { Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
+import ContributionIllustration from "./ContributionIllustration";
 import "../app/highlights.css";
 
 type Props = Pick<ReturnType<typeof getChatData>, "bundle"> & { lang: Lang; data: Presentation; area: string; onArea: (id: string) => void };
 const marks = { exact: "", "greater-than": ">", "at-least": "≥", approximate: "≈" };
 const boundWords = { exact: ["Exactly", "Daidai"], "greater-than": ["More than", "Fiye da"], "at-least": ["At least", "Aƙalla"], approximate: ["About", "Kusan"] };
-function ContributionDrawing({ area }: { area: string }) {
-  return <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{area === "vehicle" ? <><path d="m9 24 4-11h22l4 11v13h-5v-5H14v5H9V24ZM9 24h30M16 13l-2 11M32 13l2 11M13 28h4M31 28h4" /><circle cx="24" cy="19" r="4" /><path d="M24 19v4m0-4 3-2" /></> : area === "toolkit" ? <><path d="M24 13c-7-5-14-3-18-1v26c6-3 12-3 18 1 6-4 12-4 18-1V12c-4-2-11-4-18 1v26M11 18h7M11 23h7M30 20l3 3 5-6" /></> : area === "stall" ? <><path d="M8 22h32v18H8V22Zm-3 0 5-12h28l5 12M14 10l-2 12M24 10v12M34 10l2 12M13 29h12v11M30 28h6v7" /></> : area === "employment" || area === "enterprise-support" ? <><path d="M8 20h32v20H8zM18 20v-7h12v7M8 28h32M21 28v5h6v-5" /></> : area === "training-education" ? <><path d="m5 17 19-8 19 8-19 8-19-8ZM12 21v13c8 5 16 5 24 0V21M43 17v15" /></> : <><path d="M24 39S6 28 6 17C6 7 20 5 24 15c4-10 18-8 18 2 0 11-18 22-18 22Z" /><path d="M16 24h16M24 17v14" /></>}</svg>;
-}
 export default function DashboardHighlights({ lang, bundle, data, area, onArea }: Props) {
   const say = (en: string, ha: string) => lang === "ha" ? ha : en;
   const group = data.groups.find((entry) => entry.id === area) ?? data.groups[0];
@@ -23,7 +21,7 @@ export default function DashboardHighlights({ lang, bundle, data, area, onArea }
     const number = figure.value.toLocaleString(lang === "ha" ? "ha-NG" : "en-NG");
     const milestone = figure.kind === "milestone";
     return <article key={figure.id} className={`contribution-card${milestone ? " is-milestone" : ""}`} data-highlight={figure.id} data-highlight-stage={figure.stage}>
-      <div className="contribution-card-top"><p className="highlight-number" role="img" aria-label={`${boundWords[figure.bound][lang === "ha" ? 1 : 0]} ${number} ${unit(figure.unit)}`}><span aria-hidden="true">{marks[figure.bound]}{number}</span></p><ContributionDrawing area={milestone ? figure.unit : figure.activityId === "fha-stalls-2025" ? "stall" : figure.groupIds.find((id) => id !== "all") ?? "health-welfare"} /></div>
+      <div className="contribution-card-top"><p className="highlight-number" role="img" aria-label={`${boundWords[figure.bound][lang === "ha" ? 1 : 0]} ${number} ${unit(figure.unit)}`}><span aria-hidden="true">{marks[figure.bound]}{number}</span></p><ContributionIllustration activityId={figure.activityId} unit={figure.unit} /></div>
       <p className="highlight-unit">{unit(figure.unit)}</p><h3>{figure.label[lang]}</h3>
       {milestone && <p className="milestone-context">{figure.activityId === "disability-readiness-toolkit-2025" ? say("Developed by Deaf-in-Tech & DataLead Africa; unveiled through his office.", "Deaf-in-Tech da DataLead Africa ne suka samar; ofishinsa ya ƙaddamar.") : say("Vehicle demonstrated; nationwide distribution remains proposed.", "An nuna abin hawa; rabawa a faɗin ƙasa manufa ce har yanzu.")}</p>}
       <details className="contribution-source" data-figure-source={figure.id}><summary aria-label={`${say("Source for", "Majiyar")} ${figure.label[lang]}`}>{say("Source", "Tushe")}</summary><div className="figure-source-context"><dl><dt>{say("Population / scope", "Mutane ko abin da lambar ta shafa")}</dt><dd lang="en">{figure.population}</dd><dt>{say("Reported role", "Rawar da aka ruwaito")}</dt><dd lang="en">{figure.role}</dd></dl>{figure.limitations.map((limit) => <p key={limit} lang="en">{limit}</p>)}{sources.map((source, index) => <a key={source.id} className={index === 0 ? "primary-source" : undefined} href={source.url} target="_blank" rel="noopener noreferrer">{index === 0 ? say("Read original report", "Karanta rahoton asali") : say("Supporting report", "Rahoton ƙarin hujja")} <span aria-hidden="true">↗</span></a>)}</div></details>
@@ -32,7 +30,7 @@ export default function DashboardHighlights({ lang, bundle, data, area, onArea }
   return <section id="overview" className="contribution-section" tabIndex={-1} aria-labelledby="contributions-heading">
     <div className="section-heading"><div><p className="dashboard-eyebrow">01 / {say("CONTRIBUTIONS IN FIGURES", "GUDUMMAWA A CIKIN LAMBOBI")}</p><h2 id="contributions-heading">{say("Inclusion takes many forms.", "Shigar kowa tana da hanyoyi da yawa.")}</h2></div></div>
     <div className="contribution-layout"><nav className="contribution-categories" aria-label={say("Contribution categories", "Rukunonin gudummawa")}>{data.groups.map((entry) => <button key={entry.id} type="button" data-area={entry.id} aria-pressed={group.id === entry.id} onClick={() => onArea(entry.id)}>{entry.label[lang]}<span aria-hidden="true">↗</span></button>)}</nav>
-      <div className="contribution-results" aria-live="polite" aria-atomic="false"><h3 className="active-area-heading">{group.label[lang]}</h3><p className="sr-only" role="status">{say(`${figures.length} sourced figures shown`, `An nuna lambobi ${figures.length} masu tushe`)}</p>
+      <div className="contribution-results" data-area-panel={group.id} aria-live="polite" aria-atomic="false"><h3 className="active-area-heading">{group.label[lang]}</h3><p className="sr-only" role="status">{say(`${figures.length} sourced figures shown`, `An nuna lambobi ${figures.length} masu tushe`)}</p>
         {achievements.length > 0 && <section aria-labelledby="reported-heading"><h4 id="reported-heading" className="figure-group-title">{say("Reported achievements", "Nasarorin da aka ruwaito")}</h4><div className="contribution-grid">{achievements.map(card)}</div></section>}
         {plans.length > 0 && <section className="planned-support" aria-labelledby="planned-heading"><h4 id="planned-heading" className="figure-group-title">{say("Planned support", "Tallafin da aka tsara")}</h4><div className="contribution-grid">{plans.map(card)}</div></section>}
         {!figures.length && <p className="dashboard-empty">{say("No numerical figures are recorded for this selection.", "Ba a rubuta lambobi ga wannan zaɓi ba.")}</p>}
