@@ -1,5 +1,94 @@
 # Validation evidence - 22 October 2026
 
+## Category dashboard, advocacy cloud and collaboration network — 29 October 2026
+
+Owner authorised implementing the documented dashboard and showing a local
+preview first. The home now has category-name navigation and 13 sourced figures,
+achievements before conditional plans, a genuine microphone event photograph and
+clickable report cloud, nine actor–initiative relationships, and preserved guided
+chat. Removed home-wide year filtering/chart and standalone evidence explorer;
+legacy query filters are neutralised without losing the chat path. Existing
+research/legacy components are preserved. Chatbot improvement waves remain next.
+
+The frozen v1 bundle is byte unchanged. Separate presentation metadata preserves
+all 11 observations and adds one demonstrated vehicle and one represented toolkit
+unveiling as typed milestones, with actual developers/roles/limits. Enterprise
+support selects four evidenced enterprise initiatives rather than relabelling
+all livelihoods. Seven phrase counts reproduce across 30 canonical reports;
+ranked topic terms and 257 co-occurrence edges never become counts/partnerships.
+
+Speaking asset/source were visually inspected and hashes/dimensions recorded in
+content/dashboard-speaking-photo.json. Its served SHA-256 matches provenance.
+The white speech panel describes report concepts, not the pictured speech.
+Photo public-reuse permission remains unestablished; all public/Hausa gates stay
+false. No generated likeness, dependency, external model, commit or deployment.
+
+Passed:
+
+- npm.cmd run preflight, including final handoff preflight.
+- npm.cmd run lint and npm.cmd run typecheck.
+- npm.cmd test: 68 tests, zero failures, including eight new presentation tests.
+- npm.cmd run build: web static export and Studio passed; final web rebuild after
+  figure-order refinement also passed with TypeScript and all 16 static routes.
+- npm.cmd run test:dashboard-browser: completed true; six journey groups, five
+  axe states with zero violations; zero page errors, failed responses or external
+  requests. Includes numerical bounds/source mappings, category/planned-section
+  rules, complete concept source pagination, actor/initiative/area deep links,
+  keyboard selection, locale/chat persistence, header geometry, phone list,
+  320px/200% text, reduced motion and forced colours.
+- npm.cmd run test:chat-browser: completed true; eight journey groups and five
+  zero-violation axe states, with zero page errors/failures/external requests.
+- Desktop/phone English/Hausa, advocacy composition, milestone cards and network
+  screenshots inspected; fixed inherited phone-header overlap before final run.
+- Read-only integration review identified missing figure context and conflicting
+  actor/initiative selections; both were corrected, rechecked and regression-tested.
+  Source now has one native disclosure preserving scope/roles/limits/all citations.
+- Local Markdown links in eight design/status documents: 57 resolved.
+- New-file whitespace and git diff --check verified at final handoff.
+
+Browser artifacts: output/dashboard-browser-results.json and
+output/guided-browser-results.json; screenshots output/playwright/dashboard-redesign-*.png.
+Preview: http://127.0.0.1:8767/ and /ha/.
+
+These are local automated/source/visual checks, not human Hausa certification,
+public rights clearance, exhaustive archive coverage, causal analysis or proof
+of full offline reload readiness. No Python pipeline changed; its earlier 69
+tests were not rerun for this UI/presentation supplement. Normal terminal startup
+still fails; approved command-scoped fallback was used without ACL/global Git
+changes. One final-check dispatch was interrupted by an approval-service stream
+disconnect before execution; the same authorised check succeeded on retry.
+
+## Collaboration direction and chatbot research — 29 October 2026
+
+Documentation/research only. Recorded the owner-accepted collaboration-network
+proposal, researched free-tier guided-chat improvements, and updated continuation
+references. Network implementation, detailed layout, chatbot upgrades and provider
+selection remain pending. Research sources were opened on their primary publisher
+sites; no model quality, Hausa score or live account quota was measured.
+
+Executed and passed:
+
+- npm.cmd run preflight: local preview; public gates pending.
+- npm.cmd run lint.
+- npm.cmd run typecheck.
+- npm.cmd test: 60 passed, zero failures.
+- npm.cmd run build: web static export and Sanity Studio passed.
+- Local links across the nine design/status/research documents: 52 resolved.
+- Frozen bundle inventory quoted in the notes: 33 activities, 11 observations,
+  nine relationships and 257 separate co-occurrence edges.
+- New-document whitespace check and git diff --check: passed.
+
+Browser suites were not rerun because only Markdown changed. Historical browser
+evidence does not validate the proposed graph or chat improvements. No Python
+pipeline or model was changed, so its tests/audit were not rerun. No inference
+calls, account creation, credential access, dependencies, approval flags, commit,
+push or deployment. Existing application/data and original briefs are preserved.
+
+Normal sandbox terminal startup failed before execution with setup-refresh errors.
+Checks used approved command-scoped execution; read-only Git inspection used a
+command-scoped safe.directory override for the verified workspace. No ownership,
+ACL or persistent Git configuration changes were made; sandbox repair is pending.
+
 ## Presentation brief and checkpoint validation — 28 October 2026
 
 Owner requested documenting the agreed dashboard design and committing/pushing

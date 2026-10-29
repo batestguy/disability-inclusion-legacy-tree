@@ -1,0 +1,49 @@
+{
+  "subject": "Hon. Mohammed Abba Isa",
+  "source_id": "3531",
+  "source_page": "https://ossaposneo.org/ssap-abba-isa-empowers-over-45-women-with-disabilities-flags-off-training-free-distribution-of-re-usable-sanitary-pads/",
+  "source_asset": "https://ossaposneo.org/wp-content/uploads/2024/07/IMG-20240719-WA0049-576x1024-1.jpg",
+  "source_report_date": "2024-07-19",
+  "source_context": "Office report about reusable sanitary-pad training and distribution for women with disabilities, in collaboration with NigWED, at Karon-majigi, Abuja. The article describes Isa giving a keynote address.",
+  "identity_basis": "Full source image visually inspected: the seated man in wheelchair, glasses and patterned cap holds a handheld microphone at his mouth. The event banner immediately behind him names HON. MOHAMMED ABBA ISA. The same cap, vest and face appear in the report's adjacent images. This establishes source-supported identity, not biometric verification.",
+  "image_selection": "Visibly speaking into a microphone; event photo is distinct from the formal portrait and cursor photograph.",
+  "source_dimensions": [
+    576,
+    1024
+  ],
+  "source_sha256": "b005f54d236e0b643c30587b002f2780e6d82afa61f4fda6dfe70b793b327f61",
+  "source_checked": "2026-10-29",
+  "local_source": "output/speaking-photo/IMG-20240719-WA0049-576x1024-1.jpg",
+  "photographer": "Not identified in the office archive image reference.",
+  "crop": {
+    "left": 0,
+    "top": 200,
+    "width": 576,
+    "height": 768
+  },
+  "local_asset": "apps/web/public/branding/mohammed-abba-isa-speaking.webp",
+  "public_path": "/branding/mohammed-abba-isa-speaking.webp",
+  "dimensions": [
+    600,
+    800
+  ],
+  "asset_bytes": 138950,
+  "asset_sha256": "7648ce77e705f2c483b5d0c0c6498d9a6e905751774ae710e95b4e64dc68e910",
+  "modifications": [
+    "Crop 200 pixels from the top and 56 pixels from the bottom, retaining the speaker, microphone, wheelchair and event banner.",
+    "Resize proportionally from 576x768 to 600x800 and encode WebP quality90 using existing Sharp; no generation, facial retouching, compositing or background replacement."
+  ],
+  "build_helper": "output/speaking-photo/build-speaking-photo.cjs (ignored)",
+  "alt": {
+    "en": "Mohammed Abba Isa seated in his wheelchair, speaking into a handheld microphone at the NigWED event in Karon-majigi, Abuja.",
+    "ha": "Mohammed Abba Isa zaune a keken guragu yana magana da makirufo a taron NigWED a Karon-majigi, Abuja."
+  },
+  "ha_reviewed": false,
+  "reuse_permission": "Not established. The office site hosts this image, but no rights-holder licence or public-reuse permission was recorded. Owner authorization covers local prototype use only.",
+  "public_approved": false,
+  "scope": "Local dashboard prototype only; no public deployment authorization or rights clearance is implied.",
+  "limitations": [
+    "The nearby concepts panel summarizes selected reports, not this photographed speech or a verified transcript.",
+    "Event date is not independently verified; 2024-07-19 is the report publication date."
+  ]
+}

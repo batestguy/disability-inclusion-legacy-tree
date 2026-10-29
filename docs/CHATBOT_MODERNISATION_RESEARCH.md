@@ -1,5 +1,14 @@
 # Modernising the chatbot within free tiers
 
+## Current continuation — 29 October 2026
+
+Read [the guided-chat improvement research](CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md)
+first. The owner chose a clickable guide after this older planner proposal, and
+now requests new free-tier improvement research. The updated recommendation
+prioritises stronger local guided journeys and dashboard/network actions, with
+typed model assistance optional and subject to measured evaluation. The older
+proposal below is research history, not an instruction to replace the guide.
+
 Research checked 25 October 2026. Recommendation for an experiment, not a deployed
 service, provider-quality result or promise of free unlimited availability. User
 constraint: **free tier**, without automatic billing, paid fallback or trial-credit

@@ -1,5 +1,87 @@
 # Project handoff
 
+## Owner review and save request — 29 October 2026
+
+Owner feedback: the dashboard looks good overall; a few changes will follow.
+Owner explicitly requested committing and pushing this checkpoint. No specific
+new design changes were requested yet. Preserve the implemented dashboard and
+documented chatbot roadmap as the baseline for the next session. Destination is
+main on origin, batestguy/disability-inclusion-legacy-tree. This is a source-code
+checkpoint, not a public website deployment or a change to photo/Hausa gates.
+
+Pre-commit preflight and diff whitespace checks pass. The completed implementation
+validation below remains current; no application changes were made for this save.
+
+## Dashboard built for local review — 29 October 2026
+
+Owner now authorised implementing the documented dashboard first and showing it.
+The new English/Hausa home presents **Advancing Disability Inclusion**, category
+names beside sourced figure cards, a genuine speaking photo with a selectable
+report-concept cloud, an actor–initiative collaboration network, and the existing
+guided chatbot. See [the build record](docs/DASHBOARD_BUILD_2026-10-29.md).
+
+The old global year/category/activity filters, report-year chart and standalone
+evidence explorer are removed from the home presentation; their reusable code and
+research records remain. Legacy year URLs normalise to the full-record overview.
+Local cloud/network selections have separate scopes and survive shared locale
+navigation with the active chat path. Network and activity-cloud actions can
+explicitly open the corresponding guided activity. No chatbot model/voice/offline
+upgrade is claimed; those documented improvements follow dashboard review.
+
+Frozen v1 is byte unchanged. Separate content/dashboard/presentation.json holds
+reviewed grouping/membership metadata, two sourced milestone observations and
+seven phrase frequencies reproducible over 30 canonical reports. All 11 original
+measures remain; All has 13 distinct figure cards. Enterprise support is explicitly
+limited to four enterprise initiatives, not every livelihoods classification.
+Nine relationship records produce actor–initiative memberships, never 257 shared-
+report edges or actor cliques. Source disclosures expose population, role, limits
+and all supporting citations while keeping the closed cards compact.
+
+The local speaking asset comes from report 3531 (NigWED), visibly shows Isa using
+a microphone, and has exact provenance in content/dashboard-speaking-photo.json.
+No public reuse licence was established. Hausa and all release/approval flags
+remain false. No deployment, new dependency, commit or push.
+
+Local preview server: http://127.0.0.1:8767/ and /ha/. Restart with npm.cmd run
+preview if necessary. Required checks and browser evidence are in the newest
+[validation entry](docs/VALIDATION.md); screenshots are under output/playwright/
+dashboard-redesign-*.png. The former dashboard-browser-check.mjs is preserved as
+historical coverage; npm.cmd run test:dashboard-browser now uses the new harness.
+The standalone chat regression remains unchanged. Main owns final delivery;
+bounded executor supplied the data layer, source photo and read-only review.
+
+## Latest checkpoint — network direction and chatbot research, 29 October 2026
+
+Owner accepted documenting the collaboration-network proposal and requested
+research into impressive free-tier chatbot improvements. Added
+[COLLABORATION_NETWORK_DESIGN.md](docs/COLLABORATION_NETWORK_DESIGN.md) and
+[CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md](docs/CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md).
+These are documentation/research changes, not new UI or provider integrations.
+
+Collaboration direction: actors connected to specific initiatives with evidenced
+roles; distinguish reported collaboration, cooperation intentions and reported
+MOU signings. Review the membership mapping before analysis. Nine relationship
+records are not nine unique partners; 257 shared-report edges are not partnerships.
+This supersedes the prior undecided network-versus-bars status, not source gates.
+
+Chatbot recommendation: improve the clickable default with useful contextual
+follow-ups, concise verified answers, short optional journeys and explicit
+dashboard/network actions. Explore local question search and offline continuity
+before an optional bounded free-model planner. Voice/browser models are later
+experiments. No provider/model has been benchmarked; Hausa remains draft.
+
+Starting checkpoint cce2900 was clean and matched locally recorded origin/main.
+Normal sandbox terminal startup currently fails with helper_unknown_error / setup
+refresh errors. Approved command-scoped execution was used to read files and run
+checks; no ACL or persistent Git configuration changes. Git ownership differs
+between CodexSandboxOffline and TOSHIBA; a command-scoped safe.directory exception
+was used for read-only Git inspection. Repair is not claimed.
+
+See the newest [validation entry](docs/VALIDATION.md) for this session's checks.
+No application/data/dependency/approval/public-release change, commit or push is
+part of this work. Next: owner discussion of the proposed chatbot improvements;
+the agreed category-KPI and speaking-photo/cloud redesign also remains unbuilt.
+
 ## Latest checkpoint — agreed dashboard presentation, 28 October 2026
 
 Start with [docs/DASHBOARD_PRESENTATION_BRIEF.md](docs/DASHBOARD_PRESENTATION_BRIEF.md).

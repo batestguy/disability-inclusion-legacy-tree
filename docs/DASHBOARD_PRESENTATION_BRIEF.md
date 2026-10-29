@@ -1,5 +1,24 @@
 # Dashboard presentation brief — 28 October 2026
 
+## Implementation checkpoint — 29 October 2026
+
+Owner authorised the build. The agreed category-based layout, conditional planned
+support, speaking photograph/report cloud and later-approved collaboration network
+are now implemented locally. See [the build record](DASHBOARD_BUILD_2026-10-29.md)
+and [validation](VALIDATION.md). The existing guided component is preserved below;
+its new improvement waves remain next work. Older pending/documentation-only
+statements below are historical. Photo reuse, Hausa and public gates remain.
+
+## Update — collaboration network, 29 October 2026
+
+The owner accepted recording a clickable actor–initiative collaboration network
+as the direction for block 3. See [the network design](COLLABORATION_NETWORK_DESIGN.md)
+for sourced relationship types, roles, count rules and validation. This supersedes
+the undecided network/bar-chart wording below. Implementation remains pending;
+the detailed layout is a proposal. Guided-chat improvements are being researched
+in [the new research note](CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md), not implemented
+or fully approved. All other agreed presentation decisions below remain in force.
+
 Status: owner-agreed design direction for the next session; not implemented by
 this documentation checkpoint. This is the current presentation source of truth.
 Read HANDOFF.md and docs/CHATBOT_SPEC.md before implementation. Earlier iteration

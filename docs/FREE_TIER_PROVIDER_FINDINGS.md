@@ -1,5 +1,14 @@
 # Free-tier provider findings
 
+## Follow-up research — 29 October 2026
+
+See [the current guided-chat research](CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md)
+for rechecked provider limits, strict-schema planning, prompt caching, voice and
+Hausa/browser-model constraints. In particular, Groq's opened rate-limit page
+mixes tabbed plan tables with Developer wording; account-specific free limits
+remain unverified. The earlier indicative figures below are not measured account
+capacity. No provider was called, configured or selected for production.
+
 Verified 25 October 2026 from opened official documentation. Research only: no account creation, credential inspection, model calls, billing changes, dependency installation or deployment. Read with the main chatbot research/decision document. These are changing service terms, not a production availability promise or a Hausa quality benchmark.
 
 ## Decision implications

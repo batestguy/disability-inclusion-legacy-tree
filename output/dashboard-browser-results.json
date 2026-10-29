@@ -1,45 +1,38 @@
 {
-  "date": "2026-10-27T07:07:17.594Z",
+  "date": "2026-10-29T04:06:56.826Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
-    "Sourced genuine portrait and English quote; opening KPIs beside portrait and achievements use full width below; all populated categories offered; line chart describes activity-record counts by report year",
-    "Dashboard is the bilingual home; 33 activities, eight delivery measures, three targets and 36 linked citations; one language control and chatbot below all dashboard sections",
-    "White KPI showcase is first: all 11 sourced figures, three targets before eight reported achievements; keyboard category controls and record evidence work without combined totals",
-    "Year/category/activity controls use AND filtering; timeline controls work; empty results are honest; Karu delivery and household target remain separate in cards and both filtered CSV exports",
-    "Evidence opens with source context; record-to-chat handoff works; one shared locale preserves filters, selected record, chat and cursor preference; section anchors and chat follow-ups retain dashboard URL filters through reload",
-    "Existing permanent achievement URLs remain available in both languages; leaving the dashboard/chat layout restores a normal cursor",
-    "Filter browser history, responsive English/Hausa dashboard, keyboard evidence focus/return including after locale navigation, 320px/200% focus visibility, reduced motion and forced colours work; embedded chatbot retains three replacing choices without an internal scroller",
-    "Already-loaded filtering, record evidence and dashboard-to-chat handoff work without network inference; offline refresh readiness is not claimed"
+    "Full-record overview neutralises legacy filters, preserves all thirteen source-linked figures and shows achievements before the three commitments",
+    "Category selection preserves >500 welfare measures, excludes empty planned sections and gives vehicle/toolkit milestones their attributed roles",
+    "Seven concepts use exact canonical-report counts, paginated sources reconcile, activity clouds hand off to chat and section navigation preserves reloadable chat context",
+    "Nine actor–initiative records support source/role selection, keyboard actor exploration, category filters and equivalent lists; toolkit developers are not relabelled as Isa",
+    "Shared English/Hausa switching retains category/cloud/chat context; phone list, 320px/200% text, forced colours and reduced motion reflow",
+    "Source disclosures retain population, role, limits and all supporting citations; incompatible actor/initiative/area deep links normalise safely"
   ],
   "axe": [
     {
-      "label": "English dashboard overview",
+      "label": "desktop overview",
       "violations": []
     },
     {
-      "label": "Empty filter result",
+      "label": "concept sources",
       "violations": []
     },
     {
-      "label": "Hausa filtered evidence and embedded chatbot",
+      "label": "collaboration detail and list",
       "violations": []
     },
     {
-      "label": "English mobile dashboard",
+      "label": "Hausa phone",
       "violations": []
     },
     {
-      "label": "Hausa mobile dashboard",
+      "label": "320px and 200% text",
       "violations": []
     }
   ],
   "errors": [],
   "failedResponses": [],
-  "externalRequests": [],
-  "layout": {
-    "firstDesktopNumberY": 344.765625,
-    "firstMobileNumberY": 899.359375,
-    "supportingMobileCardHeight": 111.59375
-  }
+  "externalRequests": []
 }

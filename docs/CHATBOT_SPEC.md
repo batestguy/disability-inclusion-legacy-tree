@@ -1,5 +1,27 @@
 # Bilingual dashboard chatbot specification
 
+## Dashboard redesign integration — 29 October 2026
+
+Owner authorised the dashboard first. The new home layout retains the compact
+guided chatbot and the single shared vertical language control. Activity-cloud
+and network actions select the corresponding activity explicitly; section links
+preserve the flow hash. Legacy year query parameters cannot narrow the redesigned
+home. The standalone chat's own chronological exploration remains available.
+See [the build record](DASHBOARD_BUILD_2026-10-29.md). The documented new chatbot
+journeys, typed planner, voice and full offline cache remain follow-up work.
+
+## Improvement research — 29 October 2026
+
+Owner requested research into making this chatbot more impressive on free tiers.
+See [the updated research and proposed waves](CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md).
+Prioritise evaluating context-sensitive guided follow-ups, short journeys, verified
+answer components and explicit dashboard/network actions. Optional typed semantic
+planning, voice and browser models remain research proposals. This request does
+not supersede the clickable default, three replacing choices, no internal scroller,
+shared visible language control or truthful draft/release status. No implementation
+or external inference change is claimed. Collaboration direction is recorded in
+[the network design](COLLABORATION_NETWORK_DESIGN.md).
+
 ## Current owner design status — 28 October 2026
 
 The owner explicitly marks the guided chatbot block **pending** for the next

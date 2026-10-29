@@ -1,5 +1,38 @@
 # Inclusion scorecard
 
+## Implemented local dashboard — 29 October 2026
+
+Current home is category-led, with a 208px category-name column and a three-column
+figure grid at wide desktop widths; two columns below 1100px and wrapping category
+buttons above the figures below 760px. At 320px the cards form one column. Figures
+lead with tabular dark-green numbers, short labels and one native Source disclosure
+containing scope, role, limits and all citations. Plans follow achievements only
+where present. Cards use 20px padding/12px gaps, reduced on phones, on a 4px rhythm.
+
+Self-hosted Source Sans 3 remains. New dashboard tokens: inclusion-green #156146,
+ink #183e2e, muted #52665b, white paper, tint #f1f7f3 and line #d7e4db. Subtle flag
+stripes sit behind opaque surfaces; no watermark overlays the speech cloud/graph.
+Main headings use 600 weight, negative tracking and compact line height. Native
+controls keep visible focus and 44px targets where practical.
+
+The genuine speaking photo sits beside a permanent white speech panel with a
+small tail; concepts use actual canonical-report counts. Source results appear
+locally on selection. Network uses stable actor/initiative columns with native
+button nodes, source-bound roles and an equivalent phone/list view. The header
+language control occupies its own grid row beside the brand, with navigation
+below on phones. Shared English/Hausa state and existing guided flow remain.
+See [build evidence](../docs/DASHBOARD_BUILD_2026-10-29.md). Older layouts below
+are historical. Public photo/Hausa/release approval remains unresolved.
+
+## Collaboration direction recorded — 29 October 2026
+
+Use the [actor–initiative network direction](../docs/COLLABORATION_NETWORK_DESIGN.md)
+for the later collaborations block. The owner accepted documenting this proposal;
+implementation/layout verification is pending. Prefer stable labelled nodes,
+evidenced role/status details on selection and an equivalent accessible list.
+This supersedes the older undecided collaboration presentation below. Chatbot
+improvements remain [research proposals](../docs/CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md).
+
 ## Next design agreed — 28 October 2026; implementation pending
 
 The current implementation patterns below describe the previous checkpoint.

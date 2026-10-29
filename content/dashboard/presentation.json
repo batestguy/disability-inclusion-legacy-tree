@@ -1,0 +1,831 @@
+{
+  "version": 1,
+  "haReviewed": false,
+  "publicApproved": false,
+  "groups": [
+    {
+      "id": "all",
+      "label": {
+        "en": "All",
+        "ha": "Duka"
+      },
+      "catalogueCategoryIds": [],
+      "additionalActivityIds": [],
+      "rationale": "All 33 reviewed-subset activities, including ceremonial, political and sport classifications; each observation appears once. No combined beneficiaries total."
+    },
+    {
+      "id": "health-welfare",
+      "label": {
+        "en": "Health & welfare",
+        "ha": "Lafiya da walwala"
+      },
+      "catalogueCategoryIds": [
+        "healthcare-welfare"
+      ],
+      "additionalActivityIds": [],
+      "rationale": "Preserves every healthcare-welfare classification, including overlapping training and support activities."
+    },
+    {
+      "id": "training-education",
+      "label": {
+        "en": "Training & education",
+        "ha": "Horo da ilimi"
+      },
+      "catalogueCategoryIds": [
+        "education-training"
+      ],
+      "additionalActivityIds": [],
+      "rationale": "Preserves every education-training classification; training and kits for one cohort remain one figure."
+    },
+    {
+      "id": "employment",
+      "label": {
+        "en": "Employment",
+        "ha": "Aikin yi"
+      },
+      "catalogueCategoryIds": [],
+      "additionalActivityIds": [
+        "borno-employment-2024",
+        "beyond-disability-coordination-2024",
+        "digital-employment-roundtable-2025",
+        "disability-readiness-toolkit-2025"
+      ],
+      "rationale": "Explicit employment-focused initiatives within livelihoods; distinguishes placements, projected opportunities and workforce advocacy."
+    },
+    {
+      "id": "enterprise-support",
+      "label": {
+        "en": "Enterprise support",
+        "ha": "Tallafin sana'a"
+      },
+      "catalogueCategoryIds": [],
+      "additionalActivityIds": [
+        "inclusive-business-skills",
+        "nigwed-skills-2024",
+        "fha-stalls-2025",
+        "startup-support-march-2024"
+      ],
+      "rationale": "Selects the four livelihoods records evidencing enterprise skills, startup support or stall-allotment support. Employment-only initiatives, workforce-toolkit advocacy and proposed e-hailing do not establish enterprise delivery. Original catalogue classifications remain unchanged; training and welfare overlaps are preserved."
+    },
+    {
+      "id": "accessibility",
+      "label": {
+        "en": "Accessibility",
+        "ha": "Saukin amfani"
+      },
+      "catalogueCategoryIds": [
+        "digital-assistive-technology",
+        "policy-accessibility"
+      ],
+      "additionalActivityIds": [],
+      "rationale": "Union of digital-assistive-technology and policy-accessibility; an activity in both is counted once. Other catalogue classifications remain intact in All."
+    }
+  ],
+  "figureLabels": {
+    "beyond-disability-coordination-2024": {
+      "en": "Beyond Disability opportunities target",
+      "ha": "Manufar damar aikin Beyond Disability"
+    },
+    "borno-employment-2024": {
+      "en": "Reported Borno employment placements",
+      "ha": "Ayyukan yi da aka ruwaito a Borno"
+    },
+    "inclusive-business-skills": {
+      "en": "SMEDAN training & startup support",
+      "ha": "Horon SMEDAN da tallafin fara sana'a"
+    },
+    "nigwed-skills-2024": {
+      "en": "Women trained with NIGWED",
+      "ha": "Matan da aka horar tare da NIGWED"
+    },
+    "ramadan-food-2024": {
+      "en": "Ramadan food support",
+      "ha": "Tallafin abinci na Ramadan"
+    },
+    "karu-food-cash-2024": {
+      "en": "Karu food & cash support",
+      "ha": "Tallafin abinci da kudi a Karu"
+    },
+    "northeast-food-support-target-2024": {
+      "en": "Northeast food-support target",
+      "ha": "Manufar tallafin abinci a Arewa maso Gabas"
+    },
+    "ayubson-event-2025": {
+      "en": "Ayubson celebration participants",
+      "ha": "Mahalarta bikin Ayubson"
+    },
+    "fha-stalls-2025": {
+      "en": "FHA stall-allotment beneficiaries",
+      "ha": "Wadanda suka samu takardun rumfunan FHA"
+    },
+    "startup-support-march-2024": {
+      "en": "Startup support & POS equipment",
+      "ha": "Tallafin fara sana'a da kayan POS"
+    }
+  },
+  "milestones": [
+    {
+      "id": "supplemental:adapted-vehicle-demonstrated",
+      "activityId": "adapted-vehicle-presentation-2026",
+      "value": 1,
+      "bound": "exact",
+      "unit": "vehicle",
+      "label": {
+        "en": "Accessibility-adapted vehicle demonstrated",
+        "ha": "An nuna motar da aka daidaita domin masu nakasa"
+      },
+      "stage": "reported-milestone",
+      "sourceId": "5420",
+      "reportDate": "2026-02-22",
+      "population": "One modified JAC J7 demonstrated, not people supported",
+      "role": "Office collaboration with Elizade Autoland and JAC Motors; Isa participated in the presentation.",
+      "limitations": [
+        "Office report; singular demonstrated vehicle, not a beneficiary count or fleet delivered.",
+        "Nationwide procurement, distribution and e-hailing onboarding remain proposed. No independently verified national-first claim."
+      ],
+      "evidence": [
+        {
+          "sourceId": "5420",
+          "text": "the presentation and demonstration of a modified JAC J7 saloon car"
+        }
+      ],
+      "reviewStatus": "source-checked-local-presentation-only",
+      "publicApproved": false
+    },
+    {
+      "id": "supplemental:toolkit-unveiled",
+      "activityId": "disability-readiness-toolkit-2025",
+      "value": 1,
+      "bound": "exact",
+      "unit": "toolkit",
+      "label": {
+        "en": "Disability-readiness toolkit unveiled through his office",
+        "ha": "An kaddamar da kunshin shirye-shiryen daukar masu nakasa ta ofishinsa"
+      },
+      "stage": "reported-milestone",
+      "sourceId": "5151",
+      "reportDate": "2025-05-22",
+      "population": "One toolkit unveiled, not users, trainees or employment placements",
+      "role": "Isa was represented by Director of Media and Communications Lanre Oloyede at the unveiling. Developers: Deaf-in-Tech and DataLead Africa.",
+      "limitations": [
+        "Unveiling is not authorship, funding or measured institutional uptake.",
+        "The report's separate >50 employment claim is excluded pending scope/overlap review. Deaf-in-Tech's >1,200 trainees are not attributed to Isa."
+      ],
+      "evidence": [
+        {
+          "sourceId": "5151",
+          "text": "performed the official unveiling of the Disability Readiness Assessment and Workforce Toolkit"
+        },
+        {
+          "sourceId": "5151",
+          "text": "Represented by his Director of Media and Communications, Mr. Lanre Oloyede"
+        },
+        {
+          "sourceId": "5151",
+          "text": "produced by Deaf-in-Tech in partnership with DataLead Africa"
+        }
+      ],
+      "reviewStatus": "source-checked-local-presentation-only",
+      "publicApproved": false
+    }
+  ],
+  "memberships": [
+    {
+      "id": "adapted-vehicle-collaboration",
+      "activityId": "adapted-vehicle-presentation-2026",
+      "roles": {
+        "elizade": {
+          "en": "Vehicle collaboration partner",
+          "ha": "Abokin hadin gwiwar motar"
+        },
+        "jac": {
+          "en": "Vehicle collaboration partner",
+          "ha": "Abokin hadin gwiwar motar"
+        },
+        "mohammed-abba-isa": {
+          "en": "Participated through his office's vehicle collaboration and presentation",
+          "ha": "Ya halarta ta hadin gwiwar ofishinsa wajen gabatar da motar"
+        }
+      },
+      "title": {
+        "en": "Adapted vehicle demonstration",
+        "ha": "Nuna motar da aka daidaita domin masu nakasa"
+      }
+    },
+    {
+      "id": "health-ministry-intention",
+      "activityId": "health-ministry-inclusion-meeting-2023",
+      "roles": {
+        "ali-pate": {
+          "en": "Health minister; stated agreement to cooperate",
+          "ha": "Ministan lafiya; ya bayyana aniyar hadin gwiwa"
+        },
+        "mohammed-abba-isa": {
+          "en": "Courtesy-visit participant seeking inclusive healthcare cooperation",
+          "ha": "Mahalartin ziyarar neman hadin gwiwar kula da lafiya ga kowa"
+        }
+      },
+      "title": {
+        "en": "Healthcare inclusion cooperation meeting",
+        "ha": "Taron hadin gwiwar kula da lafiya ga kowa"
+      }
+    },
+    {
+      "id": "ncpwd-intention",
+      "activityId": "ncpwd-introductory-visit-2023",
+      "roles": {
+        "mohammed-abba-isa": {
+          "en": "Visiting office-holder seeking cooperation",
+          "ha": "Mai mukamin da ya ziyarci neman hadin gwiwa"
+        },
+        "ncpwd": {
+          "en": "Institution whose executive secretary stated willingness to cooperate",
+          "ha": "Hukumar da sakatarenta ya bayyana aniyar hadin gwiwa"
+        }
+      },
+      "title": {
+        "en": "Introductory meeting with NCPWD",
+        "ha": "Taron gabatar da kai ga NCPWD"
+      }
+    },
+    {
+      "id": "nigwed-training",
+      "activityId": "nigwed-skills-2024",
+      "roles": {
+        "mohammed-abba-isa": {
+          "en": "Office-reported training collaborator",
+          "ha": "An ruwaito ofishinsa a hadin gwiwar horo"
+        },
+        "nigwed": {
+          "en": "Reported training delivery collaborator",
+          "ha": "Abokin hadin gwiwar bayar da horo da aka ruwaito"
+        }
+      },
+      "title": {
+        "en": "NIGWED training for women with disabilities",
+        "ha": "Horon NIGWED ga mata masu nakasa"
+      }
+    },
+    {
+      "id": "ramadan-tejuosho",
+      "activityId": "ramadan-food-2024",
+      "roles": {
+        "mohammed-abba-isa": {
+          "en": "Office-reported food-support organiser",
+          "ha": "An ruwaito ofishinsa ya shirya tallafin abinci"
+        },
+        "queen-tejuosho-foundation": {
+          "en": "Reported food-distribution collaborator",
+          "ha": "Abokin hadin gwiwar raba abinci da aka ruwaito"
+        }
+      },
+      "title": {
+        "en": "Ramadan food support",
+        "ha": "Tallafin abinci na Ramadan"
+      }
+    },
+    {
+      "id": "red-cross-collaboration",
+      "activityId": "red-cross-collaboration-2025",
+      "roles": {
+        "mohammed-abba-isa": {
+          "en": "Office representative in reported disaster-response partnership",
+          "ha": "Wakilin ofishi a hadin gwiwar agajin gaggawa da aka ruwaito"
+        },
+        "red-cross": {
+          "en": "Reported disaster-response cooperation partner",
+          "ha": "Abokin hadin gwiwar agajin gaggawa da aka ruwaito"
+        }
+      },
+      "title": {
+        "en": "Red Cross disaster-response cooperation",
+        "ha": "Hadin gwiwar agajin gaggawa da Red Cross"
+      }
+    },
+    {
+      "id": "school-blind-smedan",
+      "activityId": "school-blind-support-2025",
+      "roles": {
+        "fct-school-blind": {
+          "en": "School receiving food and financial support",
+          "ha": "Makarantar da ta karbi tallafin abinci da kudi"
+        },
+        "mohammed-abba-isa": {
+          "en": "Office-holder participating in school support",
+          "ha": "Mai mukamin da ya halarta wajen tallafin makaranta"
+        },
+        "smedan": {
+          "en": "Agency providing support through its director general",
+          "ha": "Hukumar da ta bayar da tallafi ta hannun babban daraktanta"
+        }
+      },
+      "title": {
+        "en": "Support for FCT School of the Blind",
+        "ha": "Tallafi ga makarantar makafi ta FCT"
+      }
+    },
+    {
+      "id": "toolkit-developers",
+      "activityId": "disability-readiness-toolkit-2025",
+      "roles": {
+        "datalead": {
+          "en": "Toolkit development partner",
+          "ha": "Abokin hadin gwiwar samar da kunshin"
+        },
+        "deaf-in-tech": {
+          "en": "Toolkit producer with DataLead Africa",
+          "ha": "Mai samar da kunshin tare da DataLead Africa"
+        }
+      },
+      "title": {
+        "en": "Disability-readiness toolkit development",
+        "ha": "Samar da kunshin shirye-shiryen daukar masu nakasa"
+      }
+    },
+    {
+      "id": "veterans-mou-2024",
+      "activityId": "veterans-mou-2024",
+      "roles": {
+        "african-unconquered": {
+          "en": "Reported MOU counterparty supporting wounded veterans",
+          "ha": "Bangaren yarjejeniyar tallafin tsoffin sojojin da suka ji rauni"
+        },
+        "mohammed-abba-isa": {
+          "en": "Office-holder in reported MOU signing",
+          "ha": "Mai mukamin a sanya hannun yarjejeniyar da aka ruwaito"
+        }
+      },
+      "title": {
+        "en": "Reported wounded-veterans MOU signing",
+        "ha": "Sanya hannun yarjejeniyar tsoffin sojojin da suka ji rauni da aka ruwaito"
+      }
+    }
+  ],
+  "conceptDefinitions": [
+    {
+      "id": "disability-inclusion",
+      "phrase": "disability inclusion",
+      "label": {
+        "en": "Disability inclusion",
+        "ha": "Hada masu nakasa"
+      }
+    },
+    {
+      "id": "inclusive-development",
+      "phrase": "inclusive development",
+      "label": {
+        "en": "Inclusive development",
+        "ha": "Ci gaba mai daukar kowa"
+      }
+    },
+    {
+      "id": "inclusive-education",
+      "phrase": "inclusive education",
+      "label": {
+        "en": "Inclusive education",
+        "ha": "Ilimi mai daukar kowa"
+      }
+    },
+    {
+      "id": "reasonable-accommodations",
+      "phrase": "reasonable accommodations",
+      "label": {
+        "en": "Reasonable accommodations",
+        "ha": "Daidaitattun sauye-sauyen taimako"
+      }
+    },
+    {
+      "id": "economic-empowerment",
+      "phrase": "economic empowerment",
+      "label": {
+        "en": "Economic empowerment",
+        "ha": "Karfafa tattalin arziki"
+      }
+    },
+    {
+      "id": "accessible-healthcare",
+      "phrase": "accessible healthcare",
+      "label": {
+        "en": "Accessible healthcare",
+        "ha": "Kula da lafiya mai saukin samu"
+      }
+    },
+    {
+      "id": "employment-quota",
+      "phrase": "employment quota",
+      "label": {
+        "en": "Employment quota",
+        "ha": "Kason aikin yi"
+      }
+    }
+  ],
+  "conceptExtraction": {
+    "method": "case-insensitive whole phrase; whitespace collapsed; one match per selected canonical report; archive aliases deduplicated",
+    "reportCount": 30,
+    "reports": [
+      {
+        "sourceId": "1217",
+        "archiveSourceId": 1217,
+        "textSha256": "8d5c564c70bdfcb8b19d2506d8cf6663ba83e80f712d806013a5cf517a557138"
+      },
+      {
+        "sourceId": "1222",
+        "archiveSourceId": 1222,
+        "textSha256": "f6f1dd67a0b66496fb8e63005ddf3b1492d284f20683b690f42085df24e00718"
+      },
+      {
+        "sourceId": "1240",
+        "archiveSourceId": 1240,
+        "textSha256": "7ebd5f78f55c589c703750e739eb234c18caf63c84cbb98ae3c7f5c071a79c8a"
+      },
+      {
+        "sourceId": "1243",
+        "archiveSourceId": 1243,
+        "textSha256": "72aa7100505474c74bfc8f7653a9a1f9e7412e17339ad2d0d81860eb607adbbf"
+      },
+      {
+        "sourceId": "1257",
+        "archiveSourceId": 1257,
+        "textSha256": "7a1375e267ba62e718035a8dd8e2439502aeb339402ca9d56daa815a2dd9aa8c"
+      },
+      {
+        "sourceId": "1263",
+        "archiveSourceId": 1263,
+        "textSha256": "0580fded38fb8c48371e1051733c80b5c5500124794448dc54ad4f5da1c7b2d4"
+      },
+      {
+        "sourceId": "1278",
+        "archiveSourceId": 1278,
+        "textSha256": "f135d2a58de75d19b8b9eed5325f32074d7b3bb429eb21f637708983a2472201"
+      },
+      {
+        "sourceId": "1291",
+        "archiveSourceId": 1291,
+        "textSha256": "191827f8678b0e5c0636244a30eaa8b0afcc963e76f2ba12ec4059b5a5034261"
+      },
+      {
+        "sourceId": "1295",
+        "archiveSourceId": 1295,
+        "textSha256": "42d524a51830aee76a7583a653155056d949052a2d7ba15d398a68afa0513123"
+      },
+      {
+        "sourceId": "1307",
+        "archiveSourceId": 1307,
+        "textSha256": "1e677d3a64b2c0f59fa246ea63d6429fa43e39cb918d723c7a51207cdd059842"
+      },
+      {
+        "sourceId": "1801",
+        "archiveSourceId": 1801,
+        "textSha256": "a40074055d446f0b3e0012f5d0759146e0fbb517391badfc3dd734ba57a48944"
+      },
+      {
+        "sourceId": "2279",
+        "archiveSourceId": 2279,
+        "textSha256": "4bdc1592db2ce2533787c7aee4194e18ada20d9537187a87de9e8c43dbde5262"
+      },
+      {
+        "sourceId": "2352",
+        "archiveSourceId": 2352,
+        "textSha256": "ea3f9c0f2771e76d3d72c4c74053192f84363ecd199ffa2fb3f1620f87ea763e"
+      },
+      {
+        "sourceId": "2790",
+        "archiveSourceId": 2790,
+        "textSha256": "6c69e7a0e14d9d4f7f75fda3bcf43cdca0c2ddfe2ac1b5e2be9ac1c6fe0486ea"
+      },
+      {
+        "sourceId": "3531",
+        "archiveSourceId": 3531,
+        "textSha256": "34af164ce97df7efc42794afedffc989f41eff3813b3f1b3d866b9d5f8c5fec7"
+      },
+      {
+        "sourceId": "4243",
+        "archiveSourceId": 4243,
+        "textSha256": "de32f1b730877485718ceff99152ba536e90119cdd45fe85a57f34f4a5c90172"
+      },
+      {
+        "sourceId": "4860",
+        "archiveSourceId": 4860,
+        "textSha256": "c2331fd98ad022c0006917f16526ac5befea5da69a5b5d5c336333b7549cd1a4"
+      },
+      {
+        "sourceId": "4881",
+        "archiveSourceId": 4881,
+        "textSha256": "0f2b943f492235b544b60ab9fb1c2afd359416d84392240d6b77a405901c5aa4"
+      },
+      {
+        "sourceId": "5105",
+        "archiveSourceId": 5105,
+        "textSha256": "d02be143813b912dfee6f13b6a9f2aee72a2da6378f0c9e30fcd60bad0dace2c"
+      },
+      {
+        "sourceId": "5151",
+        "archiveSourceId": 5151,
+        "textSha256": "f998821367f23d476f9644f5033480314d04ae14954ef486a15ce84ad5690a32"
+      },
+      {
+        "sourceId": "5197",
+        "archiveSourceId": 5197,
+        "textSha256": "a39232213c79f383e072efd531495db2aea0b426d225f8f34a42a90814c9b12d"
+      },
+      {
+        "sourceId": "5255",
+        "archiveSourceId": 5255,
+        "textSha256": "b95cf407de25a4b9b9c55d9c81ae98940490d73b4b1f426ae38d0196eb15eaa5"
+      },
+      {
+        "sourceId": "5274",
+        "archiveSourceId": 5274,
+        "textSha256": "3c90cfedbf3f7250d0c315faa022c8e0f8a1446e68f3a6c8ac1492430efb2a95"
+      },
+      {
+        "sourceId": "5288",
+        "archiveSourceId": 5288,
+        "textSha256": "ce3a00257aab8122cc006819ca90aedda6fb6e76bbf941b9757cab31cbc2b1ff"
+      },
+      {
+        "sourceId": "5311",
+        "archiveSourceId": 5311,
+        "textSha256": "65d31aafe9580e4437a09b50e0f5acf39e59d3b480566045bff6c1c6b2550ebc"
+      },
+      {
+        "sourceId": "5420",
+        "archiveSourceId": 5420,
+        "textSha256": "97dfefa0de93aef6282ccdc6ced60a3e28ef9471599488b9fd79209eb6029b79"
+      },
+      {
+        "sourceId": "5709",
+        "archiveSourceId": 5709,
+        "textSha256": "5b15f2ea82edba0c3b9f38cedadf947d511dee7d9411821a2959b6dbfaaadb0f"
+      },
+      {
+        "sourceId": "5803",
+        "archiveSourceId": 5803,
+        "textSha256": "5b83b7636fe94a1d08cf695a81b3833e4220acf5d20b5260f2aa999ceb479a7e"
+      },
+      {
+        "sourceId": "anniversary-2024",
+        "archiveSourceId": 4252,
+        "textSha256": "f0677bd109dc946fbfc1a15a1a4f7f39811680c82823bb25d2aefcb52742fffe"
+      },
+      {
+        "sourceId": "summit",
+        "archiveSourceId": 5278,
+        "textSha256": "b31afd6f2621a87975e9e69c3720a311ece7ed34ac5740e9bc8d661423543ab6"
+      }
+    ]
+  },
+  "concepts": [
+    {
+      "id": "disability-inclusion",
+      "phrase": "disability inclusion",
+      "label": {
+        "en": "Disability inclusion",
+        "ha": "Hada masu nakasa"
+      },
+      "count": 13,
+      "sourceIds": [
+        "1295",
+        "1307",
+        "1801",
+        "2279",
+        "4860",
+        "4881",
+        "5105",
+        "5151",
+        "5197",
+        "5255",
+        "5274",
+        "5311",
+        "anniversary-2024"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "1295",
+          "text": "the role he played in advocating for disability inclusion, promised to make the Renewed Hope Agenda of Mr. President"
+        },
+        {
+          "sourceId": "1307",
+          "text": "purpose of the meeting was to promote disability Inclusion in healthcare delivery. The Presidential aide emphasized"
+        },
+        {
+          "sourceId": "1801",
+          "text": "President Tinubu for his vision for disability inclusion, Hon. Abba Isa reiterated Mr President’s unwavering commitment"
+        },
+        {
+          "sourceId": "2279",
+          "text": "notable initiatives is the launch of Disability Inclusion Governors Connect Program which was flagged off by Lagos"
+        },
+        {
+          "sourceId": "4860",
+          "text": "institutions committed to advancing disability inclusion, empowerment, and rights protection in Nigeria. “It is"
+        },
+        {
+          "sourceId": "4881",
+          "text": "children,” he said. SMEDAN’s Commitment to Disability Inclusion In his remarks, the Director General of SMEDAN, Mr. Charles"
+        },
+        {
+          "sourceId": "5105",
+          "text": "emulate this gesture by mainstreaming disability inclusion in their programs, services, and policies. The Managing"
+        },
+        {
+          "sourceId": "5151",
+          "text": "pioneering initiative aimed at advancing disability inclusion in Nigeria’s workforce. The toolkit, produced by Deaf-in-Tech"
+        },
+        {
+          "sourceId": "5197",
+          "text": "with President Tinubu’s directive for disability inclusion in every sector of national development. He emphasized"
+        },
+        {
+          "sourceId": "5255",
+          "text": "PWDs. Reaffirming his commitment to disability inclusion, the SSAP reiterated his ongoing advocacy for the full"
+        },
+        {
+          "sourceId": "5274",
+          "text": "officially unveiled the 2024 State of Disability Inclusion Report produced by Project Enable Africa with support from"
+        },
+        {
+          "sourceId": "5311",
+          "text": "to advancing spinal cord health and disability inclusion. “President Bola Ahmed Tinubu’s administration is fully"
+        },
+        {
+          "sourceId": "anniversary-2024",
+          "text": "commitment by President Tinubu to bring disability inclusion to the forefront of national policy, underscoring the integration"
+        }
+      ]
+    },
+    {
+      "id": "inclusive-development",
+      "phrase": "inclusive development",
+      "label": {
+        "en": "Inclusive development",
+        "ha": "Ci gaba mai daukar kowa"
+      },
+      "count": 3,
+      "sourceIds": [
+        "4881",
+        "5274",
+        "5420"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "4881",
+          "text": "commitment to social responsibility and inclusive development. Thank you for recognizing the importance of investing"
+        },
+        {
+          "sourceId": "5274",
+          "text": "Bola Ahmed Tinubu is a roadmap to inclusive development. My office stands ready to collaborate with government"
+        },
+        {
+          "sourceId": "5420",
+          "text": "chapter in Nigeria’s drive toward inclusive development was opened on Thursday as the Senior Special Assistant"
+        }
+      ]
+    },
+    {
+      "id": "inclusive-education",
+      "phrase": "inclusive education",
+      "label": {
+        "en": "Inclusive education",
+        "ha": "Ilimi mai daukar kowa"
+      },
+      "count": 3,
+      "sourceIds": [
+        "2352",
+        "5274",
+        "anniversary-2024"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "2352",
+          "text": "is all encompassing. It encompasses inclusive education, healthcare, employment, food security and empowerment"
+        },
+        {
+          "sourceId": "5274",
+          "text": "“Infrastructure remains largely inaccessible, inclusive education is poorly supported, healthcare systems are not disability-friendly,"
+        },
+        {
+          "sourceId": "anniversary-2024",
+          "text": "urban development across Nigeria. *3. Inclusive Education Initiatives:* Through engagement and consultation with"
+        }
+      ]
+    },
+    {
+      "id": "reasonable-accommodations",
+      "phrase": "reasonable accommodations",
+      "label": {
+        "en": "Reasonable accommodations",
+        "ha": "Daidaitattun sauye-sauyen taimako"
+      },
+      "count": 1,
+      "sourceIds": [
+        "5151"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "5151",
+          "text": "about upholding dignity and providing reasonable accommodations in the workplace, including accessible infrastructure,"
+        }
+      ]
+    },
+    {
+      "id": "economic-empowerment",
+      "phrase": "economic empowerment",
+      "label": {
+        "en": "Economic empowerment",
+        "ha": "Karfafa tattalin arziki"
+      },
+      "count": 4,
+      "sourceIds": [
+        "2279",
+        "3531",
+        "5105",
+        "anniversary-2024"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "2279",
+          "text": "PROGRESS, and it centres around women economic empowerment. The Empowerment Program, which was an initiative of the"
+        },
+        {
+          "sourceId": "3531",
+          "text": "skills, fostering independence and economic empowerment,” the presidential aide stated. Thereafter, the SSAP performed"
+        },
+        {
+          "sourceId": "5105",
+          "text": "administration’s ongoing push for social and economic empowerment for PWDs, and challenged other MDAs and parastatals to"
+        },
+        {
+          "sourceId": "anniversary-2024",
+          "text": "in Nigeria. *4. Job Creation Drive/Economic Empowerment Programs:* My engagement with Gov. Babagana Zulum of Borno"
+        }
+      ]
+    },
+    {
+      "id": "accessible-healthcare",
+      "phrase": "accessible healthcare",
+      "label": {
+        "en": "Accessible healthcare",
+        "ha": "Kula da lafiya mai saukin samu"
+      },
+      "count": 3,
+      "sourceIds": [
+        "1307",
+        "5311",
+        "anniversary-2024"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "1307",
+          "text": "together to create a more inclusive and accessible healthcare system for all Nigerians This took place Wednesday when"
+        },
+        {
+          "sourceId": "5311",
+          "text": "push for inclusive infrastructure, accessible healthcare, and policies that prioritise prevention and dignity for"
+        },
+        {
+          "sourceId": "anniversary-2024",
+          "text": "together to create a more inclusive and accessible healthcare system for PWDs In another significant step towards realizing"
+        }
+      ]
+    },
+    {
+      "id": "employment-quota",
+      "phrase": "employment quota",
+      "label": {
+        "en": "Employment quota",
+        "ha": "Kason aikin yi"
+      },
+      "count": 5,
+      "sourceIds": [
+        "2279",
+        "5151",
+        "5255",
+        "5274",
+        "anniversary-2024"
+      ],
+      "excerpts": [
+        {
+          "sourceId": "2279",
+          "text": "… As Nat. Assembly moves for 10% employment quota for PWDs By Lanre Oloyede As part of activities to commemorate"
+        },
+        {
+          "sourceId": "5151",
+          "text": "advocated for the expansion of the 5% employment quota for PWDs—currently applicable only to the public sector"
+        },
+        {
+          "sourceId": "5255",
+          "text": "full implementation of the minimum 5% employment quota for PWDs in public institutions, as enshrined in the National"
+        },
+        {
+          "sourceId": "5274",
+          "text": "private organizations to increase their employment quota for persons with disabilities to at least 10%. The 2024"
+        },
+        {
+          "sourceId": "anniversary-2024",
+          "text": "State on the need to implement 5% employment quota prescribed by the National Disability Act yielded positive"
+        }
+      ]
+    }
+  ]
+}

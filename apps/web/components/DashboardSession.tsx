@@ -4,8 +4,10 @@ import { createContext, useContext, useState, type Dispatch, type SetStateAction
 import type { DashboardFilters } from "../lib/dashboard-data.mjs";
 
 export type HighlightCategory = "all" | "targets" | "achievements";
-type DashboardSession = { filters: DashboardFilters; selectedId: string | null; tablePage: number; figurePage: number; highlightCategory: HighlightCategory };
-const initial: DashboardSession = { filters: { year: "all", category: "all", activity: "all" }, selectedId: null, tablePage: 0, figurePage: 0, highlightCategory: "all" };
+export type PresentationSelection = { area: string; cloudMode: "areas" | "concepts"; cloudId: string | null; initiative: string | null; networkArea: string; actor: string | null };
+export const initialPresentation: PresentationSelection = { area: "all", cloudMode: "concepts", cloudId: null, initiative: null, networkArea: "all", actor: null };
+type DashboardSession = { filters: DashboardFilters; selectedId: string | null; tablePage: number; figurePage: number; highlightCategory: HighlightCategory; presentation: PresentationSelection };
+const initial: DashboardSession = { filters: { year: "all", category: "all", activity: "all" }, selectedId: null, tablePage: 0, figurePage: 0, highlightCategory: "all", presentation: initialPresentation };
 const Context = createContext<{ dashboard: DashboardSession; setDashboard: Dispatch<SetStateAction<DashboardSession>> } | null>(null);
 
 export function DashboardSessionProvider({ children }: { children: React.ReactNode }) {

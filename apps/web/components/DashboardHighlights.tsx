@@ -1,87 +1,42 @@
 "use client";
 
-import type { DashboardPanelProps } from "./DashboardPanels";
-import type { HighlightCategory } from "./DashboardSession";
-import type { DashboardObservation } from "../lib/dashboard-data.mjs";
-import type { ReactNode } from "react";
-import Image from "next/image";
+import type { Presentation } from "./DashboardWorkspace";
+import type { Lang } from "../lib/content";
+import type { getChatData } from "../lib/chat-data";
 import "../app/highlights.css";
 
+type Props = Pick<ReturnType<typeof getChatData>, "bundle"> & { lang: Lang; data: Presentation; area: string; onArea: (id: string) => void };
 const marks = { exact: "", "greater-than": ">", "at-least": "≥", approximate: "≈" };
-const bounds = {
-  exact: ["Exactly", "Daidai"], "greater-than": ["More than", "Fiye da"],
-  "at-least": ["At least", "Aƙalla"], approximate: ["About", "Kusan"],
-};
-
-export default function DashboardHighlights({ lang, bundle, view, titleFor, onFilter, category, onCategory, filterControls }: DashboardPanelProps & {
-  category: HighlightCategory;
-  onCategory: (category: HighlightCategory) => void;
-  filterControls: ReactNode;
-}) {
+const boundWords = { exact: ["Exactly", "Daidai"], "greater-than": ["More than", "Fiye da"], "at-least": ["At least", "Aƙalla"], approximate: ["About", "Kusan"] };
+function ContributionDrawing({ area }: { area: string }) {
+  return <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{area === "vehicle" ? <><path d="m9 24 4-11h22l4 11v13h-5v-5H14v5H9V24ZM9 24h30M16 13l-2 11M32 13l2 11M13 28h4M31 28h4" /><circle cx="24" cy="19" r="4" /><path d="M24 19v4m0-4 3-2" /></> : area === "toolkit" ? <><path d="M24 13c-7-5-14-3-18-1v26c6-3 12-3 18 1 6-4 12-4 18-1V12c-4-2-11-4-18 1v26M11 18h7M11 23h7M30 20l3 3 5-6" /></> : area === "stall" ? <><path d="M8 22h32v18H8V22Zm-3 0 5-12h28l5 12M14 10l-2 12M24 10v12M34 10l2 12M13 29h12v11M30 28h6v7" /></> : area === "employment" || area === "enterprise-support" ? <><path d="M8 20h32v20H8zM18 20v-7h12v7M8 28h32M21 28v5h6v-5" /></> : area === "training-education" ? <><path d="m5 17 19-8 19 8-19 8-19-8ZM12 21v13c8 5 16 5 24 0V21M43 17v15" /></> : <><path d="M24 39S6 28 6 17C6 7 20 5 24 15c4-10 18-8 18 2 0 11-18 22-18 22Z" /><path d="M16 24h16M24 17v14" /></>}</svg>;
+}
+export default function DashboardHighlights({ lang, bundle, data, area, onArea }: Props) {
   const say = (en: string, ha: string) => lang === "ha" ? ha : en;
-  const targets = view.observations.filter((entry) => entry.stage === "target").sort((a, b) => b.value - a.value);
-  const achievements = view.observations.filter((entry) => entry.stage === "reported-delivery").sort((a, b) => b.value - a.value);
-  const categories = [
-    { id: "all" as const, label: say("All figures", "Dukkan lambobi"), count: view.observations.length },
-    { id: "targets" as const, label: say("Planned targets", "Manufofin shiri"), count: targets.length },
-    { id: "achievements" as const, label: say("Achievements", "Nasarori"), count: achievements.length },
-  ];
-  const unit = (value: string) => lang === "en" ? value : ({ people: "mutane", households: "gidaje", "job opportunities": "damar ayyukan yi" }[value] ?? value);
-  const shortTitles: Record<string, [string, string]> = {
-    "beyond-disability-coordination-2024": ["Beyond Disability", "Beyond Disability"],
-    "northeast-food-support-target-2024": ["Northeast food support", "Tallafin abinci a Arewa maso Gabas"],
-    "karu-food-cash-2024": ["Karu food & cash support", "Tallafin abinci da kuɗi a Karu"],
-    "ramadan-food-2024": ["Ramadan food support", "Tallafin abincin Ramadan"],
-    "ayubson-event-2025": ["Ayubson programme", "Shirin Ayubson"],
-    "nigwed-skills-2024": ["NigWED women’s training", "Horon mata na NigWED"],
-    "startup-support-march-2024": ["Startup support for women", "Tallafin fara sana’a ga mata"],
-    "borno-employment-2024": ["Borno employment", "Samun aikin yi a Borno"],
-    "inclusive-business-skills": ["SMEDAN enterprise training", "Horon kasuwanci na SMEDAN"],
-    "fha-stalls-2025": ["FHA stall allotments", "Rabon rumfunan FHA"],
-  };
-  const activeFilters = [
-    view.filters.year !== "all" ? view.filters.year : null,
-    view.filters.category !== "all" ? view.categoryOptions.find((entry) => entry.id === view.filters.category)?.label[lang] : null,
-    view.filters.activity !== "all" ? titleFor(view.filters.activity) : null,
-  ].filter(Boolean);
-  const yearLabel = view.filters.year === "all" ? `${view.years.at(0)}–${view.years.at(-1)}` : view.filters.year;
-  const card = (observation: DashboardObservation, index: number) => {
-    const target = observation.stage === "target";
-    const sourceIds = observation.evidence.flatMap((entry) => entry.source_ids ?? (entry.source_id ? [entry.source_id] : []));
-    const source = sourceIds.map((id) => bundle.sources.find((entry) => entry.id === id)).find(Boolean);
-    const number = observation.value.toLocaleString(lang === "ha" ? "ha-NG" : "en-NG");
-    const spoken = `${bounds[observation.bound][lang === "ha" ? 1 : 0]} ${number} ${unit(observation.unit)}`;
-    return <article className={`highlight-card ${target ? "is-plan" : "is-achievement"}${target && index === 0 ? " is-lead" : ""}`} key={observation.id} data-highlight={observation.id} data-highlight-stage={observation.stage}>
-      <div className="highlight-number-wrap">
-        {target && index === 0 && <span className="highlight-spark" aria-hidden="true">✦</span>}
-        <p className="highlight-number" role="img" aria-label={`${target ? say("Planned target", "Manufar shiri") : say("Reported figure", "Lambar rahoto")}: ${spoken}`}><span aria-hidden="true">{marks[observation.bound]}{number}</span></p>
-        <p className="highlight-unit">{unit(observation.unit)}</p>
-      </div>
-      <h3>{shortTitles[observation.activity_id]?.[lang === "ha" ? 1 : 0] ?? titleFor(observation.activity_id)}</h3>
-      <div className="highlight-card-footer">{source && <a href={source.url} target="_blank" rel="noopener noreferrer" title={source.title} aria-label={`${say("Source for", "Majiyar")} ${titleFor(observation.activity_id)} · ${say("opens a new tab", "yana buɗe sabon shafi")}`}>{say("Source", "Tushe")} <span aria-hidden="true">↗</span></a>}</div>
+  const group = data.groups.find((entry) => entry.id === area) ?? data.groups[0];
+  const figures = data.figures.filter((entry) => group.id === "all" || entry.groupIds.includes(group.id));
+  const achievements = figures.filter((entry) => entry.stage !== "target").sort((a, b) => b.value - a.value);
+  const plans = figures.filter((entry) => entry.stage === "target").sort((a, b) => b.value - a.value);
+  const unit = (value: string) => lang === "en" ? value : ({ people: "mutane", households: "gidaje", "job opportunities": "damar ayyukan yi", vehicle: "abin hawa", toolkit: "kayan jagora", vehicles: "abin hawa", toolkits: "kayan jagora" }[value] ?? value);
+  function card(figure: Presentation["figures"][number]) {
+    const sources = figure.sourceIds.flatMap((id) => { const source = bundle.sources.find((entry) => entry.id === id); return source ? [source] : []; });
+    const number = figure.value.toLocaleString(lang === "ha" ? "ha-NG" : "en-NG");
+    const milestone = figure.kind === "milestone";
+    return <article key={figure.id} className={`contribution-card${milestone ? " is-milestone" : ""}`} data-highlight={figure.id} data-highlight-stage={figure.stage}>
+      <div className="contribution-card-top"><p className="highlight-number" role="img" aria-label={`${boundWords[figure.bound][lang === "ha" ? 1 : 0]} ${number} ${unit(figure.unit)}`}><span aria-hidden="true">{marks[figure.bound]}{number}</span></p><ContributionDrawing area={milestone ? figure.unit : figure.activityId === "fha-stalls-2025" ? "stall" : figure.groupIds.find((id) => id !== "all") ?? "health-welfare"} /></div>
+      <p className="highlight-unit">{unit(figure.unit)}</p><h3>{figure.label[lang]}</h3>
+      {milestone && <p className="milestone-context">{figure.activityId === "disability-readiness-toolkit-2025" ? say("Developed by Deaf-in-Tech & DataLead Africa; unveiled through his office.", "Deaf-in-Tech da DataLead Africa ne suka samar; ofishinsa ya ƙaddamar.") : say("Vehicle demonstrated; nationwide distribution remains proposed.", "An nuna abin hawa; rabawa a faɗin ƙasa manufa ce har yanzu.")}</p>}
+      <details className="contribution-source" data-figure-source={figure.id}><summary aria-label={`${say("Source for", "Majiyar")} ${figure.label[lang]}`}>{say("Source", "Tushe")}</summary><div className="figure-source-context"><dl><dt>{say("Population / scope", "Mutane ko abin da lambar ta shafa")}</dt><dd lang="en">{figure.population}</dd><dt>{say("Reported role", "Rawar da aka ruwaito")}</dt><dd lang="en">{figure.role}</dd></dl>{figure.limitations.map((limit) => <p key={limit} lang="en">{limit}</p>)}{sources.map((source, index) => <a key={source.id} className={index === 0 ? "primary-source" : undefined} href={source.url} target="_blank" rel="noopener noreferrer">{index === 0 ? say("Read original report", "Karanta rahoton asali") : say("Supporting report", "Rahoton ƙarin hujja")} <span aria-hidden="true">↗</span></a>)}</div></details>
     </article>;
-  };
-  const groups = [
-    { id: "targets", title: say("Planned targets", "Manufofin shiri"), items: targets },
-    { id: "achievements", title: say("Achievements", "Nasarori"), items: achievements },
-  ].filter((group) => category === "all" || category === group.id);
-  return <section id="overview" className="kpi-showcase" tabIndex={-1} aria-labelledby="dashboard-title">
-    <div className="highlight-heading"><h1 id="dashboard-title">{say("Work in numbers", "Ayyuka a cikin lambobi")}</h1><p className="highlight-edition">{yearLabel}{lang === "ha" && <><br /><span>Hausa na gwaji</span></>}</p></div>
-    <div className="highlight-category-bar"><div role="group" aria-label={say("KPI categories", "Rukunonin lambobi")}>{categories.map((entry) => <button key={entry.id} type="button" aria-pressed={category === entry.id} data-highlight-category={entry.id} onClick={() => onCategory(entry.id)}>{entry.label} <span>{entry.count}</span></button>)}</div><details className="highlight-filter-disclosure"><summary>{say("Filters", "Tacewa")}{activeFilters.length > 0 && <span>{activeFilters.length}</span>}</summary>{filterControls}</details></div>
-    {activeFilters.length > 0 && <div className="highlight-active-filters" aria-label={say("Current filters", "Tacewar yanzu")}><p>{activeFilters.join(" / ")}</p><button type="button" onClick={() => onFilter({ year: "all", category: "all", activity: "all" })}>{say("Clear", "Share")}</button></div>}
-    <p className="sr-only" role="status">{say(`${groups.reduce((count, group) => count + group.items.length, 0)} figures shown`, `An nuna lambobi ${groups.reduce((count, group) => count + group.items.length, 0)}`)}</p>
-    {groups.map((group, groupIndex) => <section className={`highlight-group is-${group.id}`} key={group.id} aria-labelledby={`highlight-${group.id}-title`}>
-      <div className="highlight-group-heading"><h2 id={`highlight-${group.id}-title`}>{group.title}</h2></div>
-      <div className={`highlight-grid${groupIndex === 0 ? " has-portrait" : ""}`}>
-        {groupIndex === 0 && <figure className="highlight-portrait">
-          <Image src="/branding/mohammed-abba-isa.webp" width={540} height={600} alt={say("Mohammed Abba Isa, wearing a blue kaftan and cap, beside the Nigerian flag", "Mohammed Abba Isa sanye da babbar riga shuɗiya da hula, kusa da tutar Najeriya")} preload />
-          <figcaption><p className="highlight-portrait-name">Mohammed Abba Isa</p>
-            <blockquote lang="en"><p>“Our strength lies not in the absence of challenges, but in our resilience to overcome them.”</p></blockquote>
-            <a href="https://ossaposneo.org/" target="_blank" rel="noopener noreferrer">{say("Portrait & quote source", "Tushen hoto da zance")} <span aria-hidden="true">↗</span></a>
-          </figcaption>
-        </figure>}
-        {group.items.length ? group.items.map(card) : <p className="highlight-empty">{say("No figures for this selection. Try another filter.", "Babu lambobi ga wannan zaɓi. Gwada wata tacewa.")}</p>}
+  }
+  return <section id="overview" className="contribution-section" tabIndex={-1} aria-labelledby="contributions-heading">
+    <div className="section-heading"><div><p className="dashboard-eyebrow">01 / {say("CONTRIBUTIONS IN FIGURES", "GUDUMMAWA A CIKIN LAMBOBI")}</p><h2 id="contributions-heading">{say("Inclusion takes many forms.", "Shigar kowa tana da hanyoyi da yawa.")}</h2></div></div>
+    <div className="contribution-layout"><nav className="contribution-categories" aria-label={say("Contribution categories", "Rukunonin gudummawa")}>{data.groups.map((entry) => <button key={entry.id} type="button" data-area={entry.id} aria-pressed={group.id === entry.id} onClick={() => onArea(entry.id)}>{entry.label[lang]}<span aria-hidden="true">↗</span></button>)}</nav>
+      <div className="contribution-results" aria-live="polite" aria-atomic="false"><h3 className="active-area-heading">{group.label[lang]}</h3><p className="sr-only" role="status">{say(`${figures.length} sourced figures shown`, `An nuna lambobi ${figures.length} masu tushe`)}</p>
+        {achievements.length > 0 && <section aria-labelledby="reported-heading"><h4 id="reported-heading" className="figure-group-title">{say("Reported achievements", "Nasarorin da aka ruwaito")}</h4><div className="contribution-grid">{achievements.map(card)}</div></section>}
+        {plans.length > 0 && <section className="planned-support" aria-labelledby="planned-heading"><h4 id="planned-heading" className="figure-group-title">{say("Planned support", "Tallafin da aka tsara")}</h4><div className="contribution-grid">{plans.map(card)}</div></section>}
+        {!figures.length && <p className="dashboard-empty">{say("No numerical figures are recorded for this selection.", "Ba a rubuta lambobi ga wannan zaɓi ba.")}</p>}
       </div>
-    </section>)}
+    </div>
   </section>;
 }

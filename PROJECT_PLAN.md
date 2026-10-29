@@ -1,5 +1,44 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Owner feedback and checkpoint — 29 October 2026
+
+Owner says the new dashboard looks good overall and requests commit/push before
+making a few changes. Specific revisions remain to be supplied. Save this as the
+dashboard baseline; the documented chatbot upgrades follow dashboard refinement.
+The source checkpoint does not authorise public website deployment or clear gates.
+
+## Dashboard implementation — 29 October 2026
+
+Owner authorised building the documented dashboard and showing a local preview
+first. Category KPIs, speaking-photo/concept cloud and actor–initiative network
+are implemented with the existing guided chat below. Read
+[the build record](docs/DASHBOARD_BUILD_2026-10-29.md) and
+[validation evidence](docs/VALIDATION.md) for actual checks and limitations.
+This supersedes the documentation-only/pending dashboard status below.
+
+The frozen dataset remains unchanged; a separate sourced presentation supplement
+adds vehicle/toolkit milestones and explicit grouping/role/count metadata. All
+13 cards keep bounds, units, stages and on-demand source context. Seven concepts
+count distinct canonical reports; nine relationships drive the network. Legacy
+year filtering is neutralised. Public/Hausa/photo gates remain unresolved.
+Next: owner dashboard review, then the documented chatbot improvement waves.
+No external model, voice, service worker, new dependency or public release.
+
+## Network direction and chatbot research — 29 October 2026
+
+Owner accepted recording a clickable collaboration network connecting actors to
+specific initiatives, with sourced roles and separate relationship statuses.
+See [the network design](docs/COLLABORATION_NETWORK_DESIGN.md). This supersedes the
+previously undecided network-versus-bars direction; implementation is pending.
+
+Owner also requested new free-tier chatbot research. See
+[the research and proposed waves](docs/CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md):
+improve local guided follow-ups, concise verified answers, short optional journeys,
+dashboard/network actions and offline continuity; evaluate optional typed model
+assistance and voice later. These are recommendations for discussion, not approved
+feature implementation, measured model quality or a change to the clickable
+default. No application, frozen-data, dependency, approval or deployment change.
+
 ## Current presentation decision — 28 October 2026
 
 See [the dashboard presentation brief](docs/DASHBOARD_PRESENTATION_BRIEF.md) for

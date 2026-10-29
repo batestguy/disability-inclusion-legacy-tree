@@ -1,5 +1,15 @@
 # Next dashboard iteration — owner direction, 27 October 2026
 
+## Implementation continuation — 29 October 2026
+
+Owner authorised building the latest documented dashboard before chatbot upgrades.
+The category figures, speaking-photo/concept cloud, actor–initiative collaboration
+network and preserved embedded guided chat are now implemented locally. See
+[the current build record](DASHBOARD_BUILD_2026-10-29.md),
+[presentation brief](DASHBOARD_PRESENTATION_BRIEF.md) and [validation](VALIDATION.md).
+This supersedes conflicting pending/year-chart/evidence-explorer directions below.
+No public release, approval flag, frozen-data or new dependency change.
+
 ## Latest direction — 28 October 2026; supersedes presentation order below
 
 Read [DASHBOARD_PRESENTATION_BRIEF.md](DASHBOARD_PRESENTATION_BRIEF.md) first.
