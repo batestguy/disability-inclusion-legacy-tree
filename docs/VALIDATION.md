@@ -1,5 +1,20 @@
 # Validation evidence - 22 October 2026
 
+## Final session handoff documentation — 29 October 2026
+
+Application checkpoint `0adb3df8854656bbc6c083a3771d467a15a18467` was verified on
+origin/main, matching local HEAD with a clean working tree before this update.
+[Verify legacy archive CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/40821286268)
+completed successfully. This includes the JavaScript/build verification and Python
+research-safety jobs; the local application checks below remain valid evidence.
+
+Owner requested a documented handoff and another commit/push. Updated HANDOFF.md
+with the saved baseline, implemented features, preview/rebuild instructions,
+validation evidence, next work and remaining release gates. Updated PROJECT_PLAN.md.
+These edits are Markdown only; fresh preflight passed. Local Markdown links and
+staged whitespace are checked before committing. Application/browser suites were
+not rerun for these documentation-only edits. No deployment or approval change.
+
 ## Coloured, frequency-sized cloud and source checkpoint — 29 October 2026
 
 Owner requested a more colourful cloud with clearer size differences, then commit

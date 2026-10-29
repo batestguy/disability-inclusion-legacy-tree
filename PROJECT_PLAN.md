@@ -1,5 +1,15 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Saved baseline and continuation — 29 October 2026
+
+Dashboard refinements are committed/pushed as `0adb3df` on main, with successful
+[GitHub CI](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/40821286268).
+This supersedes older pending-save descriptions below. The dashboard now includes
+the chosen palette, topic illustrations, compact layout and coloured frequency-sized
+cloud. See [the current handoff](HANDOFF.md) for entrypoints, checks and limits.
+Next: further owner dashboard feedback, then local guided-chat improvement waves.
+Typed AI, voice and offline caching remain proposals. Public-release gates persist.
+
 ## Word-cloud emphasis and checkpoint — 29 October 2026
 
 Owner requested coordinated cloud colours and a clearer frequency-size hierarchy,

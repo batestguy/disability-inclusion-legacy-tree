@@ -1,5 +1,60 @@
 # Project handoff
 
+## Session handoff — saved dashboard, 29 October 2026
+
+**Application baseline:** `0adb3df8854656bbc6c083a3771d467a15a18467`, committed and
+pushed to main at batestguy/disability-inclusion-legacy-tree. Remote main matched
+the local commit and the working tree was clean before this handoff-only update.
+[GitHub verification passed](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/40821286268).
+Older statements below describing palette/density work as uncommitted are history.
+
+### What is built
+
+- English/Hausa category dashboard with 13 source-linked figures, reported
+  achievements before conditional plans, and preserved bounds/units/roles.
+- Green/blue/gold palette and original programme-specific SVG illustrations.
+- Compact wide-screen grid: eight complete cards at 1440×1050, versus six before;
+  contribution section height reduced from 1492.95px to 1027.09px. Responsive
+  4/3/2/1-column layouts retain readable text and source controls.
+- Genuine speaking photograph beside a coloured cloud. Cloud sizes reflect actual
+  report/activity frequencies, with equal counts equally sized and a stronger
+  desktop/phone hierarchy. Exact counts, source results and accessible list remain.
+- Nine sourced actor–initiative collaboration records; shared-report mentions are
+  excluded. Keyboard/list/phone views and explicit guided-chat handoffs work.
+- Existing compact guided chatbot and one shared visible vertical language control.
+
+### Resume and verify
+
+Read this checkpoint, [the presentation brief](docs/DASHBOARD_PRESENTATION_BRIEF.md),
+[chatbot contract](docs/CHATBOT_SPEC.md) and [design system](.interface-design/system.md).
+Use `npm.cmd run preview` to serve the existing build at http://127.0.0.1:8767/
+and /ha/. If build output is absent, run `npm.cmd run build` first. Do not assume
+the current local server survives a later session.
+
+Last application checks passed: preflight, lint, typecheck, all 68 unit tests,
+web/Studio builds and dashboard browser regression (six groups/five zero-violation
+axe states, zero errors/failures/external requests). Source checkpoint CI passed
+both verification jobs. [VALIDATION.md](docs/VALIDATION.md) records scope, geometry,
+contrast and screenshot evidence. No application change was made for this handoff;
+fresh preflight passed. The normal sandbox terminal previously failed at setup
+refresh; approved command-scoped fallback was used, with no ACL repair or persistent
+Git configuration change. Read-only Git commands used command-scoped safe.directory.
+
+### Next work and limits
+
+Owner likes the overall dashboard and has been refining its appearance. Address
+any further owner dashboard feedback, then continue the documented
+[chatbot improvement waves](docs/CHATBOT_IMPROVEMENT_RESEARCH_2026-10-29.md): local
+contextual follow-ups, concise verified answers, optional short journeys, citation
+briefs and explicit dashboard/network actions. Typed AI, provider benchmarking,
+voice and full offline reload/cache readiness remain unimplemented proposals.
+
+Frozen v1 remains byte unchanged; presentation metadata is a separate supplement.
+Hausa remains draft. Photograph public-reuse permission, source/public approval
+and reveal gates remain unresolved/false. No website deployment, external model
+integration, billing change or new production dependency. Commit/push requests
+save source checkpoints; they do not clear public-release gates.
+
 ## Colourful word cloud and save request — 29 October 2026
 
 Owner requested a coloured cloud with more obvious size differences, then commit
