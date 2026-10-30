@@ -17,6 +17,8 @@ const flowHash = (path: string[]) => path.length > 1 ? `#flow=${encodeURICompone
 export default function GuidedWorkspace({ lang, bundle, manifest, embedded = false }: Props) {
   const { session, setSession } = useGuidedSession();
   const [downloadError, setDownloadError] = useState<string | null>(null);
+  const [pending, setPending] = useState<{ label: string; origin: string } | null>(null);
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const answerPanel = useRef<HTMLElement>(null);
   const path = useMemo(() => session.path.slice(0, session.cursor + 1), [session.path, session.cursor]);
   const say = (en: string, ha: string) => t(lang, en, ha);
@@ -24,6 +26,14 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     try { return getFlowNode(bundle, path.at(-1)); } catch { return null; }
   }, [bundle, path]);
   const concise = node ? getConciseAnswer(node) : null;
+  const transitionKey = `${lang}:${path.join("|")}:${session.view}`;
+  const preparing = pending?.origin === transitionKey;
+  const previousNode = path.length > 1 ? getFlowNode(bundle, path.at(-2)) : null;
+  const questionLabel = preparing ? pending.label : previousNode?.options.find((option) => option.target === node?.id)?.label[lang];
+  useEffect(() => () => {
+    if (transitionTimer.current !== null) clearTimeout(transitionTimer.current);
+    transitionTimer.current = null;
+  }, [transitionKey]);
   const choices = paginate(node?.options.filter((option) => option.target !== "start") ?? [], session.optionPage);
   const sourceChoices = paginate(node?.sourceIds ?? [], session.sourcePage);
   const source = bundle.sources.find((entry) => entry.id === session.sourceId);
@@ -94,6 +104,9 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
 
   function focusAnswer() { requestAnimationFrame(() => answerPanel.current?.focus({ preventScroll: true })); }
   function navigate(nextPath: string[], retrace = false) {
+    if (transitionTimer.current !== null) clearTimeout(transitionTimer.current);
+    transitionTimer.current = null;
+    setPending(null);
     setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, photoCursor: session.photoCursor, ...initialGuidedScreen,
       view: nextPath.at(-1)?.startsWith("evidence:") ? "sources" : "answer" });
     setDownloadError(null);
@@ -101,8 +114,12 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     focusAnswer();
   }
   function choose(target: string) {
+    if (transitionTimer.current !== null) return;
     const previous = path.indexOf(target);
-    navigate(target === "start" ? ["start"] : previous >= 0 ? path.slice(0, previous + 1) : [...path, target]);
+    const nextPath = target === "start" ? ["start"] : previous >= 0 ? path.slice(0, previous + 1) : [...path, target];
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { navigate(nextPath); return; }
+    setPending({ label: node?.options.find((option) => option.target === target)?.label[lang] ?? "", origin: transitionKey });
+    transitionTimer.current = setTimeout(() => navigate(nextPath), 250);
   }
   function show(view: "answer" | "sources" | "source" | "details", sourceId: string | null = null) {
     setSession((previous) => ({ ...previous, view, sourceId, detailPage: 0 }));
@@ -148,12 +165,15 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     </header>}
     <Main className="guided-main">
       <section className="guided-conversation" aria-label={say("Guided conversation", "Tattaunawa mai jagora")}>
-        {(path.length > 1 || session.view !== "answer" || session.cursor < session.path.length - 1) && <nav className="guided-toolbar" aria-label={say("Conversation navigation", "Kewayawa a tattaunawa")}>
+        <div className="guided-frame-header"><span className="guided-guide-mark" aria-hidden="true">↗</span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{say("Questions, stories and sources", "Tambayoyi, labarai da tushe")}</span></div></div>
+        {(preparing || path.length > 1 || session.view !== "answer" || session.cursor < session.path.length - 1) && <nav className="guided-toolbar" aria-label={say("Conversation navigation", "Kewayawa a tattaunawa")}>
           {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={back}>← {say("Back", "Koma baya")}</button>}
           {session.view === "answer" && session.cursor < session.path.length - 1 && <button type="button" onClick={() => navigate(session.path.slice(0, session.cursor + 2), true)}>{say("Next", "Gaba")} →</button>}
-          {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={() => navigate(["start"])}>{say("Start again", "Fara sabo")}</button>}
+          {(preparing || path.length > 1 || session.view !== "answer") && <button type="button" onClick={() => navigate(["start"])}>{say("Start again", "Fara sabo")}</button>}
         </nav>}
-        <section id="guided-answer" ref={answerPanel} tabIndex={-1} className="guided-answer" data-node={node?.id} data-view={session.view} aria-labelledby="guided-question">
+        {questionLabel && <p className="guided-visitor-bubble">{questionLabel}</p>}
+        {preparing && <div className="guided-thinking" role="status"><span className="sr-only">{say("Preparing answer", "Ana shirya amsa")}</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span></div>}
+        <section id="guided-answer" hidden={preparing} ref={answerPanel} tabIndex={-1} className="guided-answer" data-node={node?.id} data-view={session.view} aria-labelledby="guided-question">
           <Heading id="guided-question">{heading ?? say("Records unavailable", "Bayanai ba su samuwa")}</Heading>
           {!node || !concise ? <button type="button" onClick={() => window.location.reload()}>{say("Reload", "Sake buɗewa")}</button> : session.view === "answer" ? <>
             {summaryParts.length > 0 && <p className="guided-summary">{summaryParts[summaryIndex]}</p>}
@@ -198,10 +218,10 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
         }} />{say("Photo cursor", "Siginan hoto")}</label>
       </div>
     </Main>
-    <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{heading}. {session.view === "answer"
+    <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{!preparing && <>{heading}. {session.view === "answer"
       ? `${summaryParts[summaryIndex] ?? ""} ${choices.page + 1}/${choices.pageCount}`
       : session.view === "sources" ? `${sourceChoices.page + 1}/${sourceChoices.pageCount}`
       : currentDetail ? <><span>{detailIndex + 1}/{details.length}. {currentDetail.label}. </span><span lang={currentDetail.lang}>{currentDetail.text}</span></>
-      : <span lang="en">{source?.title}</span>}</div>
+      : <span lang="en">{source?.title}</span>}</>}</div>
   </div>;
 }

@@ -213,6 +213,14 @@ function observationClaim(o, evidence = o.evidence, population = o.population) {
   };
 }
 
+/** Reuse the existing draft bilingual activity copy in other presentation views. */
+export function getActivityPresentation(activity) {
+  const title = activityTitle(activity);
+  const description = activity.description ?? draftActivitySummaries[activity.id];
+  if (!isBi(title) || !isBi(description)) fail();
+  return structuredClone({ title, description });
+}
+
 /** Throws TypeError for malformed data and RangeError for an unknown node. */
 export function getFlowNode(bundle, nodeId = "start") {
   const maps = validateBundle(bundle);

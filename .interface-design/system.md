@@ -1,5 +1,57 @@
 # Inclusion scorecard
 
+## Activity catalogue disclosure — 30 October 2026
+
+Network activity cards are collapsed by default behind View all 33 activities
+(filtered selections display their current count). Native details/summary keeps
+keyboard and expanded semantics. Selected initiative evidence appears immediately
+below the graph, above the catalogue. Graph selection scrolls/focuses its detail
+heading; the direct branch opens the filtered browser and focuses its heading.
+Participant selection/clear remains outside the disclosure.
+
+## Owner-approved three-column network — 30 October 2026
+
+Supersedes the central area network. Isa portrait sits far left (1–19% map width),
+participant nodes in the middle (35–61%), initiative nodes on the right (73.5–99.5%).
+Stable source-bound SVG curves, six participant colours, original person/building
+symbols and established local logo/portrait assets. Complete selected paths stay
+bright; unrelated lines dim while text keeps readable contrast. Participant-to-
+initiative status uses solid collaboration, dashed intention and dotted MOU lines.
+Isa-to-participant paths identify documented involvement of him or his office.
+Twelve participants, nine linked initiatives; 24 further activities use the direct
+branch, with no invented intermediary participant. Full 33-record browser remains.
+Phone/list view groups people and organisations with their actual initiatives.
+Desktop row spacing is 88px-equivalent rem height, native button nodes, keyboard
+focus and source/guide controls. No new assets, dependency or release flag changes.
+
+## White canvas and central activity network — 30 October 2026
+
+Owner-authorised revision supersedes earlier opening/cloud/network styling.
+White #fff canvas; formal portrait 260×289px desktop / 220×244px phone, right of
+opening text on desktop, above the dashboard on phones. Quote is the existing
+sourced English excerpt, explicitly English on both locales. No opening slogan.
+Roman section labels; singular Contribution in figures. Inclusion heading uses
+an ink/green split and a short 4px green rule. Figure-card density unchanged.
+
+Cloud palette: green #156146, blue #245dc1, purple #7943b5, teal #08757b,
+orange #ac4915, magenta #ac286e. Hue is decorative; size/subscript count actual
+canonical reports or classified activities, not raw word occurrences. Tooltips
+work on hover/focus; click/tap opens sources and scrolls/focuses their heading
+with measured sticky-header clearance. Reduced motion uses immediate scrolling.
+
+Stable six-branch SVG network holds Isa centrally with genuine portrait; five
+existing figure areas plus More activities cover all 33 records. Groups overlap;
+no combined impact total. Activity lists page six records; participant connections
+require the nine reviewed relationships. Inactive connections lose colour intensity
+without reducing text contrast. Phone/list view preserves central identity and
+all activity/source actions. JAC and Ali Pate assets have credits/reuse metadata;
+others use original initials. No unrecorded organisation logo or portrait.
+
+Guided conversation: 20px outer frame, 16px message curves, question bubble on
+right, assistant answer/options on left. Three dots for 250ms before local answers;
+no delay under reduced motion. No internal scroller, inference service or new
+production dependency. Shared visible vertical language control stays unchanged.
+
 ## Word-cloud hierarchy — 29 October 2026
 
 Owner requested stronger colour and size differences. Cycle green/blue/gold for

@@ -7,6 +7,7 @@ import GuidedWorkspace from "./GuidedWorkspace";
 import DashboardHighlights from "./DashboardHighlights";
 import DashboardAdvocacy from "./DashboardAdvocacy";
 import DashboardNetwork from "./DashboardNetwork";
+import portrait from "../../../content/dashboard-portrait.json";
 import { initialPresentation, useDashboardSession, type PresentationSelection } from "./DashboardSession";
 import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
 import { buildDashboardPresentation } from "../lib/dashboard-presentation.mjs";
@@ -49,14 +50,16 @@ export default function DashboardWorkspace({ lang, bundle, manifest }: Props) {
       const cloudIds = cloudMode === "concepts" ? data!.concepts.map((entry) => entry.id) : bundle.categories.map((entry) => entry.id);
       const initiative = params.get("initiative");
       const actor = params.get("actor");
-      const networkArea = area(params.get("partners"));
-      const visibleInitiatives = data!.collaborations.filter((entry) => networkArea === "all" || entry.groupIds.includes(networkArea));
+      const networkArea = data!.networkGroups.some((group) => group.id === params.get("partners")) ? params.get("partners")! : "all";
+      const visibleActivities = data!.networkActivities.filter((entry) => networkArea === "all" || entry.groupIds.includes(networkArea));
+      const visibleInitiatives = data!.collaborations.filter((entry) => visibleActivities.some((activity) => activity.id === entry.activityId));
       const selectedInitiative = visibleInitiatives.find((entry) => entry.id === initiative);
-      const validActor = visibleInitiatives.some((entry) => entry.participants.some((person) => person.id === actor)) && (!selectedInitiative || selectedInitiative.participants.some((person) => person.id === actor));
+      const selectedActivity = visibleActivities.find((entry) => entry.id === initiative || entry.id === selectedInitiative?.activityId);
+      const validActor = visibleInitiatives.some((entry) => entry.participants.some((person) => person.id === actor) && (!selectedActivity || entry.activityId === selectedActivity.id));
       const next: PresentationSelection = {
         ...initialPresentation, area: area(params.get("area")), cloudMode,
         cloudId: term && cloudIds.includes(term) ? term : null,
-        initiative: selectedInitiative?.id ?? null,
+        initiative: selectedInitiative?.id ?? selectedActivity?.id ?? null,
         networkArea,
         actor: validActor ? actor : null,
       };
@@ -105,13 +108,13 @@ export default function DashboardWorkspace({ lang, bundle, manifest }: Props) {
     </div></header>
     <main id="dashboard-main" className="dashboard-main" tabIndex={-1}>
       <section className="dashboard-opening" aria-labelledby="dashboard-title">
-        <div><p className="dashboard-eyebrow">{say("OPPORTUNITY. ACCESS. PARTICIPATION.", "DAMA. SAUƘIN AMFANI. SHIGA.")}</p><h1 id="dashboard-title">{say("Advancing Disability Inclusion", "Ci Gaban Shigar Masu Nakasa")}</h1><p className="dashboard-subtitle">{say("Mohammed Abba Isa’s contributions in figures", "Gudummawar Mohammed Abba Isa a cikin lambobi")}</p><p className="dashboard-opening-note">{say("Explore the programmes, ideas and people behind the work.", "Bincika shirye-shirye, ra’ayoyi da mutanen da ke bayan ayyukan.")}</p>{lang === "ha" && <p className="dashboard-draft">Hausa na gwaji</p>}</div>
-        <figure className="opening-portrait"><Image src="/branding/mohammed-abba-isa.webp" width={540} height={600} sizes="(max-width: 600px) 88px, 120px" alt={say("Mohammed Abba Isa beside the Nigerian flag", "Mohammed Abba Isa kusa da tutar Najeriya")} preload /><figcaption><span>Mohammed Abba Isa</span><a href="https://ossaposneo.org/" target="_blank" rel="noopener noreferrer">{say("Portrait source", "Tushen hoto")} <span aria-hidden="true">↗</span></a></figcaption></figure>
+        <div><h1 id="dashboard-title">{say("Advancing Disability Inclusion", "Ci Gaban Shigar Masu Nakasa")}</h1><p className="dashboard-subtitle">{say("Mohammed Abba Isa’s contributions in figures", "Gudummawar Mohammed Abba Isa a cikin lambobi")}</p>{lang === "ha" && <p className="dashboard-draft">Hausa na gwaji</p>}</div>
+        <figure className="opening-portrait"><Image src="/branding/mohammed-abba-isa.webp" width={540} height={600} sizes="(max-width: 700px) 220px, 260px" alt={say("Mohammed Abba Isa beside the Nigerian flag", "Mohammed Abba Isa kusa da tutar Najeriya")} preload /><figcaption><blockquote lang="en">“{portrait.quote_excerpt}”</blockquote><span>— Mohammed Abba Isa</span><a href={portrait.source_page} target="_blank" rel="noopener noreferrer">{say("Quote & portrait source", "Tushen magana da hoto")} <span aria-hidden="true">↗</span></a></figcaption></figure>
       </section>
       <DashboardHighlights lang={lang} bundle={bundle} data={data} area={selection.area} onArea={(area) => updateSelection({ area })} />
       <DashboardAdvocacy lang={lang} bundle={bundle} data={data} mode={selection.cloudMode} selectedId={selection.cloudId} onSelect={(cloudId) => updateSelection({ cloudId })} onMode={(cloudMode) => updateSelection({ cloudMode, cloudId: null })} onAsk={askAbout} />
       <DashboardNetwork lang={lang} bundle={bundle} data={data} area={selection.networkArea} selectedId={selection.initiative} actorId={selection.actor} onSelect={(initiative) => updateSelection({ initiative, actor: null })} onArea={(networkArea) => updateSelection({ networkArea, initiative: null, actor: null })} onActor={(actor) => updateSelection({ actor, initiative: null })} onAsk={askAbout} />
-      <section id="ask-records" className="dashboard-section dashboard-chat-section" ref={chatSection} tabIndex={-1} aria-labelledby="dashboard-chat-title"><div className="section-heading"><div><p className="dashboard-eyebrow">04 / {say("FOLLOW YOUR CURIOSITY", "BI ABIN DA KAKE SON SANI")}</p><h2 id="dashboard-chat-title">{say("A question opens a new perspective.", "Tambaya tana buɗe sabuwar fahimta.")}</h2></div><p>{say("Choose a question. Follow the story. Find the source.", "Zaɓi tambaya. Bi labarin. Nemo tushe.")}</p></div><GuidedWorkspace lang={lang} bundle={bundle} manifest={manifest} embedded /></section>
+      <section id="ask-records" className="dashboard-section dashboard-chat-section" ref={chatSection} tabIndex={-1} aria-labelledby="dashboard-chat-title"><div className="section-heading"><div><p className="dashboard-eyebrow">IV. {say("FOLLOW YOUR CURIOSITY", "BI ABIN DA KAKE SON SANI")}</p><h2 id="dashboard-chat-title">{say("A question opens a new perspective.", "Tambaya tana buɗe sabuwar fahimta.")}</h2></div><p>{say("Choose a question. Follow the story. Find the source.", "Zaɓi tambaya. Bi labarin. Nemo tushe.")}</p></div><GuidedWorkspace lang={lang} bundle={bundle} manifest={manifest} embedded /></section>
       <footer className="dashboard-footer"><div><strong>MOHAMMED ABBA ISA</strong><p>{say("Access to opportunity. A place for everyone.", "Samun dama. Wuri ga kowa.")}</p></div><div><p>{say("Local preview · Hausa draft", "Samfurin gida · Hausa na gwaji")}</p><details><summary>{say("About these records", "Game da bayanan nan")}</summary><p>{say("A selected record, not a complete career account. Programme figures may overlap and must not be added into a unique-person total. Reports describe contributions and intentions; they do not establish causal impact. Photo reuse permission and public release remain pending.", "Zaɓaɓɓun bayanai ne, ba cikakken tarihin aiki ba. Mutanen shirye-shirye na iya maimaituwa; ba za a haɗa su a matsayin jimillar mutane mabambanta ba. Rahotanni suna bayyana gudummawa da manufofi, ba tasirin sanadi ba. Izinin amfani da hotuna da fitowar shafin ga jama’a suna jiran kammalawa.")}</p></details></div></footer>
     </main>
   </div>;

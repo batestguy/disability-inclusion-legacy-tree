@@ -1,5 +1,93 @@
 # Validation evidence - 22 October 2026
 
+## Collapsed activity browser — 30 October 2026
+
+Default network view now hides the repeated activity cards behind a native
+disclosure. Selecting graph initiatives focuses their source/role details directly
+below the graph; the direct branch opens the 24-record browser. Explicit browsing
+retains all 33 records and pagination.
+
+Passed: preflight, lint, typecheck, 69 tests, full web/Studio build, dashboard browser
+regression (eight groups, seven zero-violation axe states). Added browser assertions
+verify default collapse and hidden cards, graph selection without opening the
+catalogue, focused detail heading, explicit browser access and automatic direct-
+branch expansion/focus. Zero page errors, failed responses or external requests.
+No source, image, dependency, approval flag or deployment changes. Previous work
+is preserved. Evidence: output/dashboard-browser-results.json.
+
+## Three-column relationship network — 30 October 2026
+
+Owner preferred the former participant/initiative arrangement and approved the
+terminal mock-up. Latest layout: Isa at far left, 12 people/organisations in the
+middle, nine documented initiatives at right. Bright participant colours follow
+each complete path; status retains solid/dashed/dotted edges. Selecting a node
+highlights its source-bound connections. Person/building symbols accompany the
+existing JAC logo, Ali Pate portrait and fallback initials. Phone/list mode groups
+participants with their actual initiatives. A direct branch exposes the other
+24 records; the full 33-activity browser, sources and guided-chat actions remain.
+This supersedes the centre/area-branch presentation below.
+
+Final checks pass: preflight, lint, typecheck, 69 unit tests, full web/Studio build
+and dashboard browser regression (seven check groups/seven zero-violation axe
+states; zero page errors, failed responses or external requests). New browser
+assertions verify left/middle/right geometry, every participant-to-initiative
+edge against the nine source records, highlighted complete paths and the 24-record
+direct branch. Desktop graph and phone list visually inspected. See
+output/playwright/dashboard-three-column-network.png and
+output/playwright/dashboard-three-column-list-phone.png.
+
+Existing source/locale/rights gates remain unchanged. Earlier uncommitted work is
+preserved; no commit, push or deployment requested. Local preview remains port 8767.
+
+## Brighter dashboard and central network — 30 October 2026
+
+Owner-approved revision implemented locally, without commit, push or public
+website deployment. Full record: [DASHBOARD_REVISION_2026-10-30.md](DASHBOARD_REVISION_2026-10-30.md).
+
+Passed on final source/build:
+
+- npm.cmd run preflight: expected local-preview gate status.
+- npm.cmd run lint and npm.cmd run typecheck: both workspaces pass.
+- npm.cmd test: 69/69 tests pass. New network test reconciles all 33 activity IDs,
+  bilingual summaries, source IDs, roles and documented collaboration memberships;
+  removing article co-occurrences cannot change the network. Frozen v1 hashes pass.
+- npm.cmd run build: web static export and standalone Sanity Studio pass.
+- npm.cmd run test:dashboard-browser: seven groups pass; seven axe states have
+  zero violations. Checks include all 13 figure cards, source bounds, category
+  filtering, distinct cloud colours/sizes/counts, source pagination and focused
+  heading placement, all 33 network activities, nine sourced relationship records,
+  selected toolkit graph, legacy and conflicting deep links, shared locale/chat
+  state, mobile/list equivalents, 320px/200% text and forced colours.
+- Timed chat checks confirm question bubble and dots before answer, duplicate-click
+  suppression, cancellation on browser Back/restart/locale navigation and no delay
+  under reduced motion. Local image bytes match their provenance manifest.
+- npm.cmd run test:chat-browser: eight groups/five zero-violation axe states pass,
+  including all eleven numerical choices, qualifications, source readers/downloads,
+  history, language state, loaded-choice offline use, ordinary phone steps within
+  the viewport, enlarged text and native cursor fallback.
+- Both browser suites report zero page errors, failed responses or runtime external
+  requests. Evidence: output/dashboard-browser-results.json and
+  output/guided-browser-results.json; updated screenshots under output/playwright/.
+- Additional visual/failure check: 390px opening portrait visible at 220px wide;
+  deliberately invalid Pate image falls back to MA initials/full name. Screenshot:
+  output/playwright/dashboard-revision-portrait-phone.png. Desktop opening,
+  network, chat and phone layouts visually inspected.
+- git diff --check passes. No edits under content/dashboard/v1.
+
+The first selected-graph audit caught low text contrast from opacity-based dimming;
+corrected using muted borders/lines without lowering text opacity, then rechecked
+in the final production build. Missing optional activity descriptions were resolved
+by sharing the existing guided catalogue's bilingual copy.
+
+The larger owner-requested opening portrait increases hero height; the previous
+8-complete-cards-in-the-initial-viewport result is superseded by this direction.
+Card/grid density itself is retained. Existing Isa photograph reuse/public reveal
+and Hausa review gates remain unresolved; no approval flag changed. Only two new
+node images have established reuse terms; others use labelled initials. New image
+credits/licences/downloads are accessible in the network method disclosure. No
+new provider, dependency, full offline reload claim, fresh performance measurement,
+human Hausa approval or fresh CI result is asserted.
+
 ## Final session handoff documentation — 29 October 2026
 
 Application checkpoint `0adb3df8854656bbc6c083a3771d467a15a18467` was verified on

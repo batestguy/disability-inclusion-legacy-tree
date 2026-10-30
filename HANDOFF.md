@@ -1,5 +1,96 @@
 # Project handoff
 
+## Owner save checkpoint — 30 October 2026
+
+Owner requested committing and pushing the completed local revision, then awaiting
+further instructions. Save the white dashboard/portrait/quote changes, counted
+cloud and source focus, three-column relationship network, optional activity
+browser, chat frame/response transition, sourced image metadata and validation
+artifacts together on main at batestguy/disability-inclusion-legacy-tree.
+
+Latest validation: lint, typecheck, 69 unit tests, full web/Studio build and eight
+dashboard browser check groups/seven zero-violation axe states pass. Fresh save-time
+preflight and diff whitespace checks pass. Standalone chat's earlier regression
+also passes; no chat implementation changed after that run. No deployment or
+release approval is part of this source checkpoint. Hausa and portrait/public
+reveal gates remain unresolved. Next action: await the owner's next direction.
+
+## Activity browser on demand — 30 October 2026
+
+Owner approved removing the always-visible activity-card block from the default
+network view. It now sits in a native disclosure, labelled View all 33 activities
+in the full selection (filtered selections show their current count). Graph
+initiative selections show their source/role detail panel immediately below the
+graph and focus its heading. The direct branch opens the disclosure with the
+24 other records and focuses the browser heading. Participant selection/clear
+controls remain visible outside the disclosure. All records and source/guide
+links are retained. Earlier uncommitted work and release gates are preserved.
+
+Validation passed: preflight, lint, typecheck, all 69 unit tests, full web/Studio
+build, and eight dashboard browser check groups with seven zero-violation axe
+states. Browser checks confirm default collapse, direct source focus, all 33
+records on demand and the 24-record direct branch. Zero page errors, failed
+responses or external requests. No commit, push or deployment requested.
+Preview remains http://127.0.0.1:8767/#collaborations.
+
+## Three-column relationship network — 30 October 2026
+
+Owner preferred the former participant/initiative arrangement and approved the
+terminal mock-up. Latest layout: Isa at far left, 12 people/organisations in the
+middle, nine documented initiatives at right. Bright participant colours follow
+each complete path; status retains solid/dashed/dotted edges. Selecting a node
+highlights its source-bound connections. Person/building symbols accompany the
+existing JAC logo, Ali Pate portrait and fallback initials. Phone/list mode groups
+participants with their actual initiatives. A direct branch exposes the other
+24 records; the full 33-activity browser, sources and guided-chat actions remain.
+This supersedes the centre/area-branch presentation below.
+
+Final checks pass: preflight, lint, typecheck, 69 unit tests, full web/Studio build
+and dashboard browser regression (seven check groups/seven zero-violation axe
+states; zero page errors, failed responses or external requests). New browser
+assertions verify left/middle/right geometry, every participant-to-initiative
+edge against the nine source records, highlighted complete paths and the 24-record
+direct branch. Desktop graph and phone list visually inspected. See
+output/playwright/dashboard-three-column-network.png and
+output/playwright/dashboard-three-column-list-phone.png.
+
+Existing source/locale/rights gates remain unchanged. Earlier uncommitted work is
+preserved; no commit, push or deployment requested. Local preview remains port 8767.
+
+## Local dashboard revision — 30 October 2026
+
+Owner requested and authorised implementing the brighter dashboard plan. Changes
+are local, uncommitted and not deployed. Read
+[the revision record](docs/DASHBOARD_REVISION_2026-10-30.md) first.
+
+- Enlarged formal portrait on the right, sourced English quote underneath, removed
+  opening slogans, Roman section numbering and singular Contribution in figures.
+- White page canvas, stronger inclusion heading; compact cards retain all 13 figures.
+- Six distinct cloud colours, count subscripts and precise report/activity tooltips.
+  Clicking opens source summaries and moves focus/scroll below the cloud.
+- Isa-centred area network covers all 33 activities, six per page. Participant
+  selection uses only the existing nine documented relationships. All activity
+  roles and source limits remain. Old collaboration deep links still resolve.
+- JAC text logo (PD-textlogo/trademark caveat) and World Economic Forum portrait of
+  Ali Pate (CC BY-SA 2.0) are local assets, with visible credits and downloads.
+  Other participants use initials. Asset manifest: content/dashboard-network-assets.json.
+- Guided chat has a frame, question bubble and 250ms dots. Reduced motion skips
+  the delay; restart, history and locale changes invalidate pending answers.
+- Reused the existing guided catalogue for bilingual activity titles/summaries:
+  many frozen activity records have English titles only and no description.
+
+Verification passed: fresh preflight, lint, typecheck, all 69 unit tests and
+full web/Studio build. Dashboard browser: seven groups/seven zero-violation axe
+states. Standalone chat: eight groups/five zero-violation axe states. Both runs
+report zero page errors, failed responses or external requests. Chat transition
+checks include duplicate clicks, browser Back, restart, locale changes and reduced
+motion. Phone portrait and broken participant-image fallback checked separately.
+See docs/VALIDATION.md for evidence and limits.
+
+Preview: http://127.0.0.1:8767/ and /ha/; npm.cmd run preview serves the static build.
+No dependency, frozen v1 data or approval flag changed. Hausa is draft; Isa photo
+reuse/public reveal gates remain unresolved. No commit, push or deployment requested.
+
 ## Session handoff — saved dashboard, 29 October 2026
 
 **Application baseline:** `0adb3df8854656bbc6c083a3771d467a15a18467`, committed and

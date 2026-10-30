@@ -1,0 +1,50 @@
+{
+  "publicApproved": false,
+  "assets": [
+    {
+      "id": "jac",
+      "label": "JAC Motors",
+      "file": "jac.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Jac_motors_textlogo.png",
+      "author": "Unknown; manufacturer text logo",
+      "license": "Public domain (PD-textlogo); trademark restrictions remain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+      "sourceAsset": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jac_motors_textlogo.png",
+      "localPath": "/branding/network/jac.webp",
+      "sha256": "8094107db7d63670b0baefe337669c430da341932ff2b942e3e3dd11c10feb1a",
+      "modifications": "Proportional resize to 240px width and WebP encoding; CSS display crop only. No retouching.",
+      "checked": "2026-10-30",
+      "publicApproved": false
+    },
+    {
+      "id": "ali-pate",
+      "label": "Muhammad Ali Pate",
+      "file": "ali-pate.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Muhammad_Ali_Pate_at_the_Annual_Meeting_of_the_New_Champions_in_Tianjin,_China_2012.jpg",
+      "author": "World Economic Forum; Commons crop by Puramyun31",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sourceAsset": "https://upload.wikimedia.org/wikipedia/commons/0/04/Muhammad_Ali_Pate_at_the_Annual_Meeting_of_the_New_Champions_in_Tianjin%2C_China_2012.jpg",
+      "localPath": "/branding/network/ali-pate.webp",
+      "sha256": "b874792f5b5604349835a0faaabf772ee748d78b2cf1140898abecbd9faaadde",
+      "modifications": "Proportional resize to 240px width and WebP encoding; CSS display crop only. No retouching.",
+      "checked": "2026-10-30",
+      "publicApproved": false
+    }
+  ],
+  "fallbacks": {
+    "reason": "No established reusable asset; original initials instead.",
+    "ids": [
+      "african-unconquered",
+      "datalead",
+      "deaf-in-tech",
+      "elizade",
+      "fct-school-blind",
+      "ncpwd",
+      "nigwed",
+      "queen-tejuosho-foundation",
+      "red-cross",
+      "smedan"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 /** Local presentation supplement. The frozen v1 evidence bundle is never edited. */
 import catalogue from "../../../content/dashboard/presentation.json" with { type: "json" };
 import { buildDashboardView } from "./dashboard-data.mjs";
+import { getActivityPresentation } from "./guided-flow.mjs";
 const uniq = (values) => [...new Set(values)];
 const copy = (value) => structuredClone(value);
 const fail = () => { throw new TypeError("Invalid dashboard presentation evidence or references"); };
@@ -74,5 +75,14 @@ export function buildDashboardPresentation(bundle) {
     if (!text(c.label) || !Number.isInteger(c.count) || c.count < 1 || c.count !== c.sourceIds.length || !ids(c.sourceIds) || c.excerpts.length !== c.count || c.excerpts.some((e, i) => e.sourceId !== c.sourceIds[i] || canonical.get(e.sourceId) !== e.sourceId || !e.text.toLowerCase().includes(c.phrase))) fail();
     return copy(c);
   });
-  return { groups, figures, concepts, collaborations, haReviewed: false, publicApproved: false, conceptReportCount: bundle.model_documents.length };
+  const networkGroups = groups.filter((group) => group.id !== "all").map(copy);
+  const uncovered = bundle.activities.filter((a) => !networkGroups.some((g) => g.activityIds.includes(a.id))).map((a) => a.id);
+  if (uncovered.length) networkGroups.push({ id: "other", label: { en: "More activities", ha: "Ƙarin ayyuka" }, activityIds: uncovered, catalogueCategoryIds: [], rationale: "Records outside the five figure groups, including sport, honours and political engagement; no impact inferred." });
+  const networkActivities = bundle.activities.map((a) => ({
+    id: a.id, ...getActivityPresentation(a), role: a.isa_role,
+    reportDate: a.report_date, dateBasis: a.date_basis, stage: a.stage, sourceIds: [...a.source_ids],
+    limitations: [...a.limitations], groupIds: networkGroups.filter((g) => g.activityIds.includes(a.id)).map((g) => g.id),
+    collaborationIds: collaborations.filter((c) => c.activityId === a.id).map((c) => c.id),
+  }));
+  return { groups, figures, concepts, collaborations, networkGroups, networkActivities, haReviewed: false, publicApproved: false, conceptReportCount: bundle.model_documents.length };
 }

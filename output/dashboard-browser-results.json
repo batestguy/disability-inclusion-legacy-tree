@@ -1,14 +1,16 @@
 {
-  "date": "2026-10-29T05:01:52.741Z",
+  "date": "2026-10-30T11:35:32.508Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
     "Full-record overview neutralises legacy filters, preserves all thirteen source-linked figures and shows achievements before the three commitments",
     "Category selection preserves >500 welfare measures, excludes empty planned sections and gives vehicle/toolkit milestones their attributed roles",
     "Seven concepts use exact canonical-report counts, paginated sources reconcile, activity clouds hand off to chat and section navigation preserves reloadable chat context",
-    "Nine actor–initiative records support source/role selection, keyboard actor exploration, category filters and equivalent lists; toolkit developers are not relabelled as Isa",
+    "All 33 activities with nine actor–initiative records support source/role selection, keyboard actor exploration, category filters and equivalent lists; toolkit developers are not relabelled as Isa",
     "Shared English/Hausa switching retains category/cloud/chat context; phone list, 320px/200% text, forced colours and reduced motion reflow",
-    "Source disclosures retain population, role, limits and all supporting citations; incompatible actor/initiative/area deep links normalise safely"
+    "Source disclosures retain population, role, limits and all supporting citations; incompatible actor/initiative/area deep links normalise safely",
+    "Activity catalogue starts collapsed; graph selection focuses source details directly; explicit browse control exposes all 33 records and direct branch opens its 24-record selection",
+    "Response dots precede local answers; duplicate clicks, restart and locale navigation cancel stale transitions; reduced motion skips dots and delay; licensed local image hashes match"
   ],
   "axe": [
     {
@@ -17,6 +19,10 @@
     },
     {
       "label": "concept sources",
+      "violations": []
+    },
+    {
+      "label": "selected toolkit graph",
       "violations": []
     },
     {
@@ -29,6 +35,10 @@
     },
     {
       "label": "320px and 200% text",
+      "violations": []
+    },
+    {
+      "label": "conversation frame and question bubble",
       "violations": []
     }
   ],

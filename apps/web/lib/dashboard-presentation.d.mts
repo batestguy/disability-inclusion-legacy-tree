@@ -14,6 +14,8 @@ export interface PresentationCollaboration {
 }
 export interface DashboardPresentation {
   groups: PresentationGroup[]; figures: PresentationFigure[]; concepts: PresentationConcept[]; collaborations: PresentationCollaboration[];
+  networkGroups: PresentationGroup[];
+  networkActivities: Array<{id: string; title: PresentationText; description: PresentationText; role: string; reportDate: string; dateBasis: string; stage: string; sourceIds: string[]; limitations: string[]; groupIds: string[]; collaborationIds: string[]}>;
   haReviewed: false; publicApproved: false; conceptReportCount: number;
 }
 export function buildDashboardPresentation(bundle: unknown): DashboardPresentation;

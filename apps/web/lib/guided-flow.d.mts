@@ -53,3 +53,4 @@ export interface FlowNode {
   haReviewed: false;
 }
 export function getFlowNode(bundle: unknown, nodeId?: string): FlowNode;
+export function getActivityPresentation(activity: {id: string; title: {en: string; ha?: string}; description?: FlowText}): {title: FlowText; description: FlowText};

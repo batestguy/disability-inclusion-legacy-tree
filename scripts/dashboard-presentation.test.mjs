@@ -110,6 +110,25 @@ test("concept frequencies count canonical report matches, with excerpts and expl
   assert.equal(supplement.conceptExtraction.reports.length, 30);
 });
 
+test("central network covers every activity without inventing participant memberships", () => {
+  const result = buildDashboardPresentation(bundle);
+  assert.equal(result.networkActivities.length, 33);
+  assert.deepEqual(result.networkActivities.map((a) => a.id), bundle.activities.map((a) => a.id));
+  assert.deepEqual([...new Set(result.networkGroups.flatMap((g) => g.activityIds))].sort(), bundle.activities.map((a) => a.id).sort());
+  for (const activity of result.networkActivities) {
+    const original = bundle.activities.find((a) => a.id === activity.id);
+    assert.equal(activity.role, original.isa_role);
+    assert.ok(activity.title.en && activity.title.ha && activity.description.en && activity.description.ha);
+    assert.deepEqual(activity.sourceIds, original.source_ids);
+    assert.deepEqual(activity.collaborationIds, result.collaborations.filter((c) => c.activityId === activity.id).map((c) => c.id));
+    assert.ok(activity.groupIds.length);
+  }
+  const withoutCooccurrences = clone(); withoutCooccurrences.co_occurrences = [];
+  assert.deepEqual(buildDashboardPresentation(withoutCooccurrences).networkActivities, result.networkActivities);
+  assert.match(result.networkActivities.find((a) => a.id === "disability-readiness-toolkit-2025").role, /Lanre Oloyede/);
+  assert.ok(result.networkGroups.find((g) => g.id === "other").activityIds.includes("paravolley-election-2026"));
+});
+
 test("invalid IDs, duplicate aliases and mismatched actor membership fail closed", () => {
   for (const mutate of [
     (b) => { b.observations[0].activity_id = "unknown"; },
