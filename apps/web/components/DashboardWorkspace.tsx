@@ -1,123 +1,80 @@
 "use client";
 
-import { useEffect, useMemo, useRef, type MouseEvent } from "react";
-import Image from "next/image";
-import LanguageChoice from "./LanguageChoice";
-import GuidedWorkspace from "./GuidedWorkspace";
+import { useEffect, type MouseEvent } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import DashboardHighlights from "./DashboardHighlights";
 import DashboardAdvocacy from "./DashboardAdvocacy";
 import DashboardNetwork from "./DashboardNetwork";
-import ChatbotMark from "./ChatbotMark";
-import visualAssets from "../../../content/dashboard-visual-assets.json";
-import portrait from "../../../content/dashboard-portrait.json";
-import { initialPresentation, useDashboardSession, type PresentationSelection } from "./DashboardSession";
-import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
-import { buildDashboardPresentation } from "../lib/dashboard-presentation.mjs";
+import WorkspaceHeader from "./WorkspaceHeader";
+import WorkspaceFooter from "./WorkspaceFooter";
+import { useWorkspaceNavigation, selectionQuery, pathHash } from "./WorkspaceNavigation";
+import { initialGuidedScreen } from "./GuidedSession";
+import type { PresentationSelection } from "./DashboardSession";
+import type { buildDashboardPresentation } from "../lib/dashboard-presentation.mjs";
 import type { Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
 import "../app/dashboard.css";
 import "../app/presentation.css";
+import "../app/landing.css";
 
 type Props = ReturnType<typeof getChatData> & { lang: Lang };
 export type Presentation = ReturnType<typeof buildDashboardPresentation>;
-const pathHash = (path: string[]) => path.length > 1 ? `#flow=${encodeURIComponent(path.join("|"))}` : "";
-function queryFor(selection: PresentationSelection, record: string | null) {
-  const params = new URLSearchParams();
-  if (selection.area !== "all") params.set("area", selection.area);
-  if (selection.cloudMode !== "concepts") params.set("cloud", selection.cloudMode);
-  if (selection.cloudId) params.set("term", selection.cloudId);
-  if (selection.networkArea !== "all") params.set("partners", selection.networkArea);
-  if (selection.initiative) params.set("initiative", selection.initiative);
-  if (selection.actor) params.set("actor", selection.actor);
-  if (record) params.set("record", record);
-  return params.size ? `?${params}` : "";
-}
-
-export default function DashboardWorkspace({ lang, bundle, manifest }: Props) {
-  const { dashboard, setDashboard } = useDashboardSession();
-  const { session, setSession } = useGuidedSession();
-  const chatSection = useRef<HTMLElement>(null);
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
-  const data = useMemo(() => { try { return buildDashboardPresentation(bundle); } catch { return null; } }, [bundle]);
+export default function DashboardWorkspace({ lang, bundle }: Props) {
+  const router = useRouter();
+  const { data, dashboard, setDashboard, setSession, section, href } = useWorkspaceNavigation(bundle, "explore");
   const selection = dashboard.presentation;
-
+  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
-    if (!data) return;
-    function readLocation() {
-      const params = new URLSearchParams(location.search);
-      const area = (value: string | null) => data!.groups.some((group) => group.id === value) ? value! : "all";
-      const cloudMode = params.get("cloud") === "areas" ? "areas" as const : "concepts" as const;
-      const term = params.get("term");
-      const cloudIds = cloudMode === "concepts" ? data!.concepts.map((entry) => entry.id) : bundle.categories.map((entry) => entry.id);
-      const initiative = params.get("initiative");
-      const actor = params.get("actor");
-      const networkArea = data!.networkGroups.some((group) => group.id === params.get("partners")) ? params.get("partners")! : "all";
-      const visibleActivities = data!.networkActivities.filter((entry) => networkArea === "all" || entry.groupIds.includes(networkArea));
-      const visibleInitiatives = data!.collaborations.filter((entry) => visibleActivities.some((activity) => activity.id === entry.activityId));
-      const selectedInitiative = visibleInitiatives.find((entry) => entry.id === initiative);
-      const selectedActivity = visibleActivities.find((entry) => entry.id === initiative || entry.id === selectedInitiative?.activityId);
-      const validActor = visibleInitiatives.some((entry) => entry.participants.some((person) => person.id === actor) && (!selectedActivity || entry.activityId === selectedActivity.id));
-      const next: PresentationSelection = {
-        ...initialPresentation, area: area(params.get("area")), cloudMode,
-        cloudId: term && cloudIds.includes(term) ? term : null,
-        initiative: selectedInitiative?.id ?? selectedActivity?.id ?? null,
-        networkArea,
-        actor: validActor ? actor : null,
-      };
-      const requested = params.get("record");
-      const selectedId = bundle.activities.some((entry) => entry.id === requested) ? requested : null;
-      setDashboard((previous) => ({ ...previous, presentation: next, selectedId, filters: { year: "all", category: "all", activity: "all" } }));
-      // Legacy year filters must never silently shrink the full-record overview.
-      const clean = queryFor(next, selectedId);
-      if (clean !== location.search) history.replaceState(null, "", location.pathname + clean + location.hash);
-    }
-    readLocation(); window.addEventListener("popstate", readLocation);
-    return () => window.removeEventListener("popstate", readLocation);
-  }, [data, bundle, setDashboard]);
-
+    if (!section) return;
+    const frame = requestAnimationFrame(() => {
+      const target = document.getElementById(section);
+      target?.scrollIntoView({ block: "start", behavior: "instant" });
+      target?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [section]);
+  function enterSection(event: MouseEvent<HTMLAnchorElement>) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    history.pushState(null, "", event.currentTarget.href);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    const target = new URL(event.currentTarget.href).searchParams.get("section");
+    if (target) requestAnimationFrame(() => {
+      const element = document.getElementById(target);
+      element?.scrollIntoView({ block: "start", behavior: "instant" });
+      element?.focus({ preventScroll: true });
+    });
+  }
   function updateSelection(patch: Partial<PresentationSelection>) {
     const next = { ...selection, ...patch };
-    setDashboard((previous) => ({ ...previous, presentation: next }));
-    history.pushState(null, "", location.pathname + queryFor(next, dashboard.selectedId) + location.hash);
-  }
-  function scrollToSection(event: MouseEvent<HTMLAnchorElement>, id: string) {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const section = document.getElementById(id);
-    if (!section) return;
-    event.preventDefault(); section.scrollIntoView({ block: "start" }); section.focus({ preventScroll: true });
+    setDashboard(previous => ({ ...previous, presentation: next }));
+    history.pushState(null, "", location.pathname + selectionQuery(next, dashboard.selectedId, section) + location.hash);
   }
   function askAbout(id: string) {
-    const activity = bundle.activities.find((entry) => entry.id === id);
+    const activity = bundle.activities.find(entry => entry.id === id);
     if (!activity) return;
     const path = ["start", "timeline", `year:${activity.report_date.slice(0, 4)}`, `activity:${activity.id}`];
-    setSession((previous) => ({ ...previous, ...initialGuidedScreen, path, cursor: path.length - 1 }));
-    setDashboard((previous) => ({ ...previous, selectedId: id }));
-    history.pushState(null, "", location.pathname + queryFor(selection, id) + pathHash(path));
-    requestAnimationFrame(() => { chatSection.current?.scrollIntoView({ block: "start" }); document.getElementById("guided-answer")?.focus({ preventScroll: true }); });
+    setSession(previous => ({ ...previous, ...initialGuidedScreen, path, cursor: path.length - 1 }));
+    setDashboard(previous => ({ ...previous, selectedId: id }));
+    router.push((lang === "ha" ? "/ha/chat/" : "/chat/") + selectionQuery(selection, id, section) + pathHash(path));
   }
-  const currentPath = session.path.slice(0, session.cursor + 1);
-  const destination = (target: Lang) => (target === "en" ? "/" : "/ha/") + queryFor(selection, dashboard.selectedId) + pathHash(currentPath);
-  if (!data) return <main className="dashboard-error" role="alert"><h1>{say("The records could not be loaded safely.", "Ba a iya loda bayanan cikin aminci ba.")}</h1><button onClick={() => location.reload()}>{say("Reload", "Sake buɗewa")}</button></main>;
-
-  return <div className="dashboard-shell dashboard-redesign" lang={lang}>
-    <a className="skip" href="#dashboard-main" onClick={(event) => scrollToSection(event, "dashboard-main")}>{say("Skip to dashboard", "Tsallaka zuwa bayanai")}</a>
-    <header className="dashboard-header"><div className="dashboard-header-inner">
-      <a className="dashboard-brand" href={lang === "en" ? "/" : "/ha/"}><span className="brand-portrait" aria-hidden="true"><Image src={visualAssets.header.localPath} width={540} height={600} sizes="96px" alt="" /></span><div>MOHAMMED ABBA ISA<small>{say("DISABILITY INCLUSION", "SHIGAR MASU NAKASA")}</small></div></a>
-      <nav className="dashboard-navigation" aria-label={say("Dashboard sections", "Sassan bayanai")}>
-        {[{ id: "overview", en: "Contributions", ha: "Gudummawa" }, { id: "advocacy", en: "Ideas & advocacy", ha: "Ra’ayoyi da kira" }, { id: "collaborations", en: "Collaborations", ha: "Haɗin gwiwa" }, { id: "ask-records", en: "Explore with the guide", ha: "Bincika da jagora" }].map((item) => <a key={item.id} href={`#${item.id}`} onClick={(event) => scrollToSection(event, item.id)}>{item[lang]}</a>)}
-      </nav><LanguageChoice lang={lang} destinations={{ en: destination("en"), ha: destination("ha") }} />
-    </div></header>
+  if (!data) return <main role="alert"><h1>{say("The records could not be loaded safely.", "Ba a iya loda bayanan cikin aminci ba.")}</h1><button onClick={() => location.reload()}>{say("Reload", "Sake buɗewa")}</button></main>;
+  return <div className="dashboard-shell dashboard-redesign explore-workspace" lang={lang}>
+    <a className="skip" href="#dashboard-main">{say("Skip to dashboard", "Tsallaka zuwa bayanai")}</a>
+    <WorkspaceHeader lang={lang} page="explore" href={href} />
     <main id="dashboard-main" className="dashboard-main" tabIndex={-1}>
-      <section className="dashboard-opening" aria-labelledby="dashboard-title">
-        <div><h1 id="dashboard-title">{say("Advancing Disability Inclusion", "Ci Gaban Shigar Masu Nakasa")}</h1><p className="dashboard-subtitle">{say("Mohammed Abba Isa’s contributions in figures", "Gudummawar Mohammed Abba Isa a cikin lambobi")}</p>{lang === "ha" && <p className="dashboard-draft">Hausa na gwaji</p>}</div>
-        <figure className="opening-portrait"><Image src={visualAssets.hero.localPath} width={visualAssets.hero.width} height={visualAssets.hero.height} sizes="(max-width: 700px) 85vw, 440px" alt={say("Mohammed Abba Isa seated in his wheelchair, smiling with his hands in his lap", "Mohammed Abba Isa zaune a keken guragu yana murmushi, hannayensa a cinyarsa")} preload /><figcaption><blockquote lang={lang}>“{lang === "ha" ? portrait.hausa_translation : portrait.quote_excerpt}”</blockquote>{lang === "ha" && <><small className="quote-translation-status">Fassarar Hausa ta gwaji</small><details className="quote-original"><summary>Asalin magana a Turanci</summary><p lang="en">{portrait.quote_excerpt}</p></details></>}<span>— Mohammed Abba Isa</span><div className="portrait-source-links"><a href={portrait.source_page} target="_blank" rel="noopener noreferrer">{say("Quote source", "Tushen magana")} ↗</a><a href={visualAssets.hero.sourcePage} target="_blank" rel="noopener noreferrer">{say("Portrait source", "Tushen hoto")} ↗</a></div></figcaption></figure>
-      </section>
+      <div className="explore-heading"><div><h1>{say("Explore the record", "Bincika bayanan")}</h1>{lang === "ha" && <p className="dashboard-draft">Hausa na gwaji</p>}</div><Link href={href("chat", lang)} prefetch={false}>{say("Interact with me", "Mu tattauna")} ↗</Link></div>
+      <nav className="explore-sections" aria-label={say("Explore sections", "Sassan bincike")}>
+        <Link onClick={enterSection} href={href("explore", lang, "overview")} prefetch={false}>{say("Figures", "Lambobi")}</Link>
+        <Link onClick={enterSection} href={href("explore", lang, "advocacy")} prefetch={false}>{say("Themes", "Jigogi")}</Link>
+        <Link onClick={enterSection} href={href("explore", lang, "collaborations")} prefetch={false}>{say("Connections", "Haɗin gwiwa")}</Link>
+      </nav>
       <DashboardHighlights lang={lang} bundle={bundle} data={data} area={selection.area} onArea={(area) => updateSelection({ area })} />
       <DashboardAdvocacy lang={lang} bundle={bundle} data={data} mode={selection.cloudMode} selectedId={selection.cloudId} onSelect={(cloudId) => updateSelection({ cloudId })} onMode={(cloudMode) => updateSelection({ cloudMode, cloudId: null })} onAsk={askAbout} />
       <DashboardNetwork lang={lang} bundle={bundle} data={data} area={selection.networkArea} selectedId={selection.initiative} actorId={selection.actor} onSelect={(initiative) => updateSelection({ initiative, actor: null })} onArea={(networkArea) => updateSelection({ networkArea, initiative: null, actor: null })} onActor={(actor) => updateSelection({ actor, initiative: null })} onAsk={askAbout} />
-      <section id="ask-records" className="dashboard-section dashboard-chat-section" ref={chatSection} tabIndex={-1} aria-labelledby="dashboard-chat-title"><div className="chat-invitation"><div className="chat-invitation-mark"><ChatbotMark /></div><div><p className="dashboard-eyebrow">IV. {say("YOUR INTERACTIVE GUIDE", "JAGORANKA NA TATTAUNAWA")}</p><h2 id="dashboard-chat-title" className="calligraphy-title">{say("Interact with me", "Mu tattauna")}</h2><p>{say("Choose a question. Discover the stories behind the figures.", "Zaɓi tambaya. Gano labaran da ke bayan lambobi.")}</p><a className="heading-action chat-start-action" href="#guided-answer" onClick={(event) => scrollToSection(event, "guided-answer")}>{say("Let's explore", "Mu bincika")} <span aria-hidden="true">↘</span></a></div></div><GuidedWorkspace lang={lang} bundle={bundle} manifest={manifest} embedded /></section>
-      <footer className="dashboard-footer"><div><strong>MOHAMMED ABBA ISA</strong><p>{say("Access to opportunity. A place for everyone.", "Samun dama. Wuri ga kowa.")}</p></div><div><p>{say("Local preview · Hausa draft", "Samfurin gida · Hausa na gwaji")}</p><details><summary>{say("About these records", "Game da bayanan nan")}</summary><p>{say("A selected record, not a complete career account. Programme figures may overlap and must not be added into a unique-person total. Reports describe contributions and intentions; they do not establish causal impact. Photo reuse permission and public release remain pending.", "Zaɓaɓɓun bayanai ne, ba cikakken tarihin aiki ba. Mutanen shirye-shirye na iya maimaituwa; ba za a haɗa su a matsayin jimillar mutane mabambanta ba. Rahotanni suna bayyana gudummawa da manufofi, ba tasirin sanadi ba. Izinin amfani da hotuna da fitowar shafin ga jama’a suna jiran kammalawa.")}</p></details></div></footer>
+      <WorkspaceFooter lang={lang} />
     </main>
   </div>;
 }

@@ -69,22 +69,17 @@ async function cloudAppearance(minimumRatio) {
   }
 }
 try {
-  await page.goto(base + '/?year=2024&category=healthcare-welfare');
+  await page.goto(base + '/explore/?year=2024&category=healthcare-welfare');
   await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
   await area('all').filter({ has: page.locator('span') }).waitFor();
   await page.waitForURL((url) => !url.searchParams.has('year') && !url.searchParams.has('category'));
-  assert.equal(await page.locator('h1').innerText(), 'Advancing Disability Inclusion');
+  assert.equal(await page.locator('h1').innerText(), 'Explore the record');
   assert.equal(await page.locator('[data-highlight]').count(), 13);
-  assert.ok((await page.locator('.opening-portrait img').boundingBox()).width >= 250);
-  assert.match(await page.locator('.opening-portrait blockquote').innerText(), /Our strength lies/);
-  const heroBox = await page.locator('.opening-portrait img').boundingBox();
-  const openingBox = await page.locator('.dashboard-opening').boundingBox();
-  assert.ok(Math.abs(heroBox.x + heroBox.width / 2 - openingBox.x - openingBox.width / 2) < 2, 'intro photograph must be centred');
-  assert.equal(await page.locator('.opening-portrait img').evaluate(img => getComputedStyle(img).objectFit), 'contain');
-  assert.notEqual(await page.locator('.brand-portrait img').getAttribute('src'), await page.locator('.opening-portrait img').getAttribute('src'));
-  const frames = await page.locator('.dashboard-opening, .contribution-section, .advocacy-section, .collaboration-section, .dashboard-chat-section').evaluateAll(sections => sections.map(section => ({ side: parseFloat(getComputedStyle(section).borderLeftWidth), top: parseFloat(getComputedStyle(section).borderTopWidth) })));
-  assert.equal(frames.length, 5);
-  assert.ok(frames.every(frame => frame.side >= 2 && frame.top >= 4), 'major sections need clear full borders');
+  assert.equal(await page.locator(".dashboard-opening,.opening-portrait,.guided-embedded").count(), 0);
+  const frames = await page.locator(".contribution-section,.advocacy-section,.collaboration-section").evaluateAll(sections => sections.map(section => ({ side: parseFloat(getComputedStyle(section).borderLeftWidth), top: parseFloat(getComputedStyle(section).borderTopWidth) })));
+  assert.equal(frames.length, 3);
+  assert.ok(frames.every(frame => frame.side >= 2 && frame.top >= 4));
+  assert.equal(await page.locator("#advocacy-title").innerText(), "Themes in his advocacy.");
   assert.match(await page.locator('#contributions-heading').evaluate(el => getComputedStyle(el).fontFamily), /Briem Hand/);
   await page.getByRole('button', { name: 'Choose an area', exact: true }).click();
   assert.equal(await area('all').evaluate(el => el === document.activeElement), true);
@@ -92,15 +87,10 @@ try {
   assert.equal(await page.locator('.concept-cloud button').first().evaluate(el => el === document.activeElement), true);
   await page.getByRole('button', { name: 'Explore an area', exact: true }).click();
   assert.equal(await page.locator('[data-network-area]').evaluate(el => el === document.activeElement), true);
-  await page.locator('.chat-start-action').click();
-  assert.equal(await chat().evaluate(el => el === document.activeElement), true);
-  assert.equal(await page.locator('.chat-invitation svg').count(), 1);
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-  assert.equal(await page.locator('.dashboard-opening').getByText('OPPORTUNITY. ACCESS. PARTICIPATION.').count(), 0);
   assert.equal(await page.locator('.dashboard-shell').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 255, 255)');
   assert.equal(await page.locator('.highlight-number').first().innerText(), '>500', 'larger reported programme figures should lead');
   assert.equal(await page.locator('[data-filter="year"], #timeline, #evidence, .dashboard-time-series').count(), 0);
-  assert.equal(await page.locator('.guided-embedded').count(), 1);
+  assert.equal(await page.locator('.guided-embedded').count(), 0);
   assert.equal(await page.locator('main').count(), 1);
   assert.ok(!(await page.locator('.contribution-categories').innerText()).match(/\d/), 'category navigation repeats figures');
   assert.equal(await page.locator('[data-highlight-stage="target"]').count(), 3);
@@ -164,9 +154,13 @@ try {
   await page.locator('.cloud-matches .text-action').first().click();
   assert.match(await chat().getAttribute('data-node'), /^activity:/);
   const activeNode = await chat().getAttribute('data-node');
-  await page.getByRole('link', { name: 'Ideas & advocacy', exact: true }).click();
+  await page.getByRole("navigation", { name: "Main navigation", exact: true }).getByRole("link", { name: "Explore", exact: true }).click();
+  await page.locator(".explore-workspace").waitFor();
+  await page.locator(".explore-sections").getByRole("link", { name: "Themes", exact: true }).click();
+  await page.waitForFunction(() => document.activeElement?.id === "advocacy");
   assert.match(new URL(page.url()).hash, /^#flow=/);
-  await page.reload(); await page.locator(`#guided-answer[data-node="${activeNode}"]`).waitFor();
+  await page.reload(); await page.locator(".explore-workspace").waitFor();
+  assert.ok(decodeURIComponent(new URL(page.url()).hash).includes(activeNode));
   results.checks.push('Seven concepts use exact canonical-report counts, paginated sources reconcile, activity clouds hand off to chat and section navigation preserves reloadable chat context');
 
   assert.equal(await page.locator('.network-browser').evaluate(el => el.open), false);
@@ -237,15 +231,11 @@ try {
   await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).click();
   await page.getByRole('link', { name: 'Hausa', exact: true }).click();
   await page.locator('.dashboard-shell[lang="ha"]').waitFor();
-  const portraitMetadata = JSON.parse(await readFile('content/dashboard-portrait.json', 'utf8'));
-  assert.match(await page.locator('.opening-portrait blockquote').innerText(), new RegExp(portraitMetadata.hausa_translation));
-  assert.equal(await page.locator('.opening-portrait blockquote').getAttribute('lang'), 'ha');
-  assert.equal(await page.locator('.quote-translation-status').innerText(), 'Fassarar Hausa ta gwaji');
   await page.evaluate(() => document.fonts.ready.then(() => true));
   assert.ok(await page.evaluate(() => document.fonts.check('600 32px "Briem Hand"', 'ɓɗƙƴƁƊƘƳ')));
   assert.equal(await area('health-welfare').getAttribute('aria-pressed'), 'true');
   assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).getAttribute('aria-pressed'), 'true');
-  assert.equal(await chat().getAttribute('data-node'), activeNode);
+  assert.ok(decodeURIComponent(new URL(page.url()).hash).includes(activeNode));
   await page.setViewportSize({ width: 390, height: 844 });
   await cloudAppearance(2);
   assert.equal(await page.locator('.brand-portrait').isVisible(), true);
@@ -265,10 +255,10 @@ try {
   assert.ok(!(await page.locator('.contribution-categories button').first().evaluate((button) => getComputedStyle(button).cursor)).includes('photo-arrow'));
   results.checks.push('Shared English/Hausa switching retains category/cloud/chat context; phone list, 320px/200% text, forced colours and reduced motion reflow');
 
-  await page.goto(base + '/?partners=employment&initiative=adapted-vehicle-collaboration&actor=ncpwd');
+  await page.goto(base + '/explore/?partners=employment&initiative=adapted-vehicle-collaboration&actor=ncpwd');
   await page.waitForURL((url) => !url.searchParams.has('initiative') && !url.searchParams.has('actor'));
   assert.equal(await page.locator('[data-selected-initiative]').count(), 0, 'deep link restored a filtered-out initiative');
-  await page.goto(base + '/?initiative=toolkit-developers&actor=ncpwd');
+  await page.goto(base + '/explore/?initiative=toolkit-developers&actor=ncpwd');
   await page.waitForURL((url) => !url.searchParams.has('actor'));
   assert.equal(await page.locator('[data-selected-initiative]').getAttribute('data-selected-initiative'), 'toolkit-developers');
   results.checks.push('Source disclosures retain population, role, limits and all supporting citations; incompatible actor/initiative/area deep links normalise safely');
@@ -324,7 +314,7 @@ try {
   assert.equal(await chat().getAttribute('data-node'), 'programmes');
   assert.equal(await page.locator('.guided-thinking').count(), 0);
   results.checks.push('Response dots precede local answers; duplicate clicks, restart and locale navigation cancel stale transitions; reduced motion skips dots and delay; local image hashes match their provenance records');
-  results.checks.push('Five bordered chapters, centred full-frame photograph, different visible header portrait, draft Hausa quote, local calligraphic headings and meaningful heading actions; activity thumbnails and six source-identified organisation logos retain provenance');
+  results.checks.push('Explore retains three bordered source chapters, calligraphic headings and meaningful actions; activity thumbnails and six source-identified organisation logos retain provenance');
   assert.deepEqual(results.errors, []); assert.deepEqual(results.failedResponses, []); assert.deepEqual(results.externalRequests, []);
   assert.ok(results.axe.every((entry) => !entry.violations.length), JSON.stringify(results.axe));
   results.completed = true;

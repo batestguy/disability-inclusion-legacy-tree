@@ -17,6 +17,7 @@ output/*
 !output/chat-browser-results.json
 !output/guided-browser-results.json
 !output/dashboard-browser-results.json
+!output/landing-browser-results.json
 !output/chat-evaluation-50.json
 !output/chat-evaluation-50.csv
 !output/chat-evaluation-50-reviewed.csv
@@ -37,3 +38,4 @@ output/playwright/*
 !output/playwright/tree-revision-*.png
 !output/playwright/chat-*.png
 !output/playwright/dashboard-*.png
+!output/playwright/landing-*.png

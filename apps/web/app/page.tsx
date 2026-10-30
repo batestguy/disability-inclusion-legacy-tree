@@ -1,5 +1,5 @@
 import { getChatData } from "../lib/chat-data";
-import DashboardWorkspace from "../components/DashboardWorkspace";
+import HomeWorkspace from "../components/HomeWorkspace";
 export default function Page() {
-  return <DashboardWorkspace lang="en" {...getChatData()} />;
+  return <HomeWorkspace lang="en" {...getChatData()} />;
 }

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-30T14:46:43.535Z",
+  "base": "http://127.0.0.1:8767",
+  "completed": true,
+  "checks": [
+    "Home retains centred sourced portrait/title/quote; four fixed hit areas, persistent pause and reduced-motion override",
+    "All four bubbles support keyboard/touch-style links, direct sections, refresh and browser Back/Forward; new chat starts at welcome",
+    "Home/Explore/Chat and locale changes retain figures, concepts, actor/initiative, entry section and conversation across refresh; Hausa remains visibly draft",
+    "Recognised legacy dashboard queries/hashes forward to Explore (old chat anchor to Chat); invalid sections/selections are discarded independently of flow",
+    "Phone and enlarged text layouts, forced colours and failed portrait keep readable labels, sources and usable destinations"
+  ],
+  "axe": [
+    {
+      "label": "English landing desktop",
+      "violations": []
+    },
+    {
+      "label": "Hausa landing phone",
+      "violations": []
+    },
+    {
+      "label": "Landing 320px 200% text",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "externalRequests": []
+}

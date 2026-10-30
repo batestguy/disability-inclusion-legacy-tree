@@ -1,5 +1,67 @@
 # Project handoff
 
+## Owner save and next direction — 30 October 2026
+
+Owner requested committing and pushing the completed Home / Explore / Chat work
+as the next source checkpoint on main. Existing full implementation validation
+remains recorded in docs/VALIDATION.md; fresh save-time preflight and whitespace
+checks pass. This save changes no application code after that validation.
+
+Next owner-directed pass, not implemented by this save:
+1. Make the landing interface more interactive, with motion that runs on its own.
+   Retain stable clickable areas, Pause motion and reduced-motion support.
+2. Apply one final visual/interaction polish.
+3. Add an About the designer page showing the owner’s profile, with a clear way
+   for the owner to update the profile. Obtain actual profile details rather than
+   inventing a biography or claiming an editing mechanism already exists.
+
+The next-pass items above are future work. The source checkpoint is not a public
+deployment; Hausa draft status, image rights and reveal gates remain unchanged.
+
+## Home / Explore / Chat completed locally — 30 October 2026
+
+Owner-approved plan implemented. Previous framed visual checkpoint plus heading
+rename committed/pushed as **dc77efc7e48f04c7b87c78aeba4475d49cad42bf** to main at
+batestguy/disability-inclusion-legacy-tree; remote main was verified at that SHA.
+The subsequent landing/routing implementation remains **local and uncommitted**
+for owner review. No public deployment was performed.
+
+Read [implementation record](docs/HOME_EXPLORE_CHAT_2026-10-30.md),
+[validation evidence](docs/VALIDATION.md) and `.interface-design/system.md`.
+
+- `/` and `/ha/`: centred accepted portrait/quote/title and four colourful bubble
+  links — Figures, Themes, Connections and Interact with me. Gentle floating
+  contents, fixed link areas, persistent Pause motion and reduced-motion fallback.
+- `/explore/` and `/ha/explore/`: existing figures, theme cloud, three-column
+  relationship network, sources and optional activity browser. No repeated opening
+  portrait or embedded guide. Activity questions open dedicated Chat.
+- `/chat/` and `/ha/chat/`: existing guided conversation with the shared header.
+  All routes have Home / Explore / Chat links and the shared visible stacked locale
+  control. Selected area/concept/actor/initiative/activity and flow persist.
+- Advocacy heading: **Themes in his advocacy.** / **Jigogin fafutukarsa.** (draft).
+- Validated `section=overview|advocacy|collaborations` coexists with `#flow`.
+  Old Home dashboard queries/anchors/flow-only links forward to Explore;
+  `#ask-records` opens Chat. Intentional Home links use `view=home` so stateful
+  visits survive refresh without a legacy redirect loop.
+- `WorkspaceNavigation.tsx` centralises URL validation/construction; shared
+  providers/cursor handling include Explore. Hero/header image fallbacks retain
+  labels, sources and usable destinations. No new dependency or content claims.
+
+Verification passes: preflight (including final handoff check), lint, typecheck,
+69 unit tests, full web/Studio build and final web rebuild. All three browser
+suites pass: landing 5 groups/3 axe states, Explore 9/7, Chat 8/5; zero violations,
+page errors, failed responses or runtime external requests. Desktop and Hausa
+phone visuals inspected. Frozen data and approval flags are unchanged. New landing
+screenshots/results are explicitly retained by `.gitignore`. See validation record
+for exact commands and scope.
+
+Preview is already serving http://127.0.0.1:8767/ (plus /ha/, /explore/ and /chat/).
+Restart with `npm.cmd run preview` if absent in a later session. Opening the finished
+preview in Brave was **rejected by automatic approval review: blocked by policy**.
+The launch was not retried through another mechanism; open the preview URL manually.
+Hausa is draft; existing photo/logo reuse, source approval and public-reveal gates
+remain unresolved. Do not silently approve or publish.
+
 ## Visual checkpoint save — 30 October 2026
 
 Owner authorised saving/pushing the framed bilingual visual refinements before

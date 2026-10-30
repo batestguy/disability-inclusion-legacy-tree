@@ -1,5 +1,20 @@
 # Inclusion scorecard
 
+## Home / Explore / Chat — 30 October 2026
+
+Owner-approved local structure: Home retains the centred portrait/quote and four
+colourful bubbles; Explore retains the existing sourced chapters; Chat is dedicated.
+All three share the same brand, active navigation and visible vertical locale control.
+Bubble colours: green figures, blue themes, purple connections, gold chat. Reuse
+existing illustrations and mark. Desktop: four equal columns with 64px alternate
+offsets; phone: two columns, 8px gaps, 188px minimum bubble height. Hit areas remain
+fixed with 6–12px breathing room. Contents float ±4px over 6s; pause is persistent
+within the browser session; reduced motion and pause disable movement. Hover/focus
+highlight remains visible without movement. Body/controls use Source Sans; bubble
+labels use Briem Hand. White/pale surfaces, coloured borders, four-pixel rhythm.
+Advocacy title: Themes in his advocacy. / Jigogin fafutukarsa. (Hausa draft).
+See docs/HOME_EXPLORE_CHAT_2026-10-30.md for state and compatibility decisions.
+
 ## Framed chapters and calligraphic headings — 30 October 2026
 
 Owner supersedes the small right-aligned opening portrait: use the complete seated

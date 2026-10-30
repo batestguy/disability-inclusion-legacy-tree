@@ -1,5 +1,51 @@
 # Validation evidence - 22 October 2026
 
+## Home / Explore / Chat — 30 October 2026
+
+Previous framed visual checkpoint saved/pushed as `dc77efc` (remote main verified).
+New routing/landing work is local and uncommitted. See
+[implementation/design record](HOME_EXPLORE_CHAT_2026-10-30.md).
+
+- `npm.cmd run preflight`: passes; repeated before handoff. Local content only;
+  public reveal gates remain pending.
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for web and Studio.
+- `npm.cmd test`: all 69 tests pass, repeated against final source. Frozen bundle
+  hash, every source-linked figure, bound/unit/role and relationship checks retain
+  their existing coverage; no evidence/approval file was changed by restructuring.
+- `npm.cmd run build`: web and Studio pass. `npm.cmd run build -w apps/web`
+  also passes after the final route/history/pause refinements. Both Explore locales
+  are included in the 18 generated static pages; Studio source is unchanged.
+- `npm.cmd run test:landing-browser`: five groups and three zero-violation axe
+  states. Covers four destinations, keyboard activation, section focus, same-section
+  repeat clicks, Back/Forward and reload; Home/Explore/Chat state and both locales;
+  network-to-activity Chat handoff and return; legacy queries, anchors and flow-only
+  links; invalid section/selection cleanup; persistent pause, fixed link geometry
+  and reduced motion; 390px phone and 320px/200% text, forced colours; hero/header
+  decode fallbacks with source links retained. `output/landing-browser-results.json`.
+- `npm.cmd run test:dashboard-browser`: nine groups and seven zero-violation axe
+  states. Existing dashboard coverage moved to Explore; source, numerical, cloud,
+  network, activity catalogue, actor selection, locale and chat-transition checks
+  remain. `output/dashboard-browser-results.json`.
+- `npm.cmd run test:chat-browser`: eight groups and five zero-violation axe states.
+  Dedicated guide retains its replacing choices, history, numerical/source controls,
+  shared locale, cursor, compact phone flow and offline loaded-choice checks.
+  Header selector/green expectation follow the shared header and existing dashboard
+  palette. `output/guided-browser-results.json`.
+- All three final browser runs: zero page errors, failed responses and runtime
+  external requests. Total: 22 check groups, 15 zero-violation axe states.
+- Desktop Home and Hausa phone screenshots visually inspected. Existing Explore
+  screenshots now show its dedicated route; Chat screenshots include shared nav.
+  New evidence: `output/playwright/landing-desktop.png` and
+  `output/playwright/landing-hausa-phone.png`. `git diff --check` passes.
+
+Brave is installed at the expected Program Files path, but the command to launch
+it was rejected by automatic approval review with **blocked by policy**. It was
+not retried through another launcher. Preview remains verified by all three
+browser suites at http://127.0.0.1:8767/; open that URL manually in Brave.
+
+No deployment, new package, external model, public asset permission or human Hausa
+review is claimed. Translation remains draft and all public-reveal gates persist.
+
 ## Framed chapters and bilingual visual identity — 30 October 2026
 
 Owner requested and authorised this local refinement after saved baseline 6a21eea.

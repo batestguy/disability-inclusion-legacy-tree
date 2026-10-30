@@ -1,0 +1,57 @@
+/* Welcoming routes into the existing sourced record. Four-pixel spacing rhythm. */
+.dashboard-redesign .dashboard-navigation a[aria-current="page"] { color: var(--inclusion-green); font-weight: 700; text-decoration: underline; text-underline-offset: 6px; }
+.dashboard-redesign .explore-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: 32px 0 12px; }
+.dashboard-redesign .explore-heading h1 { font-family: "Briem Hand", cursive; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.25; margin: 0; }
+.dashboard-redesign .explore-heading > a, .explore-sections a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); text-underline-offset: 4px; }
+.explore-sections { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.dashboard-redesign .landing-choices { padding: 8px 0 32px; }
+.landing-choice-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.landing-choice-heading h2 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.dashboard-redesign .motion-toggle { min-height: 44px; padding: 8px 16px; border: 1px solid var(--inclusion-line); border-radius: 24px; color: var(--inclusion-green); background: var(--inclusion-paper); font-size: .85rem; }
+.dashboard-redesign .motion-toggle:hover { background: var(--inclusion-tint); }
+.bubble-constellation { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 16px; padding: 24px 0 16px; }
+.landing-bubble { --bubble-ink: var(--inclusion-green); --bubble-tint: #e6f4eb; --bubble-edge: #a8ccba; display: flex; align-items: center; justify-content: center; padding: 12px; min-width: 0; border-radius: 50%; color: var(--bubble-ink); text-decoration: none; }
+.landing-bubble:nth-child(even) { margin-top: 64px; }
+.bubble-advocacy { --bubble-ink: var(--inclusion-blue); --bubble-tint: #e7f1fd; --bubble-edge: #a9c8eb; }
+.bubble-collaborations { --bubble-ink: #694191; --bubble-tint: #f2eafb; --bubble-edge: #ccb3df; }
+.bubble-chat { --bubble-ink: var(--inclusion-gold); --bubble-tint: var(--inclusion-gold-soft); --bubble-edge: var(--inclusion-gold-line); }
+.bubble-surface { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; aspect-ratio: 1; padding: 24px 12px; border: 2px solid var(--bubble-edge); border-radius: 50%; background: var(--bubble-tint); text-align: center; pointer-events: none; animation: bubble-float 6s ease-in-out infinite; transition: transform 200ms cubic-bezier(.23,1,.32,1), box-shadow 200ms; }
+.landing-bubble:nth-child(2) .bubble-surface { animation-delay: -1.5s; }
+.landing-bubble:nth-child(3) .bubble-surface { animation-delay: -3s; }
+.landing-bubble:nth-child(4) .bubble-surface { animation-delay: -4.5s; }
+.bubble-surface > strong { font-family: "Briem Hand", cursive; font-size: clamp(1.25rem, 2vw, 1.9rem); line-height: 1.25; color: var(--bubble-ink); }
+.bubble-detail { max-width: 20ch; font-size: .85rem; line-height: 1.4; }
+.bubble-art { width: 72px; height: 64px; display: flex; justify-content: center; align-items: center; color: var(--bubble-ink); }
+.dashboard-redesign .bubble-art svg { width: 100%; height: 100%; max-width: none; }
+.landing-bubble:is(:hover,:focus-visible) .bubble-surface { animation-play-state: paused; transform: translateY(-4px); box-shadow: 0 4px 16px -8px var(--bubble-ink); }
+.landing-bubble:active .bubble-surface { transform: scale(.98); }
+.landing-choices[data-paused="true"] .bubble-surface { animation: none; transition: none; }
+.landing-choices[data-paused="true"] .landing-bubble:is(:hover,:focus-visible,:active) .bubble-surface { transform: none; }
+@keyframes bubble-float { 0%,100% { translate: 0 4px; } 50% { translate: 0 -4px; } }
+.portrait-fallback { width: min(440px, 100%); aspect-ratio: 718 / 600; display: grid; place-items: center; background: var(--inclusion-tint); border-radius: 16px; border: 1px solid var(--inclusion-line); color: var(--inclusion-green); }
+.dashboard-redesign.standalone-chat { background: #fff; }
+.standalone-chat .guided-main { margin-top: 20px; }
+@media (max-width: 900px) {
+  .bubble-constellation { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; margin: auto; gap: 12px 24px; }
+  .landing-bubble:nth-child(even) { margin-top: 24px; }
+  .bubble-surface > strong { font-size: clamp(1.2rem, 4vw, 1.9rem); }
+}
+@media (max-width: 500px) {
+  .bubble-constellation { gap: 8px; padding-top: 16px; }
+  .landing-bubble { padding: 6px; border-radius: 32px; }
+  .landing-bubble:nth-child(even) { margin-top: 0; }
+  .bubble-surface { padding: 20px 8px; border-radius: 42%; min-height: 188px; }
+  .bubble-art { width: 52px; height: 48px; }
+  .bubble-detail { font-size: .8rem; }
+  .bubble-surface > strong { font-size: 1.25rem; }
+  .landing-choice-heading { justify-content: center; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bubble-surface { animation: none; transition: none; }
+  .landing-bubble:is(:hover,:focus-visible,:active) .bubble-surface { transform: none; }
+}
+@media (forced-colors: active) {
+  .bubble-surface, .dashboard-redesign .motion-toggle { background: Canvas; border-color: CanvasText; color: CanvasText; }
+  .bubble-surface > strong { color: CanvasText; }
+  .landing-bubble:focus-visible { outline: 3px solid Highlight; }
+}

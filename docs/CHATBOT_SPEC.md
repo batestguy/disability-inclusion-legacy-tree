@@ -1,5 +1,16 @@
 # Bilingual dashboard chatbot specification
 
+## Home / Explore / Chat navigation — 30 October 2026
+
+Owner-approved restructuring supersedes the embedded-dashboard placement below.
+Home now introduces four starting points; the dashboard lives at `/explore/` and
+`/ha/explore/`, with no embedded chatbot. Activity questions explicitly open
+`/chat/` or `/ha/chat/` at the corresponding guided activity. Shared Home / Explore /
+Chat links and one visible vertical English/Hausa control retain selection and flow
+state. Explore entry sections use a validated query parameter separately from
+`#flow`. Question-tree behaviour and draft/release gates are unchanged.
+See [implementation record](HOME_EXPLORE_CHAT_2026-10-30.md).
+
 ## Dashboard redesign integration — 29 October 2026
 
 Owner authorised the dashboard first. The new home layout retains the compact

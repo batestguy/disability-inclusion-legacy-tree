@@ -2,7 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChatbotMark from "./ChatbotMark";
-import LanguageChoice from "./LanguageChoice";
+import WorkspaceHeader from "./WorkspaceHeader";
+import { useWorkspaceNavigation } from "./WorkspaceNavigation";
+import "../app/dashboard.css";
+import "../app/presentation.css";
+import "../app/landing.css";
 import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
 import { getFlowNode } from "../lib/guided-flow.mjs";
 import { getConciseAnswer, getSourceEvidence, paginate, splitText } from "../lib/guided-presentation.mjs";
@@ -17,6 +21,7 @@ const flowHash = (path: string[]) => path.length > 1 ? `#flow=${encodeURICompone
 
 export default function GuidedWorkspace({ lang, bundle, manifest, embedded = false }: Props) {
   const { session, setSession } = useGuidedSession();
+  const { href } = useWorkspaceNavigation(bundle, "chat");
   const [downloadError, setDownloadError] = useState<string | null>(null);
   const [pending, setPending] = useState<{ label: string; origin: string } | null>(null);
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -158,12 +163,9 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
   const Main = embedded ? "div" : "main";
   const Heading = embedded ? "h3" : "h1";
   const DetailHeading = embedded ? "h4" : "h2";
-  return <div className={`chat-preview guided-workspace${embedded ? " guided-embedded" : ""}`} lang={lang}>
+  return <div className={`chat-preview guided-workspace${embedded ? " guided-embedded" : " dashboard-shell dashboard-redesign standalone-chat"}`} lang={lang}>
     {!embedded && <a className="skip" href="#guided-answer">{say("Skip to questions", "Tsallaka zuwa tambayoyi")}</a>}
-    {!embedded && <header className="chat-header">
-      <span className="chat-kicker">MOHAMMED ABBA ISA</span>
-      <LanguageChoice lang={lang} destinations={{ en: "/chat/" + flowHash(path), ha: "/ha/chat/" + flowHash(path) }} />
-    </header>}
+    {!embedded && <WorkspaceHeader lang={lang} page="chat" href={href} />}
     <Main className="guided-main">
       <section className="guided-conversation" aria-label={say("Guided conversation", "Tattaunawa mai jagora")}>
         <div className="guided-frame-header"><span className="guided-guide-mark"><ChatbotMark /></span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{say("Questions, stories and sources", "Tambayoyi, labarai da tushe")}</span></div></div>

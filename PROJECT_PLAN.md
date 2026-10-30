@@ -1,5 +1,35 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Owner save and next direction — 30 October 2026
+
+Owner requested committing and pushing the completed Home / Explore / Chat work
+as the next source checkpoint on main. Existing full implementation validation
+remains recorded in docs/VALIDATION.md; fresh save-time preflight and whitespace
+checks pass. This save changes no application code after that validation.
+
+Next owner-directed pass, not implemented by this save:
+1. Make the landing interface more interactive, with motion that runs on its own.
+   Retain stable clickable areas, Pause motion and reduced-motion support.
+2. Apply one final visual/interaction polish.
+3. Add an About the designer page showing the owner’s profile, with a clear way
+   for the owner to update the profile. Obtain actual profile details rather than
+   inventing a biography or claiming an editing mechanism already exists.
+
+The next-pass items above are future work. The source checkpoint is not a public
+deployment; Hausa draft status, image rights and reveal gates remain unchanged.
+
+## Home / Explore / Chat implemented locally — 30 October 2026
+
+The previous framed bilingual visual checkpoint and advocacy heading rename were
+committed/pushed as `dc77efc`. The approved restructuring now lives locally:
+Home has portrait/quote plus four bubbles; `/explore/` and `/ha/explore/` hold the
+sourced dashboard; activity questions open dedicated Chat. Shared page/language
+navigation preserves selections and conversation. Motion controls, legacy routing
+and image fallbacks are implemented. Read docs/HOME_EXPLORE_CHAT_2026-10-30.md.
+Validation evidence and delivery status are in HANDOFF.md and docs/VALIDATION.md.
+No new production dependency, deployment, approval flag or frozen-data change.
+Hausa, reuse rights and public-reveal limits remain unchanged.
+
 ## Framed chapters and bilingual visual identity — 30 October 2026
 
 Owner requested and authorised this local refinement after saved baseline 6a21eea.

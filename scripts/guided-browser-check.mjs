@@ -84,7 +84,7 @@ try {
   await compact();
   await page.getByRole("button", { name: "Previous", exact: true }).click();
   const colors = await page.locator('.guided-options > button').evaluateAll((buttons) => buttons.map((button) => ({ background: getComputedStyle(button).backgroundColor, color: getComputedStyle(button).color })));
-  assert.deepEqual(colors.map((entry) => entry.background), ['rgb(23, 83, 59)', 'rgb(255, 255, 255)', 'rgb(23, 83, 59)']);
+  assert.deepEqual(colors.map((entry) => entry.background), ['rgb(21, 97, 70)', 'rgb(255, 255, 255)', 'rgb(21, 97, 70)']);
   assert.equal(colors[0].color, 'rgb(255, 255, 255)');
   const portraitCursor = '/branding/abba-isa-cursor.png';
   const cursorResponse = await context.request.get(base + portraitCursor);
@@ -95,7 +95,7 @@ try {
   assert.equal(cursorBytes.readUInt32BE(16), 48);
   assert.equal(cursorBytes.readUInt32BE(20), 64);
   assert.match(await page.locator('html').evaluate((element) => getComputedStyle(element).cursor), /4 3, auto/);
-  for (const selector of ['html', 'body', '.guided-workspace', '.chat-header', '#guided-question', '.guided-options > button', '.guided-cursor-control']) {
+  for (const selector of ['html', 'body', '.guided-workspace', '.dashboard-header', '#guided-question', '.guided-options > button', '.guided-cursor-control']) {
     assert.ok((await page.locator(selector).first().evaluate((element) => getComputedStyle(element).cursor)).includes(portraitCursor), `photo cursor missing on ${selector}`);
   }
   await page.mouse.move(2, 2);

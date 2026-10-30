@@ -1,0 +1,174 @@
+import { chromium } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import assert from "node:assert/strict";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { buildDashboardPresentation } from "../apps/web/lib/dashboard-presentation.mjs";
+
+const base = process.env.TEST_URL || "http://127.0.0.1:8767";
+const bundle = JSON.parse(await readFile("content/dashboard/v1/bundle.json", "utf8"));
+const data = buildDashboardPresentation(bundle);
+const browser = await chromium.launch({ headless: true, ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}) });
+const context = await browser.newContext({ viewport: { width: 1440, height: 1050 } });
+const page = await context.newPage();
+const results = { date: new Date().toISOString(), base, completed: false, checks: [], axe: [], errors: [], failedResponses: [], externalRequests: [] };
+page.on("pageerror", e => results.errors.push(e.message));
+page.on("response", r => { if (r.status() >= 400) results.failedResponses.push(r.url()); });
+page.on("request", r => { if (new URL(r.url()).origin !== new URL(base).origin) results.externalRequests.push(r.url()); });
+await mkdir("output/playwright", { recursive: true });
+const nav = () => page.locator(".dashboard-navigation");
+async function audit(label) {
+  const a = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+  results.axe.push({ label, violations: a.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) })) });
+}
+async function layout() {
+  await page.evaluate(() => document.fonts.ready.then(() => true));
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "horizontal overflow");
+  const language = page.getByRole("group", { name: "Change language / Canja harshe", exact: true });
+  assert.equal(await language.count(), 1);
+  const en = await language.getByRole("link", { name: "English", exact: true }).boundingBox();
+  const ha = await language.getByRole("link", { name: "Hausa", exact: true }).boundingBox();
+  assert.ok(en && ha && en.y + en.height <= ha.y, "visible, vertically stacked locale control");
+  const boxes = await page.locator(".landing-bubble").evaluateAll(links => links.map(link => {
+    const b = link.getBoundingClientRect(); return { x: b.x, y: b.y, r: b.right, b: b.bottom, width: b.width, height: b.height };
+  }));
+  assert.equal(boxes.length, 4);
+  boxes.forEach((a, i) => {
+    assert.ok(a.width >= 44 && a.height >= 44);
+    boxes.slice(i + 1).forEach(b => assert.ok(a.r <= b.x || b.r <= a.x || a.b <= b.y || b.b <= a.y, "overlapping bubble hit areas"));
+  });
+}
+try {
+  await page.goto(base + "/");
+  await page.locator(".landing-workspace").waitFor();
+  await layout();
+  assert.equal(await page.locator("h1").innerText(), "Advancing Disability Inclusion");
+  assert.equal(await page.locator("[data-highlight],.guided-embedded").count(), 0);
+  assert.match(await page.locator(".opening-portrait blockquote").innerText(), /Our strength lies/);
+  const image = await page.locator(".opening-portrait img").boundingBox();
+  const opening = await page.locator(".dashboard-opening").boundingBox();
+  assert.ok(Math.abs(image.x + image.width / 2 - opening.x - opening.width / 2) < 2);
+  assert.equal(await page.locator(".opening-portrait img").evaluate(el => getComputedStyle(el).objectFit), "contain");
+  assert.notEqual(await page.locator(".brand-portrait img").getAttribute("src"), await page.locator(".opening-portrait img").getAttribute("src"));
+  await audit("English landing desktop");
+  await page.screenshot({ path: "output/playwright/landing-desktop.png", fullPage: true });
+  const bubble = page.locator(".bubble-overview");
+  const hitbox = await bubble.boundingBox();
+  await page.waitForTimeout(350);
+  assert.deepEqual(await bubble.boundingBox(), hitbox, "floating contents must not move the link target");
+  await page.getByRole("button", { name: "Pause motion", exact: true }).click();
+  assert.equal(await page.locator(".bubble-surface").first().evaluate(el => getComputedStyle(el).animationName), "none");
+  await page.reload();
+  await page.getByRole("button", { name: "Resume motion", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Resume motion", exact: true }).click();
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  assert.equal(await page.locator(".bubble-surface").first().evaluate(el => getComputedStyle(el).animationName), "none");
+  results.checks.push("Home retains centred sourced portrait/title/quote; four fixed hit areas, persistent pause and reduced-motion override");
+
+  for (const [id, section] of [["overview", "overview"], ["advocacy", "advocacy"], ["collaborations", "collaborations"]]) {
+    await page.goto(base + "/");
+    const link = page.locator(`.bubble-${id}`);
+    await link.focus(); await page.keyboard.press("Enter");
+    await page.waitForURL(url => url.pathname === "/explore/" && url.searchParams.get("section") === section);
+    await page.waitForFunction(id => document.activeElement?.id === id, section);
+    assert.equal(await page.locator(".opening-portrait,.guided-embedded").count(), 0);
+    await page.goBack(); await page.locator(".landing-workspace").waitFor();
+    await page.goForward(); await page.locator(".explore-workspace").waitFor();
+    await page.reload(); await page.locator(".explore-workspace").waitFor();
+    assert.equal(new URL(page.url()).searchParams.get("section"), section);
+  }
+  await page.goto(base + "/");
+  await page.locator(".bubble-chat").click();
+  await page.locator('#guided-answer[data-node="start"]').waitFor();
+  assert.equal(new URL(page.url()).pathname, "/chat/");
+  results.checks.push("All four bubbles support keyboard/touch-style links, direct sections, refresh and browser Back/Forward; new chat starts at welcome");
+
+  const concept = data.concepts[0].id;
+  const collaboration = data.collaborations.find(c => c.id === "toolkit-developers");
+  const actor = collaboration.participants[0].id;
+  const query = `area=health-welfare&term=${concept}&initiative=${collaboration.id}&actor=${actor}&section=collaborations`;
+  const flow = "#flow=" + encodeURIComponent("start|programmes");
+  await page.goto(base + "/explore/?" + query + flow);
+  await page.locator('[data-area="health-welfare"][aria-pressed="true"]').waitFor();
+  await nav().getByRole("link", { name: "Chat", exact: true }).click();
+  await page.locator('#guided-answer[data-node="programmes"]').waitFor();
+  await nav().getByRole("link", { name: "Home", exact: true }).click();
+  await page.locator(".landing-workspace").waitFor();
+  assert.equal(new URL(page.url()).searchParams.get("view"), "home");
+  await page.reload(); await page.locator(".landing-workspace").waitFor();
+  await page.getByRole("link", { name: "Hausa", exact: true }).click();
+  await page.locator('.landing-workspace[lang="ha"]').waitFor();
+  assert.equal(await page.locator(".quote-translation-status").innerText(), "Fassarar Hausa ta gwaji");
+  assert.equal(await page.locator(".opening-portrait blockquote").getAttribute("lang"), "ha");
+  assert.match(await page.locator(".quote-original").innerText(), /Asalin magana/);
+  await page.locator(".bubble-chat").click();
+  await page.locator('#guided-answer[data-node="programmes"]').waitFor();
+  assert.equal(new URL(page.url()).pathname, "/ha/chat/");
+  await nav().getByRole("link", { name: "Bincika", exact: true }).click();
+  await page.locator('.explore-workspace[lang="ha"]').waitFor();
+  assert.equal(new URL(page.url()).searchParams.get("area"), "health-welfare");
+  assert.equal(new URL(page.url()).searchParams.get("term"), concept);
+  assert.equal(new URL(page.url()).searchParams.get("actor"), actor);
+  assert.equal(new URL(page.url()).searchParams.get("initiative"), collaboration.id);
+  assert.equal(await page.locator("#advocacy-title").innerText(), "Jigogin fafutukarsa.");
+  assert.ok(decodeURIComponent(new URL(page.url()).hash).includes("start|programmes"));
+  results.checks.push("Home/Explore/Chat and locale changes retain figures, concepts, actor/initiative, entry section and conversation across refresh; Hausa remains visibly draft");
+
+  await page.goto(base + "/?area=health-welfare&section=advocacy" + flow);
+  await page.waitForURL(url => url.pathname === "/explore/" && url.searchParams.get("area") === "health-welfare");
+  assert.equal(new URL(page.url()).hash, flow);
+  await page.goto(base + "/" + flow);
+  await page.waitForURL(url => url.pathname === "/explore/" && url.hash === flow);
+  await page.goto(base + "/ha/#collaborations");
+  await page.waitForURL(url => url.pathname === "/ha/explore/" && url.searchParams.get("section") === "collaborations");
+  await page.goto(base + "/#ask-records"); await page.waitForURL(/\/chat\//);
+  await page.goto(base + "/explore/?section=unrecognised&area=invalid");
+  await page.waitForURL(url => !url.searchParams.has("section") && !url.searchParams.has("area"));
+  await page.goto(base + "/ha/explore/?section=overview" + flow);
+  await page.locator(".explore-sections").getByRole("link", { name: "Jigogi", exact: true }).click();
+  await page.waitForFunction(() => document.activeElement?.id === "advocacy");
+  await page.locator(".explore-sections").getByRole("link", { name: "Jigogi", exact: true }).click();
+  await page.waitForFunction(() => document.activeElement?.id === "advocacy");
+  await page.goBack();
+  await page.goBack();
+  await page.waitForURL(url => url.searchParams.get("section") === "overview");
+  await page.waitForFunction(() => document.activeElement?.id === "overview");
+  await page.goto(base + "/explore/?initiative=toolkit-developers&section=collaborations");
+  await page.locator(".network-detail .detail-actions button").click();
+  await page.waitForURL(url => url.pathname === "/chat/");
+  await page.locator('#guided-answer[data-node="activity:disability-readiness-toolkit-2025"]').waitFor();
+  await nav().getByRole("link", { name: "Explore", exact: true }).click();
+  await page.locator('[data-selected-initiative="toolkit-developers"]').waitFor();
+  assert.equal(new URL(page.url()).searchParams.get("record"), "disability-readiness-toolkit-2025");
+  assert.equal(await page.locator("html").getAttribute("data-photo-cursor"), "true");
+  results.checks.push("Recognised legacy dashboard queries/hashes forward to Explore (old chat anchor to Chat); invalid sections/selections are discarded independently of flow");
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(base + "/ha/"); await layout(); await audit("Hausa landing phone");
+  await page.screenshot({ path: "output/playwright/landing-hausa-phone.png", fullPage: true });
+  await page.setViewportSize({ width: 320, height: 720 });
+  await page.addStyleTag({ content: "html { font-size: 200% !important; }" });
+  await layout(); await audit("Landing 320px 200% text");
+  await page.emulateMedia({ forcedColors: "active" }); await layout();
+  await page.setViewportSize({ width: 1440, height: 1050 });
+  await page.emulateMedia({ forcedColors: "none" });
+  await page.route("**/branding/mohammed-abba-isa-seated.jpg", route => route.fulfill({ status: 200, contentType: "image/jpeg", body: "invalid image" }));
+  await page.goto(base + "/");
+  await page.locator(".portrait-fallback").waitFor();
+  assert.match(await page.locator(".opening-portrait figcaption").innerText(), /Our strength lies/);
+  assert.equal(await page.locator(".landing-bubble").count(), 4);
+  await page.unroute("**/branding/mohammed-abba-isa-seated.jpg");
+  const visuals = JSON.parse(await readFile("content/dashboard-visual-assets.json", "utf8"));
+  await page.route("**" + visuals.header.localPath, route => route.fulfill({ status: 200, contentType: "image/jpeg", body: "invalid image" }));
+  await page.reload();
+  await page.waitForFunction(() => document.querySelector(".brand-portrait")?.textContent === "MAI");
+  assert.equal(await nav().getByRole("link").count(), 3);
+  await page.unroute("**" + visuals.header.localPath);
+  results.checks.push("Phone and enlarged text layouts, forced colours and failed portrait keep readable labels, sources and usable destinations");
+  assert.deepEqual(results.errors, []); assert.deepEqual(results.failedResponses, []); assert.deepEqual(results.externalRequests, []);
+  assert.ok(results.axe.every(a => !a.violations.length), JSON.stringify(results.axe));
+  results.completed = true;
+  console.log(JSON.stringify(results, null, 2));
+} finally {
+  await writeFile("output/landing-browser-results.json", JSON.stringify(results, null, 2) + "\n");
+  await browser.close();
+}

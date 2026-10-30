@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-30T14:34:52.350Z",
+  "date": "2026-10-30T14:46:43.993Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
@@ -11,7 +11,7 @@
     "Source disclosures retain population, role, limits and all supporting citations; incompatible actor/initiative/area deep links normalise safely",
     "Activity catalogue starts collapsed; graph selection focuses source details directly; explicit browse control exposes all 33 records and direct branch opens its 24-record selection",
     "Response dots precede local answers; duplicate clicks, restart and locale navigation cancel stale transitions; reduced motion skips dots and delay; local image hashes match their provenance records",
-    "Five bordered chapters, centred full-frame photograph, different visible header portrait, draft Hausa quote, local calligraphic headings and meaningful heading actions; activity thumbnails and six source-identified organisation logos retain provenance"
+    "Explore retains three bordered source chapters, calligraphic headings and meaningful actions; activity thumbnails and six source-identified organisation logos retain provenance"
   ],
   "axe": [
     {

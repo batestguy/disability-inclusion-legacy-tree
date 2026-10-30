@@ -6,6 +6,6 @@ import { DashboardSessionProvider } from "./DashboardSession";
 
 export default function WorkspaceSession({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()?.replace(/\/$/, "") || "/";
-  const cursorActive = ["/", "/ha", "/chat", "/ha/chat"].includes(pathname);
+  const cursorActive = ["/", "/ha", "/chat", "/ha/chat", "/explore", "/ha/explore"].includes(pathname);
   return <GuidedSessionProvider cursorActive={cursorActive}><DashboardSessionProvider>{children}</DashboardSessionProvider></GuidedSessionProvider>;
 }
