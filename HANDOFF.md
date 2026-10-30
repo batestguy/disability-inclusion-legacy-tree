@@ -1,5 +1,36 @@
 # Project handoff
 
+## About / Methodology — 30 October 2026
+
+Owner requested a methodology section under About covering scraping through
+text analysis. Added `/about/`, `/about/methodology/` and draft Hausa equivalents
+under `/ha/`. About is a project overview with a prominent Methodology link;
+the designer biography and profile editing mechanism remain future work pending
+actual owner details. Shared header now includes About and keeps the visible,
+vertically stacked English/Hausa control. Selection and guided-flow URLs carry
+through informational navigation; reading anchors do not reset chat history.
+
+Methodology distinguishes WordPress API collection and Beautiful Soup HTML
+extraction, exact-text deduplication, source-context curation, English TF-IDF/NMF,
+manual multilabel categories and the separate phrase-count cloud. It documents
+the selected 30-text model rather than presenting the exploratory archive-wide
+fit as the current model. No new scrape, fit, source approval or public release.
+See docs/ABOUT_METHODOLOGY_2026-10-30.md and the latest docs/VALIDATION.md entry.
+
+Owner subsequently requested committing and pushing this checkpoint to main.
+Save-time preflight and whitespace checks pass; origin/main matched HEAD before
+the save. This source save does not authorise public deployment.
+
+Preflight, lint, typecheck, all 69 unit
+tests, full web/Studio build and final web rebuild pass. Final browser checks:
+methodology six axe states, landing five groups/three states, Explore nine/seven
+and Chat eight/five; zero violations, page errors, failed responses or runtime
+external requests. The existing landing image-fallback assertion now checks
+Home / Explore / Chat / About labels rather than the old three-link count.
+Methodology also preserves a selected concept and valid flow through locale,
+reload and reading anchors, and fits 320px/enlarged text. Screenshots/results are
+retained by `.gitignore`; exact evidence is in docs/VALIDATION.md. No public release.
+
 ## Owner save and next direction — 30 October 2026
 
 Owner requested committing and pushing the completed Home / Explore / Chat work

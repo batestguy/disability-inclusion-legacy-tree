@@ -161,7 +161,7 @@ try {
   await page.route("**" + visuals.header.localPath, route => route.fulfill({ status: 200, contentType: "image/jpeg", body: "invalid image" }));
   await page.reload();
   await page.waitForFunction(() => document.querySelector(".brand-portrait")?.textContent === "MAI");
-  assert.equal(await nav().getByRole("link").count(), 3);
+  assert.deepEqual(await nav().getByRole("link").allTextContents(), ["Home", "Explore", "Chat", "About"]);
   await page.unroute("**" + visuals.header.localPath);
   results.checks.push("Phone and enlarged text layouts, forced colours and failed portrait keep readable labels, sources and usable destinations");
   assert.deepEqual(results.errors, []); assert.deepEqual(results.failedResponses, []); assert.deepEqual(results.externalRequests, []);

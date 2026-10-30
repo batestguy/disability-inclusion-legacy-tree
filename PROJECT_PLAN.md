@@ -1,5 +1,17 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## About / Methodology — 30 October 2026
+
+Owner requested `/about/methodology` to explain collection through text analysis.
+Implemented English and visibly draft Hausa project-About and Methodology pages,
+with shared navigation and language control. Methodology covers the actual
+collection/extraction, review, TF-IDF/NMF, manual categories, phrase counts,
+connections, guided chat and limitations. The designer profile and editing flow
+remain pending actual owner details; the new About page does not invent them.
+See docs/ABOUT_METHODOLOGY_2026-10-30.md and docs/VALIDATION.md. Local work only;
+no new model/data, dependency, review approval or public deployment. Owner later
+authorised saving and pushing the completed methodology checkpoint to main.
+
 ## Owner save and next direction — 30 October 2026
 
 Owner requested committing and pushing the completed Home / Explore / Chat work

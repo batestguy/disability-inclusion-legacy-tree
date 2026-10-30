@@ -39,3 +39,5 @@ output/playwright/*
 !output/playwright/chat-*.png
 !output/playwright/dashboard-*.png
 !output/playwright/landing-*.png
+!output/playwright/methodology-*.png
+!output/playwright/methodology-results.json

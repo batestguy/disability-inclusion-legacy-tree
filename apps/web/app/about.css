@@ -1,0 +1,36 @@
+.about-workspace .about-main { max-width: 1040px; padding-block: 24px 56px; }
+.about-subnav { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 24px; font-size: .9375rem; }
+.about-subnav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); text-underline-offset: 4px; }
+.about-subnav a[aria-current] { font-weight: 700; }
+.about-article { border: 2px solid var(--inclusion-line); border-top: 4px solid var(--inclusion-blue); border-radius: 18px; background: var(--inclusion-paper); padding: 32px clamp(16px, 5vw, 64px); }
+.about-intro { max-width: 44rem; margin-bottom: 32px; }
+.about-intro h1 { font-family: 'Briem Hand', 'Source Sans 3', cursive; font-weight: 600; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.35; margin: 8px 0 16px; color: var(--inclusion-green); }
+.about-lead { font-size: 1.25rem; line-height: 1.5; color: var(--inclusion-muted); }
+.about-draft { border-left: 3px solid var(--inclusion-gold); padding: 8px 12px; background: var(--inclusion-gold-soft); margin-top: 16px; }
+.methodology-steps { list-style: none; padding: 0; margin: 0; }
+.methodology-steps > li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding-block: 24px; border-top: 1px solid var(--inclusion-line); }
+.methodology-number { color: var(--inclusion-blue); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.5; }
+.about-article h2 { font-size: 1.25rem; line-height: 1.4; margin: 0 0 12px; font-weight: 700; text-wrap: balance; }
+.methodology-steps p, .about-overview > p { margin: 0; line-height: 1.75; max-width: 70ch; }
+.methodology-settings { margin-top: 16px; padding: 16px; border: 1px solid var(--inclusion-line); border-radius: 8px; background: var(--inclusion-tint); }
+.methodology-settings summary { min-height: 44px; align-content: center; cursor: pointer; font-weight: 700; }
+.methodology-settings p { margin-block: 16px; }
+.methodology-settings dl > div { margin-block: 12px; }
+.methodology-settings dt { font-weight: 700; }
+.methodology-settings dd { margin: 4px 0 0; }
+.methodology-settings ul { padding-left: 24px; }
+.methodology-settings a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); text-underline-offset: 4px; }
+.about-method-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; margin-top: 24px; border: 1px solid var(--inclusion-line); border-radius: 8px; color: var(--inclusion-green); background: var(--inclusion-tint); text-decoration: none; }
+.about-method-link small { display: block; margin-top: 4px; color: var(--inclusion-muted); }
+.about-method-link:hover { border-color: var(--inclusion-green); }
+.about-workspace a:focus-visible, .about-workspace summary:focus-visible { outline: 3px solid var(--inclusion-focus); outline-offset: 4px; }
+@media (max-width: 600px) {
+  .about-workspace .about-main { padding-block: 16px 32px; }
+  .about-article { padding: 24px 16px; border-radius: 12px; }
+  .methodology-steps > li { grid-template-columns: 28px minmax(0, 1fr); gap: 8px; }
+  .about-lead { font-size: 1.125rem; }
+}
+@media (forced-colors: active) {
+  .about-article, .about-method-link, .methodology-settings { border-color: CanvasText; }
+  .about-workspace a { color: LinkText; }
+}

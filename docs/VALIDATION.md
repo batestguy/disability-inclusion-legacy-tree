@@ -1,5 +1,42 @@
 # Validation evidence - 22 October 2026
 
+## About / Methodology — 30 October 2026
+
+Local project About and nested Methodology pages added in English and visibly
+draft Hausa. See [implementation record](ABOUT_METHODOLOGY_2026-10-30.md).
+
+- `npm.cmd run preflight`: passes; repeated at handoff.
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for both workspaces, repeated
+  after the shared navigation correction.
+- `npm.cmd test`: all 69 tests pass. Frozen data and approval flags are unchanged.
+- `npm.cmd run build`: web export and Studio pass. Final web-only rebuild passes
+  after flow restoration and heading-font adjustments; all four new routes export.
+- `node output/playwright/methodology-check.mjs`: passes against the final export.
+  Four direct routes render; six axe states (About, Methodology and open technical
+  details in both locales) have zero violations. Locale controls are visible and
+  vertically stacked. At 320px and doubled root text size there is no horizontal
+  overflow. Explore → About → Methodology → Hausa → reload → skip link → Explore
+  retains the selected concept and a valid conversation path. Zero page errors,
+  failed responses or runtime external requests. Results and desktop/Hausa phone
+  screenshots are retained locally under `output/playwright/methodology-*`.
+- `npm.cmd run test:dashboard-browser`: passes nine groups / seven axe states,
+  zero violations, page errors, failed responses or runtime external requests.
+- `npm.cmd run test:chat-browser`: passes eight groups / five axe states, with
+  zero violations, page errors, failed responses or runtime external requests.
+- `npm.cmd run test:landing-browser`: passes five groups / three axe states,
+  zero violations/errors/failures/external requests. Updated its image-fallback
+  assertion to check Home / Explore / Chat / About labels after the About addition.
+- `git -c safe.directory=D:/HonAbbas diff --check`: passes. The per-command safe
+  directory setting handles the sandbox-owned `.git`; no global config/ACL edit.
+
+Screenshots were visually inspected at desktop and Hausa phone widths. The
+methodology was checked against collection, preprocessing, phrase-extraction and
+selected-model records; no new scrape or model fit was performed. This does not
+certify Hausa wording or independently confirm office-reported delivery. Public
+release, reuse permissions and review gates remain pending. No deployment.
+Owner subsequently authorised a source commit/push to main; save-time preflight
+and whitespace checks pass, and origin/main matched HEAD before the save.
+
 ## Home / Explore / Chat — 30 October 2026
 
 Previous framed visual checkpoint saved/pushed as `dc77efc` (remote main verified).

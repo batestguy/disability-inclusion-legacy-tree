@@ -15,7 +15,7 @@ export default function WorkspaceHeader({ lang, page, href }: Props) {
   return <header className="dashboard-header"><div className="dashboard-header-inner">
     <Link className="dashboard-brand" href={href("home", lang)} prefetch={false}><span className="brand-portrait" aria-hidden="true">{failed ? "MAI" : <Image onError={() => setFailed(true)} src={visualAssets.header.localPath} width={540} height={600} sizes="56px" alt="" />}</span><div>MOHAMMED ABBA ISA<small>{say("DISABILITY INCLUSION", "SHIGAR MASU NAKASA")}</small></div></Link>
     <nav className="dashboard-navigation" aria-label={say("Main navigation", "Babban kewayawa")}>
-      {(["home", "explore", "chat"] as const).map(target => <Link key={target} href={href(target, lang)} prefetch={false} aria-current={page === target ? "page" : undefined}>{target === "home" ? say("Home", "Gida") : target === "explore" ? say("Explore", "Bincika") : say("Chat", "Tattauna")}</Link>)}
+      {(["home", "explore", "chat", "about"] as const).map(target => <Link key={target} href={href(target, lang)} prefetch={false} aria-current={page === target ? "page" : page === "about/methodology" && target === "about" ? "location" : undefined}>{target === "home" ? say("Home", "Gida") : target === "explore" ? say("Explore", "Bincika") : target === "chat" ? say("Chat", "Tattauna") : say("About", "Game da shafin")}</Link>)}
     </nav>
     <LanguageChoice lang={lang} destinations={{ en: href(page, "en"), ha: href(page, "ha") }} />
   </div></header>;

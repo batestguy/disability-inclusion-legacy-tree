@@ -1,0 +1,37 @@
+{
+  "completed": true,
+  "checks": [
+    "Four direct routes render; shared language links are visible and vertically stacked; six axe states audited; model details and source links open.",
+    "Hausa methodology has no overflow at 320px or with doubled root text size.",
+    "Explore → About → Methodology → Hausa → reload → skip link → Explore preserves selected concept and valid chat path."
+  ],
+  "axe": [
+    {
+      "label": "/about/",
+      "violations": []
+    },
+    {
+      "label": "/about/methodology/",
+      "violations": []
+    },
+    {
+      "label": "/about/methodology/ expanded",
+      "violations": []
+    },
+    {
+      "label": "/ha/about/",
+      "violations": []
+    },
+    {
+      "label": "/ha/about/methodology/",
+      "violations": []
+    },
+    {
+      "label": "/ha/about/methodology/ expanded",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "externalRequests": []
+}

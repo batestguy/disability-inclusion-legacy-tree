@@ -9,7 +9,7 @@ import { getFlowNode } from "../lib/guided-flow.mjs";
 import type { getChatData } from "../lib/chat-data";
 import type { Lang } from "../lib/content";
 
-export type WorkspacePage = "home" | "explore" | "chat";
+export type WorkspacePage = "home" | "explore" | "chat" | "about" | "about/methodology";
 export type ExploreSection = "overview" | "advocacy" | "collaborations";
 export const exploreSection = (value: string | null): ExploreSection | null =>
   value === "overview" || value === "advocacy" || value === "collaborations" ? value : null;
@@ -76,6 +76,9 @@ export function useWorkspaceNavigation(bundle: ReturnType<typeof getChatData>["b
   useEffect(() => {
     if (page === "chat") return; // The guide also restores its forward history and evidence screen.
     function readFlow() {
+      // Restore shared flow links on informational pages, but leave reading
+      // anchors (including the skip link) out of the conversation history.
+      if ((page === "about" || page === "about/methodology") && !location.hash.startsWith("#flow=")) return;
       let path = ["start"];
       try {
         if (location.hash.startsWith("#flow=")) {

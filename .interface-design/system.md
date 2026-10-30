@@ -1,5 +1,15 @@
 # Inclusion scorecard
 
+## About / Methodology — 30 October 2026
+
+Project About and nested Methodology reuse the shared header and locale control.
+About joins Home / Explore / Chat in navigation. Reading surface: maximum 1040px,
+white framed chapter with a blue top edge, Briem Hand title, Source Sans body.
+Numbered stages use a 40px / flexible text grid (28px on phones), 16px / 8px gap,
+24px vertical rhythm and paragraphs capped at 70ch. Native disclosure holds model
+parameters and implementation links. Draft Hausa banner stays visible above the
+methodology. This is the project About, not the pending designer biography.
+
 ## Home / Explore / Chat — 30 October 2026
 
 Owner-approved local structure: Home retains the centred portrait/quote and four
