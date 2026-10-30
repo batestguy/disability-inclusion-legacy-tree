@@ -1,0 +1,38 @@
+{
+  "publicApproved": false,
+  "haReviewed": false,
+  "hero": {
+    "localPath": "/branding/mohammed-abba-isa-seated.jpg",
+    "sourcePage": "https://societynow.ng/details-mohammed-abba-isa-is-ssa-to-president-tinubu-on-disability-matters/",
+    "sourceAsset": "https://societynow.ng/wp-content/uploads/2023/11/398976363_799703158832892_2346522787742736672_n-e1699553860670-718x600.jpg",
+    "sha256": "e23504cce5a98bdd23dc54169205f822ff81a428768694aba106f832beb477dc",
+    "width": 718,
+    "height": 600,
+    "modifications": "Original source bytes unchanged; complete frame displayed with object-fit contain. No facial retouching, generation or body extension.",
+    "identityBasis": "The featured photograph accompanies SocietyNow's appointment article naming Mohammed Abba Isa. Its face was visually compared with the previously identified office portrait; the selected image shows a different pose, clothing and a small smile.",
+    "reusePermission": "No rights-holder licence or public-reuse permission was established. Owner requested local prototype use; this is not recorded as a rights-holder licence.",
+    "publicApproved": false
+  },
+  "header": {
+    "localPath": "/branding/mohammed-abba-isa.webp",
+    "sourceManifest": "content/dashboard-portrait.json",
+    "modifications": "CSS crop around the formal portrait cap and face; source bytes unchanged.",
+    "publicApproved": false
+  },
+  "icon": {
+    "source": "https://lucide.dev/icons/bot-message-square",
+    "license": "ISC",
+    "licensePath": "/branding/chatbot-icon-LICENSE.txt"
+  },
+  "font": {
+    "family": "Briem Hand",
+    "source": "https://github.com/google/fonts/tree/main/ofl/briemhand",
+    "licensePath": "/fonts/briem-hand/OFL.txt",
+    "hausaHookedLettersChecked": true
+  },
+  "thumbnails": {
+    "kind": "Original topic illustrations; existing source-identified NigWED photograph for nigwed-skills-2024 only",
+    "photographManifest": "content/dashboard-speaking-photo.json",
+    "publicApproved": false
+  }
+}

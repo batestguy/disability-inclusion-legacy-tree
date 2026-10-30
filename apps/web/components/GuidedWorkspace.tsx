@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import ChatbotMark from "./ChatbotMark";
 import LanguageChoice from "./LanguageChoice";
 import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
 import { getFlowNode } from "../lib/guided-flow.mjs";
@@ -165,7 +166,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     </header>}
     <Main className="guided-main">
       <section className="guided-conversation" aria-label={say("Guided conversation", "Tattaunawa mai jagora")}>
-        <div className="guided-frame-header"><span className="guided-guide-mark" aria-hidden="true">↗</span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{say("Questions, stories and sources", "Tambayoyi, labarai da tushe")}</span></div></div>
+        <div className="guided-frame-header"><span className="guided-guide-mark"><ChatbotMark /></span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{say("Questions, stories and sources", "Tambayoyi, labarai da tushe")}</span></div></div>
         {(preparing || path.length > 1 || session.view !== "answer" || session.cursor < session.path.length - 1) && <nav className="guided-toolbar" aria-label={say("Conversation navigation", "Kewayawa a tattaunawa")}>
           {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={back}>← {say("Back", "Koma baya")}</button>}
           {session.view === "answer" && session.cursor < session.path.length - 1 && <button type="button" onClick={() => navigate(session.path.slice(0, session.cursor + 2), true)}>{say("Next", "Gaba")} →</button>}

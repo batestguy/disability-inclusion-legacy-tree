@@ -3,6 +3,7 @@
 import type { Presentation } from "./DashboardWorkspace";
 import type { Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
+import { scrollAndFocus } from "../lib/scroll-focus";
 import ContributionIllustration from "./ContributionIllustration";
 import "../app/highlights.css";
 
@@ -28,7 +29,7 @@ export default function DashboardHighlights({ lang, bundle, data, area, onArea }
     </article>;
   }
   return <section id="overview" className="contribution-section" tabIndex={-1} aria-labelledby="contributions-heading">
-    <div className="section-heading inclusion-heading"><div><p className="dashboard-eyebrow">I. {say("Contribution in figures", "Gudummawa a cikin lambobi")}</p><h2 id="contributions-heading">{say("Inclusion takes", "Shigar kowa tana da")} <span>{say("many forms.", "hanyoyi da yawa.")}</span></h2></div></div>
+    <div className="section-heading inclusion-heading interactive-heading"><div><p className="dashboard-eyebrow">I. {say("Contribution in figures", "Gudummawa a cikin lambobi")}</p><h2 id="contributions-heading" className="calligraphy-title">{say("Inclusion in action.", "Shigar kowa a aikace.")}</h2></div><button type="button" className="heading-action" onClick={() => scrollAndFocus(document.querySelector<HTMLElement>(".contribution-categories button"))}>{say("Choose an area", "Zaɓi fanni")} <span aria-hidden="true">↘</span></button></div>
     <div className="contribution-layout"><nav className="contribution-categories" aria-label={say("Contribution categories", "Rukunonin gudummawa")}>{data.groups.map((entry) => <button key={entry.id} type="button" data-area={entry.id} aria-pressed={group.id === entry.id} onClick={() => onArea(entry.id)}>{entry.label[lang]}<span aria-hidden="true">↗</span></button>)}</nav>
       <div className="contribution-results" data-area-panel={group.id} aria-live="polite" aria-atomic="false"><h3 className="active-area-heading">{group.label[lang]}</h3><p className="sr-only" role="status">{say(`${figures.length} sourced figures shown`, `An nuna lambobi ${figures.length} masu tushe`)}</p>
         {achievements.length > 0 && <section aria-labelledby="reported-heading"><h4 id="reported-heading" className="figure-group-title">{say("Reported achievements", "Nasarorin da aka ruwaito")}</h4><div className="contribution-grid">{achievements.map(card)}</div></section>}

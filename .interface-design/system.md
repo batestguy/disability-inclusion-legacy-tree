@@ -1,5 +1,28 @@
 # Inclusion scorecard
 
+## Framed chapters and calligraphic headings — 30 October 2026
+
+Owner supersedes the small right-aligned opening portrait: use the complete seated
+SocietyNow photograph at up to 440px wide, centred, original 718:600 frame, no face
+retouching. Header uses the different formal office portrait in a 56px desktop /
+40px phone CSS face crop. Hausa quote now translates on /ha/ with draft label and
+English-original disclosure; source English remains canonical.
+
+Five sections have full 2px #9ab4a8 borders, 4px accent top edges, 18px desktop /
+12px phone radii and 24px / 12–16px internal padding. White surfaces remain; green
+intro/figures/chat, blue cloud and purple connections accents. Card density within
+panels remains compact. Large headings use local OFL Briem Hand 600, verified Hausa
+hooked letters; all data, labels and options remain Source Sans. Adjacent labelled
+heading actions focus real controls. No decorative click or invented engagement metric.
+
+Large chat invitation: Interact with me / Mu tattauna, Lucide bot-message-square
+mark at 112px / 88px phone, with a labelled jump into the existing question flow.
+Recorded activities use 52×48 original topic thumbnails and the established NigWED
+source photo only for that initiative. Logo tiles preserve full geometry with flex
+contain fitting; SMEDAN's white wordmark uses a dark green tile, no recolouring.
+Five additional official-source logos are local prototype graphics, not public-
+reuse approval. Sources, licence files and hashes in visual/network manifests.
+
 ## Activity catalogue disclosure — 30 October 2026
 
 Network activity cards are collapsed by default behind View all 33 activities

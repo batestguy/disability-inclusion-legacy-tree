@@ -77,6 +77,25 @@ try {
   assert.equal(await page.locator('[data-highlight]').count(), 13);
   assert.ok((await page.locator('.opening-portrait img').boundingBox()).width >= 250);
   assert.match(await page.locator('.opening-portrait blockquote').innerText(), /Our strength lies/);
+  const heroBox = await page.locator('.opening-portrait img').boundingBox();
+  const openingBox = await page.locator('.dashboard-opening').boundingBox();
+  assert.ok(Math.abs(heroBox.x + heroBox.width / 2 - openingBox.x - openingBox.width / 2) < 2, 'intro photograph must be centred');
+  assert.equal(await page.locator('.opening-portrait img').evaluate(img => getComputedStyle(img).objectFit), 'contain');
+  assert.notEqual(await page.locator('.brand-portrait img').getAttribute('src'), await page.locator('.opening-portrait img').getAttribute('src'));
+  const frames = await page.locator('.dashboard-opening, .contribution-section, .advocacy-section, .collaboration-section, .dashboard-chat-section').evaluateAll(sections => sections.map(section => ({ side: parseFloat(getComputedStyle(section).borderLeftWidth), top: parseFloat(getComputedStyle(section).borderTopWidth) })));
+  assert.equal(frames.length, 5);
+  assert.ok(frames.every(frame => frame.side >= 2 && frame.top >= 4), 'major sections need clear full borders');
+  assert.match(await page.locator('#contributions-heading').evaluate(el => getComputedStyle(el).fontFamily), /Briem Hand/);
+  await page.getByRole('button', { name: 'Choose an area', exact: true }).click();
+  assert.equal(await area('all').evaluate(el => el === document.activeElement), true);
+  await page.getByRole('button', { name: 'Choose a topic', exact: true }).click();
+  assert.equal(await page.locator('.concept-cloud button').first().evaluate(el => el === document.activeElement), true);
+  await page.getByRole('button', { name: 'Explore an area', exact: true }).click();
+  assert.equal(await page.locator('[data-network-area]').evaluate(el => el === document.activeElement), true);
+  await page.locator('.chat-start-action').click();
+  assert.equal(await chat().evaluate(el => el === document.activeElement), true);
+  assert.equal(await page.locator('.chat-invitation svg').count(), 1);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
   assert.equal(await page.locator('.dashboard-opening').getByText('OPPORTUNITY. ACCESS. PARTICIPATION.').count(), 0);
   assert.equal(await page.locator('.dashboard-shell').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 255, 255)');
   assert.equal(await page.locator('.highlight-number').first().innerText(), '>500', 'larger reported programme figures should lead');
@@ -163,6 +182,12 @@ try {
   const drawnEdges = await page.locator('[data-actor-edge]').evaluateAll(edges => edges.map(edge => `${edge.dataset.actorEdge}:${edge.dataset.activityEdge}`).sort());
   assert.deepEqual(drawnEdges, presentation.collaborations.flatMap(c => c.participants.filter(p => p.id !== 'mohammed-abba-isa').map(p => `${p.id}:${c.activityId}`)).sort());
   await page.locator('#collaborations').screenshot({ path: 'output/playwright/dashboard-redesign-network.png' });
+  const clippedLogos = await page.locator('.pathway-person .collage-avatar.is-logo img').evaluateAll(images => images.filter(image => {
+    const box = image.getBoundingClientRect(), tile = image.parentElement.getBoundingClientRect();
+    return box.width > tile.width + 1 || box.height > tile.height + 1 || getComputedStyle(image).objectFit !== 'contain';
+  }).map(image => image.src));
+  assert.deepEqual(clippedLogos, [], 'organisation logos must fit fully within their tiles');
+
   await page.locator('[data-network-map-initiative="toolkit-developers"]').click();
   assert.equal(await page.locator('.participant-roles > div').count(), 2);
   assert.match(await page.locator('.participant-roles').innerText(), /Deaf-in-Tech.*DataLead/s);
@@ -191,6 +216,7 @@ try {
     await next.click();
   } while (true);
   assert.deepEqual(allActivities, bundle.activities.map((activity) => activity.id));
+  assert.equal(await page.locator('[data-network-activity] .activity-thumbnail').count(), await page.locator('[data-network-activity]').count());
   await page.locator('.network-browser > summary').click();
   assert.equal(await page.locator('.network-browser').evaluate(el => el.open), false);
   await page.locator('.pathway-direct').click();
@@ -211,11 +237,18 @@ try {
   await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).click();
   await page.getByRole('link', { name: 'Hausa', exact: true }).click();
   await page.locator('.dashboard-shell[lang="ha"]').waitFor();
+  const portraitMetadata = JSON.parse(await readFile('content/dashboard-portrait.json', 'utf8'));
+  assert.match(await page.locator('.opening-portrait blockquote').innerText(), new RegExp(portraitMetadata.hausa_translation));
+  assert.equal(await page.locator('.opening-portrait blockquote').getAttribute('lang'), 'ha');
+  assert.equal(await page.locator('.quote-translation-status').innerText(), 'Fassarar Hausa ta gwaji');
+  await page.evaluate(() => document.fonts.ready.then(() => true));
+  assert.ok(await page.evaluate(() => document.fonts.check('600 32px "Briem Hand"', 'ɓɗƙƴƁƊƘƳ')));
   assert.equal(await area('health-welfare').getAttribute('aria-pressed'), 'true');
   assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"]`).getAttribute('aria-pressed'), 'true');
   assert.equal(await chat().getAttribute('data-node'), activeNode);
   await page.setViewportSize({ width: 390, height: 844 });
   await cloudAppearance(2);
+  assert.equal(await page.locator('.brand-portrait').isVisible(), true);
   await geometry(); await audit('Hausa phone');
   assert.equal(await page.locator('.network-map').isVisible(), false);
   assert.equal(await page.locator('.network-list').isVisible(), true);
@@ -247,6 +280,13 @@ try {
   assert.equal(provenance.public_approved, false);
   results.checks.push('Activity catalogue starts collapsed; graph selection focuses source details directly; explicit browse control exposes all 33 records and direct branch opens its 24-record selection');
   const networkAssets = JSON.parse(await readFile('content/dashboard-network-assets.json', 'utf8'));
+  const visualAssets = JSON.parse(await readFile('content/dashboard-visual-assets.json', 'utf8'));
+  const heroAsset = await context.request.get(base + visualAssets.hero.localPath);
+  assert.equal(heroAsset.status(), 200);
+  assert.equal(createHash('sha256').update(await heroAsset.body()).digest('hex'), visualAssets.hero.sha256);
+  assert.equal(visualAssets.publicApproved, false);
+  assert.equal(visualAssets.haReviewed, false);
+  assert.equal(networkAssets.assets.filter(asset => asset.kind === 'logo').length, 6);
   for (const image of networkAssets.assets) {
     const response = await context.request.get(base + image.localPath);
     assert.equal(response.status(), 200);
@@ -283,7 +323,8 @@ try {
   await page.locator('.guided-options [data-target="programmes"]').click();
   assert.equal(await chat().getAttribute('data-node'), 'programmes');
   assert.equal(await page.locator('.guided-thinking').count(), 0);
-  results.checks.push('Response dots precede local answers; duplicate clicks, restart and locale navigation cancel stale transitions; reduced motion skips dots and delay; licensed local image hashes match');
+  results.checks.push('Response dots precede local answers; duplicate clicks, restart and locale navigation cancel stale transitions; reduced motion skips dots and delay; local image hashes match their provenance records');
+  results.checks.push('Five bordered chapters, centred full-frame photograph, different visible header portrait, draft Hausa quote, local calligraphic headings and meaningful heading actions; activity thumbnails and six source-identified organisation logos retain provenance');
   assert.deepEqual(results.errors, []); assert.deepEqual(results.failedResponses, []); assert.deepEqual(results.externalRequests, []);
   assert.ok(results.axe.every((entry) => !entry.violations.length), JSON.stringify(results.axe));
   results.completed = true;

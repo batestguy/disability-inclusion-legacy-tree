@@ -14,7 +14,8 @@
       "sha256": "8094107db7d63670b0baefe337669c430da341932ff2b942e3e3dd11c10feb1a",
       "modifications": "Proportional resize to 240px width and WebP encoding; CSS display crop only. No retouching.",
       "checked": "2026-10-30",
-      "publicApproved": false
+      "publicApproved": false,
+      "kind": "logo"
     },
     {
       "id": "ali-pate",
@@ -29,22 +30,109 @@
       "sha256": "b874792f5b5604349835a0faaabf772ee748d78b2cf1140898abecbd9faaadde",
       "modifications": "Proportional resize to 240px width and WebP encoding; CSS display crop only. No retouching.",
       "checked": "2026-10-30",
-      "publicApproved": false
+      "publicApproved": false,
+      "kind": "portrait"
+    },
+    {
+      "id": "datalead",
+      "label": "DataLead Africa",
+      "file": "datalead.webp",
+      "kind": "logo",
+      "page": "https://www.dataleadafrica.com/",
+      "author": "Official organisation website; individual designer not identified",
+      "license": "Public reuse permission unverified; local prototype identification only",
+      "licenseUrl": "https://www.dataleadafrica.com/",
+      "sourceAsset": "https://www.dataleadafrica.com/logo.svg",
+      "sourceSha256": "54ddca1a6855ce13c64b1bf478c2e104d0a20998d6dd268ef29e1bb2be3a46c6",
+      "localPath": "/branding/network/datalead.webp",
+      "sha256": "c321676a179e8a1796cfcc99a18ab875839adf00f5f25355f45aa599a3a23bb0",
+      "modifications": "Proportional resize and WebP encoding. Original colours and geometry preserved; no redraw.",
+      "checked": "2026-10-30",
+      "publicApproved": false,
+      "localPreviewOnly": true
+    },
+    {
+      "id": "african-unconquered",
+      "label": "African Unconquered Foundation",
+      "file": "african-unconquered.webp",
+      "kind": "logo",
+      "page": "https://africaunconquered.org/",
+      "author": "Official organisation website; individual designer not identified",
+      "license": "Public reuse permission unverified; local prototype identification only",
+      "licenseUrl": "https://africaunconquered.org/",
+      "sourceAsset": "https://africaunconquered.org/wp-content/uploads/2024/09/logo.png",
+      "sourceSha256": "87ecdf9e3e7a94f402ab419d0b16542fd97c2cbfaeed38264c7043ac19e1e97d",
+      "localPath": "/branding/network/african-unconquered.webp",
+      "sha256": "773fcdcfd748b9080e1494365d7ce1dddb74430d4eee37844833495ce8327e73",
+      "modifications": "Proportional resize and WebP encoding. Original colours and geometry preserved; no redraw.",
+      "checked": "2026-10-30",
+      "publicApproved": false,
+      "localPreviewOnly": true
+    },
+    {
+      "id": "ncpwd",
+      "label": "NCPWD",
+      "file": "ncpwd.webp",
+      "kind": "logo",
+      "page": "https://ncpwd.gov.ng/",
+      "author": "Official organisation website; individual designer not identified",
+      "license": "Public reuse permission unverified; local prototype identification only",
+      "licenseUrl": "https://ncpwd.gov.ng/",
+      "sourceAsset": "https://ncpwd.gov.ng/logo1.png",
+      "sourceSha256": "db8317563573721e56ca84ff284792c37240dd5027efd0a9baa62e96e06b458e",
+      "localPath": "/branding/network/ncpwd.webp",
+      "sha256": "f342aeae9419ab82d1a6152545b927c7ec02ff54aeea7180e491c74c0bd15e1b",
+      "modifications": "Proportional resize and WebP encoding. Original colours and geometry preserved; no redraw.",
+      "checked": "2026-10-30",
+      "publicApproved": false,
+      "localPreviewOnly": true
+    },
+    {
+      "id": "elizade",
+      "label": "Elizade Autoland",
+      "file": "elizade.webp",
+      "kind": "logo",
+      "page": "https://jacnigeria.com/",
+      "author": "Official organisation website; individual designer not identified",
+      "license": "Public reuse permission unverified; local prototype identification only",
+      "licenseUrl": "https://jacnigeria.com/",
+      "sourceAsset": "https://jacnigeria.com/wp-content/uploads/2021/09/JAC-Elizade-logo.png",
+      "sourceSha256": "95e0c59a493bd4d42fac16104075b500ea56eea12e6a3235dde9955e7afee149",
+      "localPath": "/branding/network/elizade.webp",
+      "sha256": "4b45779a1fcf0fbbc0e5752de3cac773cdf7281d667cd2e30b3b615e17cc8c3a",
+      "modifications": "Proportional resize and WebP encoding. Original colours and geometry preserved; no redraw.",
+      "checked": "2026-10-30",
+      "publicApproved": false,
+      "localPreviewOnly": true
+    },
+    {
+      "id": "smedan",
+      "label": "SMEDAN",
+      "file": "smedan.webp",
+      "kind": "logo",
+      "page": "https://smedan.gov.ng/",
+      "author": "Official organisation website; individual designer not identified",
+      "license": "Public reuse permission unverified; local prototype identification only",
+      "licenseUrl": "https://smedan.gov.ng/",
+      "sourceAsset": "https://smedan.gov.ng/ (inline header logo SVG)",
+      "sourceSha256": "61daf1b053f4a91a036305051062676bf5284d58bd9703bba94eae9bfcb8813b",
+      "localPath": "/branding/network/smedan.webp",
+      "sha256": "e2479aee205e32593f792e24b8cc154738b34ab22d11dadeee3e8ba4e7d39d6b",
+      "modifications": "Proportional resize and WebP encoding. Original colours and geometry preserved; no redraw.",
+      "checked": "2026-10-30",
+      "publicApproved": false,
+      "localPreviewOnly": true,
+      "backdrop": "dark"
     }
   ],
   "fallbacks": {
     "reason": "No established reusable asset; original initials instead.",
     "ids": [
-      "african-unconquered",
-      "datalead",
       "deaf-in-tech",
-      "elizade",
       "fct-school-blind",
-      "ncpwd",
       "nigwed",
       "queen-tejuosho-foundation",
-      "red-cross",
-      "smedan"
+      "red-cross"
     ]
   }
 }

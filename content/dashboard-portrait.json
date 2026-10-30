@@ -5,17 +5,25 @@
   "gallery_inspected": "https://ossaposneo.org/gallery/",
   "source_asset": "https://ossaposneo.org/wp-content/uploads/2024/11/Mohammed-Aba-ss-720x800.png",
   "checked": "2026-10-27",
-  "source_dimensions": [720, 800],
+  "source_dimensions": [
+    720,
+    800
+  ],
   "source_sha256": "efded79bba77b441c973b8f5c8de5025f0e42c85c38e2b15c2e83a80a5afebef",
   "local_asset": "apps/web/public/branding/mohammed-abba-isa.webp",
-  "asset_dimensions": [540, 600],
+  "asset_dimensions": [
+    540,
+    600
+  ],
   "asset_sha256": "1bba50504c3dd6ab11e17972949fbed3ee5c31b9d92c5f0404c8bea702dd8592",
   "modifications": "Resize to 540px wide and encode WebP quality 85 using existing Sharp. Display uses a responsive crop; no facial generation or retouching.",
   "quote_excerpt": "Our strength lies not in the absence of challenges, but in our resilience to overcome them.",
   "quote_context": "First sentence of the quotation directly attributed to him on the official office homepage. This is a homepage attribution, not a verified speech transcript or an outcome claim.",
   "quote_language": "en",
-  "hausa_translation": null,
+  "hausa_translation": "Ƙarfinmu ba ya cikin rashin ƙalubale, sai dai a juriyarmu ta shawo kansu.",
   "photographer": "Not identified on the inspected homepage.",
   "reuse_permission": "No rights-holder licence or public-reuse permission established. Local owner-requested prototype only.",
-  "public_approved": false
+  "public_approved": false,
+  "hausa_reviewed": false,
+  "hausa_translation_status": "Draft translation of the sourced English excerpt for owner review; not a verified Hausa speech quotation."
 }

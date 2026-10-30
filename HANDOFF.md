@@ -1,5 +1,53 @@
 # Project handoff
 
+## Visual checkpoint save — 30 October 2026
+
+Owner authorised saving/pushing the framed bilingual visual refinements before
+the Home/Explore restructuring. Advocacy heading is now **Themes in his advocacy.**
+with visibly draft Hausa **Jigogin fafutukarsa.** Preflight, lint, typecheck, all
+69 unit tests and both browser suites pass (nine dashboard groups/seven axe states;
+eight chat groups/five axe states, no violations/errors/failures/external requests).
+Full web/Studio build passed before this source checkpoint was saved.
+Next: implement the approved bubbly Home, separate Explore and shared Chat locally.
+No deployment or release-gate changes are authorised by the source push.
+
+
+## Framed chapters and bilingual visual identity — 30 October 2026
+
+Owner requested and authorised this local refinement after saved baseline 6a21eea.
+Read [the research/build record](docs/VISUAL_REFINEMENT_2026-10-30.md).
+
+- Full 2px borders with 4px coloured chapter tops separate intro, figures, cloud,
+  connections and chatbot on white surfaces.
+- Centred full-frame seated photograph reuses the existing source-identified
+  SocietyNow image, including hands/wheelchair; original bytes unchanged. Header
+  initials are replaced with a different CSS-cropped formal office portrait.
+- /ha/ shows the draft Hausa quote, a visible translation-draft label and an
+  expandable English original. Quote and photo have distinct source links.
+- Self-hosted OFL Briem Hand gives short display headings a calligraphic style;
+  actual Hausa hooked-letter coverage checked. Figures/body/controls stay in
+  Source Sans. Heading actions focus contribution, cloud, network and chat controls.
+- Large Interact with me / Mu tattauna invitation uses Lucide's ISC robot/chat
+  symbol; the existing guided question flow is preserved.
+- Recorded activities have original topic illustrations, with the existing
+  source-identified NigWED event photograph used only for that activity.
+- Five more official-site graphics: DataLead Africa, Africa Unconquered, NCPWD,
+  Elizade/JAC Autoland and SMEDAN. Public reuse permission remains unverified;
+  local prototype identification only. Exact provenance/hashes are in
+  content/dashboard-network-assets.json; remaining unsupported images use initials.
+
+Validation passes: preflight, lint, typecheck, 69 unit tests, full web/Studio build,
+final web rebuild after image-fit correction, nine dashboard browser groups with
+seven zero-violation axe states, and eight standalone chat groups/five zero-violation
+axe states. Zero page errors, failed responses or runtime external requests in
+both suites. New checks cover framing, portrait centring/source hash, header photo,
+Hausa quote, typography/actions, thumbnails and full logo fitting. Failed NigWED
+image falls back to its original illustration. Desktop/phone visuals inspected.
+
+No dependency/frozen-data/approval changes. Hausa and translations remain draft;
+photo and new logo public-reuse/reveal gates persist. Changes are local and
+uncommitted; no publish/push requested. Preview: http://127.0.0.1:8767/ and /ha/.
+
 ## Owner save checkpoint — 30 October 2026
 
 Owner requested committing and pushing the completed local revision, then awaiting

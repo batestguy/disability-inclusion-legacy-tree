@@ -90,3 +90,5 @@
   .guided-workspace .guided-conversation, .guided-workspace .guided-answer, .guided-frame-header, .guided-thinking { background: Canvas; color: CanvasText; border-color: CanvasText; }
   .guided-visitor-bubble, .guided-guide-mark { background: Highlight; color: HighlightText; }
 }
+
+.guided-guide-mark svg { width: 28px; height: 28px; }
