@@ -1,5 +1,104 @@
 # Project handoff — 4 November 2026
 
+## Commit and push checkpoint — 4 November 2026
+
+Owner authorised committing and pushing the complete landing polish after the
+circular-portrait correction. This checkpoint includes the clear subject heading,
+3D planet navigation, side-falling concepts, Chat assistant wording, native cursor,
+footer motion preferences and responsive circular portrait. It supersedes earlier
+local/uncommitted status notes below. Validation: lint, typecheck, 75 tests, both
+builds, landing/locale browser checks and complete-orbit clearance checks passed;
+preflight passed again before saving. GitHub push/CI status is reported at delivery.
+No public website deployment is included.
+
+
+## Latest: circular portrait and clear planet paths — 4 November 2026
+
+Owner requested a circular photograph and smaller planets so the photo cannot
+block them. The original source bytes are preserved; Home now uses an explicitly
+recorded CSS circular crop (cover, 50% 38%). Desktop portrait is 360px with
+260px planets in a 1040–1080px arena; 1001–1200px uses 300px/240px. Tablet
+remains 220px/170px; 501–700px uses 140px/112px. Compact orbital radii use
+more of the available width. Below 300px of actual scene width, a stationary
+portrait and separate navigation grid keep every destination unobstructed.
+This supersedes earlier rectangular/full-frame Home display and size notes.
+Side-falling words, 3D movement, hover/focus pause and native cursor remain.
+Changes remain local; verification is recorded in docs/VALIDATION.md.
+
+
+## Latest: larger portrait-first opening and identifiable title
+
+Owner asked to enlarge the existing solar scene, beginning with the portrait,
+and add a clear page heading. Home now leads with **Hon. Mohammed Abba Isa**,
+**A record of inclusion**, and a short four-language subtitle explaining the
+reports, figures, themes and connections. Browser title/description match the
+broader sourced record rather than just numerical work.
+
+The main Home width is up to 1600px/96%; the portrait is 420px on desktop
+(previously 300px), with larger planets and an expanded orbital scene. Tablet/
+phone proportions are adjusted separately. The short biography/biography link
+now follow the scene, so visitors reach the portrait sooner. Source photo,
+quote, side-only concept lanes, motion controls, 42-second orbit, Chat assistant
+and native cursors remain. All changes stay local after d6ee2b5; verification
+is recorded in docs/VALIDATION.md.
+
+## Latest: solar-system planets, side-falling concepts and Chat assistant
+
+Owner clarified that the four navigation bubbles are the planets; concept-cloud
+words replace glitter, falling only by the portrait's sides. The portrait stays
+at the centre. SolarSystem.tsx now projects 3D position/scale/depth for a 42-second
+orbit, pausing on planet hover/focus and resuming from the same phase. Concept
+labels come from the existing validated cloud and stay in clipped side lanes.
+Footer effects preferences, reduced motion, hidden tabs and enlarged text are
+handled; the stationary fallback keeps all four destinations accessible.
+
+“Chat assistant” replaces the misleading “Interact with me” Home/Explore call
+to action, with Guided questions and answers as its four-language format label.
+Prepared-question chat itself, sources, conversation state, four-language
+navigation and native cursors remain. No lower preview block was restored.
+This direction supersedes earlier word-orbit interpretations and glitter notes.
+Work remains local/uncommitted after pushed checkpoint d6ee2b5. Validation is
+recorded in docs/VALIDATION.md.
+
+## Latest owner correction: simpler Home and native cursor
+
+Owner removed the entire “A glimpse of the story” preview block from Home.
+The four main navigation bubbles, motion and portrait-frame particles remain.
+Preview-only state, component, adapter, styles and tests have been removed.
+Owner also explicitly removed the photograph cursor: its global CSS rule,
+activation state and chat checkbox are gone. Standard browser cursors now apply
+throughout Home, Explore, About, permanent records and chat. Original image
+assets/provenance are retained as historical records, without cursor activation.
+This supersedes preview/photo-cursor requirements in earlier notes below.
+Changes remain local after pushed checkpoint d6ee2b5; see docs/VALIDATION.md.
+
+## Saved checkpoint and interactive landing implementation
+
+Owner approved committing/pushing the existing work, then implementing the
+celebratory landing plan locally. Source checkpoint **d6ee2b5** was committed
+and pushed to main at batestguy/disability-inclusion-legacy-tree. Both GitHub
+Actions jobs passed: https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/41797006953.
+This supersedes all older pending-save notes below.
+
+New landing work after that checkpoint remains local/uncommitted. The prominent
+Pause control is replaced by Home footer Appearance → Visual effects. New
+continuous portrait-frame particles, independent bubble motion, fine-pointer
+illustration tilt and keyboard emphasis respect the setting/system reduced
+motion; hidden tabs suspend animation. Links stay stationary and one tap.
+Connected-circle motifs and an inclusive four-language tagline frame the page.
+
+One shared preview panel uses existing source-bound NigWED figures, actual
+concept/report counts, documented vehicle collaboration and a prepared guide
+question. Hover/focus and four separate preview buttons select it. Source links,
+the existing locale control and record/conversation state are preserved.
+Copy: content/landing-interactions.json. Preview adapter:
+apps/web/lib/landing-previews.mjs. Effects and preview UI are in the matching
+LandingEffects/LandingPreviews components. No new dependency, inference,
+photo alteration, frozen-data change, public approval or deployment.
+
+The accepted implementation supersedes the old Pause requirement in the earlier
+landing proposal. Final verification is recorded in docs/VALIDATION.md.
+
 ## Latest: Isa-first About, agent workflow and landing plan
 
 Owner requested more biography/photos so Isa clearly leads About, an explanation

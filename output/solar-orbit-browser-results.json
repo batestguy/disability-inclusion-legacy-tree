@@ -1,0 +1,46 @@
+{
+  "completed": true,
+  "results": [
+    {
+      "width": 320,
+      "mode": "static",
+      "reason": "Keep portrait and all four controls clear on narrow screens"
+    },
+    {
+      "width": 1440,
+      "mode": "orbit",
+      "samples": 82,
+      "minimumGap": 41.2
+    },
+    {
+      "width": 1024,
+      "mode": "orbit",
+      "samples": 84,
+      "minimumGap": 55.2
+    },
+    {
+      "width": 768,
+      "mode": "orbit",
+      "samples": 85,
+      "minimumGap": 48
+    },
+    {
+      "width": 600,
+      "mode": "orbit",
+      "samples": 84,
+      "minimumGap": 89.5
+    },
+    {
+      "width": 390,
+      "mode": "orbit",
+      "samples": 84,
+      "minimumGap": 12.4
+    },
+    {
+      "width": 501,
+      "mode": "orbit",
+      "samples": 85,
+      "minimumGap": 42
+    }
+  ]
+}

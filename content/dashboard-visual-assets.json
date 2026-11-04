@@ -8,7 +8,7 @@
     "sha256": "e23504cce5a98bdd23dc54169205f822ff81a428768694aba106f832beb477dc",
     "width": 718,
     "height": 600,
-    "modifications": "Original source bytes unchanged; complete frame displayed with object-fit contain. No facial retouching, generation or body extension.",
+    "modifications": "Original source bytes unchanged; owner-requested circular CSS display crop using object-fit cover at 50% 38%. No facial retouching, generation or body extension.",
     "identityBasis": "The featured photograph accompanies SocietyNow's appointment article naming Mohammed Abba Isa. Its face was visually compared with the previously identified office portrait; the selected image shows a different pose, clothing and a small smile.",
     "reusePermission": "No rights-holder licence or public-reuse permission was established. Owner requested local prototype use; this is not recorded as a rights-holder licence.",
     "publicApproved": false

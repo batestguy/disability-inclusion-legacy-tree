@@ -44,10 +44,10 @@
     },
     "chat": {
       "format": {
-        "en": "Guided chat assistant",
-        "ha": "Mataimakin tattaunawa mai jagora",
-        "yo": "Olùrànlọ́wọ́ ìjíròrò pẹ̀lú ìtọ́sọ́nà",
-        "ig": "Onye enyemaka mkparịta ụka nwere nduzi"
+        "en": "Guided questions and answers",
+        "ha": "Tambayoyi da amsoshi masu jagora",
+        "yo": "Àwọn ìbéèrè àti ìdáhùn pẹ̀lú ìtọ́sọ́nà",
+        "ig": "Ajụjụ na azịza nwere nduzi"
       },
       "invitation": {
         "en": "Choose a question. Explore his work.",

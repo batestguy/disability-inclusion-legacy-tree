@@ -75,7 +75,7 @@ async function cloudAppearance(minimumRatio) {
 }
 try {
   await page.goto(base + '/explore/?year=2024&category=healthcare-welfare');
-  await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), null);
   await area('all').filter({ has: page.locator('span') }).waitFor();
   await page.waitForURL((url) => !url.searchParams.has('year') && !url.searchParams.has('category'));
   assert.equal(await page.locator('h1').innerText(), 'Explore the record');

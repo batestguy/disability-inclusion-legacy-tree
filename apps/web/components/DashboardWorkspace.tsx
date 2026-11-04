@@ -66,7 +66,7 @@ export default function DashboardWorkspace({ lang, bundle }: Props) {
     <a className="skip" href="#dashboard-main">{say("Skip to dashboard", "Tsallaka zuwa bayanai")}</a>
     <WorkspaceHeader lang={lang} page="explore" href={href} />
     <main id="dashboard-main" className="dashboard-main" tabIndex={-1}>
-      <div className="explore-heading"><div><h1>{say("Explore the record", "Bincika bayanan")}</h1></div><Link href={href("chat", lang)} prefetch={false}>{say("Interact with me", "Mu tattauna")} ↗</Link></div>
+      <div className="explore-heading"><div><h1>{say("Explore the record", "Bincika bayanan")}</h1></div><Link href={href("chat", lang)} prefetch={false}>{say("Chat assistant", "Mataimakin tattaunawa")} ↗</Link></div>
       <nav className="explore-sections" aria-label={say("Explore sections", "Sassan bincike")}>
         <Link onClick={enterSection} href={href("explore", lang, "overview")} prefetch={false}>{say("Figures", "Lambobi")}</Link>
         <Link onClick={enterSection} href={href("explore", lang, "advocacy")} prefetch={false}>{say("Themes", "Jigogi")}</Link>

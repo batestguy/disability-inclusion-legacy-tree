@@ -40,7 +40,7 @@ while (queue.length) {
   collect(node); collect(getConciseAnswer(node));
   node.options.forEach(option => queue.push(option.target));
 }
-const active = ["AboutWorkspace", "AboutBiography", "DashboardAdvocacy", "DashboardEvidence", "DashboardHighlights", "DashboardNetwork", "DashboardWorkspace", "GuidedWorkspace", "HomeWorkspace", "OpeningPortrait", "Permanent", "Preferences", "Record", "WorkspaceFooter", "WorkspaceHeader"];
+const active = ["AboutWorkspace", "AboutBiography", "DashboardAdvocacy", "DashboardEvidence", "DashboardHighlights", "DashboardNetwork", "DashboardWorkspace", "GuidedWorkspace", "HomeWorkspace", "LandingEffects", "SolarSystem", "OpeningPortrait", "Permanent", "Preferences", "Record", "WorkspaceFooter", "WorkspaceHeader"];
 for (const [dir, names] of [["apps/web/components", active.map(name => name + ".tsx")], ["apps/web/lib", ["methodology.ts"]]]) {
   for (const name of names) {
     const source = ts.createSourceFile(name, await readFile(`${dir}/${name}`, "utf8"), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
@@ -70,8 +70,9 @@ const biographyTexts = checkLocalized(JSON.parse(await readFile("content/about.j
 const interactionTexts = checkLocalized(JSON.parse(await readFile("content/interaction-copy.json", "utf8")));
 const methodologyTexts = checkLocalized(JSON.parse(await readFile("content/methodology-summary.json", "utf8")));
 const workflowTexts = checkLocalized(JSON.parse(await readFile("content/methodology-workflow.json", "utf8")));
+const landingTexts = checkLocalized(JSON.parse(await readFile("content/landing-interactions.json", "utf8")));
 const missing = Object.fromEntries(["yo", "ig"].map(lang => [lang, [...texts].filter(text => !properNames.has(text) && /[A-Za-z]/.test(text) && translate(lang, text) === text).sort()]));
 await mkdir("output", { recursive: true });
-await writeFile("output/locale-coverage.json", JSON.stringify({ auditedTexts: texts.size, biographyTexts, interactionTexts, methodologyTexts, workflowTexts, guidedNodes: visited.size, missing }, null, 2));
-console.log(JSON.stringify({ auditedTexts: texts.size, biographyTexts, interactionTexts, methodologyTexts, workflowTexts, guidedNodes: visited.size, missing: Object.fromEntries(Object.entries(missing).map(([lang, values]) => [lang, values.length])) }));
+await writeFile("output/locale-coverage.json", JSON.stringify({ auditedTexts: texts.size, biographyTexts, interactionTexts, methodologyTexts, workflowTexts, landingTexts, guidedNodes: visited.size, missing }, null, 2));
+console.log(JSON.stringify({ auditedTexts: texts.size, biographyTexts, interactionTexts, methodologyTexts, workflowTexts, landingTexts, guidedNodes: visited.size, missing: Object.fromEntries(Object.entries(missing).map(([lang, values]) => [lang, values.length])) }));
 if (process.argv.includes("--check") && Object.values(missing).some(values => values.length)) process.exitCode = 1;

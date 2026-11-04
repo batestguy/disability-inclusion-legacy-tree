@@ -1,0 +1,44 @@
+{
+  "appearance": {
+    "en": "Appearance",
+    "ha": "Kyan shafi",
+    "yo": "Ìrísí",
+    "ig": "Ọdịdị"
+  },
+  "effects": {
+    "en": "Visual effects",
+    "ha": "Tasirin gani",
+    "yo": "Àwọn ipa ìrísí",
+    "ig": "Mmetụta anya"
+  },
+  "reducedMotion": {
+    "en": "Your device’s reduced-motion preference is active.",
+    "ha": "Zaɓin rage motsi na na’urarka yana aiki.",
+    "yo": "Àṣàyàn dídín ìṣípò kù ti ẹ̀rọ rẹ ń ṣiṣẹ́.",
+    "ig": "Nhọrọ ibelata mmegharị nke ngwaọrụ gị na-arụ ọrụ."
+  },
+  "statement": {
+    "en": "A record of inclusion",
+    "ha": "Tarihin shigar da kowa",
+    "yo": "Àkọsílẹ̀ ìkó gbogbo ènìyàn sí",
+    "ig": "Ndekọ nsonye mmadụ niile"
+  },
+  "begin": {
+    "en": "Where shall we begin?",
+    "ha": "Ina za mu fara?",
+    "yo": "Níbo ni ká ti bẹ̀rẹ̀?",
+    "ig": "Ebee ka anyị ga-amalite?"
+  },
+  "title": {
+    "en": "Hon. Mohammed Abba Isa",
+    "ha": "Hon. Mohammed Abba Isa",
+    "yo": "Hon. Mohammed Abba Isa",
+    "ig": "Hon. Mohammed Abba Isa"
+  },
+  "subtitle": {
+    "en": "Disability inclusion, documented through reports, figures, themes and connections.",
+    "ha": "Shigar da masu nakasa, da aka rubuta ta rahotanni, lambobi, jigogi da alaƙoƙi.",
+    "yo": "Ìkó àwọn aláàbò ara sí, tí a ṣe àkọsílẹ̀ rẹ̀ nípasẹ̀ ìròyìn, nọ́ńbà, àkòrí àti ìbáṣepọ̀.",
+    "ig": "Nsonye ndị nwere nkwarụ, e dekọrọ site na akụkọ, ọnụọgụ, isiokwu na njikọ."
+  }
+}

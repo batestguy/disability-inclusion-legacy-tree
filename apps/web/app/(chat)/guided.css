@@ -29,8 +29,6 @@
 .guided-facts strong { display: block; font-weight: 600; }
 .guided-draft { margin: 0.7rem 0; color: #58674f; font-size: 0.72rem; text-align: center; }
 .guided-preferences { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 1rem; }
-.guided-cursor-control { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; color: #3e5a42; font-size: 0.72rem; }
-.guided-cursor-control input { width: 18px; height: 18px; accent-color: #17533b; }
 .guided-source-link { display: block; font-size: 0.9rem; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
 .guided-meta { color: #5d6c54; font-size: 0.75rem; margin: 0.6rem 0 1rem; }
 .guided-detail :is(h2, h4) { font-size: 0.8rem; font-weight: 600; margin: 1rem 0 0.6rem; }
@@ -49,14 +47,6 @@
 }
 .guided-embedded.chat-preview { min-height: 0; background: transparent; }
 .guided-embedded .guided-main { width: 100%; margin: 0; }
-@media (hover: hover) and (pointer: fine) and (forced-colors: none) {
-  html[data-photo-cursor="true"], html[data-photo-cursor="true"] * {
-    cursor: url('/branding/abba-isa-cursor.png') 4 3, auto !important;
-  }
-}
-@media (hover: none), (pointer: coarse) {
-  .guided-cursor-control { display: none; }
-}
 @media (forced-colors: active) {
   .guided-conversation, .guided-options > button { border: 1px solid CanvasText; }
   .guided-options > button:nth-child(n), .guided-options > button:nth-child(n):hover { background: Canvas; color: CanvasText; border-color: CanvasText; }

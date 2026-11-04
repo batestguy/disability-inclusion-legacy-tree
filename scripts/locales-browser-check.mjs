@@ -32,6 +32,7 @@ async function layout(code, label, audit = true) {
   const crowded = await page.locator(".bubble-surface").evaluateAll(surfaces => surfaces.filter(surface => {
     const frame = surface.getBoundingClientRect();
     return Array.from(surface.children).some(child => {
+      if (getComputedStyle(child).display === "none") return false;
       const rect = child.getBoundingClientRect();
       return rect.left < frame.left - 1 || rect.right > frame.right + 1 || rect.top < frame.top - 1 || rect.bottom > frame.bottom + 1;
     });
@@ -71,7 +72,7 @@ try {
     await page.setViewportSize({ width: 1440, height: 1050 });
     await page.goto(`${base}/${code}/`);
     await layout(code, `${code}: home desktop`);
-    assert.equal(await page.locator("h1").innerText(), translate(code, "Advancing Disability Inclusion"));
+    assert.equal(await page.locator("h1").innerText(), "Hon. Mohammed Abba Isa");
     assert.notEqual(await page.locator(".bubble-chat strong").innerText(), "Interact with me");
     await page.locator(".quote-original summary").click();
     assert.ok((await page.locator('.quote-original p[lang="en"]').innerText()).length > 30);
@@ -126,6 +127,15 @@ try {
     await loaded(code);
     assert.equal(await page.locator('[data-translation-status="draft"]').count(), 1);
     assert.ok((await page.locator(".record-content h2").innerText()).length > 5);
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    for (const width of [1440, 390]) {
+      await page.setViewportSize({ width, height: 1050 });
+      await page.goto(`${base}/${code}/`);
+      await page.locator('.solar-system[data-mode="orbit"]').waitFor();
+      await page.locator('.bubble-overview').focus();
+      await layout(code, `${code}: active solar orbit ${width}px`);
+    }
+    await page.emulateMedia({ reducedMotion: "reduce" });
     results.checks.push(`${code}: 320px Home/Explore/Chat/Methodology, enlarged reading text and permanent record`);
   }
   assert.deepEqual(results.errors, []);

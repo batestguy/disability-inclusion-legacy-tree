@@ -1,7 +1,7 @@
 "use client";
 import { translate, localeHome } from "../lib/locales.mjs";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import WorkspaceHeader from "./WorkspaceHeader";
@@ -9,6 +9,7 @@ import WorkspaceFooter from "./WorkspaceFooter";
 import OpeningPortrait from "./OpeningPortrait";
 import ChatbotMark from "./ChatbotMark";
 import ContributionIllustration from "./ContributionIllustration";
+import { LandingEffectsSettings, useLandingEffects } from "./LandingEffects";
 import interactionCopy from "../../../content/interaction-copy.json";
 import { exploreSection, useWorkspaceNavigation, type ExploreSection } from "./WorkspaceNavigation";
 import type { Lang } from "../lib/content";
@@ -19,8 +20,8 @@ import "../app/landing.css";
 
 export default function HomeWorkspace({ lang, bundle }: ReturnType<typeof getChatData> & { lang: Lang }) {
   const router = useRouter();
-  const { href } = useWorkspaceNavigation(bundle, "home");
-  const [paused, setPaused] = useState(false);
+  const { data, href } = useWorkspaceNavigation(bundle, "home");
+  const effects = useLandingEffects();
   const say = (en: string, ha: string) => translate(lang, en, ha);
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
@@ -40,34 +41,26 @@ export default function HomeWorkspace({ lang, bundle }: ReturnType<typeof getCha
     legacy(); window.addEventListener("popstate", legacy); window.addEventListener("hashchange", legacy);
     return () => { window.removeEventListener("popstate", legacy); window.removeEventListener("hashchange", legacy); };
   }, [lang, router]);
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => { try { setPaused(sessionStorage.getItem("landing-motion-paused") === "true"); } catch { /* Optional preference only. */ } });
-    return () => cancelAnimationFrame(frame);
-  }, []);
-  function toggleMotion() {
-    const next = !paused; setPaused(next);
-    try { sessionStorage.setItem("landing-motion-paused", String(next)); } catch { /* Optional preference only. */ }
-  }
   const bubbles: { id: ExploreSection | "chat"; en: string; ha: string }[] = [
     { id: "overview", en: "Figures", ha: "Lambobi" },
     { id: "advocacy", en: "Themes", ha: "Jigogi" },
     { id: "collaborations", en: "Connections", ha: "Haɗin gwiwa" },
-    { id: "chat", en: "Interact with me", ha: "Mu tattauna" },
+    { id: "chat", en: "Chat assistant", ha: "Mataimakin tattaunawa" },
   ];
-  return <div className="dashboard-shell dashboard-redesign landing-workspace" lang={lang}>
+  const destinations: Record<ExploreSection | "chat", string> = {
+    overview: href("explore", lang, "overview"), advocacy: href("explore", lang, "advocacy"),
+    collaborations: href("explore", lang, "collaborations"), chat: href("chat", lang),
+  };
+  return <div className="dashboard-shell dashboard-redesign landing-workspace" lang={lang} data-effects={effects.active ? "on" : "off"} data-page-hidden={effects.hidden}>
     <a className="skip" href="#home-main">{say("Skip to content", "Tsallaka zuwa abun ciki")}</a>
     <WorkspaceHeader lang={lang} page="home" href={href} />
     <main id="home-main" className="dashboard-main" tabIndex={-1}>
-      <OpeningPortrait lang={lang} biographyHref={href("about", lang)} />
-      <section className="landing-choices" aria-labelledby="landing-choices-title" data-paused={paused}>
-        <div className="landing-choice-heading"><h2 id="landing-choices-title" className="calligraphy-title">{say("Where shall we begin?", "Ina za mu fara?")}</h2><button type="button" className="motion-toggle" aria-pressed={paused} onClick={toggleMotion}>{paused ? say("Resume motion", "Ci gaba da motsi") : say("Pause motion", "Dakatar da motsi")}</button></div>
-        <div className="bubble-constellation">
-          {bubbles.map(bubble => <Link key={bubble.id} className={`landing-bubble bubble-${bubble.id}`} href={bubble.id === "chat" ? href("chat", lang) : href("explore", lang, bubble.id)} prefetch={false}>
-            <span className="bubble-surface"><span className="bubble-art" aria-hidden="true">{bubble.id === "chat" ? <ChatbotMark /> : <ContributionIllustration activityId={bubble.id === "overview" ? "startup-support-march-2024" : bubble.id === "advocacy" ? "disability-readiness-toolkit-2025" : "inclusive-business-skills"} unit={bubble.id === "advocacy" ? "toolkit" : "people"} />}</span><strong>{say(bubble.en, bubble.ha)}</strong><span className="bubble-detail"><span className="bubble-format">{interactionCopy.tools[bubble.id].format[lang]}</span><span className="bubble-invitation">{interactionCopy.tools[bubble.id].invitation[lang]} <span aria-hidden="true">↗</span></span></span></span>
-          </Link>)}
-        </div>
-      </section>
-      <WorkspaceFooter lang={lang} />
+      <OpeningPortrait lang={lang} biographyHref={href("about", lang)} active={effects.active} suspended={effects.hidden} terms={data?.concepts ?? []} planets={
+        bubbles.map(bubble => <Link key={bubble.id} className={`landing-bubble bubble-${bubble.id}`} href={destinations[bubble.id]} prefetch={false} aria-label={`${say(bubble.en, bubble.ha)} — ${interactionCopy.tools[bubble.id].format[lang]}. ${interactionCopy.tools[bubble.id].invitation[lang]}`}>
+          <span className="bubble-surface"><span className="bubble-art" aria-hidden="true">{bubble.id === "chat" ? <ChatbotMark /> : <ContributionIllustration activityId={bubble.id === "overview" ? "startup-support-march-2024" : bubble.id === "advocacy" ? "disability-readiness-toolkit-2025" : "inclusive-business-skills"} unit={bubble.id === "advocacy" ? "toolkit" : "people"} />}</span><strong>{say(bubble.en, bubble.ha)}</strong><span className="bubble-detail"><span className="bubble-format">{interactionCopy.tools[bubble.id].format[lang]}</span><span className="bubble-invitation">{interactionCopy.tools[bubble.id].invitation[lang]} <span aria-hidden="true">↗</span></span></span></span>
+        </Link>)
+      } />
+      <WorkspaceFooter lang={lang} controls={<LandingEffectsSettings lang={lang} enabled={effects.enabled} reduced={effects.reduced} onChange={effects.setEnabled} />} />
     </main>
   </div>;
 }

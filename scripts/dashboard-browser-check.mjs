@@ -65,7 +65,7 @@ async function exportCsv(name) {
 async function clear() { await openFilters(); await page.locator('.dashboard-reset').click(); await kpi('activities').filter({ hasText: /^33$/ }).waitFor(); }
 try {
   await page.goto(base + '/');
-  await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), null);
   await page.evaluate(() => document.fonts.ready.then(() => true));
   assert.equal(await kpi('activities').innerText(), '33');
   assert.equal(await kpi('reported').innerText(), '8');
@@ -192,13 +192,13 @@ try {
   await page.locator(`#guided-answer[data-node="measure:${karu.id}"]`).waitFor();
   assert.equal(new URL(page.url()).searchParams.get('activity'), 'karu-food-cash-2024');
   assert.equal(new URL(page.url()).searchParams.get('category'), 'healthcare-welfare');
-  await page.getByRole('checkbox', { name: 'Photo cursor', exact: true }).uncheck();
+  assert.equal(await page.getByRole('checkbox', { name: 'Photo cursor', exact: true }).count(), 0);
   await highlights.locator('[data-highlight-category="targets"]').click();
   await page.getByRole('link', { name: 'Hausa', exact: true }).focus(); await page.keyboard.press('Enter');
   await page.waitForURL(/\/ha\//);
   await page.locator('html[lang="ha"]').waitFor({ state: 'attached' });
   assert.equal(await page.locator('html').getAttribute('lang'), 'ha');
-  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), 'false');
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), null);
   assert.equal(await highlights.locator('[data-highlight-category="targets"]').getAttribute('aria-pressed'), 'true');
   assert.equal(await highlights.locator('[data-highlight]').count(), 1);
   assert.equal(await filter('activity').inputValue(), 'karu-food-cash-2024');
@@ -244,7 +244,7 @@ try {
   const permanent = reader().getByRole('link', { name: /Permanent achievement page/ });
   const permanentHref = await permanent.getAttribute('href');
   await permanent.click(); await page.waitForURL(/\/achievements\/inclusive-business-skills\//);
-  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), 'false');
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), null);
   assert.ok(permanentHref.includes('/achievements/'));
   for (const activity of bundle.activities.filter((activity) => activity.achievement_slug)) {
     for (const prefix of ['', '/ha']) {
@@ -255,7 +255,7 @@ try {
   results.checks.push('Existing permanent achievement URLs remain available in both languages; leaving the dashboard/chat layout restores a normal cursor');
 
   await page.goto(`${base}/?year=2025`);
-  await page.locator('html[data-photo-cursor="true"]').waitFor({ state: 'attached' });
+  assert.equal(await page.locator('html').getAttribute('data-photo-cursor'), null);
   await selectFilter('year', '2024');
   await page.goBack();
   assert.equal(await filter('year').inputValue(), '2025');

@@ -1,5 +1,171 @@
 # Validation evidence - 22 October 2026
 
+## Circular portrait and unobstructed solar navigation — 4 November 2026
+
+Home displays a true circular CSS crop of the original photograph, with the
+owner-requested crop recorded in visual-asset provenance. Desktop portrait and
+planets are resized to 360px/260px, with separate intermediate breakpoints and
+more horizontal room on phones. Scenes narrower than 300px use the accessible
+stationary layout. The clearer subject heading, four-language subtitle and
+portrait-first content order are also included in this verified build.
+
+Workspace lint and type checks passed; all 75 tests and preflight passed.
+The full production build passed for both the web application (42 pages) and
+Sanity Studio after the final sizing changes.
+Production-static landing checks passed six groups, with zero axe violations
+in four states, no page errors, failed responses or external requests. Locale
+checks passed four groups and 20 axe states with zero violations.
+`scripts/solar-orbit-browser-check.mjs` sampled all four planets every 500ms
+for 44 seconds at each of six widths (1440, 1024, 768, 600, 501 and 390px).
+All remained outside the circular photograph; minimum observed clearance was
+12.4px at 390px. The 320px stationary fallback also passed. Results and current
+screenshots are in output/solar-orbit-browser-results.json and
+output/playwright/solar-clearance-*.png. Source bytes, review flags and frozen
+content remain unchanged; circular display cropping is explicitly documented.
+
+The drive briefly disconnected during the earlier build/checks. Only checks
+rerun after reconnection count here; interrupted work was not treated as passed.
+No commit, push or public website deployment was performed for this correction.
+
+
+## Solar-system navigation and falling cloud words — 4 November 2026
+
+Owner clarified that the four navigation bubbles are the planets; concept words
+replace glitter and fall only beside the photograph. Added SolarSystem.tsx:
+42-second projected 3D revolution, depth-dependent scale/stacking, spherical
+surface lighting and upright labels. The central source photo remains complete
+and stationary. Actual labels from all seven validated concepts are repeated in
+two clipped side lanes, alternating green/white/deep green. Planets are opaque
+so words cannot show through their descriptions; the photo/halo has its own
+foreground layer. No lower preview panel or photo cursor returns.
+
+Chat wording is now Chat assistant on Home/Explore, with Guided questions and
+answers as the format label in all four locales. This avoids suggesting a
+personal conversation with Isa; the existing prepared guide remains unchanged.
+
+- All 75 unit tests, workspace lint/typecheck and locale coverage pass. Coverage
+  checks 515 interface/generated texts, five direct landing blocks and all 162
+  guided nodes, with zero missing Yoruba/Igbo interface entries.
+- Full web/Studio build passes; final web exports retain all 42 pages after
+  layering refinements. No new dependency or external service was introduced.
+- Landing browser suite passes six groups / four zero-violation axe states.
+  Locale suite passes four groups / 20 zero-violation axe states, including
+  active Yoruba/Igbo solar scenes at 1440px and 390px as well as the existing
+  reduced-motion, 320px and enlarged-text journeys. Both suites report no page
+  errors, failed responses or runtime external requests.
+- Behavioral assertions verify visible position changes over 700ms, actual
+  matrix3d transforms, hover/focus pause for accurate clicking, native touch
+  taps, all seven real concept IDs, and word-lane bounds outside the photo.
+  Source/record/conversation state, locale navigation, original quote access,
+  image failures, effects-off persistence, hidden tabs, unavailable storage and
+  no-JavaScript navigation retain coverage. Enlarged root text uses the static
+  layout with complete descriptions; compact orbit planets retain descriptions
+  in their accessible link names.
+- Playwright's initial hover failed because its default action waits for a
+  stationary target. The harness now moves the real pointer to the moving
+  planet's measured centre. Instant scrolling is explicit so scroll settling is
+  not mistaken for orbital movement. The resulting pause and click assertions
+  pass; failures are not counted as successful runs.
+- Desktop and Hausa phone renders visually inspected. A phone typography
+  refinement uses Source Sans for compact planet names to improve readability;
+  full display typography/descriptions remain in the static fallback.
+- Preflight and diff whitespace checks pass. Frozen content/dashboard/v1 has
+  no diff. No evidence/permission/review flag, source push or deployment changed.
+
+This work remains local/uncommitted after d6ee2b5. Preview the scene at
+http://127.0.0.1:8767/?view=home#landing-choices-title.
+
+## Home preview removal and native browser cursors — 4 November 2026
+
+Owner requested removing the entire “A glimpse of the story” block, its repeated
+choices/question/description/action, and the cursor containing Isa's photograph.
+Home now contains the four main navigation bubbles without a second preview
+panel. Its preview-only component/adapter/state/styles and two obsolete adapter
+tests were removed. Portrait particles, bubble interactions and the footer effects
+setting remain. Photo-cursor CSS, provider activation state, navigation fields
+and the chat checkbox were removed site-wide; native text/link/button cursor
+behavior remains. Original image assets/provenance are retained historically.
+
+- Workspace lint/typecheck, all 75 remaining unit tests, translation coverage
+  and full web/Studio build pass. Coverage: 516 interface/generated texts,
+  four direct landing blocks and all 162 guided nodes; no missing Yoruba/Igbo
+  entries. Web export still contains 42 pages.
+- Landing browser suite passes six groups / four zero-violation axe states;
+  guided-chat suite passes eight groups / five zero-violation axe states. No
+  page errors, failed responses or runtime external requests in either suite.
+  Existing navigation, locale/context preservation, motion preferences, touch,
+  tablet/phone/200%-text layouts, source handling and failed-image checks pass.
+- Updated assertions require no Home preview after hover/focus, no image cursor
+  on document/header/chat/buttons/answer text and no photo-cursor checkbox.
+  English/Hausa navigation keeps normal cursors. An additional browser pass
+  confirms all four Home locales have no preview panel and no image body cursor.
+- Desktop Home screenshot visually inspected: footer follows the four bubbles,
+  with no duplicate preview controls or text. Evidence remains in the existing
+  landing/guided JSON results and screenshots under output/playwright.
+- Preflight and diff whitespace checks pass. No frozen evidence, source claim,
+  review/permission flag, production dependency, commit, push or deployment is
+  changed by this correction. Changes remain local after d6ee2b5.
+
+## Saved checkpoint and interactive inclusive landing — 4 November 2026
+
+Before landing implementation, saved all existing multilingual/About/Methodology
+work as **d6ee2b5ab349745157c6eca0cace415aaeab1a15** and pushed main to
+batestguy/disability-inclusion-legacy-tree. Remote SHA was verified; both
+research-safety and verify passed in
+[GitHub Actions run 41797006953](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/41797006953).
+GitHub CLI used the explicit repo after its implicit repository lookup hit the
+known sandbox-owned .git safe-directory issue; no global Git/ACL change.
+
+Later local work implements the owner's selected celebratory theme: connected
+circles, four-language inclusive tagline, 20 deterministic portrait-gutter
+particles (eight visible on phones), independent floating bubbles, fine-pointer
+illustration tilt and a shared source-bound preview panel. Main link targets
+stay stationary and retain one-tap navigation. Footer Appearance/Visual effects
+replaces the prominent Pause button; system reduced motion wins, settings persist
+locally, old Pause preference migrates and hidden documents suspend animation.
+
+- Final workspace lint/typecheck pass. `npm.cmd test`: all **77 tests pass**;
+  two new checks cover source references, bounded women-specific figures,
+  actual report denominators, four-language numerical consistency and immutable
+  source/approval state. An initial test expected only the NigWED article; it was
+  corrected to include the existing supporting anniversary report as well.
+- `npm.cmd run test:locales-coverage`: passes, 521 interface/generated texts,
+  24 biography blocks, nine interaction blocks, 14 methodology blocks, three
+  workflow blocks, 11 landing blocks and all 162 guided nodes; zero missing
+  Yoruba/Igbo interface entries. New direct wording is present in all locales.
+- Full `npm.cmd run build` passes for web (42 pages) and Studio. Final web-only
+  rebuild also passes after correcting stagger selectors to use anchor types
+  independently of the decorative SVG sibling.
+- Final landing browser suite: **six groups / four zero-violation axe states**;
+  locale suite: **four groups / 16 zero-violation axe states**. Both report no
+  page errors, failed responses or runtime external requests. Checks include
+  desktop, 768px tablet, 390px/320px phones, 200% text, original sources,
+  locale/state retention, keyboard/focus/hover previews, separate touch preview
+  buttons and direct main-link taps. All original navigation/history flows pass.
+- Edge checks cover effects-off after hover/reload and language changes, live
+  reduced-motion changes, old session Pause migration, unavailable storage,
+  hidden-tab animation suspension, forced-colour ornament removal, failed photos
+  and essential navigation without JavaScript.
+- Desktop and Hausa/Igbo phone screenshots visually inspected. The portrait
+  remains full-frame and centred; particles remain beside the image. Existing
+  keyboard skip-link feedback is retained. Preview panel heights measured across
+  all four choices: 220px desktop and 360px at 390px, with source details closed.
+  Enlarged text/source expansion can grow naturally rather than clipping.
+- Single cold, unthrottled local observations at 1440×1050: before, DCL 62ms,
+  load 369ms, 437,559 resource-transfer bytes/18 resources; final, DCL 256ms,
+  load 376ms, 445,142 bytes/18 resources. Choice section starts at y=1037px
+  versus y=1120px before. These are observations affected by local scheduling,
+  not a performance benchmark, Lighthouse score or claimed speed improvement.
+- Final preflight and whitespace checks pass. Frozen content/dashboard/v1 has
+  no diff. No production dependency, photo alteration, external inference,
+  approval/permission change, or public website deployment was introduced.
+
+The landing changes remain **local/uncommitted after d6ee2b5**. Preview:
+http://127.0.0.1:8767/. Evidence is in output/landing-browser-results.json,
+output/locales-browser-results.json and the corresponding landing/locale
+screenshots under output/playwright. Accepted design/operation details are in
+docs/LANDING_INTERACTION_PLAN_2026-11-04.md and HANDOFF.md.
+
 ## Expanded Isa biography and agent-workflow account — 4 November 2026
 
 Owner requested more subject biography/photos, explicit agent-workflow context

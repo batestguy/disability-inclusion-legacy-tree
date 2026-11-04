@@ -1,5 +1,19 @@
 # Bilingual dashboard chatbot specification
 
+## Chat destination wording — 4 November 2026
+
+Owner requires wording that identifies the chat tool without implying a personal
+conversation with Isa. Use **Chat assistant** on Home and Explore, with **Guided
+questions and answers** as its format label in all four languages. The prepared
+question tree remains the implementation; no live impersonation is introduced.
+
+## Standard browser cursor — 4 November 2026
+
+Owner explicitly removed the photograph cursor. Use native browser cursor
+behavior across all pages, including chat; remove the photo-cursor checkbox and
+activation state. This supersedes all earlier portrait-cursor directions below.
+Prepared questions, source qualifications and shared locale/context are unchanged.
+
 ## Four-language prompt — 31 October 2026
 
 Owner now requires the prompt itself in all four languages: **Change language /

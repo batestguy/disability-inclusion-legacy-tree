@@ -1,9 +1,10 @@
 {
-  "auditedTexts": 519,
+  "auditedTexts": 513,
   "biographyTexts": 24,
   "interactionTexts": 9,
   "methodologyTexts": 14,
   "workflowTexts": 3,
+  "landingTexts": 7,
   "guidedNodes": 162,
   "missing": {
     "yo": [],

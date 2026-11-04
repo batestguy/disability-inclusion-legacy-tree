@@ -46,3 +46,7 @@ output/playwright/*
 !output/playwright/methodology-results.json
 !output/playwright/locales-*.png
 !output/playwright/about-*.png
+
+# Evidence for the complete solar-navigation revolution.
+!output/solar-orbit-browser-results.json
+!output/playwright/solar-clearance-*.png

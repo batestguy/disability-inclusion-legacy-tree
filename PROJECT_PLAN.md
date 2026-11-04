@@ -1,5 +1,60 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Latest: circular portrait and clear planet paths — 4 November 2026
+
+Owner requested a circular photograph and smaller planets so the photo cannot
+block them. The original source bytes are preserved; Home now uses an explicitly
+recorded CSS circular crop (cover, 50% 38%). Desktop portrait is 360px with
+260px planets in a 1040–1080px arena; 1001–1200px uses 300px/240px. Tablet
+remains 220px/170px; 501–700px uses 140px/112px. Compact orbital radii use
+more of the available width. Below 300px of actual scene width, a stationary
+portrait and separate navigation grid keep every destination unobstructed.
+This supersedes earlier rectangular/full-frame Home display and size notes.
+Side-falling words, 3D movement, hover/focus pause and native cursor remain.
+Changes remain local; verification is recorded in docs/VALIDATION.md.
+
+
+## Larger Home and clear subject heading — 4 November 2026
+
+Home now identifies Hon. Mohammed Abba Isa immediately, with A record of
+inclusion and a short four-language description of reports, figures, themes
+and connections. The portrait/solar scene is larger and wider, with the short
+biography moved below it. Portrait, planets and word lanes scale separately
+for desktop/tablet/phone. Existing navigation, native cursors, source integrity
+and motion preferences remain. Local work after pushed checkpoint d6ee2b5;
+see HANDOFF.md and docs/VALIDATION.md for verification.
+
+## Solar-system navigation correction — 4 November 2026
+
+The owner clarified the visual roles: four navigation bubbles revolve around
+the stationary portrait with real 3D depth; actual concept-cloud words fall only
+in lanes beside the photograph. Home's Chat assistant wording makes clear the
+visitor is using a guided tool rather than talking with Isa. A 42-second orbit
+pauses on hover/focus for selection, and existing effects/reduced-motion settings
+remain effective. No preview panel or photo cursor returns. Local implementation
+and verification continue after saved/pushed d6ee2b5; no public deployment.
+
+## Owner simplification — 4 November 2026
+
+Remove Home's “A glimpse of the story” preview panel, its repeated options and
+prepared-question teaser. Retain the four main bubbles and celebratory effects.
+Remove the photograph cursor globally and its chat checkbox, restoring standard
+browser cursor behavior. This supersedes the preview/photo-cursor features in
+earlier plans. Local changes only; pushed checkpoint remains d6ee2b5.
+
+## Saved checkpoint and celebratory landing — 4 November 2026
+
+Owner approved the plan and implementation. The existing multilingual/About/
+Methodology work was committed and pushed as `d6ee2b5`; GitHub Actions run
+41797006953 passed both jobs. Later changes implement the landing page locally:
+inclusive tagline and connected circles, continuous portrait-frame particles,
+independent interactive bubbles and a source-bound shared preview panel.
+Home footer Appearance/Visual effects replaces the prominent Pause button,
+honours system reduced motion and old paused preferences, and persists locally.
+Main links remain stationary/one tap; no dependency, external inference,
+frozen-data or public-approval change. Landing work is uncommitted and not
+deployed. See HANDOFF.md and docs/VALIDATION.md for the current evidence.
+
 ## Isa-first About and next landing plan — 4 November 2026
 
 Owner requested additional paragraphs/photos about Isa and agent-workflow

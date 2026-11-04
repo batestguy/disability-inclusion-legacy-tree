@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     process.env.SITE_URL || "https://mohammed-abba-isa-legacy.pages.dev",
   ),
   title: {
-    default: "Mohammed Abba Isa — The Work in Numbers",
-    template: "%s ? Mohammed Abba Isa",
+    default: "Hon. Mohammed Abba Isa — A Record of Inclusion",
+    template: "%s | Mohammed Abba Isa",
   },
   description:
-    "An independent, sourced tribute exploring disability advocacy, opportunity and inclusion in Nigeria.",
+    "A source-led record of Mohammed Abba Isa’s disability-inclusion work, explored through reports, figures, themes and connections.",
   robots: {
     index: process.env.RELEASE_MODE === "public",
     follow: process.env.RELEASE_MODE === "public",

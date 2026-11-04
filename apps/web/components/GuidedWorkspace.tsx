@@ -116,7 +116,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     if (transitionTimer.current !== null) clearTimeout(transitionTimer.current);
     transitionTimer.current = null;
     setPending(null);
-    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, photoCursor: session.photoCursor, ...initialGuidedScreen,
+    setSession({ path: retrace ? session.path : nextPath, cursor: nextPath.length - 1, ...initialGuidedScreen,
       view: nextPath.at(-1)?.startsWith("evidence:") ? "sources" : "answer" });
     setDownloadError(null);
     window.history.pushState(null, "", location.pathname + location.search + flowHash(nextPath));
@@ -218,10 +218,6 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
       </section>
       <div className="guided-preferences">
         <TranslationDraft lang={lang} />
-        <label className="guided-cursor-control"><input type="checkbox" checked={session.photoCursor} onChange={(event) => {
-          const photoCursor = event.currentTarget.checked;
-          setSession((previous) => ({ ...previous, photoCursor }));
-        }} />{say("Photo cursor", "Siginan hoto")}</label>
       </div>
     </Main>
     <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{!preparing && <>{heading}. {session.view === "answer"

@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-04T07:26:19.499Z",
+  "date": "2026-11-04T08:38:08.339Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
     "Question-only start, three replacing choices per page, no sidebar, duplicate path, transcript or internal scroller",
-    "Activities/results lead the start; green/white/green choices have readable text; genuine portrait cursor covers the whole document, including margins/header/text, and its off switch survives language navigation",
+    "Activities/results lead the start; green/white/green choices have readable text; standard browser cursors remain across language navigation, without a photo-cursor control",
     "Separate women cohorts, keyboard Back/Next, branch replacement, browser history and selected source preserved across languages",
     "All 11 numerical choices reachable through pagination; bounds, stages and units stay visible; full source links and receipt claims preserved",
     "Option and source page positions survive detail viewing; equally sized figures identify their programme; summary sources contain stored findings; history restores source lists; reader changes announce meaningful content",

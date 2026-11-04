@@ -1,17 +1,22 @@
 {
-  "date": "2026-11-04T07:25:59.585Z",
+  "date": "2026-11-04T09:56:24.325Z",
   "base": "http://127.0.0.1:8767",
   "completed": true,
   "checks": [
-    "Home retains centred sourced portrait/title/quote; four fixed hit areas, persistent pause and reduced-motion override",
+    "Centred circular portrait, planet orbits with hover/focus pause, no extra preview panel, persistent footer effects setting and live reduced-motion override",
     "All four bubbles support keyboard/touch-style links, direct sections, refresh and browser Back/Forward; new chat starts at welcome",
     "Home/Explore/Chat and locale changes retain figures, concepts, actor/initiative, entry section and conversation across refresh; Hausa keeps one discreet footer draft label",
     "Recognised legacy dashboard queries/hashes forward to Explore (old chat anchor to Chat); invalid sections/selections are discarded independently of flow",
-    "Phone and enlarged text layouts, forced colours and failed portrait keep readable labels, sources and usable destinations"
+    "Phone and enlarged text layouts, forced colours and failed portrait keep readable labels, sources and usable destinations",
+    "Touch links preserve one-tap navigation; previous Pause preference migrates; unavailable storage remains usable; hidden tabs suspend orbit and falling words; essential links work without JavaScript"
   ],
   "axe": [
     {
       "label": "English landing desktop",
+      "violations": []
+    },
+    {
+      "label": "Landing tablet",
       "violations": []
     },
     {

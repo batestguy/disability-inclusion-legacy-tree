@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04T07:46:23.094Z",
+  "date": "2026-11-04T09:57:12.483Z",
   "completed": true,
   "checks": [
     "yo: home, keyboard Explore, chosen area, guided women/cohorts, reload, all language switches, exact English source and Methodology context",
@@ -41,6 +41,14 @@
       "violations": []
     },
     {
+      "label": "yo: active solar orbit 1440px",
+      "violations": []
+    },
+    {
+      "label": "yo: active solar orbit 390px",
+      "violations": []
+    },
+    {
       "label": "ig: home desktop",
       "violations": []
     },
@@ -70,6 +78,14 @@
     },
     {
       "label": "ig: about/methodology/ 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: active solar orbit 1440px",
+      "violations": []
+    },
+    {
+      "label": "ig: active solar orbit 390px",
       "violations": []
     }
   ],

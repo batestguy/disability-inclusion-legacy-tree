@@ -1,5 +1,100 @@
 # Inclusion scorecard
 
+## Latest: circular portrait and clear planet paths — 4 November 2026
+
+Owner requested a circular photograph and smaller planets so the photo cannot
+block them. The original source bytes are preserved; Home now uses an explicitly
+recorded CSS circular crop (cover, 50% 38%). Desktop portrait is 360px with
+260px planets in a 1040–1080px arena; 1001–1200px uses 300px/240px. Tablet
+remains 220px/170px; 501–700px uses 140px/112px. Compact orbital radii use
+more of the available width. Below 300px of actual scene width, a stationary
+portrait and separate navigation grid keep every destination unobstructed.
+This supersedes earlier rectangular/full-frame Home display and size notes.
+Side-falling words, 3D movement, hover/focus pause and native cursor remain.
+Changes remain local; verification is recorded in docs/VALIDATION.md.
+
+
+## Larger portrait-first opening — 4 November 2026
+
+Owner wants the solar scene to fill more of the screen, starting with the
+portrait, and a heading that identifies the subject immediately. Main h1 is
+Hon. Mohammed Abba Isa; eyebrow A record of inclusion; short subtitle explains
+reports, figures, themes and connections. Keep all three in four-language copy
+in content/landing-interactions.json. The short biography follows the scene.
+
+Home width min(1600px,96%), 16px opening padding and 8px gaps. Desktop portrait
+420px, planet links 300px, scene height clamp(900px,76vw,1080px); no fixed
+maximum figure width. Side-word lanes 140px with 44px photo gap, preserving the
+halo and full photo frame. Tablet uses 220px portrait/170px planets; 501–700px
+uses 160px/132px; phones use clamp(120px,34vw,160px) portrait and existing
+compact 88px planets in a 540px scene. Static/reduced-motion portrait max420px.
+The heading scales 2.25–3.5rem; other type/material/depth decisions are unchanged.
+
+## Portrait-centred solar navigation — 4 November 2026
+
+Owner clarification: the four “Where shall we begin?” navigation bubbles are
+the planets. Cloud words replace falling glitter and stay strictly beside the
+portrait; they are separate effects. “Chat assistant” replaces “Interact with
+me” and its subtitle now says Guided questions and answers in all four locales.
+
+Intent: immediately recognise Isa as the stationary centre and the four tools
+as clickable orbiting destinations. Hierarchy: heading/introduction, portrait
+sun with four planets, then quote/source links. No lower preview panel or photo
+cursor. Palette: established planet colours; word lanes alternate green/white/
+deep green. Sphere shading and perspective are used to express the requested
+physical 3D appearance. Keep Source Sans/Briem Hand and the four-pixel rhythm.
+
+SolarSystem projects a 42-second orbit with translate3d, depth-dependent scale
+and stacking; labels face the viewer. Hover/focus pauses the complete orbit
+at its current phase. Hidden tabs suspend it. Effects-off, reduced motion and
+enlarged root text use a stationary responsive layout with full descriptions.
+Desktop planets are 264px; tablet uses compact 156px planets and phone 88px
+name-labelled planets with the full destination description retained in aria-label.
+The central photo retains its full source frame. Decorative 18-second concept
+word streams use clipped lanes outside the photo, with all seven real concept
+labels in each lane. Motion changes word depth but cannot move it onto the face.
+
+## Home simplification and standard cursor — 4 November 2026
+
+Owner removed the lower destination-preview panel and all of its duplicate
+choice buttons. Home now proceeds from portrait/story to four interactive
+bubbles and the footer. Keep the particles, connected-circle motif, bubble
+responses and footer visual-effects preference. Native browser cursors apply
+site-wide; the photo cursor and its chat checkbox are removed. Preserve normal
+text-selection and link/button pointer feedback rather than forcing one cursor
+shape everywhere. Earlier preview and photo-cursor directions are superseded.
+
+## Celebratory inclusive landing — 4 November 2026
+
+Owner selected continuous celebratory effects and sourced destination previews.
+Intent: welcome visitors of different abilities into Isa's record, with obvious
+choices and control over decorative movement. Hierarchy: the full-frame centred
+portrait and title lead, then four expressive stationary links and one shared
+preview. Palette: existing inclusion green/white, gold particles, and established
+green/blue/purple/gold bubble identities. Connected circles/paths suggest inclusion
+without introducing endorsements, fabricated people or disability stereotypes.
+Depth/surfaces: keep flat white reading surfaces; use a quiet border and transient
+bubble hover shadow. Typography: existing Source Sans and Briem Hand; preview
+primary 1.5rem desktop/1.25rem phone, supporting .9375rem. Four-pixel spacing:
+24px preview padding/gap, 16px phone padding, 44px controls. Full-frame portrait
+uses a 424px outer frame with 32px particle gutters (12px on phones).
+
+Twenty deterministic CSS particles (eight visible on phones) fall for staggered
+5–9s cycles, away from the face, quote and sources. Bubble content floats ±6px
+over 7–9s inside stationary links. Fine pointers tilt illustrations by at most
+3 degrees; focus gets comparable static emphasis. No pointer follower or sound.
+Remove the previous prominent Pause button: Home footer Appearance now holds
+Visual effects, persisted locally; old session pause is migrated. System reduced
+motion wins. Effects off removes transforms, transitions and animation; hidden
+tabs suspend animation; forced colours hide ornaments. Content remains visible
+without JavaScript. No dependency or external inference is added.
+
+Previews reuse the validated NigWED measure, disability-inclusion report count,
+adapted-vehicle connection and an existing guide question. Hover/focus switches
+the shared panel; four separate buttons provide touch/keyboard equivalents.
+Main links remain one tap, preserving record/chat state. Source details are
+available on demand and original titles stay English. New copy has four locales.
+
 ## Isa-first About hierarchy — 4 November 2026
 
 Intent: make Isa the clear subject; creator credit supports the tribute.
