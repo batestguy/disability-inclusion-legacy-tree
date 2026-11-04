@@ -1,3 +1,4 @@
+import { localizeData } from "./locales.mjs";
 /** A finite, local question tree over the reviewed bundle. No language inference. */
 const bi = (en, ha) => ({ en, ha });
 const unique = (values) => [...new Set(values)];
@@ -218,7 +219,7 @@ export function getActivityPresentation(activity) {
   const title = activityTitle(activity);
   const description = activity.description ?? draftActivitySummaries[activity.id];
   if (!isBi(title) || !isBi(description)) fail();
-  return structuredClone({ title, description });
+  return localizeData(structuredClone({ title, description }));
 }
 
 /** Throws TypeError for malformed data and RangeError for an unknown node. */
@@ -233,7 +234,9 @@ export function getFlowNode(bundle, nodeId = "start") {
     nodes.set(id, node);
     return node;
   };
-  const explain = (key) => bi(b.explanations[key].en, b.explanations[key].ha);
+  const explain = (key) => key === "language"
+    ? bi("The topic model analysed English articles. Translated labels and explanations are drafts.", "An nazarci labaran Turanci wajen gano jigogi. Sunaye da bayanan da aka fassara na gwaji ne.")
+    : bi(b.explanations[key].en, b.explanations[key].ha);
   const activityOption = (a) => option(`activity:${a.id}`, activityTitle(a), bi(`${a.report_date} · ${activityStages[a.stage].en}`, `${a.report_date} · ${activityStages[a.stage].ha}`));
   const sourceEvidence = (a) => evidenceItems(a.evidence.length ? a.evidence : b.observations.filter((o) => o.activity_id === a.id).flatMap((o) => o.evidence));
   const record = (a) => ({ reportDate: a.report_date, dateBasis: a.date_basis, stage: a.stage, role: a.isa_role, limitations: [...a.limitations] });
@@ -263,7 +266,7 @@ export function getFlowNode(bundle, nodeId = "start") {
   );
 
   add("start", bi("Explore the record", "Bincika bayanan ayyuka"), bi("What would you like to explore?", "Me kake son bincikawa?"), {
-    paragraphs: [bi("Choose a question to follow the checked records, figures and sources. Hausa wording is a draft for owner review.", "Zaɓi tambaya domin duba bayanai, lambobi da majiyoyi. Kalmomin Hausa na gwaji ne domin bitar mai aikin."), explain("scope")],
+    paragraphs: [bi("Choose a question to follow the checked records, figures and sources.", "Zaɓi tambaya domin duba bayanai, lambobi da majiyoyi."), explain("scope")],
     options: [
       option("programmes", bi("Activities and reported results", "Ayyuka da sakamakon da aka ruwaito")),
       option("timeline", bi("Explore by report year", "Bincika ta shekarar rahoto")),
@@ -373,7 +376,7 @@ export function getFlowNode(bundle, nodeId = "start") {
   }
   const allSources = b.sources.map((s) => s.id);
   add("scope", bi("Evidence and coverage", "Hujjoji da iyakokin bayanai"), bi("What can this dataset establish?", "Me wannan kundin bayanai zai iya tabbatarwa?"), {
-    terminal: true, paragraphs: [explain("scope"), explain("figures"), explain("dates"), explain("language"), bi("Office reports are attributed accounts, not independent confirmation. No reliable total of unique beneficiaries, complete career coverage, cash total or causal impact is established. Hausa wording remains draft for owner review.", "Rahotannin ofishi bayanai ne da aka danganta ga majiyoyi; ba tabbaci mai zaman kansa ba. Ba a tabbatar da jimillar mutane mabambanta, cikakken tarihin ayyuka, jimillar kuɗi ko tasiri na sanadi ba. Kalmomin Hausa na gwaji ne domin bitar mai aikin.")],
+    terminal: true, paragraphs: [explain("scope"), explain("figures"), explain("dates"), explain("language"), bi("Office reports are attributed accounts, not independent confirmation. No reliable total of unique beneficiaries, complete career coverage, cash total or causal impact is established.", "Rahotannin ofishi bayanai ne da aka danganta ga majiyoyi; ba tabbaci mai zaman kansa ba. Ba a tabbatar da jimillar mutane mabambanta, cikakken tarihin ayyuka, jimillar kuɗi ko tasiri na sanadi ba.")],
     sourceIds: allSources, claims: [claimCount("reviewed-activity-records", b.activities.length, "activities", "Activity records in the selected bundle", allSources, b.activities.map((a) => a.id)), claimCount("numerical-observations", b.observations.length, "observations", "Typed delivery and target observations; not beneficiaries", unique(b.observations.flatMap((o) => refs(o.evidence))))],
   });
   const node = nodes.get(nodeId);
@@ -382,5 +385,5 @@ export function getFlowNode(bundle, nodeId = "start") {
   for (const n of nodes.values()) {
     if (!n.options.length || n.options.some((o) => !nodes.has(o.target)) || n.sourceIds.some((id) => !maps.sources.has(id))) throw new TypeError("Invalid guided-flow graph");
   }
-  return structuredClone(node);
+  return localizeData(structuredClone(node));
 }

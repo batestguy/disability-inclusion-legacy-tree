@@ -10,7 +10,7 @@
     "studio": "npm run dev -w studio",
     "lint": "npm run lint --workspaces",
     "typecheck": "npm run typecheck --workspaces",
-    "test": "node --test scripts/content.test.mjs scripts/contribution-metrics.test.mjs scripts/chat-engine.test.mjs scripts/chat-preview.test.mjs scripts/guided-flow.test.mjs scripts/guided-presentation.test.mjs scripts/dashboard-data.test.mjs scripts/dashboard-presentation.test.mjs",
+    "test": "node --test scripts/content.test.mjs scripts/contribution-metrics.test.mjs scripts/chat-engine.test.mjs scripts/chat-preview.test.mjs scripts/guided-flow.test.mjs scripts/guided-presentation.test.mjs scripts/dashboard-data.test.mjs scripts/dashboard-presentation.test.mjs scripts/locales.test.mjs scripts/about.test.mjs",
     "test:chat-browser": "node scripts/guided-browser-check.mjs",
     "metrics": "node scripts/export-contributions.mjs",
     "build": "npm run build -w apps/web && npm run build -w studio",
@@ -19,7 +19,10 @@
     "test:dashboard-browser": "node scripts/dashboard-presentation-browser-check.mjs",
     "preview": "node scripts/serve.mjs",
     "test:performance": "node scripts/performance.mjs",
-    "test:landing-browser": "node scripts/landing-browser-check.mjs"
+    "test:landing-browser": "node scripts/landing-browser-check.mjs",
+    "test:locales-browser": "node scripts/locales-browser-check.mjs",
+    "test:locales-coverage": "node scripts/locale-coverage.mjs --check",
+    "test:about-browser": "node scripts/about-browser-check.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

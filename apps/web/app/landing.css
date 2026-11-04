@@ -19,8 +19,10 @@
 .landing-bubble:nth-child(2) .bubble-surface { animation-delay: -1.5s; }
 .landing-bubble:nth-child(3) .bubble-surface { animation-delay: -3s; }
 .landing-bubble:nth-child(4) .bubble-surface { animation-delay: -4.5s; }
-.bubble-surface > strong { font-family: "Briem Hand", cursive; font-size: clamp(1.25rem, 2vw, 1.9rem); line-height: 1.25; color: var(--bubble-ink); }
-.bubble-detail { max-width: 20ch; font-size: .85rem; line-height: 1.4; }
+.bubble-surface > strong { font-family: "Briem Hand", cursive; font-size: clamp(1.25rem, 2vw, 1.9rem); line-height: 1.25; color: var(--bubble-ink); text-wrap: balance; }
+.bubble-detail { max-width: 20ch; font-size: .85rem; line-height: 1.4; text-wrap: pretty; }
+.bubble-format { display: block; font-weight: 600; }
+.bubble-invitation { display: block; margin-top: 6px; }
 .bubble-art { width: 72px; height: 64px; display: flex; justify-content: center; align-items: center; color: var(--bubble-ink); }
 .dashboard-redesign .bubble-art svg { width: 100%; height: 100%; max-width: none; }
 .landing-bubble:is(:hover,:focus-visible) .bubble-surface { animation-play-state: paused; transform: translateY(-4px); box-shadow: 0 4px 16px -8px var(--bubble-ink); }
@@ -40,10 +42,10 @@
   .bubble-constellation { gap: 8px; padding-top: 16px; }
   .landing-bubble { padding: 6px; border-radius: 32px; }
   .landing-bubble:nth-child(even) { margin-top: 0; }
-  .bubble-surface { padding: 20px 8px; border-radius: 42%; min-height: 188px; }
+  .bubble-surface { aspect-ratio: auto; padding: 24px 8px; border-radius: 42%; min-height: 260px; }
   .bubble-art { width: 52px; height: 48px; }
   .bubble-detail { font-size: .8rem; }
-  .bubble-surface > strong { font-size: 1.25rem; }
+  .bubble-surface > strong { font-size: clamp(1.05rem, 5.5vw, 1.25rem); }
   .landing-choice-heading { justify-content: center; text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -54,4 +56,20 @@
   .bubble-surface, .dashboard-redesign .motion-toggle { background: Canvas; border-color: CanvasText; color: CanvasText; }
   .bubble-surface > strong { color: CanvasText; }
   .landing-bubble:focus-visible { outline: 3px solid Highlight; }
+}
+.dashboard-redesign .home-biography-intro { max-width: 65ch; margin: 0 auto 24px; text-align: center; }
+.home-biography-intro p { margin: 0; font-size: 1rem; line-height: 1.7; }
+.home-biography-intro a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-blue); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.dashboard-redesign .section-format { margin: 8px 0 0; color: var(--inclusion-muted); font-size: .9375rem; line-height: 1.5; }
+.landing-workspace .dashboard-opening { padding-block: 32px; border-color: var(--inclusion-line); border-top-color: var(--inclusion-green); }
+.landing-workspace #dashboard-title { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.15; letter-spacing: -.035em; }
+.landing-workspace .home-biography-intro { margin-bottom: 8px; }
+.bubble-invitation > span { display: inline-block; transition: transform 180ms cubic-bezier(.23,1,.32,1); }
+.landing-bubble:is(:hover,:focus-visible) .bubble-invitation > span { transform: translate(2px,-2px); }
+.landing-bubble:focus-visible { outline: 3px solid var(--bubble-ink); outline-offset: 2px; }
+.landing-workspace .dashboard-footer { border-top: 1px solid var(--inclusion-line); }
+@media (max-width: 700px) { .landing-workspace .dashboard-opening { padding-block: 24px; gap: 16px; } }
+@media (prefers-reduced-motion: reduce) {
+  .bubble-invitation > span { transition: none; }
+  .landing-bubble:is(:hover,:focus-visible) .bubble-invitation > span { transform: none; }
 }

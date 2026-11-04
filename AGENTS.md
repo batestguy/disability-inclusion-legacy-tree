@@ -13,6 +13,17 @@ status remain required. Do not silently set approval flags or deploy publicly.
 
 ## Chatbot continuation requirements
 
+31 October 2026 owner polish: display the language prompt in all four languages:
+**Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ**. The creator's
+latest public wording is researcher/Statistician, with a short local-problems
+stats/ML/AI purpose, AI vision and one sentence on this project's TF-IDF/NMF tools.
+Keep Methodology short and plain; technical settings stay behind the disclosure.
+
+30 October 2026 locale extension: owner requested full-site and guided-chat
+Yoruba and Igbo translations, visibly marked draft. Keep the shared visible
+vertical order English / Hausa / Yorùbá / Igbo, the established bilingual prompt,
+and selected record/conversation context. See docs/YORUBA_IGBO_2026-10-30.md.
+
 Read docs/CHATBOT_SPEC.md before chatbot or dashboard work. The owner requires a polished conversational English/Hausa chatbot, built before dashboard integration, automatically following the page locale. Always display **Change language / Canja harshe** with **English** above **Hausa**, vertically stacked and visible without a menu. One shared control changes page and chat together. These are accepted requirements, not implemented features; human Hausa review and existing numerical/evidence/reveal gates remain required.
 
 Preserve HonAbbas.txt as the original brief. PROJECT_PLAN.md records decisions and launch gates.

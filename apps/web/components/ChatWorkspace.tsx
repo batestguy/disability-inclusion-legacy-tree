@@ -13,7 +13,7 @@ import {
 } from "../lib/chat-engine.mjs";
 import type { getChatData } from "../lib/chat-data";
 
-type Props = ReturnType<typeof getChatData> & { lang: Lang };
+type Props = ReturnType<typeof getChatData> & { lang: Extract<Lang, "en" | "ha"> };
 
 export default function ChatWorkspace({ lang, bundle, manifest }: Props) {
   const { session, setSession } = useChatSession();
@@ -146,7 +146,7 @@ export default function ChatWorkspace({ lang, bundle, manifest }: Props) {
         </div>
         <LanguageChoice
           lang={lang}
-          destinations={{ en: "/chat/", ha: "/ha/chat/" }}
+          destinations={{ en: "/chat/", ha: "/ha/chat/", yo: "/yo/chat/", ig: "/ig/chat/" }}
         />
       </header>
 
@@ -197,8 +197,8 @@ export default function ChatWorkspace({ lang, bundle, manifest }: Props) {
             </span>
             <p>
               {say(
-                "Hausa wording is a draft awaiting fluent human review. Public release is pending.",
-                "Rubutun Hausa na gwaji ne, yana jiran bitar ƙwararren mai Hausa. Ba a amince da wallafawar jama'a ba tukuna.",
+                "Hausa · Translation draft",
+                "Hausa · Fassarar gwaji",
               )}
             </p>
           </aside>

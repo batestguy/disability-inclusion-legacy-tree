@@ -1,4 +1,5 @@
 "use client";
+import { translate, localeHome } from "../lib/locales.mjs";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import WorkspaceFooter from "./WorkspaceFooter";
 import OpeningPortrait from "./OpeningPortrait";
 import ChatbotMark from "./ChatbotMark";
 import ContributionIllustration from "./ContributionIllustration";
+import interactionCopy from "../../../content/interaction-copy.json";
 import { exploreSection, useWorkspaceNavigation, type ExploreSection } from "./WorkspaceNavigation";
 import type { Lang } from "../lib/content";
 import type { getChatData } from "../lib/chat-data";
@@ -19,7 +21,7 @@ export default function HomeWorkspace({ lang, bundle }: ReturnType<typeof getCha
   const router = useRouter();
   const { href } = useWorkspaceNavigation(bundle, "home");
   const [paused, setPaused] = useState(false);
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
     function legacy() {
@@ -33,7 +35,7 @@ export default function HomeWorkspace({ lang, bundle }: ReturnType<typeof getCha
       if (location.hash.startsWith("#leaf=")) { try { params.set("record", decodeURIComponent(location.hash.slice(6))); } catch { /* Invalid legacy record is discarded. */ } }
       const query = params.size ? `?${params}` : "";
       const flow = location.hash.startsWith("#flow=") ? location.hash : "";
-      router.replace((lang === "ha" ? "/ha/" : "/") + (legacyChat ? "chat/" : "explore/") + query + flow);
+      router.replace(localeHome(lang) + (legacyChat ? "chat/" : "explore/") + query + flow);
     }
     legacy(); window.addEventListener("popstate", legacy); window.addEventListener("hashchange", legacy);
     return () => { window.removeEventListener("popstate", legacy); window.removeEventListener("hashchange", legacy); };
@@ -46,22 +48,22 @@ export default function HomeWorkspace({ lang, bundle }: ReturnType<typeof getCha
     const next = !paused; setPaused(next);
     try { sessionStorage.setItem("landing-motion-paused", String(next)); } catch { /* Optional preference only. */ }
   }
-  const bubbles: { id: ExploreSection | "chat"; en: string; ha: string; detailEn: string; detailHa: string }[] = [
-    { id: "overview", en: "Figures", ha: "Lambobi", detailEn: "Contributions in figures", detailHa: "Gudummawa a cikin lambobi" },
-    { id: "advocacy", en: "Themes", ha: "Jigogi", detailEn: "Themes in his advocacy", detailHa: "Jigogin fafutukarsa" },
-    { id: "collaborations", en: "Connections", ha: "Haɗin gwiwa", detailEn: "Follow the connections", detailHa: "Bi hanyoyin haɗin gwiwa" },
-    { id: "chat", en: "Interact with me", ha: "Mu tattauna", detailEn: "Choose a question", detailHa: "Zaɓi tambaya" },
+  const bubbles: { id: ExploreSection | "chat"; en: string; ha: string }[] = [
+    { id: "overview", en: "Figures", ha: "Lambobi" },
+    { id: "advocacy", en: "Themes", ha: "Jigogi" },
+    { id: "collaborations", en: "Connections", ha: "Haɗin gwiwa" },
+    { id: "chat", en: "Interact with me", ha: "Mu tattauna" },
   ];
   return <div className="dashboard-shell dashboard-redesign landing-workspace" lang={lang}>
     <a className="skip" href="#home-main">{say("Skip to content", "Tsallaka zuwa abun ciki")}</a>
     <WorkspaceHeader lang={lang} page="home" href={href} />
     <main id="home-main" className="dashboard-main" tabIndex={-1}>
-      <OpeningPortrait lang={lang} />
+      <OpeningPortrait lang={lang} biographyHref={href("about", lang)} />
       <section className="landing-choices" aria-labelledby="landing-choices-title" data-paused={paused}>
         <div className="landing-choice-heading"><h2 id="landing-choices-title" className="calligraphy-title">{say("Where shall we begin?", "Ina za mu fara?")}</h2><button type="button" className="motion-toggle" aria-pressed={paused} onClick={toggleMotion}>{paused ? say("Resume motion", "Ci gaba da motsi") : say("Pause motion", "Dakatar da motsi")}</button></div>
         <div className="bubble-constellation">
           {bubbles.map(bubble => <Link key={bubble.id} className={`landing-bubble bubble-${bubble.id}`} href={bubble.id === "chat" ? href("chat", lang) : href("explore", lang, bubble.id)} prefetch={false}>
-            <span className="bubble-surface"><span className="bubble-art" aria-hidden="true">{bubble.id === "chat" ? <ChatbotMark /> : <ContributionIllustration activityId={bubble.id === "overview" ? "startup-support-march-2024" : bubble.id === "advocacy" ? "disability-readiness-toolkit-2025" : "inclusive-business-skills"} unit={bubble.id === "advocacy" ? "toolkit" : "people"} />}</span><strong>{bubble[lang]}</strong><span className="bubble-detail">{lang === "ha" ? bubble.detailHa : bubble.detailEn} <span aria-hidden="true">↗</span></span></span>
+            <span className="bubble-surface"><span className="bubble-art" aria-hidden="true">{bubble.id === "chat" ? <ChatbotMark /> : <ContributionIllustration activityId={bubble.id === "overview" ? "startup-support-march-2024" : bubble.id === "advocacy" ? "disability-readiness-toolkit-2025" : "inclusive-business-skills"} unit={bubble.id === "advocacy" ? "toolkit" : "people"} />}</span><strong>{say(bubble.en, bubble.ha)}</strong><span className="bubble-detail"><span className="bubble-format">{interactionCopy.tools[bubble.id].format[lang]}</span><span className="bubble-invitation">{interactionCopy.tools[bubble.id].invitation[lang]} <span aria-hidden="true">↗</span></span></span></span>
           </Link>)}
         </div>
       </section>

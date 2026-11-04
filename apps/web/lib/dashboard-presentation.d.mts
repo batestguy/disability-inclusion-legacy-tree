@@ -1,4 +1,4 @@
-export interface PresentationText { en: string; ha: string }
+export interface PresentationText { en: string; ha: string; yo: string; ig: string }
 export interface PresentationGroup { id: string; label: PresentationText; activityIds: string[]; catalogueCategoryIds: string[]; rationale: string }
 export interface PresentationFigure {
   id: string; activityId: string; value: number; bound: "exact" | "greater-than" | "at-least" | "approximate";

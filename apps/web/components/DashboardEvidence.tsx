@@ -1,4 +1,5 @@
 "use client";
+import { translate } from "../lib/locales.mjs";
 
 import { useMemo, type RefObject } from "react";
 import { getFlowNode } from "../lib/guided-flow.mjs";
@@ -12,7 +13,7 @@ type Props = { lang: Lang; bundle: Bundle; activity: Bundle["activities"][number
 export default function DashboardEvidence({ lang, bundle, activity, panelRef, onAsk, onClose }: Props) {
   const node = useMemo(() => getFlowNode(bundle, `activity:${activity.id}`), [bundle, activity.id]);
   const observations = bundle.observations.filter((observation) => observation.activity_id === activity.id);
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
   return <section className="dashboard-evidence-reader" ref={panelRef} tabIndex={-1} aria-labelledby="selected-record-title" data-selected-record={activity.id}>
     <div className="dashboard-evidence-reader-top"><p className="dashboard-eyebrow">{say("SELECTED RECORD", "BAYANIN DA AKA ZAƁA")}</p><button type="button" onClick={onClose}>{say("Close", "Rufe")} <span aria-hidden="true">×</span></button></div>
     <h3 id="selected-record-title">{node.title[lang]}</h3><p>{node.paragraphs[0][lang]}</p>

@@ -54,7 +54,7 @@ test("women retain two separate bounded cohorts without inventing a combined tot
   const answer = getConciseAnswer(n);
   assert.equal(answer.items.length, 2);
   assert.deepEqual(answer.items.map(({ id, meta }) => ({ id, meta })), n.items.map(({ id, meta }) => ({ id, meta })));
-  assert.deepEqual(answer.items.map((i) => i.label), [{ en: "NigWED", ha: "NigWED" }, { en: "Startup support", ha: "Tallafin fara sana’a" }]);
+  assert.deepEqual(answer.items.map((i) => ({ en: i.label.en, ha: i.label.ha })), [{ en: "NigWED", ha: "NigWED" }, { en: "Startup support", ha: "Tallafin fara sana’a" }]);
   assert.match(answer.items[0].meta.en, /More than 45/);
   assert.match(answer.items[1].meta.en, /More than 20/);
   assert.match(answer.paragraphs[0].en, /Do not add.*income and employment outcomes are unmeasured/);

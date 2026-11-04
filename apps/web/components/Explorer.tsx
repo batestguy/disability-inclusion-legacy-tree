@@ -386,17 +386,8 @@ export default function Explorer({
                 "Kowane bayani ya bambanta aiki, sanarwa da bayar da shawara daga sakamakon da aka auna. Ana nuna rahotannin ofishi. Za a kara bayanai bayan bita.",
               )}
             </p>
-            {!data.settings.revealReady && (
-              <p className="draft">
-                {t(
-                  lang,
-                  "Preview edition. Portrait permission, Hausa review and release checks are pending.",
-                  "Samfurin gwaji. Ana jiran izinin hoto, bitar Hausa da tantancewa kafin kaddamarwa.",
-                )}
-              </p>
-            )}
             {lang === "ha" && !data.settings.haReviewed && (
-              <p className="draft">Fassarar Hausa na jiran bitar mutum.</p>
+              <p className="draft">Hausa · Fassarar gwaji</p>
             )}
             {data.settings.creator?.name && (
               <p>

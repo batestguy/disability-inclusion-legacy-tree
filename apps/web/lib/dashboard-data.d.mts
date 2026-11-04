@@ -1,4 +1,4 @@
-export interface DashboardText { en: string; ha?: string | null }
+export interface DashboardText { en: string; ha?: string | null; yo: string; ig: string }
 export interface DashboardFilters { year: string; category: string; activity: string }
 export interface DashboardActivity {
   id: string; title: DashboardText; description?: DashboardText; report_date: string; event_date: string | null;

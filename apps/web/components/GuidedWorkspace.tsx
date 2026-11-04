@@ -1,7 +1,9 @@
 "use client";
+import TranslationDraft from "./TranslationDraft";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChatbotMark from "./ChatbotMark";
+import interactionCopy from "../../../content/interaction-copy.json";
 import WorkspaceHeader from "./WorkspaceHeader";
 import { useWorkspaceNavigation } from "./WorkspaceNavigation";
 import "../app/dashboard.css";
@@ -16,7 +18,7 @@ import "../app/(chat)/chat.css";
 import "../app/(chat)/guided.css";
 
 type Props = ReturnType<typeof getChatData> & { lang: Lang; embedded?: boolean };
-type Detail = { label: string; text: string; quote?: boolean; lang: Lang };
+type Detail = { label: string; labelLang: Lang; text: string; quote?: boolean; lang: Lang };
 const flowHash = (path: string[]) => path.length > 1 ? `#flow=${encodeURIComponent(path.join("|"))}` : "";
 
 export default function GuidedWorkspace({ lang, bundle, manifest, embedded = false }: Props) {
@@ -47,7 +49,8 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
   const summaryIndex = Math.min(session.summaryPage, Math.max(0, summaryParts.length - 1));
   const details: Detail[] = [];
   const detail = (label: string, text: string | undefined, quote = false, textLang: Lang = "en") => {
-    if (text) splitText(text, 340).forEach((part) => details.push({ label, text: part, quote, lang: textLang }));
+    const translatedLabel = say(label, label);
+    if (text) splitText(text, 340).forEach((part) => details.push({ label: translatedLabel, labelLang: lang, text: part, quote, lang: textLang }));
   };
   if (session.view === "source" && node && source) {
     for (const evidence of getSourceEvidence(bundle, node, source.id)) {
@@ -58,17 +61,17 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     }
   } else if (node) {
     if (node.record) {
-      detail("Report date / date basis", `${node.record.reportDate}. ${node.record.dateBasis}`);
-      detail("Reported role", node.record.role);
-      detail("Stage", node.record.stage);
-      node.record.limitations.forEach((text) => detail("Qualification", text));
+      detail(say("Report date / date basis", "Ranar rahoto / tushen rana"), `${node.record.reportDate}. ${node.record.dateBasis}`);
+      detail(say("Reported role", "Rawar da aka ruwaito"), node.record.role);
+      detail(say("Stage", "Mataki"), node.record.stage);
+      node.record.limitations.forEach((text) => detail(say("Qualification", "Iyaka"), text));
     }
     node.claims.forEach((claim) => {
-      detail("Value / bound / unit / stage", `${claim.value.toLocaleString("en-GB")} · ${claim.bound} · ${claim.unit} · ${claim.stage}`);
-      detail("Population", claim.population);
-      detail("Reported role", claim.attribution);
-      detail("Report date / date basis", `${claim.reportDate}. ${claim.evidenceDateBasis}`);
-      claim.limitations.forEach((text) => detail("Qualification", text));
+      detail(say("Value / bound / unit / stage", "Ƙima / iyaka / ma’auni / mataki"), `${claim.value.toLocaleString("en-GB")} · ${claim.bound} · ${claim.unit} · ${claim.stage}`);
+      detail(say("Population", "Rukunin mutane"), claim.population);
+      detail(say("Reported role", "Rawar da aka ruwaito"), claim.attribution);
+      detail(say("Report date / date basis", "Ranar rahoto / tushen rana"), `${claim.reportDate}. ${claim.evidenceDateBasis}`);
+      claim.limitations.forEach((text) => detail(say("Qualification", "Iyaka"), text));
     });
     // Full explanations remain available on demand instead of crowding every answer.
     node.paragraphs.forEach((paragraph) => detail(say("Record notes", "Bayanan aiki"), paragraph[lang], false, lang));
@@ -159,7 +162,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     </nav>;
   }
 
-  const heading = session.view === "sources" ? say("Sources", "Tushe") : session.view === "source" ? say("Source finding", "Bayanin tushe") : session.view === "details" ? say("Details", "Ƙarin bayani") : concise?.title[lang];
+  const heading = session.view === "sources" ? say("Sources", "Tushe") : session.view === "source" ? say("Source finding", "Bayanin tushe") : session.view === "details" ? say("Details", "Ƙarin bayani") : node?.id === "start" ? interactionCopy.welcome[lang] : concise?.title[lang];
   const Main = embedded ? "div" : "main";
   const Heading = embedded ? "h3" : "h1";
   const DetailHeading = embedded ? "h4" : "h2";
@@ -168,7 +171,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
     {!embedded && <WorkspaceHeader lang={lang} page="chat" href={href} />}
     <Main className="guided-main">
       <section className="guided-conversation" aria-label={say("Guided conversation", "Tattaunawa mai jagora")}>
-        <div className="guided-frame-header"><span className="guided-guide-mark"><ChatbotMark /></span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{say("Questions, stories and sources", "Tambayoyi, labarai da tushe")}</span></div></div>
+        <div className="guided-frame-header"><span className="guided-guide-mark"><ChatbotMark /></span><div><strong>{say("Explore with the guide", "Bincika da jagora")}</strong><span>{interactionCopy.tools.chat.format[lang]}</span></div></div>
         {(preparing || path.length > 1 || session.view !== "answer" || session.cursor < session.path.length - 1) && <nav className="guided-toolbar" aria-label={say("Conversation navigation", "Kewayawa a tattaunawa")}>
           {(path.length > 1 || session.view !== "answer") && <button type="button" onClick={back}>← {say("Back", "Koma baya")}</button>}
           {session.view === "answer" && session.cursor < session.path.length - 1 && <button type="button" onClick={() => navigate(session.path.slice(0, session.cursor + 2), true)}>{say("Next", "Gaba")} →</button>}
@@ -181,7 +184,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
           {!node || !concise ? <button type="button" onClick={() => window.location.reload()}>{say("Reload", "Sake buɗewa")}</button> : session.view === "answer" ? <>
             {summaryParts.length > 0 && <p className="guided-summary">{summaryParts[summaryIndex]}</p>}
             {pager(summaryIndex, summaryParts.length, "summaryPage", say("Continue answer", "Ci gaba da amsa"))}
-            {node.id !== "women" && concise.items.length > 0 && <ul className="guided-facts">{concise.items.filter((item) => !node.id.startsWith("relationship:") || item.id.startsWith("limitations:")).map((item) => <li key={item.id}><span lang={item.originalLanguage}>{item.label[lang]}</span>{item.meta && <strong>{item.meta[lang]}</strong>}</li>)}</ul>}
+            {node.id !== "women" && concise.items.length > 0 && <ul className="guided-facts">{concise.items.filter((item) => !node.id.startsWith("relationship:") || item.id.startsWith("limitations:")).map((item) => <li key={item.id}><span lang={item.originalLanguage}>{item.label[item.originalLanguage ?? lang]}</span>{item.meta && <strong>{item.meta[lang]}</strong>}</li>)}</ul>}
             <div className="guided-options">{choices.items.map((option) => {
               const cohort = node.id === "women" ? concise.items[node.activityIds.indexOf(option.target.slice("activity:".length))] : null;
               const label = cohort?.label[lang] ?? (node.id === "programmes" ? option.description?.[lang] : null) ?? option.label[lang];
@@ -204,7 +207,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
             {session.view === "source" && source && <p className="guided-meta">{source.publisher} · {source.date}</p>}
             {session.view === "source" && source && !currentDetail && <p>{say("Open the original report above. No extract is stored for this report.", "Buɗe asalin rahoton da ke sama. Ba a adana wani rubutun wannan rahoto ba.")}</p>}
             {currentDetail && <div className="guided-detail" data-detail-page={detailIndex}>
-              <DetailHeading>{session.view === "details" ? <span lang="en">{currentDetail.label}</span> : currentDetail.label}</DetailHeading>
+              <DetailHeading><span lang={currentDetail.labelLang}>{currentDetail.label}</span></DetailHeading>
               {currentDetail.quote ? <blockquote lang="en">{currentDetail.text}</blockquote> : <p lang={currentDetail.lang}>{currentDetail.text}</p>}
             </div>}
             {pager(detailIndex, details.length, "detailPage", say("Continue", "Ci gaba"))}
@@ -214,7 +217,7 @@ export default function GuidedWorkspace({ lang, bundle, manifest, embedded = fal
         </section>
       </section>
       <div className="guided-preferences">
-        <p className="guided-draft">{say("Selected reports · Hausa draft", "Zaɓaɓɓun rahotanni · Hausa na gwaji")}</p>
+        <TranslationDraft lang={lang} />
         <label className="guided-cursor-control"><input type="checkbox" checked={session.photoCursor} onChange={(event) => {
           const photoCursor = event.currentTarget.checked;
           setSession((previous) => ({ ...previous, photoCursor }));

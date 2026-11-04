@@ -1014,9 +1014,11 @@ footer small {
 .language-prompt {
   font-size: 0.7rem;
   color: var(--muted);
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 12rem;
+  line-height: 1.5;
 }
-.language-prompt > span {
+.language-prompt-icon {
   font-size: 1.2rem;
   vertical-align: middle;
   margin-right: 0.3rem;
@@ -1640,3 +1642,13 @@ footer small {
     overflow-wrap: anywhere;
   }
 }
+.translation-draft {
+  width: auto;
+  margin: 8px 0 0;
+  padding: 0;
+  color: #52636d;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.translation-draft span { display: inline; }
+.translation-footer { padding-block: 0 24px; }

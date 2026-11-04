@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Lang, home } from "../lib/content";
+import { languages } from "../lib/locales.mjs";
 export default function LanguageChoice({
   lang,
   record,
@@ -9,7 +10,7 @@ export default function LanguageChoice({
   lang: Lang;
   record?: string | null;
   permanent?: boolean;
-  destinations?: { en: string; ha: string };
+  destinations?: Record<Lang, string>;
 }) {
   const href = (target: Lang) =>
     destinations
@@ -23,32 +24,24 @@ export default function LanguageChoice({
     <div
       className="language-choice"
       role="group"
-      aria-label="Change language / Canja harshe"
+      aria-label="Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ"
     >
       <span className="language-prompt">
-        <span aria-hidden="true">&#9678;</span> Change language / Canja harshe
+        <span className="language-prompt-icon" aria-hidden="true">&#9678;</span>{" "}
+        <span lang="en">Change language</span> / <span lang="ha">Canja harshe</span> / <span lang="yo">Yí èdè padà</span> / <span lang="ig">Gbanwee asụsụ</span>
       </span>
       <div className="language-options">
-        <Link
+        {languages.map(({ code, label }) => <Link
+          key={code}
           scroll={false}
           prefetch={false}
-          href={href("en")}
-          hrefLang="en"
-          lang="en"
-          aria-current={lang === "en" ? "page" : undefined}
+          href={href(code)}
+          hrefLang={code}
+          lang={code}
+          aria-current={lang === code ? "page" : undefined}
         >
-          English <span aria-hidden="true">{lang === "en" ? "✓" : ""}</span>
-        </Link>
-        <Link
-          scroll={false}
-          prefetch={false}
-          href={href("ha")}
-          hrefLang="ha"
-          lang="ha"
-          aria-current={lang === "ha" ? "page" : undefined}
-        >
-          Hausa <span aria-hidden="true">{lang === "ha" ? "✓" : ""}</span>
-        </Link>
+          {label} <span aria-hidden="true">{lang === code ? "✓" : ""}</span>
+        </Link>)}
       </div>
     </div>
   );

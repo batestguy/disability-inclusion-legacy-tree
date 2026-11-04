@@ -44,9 +44,9 @@ export function Record({
           const s = data.sources.find((x) => x.id === id);
           return s ? (
             <li key={id}>
-              <a href={s.url}>{s.title} &#8599;</a>
+              <a href={s.url} lang="en">{s.title} &#8599;</a>
               <small>
-                {s.publisher} · {s.type} · {s.date}
+                {s.publisher} · {t(lang, s.type, s.type)} · {s.date}
                 <br />
                 {t(lang, "Accessed", "An duba")} {s.accessed}
               </small>

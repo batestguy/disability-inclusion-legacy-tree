@@ -538,3 +538,37 @@
 .dashboard-redesign .collage-avatar.is-logo img { display: block; min-width: 0; min-height: 0; width: 100%; height: 100%; object-fit: contain; }
 .dashboard-redesign .activity-thumbnail { position: relative; }
 .dashboard-redesign .activity-thumbnail > img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dashboard-redesign .dashboard-header-inner { flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .dashboard-redesign .dashboard-header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 8px 12px; }
+  .dashboard-redesign .dashboard-brand { grid-column: 1; grid-row: 1; width: auto; }
+  .dashboard-redesign .dashboard-header .language-choice { display: contents; }
+  .dashboard-redesign .dashboard-header .language-prompt { grid-column: 1; grid-row: 2; max-width: none; font-size: .7rem; line-height: 1.4; }
+  .dashboard-redesign .dashboard-header .language-options { grid-column: 2; grid-row: 1 / 5; align-self: start; }
+  .dashboard-redesign .dashboard-navigation { grid-column: 1; grid-row: 3; width: auto; gap: 4px 12px; font-size: .75rem; }
+}
+
+/* Quiet shared chrome; the record and portraits remain the focal points. */
+.dashboard-redesign :is(h1,h2,h3) { text-wrap: balance; }
+.dashboard-redesign :is(.home-biography-intro,.biography-prose,.dashboard-footer) p { text-wrap: pretty; }
+.dashboard-redesign .dashboard-navigation a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border-radius: 8px; transition: background-color 160ms, color 160ms; }
+.dashboard-redesign .dashboard-navigation a:hover { background: var(--inclusion-tint); color: var(--inclusion-green); }
+.dashboard-redesign .dashboard-navigation a[aria-current] { background: var(--inclusion-tint); color: var(--inclusion-green); }
+.dashboard-redesign .dashboard-header .language-options { border-radius: 10px; }
+.dashboard-redesign .dashboard-header .language-options a { border-radius: 6px; }
+.dashboard-redesign .dashboard-header .language-options a:hover { color: var(--inclusion-green); background: var(--inclusion-tint); }
+.dashboard-redesign .dashboard-header .language-options a[aria-current='page'] { color: #fff; background: var(--inclusion-green); }
+.dashboard-redesign .dashboard-footer { align-items: start; border-top: 1px solid var(--inclusion-line); }
+.dashboard-redesign .footer-records { display: flex; flex-direction: column; align-items: flex-start; }
+.dashboard-redesign .footer-methodology { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--inclusion-green); font-weight: 600; text-underline-offset: 4px; }
+.dashboard-redesign .footer-records summary { min-height: 44px; align-content: center; cursor: pointer; }
+.dashboard-redesign .footer-records details[open] { max-width: 48ch; padding-bottom: 12px; }
+.dashboard-redesign .dashboard-footer .translation-draft { font-size: .75rem; margin-top: 8px; }
+@media (max-width: 760px) {
+  .dashboard-redesign .dashboard-navigation { gap: 4px; }
+  .dashboard-redesign .dashboard-navigation a { padding: 8px; }
+  .dashboard-redesign .dashboard-header .language-options { grid-row: 1 / 4; }
+}
+@media (forced-colors: active) {
+  .dashboard-redesign .dashboard-navigation a[aria-current], .dashboard-redesign .dashboard-header .language-options a[aria-current='page'] { background: Highlight; color: HighlightText; }
+}

@@ -1,4 +1,6 @@
 "use client";
+import interactionCopy from "../../../content/interaction-copy.json";
+import { translate } from "../lib/locales.mjs";
 
 import { useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
@@ -11,7 +13,7 @@ import assets from "../../../content/dashboard-network-assets.json";
 
 type Props = Pick<ReturnType<typeof getChatData>, "bundle"> & { lang: Lang; data: Presentation; area: string; selectedId: string | null; actorId: string | null; onSelect: (id: string | null) => void; onArea: (id: string) => void; onActor: (id: string | null) => void; onAsk: (id: string) => void };
 const colours = ["#156146", "#245dc1", "#7943b5", "#087c83", "#b14d17", "#ac286e"];
-const kindLabel = (kind: string, lang: Lang) => ({ "reported-programme-collaboration": ["Reported collaboration", "Haɗin gwiwar da aka ruwaito"], "stated-cooperation": ["Cooperation intention", "Niyyar haɗin gwiwa"], "signed-mou-reported": ["Reported MOU signing", "Sa hannun yarjejeniya da aka ruwaito"] }[kind]?.[lang === "ha" ? 1 : 0] ?? kind);
+const kindLabel = (kind: string, lang: Lang) => { const labels = ({ "reported-programme-collaboration": ["Reported collaboration", "Haɗin gwiwar da aka ruwaito"], "stated-cooperation": ["Cooperation intention", "Niyyar haɗin gwiwa"], "signed-mou-reported": ["Reported MOU signing", "Sa hannun yarjejeniya da aka ruwaito"] }[kind]); return labels ? translate(lang, labels[0], labels[1]) : kind; };
 function NodeImage({ id, label }: { id: string; label: string }) {
   const [failed, setFailed] = useState(false);
   const asset = assets.assets.find((entry) => entry.id === id);
@@ -25,7 +27,7 @@ export default function DashboardNetwork({ lang, bundle, data, area, selectedId,
   const [directOnly, setDirectOnly] = useState(false);
   const activityBrowser = useRef<HTMLDetailsElement>(null);
   const thumbnail = (activity: Presentation["networkActivities"][number]) => <ActivityThumbnail activityId={activity.id} groupIds={activity.groupIds} unit={data.figures.find((figure) => figure.activityId === activity.id)?.unit} />;
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
   const inArea = data.networkActivities.filter((a) => area === "all" || a.groupIds.includes(area));
   const collaborations = data.collaborations.filter((c) => inArea.some((a) => a.id === c.activityId));
   const actors = [...new Map(collaborations.flatMap((c) => c.participants.filter((p) => p.id !== "mohammed-abba-isa").map((p) => [p.id, p] as const))).values()].sort((a, b) => a.label.localeCompare(b.label));
@@ -52,7 +54,7 @@ export default function DashboardNetwork({ lang, bundle, data, area, selectedId,
   function selectActivity(id: string) { onSelect(selectionId(id)); requestAnimationFrame(() => scrollAndFocus(document.getElementById("network-detail-title"))); }
   function showDirect() { if (activityBrowser.current) activityBrowser.current.open = true; setPage(0); setDirectOnly(true); onActor(null); onSelect(null); requestAnimationFrame(() => scrollAndFocus(document.getElementById("network-activity-browser"))); }
   return <section id="collaborations" className="dashboard-section collaboration-section" tabIndex={-1} aria-labelledby="collaboration-title">
-    <div className="section-heading"><div><p className="dashboard-eyebrow">III. {say("CONNECTIONS", "HAƊIN GWIWA")}</p><h2 id="collaboration-title" className="calligraphy-title">{say("Follow the connections.", "Bi alaƙar da ke tsakanin su.")}</h2></div><button type="button" className="heading-action" onClick={() => scrollAndFocus(document.querySelector<HTMLElement>("[data-network-area]"))}>{say("Explore an area", "Bincika fanni")} <span aria-hidden="true">↘</span></button></div>
+    <div className="section-heading"><div><p className="dashboard-eyebrow">III. {say("CONNECTIONS", "HAƊIN GWIWA")}</p><h2 id="collaboration-title" className="calligraphy-title">{say("Follow the connections.", "Bi alaƙar da ke tsakanin su.")}</h2><p className="section-format">{interactionCopy.tools.collaborations.format[lang]}</p></div><button type="button" className="heading-action" onClick={() => scrollAndFocus(document.querySelector<HTMLElement>("[data-network-area]"))}>{say("Explore an area", "Bincika fanni")} <span aria-hidden="true">↘</span></button></div>
     <div className="network-toolbar"><label>{say("Contribution area", "Fannin gudummawa")}<select data-network-area value={area} onChange={(e) => chooseArea(e.target.value)}><option value="all">{say("All activities", "Dukkan ayyuka")}</option>{data.networkGroups.map((g) => <option key={g.id} value={g.id}>{g.label[lang]}</option>)}</select></label><div className="segmented-controls network-view-controls" role="group" aria-label={say("Collaboration view", "Yadda za a nuna haɗin gwiwa")}><button type="button" aria-pressed={!listView} onClick={() => setListView(false)}>{say("Network", "Cibiyar haɗin gwiwa")}</button><button type="button" aria-pressed={listView} onClick={() => setListView(true)}>{say("List", "Jeri")}</button></div></div>
     <div className="network-legend"><span><i className="legend-line" />{kindLabel("reported-programme-collaboration", lang)}</span><span><i className="legend-line is-intention" />{kindLabel("stated-cooperation", lang)}</span><span><i className="legend-line is-mou" />{kindLabel("signed-mou-reported", lang)}</span></div>
     <div className={`network-composition pathway-composition${listView ? " use-list" : ""}`}>

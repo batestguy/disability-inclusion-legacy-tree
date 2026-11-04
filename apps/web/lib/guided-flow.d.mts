@@ -1,4 +1,4 @@
-export interface FlowText { en: string; ha: string }
+export interface FlowText { en: string; ha: string; yo: string; ig: string }
 export interface FlowOption { id: string; target: string; label: FlowText; description?: FlowText }
 export interface FlowClaim {
   metric: string;

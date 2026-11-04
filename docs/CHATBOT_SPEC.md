@@ -1,5 +1,23 @@
 # Bilingual dashboard chatbot specification
 
+## Four-language prompt — 31 October 2026
+
+Owner now requires the prompt itself in all four languages: **Change language /
+Canja harshe / Yí èdè padà / Gbanwee asụsụ**. All four phrases stay visible,
+with native language tags and the existing stacked language options. This
+supersedes earlier instructions to display only the English/Hausa prompt.
+
+## Four-language guided site — 30 October 2026
+
+Owner requested full-site and guided-chat Yoruba and Igbo translations, visibly
+marked draft. Extend the shared page/chat locale to `en`, `ha`, `yo`, `ig`.
+Always keep the visible **Change language / Canja harshe** instruction and stack
+**English**, **Hausa**, **Yorùbá**, **Igbo** in that order, without a menu.
+Preserve selected records and guided paths across locale changes. Original
+evidence quotations and source titles retain their original language. Translation
+coverage does not establish linguistic approval; no review or public-release flag
+may be set by this implementation. See [the implementation record](YORUBA_IGBO_2026-10-30.md).
+
 ## Home / Explore / Chat navigation — 30 October 2026
 
 Owner-approved restructuring supersedes the embedded-dashboard placement below.

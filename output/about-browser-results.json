@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-04T07:44:53.304Z",
+  "completed": true,
+  "checks": [
+    "en: Home introduction/subtitles, keyboard biography link, sourced biographies and new photos, locale/reload/Methodology state, repeated chapter/chat descriptions",
+    "ha: Home introduction/subtitles, keyboard biography link, sourced biographies and new photos, locale/reload/Methodology state, repeated chapter/chat descriptions",
+    "yo: Home introduction/subtitles, keyboard biography link, sourced biographies and new photos, locale/reload/Methodology state, repeated chapter/chat descriptions",
+    "ig: Home introduction/subtitles, keyboard biography link, sourced biographies and new photos, locale/reload/Methodology state, repeated chapter/chat descriptions",
+    "All four About pages fit 320px/enlarged text, keep full photo frames, and failed images retain alternative names, captions and source/profile links"
+  ],
+  "axe": [
+    {
+      "label": "en: About desktop",
+      "violations": []
+    },
+    {
+      "label": "en: Methodology and agent workflow",
+      "violations": []
+    },
+    {
+      "label": "en: About 320px",
+      "violations": []
+    },
+    {
+      "label": "ha: About desktop",
+      "violations": []
+    },
+    {
+      "label": "ha: Methodology and agent workflow",
+      "violations": []
+    },
+    {
+      "label": "ha: About 320px",
+      "violations": []
+    },
+    {
+      "label": "yo: About desktop",
+      "violations": []
+    },
+    {
+      "label": "yo: Methodology and agent workflow",
+      "violations": []
+    },
+    {
+      "label": "yo: About 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: About desktop",
+      "violations": []
+    },
+    {
+      "label": "ig: Methodology and agent workflow",
+      "violations": []
+    },
+    {
+      "label": "ig: About 320px",
+      "violations": []
+    },
+    {
+      "label": "About photo fallback",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "externalRequests": []
+}

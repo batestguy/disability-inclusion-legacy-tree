@@ -92,3 +92,10 @@
 }
 
 .guided-guide-mark svg { width: 28px; height: 28px; }
+
+@media (max-width: 600px) {
+  .dashboard-redesign.guided-workspace .guided-main { margin-top: 12px; }
+  .dashboard-redesign.guided-workspace .guided-frame-header { padding: 10px 16px; }
+  .dashboard-redesign.guided-workspace .guided-toolbar { padding-block: 0; }
+  .dashboard-redesign.guided-workspace .guided-visitor-bubble { margin-top: 10px; padding-block: 8px; }
+}

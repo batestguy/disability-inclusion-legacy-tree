@@ -23,7 +23,7 @@ async function audit(label) {
 async function layout() {
   await page.evaluate(() => document.fonts.ready.then(() => true));
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "horizontal overflow");
-  const language = page.getByRole("group", { name: "Change language / Canja harshe", exact: true });
+  const language = page.getByRole("group", { name: "Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ", exact: true });
   assert.equal(await language.count(), 1);
   const en = await language.getByRole("link", { name: "English", exact: true }).boundingBox();
   const ha = await language.getByRole("link", { name: "Hausa", exact: true }).boundingBox();
@@ -36,6 +36,16 @@ async function layout() {
     assert.ok(a.width >= 44 && a.height >= 44);
     boxes.slice(i + 1).forEach(b => assert.ok(a.r <= b.x || b.r <= a.x || a.b <= b.y || b.b <= a.y, "overlapping bubble hit areas"));
   });
+  const overflowing = await page.locator(".bubble-surface").evaluateAll(surfaces => surfaces.filter(surface => {
+    const frame = surface.getBoundingClientRect();
+    return [surface.querySelector("strong"), surface.querySelector(".bubble-detail")].some(element => {
+      const rect = element.getBoundingClientRect();
+      // Briem Hand's descenders extend beyond its heading line box into the
+      // normal gap. Only the description's own scroll box signals clipped copy.
+      return rect.left < frame.left - 1 || rect.right > frame.right + 1 || rect.top < frame.top - 1 || rect.bottom > frame.bottom + 1 || (element.classList.contains("bubble-detail") && element.scrollHeight > element.clientHeight + 1);
+    });
+  }).map(surface => surface.textContent));
+  assert.deepEqual(overflowing, [], "entry descriptions overflow their bubble");
 }
 try {
   await page.goto(base + "/");
@@ -97,7 +107,8 @@ try {
   await page.reload(); await page.locator(".landing-workspace").waitFor();
   await page.getByRole("link", { name: "Hausa", exact: true }).click();
   await page.locator('.landing-workspace[lang="ha"]').waitFor();
-  assert.equal(await page.locator(".quote-translation-status").innerText(), "Fassarar Hausa ta gwaji");
+  assert.equal(await page.locator(".dashboard-header .translation-draft,.quote-translation-status").count(), 0);
+  assert.equal(await page.locator('.dashboard-footer [data-translation-status="draft"]').count(), 1);
   assert.equal(await page.locator(".opening-portrait blockquote").getAttribute("lang"), "ha");
   assert.match(await page.locator(".quote-original").innerText(), /Asalin magana/);
   await page.locator(".bubble-chat").click();
@@ -111,7 +122,7 @@ try {
   assert.equal(new URL(page.url()).searchParams.get("initiative"), collaboration.id);
   assert.equal(await page.locator("#advocacy-title").innerText(), "Jigogin fafutukarsa.");
   assert.ok(decodeURIComponent(new URL(page.url()).hash).includes("start|programmes"));
-  results.checks.push("Home/Explore/Chat and locale changes retain figures, concepts, actor/initiative, entry section and conversation across refresh; Hausa remains visibly draft");
+  results.checks.push("Home/Explore/Chat and locale changes retain figures, concepts, actor/initiative, entry section and conversation across refresh; Hausa keeps one discreet footer draft label");
 
   await page.goto(base + "/?area=health-welfare&section=advocacy" + flow);
   await page.waitForURL(url => url.pathname === "/explore/" && url.searchParams.get("area") === "health-welfare");

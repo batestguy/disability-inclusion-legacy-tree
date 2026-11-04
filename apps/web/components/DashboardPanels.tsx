@@ -1,4 +1,5 @@
 "use client";
+import { translate } from "../lib/locales.mjs";
 
 import { useState } from "react";
 import type { getChatData } from "../lib/chat-data";
@@ -7,7 +8,7 @@ import { getFlowNode } from "../lib/guided-flow.mjs";
 import { getConciseAnswer, paginate } from "../lib/guided-presentation.mjs";
 
 export interface DashboardPanelProps {
-  lang: "en" | "ha";
+  lang: import("../lib/content").Lang;
   bundle: ReturnType<typeof getChatData>["bundle"];
   view: DashboardView;
   onFilter: (patch: Partial<DashboardFilters>) => void;
@@ -15,7 +16,7 @@ export interface DashboardPanelProps {
   titleFor: (id: string) => string;
 }
 
-const local = (lang: "en" | "ha", en: string, ha: string) => lang === "ha" ? ha : en;
+const local = (lang: import("../lib/content").Lang, en: string, ha: string) => translate(lang, en, ha);
 const boundMark = { exact: "", "greater-than": ">", "at-least": "≥", approximate: "≈" };
 const boundName = {
   exact: ["Exactly", "Daidai"], "greater-than": ["More than", "Fiye da"],
@@ -70,12 +71,12 @@ export function DashboardFigures(props: DashboardPanelProps & { figurePage?: num
   const say = (en: string, ha: string) => local(lang, en, ha);
   const reported = paginate(view.observations.filter((o) => o.stage === "reported-delivery"), figurePage ?? localPage, 4);
   const targets = view.observations.filter((o) => o.stage === "target");
-  const unit = (value: string) => lang === "en" ? value : ({ people: "mutane", households: "gidaje", "job opportunities": "damar ayyukan yi" }[value] ?? value);
+  const unit = (value: string) => translate(lang, value, ({ people: "mutane", households: "gidaje", "job opportunities": "damar ayyukan yi" }[value] ?? value));
   const card = (observation: DashboardObservation) => {
     const answer = getConciseAnswer(getFlowNode(bundle, `measure:${observation.id}`));
     const target = observation.stage === "target";
-    const value = observation.value.toLocaleString(lang === "ha" ? "ha-NG" : "en-NG");
-    const accessibleValue = `${boundName[observation.bound][lang === "ha" ? 1 : 0]} ${value} ${unit(observation.unit)}`;
+    const value = observation.value.toLocaleString(`${lang}-NG`);
+    const accessibleValue = `${say(boundName[observation.bound][0], boundName[observation.bound][1])} ${value} ${unit(observation.unit)}`;
     return <article key={observation.id} className={`dashboard-figure${target ? " is-target" : ""}`}>
       <h3>{titleFor(observation.activity_id)}</h3>
       <p className="dashboard-figure-value" role="img" aria-label={accessibleValue}><span aria-hidden="true">{boundMark[observation.bound]}{value}</span><span aria-hidden="true"> {unit(observation.unit)}</span></p>
@@ -102,9 +103,9 @@ export function DashboardFigures(props: DashboardPanelProps & { figurePage?: num
 
 export function DashboardThemes({ lang, bundle, view, onFilter }: DashboardPanelProps) {
   const say = (en: string, ha: string) => local(lang, en, ha);
-  const label = (text: { en: string; ha?: string | null }) => lang === "ha" && text.ha ? text.ha : text.en;
+  const label = (text: { en: string; ha?: string | null }) => translate(lang, text.en, text.ha ?? text.en);
   const maximum = Math.max(1, ...view.categories.map((c) => c.count));
-  const percent = (share: number | null) => share === null ? "—" : `${(share * 100).toLocaleString(lang === "ha" ? "ha-NG" : "en-NG", { maximumFractionDigits: 1 })}%`;
+  const percent = (share: number | null) => share === null ? "—" : `${(share * 100).toLocaleString(`${lang}-NG`, { maximumFractionDigits: 1 })}%`;
   return <section className="dashboard-section" id="themes" aria-label={say("Categories and text themes", "Rukunoni da jigogin rubutu")}>
     <Heading number="03" title={say("Activities & themes", "Ayyuka da jigogi")} />
     <div className="dashboard-chart-pair">

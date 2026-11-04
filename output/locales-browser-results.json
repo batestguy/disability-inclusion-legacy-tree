@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-04T07:46:23.094Z",
+  "completed": true,
+  "checks": [
+    "yo: home, keyboard Explore, chosen area, guided women/cohorts, reload, all language switches, exact English source and Methodology context",
+    "yo: 320px Home/Explore/Chat/Methodology, enlarged reading text and permanent record",
+    "ig: home, keyboard Explore, chosen area, guided women/cohorts, reload, all language switches, exact English source and Methodology context",
+    "ig: 320px Home/Explore/Chat/Methodology, enlarged reading text and permanent record"
+  ],
+  "axe": [
+    {
+      "label": "yo: home desktop",
+      "violations": []
+    },
+    {
+      "label": "yo: explore desktop",
+      "violations": []
+    },
+    {
+      "label": "yo: guided answer desktop",
+      "violations": []
+    },
+    {
+      "label": "yo: methodology desktop",
+      "violations": []
+    },
+    {
+      "label": "yo: home 320px",
+      "violations": []
+    },
+    {
+      "label": "yo: explore/ 320px",
+      "violations": []
+    },
+    {
+      "label": "yo: chat/ 320px",
+      "violations": []
+    },
+    {
+      "label": "yo: about/methodology/ 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: home desktop",
+      "violations": []
+    },
+    {
+      "label": "ig: explore desktop",
+      "violations": []
+    },
+    {
+      "label": "ig: guided answer desktop",
+      "violations": []
+    },
+    {
+      "label": "ig: methodology desktop",
+      "violations": []
+    },
+    {
+      "label": "ig: home 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: explore/ 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: chat/ 320px",
+      "violations": []
+    },
+    {
+      "label": "ig: about/methodology/ 320px",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "externalRequests": []
+}

@@ -65,7 +65,7 @@ async function audit(label) {
 }
 async function languageGeometry() {
   const group = page.getByRole("group", {
-    name: "Change language / Canja harshe",
+    name: "Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ",
     exact: true,
   });
   const english = group.getByRole("link", { name: "English", exact: true });

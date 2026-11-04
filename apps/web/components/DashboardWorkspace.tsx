@@ -1,4 +1,5 @@
 "use client";
+import { translate, localeHome } from "../lib/locales.mjs";
 
 import { useEffect, type MouseEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -24,7 +25,7 @@ export default function DashboardWorkspace({ lang, bundle }: Props) {
   const router = useRouter();
   const { data, dashboard, setDashboard, setSession, section, href } = useWorkspaceNavigation(bundle, "explore");
   const selection = dashboard.presentation;
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
     if (!section) return;
@@ -58,14 +59,14 @@ export default function DashboardWorkspace({ lang, bundle }: Props) {
     const path = ["start", "timeline", `year:${activity.report_date.slice(0, 4)}`, `activity:${activity.id}`];
     setSession(previous => ({ ...previous, ...initialGuidedScreen, path, cursor: path.length - 1 }));
     setDashboard(previous => ({ ...previous, selectedId: id }));
-    router.push((lang === "ha" ? "/ha/chat/" : "/chat/") + selectionQuery(selection, id, section) + pathHash(path));
+    router.push((localeHome(lang) + "chat/") + selectionQuery(selection, id, section) + pathHash(path));
   }
   if (!data) return <main role="alert"><h1>{say("The records could not be loaded safely.", "Ba a iya loda bayanan cikin aminci ba.")}</h1><button onClick={() => location.reload()}>{say("Reload", "Sake buɗewa")}</button></main>;
   return <div className="dashboard-shell dashboard-redesign explore-workspace" lang={lang}>
     <a className="skip" href="#dashboard-main">{say("Skip to dashboard", "Tsallaka zuwa bayanai")}</a>
     <WorkspaceHeader lang={lang} page="explore" href={href} />
     <main id="dashboard-main" className="dashboard-main" tabIndex={-1}>
-      <div className="explore-heading"><div><h1>{say("Explore the record", "Bincika bayanan")}</h1>{lang === "ha" && <p className="dashboard-draft">Hausa na gwaji</p>}</div><Link href={href("chat", lang)} prefetch={false}>{say("Interact with me", "Mu tattauna")} ↗</Link></div>
+      <div className="explore-heading"><div><h1>{say("Explore the record", "Bincika bayanan")}</h1></div><Link href={href("chat", lang)} prefetch={false}>{say("Interact with me", "Mu tattauna")} ↗</Link></div>
       <nav className="explore-sections" aria-label={say("Explore sections", "Sassan bincike")}>
         <Link onClick={enterSection} href={href("explore", lang, "overview")} prefetch={false}>{say("Figures", "Lambobi")}</Link>
         <Link onClick={enterSection} href={href("explore", lang, "advocacy")} prefetch={false}>{say("Themes", "Jigogi")}</Link>

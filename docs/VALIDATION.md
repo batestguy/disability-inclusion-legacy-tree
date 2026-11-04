@@ -1,5 +1,234 @@
 # Validation evidence - 22 October 2026
 
+## Expanded Isa biography and agent-workflow account — 4 November 2026
+
+Owner requested more subject biography/photos, explicit agent-workflow context
+and a plan for the next interactive landing pass. Three sourced biography
+chapters and two full-frame documentary photographs now precede the smaller
+creator credit. Existing creator wording is unchanged. Methodology retains its
+seven short steps and adds two paragraphs on agent assistance and owner direction.
+All added text/alt/captions have en/ha/yo/ig fields.
+
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for web and Studio.
+- `npm.cmd test`: all 75 tests pass. Existing multilingual/date-number checks
+  now include the new biography chapters, photo descriptions and workflow copy.
+  Photo checks cover all five assets, hashes, dimensions and full-frame ratios.
+- `npm.cmd run test:locales-coverage`: passes; 519 interface/generated texts,
+  24 biography blocks, nine interaction blocks, 14 methodology blocks and three
+  agent-workflow blocks; all 162 guided nodes; zero missing Yoruba/Igbo entries.
+- `npm.cmd run build`: complete web export (42 pages) and Studio pass.
+- `npm.cmd run test:about-browser`: passes five groups / 13 zero-violation axe
+  states. Covers all four About and Methodology routes, source links, five photo
+  ratios, four subject photos, smaller creator portrait and subject section more
+  than 1.5 times the creator section height; locale/selection/chat preservation;
+  all four About pages at 320px/200% text; and all five failed-photo alternatives.
+  Workflow heading and prose render in every locale. No page errors, failed
+  responses or runtime external requests. Full source/context qualifications
+  remain accessible; coverage does not certify translation accuracy.
+- `npm.cmd run test:locales-browser`: passes four groups / 16 zero-violation
+  axe states, including translated Methodology at phone widths and enlarged
+  text. No page errors, failed responses or runtime external requests.
+- English About desktop/phone and Methodology desktop screenshots visually
+  inspected; no clipped content or distorted photos. Subject content clearly
+  leads; original photographer watermark remains in the source-published image.
+- `npm.cmd run preflight` and per-command safe-directory `git diff --check`
+  pass. No diff in frozen `content/dashboard/v1`; no permission/approval flag,
+  production dependency or public deployment changed.
+
+TheCable's education image returned 403 during preparation. Used the education
+office report's already-recorded image URL instead, preserving original bytes
+under ignored local output and recording original/derivative hashes in
+`content/about-assets.json`. The caption states publication context, without
+claiming an independently verified photographed event/date. New photos can be
+regenerated with `node scripts/prepare-about-documentary-assets.mjs`; the older
+creator-photo helper now preserves these extra manifest entries.
+
+The proposed next landing pass is documented in
+`docs/LANDING_INTERACTION_PLAN_2026-11-04.md`; no proposed interaction is claimed
+implemented. Work remains local/uncommitted. Preview: `/about/` and
+`/about/methodology/` at http://127.0.0.1:8767/.
+
+## Visitor-facing notices and presentation polish — 4 November 2026
+
+Owner requested removal of review-pending wording and a polished free-tier
+experience that improves through feedback. Header draft strips and duplicate
+Hausa/quote notices are removed. One small translation-draft note remains in
+the footer/preferences area of each non-English page, including permanent
+records. Automatic approval review rejected removing draft disclosures entirely;
+the implemented alternative preserves visible draft status without a review
+prerequisite. Source/review flags, image-rights records and public-build gates
+are unchanged. No paid service, production dependency or deployment added.
+
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for web and Studio.
+- `npm.cmd test`: all 75 tests pass after final guided-copy changes.
+- `npm.cmd run test:locales-coverage`: passes; 519 interface/generated texts,
+  14 biography blocks, nine interaction blocks, 14 methodology blocks and all
+  162 guided nodes; zero missing Yoruba/Igbo interface translations.
+- `npm.cmd run build`: full web/Studio build passes. Final web-only rebuild
+  also passes after the last guided-chat wording changes, exporting 42 pages.
+- Landing, locales, guided-chat, About and dashboard browser suites pass:
+  respectively 5/4/8/5/9 check groups and 3/16/5/9/7 axe states. Across the
+  five suites: 31 groups, 40 zero-violation accessibility states, no page errors,
+  failed responses or runtime external requests.
+- Updated existing browser assertions require no pending-review wording on
+  checked translated pages, no header draft strip and one retained draft note.
+  Navigation, selected evidence, guided history, original quote access, source
+  bounds, failed-image alternatives and motion preferences still pass.
+- Desktop Home and 320px Yoruba Home screenshots visually inspected. Headings,
+  navigation, portrait, bubbles and footer fit without clipping; existing suites
+  also cover enlarged text and forced colours. Evidence remains under
+  `output/playwright/` and the five `output/*browser-results.json` files.
+- `npm.cmd run preflight` and `git diff --check` pass. Preflight still correctly
+  reports local preview status and unmet public-reveal gates. Frozen
+  `content/dashboard/v1` has no diff. No linguistic certification claimed.
+
+Preview: http://127.0.0.1:8767/. Work remains local/uncommitted; no push or
+public deployment is claimed. Earlier save status below is historical.
+
+## Contextual invitations, welcome and ML areas — 31 October 2026
+
+Owner requested achievement/advocacy/network context in the entry labels, a short
+assistant welcome, and a little more ML/AI biography. Subsequent owner correction
+excludes named individual projects: creator prose now discusses areas only.
+
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for both workspaces.
+- `npm.cmd test`: all 75 tests pass, including four-language direct interaction
+  text and unchanged numerical/date tokens, plus existing evidence safeguards.
+- `npm.cmd run test:locales-coverage`: passes, 535 interface/generated texts,
+  13 biography blocks and nine interaction blocks across all four languages;
+  zero missing Yoruba/Igbo interface translations. All 162 guided nodes remain
+  covered. Direct content completeness is not linguistic certification.
+- `npm.cmd run build`: full web/Studio build passes. Final web-only rebuild also
+  passes after adjusting the taller phone bubbles. No production dependency.
+- `npm.cmd run test:about-browser`: passes five groups / nine zero-violation axe
+  states. New checks cover format labels/invitations, ML/AI prose in all locales,
+  profile-only GitHub links, welcome at start and ordinary question after choosing
+  a branch. Existing biography, photographs, state, mobile and fallback checks pass.
+- `npm.cmd run test:landing-browser`: passes five groups / three zero-violation
+  axe states against the final export, including description containment. The
+  first visual inspection found longer invitations extending below phone bubbles;
+  natural height and a 260px minimum below 500px correct this. Heading ink was
+  initially mistaken for clipping by the new assertion: measured Briem Hand
+  descenders occupy the ordinary heading gap, inside the bubble. The corrected
+  assertion retains frame bounds for headings and description scroll-box checks.
+- `npm.cmd run test:locales-browser`: passes four groups / 16 zero-violation axe
+  states, with visible bubble-child bounds checked in Yoruba/Igbo phone layouts.
+- `npm.cmd run test:chat-browser`: passes eight groups / five zero-violation axe
+  states, retaining the minimal replacing-choice flow, source bounds and history.
+- Across those four suites: 22 groups / 33 zero-violation axe states, zero page
+  errors, failed responses or runtime external requests. An additional 320px
+  browser check across en/ha/yo/ig at 100%/200% root text reports no child escaping
+  its bubble and no horizontal overflow. English phone bubbles visually inspected;
+  evidence: output/playwright/landing-copy-en-phone.png.
+- Final `npm.cmd run preflight` and per-command safe-directory `git diff --check`
+  pass. Existing source/evidence data, image assets and approval flags are unchanged.
+
+ML areas are grounded in the owner's CV and public GitHub repository documentation:
+tree-based prediction/optimisation and source-document retrieval with optional AI
+explanations. Public creator prose names only the areas, with the existing general
+GitHub profile link. AI benefits are expressed as the creator's personal vision,
+without claiming measured results or existing services. All non-English text
+remains draft. No source push or public deployment; changes remain local/uncommitted.
+
+## Biographies and clearer labels — 31 October 2026
+
+Implemented the owner-approved Home introduction + full About biographies plan,
+four format subtitles and first-person creator profile. See
+[implementation/update instructions](ABOUT_BIOGRAPHIES_2026-10-31.md).
+
+- `npm.cmd run preflight`: passes; repeated at handoff.
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for both workspaces.
+- `npm.cmd test`: all 75 tests pass. Two new tests check four-language biography
+  fields/date consistency and photograph hashes/rights flags/full-frame ratios.
+  Existing frozen bundle, numerical dimensions and evidence checks retain coverage.
+- `npm.cmd run test:locales-coverage`: passes. Checks 539 interface/generated
+  texts, 12 directly translated biography/alt/caption blocks and all 162 guided
+  nodes; zero missing Yoruba/Igbo interface translations. Each new biography
+  field has all four languages. Coverage does not certify linguistic accuracy.
+- `npm.cmd run build`: web export (42 generated pages) and Studio pass. No new
+  production dependency. Biography/metadata render at all four About routes.
+- `npm.cmd run test:about-browser`: passes five groups / nine axe states, zero
+  violations, page errors, failed responses or runtime external requests. Covers
+  all four Home introduction/subtitle sets; keyboard biography navigation;
+  source-linked biographies and three new photographs; correct creator order;
+  full image proportions; selection/flow through locale, reload and Methodology;
+  corresponding dashboard/chat descriptions; 320px and 200% text; and image
+  failure alternatives with captions/source/profile links retained. First harness
+  attempts exposed absolute-versus-relative URL and explicit-Hausa expectation
+  mistakes; corrected in tests before the complete passing run. No app failure is
+  counted as a pass. Evidence: output/about-browser-results.json and
+  output/playwright/about-{en,ha,yo,ig}-{desktop,phone}.png.
+- `npm.cmd run test:landing-browser`: passes five groups / three zero-violation
+  axe states, with zero page errors, failed responses or runtime external requests.
+- `npm.cmd run test:dashboard-browser`: passes nine groups / seven zero-violation
+  axe states, with zero page errors, failed responses or runtime external requests.
+- `npm.cmd run test:chat-browser`: passes eight groups / five zero-violation axe
+  states, with zero page errors, failed responses or runtime external requests.
+- Across these final four suites: 27 check groups / 24 zero-violation axe states.
+  English About desktop/phone screenshots visually inspected. Full supplied
+  portrait frame, including wheelchair/shoes, is retained. Home portrait/quote,
+  pause/reduced-motion controls and data/chat interactions remain usable.
+- `git -c safe.directory=D:/HonAbbas -c core.safecrlf=false diff --check`: passes.
+
+Original photographs were read from their recorded office URLs or the supplied
+owner image. Only proportional resizing/orientation normalization/WebP encoding
+was used; source originals remain intact. Provenance/hashes are recorded in
+content/about-assets.json. The CV stays outside the project; only the selected
+bio is included. No photographer licence, human language approval, independent
+career audit, source push or public deployment is claimed. Review/reveal flags
+and the frozen evidence bundle remain unchanged; work is local/uncommitted.
+
+## Yoruba / Igbo — 30 October 2026
+
+Owner selected full-site and guided-chat Yoruba and Igbo translations, visibly
+marked draft. See [implementation record](YORUBA_IGBO_2026-10-30.md).
+
+- `npm.cmd run preflight`: passes, repeated before handoff.
+- `npm.cmd run lint`, `npm.cmd run typecheck`: pass for web and Studio.
+- `npm.cmd test`: all 73 tests pass. New coverage checks four locale paths,
+  numerical-token preservation, immutability of source data/approval flags and
+  four-language display fields across all 162 reachable guided nodes.
+- `npm.cmd run test:locales-coverage`: passes, 536 audited interface/generated
+  texts and 162 guided nodes, zero missing Yoruba/Igbo translations. Exact
+  originals and the proper name Mohammed Abba Isa are excluded. This checks
+  coverage, not translation correctness. Each dictionary has 567 nonempty entries;
+  separate JSON checks found no duplicate keys.
+- `npm.cmd run build`: full web export and Studio pass. Final
+  `npm.cmd run build -w apps/web` passes after completed translations and the
+  phone-layout/type corrections; all four route sets export (42 generated pages).
+- `npm.cmd run test:locales-browser`: four check groups / 16 axe states, zero
+  violations, page errors, failed responses or runtime external requests.
+  Checks both new locales on Home, Explore, Chat and Methodology at desktop and
+  320px; four visible stacked links and active state; keyboard Explore, selected
+  areas, guided women/cohorts, reload, switching through every language while
+  retaining selection/flow, original English source access, About/Methodology
+  navigation, enlarged reading text and permanent records. Visible prompt/options
+  boxes do not overlap navigation. Evidence: `output/locales-browser-results.json`
+  and `output/playwright/locales-*-phone.png`.
+- `npm.cmd run test:chat-browser`: eight groups / five zero-violation axe states.
+  Established English/Hausa phone steps fit the 390px/844px viewport again after
+  the taller four-language header was reflowed and chat spacing tightened.
+- `npm.cmd run test:landing-browser`: five groups / three zero-violation axe states.
+- `npm.cmd run test:dashboard-browser`: nine groups / seven zero-violation axe
+  states. Geometry now checks the visible prompt and options separately because
+  the phone language group uses `display:contents`; non-overlap remains asserted.
+- Across the four final browser suites: 26 groups / 31 axe states; zero violations,
+  page errors, failed responses and runtime external requests. Yoruba Home and
+  Igbo Chat phone screenshots visually inspected; letters/diacritics render legibly.
+- `git -c safe.directory=D:/HonAbbas -c core.safecrlf=false diff --check`: passes
+  with normal repository Windows line-ending handling. No global Git/ACL changes.
+
+The first new browser harness attempt required an explicit browser context for
+axe; fixed. The initial phone-height regression and missing optional Hausa
+fallback type were corrected before the final export. No unresolved check failure
+is claimed as a pass. Optional direct Python font-table inspection was unavailable
+because that interpreter lacks Brotli; browser font/render checks were used.
+
+No evidence bundle, observation, source claim, public-use permission or approval
+flag was changed. All non-English wording remains draft; linguistic accuracy
+has not been certified. Original evidence and technical details remain in their
+original language. Work is local/uncommitted; no push or public deployment.
+
 ## About / Methodology — 30 October 2026
 
 Local project About and nested Methodology pages added in English and visibly

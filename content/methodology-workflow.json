@@ -1,0 +1,22 @@
+{
+  "title": {
+    "en": "How AI agents helped our workflow",
+    "ha": "Yadda wakilan AI suka taimaka wa aikinmu",
+    "yo": "Bí àwọn aṣojú AI ṣe ran iṣẹ́ wa lọ́wọ́",
+    "ig": "Otú ndị nnọchi anya AI si nyere usoro ọrụ anyị aka"
+  },
+  "paragraphs": [
+    {
+      "en": "The creator worked with AI coding agents to turn the idea into a working website. They helped write collection and analysis scripts, build the pages and guided questions, prepare draft translations, and refine the design through feedback. Focused agent tasks also helped examine research options and check parts of the work.",
+      "ha": "Wanda ya ƙirƙira shafin ya yi aiki tare da wakilan AI na rubuta lambar manhaja don mayar da ra’ayin zuwa shafi mai aiki. Sun taimaka wajen rubuta shirye-shiryen tattara bayanai da nazari, gina shafuka da tambayoyin jagora, shirya fassarorin gwaji da inganta zane bisa ra’ayoyi. Ayyukan wakilai na musamman sun kuma taimaka wajen bincika zaɓuɓɓukan bincike da duba sassan aikin.",
+      "yo": "Olùṣẹ̀dá ṣiṣẹ́ pẹ̀lú àwọn aṣojú AI tó ń kọ kóòdù láti sọ èrò náà di ojúlé tó ń ṣiṣẹ́. Wọ́n ṣèrànwọ́ láti kọ ètò ìkójọ àti ìtúpalẹ̀ dátà, ṣe ojú ìwé àti ìbéèrè ìtọ́sọ́nà, pèsè ìtumọ̀ àkọ́kọ́, àti tún àpẹẹrẹ ṣe nípasẹ̀ èsì. Iṣẹ́ aṣojú tó dojú kọ apá pàtó tún ṣèrànwọ́ láti ṣàyẹ̀wò àwọn ọ̀nà ìwádìí àti apá iṣẹ́ náà.",
+      "ig": "Onye kere saịtị a soro ndị nnọchi anya AI na-ede koodu rụọ ọrụ iji mee echiche ahụ ka ọ bụrụ webụsaịtị na-arụ ọrụ. Ha nyere aka ide mmemme nchịkọta na nyocha data, wuo ibe na ajụjụ nduzi, kwadebe ntụgharị asụsụ mbido ma melite nhazi site na nzaghachi. Ọrụ ndị nnọchi anya lekwasịrị anya n’otu ihe nyekwara aka nyochaa nhọrọ nyocha na akụkụ ọrụ ahụ."
+    },
+    {
+      "en": "The owner set the direction and corrected the wording and presentation. Agents ran automated content, calculation and browser checks, with source reports kept alongside the claims. This support does not replace the original evidence or certify translations. The visitor-facing chatbot follows prepared questions and answers; it does not call a live AI agent.",
+      "ha": "Mai aikin ya tsara alkibla kuma ya gyara kalmomi da yadda ake gabatarwa. Wakilan sun gudanar da gwaje-gwajen atomatik kan bayanai, lissafi da aiki a burauza, tare da kiyaye rahotannin tushe kusa da ikirari. Wannan tallafi ba ya maye gurbin hujjar asali ko tabbatar da ingancin fassara. Chatbot na masu ziyara yana bin tambayoyi da amsoshin da aka shirya; ba ya kiran wakilin AI kai tsaye.",
+      "yo": "Olówó iṣẹ́ pinnu ìtọ́sọ́nà, ó sì tún ọ̀rọ̀ àti ìgbékalẹ̀ ṣe. Àwọn aṣojú ṣe àyẹ̀wò aládàáṣe fún àkóónú, ìṣirò àti aṣàwákiri, pẹ̀lú ìròyìn orísun lẹ́gbẹ̀ẹ́ ohun tí a sọ. Ìrànwọ́ yìí kò rọ́pò ẹ̀rí àkọ́kọ́ tàbí fọwọ́sí ìtumọ̀. Olùrànlọ́wọ́ ìjíròrò fún àlejò tẹ̀lé ìbéèrè àti ìdáhùn tí a ti pèsè; kò pe aṣojú AI alààyè.",
+      "ig": "Onye nwe ọrụ họpụtara ntụziaka ma dozie okwu na ngosi. Ndị nnọchi anya mere nlele akpaka maka ọdịnaya, mgbakọ na ihe nchọgharị, na-edobe akụkọ isi mmalite n’akụkụ ihe a na-ekwu. Enyemaka a anaghị anọchi ihe akaebe mbụ ma ọ bụ kwado ntụgharị asụsụ. Onye nduzi mkparịta ụka ndị ọbịa na-eso ajụjụ na azịza a kwadebere; ọ naghị akpọ onye nnọchi anya AI dị ndụ."
+    }
+  ]
+}

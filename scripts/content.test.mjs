@@ -50,7 +50,7 @@ const source = readFileSync(
   "utf8",
 );
 const moduleText = transpileModule(
-  source.replace(
+  source.replace('"./locales.mjs"', JSON.stringify(new URL("../apps/web/lib/locales.mjs", import.meta.url).href)).replace(
     /import seed from .*?;/,
     `const seed=${JSON.stringify(data)};`,
   ),

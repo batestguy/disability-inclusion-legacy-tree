@@ -1,0 +1,100 @@
+[
+  {
+    "title": {
+      "en": "Python + WordPress API: collect reports",
+      "ha": "Python + WordPress API: tattara rahotanni",
+      "yo": "Python + WordPress API: kó ìròyìn jọ",
+      "ig": "Python + WordPress API: chịkọta akụkọ"
+    },
+    "text": {
+      "en": "Python and the WordPress API downloaded public reports from Isa’s office website and saved links to each source.",
+      "ha": "Python da WordPress API sun sauke rahotannin jama’a daga shafin ofishin Isa kuma sun adana hanyoyin zuwa kowace majiya.",
+      "yo": "Python àti WordPress API ṣe ìgbàsílẹ̀ àwọn ìròyìn gbangba láti ojúlé ọ́fíìsì Isa, wọ́n sì fipamọ́ ìjápọ̀ sí orísun kọ̀ọ̀kan.",
+      "ig": "Python na WordPress API budatara akụkọ ọha site na webụsaịtị ụlọ ọrụ Isa ma chekwaa njikọ isi mmalite ọ bụla."
+    }
+  },
+  {
+    "title": {
+      "en": "Beautiful Soup: clean the text",
+      "ha": "Beautiful Soup: tsaftace rubutu",
+      "yo": "Beautiful Soup: tún ọ̀rọ̀ ṣe",
+      "ig": "Beautiful Soup: hichaa ederede"
+    },
+    "text": {
+      "en": "Beautiful Soup removed webpage code so we could read and analyse the report text.",
+      "ha": "Beautiful Soup ya cire lambar gina shafin yanar gizo domin mu iya karantawa da nazarin rubutun rahoton.",
+      "yo": "Beautiful Soup yọ kóòdù ojú ìwé kúrò kí a lè ka ọ̀rọ̀ ìròyìn, kí a sì ṣe ìtúpalẹ̀ rẹ̀.",
+      "ig": "Beautiful Soup wepụrụ koodu ibe weebụ ka anyị nwee ike ịgụ ma nyochaa ederede akụkọ."
+    }
+  },
+  {
+    "title": {
+      "en": "Source checks: avoid repeats and wrong totals",
+      "ha": "Duba majiyoyi: guje wa maimaituwa da jimillar da ba daidai ba",
+      "yo": "Àyẹ̀wò orísun: yẹra fún àtúnkà àti àpapọ̀ tí kò tọ́",
+      "ig": "Nlele isi mmalite: zere mmegharị na ngụkọta na-ezighị ezi"
+    },
+    "text": {
+      "en": "We removed exact copies and checked figures against their source reports, keeping plans separate from reported delivery and avoiding overlapping beneficiary totals.",
+      "ha": "Mun cire kwafe iri ɗaya kuma mun duba lambobi da rahotannin tushensu, tare da ware tsare-tsare daga abin da aka ruwaito an bayar da guje wa jimillar da ke ƙirga masu amfana fiye da sau ɗaya.",
+      "yo": "A yọ ẹ̀dà kan náà kúrò, a sì ṣàyẹ̀wò nọ́ńbà pẹ̀lú ìròyìn orísun wọn, a yà ètò sọ́tọ̀ sí ìpèsè tí a ròyìn, a sì yẹra fún àpapọ̀ tó ń ka olùgbà ìrànwọ́ kan ju ẹ̀ẹ̀kan lọ.",
+      "ig": "Anyị wepụrụ akwụkwọ ndị bụ otu ma lelee ọnụọgụ na akụkọ isi mmalite ha, na-ekewapụ atụmatụ na nnyefe a kọrọ ma na-ezere ngụkọta na-agụ otu ndị natara enyemaka ọzọ."
+    }
+  },
+  {
+    "title": {
+      "en": "TF-IDF + NMF: find themes",
+      "ha": "TF-IDF + NMF: gano jigogi",
+      "yo": "TF-IDF + NMF: rí àkòrí",
+      "ig": "TF-IDF + NMF: chọpụta isiokwu"
+    },
+    "text": {
+      "en": "scikit-learn uses TF-IDF to highlight distinctive words and NMF to find 8 recurring themes in the selected English reports.",
+      "ha": "scikit-learn yana amfani da TF-IDF don nuna kalmomin da ke bambanta rubuce-rubuce da NMF don gano jigogi 8 masu maimaituwa a zaɓaɓɓun rahotannin Turanci.",
+      "yo": "scikit-learn ń lo TF-IDF láti fi àwọn ọ̀rọ̀ tó ń yà àkọsílẹ̀ sọ́tọ̀ hàn àti NMF láti rí àkòrí 8 tí ń tún wá nínú àwọn ìròyìn Gẹ̀ẹ́sì tí a yàn.",
+      "ig": "scikit-learn na-eji TF-IDF gosipụta okwu na-ekewapụ akwụkwọ na NMF chọpụta isiokwu 8 na-emegharị n'akụkọ Bekee ahọpụtara."
+    }
+  },
+  {
+    "title": {
+      "en": "Manual categories: label activities",
+      "ha": "Rukunonin da aka zaɓa da hannu: sanya wa ayyuka suna",
+      "yo": "Ẹ̀ka tí a fi ọwọ́ yàn: fi àmì sí iṣẹ́",
+      "ig": "Ngalaba e ji aka họpụta: nye ọrụ aha"
+    },
+    "text": {
+      "en": "We assigned activity categories by reading the reports; one activity can belong to several categories.",
+      "ha": "Mun sanya ayyuka cikin rukunoni ta hanyar karanta rahotannin; aiki ɗaya na iya shiga rukunoni da yawa.",
+      "yo": "A pín iṣẹ́ sí ẹ̀ka nípasẹ̀ kíka ìròyìn; iṣẹ́ kan lè wà nínú ẹ̀ka púpọ̀.",
+      "ig": "Anyị kenyere ngalaba ọrụ site n'ịgụ akụkọ; otu ọrụ nwere ike ịdị n'ọtụtụ ngalaba."
+    }
+  },
+  {
+    "title": {
+      "en": "Phrase counts: build the word cloud",
+      "ha": "Ƙirgar jimloli: gina girgijen kalmomi",
+      "yo": "Kíkà gbólóhùn: ṣe ìkójọ ọ̀rọ̀",
+      "ig": "Ọnụọgụ ahịrịokwu: wulite igwe okwu"
+    },
+    "text": {
+      "en": "A script counts each phrase once per report for the concept cloud; the category view counts activities. Larger labels mean more records.",
+      "ha": "Shirin yana ƙirga kowace jimla sau ɗaya a kowane rahoto don girgijen ra’ayoyi; kallon rukunoni yana ƙirga ayyuka. Manyan sunaye suna nuna ƙarin bayanai.",
+      "yo": "Ètò kan ń ka gbólóhùn kọ̀ọ̀kan lẹ́ẹ̀kan nínú ìròyìn kọ̀ọ̀kan fún ìkójọ èrò; ìwò ẹ̀ka ń ka iṣẹ́. Àwọn àmì ńlá túmọ̀ sí àkọsílẹ̀ púpọ̀ sí i.",
+      "ig": "Ederede mmemme na-agụ ahịrịokwu ọ bụla otu ugboro n'akụkọ ọ bụla maka igwe echiche; nlele ngalaba na-agụ ọrụ. Aha ndị buru ibu pụtara ndekọ ndị ọzọ."
+    }
+  },
+  {
+    "title": {
+      "en": "Sources and guided chat: explain the findings",
+      "ha": "Majiyoyi da tattaunawa mai jagora: bayyana sakamako",
+      "yo": "Orísun àti ìjíròrò pẹ̀lú ìtọ́sọ́nà: ṣàlàyé ohun tí a rí",
+      "ig": "Isi mmalite na mkparịta ụka nwere nduzi: kọwaa nchọpụta"
+    },
+    "text": {
+      "en": "The dashboard links figures and connections to reports; the chatbot follows prepared questions. The reports do not independently prove impact or cover his whole career.",
+      "ha": "Allon taƙaitaccen bayani yana haɗa lambobi da alaƙoƙi zuwa rahotanni; chatbot yana bin tambayoyin da aka shirya. Rahotannin ba su tabbatar da tasiri ta hanya mai zaman kanta ba, kuma ba su ƙunshi duk tarihin aikinsa ba.",
+      "yo": "Àtẹ àlàyé so nọ́ńbà àti ìbáṣepọ̀ mọ́ ìròyìn; olùrànlọ́wọ́ ìjíròrò tẹ̀lé ìbéèrè tí a ti pèsè. Ìròyìn kò fi ipa múlẹ̀ ní ọ̀nà olómìnira, bẹ́ẹ̀ ni kò bo gbogbo ìtàn iṣẹ́ rẹ̀.",
+      "ig": "Ibe nchịkọta na-ejikọta ọnụọgụ na njikọ na akụkọ; onye nduzi mkparịta ụka na-eso ajụjụ a kwadebere. Akụkọ anaghị egosi mmetụta n'onwe ha ma ọ bụ kpuchie ọrụ ndụ ya niile."
+    }
+  }
+]

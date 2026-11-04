@@ -54,7 +54,7 @@ async function compact({ fitsScreen = false } = {}) {
     const box = await page.locator(".guided-conversation").boundingBox();
     assert.ok(box && box.y + box.height <= await page.evaluate(() => innerHeight), "ordinary phone step needs page scrolling");
   }
-  const group = page.getByRole("group", { name: "Change language / Canja harshe", exact: true });
+  const group = page.getByRole("group", { name: "Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ", exact: true });
   const en = await group.getByRole("link", { name: "English", exact: true }).boundingBox();
   const ha = await group.getByRole("link", { name: "Hausa", exact: true }).boundingBox();
   assert.ok(en && ha && en.y + en.height <= ha.y && Math.abs(en.x - ha.x) < 2);

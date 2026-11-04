@@ -43,14 +43,19 @@ async function audit(label) {
 async function geometry() {
   await page.evaluate(() => document.fonts.ready.then(() => true));
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'horizontal document overflow');
-  const language = page.getByRole('group', { name: 'Change language / Canja harshe', exact: true });
+  const language = page.getByRole('group', { name: 'Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ', exact: true });
   assert.equal(await language.count(), 1);
   const en = await language.getByRole('link', { name: 'English', exact: true }).boundingBox();
   const ha = await language.getByRole('link', { name: 'Hausa', exact: true }).boundingBox();
   assert.ok(en && ha && en.y + en.height <= ha.y && Math.abs(en.x - ha.x) < 2, 'locale choices must be vertically stacked');
   const nav = await page.locator('.dashboard-navigation').boundingBox();
-  const languageBox = await language.boundingBox();
-  assert.ok(nav && languageBox && (nav.x + nav.width <= languageBox.x + 1 || languageBox.x + languageBox.width <= nav.x + 1 || nav.y + nav.height <= languageBox.y + 1 || languageBox.y + languageBox.height <= nav.y + 1), 'navigation overlaps the language control');
+  // The phone grid places the prompt beside the four choices; its semantic
+  // group uses display:contents, so check each visible part rather than a wrapper.
+  const languageBoxes = await language.locator('.language-prompt,.language-options').evaluateAll(elements => elements.map(element => {
+    const { x, y, width, height } = element.getBoundingClientRect(); return { x, y, width, height };
+  }));
+  assert.equal(languageBoxes.length, 2);
+  for (const box of languageBoxes) assert.ok(nav && (nav.x + nav.width <= box.x + 1 || box.x + box.width <= nav.x + 1 || nav.y + nav.height <= box.y + 1 || box.y + box.height <= nav.y + 1), 'navigation overlaps a visible language control');
   const overflow = await page.locator('.highlight-number').evaluateAll((elements) => elements.filter((el) => {
     const box = el.getBoundingClientRect(); const ink = el.querySelector('span').getBoundingClientRect();
     return ink.left < box.left - 1 || ink.right > box.right + 1;

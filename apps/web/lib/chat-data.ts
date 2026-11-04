@@ -1,6 +1,9 @@
-import bundle from "../../../content/dashboard/v1/bundle.json";
+import { localizeData } from "./locales.mjs";
+import rawBundle from "../../../content/dashboard/v1/bundle.json";
 import manifest from "../../../content/dashboard/v1/manifest.json";
 import { assertChatPreviewAllowed } from "./chat-preview-gate.mjs";
+
+const bundle = localizeData(rawBundle);
 
 /** The research dashboard and chat must not become public through an unrelated CMS approval. */
 export function getChatData() {

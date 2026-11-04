@@ -34,3 +34,43 @@
   .about-article, .about-method-link, .methodology-settings { border-color: CanvasText; }
   .about-workspace a { color: LinkText; }
 }
+.biography-layout { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 32px; align-items: start; }
+.biography-prose { min-width: 0; }
+.biography-prose p { max-width: 65ch; margin: 0 0 20px; line-height: 1.75; }
+.biography-prose h3 { font-size: 1.375rem; margin: 0 0 16px; color: var(--inclusion-green); }
+.biography-photo { margin: 0; min-width: 0; }
+.biography-photo img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.biography-photo figcaption { margin-top: 12px; color: var(--inclusion-muted); font-size: .8125rem; line-height: 1.6; }
+.biography-photo figcaption span { display: block; }
+.biography-photo figcaption a, .biography-sources a, .creator-work-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); text-underline-offset: 4px; }
+.biography-photo-ceremony { margin-top: 32px; }
+.biography-sources { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 8px; font-size: .8125rem; }
+.biography-creator { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--inclusion-line); }
+.about-article .biography-creator > h2 { font-family: 'Briem Hand', 'Source Sans 3', cursive; font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--inclusion-green); margin-bottom: 24px; }
+.biography-photo-fallback { display: grid; place-items: center; min-height: 200px; padding: 24px; border: 1px solid var(--inclusion-line); border-radius: 10px; color: var(--inclusion-green); background: var(--inclusion-tint); }
+@media (max-width: 700px) {
+  .biography-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .biography-layout > .biography-photo { width: min(100%, 300px); justify-self: center; }
+  .biography-photo-ceremony { margin-top: 24px; }
+}
+
+/* Isa leads the story; the creator remains a compact supporting credit. */
+.about-article #subject-biography-title { font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.25; color: var(--inclusion-green); }
+.biography-chapters { margin-top: 40px; }
+.biography-chapter { padding-block: 32px; border-top: 1px solid var(--inclusion-line); }
+.biography-chapter.has-photo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 32px; align-items: center; }
+.biography-chapter-source { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); font-size: .8125rem; text-underline-offset: 4px; }
+.biography-chapter .biography-prose p { line-height: 1.8; }
+.biography-chapter .biography-photo { max-width: 360px; width: 100%; justify-self: center; }
+.biography-creator .biography-layout { grid-template-columns: minmax(0, 168px) minmax(0, 1fr); gap: 24px; }
+.about-article .biography-creator > h2 { font-family: 'Source Sans 3', 'Segoe UI', sans-serif; font-size: 1.25rem; line-height: 1.4; margin-bottom: 20px; }
+.biography-creator .biography-prose { font-size: .9375rem; }
+.biography-creator .biography-prose h3 { font-size: 1.125rem; }
+.methodology-workflow { border-top: 1px solid var(--inclusion-line); margin-top: 8px; padding-block: 32px 16px; }
+.methodology-workflow p { max-width: 70ch; line-height: 1.75; margin: 0 0 20px; }
+@media (max-width: 700px) {
+  .biography-chapter.has-photo { grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
+  .biography-chapter { padding-block: 24px; }
+  .biography-creator .biography-layout { grid-template-columns: minmax(0, 1fr); }
+  .biography-creator .biography-layout > .biography-photo { width: min(100%, 156px); }
+}

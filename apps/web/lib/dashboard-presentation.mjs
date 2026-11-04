@@ -1,3 +1,4 @@
+import { localizeData } from "./locales.mjs";
 /** Local presentation supplement. The frozen v1 evidence bundle is never edited. */
 import catalogue from "../../../content/dashboard/presentation.json" with { type: "json" };
 import { buildDashboardView } from "./dashboard-data.mjs";
@@ -84,5 +85,5 @@ export function buildDashboardPresentation(bundle) {
     limitations: [...a.limitations], groupIds: networkGroups.filter((g) => g.activityIds.includes(a.id)).map((g) => g.id),
     collaborationIds: collaborations.filter((c) => c.activityId === a.id).map((c) => c.id),
   }));
-  return { groups, figures, concepts, collaborations, networkGroups, networkActivities, haReviewed: false, publicApproved: false, conceptReportCount: bundle.model_documents.length };
+  return localizeData({ groups, figures, concepts, collaborations, networkGroups, networkActivities, haReviewed: false, publicApproved: false, conceptReportCount: bundle.model_documents.length });
 }

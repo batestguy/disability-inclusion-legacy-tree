@@ -1,4 +1,6 @@
 "use client";
+import interactionCopy from "../../../content/interaction-copy.json";
+import { translate } from "../lib/locales.mjs";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { scrollAndFocus } from "../lib/scroll-focus";
@@ -9,12 +11,12 @@ import type { getChatData } from "../lib/chat-data";
 import speakingPhoto from "../../../content/dashboard-speaking-photo.json";
 
 type Props = Pick<ReturnType<typeof getChatData>, "bundle"> & { lang: Lang; data: Presentation; mode: "areas" | "concepts"; selectedId: string | null; onSelect: (id: string | null) => void; onMode: (mode: "areas" | "concepts") => void; onAsk: (id: string) => void };
-type Match = { id: string; title: string; url: string; text?: string; activityId?: string };
+type Match = { id: string; title: string; url: string; text?: string; activityId?: string; lang?: Lang };
 function SourceMatches({ matches, lang, onAsk }: { matches: Match[]; lang: Lang; onAsk: Props["onAsk"] }) {
   const [page, setPage] = useState(0);
   const pages = Math.ceil(matches.length / 3);
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
-  return <><ul className="cloud-matches">{matches.slice(page * 3, page * 3 + 3).map((match) => <li key={match.id} data-source-match={match.id}><a href={match.url} target="_blank" rel="noopener noreferrer" lang="en">{match.title} <span aria-hidden="true">↗</span></a>{match.text && <p className="source-excerpt" lang="en">{match.text}</p>}{match.activityId && <button className="text-action" type="button" onClick={() => onAsk(match.activityId!)}>{say("Explore this activity", "Bincika wannan aiki")} <span aria-hidden="true">↗</span></button>}</li>)}</ul>{pages > 1 && <nav className="local-pagination" aria-label={say("Matching report pages", "Shafukan rahotannin da suka dace")}><button type="button" disabled={page === 0} onClick={() => setPage(page - 1)}>{say("Previous", "Na baya")}</button><span>{page + 1} / {pages}</span><button type="button" disabled={page + 1 >= pages} onClick={() => setPage(page + 1)}>{say("More reports", "Ƙarin rahotanni")}</button></nav>}</>;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
+  return <><ul className="cloud-matches">{matches.slice(page * 3, page * 3 + 3).map((match) => <li key={match.id} data-source-match={match.id}><a href={match.url} target="_blank" rel="noopener noreferrer" lang={match.lang ?? "en"}>{match.title} <span aria-hidden="true">↗</span></a>{match.text && <p className="source-excerpt" lang={match.lang ?? "en"}>{match.text}</p>}{match.activityId && <button className="text-action" type="button" onClick={() => onAsk(match.activityId!)}>{say("Explore this activity", "Bincika wannan aiki")} <span aria-hidden="true">↗</span></button>}</li>)}</ul>{pages > 1 && <nav className="local-pagination" aria-label={say("Matching report pages", "Shafukan rahotannin da suka dace")}><button type="button" disabled={page === 0} onClick={() => setPage(page - 1)}>{say("Previous", "Na baya")}</button><span>{page + 1} / {pages}</span><button type="button" disabled={page + 1 >= pages} onClick={() => setPage(page + 1)}>{say("More reports", "Ƙarin rahotanni")}</button></nav>}</>;
 }
 
 export default function DashboardAdvocacy({ lang, bundle, data, mode, selectedId, onSelect, onMode, onAsk }: Props) {
@@ -34,7 +36,7 @@ export default function DashboardAdvocacy({ lang, bundle, data, mode, selectedId
       scrollAndFocus(sourceHeading.current);
     } else onSelect(id);
   }
-  const say = (en: string, ha: string) => lang === "ha" ? ha : en;
+  const say = (en: string, ha: string) => translate(lang, en, ha);
   const entries = mode === "concepts" ? data.concepts.map((entry) => ({ id: entry.id, label: entry.label[lang], count: entry.count })) : bundle.categories.map((category) => ({ id: category.id, label: category.label[lang] ?? category.label.en, count: bundle.activities.filter((activity) => activity.categories.includes(category.id)).length }));
   const maximum = Math.max(1, ...entries.map((entry) => entry.count));
   const minimum = Math.min(maximum, ...entries.map((entry) => entry.count));
@@ -46,12 +48,13 @@ export default function DashboardAdvocacy({ lang, bundle, data, mode, selectedId
     return source ? [{ id: source.id, title: source.title, url: source.url, text: excerpt.text }] : [];
   }) : mode === "areas" && selected ? bundle.activities.filter((activity) => activity.categories.includes(selected.id)).flatMap((activity) => {
     const source = bundle.sources.find((entry) => entry.id === activity.source_ids[0]);
-    return source ? [{ id: activity.id, title: activity.title.en, url: source.url, text: data.networkActivities.find((entry) => entry.id === activity.id)?.description.en, activityId: activity.id }] : [];
+    const presentation = data.networkActivities.find((entry) => entry.id === activity.id);
+    return source ? [{ id: activity.id, title: presentation?.title[lang] ?? say(activity.title.en, activity.title.ha ?? activity.title.en), url: source.url, text: presentation?.description[lang], activityId: activity.id, lang }] : [];
   }) : [];
 
   return <section id="advocacy" className="dashboard-section advocacy-section" tabIndex={-1} aria-labelledby="advocacy-title">
-    <div className="section-heading"><div><p className="dashboard-eyebrow">II. {say("IDEAS & ADVOCACY", "RA’AYOYI DA KIRA")}</p><h2 id="advocacy-title" className="calligraphy-title">{say("Themes in his advocacy.", "Jigogin fafutukarsa.")}</h2></div><button type="button" className="heading-action" onClick={() => scrollAndFocus(document.querySelector<HTMLElement>(".concept-cloud button"))}>{say("Choose a topic", "Zaɓi batu")} <span aria-hidden="true">↘</span></button></div>
-    <div className="advocacy-composition"><figure className="speaking-portrait">{!photoFailed ? <Image src="/branding/mohammed-abba-isa-speaking.webp" width={600} height={800} sizes="(max-width: 700px) 90vw, 32vw" alt={speakingPhoto.alt[lang]} onError={() => setPhotoFailed(true)} /> : <div className="photo-fallback"><span aria-hidden="true">MI</span><p>{say("Mohammed Abba Isa", "Mohammed Abba Isa")}</p></div>}<figcaption><span>{say("Mohammed Abba Isa", "Mohammed Abba Isa")}</span><a href={speakingPhoto.source_page} target="_blank" rel="noopener noreferrer">{say("Photograph source", "Tushen hoto")} <span aria-hidden="true">↗</span></a></figcaption></figure>
+    <div className="section-heading"><div><p className="dashboard-eyebrow">II. {say("IDEAS & ADVOCACY", "RA’AYOYI DA KIRA")}</p><h2 id="advocacy-title" className="calligraphy-title">{say("Themes in his advocacy.", "Jigogin fafutukarsa.")}</h2><p className="section-format">{interactionCopy.tools.advocacy.format[lang]}</p></div><button type="button" className="heading-action" onClick={() => scrollAndFocus(document.querySelector<HTMLElement>(".concept-cloud button"))}>{say("Choose a topic", "Zaɓi batu")} <span aria-hidden="true">↘</span></button></div>
+    <div className="advocacy-composition"><figure className="speaking-portrait">{!photoFailed ? <Image src="/branding/mohammed-abba-isa-speaking.webp" width={600} height={800} sizes="(max-width: 700px) 90vw, 32vw" alt={say(speakingPhoto.alt.en, speakingPhoto.alt.ha)} onError={() => setPhotoFailed(true)} /> : <div className="photo-fallback"><span aria-hidden="true">MI</span><p>{say("Mohammed Abba Isa", "Mohammed Abba Isa")}</p></div>}<figcaption><span>{say("Mohammed Abba Isa", "Mohammed Abba Isa")}</span><a href={speakingPhoto.source_page} target="_blank" rel="noopener noreferrer">{say("Photograph source", "Tushen hoto")} <span aria-hidden="true">↗</span></a></figcaption></figure>
       <div className="speech-panel"><div className="segmented-controls" role="group" aria-label={say("Explore report themes", "Bincika jigogin rahotanni")}><button type="button" aria-pressed={mode === "areas"} data-cloud-mode="areas" onClick={() => onMode("areas")}>{say("Contribution areas", "Fannonin gudummawa")}</button><button type="button" aria-pressed={mode === "concepts"} data-cloud-mode="concepts" onClick={() => onMode("concepts")}>{say("Concepts in reports", "Ra’ayoyi a rahotanni")}</button></div>
         <p className="cloud-caption">{mode === "concepts" ? say("Concepts from the selected reports", "Ra’ayoyi daga zaɓaɓɓun rahotanni") : say("Contribution areas in the selected record", "Fannonin gudummawa a zaɓaɓɓun bayanai")}</p>
         <div className="concept-cloud" aria-label={say("Choose a concept to see its sources", "Zaɓi ra’ayi don ganin majiyoyinsa")}>{entries.map((entry, index) => <button key={entry.id} type="button" data-cloud-id={entry.id} aria-describedby={`cloud-tooltip-${mode}-${entry.id}`} data-cloud-count={entry.count} data-cloud-tone={["green", "blue", "purple", "teal", "orange", "magenta"][index % 6]} aria-label={`${entry.label} · ${entry.count} ${mode === "concepts" ? say("reports", "rahotanni") : say("activities", "ayyuka")}`} aria-pressed={selectedId === entry.id} onClick={() => select(entry.id)} style={{ "--concept-weight": frequencyRange ? (entry.count - minimum) / frequencyRange : .5 } as CSSProperties}><span>{entry.label}</span><sub aria-hidden="true">{entry.count}</sub><span className="cloud-tooltip" role="tooltip" id={`cloud-tooltip-${mode}-${entry.id}`}>{mode === "concepts" ? say(`Appears in ${entry.count} of ${data.conceptReportCount} reports`, `Ya bayyana a rahotanni ${entry.count} daga ${data.conceptReportCount}`) : say(`Covers ${entry.count} recorded activities`, `Ya shafi ayyuka ${entry.count} da aka rubuta`)}</span></button>)}</div>

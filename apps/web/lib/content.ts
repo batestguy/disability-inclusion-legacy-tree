@@ -1,6 +1,7 @@
 import seed from "../../../content/records.json";
-export type Lang = "en" | "ha";
-export type Bilingual = { en: string; ha: string };
+import { translate, localeHome, localizeData } from "./locales.mjs";
+export type Lang = "en" | "ha" | "yo" | "ig";
+export type Bilingual = { en: string; ha: string; yo: string; ig: string };
 export type Source = {
   id: string;
   title: string;
@@ -49,7 +50,7 @@ export type Collection = {
   timeline: Timeline[];
   settings: Settings;
 };
-export const branches = [
+export const branches = localizeData([
   {
     id: "policy",
     en: "Policy Advocacy",
@@ -74,18 +75,18 @@ export const branches = [
     ha: "Fasahar Taimako",
     note: "Tools for independence",
   },
-];
-export const home = (lang: Lang) => (lang === "en" ? "/" : "/ha/");
+]);
+export const home = localeHome;
 export const recordUrl = (lang: Lang, slug: string) =>
   `${home(lang)}achievements/${slug}/`;
 export const t = (lang: Lang, en: string, ha: string) =>
-  lang === "en" ? en : ha;
+  translate(lang, en, ha);
 export async function getContent(): Promise<Collection> {
   const project = process.env.SANITY_PROJECT_ID,
     dataset = process.env.SANITY_DATASET;
   if (!project && !dataset) {
     validateContent(seed as Collection);
-    return seed as Collection;
+    return localizeData(seed) as Collection;
   }
   if (!project || !dataset || !/^[a-z0-9-]+$/.test(project + dataset))
     throw new Error(
@@ -132,7 +133,7 @@ export async function getContent(): Promise<Collection> {
       !data.settings.correctionEmail)
   )
     throw new Error("Public release gates not met");
-  return data;
+  return localizeData(data);
 }
 
 export function validateContent(data: Collection) {

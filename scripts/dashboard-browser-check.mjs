@@ -31,7 +31,7 @@ async function geometry() {
   const heading = await page.locator('.highlight-heading h1').boundingBox();
   const edition = await page.locator('.highlight-edition').boundingBox();
   assert.ok(heading.x + heading.width <= edition.x, 'dashboard title overlaps the date');
-  const language = page.getByRole('group', { name: 'Change language / Canja harshe', exact: true });
+  const language = page.getByRole('group', { name: 'Change language / Canja harshe / Yí èdè padà / Gbanwee asụsụ', exact: true });
   assert.equal(await language.count(), 1, 'dashboard/chat must share one language control');
   const en = await language.getByRole('link', { name: 'English', exact: true }).boundingBox();
   const ha = await language.getByRole('link', { name: 'Hausa', exact: true }).boundingBox();

@@ -1,5 +1,98 @@
 # Inclusion scorecard
 
+## Isa-first About hierarchy — 4 November 2026
+
+Intent: make Isa the clear subject; creator credit supports the tribute.
+Hierarchy: six subject paragraphs and four source-linked images precede the
+unchanged creator copy. Subject heading 1.75–2.25rem; supporting creator heading
+1.25rem, name 1.125rem and prose .9375rem. Subject portrait remains 280px;
+creator photograph is 168px desktop / 156px phone with full frame retained.
+Palette/depth: existing inclusion green, white paper, muted source captions and
+flat reading surface. New documentary chapters use a fine divider, 32px vertical
+padding and 32px column gap; image track 320px, prose flexible. Stack at 700px
+with 24px chapter padding and 20px gap. Source links retain 44px targets.
+Typography: existing Source Sans; readable 1.8 line height for new biography
+paragraphs. Methodology's separate agent-workflow section uses the existing
+heading/body styles and a fine divider before technical settings. No new motion.
+
+## Visitor-facing polish — 4 November 2026
+
+Intent: people exploring disability-inclusion work should reach the story,
+figures and sources without repeated editorial-process notices. The owner and
+Codex improve wording through feedback; paid review is not a prerequisite.
+Hierarchy: portraits and headings lead, navigation has a clear active tint,
+and source/methodology context stays available on demand. One compact visible
+translation-draft note sits at the bottom of translated pages, not in the header.
+Palette: retain inclusion green, blue, gold, white paper and existing bubble
+colours. Depth/surfaces: existing flat surfaces and coloured chapter tops;
+Home's side border uses the quieter shared line token. Typography: existing
+Source Sans 3 and Briem Hand, balanced headings, pretty body wrapping; Home
+heading scales 2–3.25rem. Spacing: four-pixel rhythm, 44px navigation targets,
+8px link radius, 10px language-control frame and 6px nested language links.
+Controls retain visible keyboard focus and forced-colour/reduced-motion support.
+No review, reuse-rights or public-approval flag changes accompany the polish.
+
+## Final reading polish — 31 October 2026
+
+The Home biography link is bold blue with a thicker underline and its existing
+44px hit target. Language instructions display native-tagged English, Hausa,
+Yoruba and Igbo phrases together; only the decorative icon gets enlarged icon
+styling, while the text wraps naturally. Keep all four language options visible
+and vertically stacked. Methodology's seven numbered steps now pair tool names
+with short plain-language functions; model settings remain in the disclosure.
+The creator uses the owner's concise researcher/Statistician wording, the AI
+vision, and a final single sentence naming this project's Python/scikit-learn,
+TF-IDF and NMF tools. All new copy remains draft in non-English locales.
+
+## Contextual invitations and assistant welcome — 31 October 2026
+
+Bubble hierarchy now has the existing calligraphic topic, a semibold Source Sans
+format label, then a short contextual invitation and arrow. All four descriptions
+come from content/interaction-copy.json; the matching chapter repeats the format.
+On phones below 500px use natural bubble height (minimum 260px), proportional
+padding and a 1.05–1.25rem title so longer multilingual copy stays inside the
+clickable bubble. Keep the existing two-column layout, fixed hit areas and motion
+preferences. The chat start heading becomes a brief welcome question; no extra
+intro paragraph, composer or screen is added. Creator prose discusses ML areas
+and an inclusive-AI vision, with the existing profile link only.
+
+## Biographies and explicit formats — 31 October 2026
+
+Owner approved a short Home introduction before the existing portrait, with a
+state-preserving biography link. Four bubble subtitles say Dashboard in figures /
+Word and concept cloud / Network graph / Guided chatbot, repeated in the relevant
+chapters. Keep topic titles primary and format subtitles in muted Source Sans.
+
+About is now human-led: Isa first, then Jerry, with Methodology still accessible.
+Existing 1040px white/blue reading frame; biography grid 280px / flexible prose,
+32px gap, 65ch paragraphs, full-frame portraits and captioned ceremony photograph.
+Stack at 700px, centre portraits at a maximum 300px. A 40px break and plain border
+introduce the creator; his heading uses Briem Hand, body uses Source Sans. Captions
+are compact but source links retain 44px targets. Use the existing green/paper/
+muted palette and flat reading surface. Failed photos keep accessible descriptions,
+captions and source links. No new animation or decorative cards in biographies.
+
+Intent: introduce the people clearly, acknowledge their specific work and make
+the next action predictable. Photos/prose carry the hierarchy; attribution and
+methods remain available without becoming the introductory message. All three
+non-English languages remain visibly draft.
+
+## Yoruba and Igbo — 30 October 2026
+
+Extend the existing native language links to English / Hausa / Yorùbá / Igbo,
+vertically stacked and always visible. Preserve the established bilingual prompt.
+Use the same white/green frame, Source Sans controls, 44px phone targets and
+four-pixel spacing rhythm. Retain a single active-language indicator and shared
+page/chat state. A pale gold draft strip with a dark gold leading border appears
+below the main desktop header row on non-English pages; include the locale name
+and an English draft/review notice. On phones the language options occupy the
+right grid column, with brand, prompt, navigation and draft status in the left
+column. The semantic language group uses display:contents; visible prompt/link
+boxes retain non-overlap checks. Preserve the original-language quote disclosure.
+Intent: make familiar language choices easy to find while preserving source trust.
+The content remains the focal point; language links use the existing control
+weight and colour, and draft status uses compact body text in normal page flow.
+
 ## About / Methodology — 30 October 2026
 
 Project About and nested Methodology reuse the shared header and locale control.

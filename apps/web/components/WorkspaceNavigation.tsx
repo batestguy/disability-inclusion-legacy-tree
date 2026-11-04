@@ -7,6 +7,7 @@ import { initialGuidedScreen, useGuidedSession } from "./GuidedSession";
 import { buildDashboardPresentation } from "../lib/dashboard-presentation.mjs";
 import { getFlowNode } from "../lib/guided-flow.mjs";
 import type { getChatData } from "../lib/chat-data";
+import { localeHome } from "../lib/locales.mjs";
 import type { Lang } from "../lib/content";
 
 export type WorkspacePage = "home" | "explore" | "chat" | "about" | "about/methodology";
@@ -102,7 +103,7 @@ export function useWorkspaceNavigation(bundle: ReturnType<typeof getChatData>["b
 
   const flow = pathHash(session.path.slice(0, session.cursor + 1));
   const href = (target: WorkspacePage, lang: Lang, entry: ExploreSection | null = section) =>
-    (lang === "ha" ? "/ha/" : "/") + (target === "home" ? "" : `${target}/`) +
+    localeHome(lang) + (target === "home" ? "" : `${target}/`) +
     selectionQuery(dashboard.presentation, dashboard.selectedId, entry, target === "home") + flow;
   return { data, dashboard, setDashboard, session, setSession, section, href };
 }

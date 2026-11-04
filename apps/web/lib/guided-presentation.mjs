@@ -1,3 +1,4 @@
+import { localizeData } from "./locales.mjs";
 /** Short reading surfaces over immutable evidence nodes. Hausa wording remains draft. */
 const bi = (en, ha) => ({ en, ha });
 const original = (id, text) => ({ id, label: bi(text, text), originalLanguage: "en" });
@@ -41,7 +42,7 @@ export function getConciseAnswer(node) {
   } else if (node.id.startsWith("year:")) {
     result.paragraphs = node.paragraphs.slice(0, 1);
   }
-  return structuredClone(result);
+  return localizeData(structuredClone(result));
 }
 
 export function paginate(items, page, size = 3) {

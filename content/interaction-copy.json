@@ -1,0 +1,66 @@
+{
+  "tools": {
+    "overview": {
+      "format": {
+        "en": "Achievements dashboard",
+        "ha": "Allon taƙaitaccen bayani kan nasarori",
+        "yo": "Àtẹ àlàyé àṣeyọrí",
+        "ig": "Ibe nchịkọta ihe a rụzuru"
+      },
+      "invitation": {
+        "en": "Explore his work in numbers",
+        "ha": "Bincika ayyukansa a cikin lambobi",
+        "yo": "Ṣàwárí iṣẹ́ rẹ̀ nínú nọ́ńbà",
+        "ig": "Nyochaa ọrụ ya n'ọnụọgụ"
+      }
+    },
+    "advocacy": {
+      "format": {
+        "en": "Advocacy word and concept cloud",
+        "ha": "Girgijen kalmomi da ra’ayoyin fafutuka",
+        "yo": "Ìkójọ ọ̀rọ̀ àti èrò ìpolongo",
+        "ig": "Igwe okwu na echiche nkwado"
+      },
+      "invitation": {
+        "en": "Discover the ideas behind his advocacy",
+        "ha": "Gano ra’ayoyin da suka gina fafutukarsa",
+        "yo": "Ṣàwárí àwọn èrò tó wà lẹ́yìn ìpolongo rẹ̀",
+        "ig": "Chọpụta echiche dị n'azụ nkwado ya"
+      }
+    },
+    "collaborations": {
+      "format": {
+        "en": "People and institutions network",
+        "ha": "Taswirar alaƙar mutane da cibiyoyi",
+        "yo": "Nẹ́tíwọ́ọ̀kì ènìyàn àti àjọ",
+        "ig": "Usoro njikọ ndị mmadụ na ụlọ ọrụ"
+      },
+      "invitation": {
+        "en": "Follow the connections behind his work",
+        "ha": "Bi hanyoyin alaƙar da ke bayan ayyukansa",
+        "yo": "Tẹ̀lé àwọn ìbáṣepọ̀ tó wà lẹ́yìn iṣẹ́ rẹ̀",
+        "ig": "Soro njikọ dị n'azụ ọrụ ya"
+      }
+    },
+    "chat": {
+      "format": {
+        "en": "Guided chat assistant",
+        "ha": "Mataimakin tattaunawa mai jagora",
+        "yo": "Olùrànlọ́wọ́ ìjíròrò pẹ̀lú ìtọ́sọ́nà",
+        "ig": "Onye enyemaka mkparịta ụka nwere nduzi"
+      },
+      "invitation": {
+        "en": "Choose a question. Explore his work.",
+        "ha": "Zaɓi tambaya. Bincika ayyukansa.",
+        "yo": "Yan ìbéèrè kan. Ṣàwárí iṣẹ́ rẹ̀.",
+        "ig": "Họrọ ajụjụ. Nyochaa ọrụ ya."
+      }
+    }
+  },
+  "welcome": {
+    "en": "Hi! How can I help you explore his work?",
+    "ha": "Sannu! Ta yaya zan taimaka maka bincika ayyukansa?",
+    "yo": "Pẹ̀lẹ́! Báwo ni mo ṣe lè ràn ọ́ lọ́wọ́ láti ṣàwárí iṣẹ́ rẹ̀?",
+    "ig": "Ndewo! Olee otú m ga-esi nyere gị aka inyocha ọrụ ya?"
+  }
+}

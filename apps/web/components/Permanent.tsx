@@ -2,6 +2,7 @@ import { Collection, Lang, home, t } from "../lib/content";
 import { Record } from "./Record";
 import Preferences from "./Preferences";
 import LanguageChoice from "./LanguageChoice";
+import TranslationDraft from "./TranslationDraft";
 export default function Permanent({
   slug,
   lang,
@@ -27,9 +28,6 @@ export default function Permanent({
         <a href={`${home(lang)}#leaf=${slug}`}>
           &#8592; {t(lang, "Return to the tree", "Koma bishiyar")}
         </a>
-        {lang === "ha" && !r.haReviewed && (
-          <p className="draft">Fassarar Hausa na jiran bitar mutum.</p>
-        )}
         <h1>{t(lang, "A record of inclusion", "Bayanan shigar kowa")}</h1>
         <Record record={r} data={data} lang={lang} />
         <aside className="citation">
@@ -47,6 +45,7 @@ export default function Permanent({
           </p>
         </aside>
       </main>
+      <footer className="permanent translation-footer"><TranslationDraft lang={lang} /></footer>
       <Preferences lang={lang} />
     </div>
   );

@@ -1,5 +1,75 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Isa-first About and next landing plan — 4 November 2026
+
+Owner requested additional paragraphs/photos about Isa and agent-workflow
+transparency. About now has six subject paragraphs and four photographs before
+the unchanged creator biography; the creator's photo/type are smaller supporting
+elements. Methodology adds two plain-language paragraphs on AI-agent assistance,
+owner direction, source checks and the prepared-question chatbot. All new copy
+has en/ha/yo/ig fields. Source/photo provenance and image/review flags remain
+truthful; no public deployment or source save is claimed.
+
+Next proposed work is in docs/LANDING_INTERACTION_PLAN_2026-11-04.md: opening
+rhythm, livelier stable-target bubbles, small sourced previews and a focused
+phone/keyboard/motion check. The plan is documented; implementation is separate.
+
+## Owner-led feedback and presentation polish — 4 November 2026
+
+Remove visitor-facing “review pending” wording and keep improvement within the
+owner/Codex free-tier workflow. The main header no longer carries draft warning
+strips; one small translation-draft label remains at the bottom of each translated
+page. Navigation, Home typography/bubble wrapping and footer presentation are
+refined using the established design. Sources, qualifications, permission records
+and public release gates remain accurate and unchanged. Local work only; no
+commit, push or public deployment is claimed by this pass.
+
+## Final reading polish and local save — 31 October 2026
+
+Owner requests a local commit of all pending work. Latest refinements: bold blue
+Home biography link; shorter creator wording (researcher/Statistician, concise
+stats/ML/AI purpose, retained AI vision, one sentence about Python/scikit-learn,
+TF-IDF/NMF); native four-language language prompt; and seven short tool/function
+methodology steps. Model settings, evidence and review gates are unchanged.
+See HANDOFF.md and docs/VALIDATION.md for final verification/save status. No push
+or public deployment is requested.
+
+## Contextual copy and ML profile — 31 October 2026
+
+Refined the four tool entries with format labels and invitations tied to Isa's
+achievements, advocacy and connections. Added the short start-screen assistant
+welcome. Creator biography now discusses ML areas and an inclusive-AI vision;
+owner expressly excludes named individual projects and project-specific links.
+All text has four locale versions. Longer phone bubbles retain the two-column
+layout while fitting their content. Existing data, image and review gates remain.
+Editable tool/welcome copy: content/interaction-copy.json; creator copy:
+content/about.json. Local/uncommitted, without source push or public deployment.
+
+## Biographies and clearer labels — 31 October 2026
+
+Owner approved the short-Home-introduction + fuller-About arrangement and Jerry's
+first-person voice. Implemented the four descriptive format subtitles, sourced
+Isa biography/new photographs, Jerry's CV-derived profile/full-length supplied
+portrait and removal of the rejected boilerplate. All copy is available in four
+languages; non-English wording remains draft. Editable copy and update guidance
+now exist in content/about.json and docs/ABOUT_BIOGRAPHIES_2026-10-31.md. This
+completes the previously pending designer biography/file-based update facility;
+automatic-motion/final-polish work remains separate. Frozen data and approval
+flags are unchanged. Local/uncommitted; no source push or public deployment.
+
+## Yoruba / Igbo — 30 October 2026
+
+Owner selected full-site and guided-chat Yoruba and Igbo translations, visibly
+marked draft. Added `/yo/` and `/ig/` route sets, four visible stacked language
+links and shared page/chat locale preservation. Home, Explore, Chat, About,
+Methodology and permanent records have draft translations; exact original
+evidence and technical metadata remain in English. Each local dictionary has
+567 entries; an audit covers 536 interface/generated texts and all 162 guided
+nodes. Coverage is not language review. No evidence/approval flags, source push
+or public deployment changed. See docs/YORUBA_IGBO_2026-10-30.md, HANDOFF.md and
+the latest docs/VALIDATION.md entry. Previous motion/polish/designer-profile work
+remains pending.
+
 ## About / Methodology — 30 October 2026
 
 Owner requested `/about/methodology` to explain collection through text analysis.
