@@ -1,5 +1,25 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## First hosted release - 6 November 2026
+
+Owner authorised free Cloudflare Pages publication and explicitly confirmed:
+"I have permission to publish them" for the displayed photos and organisation
+logos. This supersedes their earlier local-only publication scope; it is an
+owner attestation, not independent licence verification or language approval.
+See docs/PUBLICATION_2026-11-06.md for the decision and operating procedure.
+
+Live URL: https://mohammed-abba-isa-legacy.pages.dev/
+Pages project: mohammed-abba-isa-legacy; direct upload, production branch main.
+Application source: 0b55bdd73377fe5b55ff1d80fa96f736eefec9bf.
+Deployment URL: https://a0aeeb49.mohammed-abba-isa-legacy.pages.dev/
+The production web build passed. Eight live pages returned HTTP 200 and matched
+local HTML byte-for-byte, including all four home locales and the main tools.
+Initial publication retains preview-mode noindex/nofollow and visible draft
+translations. Stricter indexed public-reveal gates and frozen flags are unchanged.
+No domain purchased, paid plan enabled, CMS connected or automatic deploy set up.
+GitHub pushes continue to validate source without deploying; upload deliberately.
+
+
 ## Owner-approved checkpoint - 6 November 2026
 
 Owner approved the simplified mobile network and smaller desktop icons/labels,

@@ -8,7 +8,7 @@ This public source repository contains a working bilingual preview. The project 
 
 ## Run locally
 
-Repository delivery and both GitHub Actions runs passed on 22 October 2026. [HANDOFF.md](HANDOFF.md) records the verified delivery commit, next tasks, input requirements and documentation map. Website hosting and reveal remain pending.
+Repository delivery and both GitHub Actions runs passed on 22 October 2026. [HANDOFF.md](HANDOFF.md) records the verified delivery commit, next tasks, input requirements and documentation map. The initial owner-authorised hosted draft is available at https://mohammed-abba-isa-legacy.pages.dev/; translation drafts and noindex remain.
 
 Requires Node 22.12+ (validated with Node 24.15) and npm 11. On Windows, use npm.cmd in place of npm.
 
@@ -41,7 +41,7 @@ Without public Sanity IDs, builds use five sourced starter records in content/re
 
 Copy .env.example to apps/web/.env.local for local configuration; Studio configuration is separate. Keep credentials outside the repository and public bundle. [docs/CMS.md](docs/CMS.md) explains reviewed-content publishing. Optional creator information stays hidden when empty; GoatCounter is opt-in and unconfigured.
 
-Cloudflare Pages and a live Sanity project are not connected. The intended Pages build is `npm ci && npm run build -w apps/web`, output apps/web/out. The requested Pages name is mohammed-abba-isa-legacy, subject to availability. Public GitHub source access does not deploy the website. See [docs/OPERATIONS.md](docs/OPERATIONS.md) for setup, backups, rollback and ownership transfer.
+The owner-authorised initial draft is hosted on [Cloudflare Pages](https://mohammed-abba-isa-legacy.pages.dev/), project `mohammed-abba-isa-legacy`. It uses direct upload of `apps/web/out`; GitHub pushes validate but do not deploy. Sanity remains unconnected. Translation drafts and search noindex remain; see [the publication record](docs/PUBLICATION_2026-11-06.md). See [docs/OPERATIONS.md](docs/OPERATIONS.md) for setup, backups, rollback and ownership transfer.
 
 RELEASE_MODE=public enforces portrait permission, human Hausa review and a correction address. Human accessibility review, fresh performance measurements and live publishing verification also remain release work. See [docs/VALIDATION.md](docs/VALIDATION.md) for recorded results and their limits.
 

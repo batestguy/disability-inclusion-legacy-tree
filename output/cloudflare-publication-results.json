@@ -1,0 +1,48 @@
+{
+  "url": "https://mohammed-abba-isa-legacy.pages.dev",
+  "verifiedAt": "2026-11-06T06:04:50.616Z",
+  "commit": "0b55bdd73377fe5b55ff1d80fa96f736eefec9bf",
+  "deployment": "a0aeeb49",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "d912386d73938a59fd87abfe3d071ec176f1ca89604a9ece05cdadfe903b55a3"
+    },
+    {
+      "path": "/ha/",
+      "status": 200,
+      "sha256": "8d0be65a9761ac79364b1cb60d7de1ab3b7190a047d65c01143db939c1bd9bb6"
+    },
+    {
+      "path": "/yo/",
+      "status": 200,
+      "sha256": "39dfa107d86bb5d6b16083a7c87ea3583cc5ebd2c5566898eee3d159fdfd7c90"
+    },
+    {
+      "path": "/ig/",
+      "status": 200,
+      "sha256": "662db2ee311caa2ad5ba2df9640e39677b24f19346dc4e7692f93a52d288010c"
+    },
+    {
+      "path": "/explore/",
+      "status": 200,
+      "sha256": "3e08ff64a250a751b341112a5cfd8b3de61a15c217318596ea5aa6805c547692"
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "sha256": "e2c722fee5db626d3910a08aabd35991678aff58a0859365e3a68d0a84723b26"
+    },
+    {
+      "path": "/about/methodology/",
+      "status": 200,
+      "sha256": "05beb7640996d6f241a1d18c332666b7cde95229ff5f6b508a64c1719f7fdb09"
+    },
+    {
+      "path": "/chat/",
+      "status": 200,
+      "sha256": "2ba4788149cadc20bd9853913aa64a1cd8a494dc08c531dd394301caf819cf3b"
+    }
+  ]
+}
