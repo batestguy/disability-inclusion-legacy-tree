@@ -25,7 +25,8 @@
     "test:about-browser": "node scripts/about-browser-check.mjs",
     "test:polish-browser": "node scripts/polish-browser-check.mjs",
     "test:solar-orbit-browser": "node scripts/solar-orbit-browser-check.mjs",
-    "test:final-fix-browser": "node scripts/final-fix-browser-check.mjs"
+    "test:final-fix-browser": "node scripts/final-fix-browser-check.mjs",
+    "test:mobile-network-browser": "node scripts/mobile-network-browser-check.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

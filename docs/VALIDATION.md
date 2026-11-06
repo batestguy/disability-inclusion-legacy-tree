@@ -1,5 +1,68 @@
 # Validation evidence - 22 October 2026
 
+## Owner-approved checkpoint - 6 November 2026
+
+Owner approved the simplified mobile network and smaller desktop icons/labels,
+and explicitly requested commit and push to main. This supersedes local-draft
+status below. Mobile starts with a partner chooser; selecting one reveals its
+source-backed path and initiative tiles. Show all connections and List remain.
+Desktop keeps its three-column layout and connections with compact typography.
+
+Validation passed: preflight, lint, typecheck, all 76 tests, 521-text locale
+coverage, web/Studio builds, mobile network checks, final-fix checks and dashboard
+regression. The three browser suites reported zero violations across 25 axe
+states. Side-by-side desktop and mobile previews were opened for owner review.
+No public deployment or content approval/reuse flag change is part of this push.
+
+
+## Simpler mobile flow and compact desktop network - 6 November 2026
+
+Latest owner direction supersedes the earlier exact desktop appearance requirement:
+keep its three-column structure, positions and connections, but reduce only this
+section's icons and labels (13px wide desktop; 12px compact desktop). Mobile now
+starts with a partner chooser without a web of arrows. Selecting a partner shows
+Isa, that partner and its initiative tiles. Selection retains the partner while
+opening the source record. Choose another partner resets the flow; Show all
+connections restores the complete measured graph. Four locales and List remain.
+
+Preflight, lint, typecheck, 76 tests, 521-text locale coverage and web/Studio builds
+passed. Browser checks passed: desktop layout/path baseline; eight phone/locale
+states plus enlarged text; 18 desktop language cases; full dashboard regression.
+Arrow samples clear cards/headings; all 25 full-view links match source records.
+All 25 axe states across the three browser suites reported zero violations.
+Local review draft after e989fbc; no commit, push or public deployment performed.
+
+
+## Mobile portrait-first network draft — 6 November 2026
+
+Owner approved a mobile-only portrait → recorded partners → initiative-tile flow
+with flexible, edge-attached arrows, explicitly preserving desktop. At <=700px,
+the new component uses content-sized two-column cards, measured SVG routes with
+rounded bends through reserved gutters, and shared-initiative links from every
+documented participant. Direct work still branches from Isa without inventing a
+partner. The desktop component/geometry and original horizontal scroll map remain.
+
+Preflight, lint, typecheck, all 76 tests, locale coverage (518 audited texts; no
+missing Yoruba/Igbo), web and Studio builds passed. A final web rebuild verified
+the mobile-specific image sizing: source portrait 96px, partner portraits 40px/
+logos 56px. Source images, frozen records and review/permission flags are unchanged.
+
+The new mobile browser suite passed English/Hausa/Yoruba/Igbo at 320 and 390px,
+plus 320px enlarged text, with zero errors or violations in 9 axe states. It
+compares all 22 desktop nodes and 25 path geometries exactly against a baseline,
+and verifies the desktop map at 834px. Mobile SVG samples check every connection
+against actual card/heading rectangles and require endpoints to attach to card
+edges; all passed. Exact actor/initiative/kind records, touch selection, record
+opening, two-column ordering, image hierarchy and List switching also passed.
+Dashboard regression passed 9 groups/7 axe states. Updated final-fix checks passed
+18 desktop cases, 8 mobile cases and 9 axe states with no errors/violations.
+
+Evidence: output/mobile-network-draft-results.json, scripts/fixtures/mobile-
+network-desktop-baseline.json and output/playwright/dashboard-mobile-flow-*.png.
+Desktop/mobile-size browser previews were arranged on the PC for owner review.
+This is an uncommitted local draft after e989fbc; no push or public deployment.
+
+
 ## Final fix: desktop languages and horizontal mobile network — 6 November 2026
 
 The owner clarified that desktop language buttons were the reported issue and

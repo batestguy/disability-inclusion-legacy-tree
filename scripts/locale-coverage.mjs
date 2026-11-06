@@ -40,7 +40,7 @@ while (queue.length) {
   collect(node); collect(getConciseAnswer(node));
   node.options.forEach(option => queue.push(option.target));
 }
-const active = ["AboutWorkspace", "AboutBiography", "DashboardAdvocacy", "DashboardEvidence", "DashboardHighlights", "DashboardNetwork", "DashboardWorkspace", "GuidedWorkspace", "HomeWorkspace", "LandingEffects", "SolarSystem", "OpeningPortrait", "Permanent", "Preferences", "Record", "WorkspaceFooter", "WorkspaceHeader"];
+const active = ["AboutWorkspace", "AboutBiography", "DashboardAdvocacy", "DashboardEvidence", "DashboardHighlights", "DashboardNetwork", "MobileNetworkFlow", "DashboardWorkspace", "GuidedWorkspace", "HomeWorkspace", "LandingEffects", "SolarSystem", "OpeningPortrait", "Permanent", "Preferences", "Record", "WorkspaceFooter", "WorkspaceHeader"];
 for (const [dir, names] of [["apps/web/components", active.map(name => name + ".tsx")], ["apps/web/lib", ["methodology.ts"]]]) {
   for (const name of names) {
     const source = ts.createSourceFile(name, await readFile(`${dir}/${name}`, "utf8"), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);

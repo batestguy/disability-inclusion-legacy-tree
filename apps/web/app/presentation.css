@@ -647,3 +647,20 @@
  .dashboard-redesign .network-view-controls { display: flex; width: 100%; flex-wrap: wrap; gap: 8px; }
  .dashboard-redesign .network-view-controls button { min-width: 5rem; max-width: 100%; flex: 0 1 auto; white-space: normal; overflow-wrap: normal; word-break: normal; }
 }
+
+/* Owner-requested desktop network typography: same layout, lighter visual weight. */
+@media (min-width: 701px) {
+ .dashboard-redesign .pathway-map .pathway-subject .collage-avatar { width: 116px; height: 128px; }
+ .dashboard-redesign .pathway-map .pathway-person,.dashboard-redesign .pathway-map .pathway-initiative { font-size: .8125rem; }
+ .dashboard-redesign .pathway-map .pathway-person .collage-avatar { width: 48px; height: 54px; }
+ .dashboard-redesign .pathway-map .pathway-person .collage-avatar.is-logo { width: 56px; height: 42px; }
+ .dashboard-redesign .pathway-map .pathway-initiative .activity-thumbnail { width: 36px; height: 36px; }
+ .dashboard-redesign .pathway-map .pathway-kind-symbol { width: 14px; height: 16px; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+ .dashboard-redesign .pathway-map .pathway-subject .collage-avatar { width: 88px; height: 98px; }
+ .dashboard-redesign .pathway-map .pathway-person,.dashboard-redesign .pathway-map .pathway-initiative { font-size: .75rem; }
+ .dashboard-redesign .pathway-map .pathway-person .collage-avatar { width: 32px; height: 32px; }
+ .dashboard-redesign .pathway-map .pathway-person .collage-avatar.is-logo { width: 42px; height: 35px; }
+ .dashboard-redesign .pathway-map .pathway-initiative .activity-thumbnail { width: 32px; height: 32px; }
+}

@@ -1,5 +1,41 @@
 # Inclusion scorecard
 
+## Simpler mobile flow and compact desktop network - 6 November 2026
+
+Latest owner direction supersedes the earlier exact desktop appearance requirement:
+keep its three-column structure, positions and connections, but reduce only this
+section's icons and labels (13px wide desktop; 12px compact desktop). Mobile now
+starts with a partner chooser without a web of arrows. Selecting a partner shows
+Isa, that partner and its initiative tiles. Selection retains the partner while
+opening the source record. Choose another partner resets the flow; Show all
+connections restores the complete measured graph. Four locales and List remain.
+
+Preflight, lint, typecheck, 76 tests, 521-text locale coverage and web/Studio builds
+passed. Browser checks passed: desktop layout/path baseline; eight phone/locale
+states plus enlarged text; 18 desktop language cases; full dashboard regression.
+Arrow samples clear cards/headings; all 25 full-view links match source records.
+All 25 axe states across the three browser suites reported zero violations.
+Local review draft after e989fbc; no commit, push or public deployment performed.
+
+
+## Mobile portrait-first network draft — 6 November 2026
+
+Owner requested a mobile-only top-down draft and explicitly preserved desktop.
+At widths up to 700px, Isa's portrait/office leads; recorded people and
+organisations appear in two-column, content-sized cards; initiative tiles follow.
+SVG arrows are measured from actual card edges, with rounded bends through
+reserved centre/outer gutters and a crossing space between the two stages.
+Source-to-partner, partner-to-initiative and direct-work links preserve the
+existing source records. Selection, details, filters, four locales and List view
+are reused. Images are existing assets; no dependency or approval flag changed.
+
+Desktop retains the original three-column map, scroll region and paths; an
+exact 1440px baseline plus the 834px layout is checked by the new mobile browser
+suite. The previous horizontal mobile layout is superseded only on phones.
+This is a local review draft after e989fbc; no commit/push has been requested.
+Verification is recorded in docs/VALIDATION.md.
+
+
 ## Final fix: desktop languages and horizontal mobile network — 6 November 2026
 
 Owner clarified the desktop issue concerns language buttons, and approved a

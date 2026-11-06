@@ -74,7 +74,7 @@ export default function DashboardWorkspace({ lang, bundle }: Props) {
       </nav>
       <DashboardHighlights lang={lang} bundle={bundle} data={data} area={selection.area} onArea={(area) => updateSelection({ area })} />
       <DashboardAdvocacy lang={lang} bundle={bundle} data={data} mode={selection.cloudMode} selectedId={selection.cloudId} onSelect={(cloudId) => updateSelection({ cloudId })} onMode={(cloudMode) => updateSelection({ cloudMode, cloudId: null })} onAsk={askAbout} />
-      <DashboardNetwork lang={lang} bundle={bundle} data={data} area={selection.networkArea} selectedId={selection.initiative} actorId={selection.actor} onSelect={(initiative) => updateSelection({ initiative, actor: null })} onArea={(networkArea) => updateSelection({ networkArea, initiative: null, actor: null })} onActor={(actor) => updateSelection({ actor, initiative: null })} onAsk={askAbout} />
+      <DashboardNetwork lang={lang} bundle={bundle} data={data} area={selection.networkArea} selectedId={selection.initiative} actorId={selection.actor} onSelect={(initiative, actor = null) => updateSelection({ initiative, actor })} onArea={(networkArea) => updateSelection({ networkArea, initiative: null, actor: null })} onActor={(actor) => updateSelection({ actor, initiative: null })} onAsk={askAbout} />
       <WorkspaceFooter lang={lang} />
     </main>
   </div>;

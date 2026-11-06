@@ -246,12 +246,14 @@ try {
   assert.equal(await page.locator('.brand-portrait').isVisible(), true);
   await geometry(); await audit('Hausa phone');
   assert.equal(await page.locator('.network-view-controls').isVisible(), true);
-  assert.equal(await page.locator('.network-map').isVisible(), true);
+  assert.equal(await page.locator('.mobile-network-flow').isVisible(), true);
+  assert.equal(await page.locator('.network-map').isVisible(), false);
   assert.equal(await page.locator('.network-list').isVisible(), false);
   await page.locator('.network-view-controls button').nth(1).click();
   assert.equal(await page.locator('.network-list').isVisible(), true);
   await page.locator('.network-view-controls button').first().click();
-  assert.equal(await page.locator('.network-map').isVisible(), true);
+  assert.equal(await page.locator('.mobile-network-flow').isVisible(), true);
+  assert.equal(await page.locator('.network-map').isVisible(), false);
   await page.screenshot({ path: 'output/playwright/dashboard-redesign-mobile-hausa.png' });
   await page.getByRole('link', { name: 'English', exact: true }).click();
   await page.locator('.dashboard-shell[lang="en"]').waitFor();

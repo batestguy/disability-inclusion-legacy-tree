@@ -1,0 +1,53 @@
+{
+  "completed": true,
+  "desktopLayoutPreserved": true,
+  "mobileStates": [
+    "en:390",
+    "en:320",
+    "ha:390",
+    "ha:320",
+    "yo:390",
+    "yo:320",
+    "ig:390",
+    "ig:320"
+  ],
+  "axe": [
+    {
+      "label": "en: 390px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "en: 320px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "ha: 390px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "ha: 320px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "yo: 390px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "yo: 320px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "ig: 390px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "ig: 320px mobile flow",
+      "violations": []
+    },
+    {
+      "label": "320px enlarged text flow",
+      "violations": []
+    }
+  ],
+  "errors": []
+}
