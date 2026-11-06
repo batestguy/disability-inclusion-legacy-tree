@@ -4,11 +4,11 @@
 .kpi-showcase {
   --scorecard-ink: #183e2e;
   --scorecard-muted: #52665b;
-  --scorecard-white: #fff;
+  --scorecard-white: #ffffff;
   --achievement-green: #156146;
   --achievement-surface: #f4f8f5;
   --plan-green: #156146;
-  --plan-surface: #fff;
+  --plan-surface: #ffffff;
   --scorecard-line: #dce5de;
   --scorecard-font: 'Source Sans 3', 'Segoe UI', sans-serif;
   position: relative;
@@ -28,7 +28,7 @@
 .highlight-category-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 8px 0 12px; border-bottom: 1px solid var(--scorecard-line); }
 .highlight-category-bar > div { display: flex; flex-wrap: wrap; gap: 4px; }
 .highlight-category-bar button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; color: var(--scorecard-muted); background: transparent; border-radius: 4px; font-size: 0.875rem; line-height: 1.3; text-align: left; }
-.highlight-category-bar button > span { min-width: 20px; font-size: 0.75rem; line-height: 20px; text-align: center; border-radius: 3px; background: #e8efe9; }
+.highlight-category-bar button > span { min-width: 20px; font-size: 0.75rem; line-height: 20px; text-align: center; border-radius: 3px; background: #ffffff; }
 .highlight-category-bar button[aria-pressed='true'] { color: var(--scorecard-white); background: var(--scorecard-ink); font-weight: 600; }
 .highlight-category-bar button[aria-pressed='true'] > span { background: #ffffff24; }
 .highlight-category-bar button:hover { box-shadow: inset 0 0 0 1px #7d9d88; }
@@ -36,7 +36,7 @@
 .highlight-filter-disclosure summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--scorecard-line); border-radius: 4px; font-size: 0.875rem; list-style: none; cursor: pointer; }
 .highlight-filter-disclosure summary::-webkit-details-marker { display: none; }
 .highlight-filter-disclosure summary::before { content: ''; width: 12px; height: 10px; background: linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center top/12px 1px no-repeat, linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center/8px 1px no-repeat, linear-gradient(var(--scorecard-muted),var(--scorecard-muted)) center bottom/4px 1px no-repeat; }
-.highlight-filter-disclosure summary > span { min-width: 20px; border-radius: 3px; background: #e8efe9; text-align: center; font-size: 0.75rem; }
+.highlight-filter-disclosure summary > span { min-width: 20px; border-radius: 3px; background: #ffffff; text-align: center; font-size: 0.75rem; }
 .highlight-filter-disclosure summary:focus-visible { outline: 3px solid #156146; outline-offset: 4px; }
 .highlight-filter-disclosure[open] { flex-basis: 100%; order: 2; }
 .highlight-filter-disclosure[open] summary { width: fit-content; margin-left: auto; }

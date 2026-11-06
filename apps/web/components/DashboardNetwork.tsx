@@ -2,7 +2,7 @@
 import interactionCopy from "../../../content/interaction-copy.json";
 import { translate } from "../lib/locales.mjs";
 
-import { useRef, useState, type CSSProperties } from "react";
+import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import ActivityThumbnail from "./ActivityThumbnail";
 import type { Presentation } from "./DashboardWorkspace";
@@ -12,7 +12,7 @@ import { scrollAndFocus } from "../lib/scroll-focus";
 import assets from "../../../content/dashboard-network-assets.json";
 
 type Props = Pick<ReturnType<typeof getChatData>, "bundle"> & { lang: Lang; data: Presentation; area: string; selectedId: string | null; actorId: string | null; onSelect: (id: string | null) => void; onArea: (id: string) => void; onActor: (id: string | null) => void; onAsk: (id: string) => void };
-const colours = ["#156146", "#245dc1", "#7943b5", "#087c83", "#b14d17", "#ac286e"];
+const colours = ["#0b5d3b", "#186546", "#2f7351", "#08704c", "#365e43", "#14573e"];
 const kindLabel = (kind: string, lang: Lang) => { const labels = ({ "reported-programme-collaboration": ["Reported collaboration", "Haɗin gwiwar da aka ruwaito"], "stated-cooperation": ["Cooperation intention", "Niyyar haɗin gwiwa"], "signed-mou-reported": ["Reported MOU signing", "Sa hannun yarjejeniya da aka ruwaito"] }[kind]); return labels ? translate(lang, labels[0], labels[1]) : kind; };
 function NodeImage({ id, label }: { id: string; label: string }) {
   const [failed, setFailed] = useState(false);
@@ -23,6 +23,8 @@ function NodeImage({ id, label }: { id: string; label: string }) {
 
 export default function DashboardNetwork({ lang, bundle, data, area, selectedId, actorId, onSelect, onArea, onActor, onAsk }: Props) {
   const [listView, setListView] = useState(false);
+  const graphViewport = useRef<HTMLDivElement>(null);
+  const arrowId = `network-arrow-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
   const [page, setPage] = useState(0);
   const [directOnly, setDirectOnly] = useState(false);
   const activityBrowser = useRef<HTMLDetailsElement>(null);
@@ -46,7 +48,20 @@ export default function DashboardNetwork({ lang, bundle, data, area, selectedId,
   const linkedActivities = inArea.filter((a) => a.collaborationIds.length);
   const directActivities = inArea.filter((a) => !a.collaborationIds.length);
   const rows = Math.max(actors.length, linkedActivities.length + (directActivities.length ? 1 : 0), 3);
-  const height = rows * 88 + 72;
+  const height = rows * 112 + 96;
+  useEffect(() => {
+    const viewport = graphViewport.current;
+    if (!viewport || listView) return;
+    const centre = () => {
+      viewport.scrollLeft = 0;
+      viewport.scrollTop = Math.max(0, (viewport.scrollHeight - viewport.clientHeight) / 2);
+    };
+    const observer = new ResizeObserver(centre);
+    observer.observe(viewport);
+    if (viewport.firstElementChild) observer.observe(viewport.firstElementChild);
+    centre();
+    return () => observer.disconnect();
+  }, [listView, area, lang, height]);
   const y = (index: number, total: number) => 52 + index * (height - 104) / Math.max(1, total - 1);
   const actorColour = (id: string) => colours[Math.max(0, data.collaborations.flatMap((c) => c.participants).filter((p, index, all) => all.findIndex((a) => a.id === p.id) === index).findIndex((p) => p.id === id)) % colours.length];
   const connects = (personId: string, activityId: string) => collaborations.some((c) => c.activityId === activityId && c.participants.some((p) => p.id === personId));
@@ -58,21 +73,25 @@ export default function DashboardNetwork({ lang, bundle, data, area, selectedId,
     <div className="network-toolbar"><label>{say("Contribution area", "Fannin gudummawa")}<select data-network-area value={area} onChange={(e) => chooseArea(e.target.value)}><option value="all">{say("All activities", "Dukkan ayyuka")}</option>{data.networkGroups.map((g) => <option key={g.id} value={g.id}>{g.label[lang]}</option>)}</select></label><div className="segmented-controls network-view-controls" role="group" aria-label={say("Collaboration view", "Yadda za a nuna haɗin gwiwa")}><button type="button" aria-pressed={!listView} onClick={() => setListView(false)}>{say("Network", "Cibiyar haɗin gwiwa")}</button><button type="button" aria-pressed={listView} onClick={() => setListView(true)}>{say("List", "Jeri")}</button></div></div>
     <div className="network-legend"><span><i className="legend-line" />{kindLabel("reported-programme-collaboration", lang)}</span><span><i className="legend-line is-intention" />{kindLabel("stated-cooperation", lang)}</span><span><i className="legend-line is-mou" />{kindLabel("signed-mou-reported", lang)}</span></div>
     <div className={`network-composition pathway-composition${listView ? " use-list" : ""}`}>
+      <p className="network-pan-hint">{say("Scroll sideways to follow the arrows. Use List for a reading view.", "Gungura gefe don bin kibiyoyi. Yi amfani da Jeri don karantawa.")}</p>
+      <div className="network-map-viewport" ref={graphViewport} tabIndex={0} role="region" aria-label={say("Connection graph", "Jadawalin alaƙa")}>
       <div className="network-map pathway-map" style={{ height: `${height / 16}rem` }} aria-label={say("Isa, people and organisations, then their initiatives", "Isa, mutane da ƙungiyoyi, sannan shirye-shiryensu")}>
         <div className="pathway-column-label subject">{say("Isa & his office", "Isa da ofishinsa")}</div><div className="pathway-column-label participants">{say("People & organisations", "Mutane da ƙungiyoyi")}</div><div className="pathway-column-label initiatives">{say("Initiatives", "Shirye-shirye")}</div>
         <svg viewBox={`0 0 1000 ${height}`} preserveAspectRatio="none" aria-hidden="true">
-          {actors.map((person, index) => <path key={`isa:${person.id}`} data-isa-actor={person.id} d={`M 190 ${height / 2} C 270 ${height / 2}, 275 ${y(index, actors.length)}, 350 ${y(index, actors.length)}`} style={{ "--node-colour": actorColour(person.id) } as CSSProperties} className={`pathway-edge isa-connection${activeConnection(person.id) ? " is-active" : " is-muted"}`} />)}
+          <defs><marker id={arrowId} viewBox="0 0 8 8" refX="8" refY="4" markerWidth="4" markerHeight="4" orient="auto"><path className="pathway-arrow" d="M0 0L8 4L0 8Z" /></marker></defs>
+          {actors.map((person, index) => <path key={`isa:${person.id}`} markerEnd={`url(#${arrowId})`} data-isa-actor={person.id} d={`M 190 ${height / 2} C 270 ${height / 2}, 275 ${y(index, actors.length)}, 350 ${y(index, actors.length)}`} style={{ "--node-colour": actorColour(person.id) } as CSSProperties} className={`pathway-edge isa-connection${activeConnection(person.id) ? " is-active" : " is-muted"}`} />)}
           {collaborations.flatMap((c) => c.participants.filter((p) => p.id !== "mohammed-abba-isa").map((person) => {
             const from = y(actors.findIndex((p) => p.id === person.id), actors.length);
             const to = y(linkedActivities.findIndex((a) => a.id === c.activityId), linkedActivities.length + (directActivities.length ? 1 : 0));
-            return <path key={`${c.id}:${person.id}`} data-actor-edge={person.id} data-activity-edge={c.activityId} d={`M 610 ${from} C 665 ${from}, 680 ${to}, 735 ${to}`} style={{ "--node-colour": actorColour(person.id) } as CSSProperties} className={`pathway-edge ${c.kind}${activeConnection(person.id, c.activityId) ? " is-active" : " is-muted"}`} />;
+            return <path key={`${c.id}:${person.id}`} markerEnd={`url(#${arrowId})`} data-actor-edge={person.id} data-activity-edge={c.activityId} d={`M 610 ${from} C 665 ${from}, 680 ${to}, 735 ${to}`} style={{ "--node-colour": actorColour(person.id) } as CSSProperties} className={`pathway-edge ${c.kind}${activeConnection(person.id, c.activityId) ? " is-active" : " is-muted"}`} />;
           }))}
-          {!!directActivities.length && <path data-direct-edge d={`M 190 ${height / 2} C 265 ${height / 2}, 265 ${height - 22}, 650 ${height - 22} Q 695 ${height - 22}, 735 ${height - 52}`} className={`pathway-edge direct-connection${selected && !selected.collaborationIds.length || directOnly ? " is-active" : " is-muted"}`} />}
+          {!!directActivities.length && <path markerEnd={`url(#${arrowId})`} data-direct-edge d={`M 190 ${height / 2} C 265 ${height / 2}, 265 ${height - 22}, 650 ${height - 22} Q 695 ${height - 22}, 735 ${height - 52}`} className={`pathway-edge direct-connection${selected && !selected.collaborationIds.length || directOnly ? " is-active" : " is-muted"}`} />}
         </svg>
         <div className="pathway-subject"><NodeImage id="mohammed-abba-isa" label="Mohammed Abba Isa" /><strong>Mohammed Abba Isa</strong><span>{say("Recorded work & connections", "Ayyuka da alaƙa da aka rubuta")}</span></div>
         {actors.map((person, index) => <button key={person.id} type="button" data-network-actor={person.id} aria-pressed={actor?.id === person.id} className={`pathway-person${activeConnection(person.id) ? " is-connected" : " is-dimmed"}${actor?.id === person.id ? " is-selected" : ""}`} style={{ top: `${y(index, actors.length) / height * 100}%`, "--node-colour": actorColour(person.id) } as CSSProperties} onClick={() => chooseActor(actor?.id === person.id ? null : person.id)}><NodeImage id={person.id} label={person.label} /><span>{person.label}</span><svg className="pathway-kind-symbol" viewBox="0 0 24 24" aria-hidden="true">{person.kind === "person" ? <><circle cx="12" cy="7" r="4" /><path d="M4 22v-4a8 8 0 0 1 16 0v4" /></> : <><path d="M3 22V7l9-4 9 4v15M7 10h2m6 0h2M7 14h2m6 0h2M10 22v-5h4v5" /></>}</svg></button>)}
         {linkedActivities.map((activity, index) => <button key={activity.id} type="button" data-network-map-initiative={selectionId(activity.id)} aria-pressed={selected?.id === activity.id} className={`pathway-initiative${selected?.id === activity.id ? " is-selected" : ""}${actor && !connects(actor.id, activity.id) || selected && selected.id !== activity.id ? " is-dimmed" : ""}`} style={{ top: `${y(index, linkedActivities.length + (directActivities.length ? 1 : 0)) / height * 100}%` }} onClick={() => { setDirectOnly(false); selectActivity(activity.id); }}>{thumbnail(activity)}<span>{activity.title[lang]}</span><span aria-hidden="true">→</span></button>)}
         {!!directActivities.length && <button type="button" className={`pathway-initiative pathway-direct${directOnly ? " is-selected" : ""}`} style={{ top: `${(height - 52) / height * 100}%` }} onClick={showDirect}><span className="pathway-initiative-symbol" aria-hidden="true">↗</span><span>{say("More recorded activities", "Ƙarin ayyukan da aka rubuta")}<small>{directActivities.length} · {say("Direct activity connections", "Alaƙar ayyuka kai tsaye")}</small></span></button>}
+      </div>
       </div>
       <div className="network-list pathway-list"><div className="collage-list-centre"><NodeImage id="mohammed-abba-isa" label="Mohammed Abba Isa" /><strong>Mohammed Abba Isa</strong><span aria-hidden="true">↓</span>{say("People, organisations & initiatives", "Mutane, ƙungiyoyi da shirye-shirye")}</div><ul>{actors.map((person) => <li key={person.id}><button type="button" data-network-list-actor={person.id} aria-pressed={actor?.id === person.id} onClick={() => chooseActor(actor?.id === person.id ? null : person.id)}><NodeImage id={person.id} label={person.label} /><span>{person.label}</span></button><ul>{linkedActivities.filter((a) => connects(person.id, a.id)).map((activity) => <li key={activity.id}><button type="button" data-network-list-initiative={selectionId(activity.id)} aria-pressed={selected?.id === activity.id} onClick={() => { setDirectOnly(false); selectActivity(activity.id); }}>{thumbnail(activity)}<span>{activity.title[lang]}</span><span aria-hidden="true">→</span></button></li>)}</ul></li>)}</ul>{!!directActivities.length && <button type="button" className="text-action" onClick={showDirect}>↗ {say("More recorded activities", "Ƙarin ayyukan da aka rubuta")} · {directActivities.length}</button>}</div>
     </div>

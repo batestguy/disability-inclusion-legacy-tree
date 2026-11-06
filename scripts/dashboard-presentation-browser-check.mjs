@@ -137,8 +137,8 @@ try {
   assert.equal(await page.locator('[data-cloud-selection-count]').innerText(), '13 of 30 selected reports');
   await page.waitForFunction(() => document.activeElement?.id === 'cloud-source-heading');
   assert.ok((await page.locator('#cloud-source-heading').boundingBox()).y >= 0);
-  assert.ok((await page.locator('#cloud-source-heading').boundingBox()).y < 100);
-  assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"] sub`).innerText(), '13');
+  assert.ok((await page.locator('#cloud-source-heading').boundingBox()).y < (await page.locator('.dashboard-header').boundingBox()).height + 100);
+  assert.equal(await page.locator(`.concept-cloud [data-cloud-id="${concept.id}"] sup`).innerText(), `×${(13 / presentation.conceptReportCount).toFixed(2)}`);
   const seen = [];
   do {
     seen.push(...await page.locator('[data-source-match]').evaluateAll((items) => items.map((item) => item.dataset.sourceMatch)));
@@ -245,8 +245,13 @@ try {
   await cloudAppearance(2);
   assert.equal(await page.locator('.brand-portrait').isVisible(), true);
   await geometry(); await audit('Hausa phone');
-  assert.equal(await page.locator('.network-map').isVisible(), false);
+  assert.equal(await page.locator('.network-view-controls').isVisible(), true);
+  assert.equal(await page.locator('.network-map').isVisible(), true);
+  assert.equal(await page.locator('.network-list').isVisible(), false);
+  await page.locator('.network-view-controls button').nth(1).click();
   assert.equal(await page.locator('.network-list').isVisible(), true);
+  await page.locator('.network-view-controls button').first().click();
+  assert.equal(await page.locator('.network-map').isVisible(), true);
   await page.screenshot({ path: 'output/playwright/dashboard-redesign-mobile-hausa.png' });
   await page.getByRole('link', { name: 'English', exact: true }).click();
   await page.locator('.dashboard-shell[lang="en"]').waitFor();

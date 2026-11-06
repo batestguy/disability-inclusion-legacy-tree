@@ -83,6 +83,8 @@ try {
     assert.equal(await page.locator(".biography-creator .biography-prose p").last().innerText(), copy.creatorParagraphs.at(-1)[code]);
     for (const link of await page.locator(".biography-creator a").all()) assert.equal(await link.getAttribute("href"), "https://github.com/batestguy", "creator profile must not link individual projects");
     assert.equal(await page.locator(".biography-subject .biography-prose p").last().innerText(), copy.subjectSections.at(-1).text[code]);
+    assert.equal(await page.locator(".creator-contact a").first().getAttribute("href"), "tel:+2347061674831");
+    assert.equal(await page.locator(".creator-contact a").last().getAttribute("href"), "mailto:jzbannister@atbu.edu.ng");
     assert.equal(await page.locator(".creator-work-link").getAttribute("href"), "https://github.com/batestguy");
     assert.equal(await page.getByText("A record you can question", { exact: true }).count(), 0);
     assert.equal(await page.locator(".biography-sources a").count(), 4);
@@ -99,6 +101,9 @@ try {
     state(); assert.equal(await page.locator(".methodology-steps > li").count(), 7);
     assert.equal(await page.locator("#workflow-title").innerText(), workflow.title[code]);
     assert.equal(await page.locator(".methodology-workflow p").last().innerText(), workflow.paragraphs.at(-1)[code]);
+    assert.equal(await page.locator(".methodology-records a:visible").count(), 4);
+    assert.equal(await page.locator(".methodology-settings a").count(), 0);
+    assert.equal(await page.locator(".methodology-settings").getAttribute("open"), null);
     await audit(`${code}: Methodology and agent workflow`);
     await page.screenshot({ path: `output/playwright/methodology-${code}-desktop.png`, fullPage: true });
     await page.goto(`${base}${localeHome(code)}explore/`);

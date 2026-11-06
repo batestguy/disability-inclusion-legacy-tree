@@ -128,10 +128,10 @@ try {
     assert.equal(await page.locator('[data-translation-status="draft"]').count(), 1);
     assert.ok((await page.locator(".record-content h2").innerText()).length > 5);
     await page.emulateMedia({ reducedMotion: "no-preference" });
-    for (const width of [1440, 390]) {
+    for (const width of [1440, 390, 320]) {
       await page.setViewportSize({ width, height: 1050 });
       await page.goto(`${base}/${code}/`);
-      await page.locator('.solar-system[data-mode="orbit"]').waitFor();
+      await page.locator('.solar-system[data-layout-ready="true"]').waitFor();
       await page.locator('.bubble-overview').focus();
       await layout(code, `${code}: active solar orbit ${width}px`);
     }

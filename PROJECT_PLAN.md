@@ -1,5 +1,86 @@
 # Mohammed Abba Isa — The Work in Numbers
 
+## Final fix: desktop languages and horizontal mobile network — 6 November 2026
+
+Owner clarified the desktop issue concerns language buttons, and approved a
+horizontal graph on mobile. Language choices now have high-contrast green
+buttons, explicit desktop/tablet grid placement and a desktop sticky header.
+Measured header height reserves scroll space so selected records and chart
+controls remain below the header. All four languages stay vertical and visible.
+
+Mobile Network view now keeps a readable three-column canvas in a local scroll
+region, rather than forcing List view. SVG connections have arrowheads and keep
+their source-bound solid/dashed/dotted relationship styles. Network/List controls
+remain available; the camera centres on Isa on load, resize and view/locale/filter
+changes. Scroll hints and graph labels have four draft locales. Source records,
+roles, permissions and numerical evidence are unchanged.
+
+This checkpoint also saves the earlier white/green, tighter solar-orbit, contact,
+relative-frequency and Methodology changes. The owner authorised documenting,
+committing and pushing the final fix. See docs/FINAL_FIX_2026-11-06.md and
+validation records; previous local-only delivery notes below are historical.
+
+
+## Latest: white/green theme and closer collision-free planets — 5 November 2026
+
+Owner requests fully white page backgrounds, green tabs and no yellow/blue/
+purple theme accents. All application styles and network display colours now
+use green, white and neutral text; source photographs remain unmodified. Active
+navigation uses white text on green, including the Home tab. This supersedes
+the ivory/multicolour palette notes below.
+
+The orbit now follows the outside of the portrait flag and both word lanes at
+each phase, instead of expanding to the largest ellipse. Desktop planets are
+190px, with a scene around 850px tall rather than 1273px. All planets retain
+perspective, sphere shading and 42-second movement with hover/focus pause.
+Phone words use slim vertical phrases with separated falling timing; the flag,
+portrait and planet dimensions adapt to preserve clearance and usable controls.
+There is no word-lane overlap exception on phones now. Reduced motion, explicit
+effects-off, large-text and hidden-tab behavior remain. Desktop and phone-size
+browser previews use the local static server; the phone preview is emulated.
+Changes remain local after 55a6a61. See docs/VALIDATION.md for final results.
+
+
+## Latest correction: preserve live solar motion — 5 November 2026
+
+Owner rejected the responsive stationary fallback because it removed the solar
+experience and falling concepts. Normal viewport sizes now keep both effects.
+The orbit fitter first adapts the stationary core instead of turning animation
+off. Compact phones use the live orbit with words on a rear plane and clickable
+planets in front; they may cross the decorative word lanes in projection, while
+the portrait stays clear. This supersedes the previous all-width 12px word-lane
+clearance requirement where it would remove the requested animation. Wider
+layouts retain the clearance-fitted orbit. Existing reduced-motion, explicit
+effects-off and enlarged-text stationary preferences are retained.
+
+Regression coverage now requires an orbit and visible word streams at ten widths,
+including ordinary 1280/1366px windows and 320/390px phones. These changes remain
+local. See docs/VALIDATION.md for final results.
+
+
+## Latest: coordinated Nigerian theme and readable methodology — 5 November 2026
+
+Owner approved warm ivory #F5F4EE across all pages, white panels, deep green
+#0B5D3B headings/controls and charcoal #24352D text. The old full-page flag
+watermark is replaced by green–white–green concentric portrait bands. The
+portrait remains a CSS circle with original source bytes preserved.
+
+Cloud superscripts now show ×relative-frequency to two decimals: concepts /
+all analysed reports, or matching activities / all recorded activities. Counts,
+source excerpts and the existing size ordering remain; overlapping themes are
+explained. Frequency values are included in accessible names and tooltips.
+Four implementation links are visible under Sources and implementation;
+model settings remain collapsed. Jerry's owner-supplied public phone/email are
+clickable immediately below his name on About in every locale.
+
+Solar paths are fitted against the portrait border and full falling-word lanes,
+with 16px target clearance and full-cycle perspective checks; smaller planets
+and responsive dimensions keep the core clear. Where no path fits, the existing
+stationary layout keeps all destinations accessible. Orbit timing and preferences
+remain. This supersedes earlier radius/size notes. All changes remain local
+following 55a6a61; validation evidence is recorded in docs/VALIDATION.md.
+
+
 ## Latest: circular portrait and clear planet paths — 4 November 2026
 
 Owner requested a circular photograph and smaller planets so the photo cannot

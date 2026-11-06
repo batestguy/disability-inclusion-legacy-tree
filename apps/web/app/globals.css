@@ -1,12 +1,12 @@
 @import "tailwindcss";
 :root {
-  --paper: #f5f3e9;
-  --ink: #203a2e;
+  --paper: #ffffff;
+  --ink: #24352d;
   --muted: #536455;
-  --gold: #795b28;
-  --line: #d7ddcb;
-  --forest: #19392c;
-  --light: #f0ecd9;
+  --gold: #287951;
+  --line: #cbddd4;
+  --forest: #0b5d3b;
+  --light: #ffffff;
 }
 * {
   box-sizing: border-box;
@@ -49,7 +49,7 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #b97723;
+  outline: 3px solid #31ab6e;
   outline-offset: 5px;
 }
 button {
@@ -155,7 +155,7 @@ footer,
 .intro {
   text-align: center;
   padding: 4.5rem 1rem 2.2rem;
-  background: radial-gradient(ellipse at 50% 60%, #e9eddd80, transparent 65%);
+  background: radial-gradient(ellipse at 50% 60%, #ddede580, transparent 65%);
 }
 .intro .eyebrow {
   margin-bottom: 1.5rem;
@@ -224,7 +224,7 @@ footer,
   max-width: 1400px;
   margin: 0 auto;
   isolation: isolate;
-  background: radial-gradient(ellipse at 50% 50%, #dce2cc70, transparent 67%);
+  background: radial-gradient(ellipse at 50% 50%, #cce2d770, transparent 67%);
 }
 .botanical {
   position: absolute;
@@ -244,19 +244,19 @@ footer,
   width: 128px;
   height: 150px;
   border-radius: 48% 48% 40% 40%;
-  background: #ebe6d2;
-  border: 5px double #a68b4b;
+  background: #ffffff;
+  border: 5px double #4ba679;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   box-shadow:
-    0 0 0 9px #f5f3e9aa,
+    0 0 0 9px #e9f5efaa,
     0 15px 40px #192f2425;
 }
 .portrait-seal span {
   font-size: 2.2rem;
-  color: #80632c;
+  color: #2c8056;
   letter-spacing: -0.05em;
 }
 .portrait-seal small {
@@ -284,7 +284,7 @@ footer,
   align-items: center;
   text-align: left;
   background: var(--paper);
-  border: 1px solid #cbd3bf;
+  border: 1px solid #bfd3c9;
   border-radius: 4px;
   padding: 1.1rem;
   box-shadow: 0 8px 30px #213e3012;
@@ -294,7 +294,7 @@ footer,
 }
 .branch:hover {
   transform: translateY(-4px);
-  background: #e7ebdc;
+  background: #ffffff;
 }
 .branch.active {
   background: var(--forest);
@@ -407,8 +407,8 @@ select {
   display: flex;
   flex-direction: column;
   text-align: left;
-  background: #e9eddf;
-  border: 1px solid #d4ddc7;
+  background: #ffffff;
+  border: 1px solid #c7ddd2;
   border-radius: 0 38px 0 0;
   min-height: 300px;
   padding: 1.5rem;
@@ -418,8 +418,8 @@ select {
   transform: translateY(-5px);
 }
 .leaf:nth-child(2n) {
-  background: #f0eadb;
-  border-color: #dfd5bd;
+  background: #ffffff;
+  border-color: #bddfce;
 }
 .leaf-top {
   display: flex;
@@ -480,7 +480,7 @@ select {
   align-items: center;
 }
 .roots em {
-  color: #d3bc79;
+  color: #79d3a6;
 }
 .roots-intro p {
   max-width: 390px;
@@ -505,7 +505,7 @@ select {
   top: -5px;
   width: 9px;
   height: 9px;
-  background: #d3bc79;
+  background: #79d3a6;
   border-radius: 50%;
 }
 .timeline h3 {
@@ -532,9 +532,9 @@ select {
 }
 .draft {
   padding: 0.8rem;
-  border: 1px solid #bba571;
-  color: #5f4a20 !important;
-  background: #eee5cd;
+  border: 1px solid #71bb96;
+  color: #205f40 !important;
+  background: #ffffff;
   font-size: 0.75rem !important;
 }
 .about small {
@@ -565,12 +565,12 @@ footer small {
   right: 22px;
   z-index: 20;
   background: var(--forest);
-  color: #fff9e8;
+  color: #edfaf3;
   border: 1px solid #aab99d;
   border-radius: 30px;
   padding: 0.8rem 1.2rem;
   font-size: 0.7rem;
-  box-shadow: 0 3px 16px #0002;
+  box-shadow: 0 3px 16px #00000022;
 }
 .overlay {
   position: fixed;
@@ -585,7 +585,7 @@ footer small {
   color: var(--ink);
   z-index: 50;
   overflow: auto;
-  box-shadow: 0 10px 70px #0003;
+  box-shadow: 0 10px 70px #00000033;
 }
 .story-panel {
   right: 0;
@@ -620,7 +620,7 @@ footer small {
 .evidence {
   border-left: 2px solid var(--gold);
   padding: 0.2rem 1.2rem;
-  background: #ecebdc;
+  background: #ffffff;
 }
 .evidence h3 {
   padding-top: 1rem;
@@ -720,32 +720,32 @@ footer small {
   text-decoration: underline !important;
 }
 .high-contrast {
-  --paper: #fff;
-  --ink: #000;
-  --muted: #000;
-  --gold: #000;
-  --line: #000;
-  --forest: #fff;
-  --light: #000;
+  --paper: #ffffff;
+  --ink: #000000;
+  --muted: #000000;
+  --gold: #000000;
+  --line: #000000;
+  --forest: #ffffff;
+  --light: #000000;
 }
 .high-contrast .leaf,
 .high-contrast .branch,
 .high-contrast .draft,
 .high-contrast .evidence {
-  background: #fff;
-  color: #000 !important;
-  border-color: #000;
+  background: #ffffff;
+  color: #000000 !important;
+  border-color: #000000;
 }
 .high-contrast .roots p,
 .high-contrast .roots em,
 .high-contrast .roots > .eyebrow,
 .high-contrast .preferences-button {
-  color: #000;
-  background: #fff;
+  color: #000000;
+  background: #ffffff;
 }
 .high-contrast .portrait-seal {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
 }
 .high-contrast .botanical {
   opacity: 0.3;
@@ -856,7 +856,7 @@ footer small {
     flex-direction: column;
     gap: 0.8rem;
     padding-left: 1.8rem;
-    border-left: 2px solid #acb892;
+    border-left: 2px solid #92b8a5;
   }
   .branch {
     position: relative !important;
@@ -869,7 +869,7 @@ footer small {
     content: "";
     height: 1px;
     width: 1.8rem;
-    background: #acb892;
+    background: #92b8a5;
     position: absolute;
     left: -1.8rem;
   }
@@ -963,7 +963,7 @@ footer small {
 }
 
 .branch.active .branch-number {
-  color: #e5d09b;
+  color: #9de3c0;
 }
 
 .tree-footnote {
@@ -980,7 +980,7 @@ footer small {
   overflow-wrap: anywhere;
 }
 .high-contrast .timeline li > p:not(.eyebrow) {
-  color: #000;
+  color: #000000;
 }
 @media (max-width: 700px) {
   .intro h1 {
@@ -1047,7 +1047,7 @@ footer small {
   color: var(--light);
 }
 .language-options a:not([aria-current]):hover {
-  background: #e3e9d7;
+  background: #ffffff;
 }
 .intro-with-map {
   position: relative;
@@ -1068,7 +1068,7 @@ footer small {
   width: 100%;
   max-width: 1400px;
   isolation: isolate;
-  background: radial-gradient(ellipse at 50% 48%, #dce2cc55, transparent 64%);
+  background: radial-gradient(ellipse at 50% 48%, #cce2d755, transparent 64%);
 }
 .living-tree .botanical {
   background-size: 100% 100%;
@@ -1095,12 +1095,12 @@ footer small {
   height: 310px;
   margin: 0 auto;
   overflow: hidden;
-  border: 8px solid #795d37;
+  border: 8px solid #377958;
   border-radius: 47% 42% 36% 40%;
-  background: #e7dfc8;
+  background: #c8e7d8;
   box-shadow:
-    0 0 0 3px #bc9e64,
-    0 15px 35px #2b251f40;
+    0 0 0 3px #64bc90,
+    0 15px 35px #1f2b2540;
 }
 .stump-portrait > img {
   width: 100%;
@@ -1115,8 +1115,8 @@ footer small {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  background: radial-gradient(ellipse at 40% 20%, #f0ead5, #d7cba9);
-  color: #68502b;
+  background: radial-gradient(ellipse at 40% 20%, #d5f0e2, #a9d7c0);
+  color: #2b684a;
 }
 .living-tree .portrait-seal > span:first-child {
   font-size: 4.5rem;
@@ -1131,12 +1131,12 @@ footer small {
   font-size: 0.65rem;
   letter-spacing: 0;
   margin-top: 1.5rem;
-  border-top: 1px solid #bda97a;
+  border-top: 1px solid #7abd9c;
   padding-top: 0.6rem;
 }
 .living-tree .tree-center p {
   display: inline-block;
-  background: #f5f3e9ed;
+  background: #e9f5efed;
   border-radius: 4px;
   margin: 0.7rem 0 0.3rem;
   padding: 0.3rem 1rem;
@@ -1150,7 +1150,7 @@ footer small {
   font-size: 0.64rem;
   font-style: italic;
   color: #536455;
-  background: #f5f3e9cc;
+  background: #e9f5efcc;
 }
 .living-tree .branch-group {
   position: absolute;
@@ -1178,23 +1178,23 @@ footer small {
   inset: auto;
   width: 100%;
   min-height: 96px;
-  border: 1px solid #948166;
-  border-left: 5px solid #8e6b3b;
+  border: 1px solid #66947d;
+  border-left: 5px solid #3b8e65;
   border-radius: 4px 26px 4px 4px;
-  background: #f6f2e5f5;
+  background: #e5f6eef5;
   box-shadow: 0 5px 18px #233a2522;
   padding: 1rem;
   transform: none;
 }
 .living-tree .branch:hover {
-  background: #e9e6d1;
-  border-color: #6f5a36;
+  background: #ffffff;
+  border-color: #366f53;
   transform: none;
 }
 .living-tree .branch.active {
   background: var(--forest);
   color: var(--light);
-  border-color: #b79a5c;
+  border-color: #5cb78a;
 }
 .living-tree .branch strong {
   font-size: 0.95rem;
@@ -1211,7 +1211,7 @@ footer small {
   flex-shrink: 0;
   width: 26px;
   height: 26px;
-  border: 1px solid #a8ad91;
+  border: 1px solid #91ad9f;
   border-radius: 50%;
   font-size: 1.1rem;
 }
@@ -1233,7 +1233,7 @@ footer small {
   top: 0;
   bottom: 33px;
   width: 3px;
-  background: #866638;
+  background: #38865f;
   border-radius: 3px;
 }
 .sub-branch-label {
@@ -1264,7 +1264,7 @@ footer small {
   top: 50%;
   width: 17px;
   height: 3px;
-  background: #866638;
+  background: #38865f;
   transform: rotate(-12deg);
 }
 .twig-story {
@@ -1275,7 +1275,7 @@ footer small {
   min-height: 70px;
   padding: 0.8rem 1rem;
   text-align: left;
-  background: #e9efdd;
+  background: #ffffff;
   border: 1px solid #7c9466;
   border-radius: 3px 24px 3px 24px;
   box-shadow: 0 4px 15px #1d34251a;
@@ -1283,7 +1283,7 @@ footer small {
   line-height: 1.4;
 }
 .twig-story:hover {
-  background: #dce7c9;
+  background: #c9e7d8;
   border-color: #3d623e;
 }
 .twig-year {
@@ -1304,20 +1304,20 @@ footer small {
   white-space: normal;
 }
 .high-contrast .language-options a[aria-current="page"] {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
 }
 .high-contrast .living-tree .branch,
 .high-contrast .twig-story,
 .high-contrast .living-tree .tree-center p,
 .high-contrast .trunk-caption {
-  background: #fff;
-  color: #000;
-  border-color: #000;
+  background: #ffffff;
+  color: #000000;
+  border-color: #000000;
 }
 .high-contrast .living-tree .branch-number,
 .high-contrast .twig-year {
-  color: #000;
+  color: #000000;
 }
 .high-contrast .nigeria-watermark,
 .high-contrast .intro-map {
@@ -1377,8 +1377,8 @@ footer small {
     height: 205px;
     border-width: 6px;
     box-shadow:
-      0 0 0 2px #bc9e64,
-      0 10px 25px #2b251f30;
+      0 0 0 2px #64bc90,
+      0 10px 25px #1f2b2530;
   }
   .living-tree .portrait-seal > span:first-child {
     font-size: 3rem;
@@ -1409,7 +1409,7 @@ footer small {
     gap: 20px;
     padding: 0 0 0 26px;
     margin: 0 4%;
-    border-left: 6px solid #876b43;
+    border-left: 6px solid #438765;
   }
   .living-tree .branch-group {
     position: relative;
@@ -1423,7 +1423,7 @@ footer small {
     top: 46px;
     width: 30px;
     height: 5px;
-    background: #876b43;
+    background: #438765;
     transform: rotate(-8deg);
   }
   .living-tree .branch {
@@ -1536,7 +1536,7 @@ footer small {
   transition: stroke 0.2s;
 }
 .limb-hit:hover {
-  stroke: #dec17d35;
+  stroke: #81daae35;
 }
 @media (max-width: 900px) {
   .limb-hit-areas {
@@ -1555,8 +1555,8 @@ footer small {
     90deg,
     #008751 0%,
     #008751 33.333333%,
-    #fff 33.333333%,
-    #fff 66.666667%,
+    #ffffff 33.333333%,
+    #ffffff 66.666667%,
     #008751 66.666667%,
     #008751 100%
   );
@@ -1583,7 +1583,7 @@ footer small {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 3rem;
-  background: #f5f3e9e6;
+  background: #e9f5efe6;
 }
 .tree-credit h3 {
   font-size: 1.7rem;
@@ -1604,8 +1604,8 @@ footer small {
   text-underline-offset: 3px;
 }
 .high-contrast .tree-credit {
-  background: #fff;
-  border-color: #000;
+  background: #ffffff;
+  border-color: #000000;
 }
 @media (min-width: 901px) {
   .living-tree .branch-group-policy {
@@ -1646,9 +1646,16 @@ footer small {
   width: auto;
   margin: 8px 0 0;
   padding: 0;
-  color: #52636d;
+  color: #526d60;
   font-size: 0.75rem;
   line-height: 1.6;
 }
 .translation-draft span { display: inline; }
 .translation-footer { padding-block: 0 24px; }
+
+/* The shared ivory canvas replaces the former full-page flag watermark. */
+.national-watermark { display: none; }
+.permanent { color: #24352d; }
+.permanent a { color: #0b5d3b; }
+
+html { scroll-padding-top: calc(var(--workspace-header-height,0px) + 16px); }

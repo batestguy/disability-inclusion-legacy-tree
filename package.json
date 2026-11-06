@@ -10,7 +10,7 @@
     "studio": "npm run dev -w studio",
     "lint": "npm run lint --workspaces",
     "typecheck": "npm run typecheck --workspaces",
-    "test": "node --test scripts/content.test.mjs scripts/contribution-metrics.test.mjs scripts/chat-engine.test.mjs scripts/chat-preview.test.mjs scripts/guided-flow.test.mjs scripts/guided-presentation.test.mjs scripts/dashboard-data.test.mjs scripts/dashboard-presentation.test.mjs scripts/locales.test.mjs scripts/about.test.mjs",
+    "test": "node --test scripts/content.test.mjs scripts/contribution-metrics.test.mjs scripts/chat-engine.test.mjs scripts/chat-preview.test.mjs scripts/guided-flow.test.mjs scripts/guided-presentation.test.mjs scripts/dashboard-data.test.mjs scripts/dashboard-presentation.test.mjs scripts/locales.test.mjs scripts/about.test.mjs scripts/solar-geometry.test.mjs",
     "test:chat-browser": "node scripts/guided-browser-check.mjs",
     "metrics": "node scripts/export-contributions.mjs",
     "build": "npm run build -w apps/web && npm run build -w studio",
@@ -22,7 +22,10 @@
     "test:landing-browser": "node scripts/landing-browser-check.mjs",
     "test:locales-browser": "node scripts/locales-browser-check.mjs",
     "test:locales-coverage": "node scripts/locale-coverage.mjs --check",
-    "test:about-browser": "node scripts/about-browser-check.mjs"
+    "test:about-browser": "node scripts/about-browser-check.mjs",
+    "test:polish-browser": "node scripts/polish-browser-check.mjs",
+    "test:solar-orbit-browser": "node scripts/solar-orbit-browser-check.mjs",
+    "test:final-fix-browser": "node scripts/final-fix-browser-check.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

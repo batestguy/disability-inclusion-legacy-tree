@@ -2,7 +2,7 @@
 .about-subnav { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 24px; font-size: .9375rem; }
 .about-subnav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); text-underline-offset: 4px; }
 .about-subnav a[aria-current] { font-weight: 700; }
-.about-article { border: 2px solid var(--inclusion-line); border-top: 4px solid var(--inclusion-blue); border-radius: 18px; background: var(--inclusion-paper); padding: 32px clamp(16px, 5vw, 64px); }
+.about-article { border: 2px solid var(--inclusion-line); border-top: 4px solid var(--inclusion-green); border-radius: 18px; background: var(--inclusion-paper); padding: 32px clamp(16px, 5vw, 64px); }
 .about-intro { max-width: 44rem; margin-bottom: 32px; }
 .about-intro h1 { font-family: 'Briem Hand', 'Source Sans 3', cursive; font-weight: 600; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.35; margin: 8px 0 16px; color: var(--inclusion-green); }
 .about-lead { font-size: 1.25rem; line-height: 1.5; color: var(--inclusion-muted); }
@@ -74,3 +74,8 @@
   .biography-creator .biography-layout { grid-template-columns: minmax(0, 1fr); }
   .biography-creator .biography-layout > .biography-photo { width: min(100%, 156px); }
 }
+
+.creator-contact { display: flex; flex-direction: column; align-items: flex-start; font-style: normal; margin: -8px 0 20px; }
+.creator-contact a { display: inline-flex; align-items: center; min-height: 44px; color: var(--inclusion-green); overflow-wrap: anywhere; }
+.methodology-records { border-top: 1px solid var(--inclusion-line); margin-top: 24px; padding-top: 24px; }
+.methodology-records li a { display: inline-flex; align-items: center; min-height: 44px; }

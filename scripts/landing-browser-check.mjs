@@ -34,7 +34,7 @@ async function layout() {
   const en = await language.getByRole("link", { name: "English", exact: true }).boundingBox();
   const ha = await language.getByRole("link", { name: "Hausa", exact: true }).boundingBox();
   assert.ok(en && ha && en.y + en.height <= ha.y, "visible, vertically stacked locale control");
-  await page.waitForFunction(() => document.querySelector(".landing-workspace").dataset.effects === "off" || parseFloat(getComputedStyle(document.documentElement).fontSize) > 20 || document.querySelector(".solar-arena").clientWidth < 300 || document.querySelector(".solar-system").dataset.mode === "orbit");
+  await page.waitForFunction(() => document.querySelector(".solar-system").dataset.layoutReady === "true");
   await page.locator(".bubble-overview").focus();
   await page.waitForTimeout(80);
   const boxes = await page.locator(".landing-bubble").evaluateAll(links => links.map(link => {

@@ -54,6 +54,7 @@ export default function AboutBiography({ lang }: { lang: Lang }) {
       <div className="biography-layout">
         <Photograph id="creator" lang={lang} alt={copy.creatorPortraitAlt[lang]} caption={copy.creatorPortraitCaption[lang]} />
         <div className="biography-prose"><h3>Jerry Zachary Bannister</h3>
+          <address className="creator-contact"><a href="tel:+2347061674831">07061674831</a><a href="mailto:jzbannister@atbu.edu.ng">jzbannister@atbu.edu.ng</a></address>
           {copy.creatorParagraphs.map((paragraph, index) => <p key={index}>{paragraph[lang]}</p>)}
           <a className="creator-work-link" href="https://github.com/batestguy" target="_blank" rel="noopener noreferrer">{say("View Jerry’s work on GitHub", "Duba ayyukan Jerry a GitHub")} ↗</a>
         </div>

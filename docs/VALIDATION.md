@@ -1,5 +1,140 @@
 # Validation evidence - 22 October 2026
 
+## Final fix: desktop languages and horizontal mobile network — 6 November 2026
+
+The owner clarified that desktop language buttons were the reported issue and
+approved a horizontal mobile graph. The desktop header now remains visible
+while browsing, with high-contrast green language choices in the accepted
+vertical order. Measured header height reserves scroll space for chart controls,
+source focus and selected records. Mobile graph CSS no longer forces List view:
+the three-column map is readable in a local scroll panel, with a scroll hint,
+working SVG arrowheads and both Network/List controls on their own row. The map
+centres on Isa on load, resize and view/locale/filter changes. All source roles,
+relationship kinds, numerical evidence and draft/permission flags are unchanged.
+
+Preflight, workspace lint/typecheck, all 76 tests, four-language coverage (518
+texts; no missing Yoruba/Igbo), and both production builds passed. Final header
+and toolbar changes were followed by successful web rebuilds (42 static pages).
+The initial browser attempt had no preview server running; it was restarted and
+only the successful reruns count here.
+
+Final browser evidence:
+- final-fix-browser-results.json: 18 desktop page/width cases at top and bottom
+  scroll positions, 8 mobile cases (all four languages at 320/390px), keyboard
+  horizontal scrolling, touch actor/initiative selection, marker resolution,
+  preserved locale context and List switching; zero errors/violations in 9 axe states.
+- dashboard-browser-results.json: 9 regression groups and 7 axe states, zero
+  violations/page errors/failed or external requests. Covers all 33 activities,
+  source attribution, cloud figures, filters, guided context and selected edges.
+- landing-browser-results.json: 6 groups and 4 axe states, zero violations/errors.
+- locales-browser-results.json: 4 groups and 22 axe states, zero violations/errors.
+
+Visual review corrected the cramped mobile view controls. Current screenshots
+are dashboard-final-desktop-language.png and dashboard-final-network-*-phone.png
+under output/playwright. The phone files capture the real viewport, avoiding
+full-element screenshot artifacts from the offscreen accessibility skip link.
+
+The owner authorised documenting, committing and pushing this final checkpoint,
+including the preceding white/green, solar, contact and relative-frequency work.
+No public site deployment or approval-flag change is included. The implementation
+summary is docs/FINAL_FIX_2026-11-06.md; push/CI status is reported at delivery.
+
+
+## White/green palette and closer collision-free orbit — 5 November 2026
+
+Owner replaced the ivory/multicolour direction with white backgrounds and green
+tabs. Application colours and network display colours are now green, white or
+neutral text. Photographs remain untouched. The active Home tab has explicit
+white text, with forced-colour overrides retained. Portrait flag bands remain.
+
+A sampled radial path now follows the outside of the portrait ring and both
+concept lanes, maintaining perspective while bringing planets closer. Desktop
+planets are 190px and the arena is about 850px tall (previously 1273px). Slim
+vertical phone phrases have separated falling timing so whole labels fit by the
+portrait. Compact layouts now obey the same no-overlap requirement as desktop.
+The initial cramped Igbo title and active-tab colour conflict were corrected.
+
+Lint, typecheck, locale coverage, preflight, all 76 tests and both production
+builds passed. Final CSS corrections were followed by a successful web rebuild.
+The new geometry test independently samples full paths between fitted points,
+checking portrait flag and lane clearance, screen bounds, click targets and
+planet-to-planet separation. The final 44-second browser run passed all ten
+widths (1440 through 320px), with moving words and planets present. Minimum
+observed lane/portrait clearance was 15.6px, exceeding the required 12px.
+
+Final landing checks passed six groups/four axe states; locale checks passed
+four groups/22 axe states, now including active 320px orbits; focused polish
+checks passed 10 checks/six axe states. Zero axe violations or page errors were
+reported. Results and screenshots are under output/, including current
+solar-clearance-*.png and landing-nigerian-theme.png.
+
+Desktop (1440x1000) and phone-emulated (390x844, Chromium Android device profile)
+interactive preview windows were started on the PC at http://127.0.0.1:8767.
+The phone view is emulation, not a connection to a physical handset. An initial
+iPhone CLI attempt required an unavailable WebKit binary; Chromium emulation
+was used without installing an additional browser. Work remains local after
+55a6a61; no commit/push/deployment was performed.
+
+
+## Restored solar motion at normal viewport sizes — 5 November 2026
+
+The owner rejected the size-based stationary fallback. Replaced it with adaptive
+core sizing and a compact live orbit. Phones keep word concepts on the rear
+plane with clickable planets in front; projected word/planet overlap is allowed
+there so both animations remain present. Wider screens retain fitted lane
+clearance. Explicit effects-off, reduced motion and enlarged-text preferences
+still use their accessible stationary presentation.
+
+Web production rebuild, workspace lint/typecheck, all 75 tests and preflight
+passed. A full 44-second browser sampling run now requires active 3D orbits and
+visible falling-word streams at all ten widths: 1440, 1366, 1280, 1024, 900,
+768, 600, 501, 390 and 320px. All passed. Portrait clearance stayed positive
+(minimum 18.6px); noncompact layouts retained at least 21px of lane/portrait
+clearance. Independent 700ms transform comparisons confirmed actual word movement
+at 1366, 1280, 390 and 320px. Final landing browser checks passed six groups,
+four axe states, with no page errors or failed/external requests. Full locale
+results are recorded in output/locales-browser-results.json.
+
+The latest screenshots and geometry results are in output/playwright/solar-
+clearance-*.png and output/solar-orbit-browser-results.json. No commit/push or
+public deployment was performed. The earlier stationary-width fallback notes
+are superseded by this owner correction.
+
+
+## Nigerian theme, relative frequencies and public contact — 5 November 2026
+
+Implemented the approved ivory/white/deep-green palette across all page types,
+replacing the full-page watermark with a green–white–green portrait border.
+Cloud superscripts show ×proportion to two decimals using the full report or
+activity denominator; raw counts and source evidence remain. Methodology's four
+implementation links are visible outside the parameter disclosure. About displays
+the owner's supplied phone and email as telephone/mail links below his name.
+
+Workspace lint, typecheck, all 75 tests, preflight and four-language coverage
+passed (516 audited texts; no missing Yoruba/Igbo entries). Production builds
+passed for web (42 pages) and Studio; final compact-label and green-heading CSS
+changes were followed by successful web rebuilds. No dependencies or public approval flags changed.
+
+Final landing browser run passed six groups and four axe states. Final locale
+run passed four groups and 20 axe states. A focused polish browser check passed
+10 checks, including all six page types with zero axe violations, four-locale
+contact/methodology links and both frequency denominators. These runs reported
+no uncaught page errors. Results: output/polish-browser-results.json,
+output/landing-browser-results.json and output/locales-browser-results.json.
+
+The full-revolution browser check sampled every 500ms for 44 seconds at 1440,
+1024 and 768px. Minimum observed clearance from the falling-word lanes/portrait
+was 23.4px, 21.9px and 21.6px respectively, exceeding the required 12px.
+600/501/390/320px use the stationary navigation fallback. The geometry fitter
+checks perspective around the full orbit and includes a safety margin. The
+initial tablet-label overflow was corrected and the final browser run passed.
+Evidence: output/solar-orbit-browser-results.json, solar-clearance screenshots,
+landing-nigerian-theme.png and dashboard-relative-frequency.png.
+
+Source bytes, frozen records, translations' draft status and permission flags
+remain intact. Work stays local after 55a6a61; no commit/push/deployment performed.
+
+
 ## Circular portrait and unobstructed solar navigation — 4 November 2026
 
 Home displays a true circular CSS crop of the original photograph, with the

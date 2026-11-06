@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import type { Lang, Bilingual } from "../lib/content";
+import { fitSolarOrbit, orbitPoint } from "../lib/solar-orbit.mjs";
 import copy from "../../../content/landing-interactions.json";
 
 type Term = { id: string; label: Bilingual };
@@ -10,12 +11,14 @@ type Props = { lang: Lang; active: boolean; suspended: boolean; terms: Term[]; p
 /** A projected orbit: depth changes size and stacking while labels face the reader. */
 export default function SolarSystem({ lang, active, suspended, terms, planets, children }: Props) {
   const arena = useRef<HTMLDivElement>(null);
+  const layoutKey = useRef("");
   const phase = useRef(-Math.PI * .75);
-  const [size, setSize] = useState({ width: 0, height: 0, largeText: false });
+  const [size, setSize] = useState({ width: 0, largeText: false });
+  const [orbit, setOrbit] = useState<ReturnType<typeof fitSolarOrbit>>(null);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const paused = hovered || focused;
-  const orbiting = active && size.width >= 300 && !size.largeText;
+  const orbiting = active && orbit !== null && !size.largeText;
 
   useEffect(() => {
     const element = arena.current;
@@ -26,9 +29,17 @@ export default function SolarSystem({ lang, active, suspended, terms, planets, c
       cancelAnimationFrame(pending);
       pending = requestAnimationFrame(() => {
         if (!alive) return;
-        const width = element.clientWidth, height = element.clientHeight;
+        const width = element.clientWidth;
+        const style = getComputedStyle(element.parentElement!);
+        const css = (name: string) => parseFloat(style.getPropertyValue(name));
+        const dimensions = [width, css("--base-sun-width"), css("--base-planet-width"), css("--base-word-lane"), css("--base-word-gap")] as const;
+        const key = dimensions.join(":");
+        if (layoutKey.current !== key) {
+          layoutKey.current = key;
+          setOrbit(fitSolarOrbit(...dimensions));
+        }
         const largeText = parseFloat(getComputedStyle(document.documentElement).fontSize) > 20;
-        setSize(previous => previous.width === width && previous.height === height && previous.largeText === largeText ? previous : { width, height, largeText });
+        setSize(previous => previous.width === width && previous.largeText === largeText ? previous : { width, largeText });
       });
     };
     const observer = new ResizeObserver(measure);
@@ -42,17 +53,12 @@ export default function SolarSystem({ lang, active, suspended, terms, planets, c
   useLayoutEffect(() => {
     if (!orbiting || !arena.current) return;
     const links = Array.from(arena.current.querySelectorAll<HTMLAnchorElement>(".landing-bubble"));
-    const largestWidth = Math.max(...links.map(link => link.offsetWidth));
-    const largestHeight = Math.max(...links.map(link => link.offsetHeight));
-    const compact = size.width < 600;
-    const rx = Math.max(0, size.width / 2 - largestWidth * (compact ? .52 : .62) - (compact ? 4 : 12));
-    const ry = Math.max(0, size.height / 2 - largestHeight * .66 - 20);
+    if (!orbit) return;
     const paint = () => links.forEach((link, index) => {
       const angle = phase.current + index * Math.PI / 2;
-      const depth = Math.sin(angle);
-      const scale = compact ? .94 + (depth + 1) * .025 : .88 + (depth + 1) * .055;
-      link.style.transform = `translate3d(${Math.cos(angle) * rx}px,${depth * ry}px,${depth * (compact ? 26 : 90)}px) scale(${scale})`;
-      link.style.zIndex = depth >= 0 ? "30" : "10";
+      const point = orbitPoint(orbit, angle);
+      link.style.transform = `translate3d(${point.x}px,${point.y}px,${point.z}px) scale(${point.scale})`;
+      link.style.zIndex = point.z >= 0 ? "30" : "10";
       link.style.opacity = "1";
     });
     paint();
@@ -67,9 +73,9 @@ export default function SolarSystem({ lang, active, suspended, terms, planets, c
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [orbiting, paused, suspended, size.width, size.height]);
+  }, [orbiting, paused, suspended, size.width, orbit]);
 
-  return <div className="solar-system" data-mode={orbiting ? "orbit" : "static"} data-orbit-paused={paused || suspended}>
+  return <div className="solar-system" data-layout-ready={size.width > 0} data-compact-orbit={orbit?.compact ?? false} data-vertical-words={orbit?.verticalWords ?? false} style={orbit ? { "--orbit-height": `${orbit.height}px`, "--word-height": `${orbit.laneHeight}px`, "--flag-band": `${orbit.ring / 4}px`, "--sun-width": `${orbit.sun}px`, "--planet-width": `${orbit.planet}px`, "--word-lane": `${orbit.lane}px`, "--word-gap": `${orbit.gap}px` } as CSSProperties : undefined} data-mode={orbiting ? "orbit" : "static"} data-orbit-paused={paused || suspended}>
     <h2 id="landing-choices-title" className="solar-heading calligraphy-title">{copy.begin[lang]}</h2>
     <div className="solar-arena" ref={arena}>
       <div className="solar-rings" aria-hidden="true"><i /><i /><i /></div>

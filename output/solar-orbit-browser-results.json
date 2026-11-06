@@ -2,45 +2,74 @@
   "completed": true,
   "results": [
     {
-      "width": 320,
-      "mode": "static",
-      "reason": "Keep portrait and all four controls clear on narrow screens"
-    },
-    {
-      "width": 1440,
+      "width": 1366,
       "mode": "orbit",
-      "samples": 82,
-      "minimumGap": 41.2
+      "compact": false,
+      "samples": 84,
+      "minimumGap": 19
     },
     {
       "width": 1024,
       "mode": "orbit",
+      "compact": false,
       "samples": 84,
-      "minimumGap": 55.2
+      "minimumGap": 19
     },
     {
       "width": 768,
       "mode": "orbit",
+      "compact": false,
+      "samples": 84,
+      "minimumGap": 19
+    },
+    {
+      "width": 1280,
+      "mode": "orbit",
+      "compact": false,
       "samples": 85,
-      "minimumGap": 48
+      "minimumGap": 19
     },
     {
       "width": 600,
       "mode": "orbit",
+      "compact": true,
       "samples": 84,
-      "minimumGap": 89.5
+      "minimumGap": 19.6
     },
     {
-      "width": 390,
+      "width": 900,
       "mode": "orbit",
+      "compact": false,
       "samples": 84,
-      "minimumGap": 12.4
+      "minimumGap": 18.9
+    },
+    {
+      "width": 1440,
+      "mode": "orbit",
+      "compact": false,
+      "samples": 84,
+      "minimumGap": 19
     },
     {
       "width": 501,
       "mode": "orbit",
-      "samples": 85,
-      "minimumGap": 42
+      "compact": true,
+      "samples": 84,
+      "minimumGap": 19.6
+    },
+    {
+      "width": 390,
+      "mode": "orbit",
+      "compact": true,
+      "samples": 84,
+      "minimumGap": 15.6
+    },
+    {
+      "width": 320,
+      "mode": "orbit",
+      "compact": true,
+      "samples": 84,
+      "minimumGap": 15.9
     }
   ]
 }

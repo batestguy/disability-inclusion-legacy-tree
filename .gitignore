@@ -50,3 +50,7 @@ output/playwright/*
 # Evidence for the complete solar-navigation revolution.
 !output/solar-orbit-browser-results.json
 !output/playwright/solar-clearance-*.png
+
+!output/polish-browser-results.json
+
+!output/final-fix-browser-results.json

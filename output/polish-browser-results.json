@@ -1,0 +1,42 @@
+{
+  "completed": true,
+  "checks": [
+    "/: consistent canvas and accessibility",
+    "/explore/: consistent canvas and accessibility",
+    "/chat/: consistent canvas and accessibility",
+    "/about/: consistent canvas and accessibility",
+    "/about/methodology/: consistent canvas and accessibility",
+    "/achievements/inclusive-business-skills/: consistent canvas and accessibility",
+    "en: public contact, visible implementation links, both relative-frequency denominators",
+    "ha: public contact, visible implementation links, both relative-frequency denominators",
+    "yo: public contact, visible implementation links, both relative-frequency denominators",
+    "ig: public contact, visible implementation links, both relative-frequency denominators"
+  ],
+  "axe": [
+    {
+      "path": "/",
+      "violations": []
+    },
+    {
+      "path": "/explore/",
+      "violations": []
+    },
+    {
+      "path": "/chat/",
+      "violations": []
+    },
+    {
+      "path": "/about/",
+      "violations": []
+    },
+    {
+      "path": "/about/methodology/",
+      "violations": []
+    },
+    {
+      "path": "/achievements/inclusive-business-skills/",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

@@ -43,9 +43,12 @@ export default function AboutWorkspace({ lang, bundle, methods = false }: Return
             <h2 id="workflow-title">{workflow.title[lang]}</h2>
             {workflow.paragraphs.map((paragraph, index) => <p key={index}>{paragraph[lang]}</p>)}
           </section>
-          <details className="methodology-settings"><summary>{say("Technical settings and implementation records", "Saitunan fasaha da bayanan aiwatarwa")}</summary>
+          <details className="methodology-settings"><summary>{say("Technical settings", "Saitunan fasaha")}</summary>
             <p>{say("Settings for the selected English-text model. Technical parameter names are retained in English.", "Saitunan tsarin nazarin zaɓaɓɓun rubutun Turanci. An bar sunayen saitunan fasaha da Turanci.")}</p>
             <dl lang="en">{modelSettings.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+          </details>
+          <section className="methodology-records" aria-labelledby="methodology-records-title">
+            <h2 id="methodology-records-title">{say("Sources and implementation", "Tushe da aiwatarwa")}</h2>
             <p>{say("Inspect the implementation and saved methodology records:", "Duba yadda aka aiwatar da bayanan hanyar bincike da aka adana:")}</p>
             <ul>{[
               ["scripts/collect-office-evidence.py", say("Source collection and HTML extraction", "Tattara tushe da fitar da HTML")],
@@ -53,7 +56,7 @@ export default function AboutWorkspace({ lang, bundle, methods = false }: Return
               ["scripts/extract-dashboard-concepts.mjs", say("Word-cloud phrase counts", "Ƙirgar jimlolin girgijen kalmomi")],
               ["docs/PHASE2_FINDINGS.md", say("Selected analysis and its limitations", "Zaɓaɓɓen nazari da iyakokinsa")],
             ].map(([path, label]) => <li key={path}><a href={`https://github.com/batestguy/disability-inclusion-legacy-tree/blob/main/${path}`}>{label}</a></li>)}</ul>
-          </details>
+          </section>
         </> : <>
           <AboutBiography lang={lang} />
           <Link className="about-method-link" href={href("about/methodology", lang)} prefetch={false}><span><strong>{say("Read the methodology", "Karanta hanyar bincike")}</strong><small>{say("Collection, text preparation, NLP, categories and the word cloud", "Tattara bayanai, shirya rubutu, NLP, rukunoni da girgijen kalmomi")}</small></span><span aria-hidden="true">↗</span></Link>

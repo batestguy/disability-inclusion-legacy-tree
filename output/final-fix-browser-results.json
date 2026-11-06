@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-06T04:17:21.483Z",
+  "completed": true,
+  "desktopStates": 18,
+  "mobileStates": 8,
+  "axe": [
+    {
+      "label": "desktop language buttons and graph",
+      "violations": []
+    },
+    {
+      "label": "en: 390px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "en: 320px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "ha: 390px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "ha: 320px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "yo: 390px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "yo: 320px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "ig: 390px horizontal network and arrows",
+      "violations": []
+    },
+    {
+      "label": "ig: 320px horizontal network and arrows",
+      "violations": []
+    }
+  ],
+  "errors": []
+}
