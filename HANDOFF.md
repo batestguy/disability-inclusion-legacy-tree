@@ -1,5 +1,63 @@
 # Project handoff — 6 November 2026
 
+## Demo delivery with tribute introduction and author ending - 6 November 2026
+
+Owner requested commit/push and two additions to both videos: a short opening
+explaining whom the tribute honours, and a short author section at the very end.
+The six-second opening honours Hon. Mohammed Abba Isa's disability-inclusion
+advocacy, access and equal opportunity. The ten-second ending records the
+existing About creator section: Jerry Zachary Bannister's photo, name, contact
+details and statistics/ML/AI purpose. Both retain the original walkthrough.
+
+Current exports are 3:16 (196 seconds), desktop 1920x1080 and mobile 1080x1920,
+with 40 English caption cues each and the supplied song's first 196 seconds.
+The methods segment now runs 2:18-2:58; the author ending runs 3:06-3:16.
+These supersede the earlier 3:00 exports below. File paths remain unchanged.
+Local player: http://127.0.0.1:8770/; restart with node scripts/serve-demo.mjs.
+
+Revised captures, continuous caption timing, full media decoding, non-clipping
+audio and browser duration/dimension checks passed. Both videos seek correctly
+to methods and author sections. Intro/author framing was visually checked on
+both layouts. Syntax checks and preflight passed; the preceding full repository
+lint/typecheck/76-test/web-and-Studio-build results remain applicable because
+application code/data have not changed. See docs/DEMO_STORYBOARD.md and
+committed docs/DEMO_DELIVERY.json for dimensions, hashes and verification.
+
+Owner authorised committing/pushing the recording/assembly tools, title-card
+and player templates, storyboard, delivery manifest and handoff. MP3, rendered
+videos and raw takes stay local/ignored as specified in the accepted plan.
+No change to the live website is required for this video-only delivery.
+
+
+## Captioned desktop and mobile demos - 6 November 2026
+
+Completed desktop first, then a separately captured portrait mobile version.
+Each is exactly 3:00, with English captions, no narration, and the first 180
+seconds of the owner-supplied African Child - Jeremiah Gyang.mp3, normalised
+with opening/closing fades. Both reserve 2:12-2:52 for collection, cleaning,
+deduplication/source checks, TF-IDF/NMF, manual categories, phrase counts,
+limitations and how agents supported scripts, design, translations and checks.
+
+Files: output/demo/desktop/Hon-Mohammed-Abba-Isa-desktop.mp4 (1920x1080)
+and output/demo/mobile/Hon-Mohammed-Abba-Isa-mobile.mp4 (1080x1920).
+Matching SRT files and raw WebM takes are beside them. Local review page:
+http://127.0.0.1:8770/ - node scripts/serve-demo.mjs; desktop opens first.
+The player supports switching, downloads and a methodology jump to 2:12.
+See docs/DEMO_STORYBOARD.md for reproduction with scripts/demo-video.mjs.
+The soundtrack and generated media are ignored by Git and retained locally.
+
+Validation: 18 actual-site scenes per layout; zero capture page errors;
+180-second H.264/AAC files at 30fps; 36 continuous caption cues each; full
+video/audio decode passed; mean audio -19.2 dB and peak -3.7 dB in both.
+Preview frames/contact sheets checked for caption placement, network flow,
+methodology and agent-workflow coverage. Review player verified in Chromium,
+including both dimensions/durations, methodology seeking, pause on switching,
+HTTP byte ranges, HEAD, invalid ranges and path containment. Preflight, lint,
+typecheck, 76 tests and web/Studio builds passed. Reports: output/demo/verification.json
+and output/demo/review-verification.json. Application/data/deployment unchanged;
+recording tools, storyboard and these handoff notes remain local/uncommitted.
+
+
 ## First hosted release - 6 November 2026
 
 Owner authorised free Cloudflare Pages publication and explicitly confirmed:

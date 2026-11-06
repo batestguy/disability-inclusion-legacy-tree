@@ -54,3 +54,6 @@ output/playwright/*
 !output/polish-browser-results.json
 
 !output/final-fix-browser-results.json
+
+# Owner-supplied soundtrack; local video input, never a website asset.
+/African Child - Jeremiah Gyang.mp3

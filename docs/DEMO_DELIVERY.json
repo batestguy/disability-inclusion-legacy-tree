@@ -1,0 +1,78 @@
+{
+  "applicationCheckpoint": "0b55bdd73377fe5b55ff1d80fa96f736eefec9bf",
+  "videos": [
+    {
+      "file": "output/demo/desktop/Hon-Mohammed-Abba-Isa-desktop.mp4",
+      "base": "https://mohammed-abba-isa-legacy.pages.dev",
+      "mode": "desktop",
+      "duration": 196,
+      "width": 1920,
+      "height": 1080,
+      "video": "h264",
+      "audio": "aac",
+      "frameRate": "30/1",
+      "captionEntries": 40,
+      "music": "African Child - Jeremiah Gyang.mp3",
+      "musicSeconds": 196,
+      "introductionSeconds": 6,
+      "authorSeconds": 10,
+      "narration": false,
+      "methodologySeconds": 40,
+      "errors": [],
+      "verifiedAt": "2026-11-06T07:23:40.160Z",
+      "bytes": 12613200,
+      "sha256": "97b4b91149960f4642c2ed20c71d2cd0fd3d6d03eead5fa98eec232bbc6a4a1a",
+      "peakDb": -3.7,
+      "fullDecode": "passed",
+      "captionTiming": "continuous 0-196 seconds",
+      "scenes": 20
+    },
+    {
+      "file": "output/demo/mobile/Hon-Mohammed-Abba-Isa-mobile.mp4",
+      "base": "https://mohammed-abba-isa-legacy.pages.dev",
+      "mode": "mobile",
+      "duration": 196,
+      "width": 1080,
+      "height": 1920,
+      "video": "h264",
+      "audio": "aac",
+      "frameRate": "30/1",
+      "captionEntries": 40,
+      "music": "African Child - Jeremiah Gyang.mp3",
+      "musicSeconds": 196,
+      "introductionSeconds": 6,
+      "authorSeconds": 10,
+      "narration": false,
+      "methodologySeconds": 40,
+      "errors": [],
+      "verifiedAt": "2026-11-06T07:24:01.629Z",
+      "bytes": 33670688,
+      "sha256": "7d1ac18d931be0cc165ecf061c3adf036efeae6ed509b9dde8806a604b9a3fea",
+      "peakDb": -3.7,
+      "fullDecode": "passed",
+      "captionTiming": "continuous 0-196 seconds",
+      "scenes": 20
+    }
+  ],
+  "review": {
+    "checks": [
+      {
+        "mode": "desktop",
+        "duration": 196,
+        "width": 1920,
+        "height": 1080,
+        "methodologySeek": true,
+        "authorSeek": true
+      },
+      {
+        "mode": "mobile",
+        "duration": 196,
+        "width": 1080,
+        "height": 1920,
+        "methodologySeek": true,
+        "authorSeek": true
+      }
+    ],
+    "errors": []
+  }
+}

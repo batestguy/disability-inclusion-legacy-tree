@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammed Abba Isa — video demos</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#183e2c;font:16px/1.5 Arial,sans-serif}main{max-width:1250px;margin:auto;padding:28px 24px}header{border-top:5px solid #008751;padding-top:18px}h1{font-size:clamp(26px,4vw,42px);margin:0}p{margin:8px 0 20px;color:#496456}.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}button,a{font:inherit}button{padding:11px 20px;background:white;color:#0b5d3b;border:1px solid #7da48e;border-radius:7px;cursor:pointer}button[aria-pressed=true]{background:#0b5d3b;color:white}button:focus-visible,a:focus-visible{outline:3px solid #008751;outline-offset:4px}section{border:1px solid #cadbd1;border-radius:10px;padding:16px;background:#f8fbf9;text-align:center}section[hidden]{display:none}video{display:block;width:100%;max-height:76vh;margin:auto;background:#0b3e2d}#mobile video{max-width:390px}nav{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:16px 0 2px}a{color:#0b5d3b}small{display:block;margin-top:18px;color:#496456}
+</style>
+<main>
+<header><h1>Hon. Mohammed Abba Isa</h1><p>A record of inclusion · Separate desktop and mobile walkthroughs</p></header>
+<div class="controls" aria-label="Choose video">
+<button type="button" data-mode="desktop" aria-pressed="true">Desktop · 3:16</button>
+<button type="button" data-mode="mobile" aria-pressed="false">Mobile · 3:16</button>
+<button type="button" id="methods">Watch the methodology · 2:18</button>
+</div>
+<section id="desktop" aria-label="Desktop demo">
+<video controls preload="metadata" poster="desktop/introduction.jpg" aria-label="Desktop video with English captions"><source src="desktop/Hon-Mohammed-Abba-Isa-desktop.mp4" type="video/mp4"></video>
+<nav><a href="desktop/Hon-Mohammed-Abba-Isa-desktop.mp4" download>Download desktop MP4</a><a href="desktop/Hon-Mohammed-Abba-Isa-desktop.srt" download>Download captions</a></nav>
+</section>
+<section id="mobile" aria-label="Mobile demo" hidden>
+<video controls preload="metadata" poster="mobile/introduction.jpg" aria-label="Mobile video with English captions"><source src="mobile/Hon-Mohammed-Abba-Isa-mobile.mp4" type="video/mp4"></video>
+<nav><a href="mobile/Hon-Mohammed-Abba-Isa-mobile.mp4" download>Download mobile MP4</a><a href="mobile/Hon-Mohammed-Abba-Isa-mobile.srt" download>Download captions</a></nav>
+</section>
+<small>English captions · Music: African Child — Jeremiah Gyang · Real website footage</small>
+</main>
+<script>
+let mode='desktop';
+document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('video').forEach(video=>video.pause());mode=button.dataset.mode;
+ document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ ['desktop','mobile'].forEach(name=>document.getElementById(name).hidden=name!==mode);
+}));
+document.getElementById('methods').addEventListener('click',()=>{const video=document.querySelector('#'+mode+' video');video.currentTime=138;video.focus();video.play().catch(()=>{});});
+</script>
+</html>
