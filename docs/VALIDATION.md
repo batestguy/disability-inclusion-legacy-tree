@@ -1,5 +1,9 @@
 # Validation evidence - 22 October 2026
 
+## Post-push storage cleanup - 7 November 2026
+
+Documentation commit `77886d1` was pushed and [CI passed](https://github.com/batestguy/disability-inclusion-legacy-tree/actions/runs/42328489688). Four project-specific C: temporary directories were boundary/link/process-checked and removed; four images were SHA-256 verified on D: before removing C: originals. All eight sources are absent. See [cleanup record](STORAGE_CLEANUP_2026-11-07.md) for sizes, preserved files and scope. No application code or dependencies changed; preceding full checks remain applicable.
+
 ## Documentation and public media delivery - 7 November 2026
 
 - Documentation scope: current README, six real-site screenshots with provenance,

@@ -1,5 +1,21 @@
 # Project handoff - 7 November 2026
 
+## Documentation pushed and C: temporary data cleared - 7 November 2026
+
+Owner requested commit/push before cleanup. Documentation commit `77886d1` was
+pushed to main, and GitHub verification passed (run 42328489688). README, guide,
+screenshots, methods/rationale and public video links are now in the repository.
+
+Removed four inactive, explicitly project-named temporary folders from C: after
+boundary/link checks. Preserved four unique temporary reference images on D:
+under `output/about-originals/recovered-c-temp/` with matching SHA-256 hashes,
+then removed their C: copies. Removed 587,730,513 logical bytes (about 588 MB);
+observed free space increased by about 593 MB. No project-prefixed entries remain
+in the inspected Temp root. Shared tools, account credentials, other projects,
+original evidence and final videos remain. See docs/STORAGE_CLEANUP_2026-11-07.md.
+Application checks from the preceding checkpoint and passing CI remain applicable;
+cleanup changes documentation only and does not redeploy the website.
+
 ## README, illustrated guide and public videos - 7 November 2026
 
 Owner requested detailed project descriptions, website/video links, methods and
