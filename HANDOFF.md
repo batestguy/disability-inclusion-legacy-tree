@@ -1,4 +1,32 @@
-# Project handoff — 6 November 2026
+# Project handoff - 7 November 2026
+
+## README, illustrated guide and public videos - 7 November 2026
+
+Owner requested detailed project descriptions, website/video links, methods and
+reasons for using them in README, and welcomed an illustrated PDF. Replaced the
+outdated tree-prototype README with the current four-language hosted-draft guide:
+source-qualified figures, phrase cloud, source-bound connections, deterministic
+guided chat, research pipeline, method rationale, setup, architecture, creator,
+release limits and links to supporting records.
+
+The owner explicitly confirmed permission to publish the music too. Both existing
+3:16 videos and the new eight-page illustrated PDF are published as assets on:
+https://github.com/batestguy/disability-inclusion-legacy-tree/releases/tag/demo-2026-11-06
+The tag points to verified media-tools commit 110687102c8ade9888c57b0f4f5776ccfa0fe38f.
+No website deployment or change to translation/reveal gates was performed.
+See docs/VIDEO_PUBLICATION_2026-11-07.md for permission and public-download evidence.
+
+Guide: docs/PROJECT_GUIDE.pdf; share copy under output/pdf/. Rebuild with
+python scripts/build-project-guide.py using documentation-only ReportLab,
+PyMuPDF and Pillow. Actual demo screenshots and provenance live in docs/images/.
+Eight rendered pages visually checked; 22 PDF links and text bounds checked;
+README relative links resolve. All 17 website URLs, release page and three assets
+returned HTTP 200 anonymously. Full downloaded asset hashes match local originals.
+
+Preflight, lint, typecheck, all 76 tests and web/Studio builds passed on
+7 November. Owner authorised committing and pushing this documentation checkpoint
+on 7 November before checking C: for disposable project files. The three authorised
+media assets are already public.
 
 ## Demo delivery with tribute introduction and author ending - 6 November 2026
 

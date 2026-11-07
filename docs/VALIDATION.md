@@ -1,5 +1,25 @@
 # Validation evidence - 22 October 2026
 
+## Documentation and public media delivery - 7 November 2026
+
+- Documentation scope: current README, six real-site screenshots with provenance,
+  eight-page PDF and reproducible documentation-only Python builder. No app code,
+  evidence bundle, dependency or website deployment changed.
+- `npm.cmd run preflight`, `npm.cmd run lint`, `npm.cmd run typecheck` and
+  `npm.cmd test`: passed; 76 tests, zero failures.
+- `npm.cmd run build`: passed for both web static export and Sanity Studio.
+- README relative paths resolve; public website links: 17 unique URLs, all HTTP 200.
+- PDF: eight pages, 22 working-format URI annotations, text within page bounds,
+  no replacement glyphs; rendered contact sheet and detailed pages visually checked.
+- GitHub release `demo-2026-11-06` published after owner confirmed music publication
+  permission. Release page and all three assets returned HTTP 200 anonymously;
+  full downloaded desktop/mobile/PDF SHA-256 hashes match local originals.
+- Detailed publication evidence: [video publication record](VIDEO_PUBLICATION_2026-11-07.md).
+  Machine-readable local report: `output/pdf/publication-verification.json`.
+- Owner authorised committing/pushing the documentation on 7 November.
+  Public assets are available now.
+  Existing draft-language, noindex and stricter public-reveal boundaries remain.
+
 ## Demo delivery with tribute introduction and author ending - 6 November 2026
 
 Owner requested commit/push and two additions to both videos: a short opening
